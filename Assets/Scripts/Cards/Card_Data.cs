@@ -2,20 +2,33 @@ using UnityEngine;
 
 public class Card_Data : MonoBehaviour
 {
+
     public Card currentCard;
     [ContextMenu("Generate Card")]
     private void GenerateRandomCard()
     {
         currentCard = currentCard.GenerateRandomCard();
+        CardManager.instance.AddCartToList(currentCard);
     }
 
+    public void SetCardData(Card card)
+    {
+        currentCard = card;
+    }
 
+    void Start()
+    {
+        for (int i = 0; i < 150; i++)
+        {
+            GenerateRandomCard();
+        }
+    }
 }
 
 [System.Serializable]
 public class Card
 {
-    [Range(1, 12)] public int number;
+    [Range(1,14)] public int number;
     public Suit cardSuit;
     public FaceCard faceCard = FaceCard.None;
 
@@ -25,7 +38,7 @@ public class Card
 
         card.number = Random.Range(1, 12);
         card.cardSuit = GetRandomCardSuit();
-        card.faceCard = GetRandomFaceCard(card);
+        SetCardFace(card);
 
         return card;
     }
@@ -37,14 +50,29 @@ public class Card
         return (cards[Random.Range(0, cards.Length)]);
     }
 
-    private FaceCard GetRandomFaceCard(Card card)
+    public void SetCardNumber(int _number)
+    {
+        number = _number;
+    }
+
+    public void SetCardFace(Card card)
     {
         if (card.number == 11)
         {
-            FaceCard[] faceCards = new FaceCard[] { FaceCard.King, FaceCard.Queen, FaceCard.Joker };
-            return (faceCards[Random.Range(0, faceCards.Length)]);
+            card.faceCard = FaceCard.Joker;
         }
-        return FaceCard.None;
+        else if (card.number == 12)
+        {
+            card.faceCard = FaceCard.Queen;
+        }
+        else if (card.number == 13)
+        {
+            card.faceCard = FaceCard.King;
+        }
+        else
+        {
+            card.faceCard = FaceCard.None;
+        }
     }
 }
 
