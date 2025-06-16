@@ -4,31 +4,26 @@ public class Card_Data : MonoBehaviour
 {
 
     public Card currentCard;
+    [SerializeField] private CardVisuals visuals;
     [ContextMenu("Generate Card")]
     private void GenerateRandomCard()
     {
         currentCard = currentCard.GenerateRandomCard();
         CardManager.instance.AddCartToList(currentCard);
+        visuals.SetVisuals(currentCard);
     }
 
     public void SetCardData(Card card)
     {
         currentCard = card;
-    }
-
-    void Start()
-    {
-        for (int i = 0; i < 150; i++)
-        {
-            GenerateRandomCard();
-        }
+        visuals.SetVisuals(currentCard);
     }
 }
 
 [System.Serializable]
 public class Card
 {
-    [Range(1,14)] public int number;
+    [Range(1,13)] public int number;
     public Suit cardSuit;
     public FaceCard faceCard = FaceCard.None;
 
@@ -36,7 +31,7 @@ public class Card
     {
         Card card = new Card();
 
-        card.number = Random.Range(1, 12);
+        card.number = Random.Range(1, 14);
         card.cardSuit = GetRandomCardSuit();
         SetCardFace(card);
 

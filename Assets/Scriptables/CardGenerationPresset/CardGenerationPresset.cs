@@ -14,7 +14,7 @@ public class CardGenerationPresset : ScriptableObject
         Suit[] suits = new Suit[] { Suit.Diamond, Suit.Hearth, Suit.Spades, Suit.Clover };
         for (int i = 0; i < suits.Length; i++)
         {
-            for (int j = 1; j < 15; j++)
+            for (int j = 1; j < 14; j++)
             {
                 Card card = new Card();
                 card.SetCardNumber(j);
