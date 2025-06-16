@@ -9,13 +9,18 @@ public class Card_Data : MonoBehaviour
     private void GenerateRandomCard()
     {
         currentCard = currentCard.GenerateRandomCard();
-        CardManager.instance.AddCartToList(currentCard);
         visuals.SetVisuals(currentCard);
     }
 
     public void SetCardData(Card card)
     {
         currentCard = card;
+        visuals.SetVisuals(currentCard);
+    }
+
+    [ContextMenu("TestVisuals")]
+    private void TestCardVisuals()
+    {
         visuals.SetVisuals(currentCard);
     }
 }

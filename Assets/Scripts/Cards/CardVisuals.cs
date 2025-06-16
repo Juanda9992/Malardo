@@ -6,35 +6,60 @@ using UnityEngine;
 public class CardVisuals : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
-
+    private Card _card;
     public void SetVisuals(Card card)
     {
-        SetLetterOrNumber(card);
+        _card = card;
+        SetLetterOrNumber();
+        SetCardColor();
     }
 
-    private void SetLetterOrNumber(Card card)
+    private void SetLetterOrNumber()
     {
-        if (card.number == 11)
+        if (_card.number == 11)
         {
             SetNumberTextValue("J");
         }
-        else if (card.number == 12)
+        else if (_card.number == 12)
         {
             SetNumberTextValue("Q");
         }
-        else if (card.number == 13)
+        else if (_card.number == 13)
         {
             SetNumberTextValue("K");
         }
         else
         {
-            SetNumberTextValue(card.number.ToString());
+            SetNumberTextValue(_card.number.ToString());
         }
     }
-
+    private void SetVisualsColors(int number)
+    {
+        upperNumber.color = CardVisualsDatabase.GetInstance().suitsColor[number];
+        lowerNumber.color = CardVisualsDatabase.GetInstance().suitsColor[number];
+    }
     private void SetNumberTextValue(string value)
     {
         upperNumber.text = value;
         lowerNumber.text = value;
+    }
+
+    private void SetCardColor()
+    {
+        switch (_card.cardSuit)
+        {
+            case Suit.Hearth:
+                SetVisualsColors(0);
+                break;
+            case Suit.Diamond:
+                SetVisualsColors(1);
+                break;
+            case Suit.Spades:
+                SetVisualsColors(2);
+                break;
+            case Suit.Clover:
+                SetVisualsColors(3);
+                break;
+        }
     }
 }
