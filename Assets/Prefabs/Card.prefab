@@ -362,10 +362,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCard:
+    linkedCard: {fileID: 5501412372648086110}
     number: 7
     cardSuit: 2
     faceCard: 1
   visuals: {fileID: 188735570829389083}
+  pointerInteraction: {fileID: 737717448346528800}
 --- !u!114 &188735570829389083
 MonoBehaviour:
   m_ObjectHideFlags: 0

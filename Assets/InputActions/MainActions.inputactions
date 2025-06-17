@@ -1,0 +1,34 @@
+{
+    "name": "MainActions",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "ae9b7318-1cb1-44a4-9b42-58f6915f31bc",
+            "actions": [
+                {
+                    "name": "Deselect",
+                    "type": "Button",
+                    "id": "50933a3d-2877-4fa8-81f5-168d86cc6bab",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "06a57066-d81c-42b4-b455-1f9931bb6b2c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deselect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

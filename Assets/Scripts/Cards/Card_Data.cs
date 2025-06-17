@@ -5,16 +5,19 @@ public class Card_Data : MonoBehaviour
 
     public Card currentCard;
     [SerializeField] private CardVisuals visuals;
+    public CardPointerInteraction pointerInteraction;
     [ContextMenu("Generate Card")]
     private void GenerateRandomCard()
     {
         currentCard = currentCard.GenerateRandomCard();
+        currentCard.linkedCard = this;
         visuals.SetVisuals(currentCard);
     }
 
     public void SetCardData(Card card)
     {
         currentCard = card;
+        currentCard.linkedCard = this;
         visuals.SetVisuals(currentCard);
     }
 
@@ -28,7 +31,8 @@ public class Card_Data : MonoBehaviour
 [System.Serializable]
 public class Card
 {
-    [Range(1,13)] public int number;
+    public Card_Data linkedCard;
+    [Range(1, 13)] public int number;
     public Suit cardSuit;
     public FaceCard faceCard = FaceCard.None;
 

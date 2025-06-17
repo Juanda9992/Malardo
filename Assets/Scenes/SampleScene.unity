@@ -230,18 +230,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4282515468
       objectReference: {fileID: 0}
-    - target: {fileID: 5501412372648086110, guid: cb419599cb7069846b2f4807509767eb, type: 3}
-      propertyPath: currentCard.number
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501412372648086110, guid: cb419599cb7069846b2f4807509767eb, type: 3}
-      propertyPath: currentCard.cardSuit
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501412372648086110, guid: cb419599cb7069846b2f4807509767eb, type: 3}
-      propertyPath: currentCard.faceCard
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7363589721812805500, guid: cb419599cb7069846b2f4807509767eb, type: 3}
       propertyPath: m_text
       value: 7
@@ -649,6 +637,7 @@ GameObject:
   - component: {fileID: 621395119}
   - component: {fileID: 621395121}
   - component: {fileID: 621395122}
+  - component: {fileID: 621395123}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -716,6 +705,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handCards: []
   handLimit: 5
+  rightClick: {fileID: 3807933347325661333, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
+--- !u!114 &621395123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621395118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7293ca993edd94f44a35bcf73f66b397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: -944628639613478452, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
 --- !u!1001 &773246529
 PrefabInstance:
   m_ObjectHideFlags: 0
