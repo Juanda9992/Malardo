@@ -392,11 +392,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47520c134e96bc4889a09a2a07b675e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  card_Data: {fileID: 5501412372648086110}
   animationTime: 0.2
   hoverScale: 1.2
   moveYOffset: 100
   _rectTransform: {fileID: 2834401486058771544}
-  initialY: 0
 --- !u!1 &7446671074219286334
 GameObject:
   m_ObjectHideFlags: 0

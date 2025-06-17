@@ -2,14 +2,17 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.XR;
 
 public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    [SerializeField] private Card_Data card_Data;
+
     [SerializeField] private float animationTime;
     [SerializeField] private float hoverScale;
     [SerializeField] private float moveYOffset;
     [SerializeField] private RectTransform _rectTransform;
-    [SerializeField] private float initialY;
+    private float initialY;
 
     private bool selected = false;
 
@@ -42,16 +45,21 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void Select()
     {
-        selected = true;
-        transform.DOLocalMoveY(transform.localPosition.y + moveYOffset, animationTime);
-        
+        if (HandManager.instance.CanAddCards)
+        {
+            selected = true;
+            transform.DOLocalMoveY(transform.localPosition.y + moveYOffset, animationTime);
+            HandManager.instance.AddCardToHand(card_Data.currentCard);
+        }
+
     }
 
     public void UnSelect()
     {
         selected = false;
         transform.DOLocalMoveY(initialY, animationTime);
+        HandManager.instance.RemoveCardFromHand(card_Data.currentCard);
     }
-    
+
 
 }

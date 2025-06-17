@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 621395120}
   - component: {fileID: 621395119}
   - component: {fileID: 621395121}
+  - component: {fileID: 621395122}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -701,6 +702,20 @@ MonoBehaviour:
   - {r: 1, g: 0.5704757, b: 0, a: 1}
   - {r: 0.04594898, g: 0, b: 0.2603773, a: 1}
   - {r: 0.17735851, g: 0.17735851, b: 0.17735851, a: 1}
+--- !u!114 &621395122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621395118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b159af8d83c564691782181c9426c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCards: []
+  handLimit: 5
 --- !u!1001 &773246529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,10 +1999,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 836230733}
     m_Modifications:
-    - target: {fileID: 737717448346528800, guid: cb419599cb7069846b2f4807509767eb, type: 3}
-      propertyPath: moveYOffset
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
       propertyPath: m_Name
       value: Card
