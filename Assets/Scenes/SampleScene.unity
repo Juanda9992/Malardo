@@ -957,6 +957,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &848842867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
+  m_PrefabInstance: {fileID: 7280493566540508003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1070026729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1571,6 +1576,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2834401486058771544, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   m_PrefabInstance: {fileID: 7280493566540508003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1722901612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848842867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47520c134e96bc4889a09a2a07b675e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.2
+  hoverScale: 1.2
 --- !u!1 &1737850262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,7 +2090,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1722901612}
   m_SourcePrefab: {fileID: 100100000, guid: cb419599cb7069846b2f4807509767eb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

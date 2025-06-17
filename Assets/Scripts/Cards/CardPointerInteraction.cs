@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CardPointerInteraction : MonoBehaviour
+public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float animationTime;
+    [SerializeField] private float hoverScale;
+    public void OnPointerEnter(PointerEventData data)
     {
-        
+        transform.DOScale(hoverScale, animationTime);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void OnPointerExit(PointerEventData data)
     {
-        
+        transform.DOScale(1, animationTime);
     }
 }

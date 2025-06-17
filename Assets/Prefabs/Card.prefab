@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 8267480270788336155}
   - component: {fileID: 5501412372648086110}
   - component: {fileID: 188735570829389083}
+  - component: {fileID: 737717448346528800}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -379,6 +380,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperNumber: {fileID: 7363589721812805500}
   lowerNumber: {fileID: 3424280198990115009}
+--- !u!114 &737717448346528800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220632853323432375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47520c134e96bc4889a09a2a07b675e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.2
+  hoverScale: 1.2
 --- !u!1 &7446671074219286334
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
