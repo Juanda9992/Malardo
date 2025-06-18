@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0694d7dcdcd891044a81c5f99c890ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultHandSize: 5
+  defaultHandSize: 8
   cardGenerationPresset: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
@@ -638,6 +638,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handCards: []
   handLimit: 5
+  playButton: {fileID: 722892603}
+  discardButton: {fileID: 1990014784}
   rightClick: {fileID: 3807933347325661333, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
 --- !u!114 &621395123
 MonoBehaviour:

@@ -10,6 +10,8 @@ public class HandManager : MonoBehaviour
     [SerializeField] private int handLimit = 5;
     public bool CanAddCards { get { return handCards.Count < handLimit; } }
 
+    [SerializeField] private GameObject playButton, discardButton;
+
     [SerializeField] private InputActionReference rightClick;
     void Awake()
     {
@@ -20,26 +22,37 @@ public class HandManager : MonoBehaviour
     void Start()
     {
         rightClick.action.performed += _ => RemoveAllCards();
+        SetPlayButtonsState(false);
     }
 
     public void AddCardToHand(Card card)
     {
         handCards.Add(card);
+        SetPlayButtonsState(true);
     }
 
     public void RemoveCardFromHand(Card card)
     {
         handCards.Remove(card);
+
+        SetPlayButtonsState(handCards.Count > 0);
     }
 
     public void RemoveAllCards()
     {
         if (handCards.Count > 0)
         {
-            for (int i = handCards.Count-1; i >= 0; i--)
+            for (int i = handCards.Count - 1; i >= 0; i--)
             {
                 handCards[i].linkedCard.pointerInteraction.UnSelect();
             }
         }
+        SetPlayButtonsState(false);
+    }
+
+    private void SetPlayButtonsState(bool active)
+    {
+        playButton.SetActive(active);
+        discardButton.SetActive(active);
     }
 }
