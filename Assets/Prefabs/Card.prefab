@@ -382,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperNumber: {fileID: 7363589721812805500}
   lowerNumber: {fileID: 3424280198990115009}
+  rotationRange: 3
 --- !u!114 &737717448346528800
 MonoBehaviour:
   m_ObjectHideFlags: 0

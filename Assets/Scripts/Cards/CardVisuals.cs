@@ -7,12 +7,15 @@ using UnityEngine;
 public class CardVisuals : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
+    [SerializeField] private int rotationRange;
     private Card _card;
 
     void Awake()
     {
         transform.DOScale(0, 0);
         transform.DOScale(1, 0.3f);
+
+        transform.rotation = Quaternion.Euler(0, 0, Random.Range(-rotationRange, rotationRange));
     }
     public void SetVisuals(Card card)
     {
