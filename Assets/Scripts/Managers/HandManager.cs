@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class HandManager : MonoBehaviour
     public List<Card> handCards;
     [SerializeField] private int handLimit = 5;
     public bool CanAddCards { get { return handCards.Count < handLimit; } }
+
+    public event Action<List<Card>> OnHandPlayed;
 
     [SerializeField] private GameObject playButton, discardButton;
 
@@ -61,12 +64,17 @@ public class HandManager : MonoBehaviour
         }
 
         handCards.Clear();
-        SetPlayButtonsState(false);     
+        SetPlayButtonsState(false);
     }
 
     private void SetPlayButtonsState(bool active)
     {
         playButton.SetActive(active);
         discardButton.SetActive(active);
+    }
+
+    public void PlayHand()
+    {
+        OnHandPlayed?.Invoke(handCards);
     }
 }

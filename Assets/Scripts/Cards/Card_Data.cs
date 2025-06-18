@@ -78,6 +78,11 @@ public class Card
             card.faceCard = FaceCard.None;
         }
     }
+
+    public void DegubCardInfo()
+    {
+        Debug.Log($"Number {number}, Suit {cardSuit}");
+    }
 }
 
 public enum Suit
