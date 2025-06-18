@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
@@ -11,26 +12,36 @@ public class CardManager : MonoBehaviour
 
     [SerializeField] private Transform handParent;
     [SerializeField] private GameObject cardprefab;
+
+    [SerializeField] private TextMeshProUGUI deckCounter;
     public List<Card> cards;
+
+    private int initialDeckSize;
 
     void Awake()
     {
         instance = this;
         cards = new List<Card>(cardGenerationPresset.allCards);
-
     }
 
     void Start()
     {
+        initialDeckSize = cards.Count;
+
         for (int i = 0; i < defaultHandSize; i++)
         {
             GenerateCardOnHand();
         }
+        UpdateDeckCounter();
     }
 
     public void AddCartToList(Card card)
     {
         cards.Add(card);
+    }
+    private void UpdateDeckCounter()
+    {
+        deckCounter.text = cards.Count + " / " + initialDeckSize; 
     }
 
     public void GenerateCardOnHand()
@@ -51,6 +62,8 @@ public class CardManager : MonoBehaviour
     public void RemoveCardFromDeck(Card card)
     {
         cards.Remove(card);
+        UpdateDeckCounter();
+
     }
 
 
