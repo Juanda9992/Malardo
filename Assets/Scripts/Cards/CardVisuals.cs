@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +8,12 @@ public class CardVisuals : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
     private Card _card;
+
+    void Awake()
+    {
+        transform.DOScale(0, 0);
+        transform.DOScale(1, 0.3f);
+    }
     public void SetVisuals(Card card)
     {
         _card = card;
