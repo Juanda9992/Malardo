@@ -16,9 +16,8 @@ public class CardManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        cards = new List<Card>();
+        cards = new List<Card>(cardGenerationPresset.allCards);
 
-        cards = cardGenerationPresset.allCards;
     }
 
     void Start()

@@ -13,159 +13,211 @@ MonoBehaviour:
   m_Name: Card Generation Presset
   m_EditorClassIdentifier: 
   allCards:
-  - number: 1
+  - linkedCard: {fileID: 0}
+    number: 1
     cardSuit: 0
     faceCard: 0
-  - number: 2
+  - linkedCard: {fileID: 0}
+    number: 2
     cardSuit: 0
     faceCard: 0
-  - number: 3
+  - linkedCard: {fileID: 0}
+    number: 3
     cardSuit: 0
     faceCard: 0
-  - number: 4
+  - linkedCard: {fileID: 0}
+    number: 4
     cardSuit: 0
     faceCard: 0
-  - number: 5
+  - linkedCard: {fileID: 0}
+    number: 5
     cardSuit: 0
     faceCard: 0
-  - number: 6
+  - linkedCard: {fileID: 0}
+    number: 6
     cardSuit: 0
     faceCard: 0
-  - number: 7
+  - linkedCard: {fileID: 0}
+    number: 7
     cardSuit: 0
     faceCard: 0
-  - number: 8
+  - linkedCard: {fileID: 0}
+    number: 8
     cardSuit: 0
     faceCard: 0
-  - number: 9
+  - linkedCard: {fileID: 0}
+    number: 9
     cardSuit: 0
     faceCard: 0
-  - number: 10
+  - linkedCard: {fileID: 0}
+    number: 10
     cardSuit: 0
     faceCard: 0
-  - number: 11
+  - linkedCard: {fileID: 0}
+    number: 11
     cardSuit: 0
     faceCard: 3
-  - number: 12
+  - linkedCard: {fileID: 0}
+    number: 12
     cardSuit: 0
     faceCard: 2
-  - number: 13
+  - linkedCard: {fileID: 0}
+    number: 13
     cardSuit: 0
     faceCard: 1
-  - number: 1
+  - linkedCard: {fileID: 0}
+    number: 1
     cardSuit: 1
     faceCard: 0
-  - number: 2
+  - linkedCard: {fileID: 0}
+    number: 2
     cardSuit: 1
     faceCard: 0
-  - number: 3
+  - linkedCard: {fileID: 0}
+    number: 3
     cardSuit: 1
     faceCard: 0
-  - number: 4
+  - linkedCard: {fileID: 0}
+    number: 4
     cardSuit: 1
     faceCard: 0
-  - number: 5
+  - linkedCard: {fileID: 0}
+    number: 5
     cardSuit: 1
     faceCard: 0
-  - number: 6
+  - linkedCard: {fileID: 0}
+    number: 6
     cardSuit: 1
     faceCard: 0
-  - number: 7
+  - linkedCard: {fileID: 0}
+    number: 7
     cardSuit: 1
     faceCard: 0
-  - number: 8
+  - linkedCard: {fileID: 0}
+    number: 8
     cardSuit: 1
     faceCard: 0
-  - number: 9
+  - linkedCard: {fileID: 0}
+    number: 9
     cardSuit: 1
     faceCard: 0
-  - number: 10
+  - linkedCard: {fileID: 0}
+    number: 10
     cardSuit: 1
     faceCard: 0
-  - number: 11
+  - linkedCard: {fileID: 0}
+    number: 11
     cardSuit: 1
     faceCard: 3
-  - number: 12
+  - linkedCard: {fileID: 0}
+    number: 12
     cardSuit: 1
     faceCard: 2
-  - number: 13
+  - linkedCard: {fileID: 0}
+    number: 13
     cardSuit: 1
     faceCard: 1
-  - number: 1
+  - linkedCard: {fileID: 0}
+    number: 1
     cardSuit: 2
     faceCard: 0
-  - number: 2
+  - linkedCard: {fileID: 0}
+    number: 2
     cardSuit: 2
     faceCard: 0
-  - number: 3
+  - linkedCard: {fileID: 0}
+    number: 3
     cardSuit: 2
     faceCard: 0
-  - number: 4
+  - linkedCard: {fileID: 0}
+    number: 4
     cardSuit: 2
     faceCard: 0
-  - number: 5
+  - linkedCard: {fileID: 0}
+    number: 5
     cardSuit: 2
     faceCard: 0
-  - number: 6
+  - linkedCard: {fileID: 0}
+    number: 6
     cardSuit: 2
     faceCard: 0
-  - number: 7
+  - linkedCard: {fileID: 0}
+    number: 7
     cardSuit: 2
     faceCard: 0
-  - number: 8
+  - linkedCard: {fileID: 0}
+    number: 8
     cardSuit: 2
     faceCard: 0
-  - number: 9
+  - linkedCard: {fileID: 0}
+    number: 9
     cardSuit: 2
     faceCard: 0
-  - number: 10
+  - linkedCard: {fileID: 0}
+    number: 10
     cardSuit: 2
     faceCard: 0
-  - number: 11
+  - linkedCard: {fileID: 0}
+    number: 11
     cardSuit: 2
     faceCard: 3
-  - number: 12
+  - linkedCard: {fileID: 0}
+    number: 12
     cardSuit: 2
     faceCard: 2
-  - number: 13
+  - linkedCard: {fileID: 0}
+    number: 13
     cardSuit: 2
     faceCard: 1
-  - number: 1
+  - linkedCard: {fileID: 0}
+    number: 1
     cardSuit: 3
     faceCard: 0
-  - number: 2
+  - linkedCard: {fileID: 0}
+    number: 2
     cardSuit: 3
     faceCard: 0
-  - number: 3
+  - linkedCard: {fileID: 0}
+    number: 3
     cardSuit: 3
     faceCard: 0
-  - number: 4
+  - linkedCard: {fileID: 0}
+    number: 4
     cardSuit: 3
     faceCard: 0
-  - number: 5
+  - linkedCard: {fileID: 0}
+    number: 5
     cardSuit: 3
     faceCard: 0
-  - number: 6
+  - linkedCard: {fileID: 0}
+    number: 6
     cardSuit: 3
     faceCard: 0
-  - number: 7
+  - linkedCard: {fileID: 0}
+    number: 7
     cardSuit: 3
     faceCard: 0
-  - number: 8
+  - linkedCard: {fileID: 0}
+    number: 8
     cardSuit: 3
     faceCard: 0
-  - number: 9
+  - linkedCard: {fileID: 0}
+    number: 9
     cardSuit: 3
     faceCard: 0
-  - number: 10
+  - linkedCard: {fileID: 0}
+    number: 10
     cardSuit: 3
     faceCard: 0
-  - number: 11
+  - linkedCard: {fileID: 0}
+    number: 11
     cardSuit: 3
     faceCard: 3
-  - number: 12
+  - linkedCard: {fileID: 0}
+    number: 12
     cardSuit: 3
     faceCard: 2
-  - number: 13
+  - linkedCard: {fileID: 0}
+    number: 13
     cardSuit: 3
     faceCard: 1
