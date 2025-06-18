@@ -50,6 +50,20 @@ public class HandManager : MonoBehaviour
         SetPlayButtonsState(false);
     }
 
+    public void DiscardAllCards()
+    {
+        if (handCards.Count > 0)
+        {
+            for (int i = handCards.Count - 1; i >= 0; i--)
+            {
+                handCards[i].linkedCard.pointerInteraction.DiscardCard();
+            }
+        }
+
+        handCards.Clear();
+        SetPlayButtonsState(false);     
+    }
+
     private void SetPlayButtonsState(bool active)
     {
         playButton.SetActive(active);

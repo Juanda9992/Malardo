@@ -61,5 +61,14 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         HandManager.instance.RemoveCardFromHand(card_Data.currentCard);
     }
 
+    public void DiscardCard()
+    {
+        transform.DOScale(0, 0.2f).OnComplete(() =>
+        {
+            CardManager.instance.GenerateCardOnHand();
+            CardManager.instance.RemoveCardFromDeck(card_Data.currentCard);
+            Destroy(gameObject);
+        });
+    }
 
 }

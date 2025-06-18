@@ -35,6 +35,10 @@ public class CardManager : MonoBehaviour
 
     public void GenerateCardOnHand()
     {
+        if (cards.Count == 0)
+        {
+            return;
+        }
         Card card = cards[Random.Range(0, cards.Count)];
 
         cards.Remove(card);
@@ -44,7 +48,10 @@ public class CardManager : MonoBehaviour
         currentCard.GetComponent<Card_Data>().SetCardData(card);
     }
 
-
+    public void RemoveCardFromDeck(Card card)
+    {
+        cards.Remove(card);
+    }
 
 
 }
