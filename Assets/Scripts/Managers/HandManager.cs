@@ -76,5 +76,6 @@ public class HandManager : MonoBehaviour
     public void PlayHand()
     {
         OnHandPlayed?.Invoke(handCards);
+        SetPlayButtonsState(false);
     }
 }
