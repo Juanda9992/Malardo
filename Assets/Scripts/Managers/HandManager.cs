@@ -16,6 +16,8 @@ public class HandManager : MonoBehaviour
     [SerializeField] private GameObject playButton, discardButton;
 
     [SerializeField] private InputActionReference rightClick;
+
+    public event Action<List<Card>> OnHandChanged;
     void Awake()
     {
         instance = this;
@@ -31,14 +33,16 @@ public class HandManager : MonoBehaviour
     public void AddCardToHand(Card card)
     {
         handCards.Add(card);
+        OnHandChanged?.Invoke(handCards);
         SetPlayButtonsState(true);
     }
 
     public void RemoveCardFromHand(Card card)
     {
         handCards.Remove(card);
-
+        OnHandChanged?.Invoke(handCards);
         SetPlayButtonsState(handCards.Count > 0);
+
     }
 
     public void RemoveAllCards()
