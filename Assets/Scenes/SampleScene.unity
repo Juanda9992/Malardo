@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 621395122}
   - component: {fileID: 621395123}
   - component: {fileID: 621395124}
+  - component: {fileID: 621395125}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -878,6 +879,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610d94c1834f1714aa9815b72a243c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &621395125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621395118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fdc659b724fec54689a9bf7a46f2a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chips: 0
+  mult: 1
+  roundScore: 0
+  scoreText: {fileID: 731124796}
 --- !u!1 &722665007
 GameObject:
   m_ObjectHideFlags: 0

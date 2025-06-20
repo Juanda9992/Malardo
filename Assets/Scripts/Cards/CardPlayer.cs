@@ -29,5 +29,16 @@ public class CardPlayer : MonoBehaviour
 
         ScoreManager.instance.CalculateScore();
 
+        yield return new WaitForSeconds(0.3f);
+
+        foreach (var card in currentHand)
+        {
+            card.linkedCard.pointerInteraction.DiscardCard();
+        }
+
+        yield return new WaitForSeconds(0.3f);
+
+        currentHand.Clear();
+
     }
 }
