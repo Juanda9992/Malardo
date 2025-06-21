@@ -19,6 +19,7 @@ public class HandDetector : MonoBehaviour
         }
         CheckIfColor();
         CheckIfStraight();
+        CheckIfFiveOfAKind();
         CheckIfFourOfAkind();
         CheckIfThreeOfAKind();
         CheckIfDoublePair();
@@ -71,6 +72,21 @@ public class HandDetector : MonoBehaviour
 
         Debug.Log("Suit");
         return true;
+    }
+    private bool CheckIfFiveOfAKind()
+    {
+        if (handCards.Count < 5)
+        {
+            return false;
+        }
+
+        if (GetCardsInHandByNumber(handCards, handCards[0].number).Count == 5)
+        {
+            Debug.Log("Five of a kind");
+            return true;
+        }
+
+        return false;
     }
     private bool CheckIfFourOfAkind()
     {
@@ -213,6 +229,7 @@ public class HandDetector : MonoBehaviour
         }
         return matches == 1;
     }
+
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
         List<Card> validCards = cards.FindAll(x => x.number == predicate);
