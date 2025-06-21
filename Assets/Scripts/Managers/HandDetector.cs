@@ -21,6 +21,7 @@ public class HandDetector : MonoBehaviour
         CheckIfStraight();
         CheckIfFourOfAkind();
         CheckIfThreeOfAKind();
+        CheckDoublePair();
     }
     private bool CheckIfStraight()
     {
@@ -78,7 +79,7 @@ public class HandDetector : MonoBehaviour
 
         List<Card> validCards;
 
-        validCards = GetCardsInHandByNumber(handCards, handCards[0].number); 
+        validCards = GetCardsInHandByNumber(handCards, handCards[0].number);
         if (validCards.Count == 4)
         {
             Debug.Log("Four of a Kind");
@@ -111,6 +112,35 @@ public class HandDetector : MonoBehaviour
         return false;
     }
 
+    private bool CheckDoublePair()
+    {
+        if (handCards.Count < 4)
+        {
+            return false;
+        }
+
+        List<Card> referenceList = new List<Card>(handCards);
+        int pairsFound = 0;
+        int match1 = 0;
+        for (int i = referenceList.Count - 1; i >= 0; i--)
+        {
+            if (referenceList[i].number == match1)
+            {
+                continue;
+            }
+            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 2)
+                {
+                    match1 = referenceList[i].number;
+                    pairsFound++;
+                }
+        }
+
+        if (pairsFound == 2)
+        {
+            Debug.Log("Double pair");
+        }
+        return pairsFound == 2;
+    }
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
         List<Card> validCards = cards.FindAll(x => x.number == predicate);
