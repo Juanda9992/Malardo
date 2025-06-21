@@ -22,6 +22,7 @@ public class HandDetector : MonoBehaviour
         CheckIfFourOfAkind();
         CheckIfThreeOfAKind();
         CheckDoublePair();
+        CheckIfFullHouse();
     }
     private bool CheckIfStraight()
     {
@@ -111,7 +112,6 @@ public class HandDetector : MonoBehaviour
         }
         return false;
     }
-
     private bool CheckDoublePair()
     {
         if (handCards.Count < 4)
@@ -129,10 +129,10 @@ public class HandDetector : MonoBehaviour
                 continue;
             }
             if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 2)
-                {
-                    match1 = referenceList[i].number;
-                    pairsFound++;
-                }
+            {
+                match1 = referenceList[i].number;
+                pairsFound++;
+            }
         }
 
         if (pairsFound == 2)
@@ -141,6 +141,45 @@ public class HandDetector : MonoBehaviour
         }
         return pairsFound == 2;
     }
+    private bool CheckIfFullHouse()
+    {
+        if (handCards.Count < 5)
+        {
+            return false;
+        }
+
+        List<Card> referenceList = new List<Card>(handCards);
+        int matches = 0;
+        int match1 = 0;
+        for (int i = referenceList.Count - 1; i >= 0; i--)
+        {
+            if (referenceList[i].number == match1)
+            {
+                continue;
+            }
+            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 2)
+            {
+                match1 = referenceList[i].number;
+                matches++;
+                continue;
+            }
+
+            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 3)
+            {
+                match1 = referenceList[i].number;
+                matches++;
+                continue;
+            }
+        }
+
+        if (matches == 2)
+        {
+            Debug.Log("Full House");
+        }
+
+        return true;
+    }
+
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
         List<Card> validCards = cards.FindAll(x => x.number == predicate);
