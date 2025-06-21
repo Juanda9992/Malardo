@@ -17,14 +17,47 @@ public class HandDetector : MonoBehaviour
         {
             return;
         }
-        CheckIfColor();
-        CheckIfStraight();
-        CheckIfFiveOfAKind();
-        CheckIfFourOfAkind();
-        CheckIfThreeOfAKind();
-        CheckIfDoublePair();
-        CheckIfFullHouse();
-        CheckIfPair();
+
+        if (CheckIfFiveOfAKind())
+        {
+            return;
+        }
+        if (CheckIfColor())
+        {
+            return;
+        }
+
+        if (CheckIfStraight())
+        {
+            return;
+        }
+
+        if (CheckIfFourOfAkind())
+        {
+            return;
+        }
+
+        if (CheckIfFullHouse())
+        {
+            return;
+        }
+
+        if (CheckIfDoublePair())
+        {
+            return;
+        }
+
+        if (CheckIfThreeOfAKind())
+        {
+            return;
+        }
+
+        if (CheckIfPair())
+        {
+            return;
+        }
+
+        SetHighCard();
     }
     private bool CheckIfStraight()
     {
@@ -229,7 +262,13 @@ public class HandDetector : MonoBehaviour
         }
         return matches == 1;
     }
-
+    private void SetHighCard()
+    {
+        if (handCards.Count > 0)
+        {
+            Debug.Log("High Card");
+        }
+    }
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
         List<Card> validCards = cards.FindAll(x => x.number == predicate);
