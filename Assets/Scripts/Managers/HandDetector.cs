@@ -304,7 +304,6 @@ public class HandDetector : MonoBehaviour
     {
         if (handCards.Count > 0)
         {
-            Debug.Log("High Card");
             currentHand = allHands.Find(x => x.handType == HandType.High_Card);
             AddHandToMult();
         }

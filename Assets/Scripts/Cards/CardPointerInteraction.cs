@@ -33,6 +33,10 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerClick(PointerEventData data)
     {
+        if (data.pointerId != -1)
+        {
+            return;
+        }
         if (selected)
         {
             UnSelect();
