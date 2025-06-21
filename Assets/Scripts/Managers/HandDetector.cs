@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 public class HandDetector : MonoBehaviour
 {
@@ -7,10 +8,13 @@ public class HandDetector : MonoBehaviour
     [SerializeField] private List<Card> handCards;
 
     [SerializeField] private List<HandData> allHands;
+
+    [SerializeField] private TextMeshProUGUI handNameText;
     private HandData currentHand;
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
+        RemoveHandFromMult();
     }
 
     private void DetectHandPlayed(List<Card> cards)
@@ -21,6 +25,7 @@ public class HandDetector : MonoBehaviour
         {
             RemoveHandFromMult();
             cardsSorted.Clear();
+            return;
         }
         if (CheckIfFiveOfAKind())
         {
@@ -74,12 +79,14 @@ public class HandDetector : MonoBehaviour
 
     private void AddHandToMult()
     {
+        handNameText.text = currentHand.name;
         ScoreManager.instance.SetChips(currentHand.baseChips);
         ScoreManager.instance.SetMult(currentHand.baseMult);
     }
 
     private void RemoveHandFromMult()
     {
+        handNameText.text = "";
         ScoreManager.instance.ResetScore();
     }
 
