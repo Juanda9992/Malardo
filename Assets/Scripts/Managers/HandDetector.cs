@@ -4,6 +4,7 @@ using UnityEngine;
 public class HandDetector : MonoBehaviour
 {
     [SerializeField] private List<Card> cardsSorted;
+    [SerializeField] private List<Card> handCards;
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
@@ -11,55 +12,30 @@ public class HandDetector : MonoBehaviour
 
     private void DetectHandPlayed(List<Card> cards)
     {
-        if (cards.Count == 0)
+        handCards = new List<Card>(cards);
+        if (handCards.Count == 0)
         {
             return;
         }
-        CheckIfColor(cards);
-        CheckIfStraight(cards);
-        CheckIfFourOfAkind(cards);
+        CheckIfColor();
+        CheckIfStraight();
+        CheckIfFourOfAkind();
+        CheckIfThreeOfAKind();
     }
-
-    private bool CheckIfFourOfAkind(List<Card> cards)
+    private bool CheckIfStraight()
     {
-        if (cards.Count < 4)
-        {
-            return false;
-        }
-
-        List<Card> validCards;
-
-        validCards = GetCardsInHandByNumber(cards, cards[0].number); 
-        if (validCards.Count == 4)
-        {
-            Debug.Log("Four of a Kind");
-            return true;
-        }
-
-        validCards = GetCardsInHandByNumber(cards, cards[3].number);
-        if (validCards.Count == 4)
-        {
-            Debug.Log("Four of a Kind");
-            return true;
-        }
-        return false;
-    }
-    private bool CheckIfStraight(List<Card> cards)
-    {
-        if (cards.Count != 5)
+        if (handCards.Count != 5)
         {
             cardsSorted.Clear();
             return false;
         }
-
-        cardsSorted = new List<Card>(cards);
+        cardsSorted = new List<Card>(handCards);
         cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
 
         Card nextCard;
         for (int i = 0; i < cardsSorted.Count; i++)
         {
             nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
-
             if (nextCard != null)
             {
                 if (Mathf.Abs(cardsSorted[i].number - nextCard.number) != 1)
@@ -67,27 +43,24 @@ public class HandDetector : MonoBehaviour
                     return false;
                 }
             }
-
             if (Mathf.Abs(cardsSorted[3].number - cardsSorted[4].number) == 1)
             {
                 Debug.Log("Straight");
                 return true;
             }
-
-
         }
         return true;
     }
-    private bool CheckIfColor(List<Card> cards)
+    private bool CheckIfColor()
     {
-        if (cards.Count != 5)
+        if (handCards.Count != 5)
         {
             return false;
         }
-        Suit currentSuit = cards[0].cardSuit;
-        for (int i = 0; i < cards.Count; i++)
+        Suit currentSuit = handCards[0].cardSuit;
+        for (int i = 0; i < handCards.Count; i++)
         {
-            if (cards[i].cardSuit != currentSuit)
+            if (handCards[i].cardSuit != currentSuit)
             {
                 return false;
             }
@@ -96,12 +69,51 @@ public class HandDetector : MonoBehaviour
         Debug.Log("Suit");
         return true;
     }
+    private bool CheckIfFourOfAkind()
+    {
+        if (handCards.Count < 4)
+        {
+            return false;
+        }
+
+        List<Card> validCards;
+
+        validCards = GetCardsInHandByNumber(handCards, handCards[0].number); 
+        if (validCards.Count == 4)
+        {
+            Debug.Log("Four of a Kind");
+            return true;
+        }
+
+        validCards = GetCardsInHandByNumber(handCards, handCards[3].number);
+        if (validCards.Count == 4)
+        {
+            Debug.Log("Four of a Kind");
+            return true;
+        }
+        return false;
+    }
+    private bool CheckIfThreeOfAKind()
+    {
+        if (handCards.Count < 3)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < handCards.Count; i++)
+        {
+            if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 3)
+            {
+                Debug.Log("Three of a kind");
+                return true;
+            }
+        }
+        return false;
+    }
 
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
-
-        List<Card> validCards = cards.FindAll(x => x.number == predicate); 
-        Debug.Log(validCards.Count);
+        List<Card> validCards = cards.FindAll(x => x.number == predicate);
         return validCards;
     }
 }
