@@ -28,6 +28,17 @@ public class ScoreManager : MonoBehaviour
         mult += value;
         multText.text = mult.ToString();
     }
+    public void SetChips(int value)
+    {
+        chips = value;
+        chipsText.text = chips.ToString();
+    }
+
+    public void SetMult(int value)
+    {
+        mult = value;
+        multText.text = mult.ToString();
+    }
 
     public void CalculateScore()
     {

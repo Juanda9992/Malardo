@@ -914,6 +914,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsSorted: []
   handCards: []
+  allHands:
+  - {fileID: 11400000, guid: 5211b70355135484ca6e5fe079ce88cf, type: 2}
+  - {fileID: 11400000, guid: 5e2e08f6febad004ca8a1ed68729982b, type: 2}
+  - {fileID: 11400000, guid: bec2afeab9665f144a12f3046916303f, type: 2}
+  - {fileID: 11400000, guid: f16e176f7fceab747af063a084c1b096, type: 2}
+  - {fileID: 11400000, guid: fde5881c15b94d54fb998f59140a5f62, type: 2}
+  - {fileID: 11400000, guid: 6f25c04d46d698744b5c8fc10ffd5c34, type: 2}
+  - {fileID: 11400000, guid: c9df8a840cd97c641923ec52f8096320, type: 2}
+  - {fileID: 11400000, guid: fa2e98bf5bb4ba74fb53fbda71efef14, type: 2}
+  - {fileID: 11400000, guid: aa8644c9217636f4aafee0b56a8556b5, type: 2}
 --- !u!1 &722665007
 GameObject:
   m_ObjectHideFlags: 0
