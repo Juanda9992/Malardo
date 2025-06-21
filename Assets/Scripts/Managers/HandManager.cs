@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class HandManager : MonoBehaviour
 {
     [SerializeField] private int discards = 3;
+    [SerializeField] private int hands = 4;
     public static HandManager instance;
     public List<Card> handCards;
     [SerializeField] private int handLimit = 5;
@@ -20,7 +21,7 @@ public class HandManager : MonoBehaviour
 
     [SerializeField] private InputActionReference rightClick;
 
-    [SerializeField] private TextMeshProUGUI discardsText;
+    [SerializeField] private TextMeshProUGUI discardsText,handsText;
 
     public event Action<List<Card>> OnHandChanged;
     void Awake()
@@ -29,6 +30,7 @@ public class HandManager : MonoBehaviour
         handCards = new List<Card>();
 
         UpdateDiscardText();
+        UpdateHandText();
     }
 
     void Start()
@@ -84,18 +86,26 @@ public class HandManager : MonoBehaviour
     {
         playButton.gameObject.SetActive(active);
 
-        discardButton.interactable = discards > 0;
         discardButton.gameObject.SetActive(active);
     }
 
     private void UpdateDiscardText()
     {
+        discardButton.interactable = discards > 0;
         discardsText.text = discards.ToString();
+    }
+
+    private void UpdateHandText()
+    {
+        playButton.interactable = hands > 0;
+        handsText.text = hands.ToString();
     }
 
     public void PlayHand()
     {
+        hands--;
         OnHandPlayed?.Invoke(handCards);
         SetPlayButtonsState(false);
+        UpdateHandText();
     }
 }
