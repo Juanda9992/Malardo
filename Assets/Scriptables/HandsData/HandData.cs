@@ -16,5 +16,7 @@ public enum HandType
     Three_Of_A_Kind,
     Straight,
     Flush,
-    Full_House
+    Full_House,
+    Four_Of_A_Kind,
+    Five_Of_A_Kind
 }
