@@ -1,9 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
 public class HandDetector : MonoBehaviour
 {
-
+    [SerializeField] private List<Card> cardsSorted;
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
@@ -16,8 +16,43 @@ public class HandDetector : MonoBehaviour
             return;
         }
         CheckIfColor(cards);
+        CheckIfStraight(cards);
     }
 
+    private bool CheckIfStraight(List<Card> cards)
+    {
+        if (cards.Count != 5)
+        {
+            cardsSorted.Clear();
+            return false;
+        }
+
+        cardsSorted = new List<Card>(cards);
+        cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
+
+        Card nextCard;
+        for (int i = 0; i < cardsSorted.Count; i++)
+        {
+            nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
+
+            if (nextCard != null)
+            {
+                if (Mathf.Abs(cardsSorted[i].number - nextCard.number) != 1)
+                {
+                    return false;
+                }
+            }
+
+            if (Mathf.Abs(cardsSorted[3].number - cardsSorted[4].number) == 1)
+            {
+                Debug.Log("Straight");
+                return true;
+            }
+
+
+        }
+        return true;
+    }
     private bool CheckIfColor(List<Card> cards)
     {
         if (cards.Count != 5)
