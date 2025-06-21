@@ -207,7 +207,7 @@ public class HandDetector : MonoBehaviour
         List<Card> referenceList = new List<Card>(handCards);
         int pairsFound = 0;
         int match1 = 0;
-        for (int i = referenceList.Count - 1; i >= 0; i--)
+        for (int i = 0; i < referenceList.Count; i++)
         {
             if (referenceList[i].number == match1)
             {
