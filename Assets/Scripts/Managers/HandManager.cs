@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class HandManager : MonoBehaviour
 {
+    [SerializeField] private int discards = 3;
     public static HandManager instance;
     public List<Card> handCards;
     [SerializeField] private int handLimit = 5;
@@ -13,15 +16,19 @@ public class HandManager : MonoBehaviour
 
     public event Action<List<Card>> OnHandPlayed;
 
-    [SerializeField] private GameObject playButton, discardButton;
+    [SerializeField] private Button playButton, discardButton;
 
     [SerializeField] private InputActionReference rightClick;
+
+    [SerializeField] private TextMeshProUGUI discardsText;
 
     public event Action<List<Card>> OnHandChanged;
     void Awake()
     {
         instance = this;
         handCards = new List<Card>();
+
+        UpdateDiscardText();
     }
 
     void Start()
@@ -59,6 +66,7 @@ public class HandManager : MonoBehaviour
 
     public void DiscardAllCards()
     {
+        discards--;
         if (handCards.Count > 0)
         {
             for (int i = handCards.Count - 1; i >= 0; i--)
@@ -68,13 +76,21 @@ public class HandManager : MonoBehaviour
         }
 
         handCards.Clear();
+        UpdateDiscardText();
         SetPlayButtonsState(false);
     }
 
     private void SetPlayButtonsState(bool active)
     {
-        playButton.SetActive(active);
-        discardButton.SetActive(active);
+        playButton.gameObject.SetActive(active);
+
+        discardButton.interactable = discards > 0;
+        discardButton.gameObject.SetActive(active);
+    }
+
+    private void UpdateDiscardText()
+    {
+        discardsText.text = discards.ToString();
     }
 
     public void PlayHand()
