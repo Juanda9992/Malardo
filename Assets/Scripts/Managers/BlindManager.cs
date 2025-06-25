@@ -37,6 +37,7 @@ public class BlindManager : MonoBehaviour
         return scoreToCompare > requiredScore;
     }
 
+    [ContextMenu("Defeat Blind")]
     public void IncreaseBetlevel()
     {
         OnBlindDefeated?.Invoke();

@@ -75,4 +75,12 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         });
     }
 
+    public void DestroyCard()
+    {
+        transform.DOScale(0, 0.2f).OnComplete(() =>
+        {
+            Destroy(gameObject);
+        });
+    }
+
 }

@@ -21,18 +21,44 @@ public class CardManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        cards = new List<Card>(cardGenerationPresset.allCards);
     }
 
     void Start()
     {
-        initialDeckSize = cards.Count;
 
+        GenerateCardsCoroutine();
+        BlindManager.instance.OnBlindDefeated += GenerateCardsCoroutine;
+    }
+    private IEnumerator GenerateCards()
+    {
+        TryDestroyExistingCards();
+        yield return new WaitForSeconds(0.1f);
+        cards = new List<Card>(cardGenerationPresset.allCards);
+        initialDeckSize = cards.Count;
         for (int i = 0; i < defaultHandSize; i++)
         {
             GenerateCardOnHand();
         }
         UpdateDeckCounter();
+
+    }
+
+    private void GenerateCardsCoroutine()
+    {
+        StartCoroutine(nameof(GenerateCards));
+    }
+
+    private void TryDestroyExistingCards()
+    {
+        if (handParent.childCount == 0)
+        {
+            return;
+        }
+        CardPointerInteraction[] handChilds = handParent.GetComponentsInChildren<CardPointerInteraction>();
+        for (int i = 0; i < handChilds.Length; i++)
+        {
+            handChilds[i].DestroyCard();
+        }
     }
 
     public void AddCartToList(Card card)
@@ -41,7 +67,7 @@ public class CardManager : MonoBehaviour
     }
     private void UpdateDeckCounter()
     {
-        deckCounter.text = cards.Count + " / " + initialDeckSize; 
+        deckCounter.text = cards.Count + " / " + initialDeckSize;
     }
 
     public void GenerateCardOnHand()
