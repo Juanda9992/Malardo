@@ -950,7 +950,7 @@ MonoBehaviour:
   requiredScore: 0
   blindScoreData: {fileID: 11400000, guid: f171bf8cc83c86941840c7450e2ca553, type: 2}
   currentBlindProgress: 0
-  requiredScoreText: {fileID: 0}
+  requiredScoreText: {fileID: 1521434767}
 --- !u!1 &676285006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,8 +2363,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282752511
+  m_fontColor: {r: 1, g: 0.61373794, b: 0.26981127, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

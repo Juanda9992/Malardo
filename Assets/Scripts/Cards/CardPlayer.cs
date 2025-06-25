@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.XR;
 
 public class CardPlayer : MonoBehaviour
@@ -39,6 +40,7 @@ public class CardPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         currentHand.Clear();
+        ScoreManager.instance.ResetScore();
 
     }
 }

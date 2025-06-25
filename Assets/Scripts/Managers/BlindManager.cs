@@ -29,4 +29,9 @@ public class BlindManager : MonoBehaviour
         requiredScoreText.text = requiredScore.ToString();
     }
 
+    public bool BlindDefeated(int scoreToCompare)
+    {
+        return scoreToCompare > requiredScore;
+    }
+
 }

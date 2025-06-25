@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class HandManager : MonoBehaviour
 {
     [SerializeField] private int discards = 3;
-    [SerializeField] private int hands = 4;
+    public int hands = 4;
     public static HandManager instance;
     public List<Card> handCards;
     [SerializeField] private int handLimit = 5;

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -47,6 +48,23 @@ public class ScoreManager : MonoBehaviour
         roundScore += currentScore;
 
         scoreText.text = roundScore.ToString();
+
+        CheckBlindWin();
+    }
+
+    private void CheckBlindWin()
+    {
+        if (BlindManager.instance.BlindDefeated((int)roundScore))
+        {
+
+        }
+        else
+        {
+            if (HandManager.instance.hands == 0)
+            {
+                Debug.Log("Game lost");
+            }
+        }
     }
 
     public void ResetScore()
