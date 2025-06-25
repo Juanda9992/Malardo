@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 public class HandDetector : MonoBehaviour
 {
+    public static HandDetector instance;
     [SerializeField] private List<Card> cardsSorted;
     [SerializeField] private List<Card> handCards;
 
@@ -11,6 +12,10 @@ public class HandDetector : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI handNameText;
     private HandData currentHand;
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
@@ -84,10 +89,10 @@ public class HandDetector : MonoBehaviour
         ScoreManager.instance.SetMult(currentHand.baseMult);
     }
 
-    private void RemoveHandFromMult()
+    public void RemoveHandFromMult()
     {
         handNameText.text = "";
-        ScoreManager.instance.ResetScore();
+        ScoreManager.instance.ResetChipsAndMult();
     }
 
     private bool CheckIfStraight()

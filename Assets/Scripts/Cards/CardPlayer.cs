@@ -40,7 +40,8 @@ public class CardPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         currentHand.Clear();
-        ScoreManager.instance.ResetScore();
+        HandDetector.instance.RemoveHandFromMult();
+        ScoreManager.instance.ResetChipsAndMult();
 
     }
 }

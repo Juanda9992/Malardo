@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,7 +14,12 @@ public class ScoreManager : MonoBehaviour
     {
         instance = this;
 
-        ResetScore();
+        ResetChipsAndMult();
+    }
+
+    void Start()
+    {
+        BlindManager.instance.OnBlindDefeated += ResetRoundScore;
     }
 
     public void AddChips(int value)
@@ -67,7 +71,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void ResetScore()
+    public void ResetChipsAndMult()
     {
         chips = 0;
         mult = 1;
@@ -75,5 +79,12 @@ public class ScoreManager : MonoBehaviour
 
         chipsText.text = chips.ToString();
         multText.text = mult.ToString();
+    }
+
+    private void ResetRoundScore()
+    {
+        ResetChipsAndMult();
+        roundScore = 0;
+        scoreText.text = roundScore.ToString();
     }
 }
