@@ -34,4 +34,17 @@ public class BlindManager : MonoBehaviour
         return scoreToCompare > requiredScore;
     }
 
+    public void IncreaseBetlevel()
+    {
+        currentBlindProgress++;
+
+        if (currentBlindProgress > 2)
+        {
+            currentBlindProgress = 0;
+            anteLevel++;
+        }
+
+        SetRequiredScore();
+    }
+
 }

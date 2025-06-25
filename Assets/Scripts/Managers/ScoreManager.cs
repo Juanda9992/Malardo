@@ -56,7 +56,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (BlindManager.instance.BlindDefeated((int)roundScore))
         {
-
+            BlindManager.instance.IncreaseBetlevel();
         }
         else
         {
