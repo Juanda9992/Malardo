@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,8 @@ public class BlindManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI requiredScoreText;
+
+    public event Action OnBlindDefeated;
     void Awake()
     {
         instance = this;
@@ -36,6 +39,7 @@ public class BlindManager : MonoBehaviour
 
     public void IncreaseBetlevel()
     {
+        OnBlindDefeated?.Invoke();
         currentBlindProgress++;
 
         if (currentBlindProgress > 2)

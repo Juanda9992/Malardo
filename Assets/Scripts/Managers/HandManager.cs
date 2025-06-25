@@ -21,7 +21,7 @@ public class HandManager : MonoBehaviour
 
     [SerializeField] private InputActionReference rightClick;
 
-    [SerializeField] private TextMeshProUGUI discardsText,handsText;
+    [SerializeField] private TextMeshProUGUI discardsText, handsText;
 
     public event Action<List<Card>> OnHandChanged;
     void Awake()
@@ -37,6 +37,8 @@ public class HandManager : MonoBehaviour
     {
         rightClick.action.performed += _ => RemoveAllCards();
         SetPlayButtonsState(false);
+
+        BlindManager.instance.OnBlindDefeated += ResetHandsAndDiscards;
     }
 
     public void AddCardToHand(Card card)
@@ -106,6 +108,15 @@ public class HandManager : MonoBehaviour
         hands--;
         OnHandPlayed?.Invoke(handCards);
         SetPlayButtonsState(false);
+        UpdateHandText();
+    }
+
+    private void ResetHandsAndDiscards()
+    {
+        hands = 4;
+        discards = 3;
+
+        UpdateDiscardText();
         UpdateHandText();
     }
 }
