@@ -79,6 +79,7 @@ public class HandManager : MonoBehaviour
             }
         }
 
+        GameEventsManager.instance.TriggerHandDiscard();
         handCards.Clear();
         UpdateDiscardText();
         SetPlayButtonsState(false);
@@ -107,6 +108,7 @@ public class HandManager : MonoBehaviour
     {
         hands--;
         OnHandPlayed?.Invoke(handCards);
+        GameEventsManager.instance.TriggerHandPlayed();
         SetPlayButtonsState(false);
         UpdateHandText();
     }
