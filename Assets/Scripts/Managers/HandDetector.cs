@@ -6,6 +6,7 @@ public class HandDetector : MonoBehaviour
 {
     public static HandDetector instance;
     [SerializeField] private List<Card> cardsSorted;
+    [SerializeField] private List<Card> realCards;
     [SerializeField] private List<Card> handCards;
 
     [SerializeField] private List<HandData> allHands;
@@ -25,7 +26,8 @@ public class HandDetector : MonoBehaviour
     private void DetectHandPlayed(List<Card> cards)
     {
         handCards = new List<Card>(cards);
-
+        realCards = new List<Card>(cards);
+        Debug.Log(handCards.Count);
         if (handCards.Count == 0)
         {
             RemoveHandFromMult();
@@ -60,6 +62,7 @@ public class HandDetector : MonoBehaviour
             AddHandToMult();
             return;
         }
+        Debug.Log("Enter with" + handCards.Count);
 
         if (CheckIfDoublePair())
         {
@@ -120,6 +123,7 @@ public class HandDetector : MonoBehaviour
             {
                 currentHand = allHands.Find(x => x.handType == HandType.Straight);
                 Debug.Log("Straight");
+                CardPlayer.instance.ReceiveHandCards(cardsSorted);
                 return true;
             }
         }
@@ -140,6 +144,7 @@ public class HandDetector : MonoBehaviour
             }
         }
         currentHand = allHands.Find(x => x.handType == HandType.Flush);
+        CardPlayer.instance.ReceiveHandCards(handCards);
         Debug.Log("Suit");
         return true;
     }
@@ -153,6 +158,7 @@ public class HandDetector : MonoBehaviour
         if (GetCardsInHandByNumber(handCards, handCards[0].number).Count == 5)
         {
             Debug.Log("Five of a kind");
+            CardPlayer.instance.ReceiveHandCards(handCards);
             currentHand = allHands.Find(x => x.handType == HandType.Five_Of_A_Kind);
             return true;
         }
@@ -166,19 +172,19 @@ public class HandDetector : MonoBehaviour
             return false;
         }
 
-        List<Card> validCards;
-
-        validCards = GetCardsInHandByNumber(handCards, handCards[0].number);
-        if (validCards.Count == 4)
+        realCards = GetCardsInHandByNumber(handCards, handCards[0].number);
+        if (realCards.Count == 4)
         {
             Debug.Log("Four of a Kind");
+            CardPlayer.instance.ReceiveHandCards(realCards);
             return true;
         }
 
-        validCards = GetCardsInHandByNumber(handCards, handCards[3].number);
-        if (validCards.Count == 4)
+        realCards = GetCardsInHandByNumber(handCards, handCards[3].number);
+        if (realCards.Count == 4)
         {
             Debug.Log("Four of a Kind");
+            CardPlayer.instance.ReceiveHandCards(realCards);
             currentHand = allHands.Find(x => x.handType == HandType.Four_Of_A_Kind);
             return true;
         }
@@ -193,8 +199,10 @@ public class HandDetector : MonoBehaviour
 
         for (int i = 0; i < handCards.Count; i++)
         {
-            if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 3)
+            realCards = GetCardsInHandByNumber(handCards, handCards[i].number);
+            if (realCards.Count == 3)
             {
+                CardPlayer.instance.ReceiveHandCards(realCards);
                 Debug.Log("Three of a kind");
                 currentHand = allHands.Find(x => x.handType == HandType.Three_Of_A_Kind);
                 return true;
@@ -209,25 +217,28 @@ public class HandDetector : MonoBehaviour
             return false;
         }
 
-        List<Card> referenceList = new List<Card>(handCards);
+        realCards = new List<Card>();
         int pairsFound = 0;
-        int match1 = 0;
-        for (int i = 0; i < referenceList.Count; i++)
+
+        for (int i = 0; i < handCards.Count; i++)
         {
-            if (referenceList[i].number == match1)
+            if (realCards.Find(x => x.number == handCards[i].number) != null)
             {
+                Debug.Log("Ente here");
                 continue;
             }
-            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 2)
+            if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
-                match1 = referenceList[i].number;
                 pairsFound++;
+                realCards.Add(handCards[i]);
+                realCards.Add(handCards[i]);
             }
         }
 
         if (pairsFound == 2)
         {
             Debug.Log("Double pair");
+            CardPlayer.instance.ReceiveHandCards(realCards);
             currentHand = allHands.Find(x => x.handType == HandType.Double_Pair);
         }
         return pairsFound == 2;
@@ -239,30 +250,30 @@ public class HandDetector : MonoBehaviour
             return false;
         }
 
-        List<Card> referenceList = new List<Card>(handCards);
+        realCards = new List<Card>(handCards);
         int matches = 0;
         int match1 = 0;
 
         bool pair = false;
         bool three = false;
-        for (int i = referenceList.Count - 1; i >= 0; i--)
+        for (int i = realCards.Count - 1; i >= 0; i--)
         {
-            if (referenceList[i].number == match1)
+            if (realCards[i].number == match1)
             {
                 continue;
             }
-            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 2 && !pair)
+            if (GetCardsInHandByNumber(realCards, realCards[i].number).Count == 2 && !pair)
             {
                 pair = true;
-                match1 = referenceList[i].number;
+                match1 = realCards[i].number;
                 matches++;
                 continue;
             }
 
-            if (GetCardsInHandByNumber(referenceList, referenceList[i].number).Count == 3 && !three)
+            if (GetCardsInHandByNumber(realCards, realCards[i].number).Count == 3 && !three)
             {
                 three = true;
-                match1 = referenceList[i].number;
+                match1 = realCards[i].number;
                 matches++;
                 continue;
             }
@@ -271,10 +282,11 @@ public class HandDetector : MonoBehaviour
         if (matches == 2)
         {
             Debug.Log("Full House");
+            CardPlayer.instance.ReceiveHandCards(handCards);
             currentHand = allHands.Find(x => x.handType == HandType.Full_House);
         }
 
-        return true;
+        return matches == 2;
     }
     private bool CheckIfPair()
     {
@@ -283,32 +295,31 @@ public class HandDetector : MonoBehaviour
             return false;
         }
 
-        int match0 = 0;
         int matches = 0;
+
+        realCards = new List<Card>(handCards);
         for (int i = 0; i < handCards.Count; i++)
         {
-            if (handCards[i].number == match0)
-            {
-                continue;
-            }
             if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
                 matches++;
-                match0 = handCards[i].number;
             }
         }
 
-        if (matches == 1)
+        if (matches == 2)
         {
             Debug.Log("Pair");
+            CardPlayer.instance.ReceiveHandCards(realCards);
             currentHand = allHands.Find(x => x.handType == HandType.Pair);
         }
-        return matches == 1;
+        return matches == 2;
     }
     private void SetHighCard()
     {
         if (handCards.Count > 0)
         {
+            realCards = realCards.OrderBy(x => x.number).ToList();
+            CardPlayer.instance.ReceiveHandCards(realCards);
             currentHand = allHands.Find(x => x.handType == HandType.High_Card);
             AddHandToMult();
         }
