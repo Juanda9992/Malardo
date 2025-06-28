@@ -83,4 +83,9 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         });
     }
 
+    public void ShakeCard()
+    {
+        transform.DOPunchScale(Vector3.one * 0.3f,0.15f);
+    }
+
 }
