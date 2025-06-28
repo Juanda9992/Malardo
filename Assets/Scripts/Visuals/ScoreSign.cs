@@ -13,6 +13,7 @@ public class ScoreSign : MonoBehaviour
     void Awake()
     {
         instance = this;
+        transform.DOScale(0, 0f);
     }
     public void SetScoreSign(Card card)
     {

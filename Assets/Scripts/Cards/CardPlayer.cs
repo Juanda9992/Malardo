@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CardPlayer : MonoBehaviour
@@ -19,6 +20,13 @@ public class CardPlayer : MonoBehaviour
     public void ReceiveHandCards(List<Card> cards)
     {
         currentHand = cards;
+
+        currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
+        Debug.Log("Received cards");
+        for (int i = 0; i < cards.Count; i++)
+        {
+            Debug.Log(currentHand[i].linkedCard.transform.GetSiblingIndex());
+        }
     }
 
     private IEnumerator PlayCards()

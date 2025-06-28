@@ -27,7 +27,6 @@ public class HandDetector : MonoBehaviour
     {
         handCards = new List<Card>(cards);
         realCards = new List<Card>(cards);
-        Debug.Log(handCards.Count);
         if (handCards.Count == 0)
         {
             RemoveHandFromMult();
@@ -62,7 +61,6 @@ public class HandDetector : MonoBehaviour
             AddHandToMult();
             return;
         }
-        Debug.Log("Enter with" + handCards.Count);
 
         if (CheckIfDoublePair())
         {
