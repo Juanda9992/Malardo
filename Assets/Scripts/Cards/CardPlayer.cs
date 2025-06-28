@@ -27,6 +27,7 @@ public class CardPlayer : MonoBehaviour
         {
             yield return new WaitForSeconds(0.3f);
             ScoreManager.instance.AddChips(currentHand[i].number);
+            ScoreSign.instance.SetScoreSign(currentHand[i]);
             GameEventsManager.instance.TriggerCardPlayed(currentHand[i]);
         }
 
