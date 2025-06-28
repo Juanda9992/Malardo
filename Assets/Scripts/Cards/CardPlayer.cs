@@ -36,10 +36,7 @@ public class CardPlayer : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        foreach (var card in currentHand)
-        {
-            card.linkedCard.pointerInteraction.DiscardCard();
-        }
+        HandManager.instance.DiscardAllCards();
 
         yield return new WaitForSeconds(0.3f);
 
