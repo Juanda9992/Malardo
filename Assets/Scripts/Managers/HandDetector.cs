@@ -297,11 +297,12 @@ public class HandDetector : MonoBehaviour
 
         int matches = 0;
 
-        realCards = new List<Card>(handCards);
+        realCards = new List<Card>();
         for (int i = 0; i < handCards.Count; i++)
         {
             if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
+                realCards.Add(handCards[i]);
                 matches++;
             }
         }

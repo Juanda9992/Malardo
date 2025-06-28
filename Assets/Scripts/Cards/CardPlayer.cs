@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.XR;
 
 public class CardPlayer : MonoBehaviour
 {
+    public static CardPlayer instance;
     private List<Card> currentHand;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
-        HandManager.instance.OnHandPlayed += ReceiveHandCards;
+        GameEventsManager.instance.OnHandPlayed += ()=>StartCoroutine(nameof(PlayCards));
     }
     public void ReceiveHandCards(List<Card> cards)
     {
         currentHand = cards;
-        StartCoroutine(nameof(PlayCards));
     }
 
     private IEnumerator PlayCards()
