@@ -222,26 +222,20 @@ public class HandDetector : MonoBehaviour
 
         for (int i = 0; i < handCards.Count; i++)
         {
-            if (realCards.Find(x => x.number == handCards[i].number) != null)
-            {
-                Debug.Log("Ente here");
-                continue;
-            }
             if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
                 pairsFound++;
                 realCards.Add(handCards[i]);
-                realCards.Add(handCards[i]);
             }
         }
 
-        if (pairsFound == 2)
+        if (pairsFound == 4)
         {
             Debug.Log("Double pair");
             CardPlayer.instance.ReceiveHandCards(realCards);
             currentHand = allHands.Find(x => x.handType == HandType.Double_Pair);
         }
-        return pairsFound == 2;
+        return pairsFound == 4;
     }
     private bool CheckIfFullHouse()
     {
