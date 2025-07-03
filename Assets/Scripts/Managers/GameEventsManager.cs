@@ -7,6 +7,7 @@ public class GameEventsManager : MonoBehaviour
 
     [SerializeField] private bool debugger;
     public event Action OnHandPlayed;
+    public event Action OnHandEnd;
     public event Action OnHandDiscarted;
     public event Action<Card> OnCardPlay;
 
@@ -19,6 +20,13 @@ public class GameEventsManager : MonoBehaviour
         OnHandPlayed?.Invoke();
 
         if (debugger) Debug.Log("Hand Played");
+    }
+
+    public void TriggerHandEnd()
+    {
+        OnHandEnd?.Invoke();
+
+        if (debugger) Debug.Log("Hand Ended");
     }
 
     public void TriggerHandDiscard()

@@ -22,11 +22,6 @@ public class CardPlayer : MonoBehaviour
         currentHand = cards;
 
         currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
-        Debug.Log("Received cards");
-        for (int i = 0; i < cards.Count; i++)
-        {
-            Debug.Log(currentHand[i].linkedCard.transform.GetSiblingIndex());
-        }
     }
 
     private IEnumerator PlayCards()
@@ -42,13 +37,17 @@ public class CardPlayer : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        GameEventsManager.instance.TriggerHandEnd();
+
+        yield return new WaitForSeconds(1f);
+
         ScoreManager.instance.CalculateScore();
 
         yield return new WaitForSeconds(0.3f);
 
         HandManager.instance.DiscardAllCards();
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.35f);
 
         currentHand.Clear();
         HandDetector.instance.RemoveHandFromMult();
