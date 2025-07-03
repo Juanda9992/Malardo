@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 public class HandDetector : MonoBehaviour
 {
     public static HandDetector instance;
@@ -20,6 +21,7 @@ public class HandDetector : MonoBehaviour
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
+        HandManager.instance.OnHandPlayed += x => ResetValues();
         RemoveHandFromMult();
     }
 
@@ -321,5 +323,12 @@ public class HandDetector : MonoBehaviour
     {
         List<Card> validCards = cards.FindAll(x => x.number == predicate);
         return validCards;
+    }
+
+    private void ResetValues()
+    {
+        realCards.Clear();
+        handCards.Clear();
+        cardsSorted.Clear();
     }
 }
