@@ -62,6 +62,11 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         {
             return;
         }
+        CardsReorder.instance.ReorderCards();
+        if (!grabbed)
+        {
+            return;
+        }
         StartCoroutine(nameof(StopDragging));
     }
 
@@ -73,6 +78,8 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     private IEnumerator StartDragging()
     {
         yield return new WaitForSeconds(0.1f);
+        CardsReorder.instance.DisableLayout();
+        transform.SetSiblingIndex(transform.parent.childCount);
         previousPos = transform.localPosition;
         grabbed = true;
     }
