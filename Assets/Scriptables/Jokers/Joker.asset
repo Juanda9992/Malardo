@@ -15,8 +15,9 @@ MonoBehaviour:
   jokerName: Joker
   description: +4 Multi
   triggerEvents:
-  - triggerOption: 0
+  - triggerOption: 1
     extraData: 
-  executeEvents:
-  - executeAction: 0
-    executeActionExtraData: 4
+  giveEvent:
+    active: 1
+    ammount: 4
+    giveType: 1

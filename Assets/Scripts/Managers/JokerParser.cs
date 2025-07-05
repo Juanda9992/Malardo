@@ -41,26 +41,11 @@ public class JokerParser : MonoBehaviour
     private void HandleExecutionEvents(JokerContainer jokerContainer)
     {
         JokerData jokerData = jokerContainer._joker;
-        ExecuteEvents executeEvent;
-        for (int i = 0; i < jokerData.executeEvents.Length; i++)
-        {
-            executeEvent = jokerData.executeEvents[i];
-            switch (executeEvent.executeAction)
-            {
-                case ExecuteAction.AddMult:
-                    jokerContainer.JokerAction += () => ScoreManager.instance.AddMult((int)GetActionValue(executeEvent.executeActionExtraData));
-                    break;
-                case ExecuteAction.AddChips:
-                    jokerContainer.JokerAction += () => ScoreManager.instance.AddChips((int)GetActionValue(executeEvent.executeActionExtraData));
-                    break;
 
-            }
+        if (jokerData.giveEvent.active)
+        {
+            jokerContainer.JokerAction += ()=>jokerData.giveEvent.GiveAction();
         }
-    }
-    private float GetActionValue(string action)
-    {
-        string[] actions = action.Split(" ");
-        float value = float.Parse(actions[0]);
-        return value;
+
     }
 }
