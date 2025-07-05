@@ -395,6 +395,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47520c134e96bc4889a09a2a07b675e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePos:
+    m_Name: Mouse Pos
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 75e1641d-5918-46f0-97ac-1107d88381fa
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a88740f7-437a-4b7d-b131-4c6acd8046c2
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Pos
+      m_Flags: 0
+    m_Flags: 0
   card_Data: {fileID: 5501412372648086110}
   animationTime: 0.2
   hoverScale: 1.2

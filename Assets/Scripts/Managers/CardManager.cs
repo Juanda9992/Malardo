@@ -15,6 +15,7 @@ public class CardManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI deckCounter;
     public List<Card> cards;
+    public List<Card_Data> cardsOnScreen;
 
     private int initialDeckSize;
 
@@ -34,6 +35,7 @@ public class CardManager : MonoBehaviour
         TryDestroyExistingCards();
         yield return new WaitForSeconds(0.1f);
         cards = new List<Card>(cardGenerationPresset.allCards);
+        cardsOnScreen = new List<Card_Data>();
         initialDeckSize = cards.Count;
         for (int i = 0; i < defaultHandSize; i++)
         {
@@ -82,12 +84,15 @@ public class CardManager : MonoBehaviour
 
         GameObject currentCard = Instantiate(cardprefab, handParent);
 
+
         currentCard.GetComponent<Card_Data>().SetCardData(card);
+        cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
     }
 
     public void RemoveCardFromDeck(Card card)
     {
         cards.Remove(card);
+        cardsOnScreen.Remove(card.linkedCard);
         UpdateDeckCounter();
 
     }

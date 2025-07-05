@@ -2,10 +2,10 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.XR;
-
-public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+using UnityEngine.InputSystem;
+public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler
 {
+    [SerializeField] private InputAction mousePos;
     [SerializeField] private Card_Data card_Data;
 
     [SerializeField] private float animationTime;
@@ -15,11 +15,14 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     private float initialY;
 
     private bool selected = false;
+    [SerializeField] private bool grabbed = false;
+    private Vector2 previousPos;
 
     IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
         initialY = _rectTransform.localPosition.y;
+        mousePos.Enable();
     }
     public void OnPointerEnter(PointerEventData data)
     {
@@ -33,6 +36,10 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerClick(PointerEventData data)
     {
+        if (grabbed)
+        {
+            return;
+        }
         if (data.pointerId != -1)
         {
             return;
@@ -47,6 +54,45 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         }
     }
 
+    #region Drag and Drop
+    public void OnPointerUp(PointerEventData data)
+    {
+        StopCoroutine(nameof(StartDragging));
+        if (!grabbed)
+        {
+            return;
+        }
+        StartCoroutine(nameof(StopDragging));
+    }
+
+    public void OnPointerDown(PointerEventData data)
+    {
+        StartCoroutine(nameof(StartDragging));
+    }
+
+    private IEnumerator StartDragging()
+    {
+        yield return new WaitForSeconds(0.1f);
+        previousPos = transform.localPosition;
+        grabbed = true;
+    }
+
+    private IEnumerator StopDragging()
+    {
+        yield return new WaitForEndOfFrame();
+        grabbed = false;
+        transform.localPosition = previousPos;
+
+    }
+
+    void Update()
+    {
+        if (grabbed)
+        {
+            transform.position = mousePos.ReadValue<Vector2>();
+        }
+    }
+    #endregion
     public void Select()
     {
         if (HandManager.instance.CanAddCards)
@@ -85,7 +131,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void ShakeCard()
     {
-        transform.DOPunchScale(Vector3.one * 0.3f,0.15f);
+        transform.DOPunchScale(Vector3.one * 0.3f, 0.15f);
     }
 
 }
