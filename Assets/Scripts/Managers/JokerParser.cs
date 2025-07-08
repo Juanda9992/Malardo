@@ -1,3 +1,4 @@
+using Unity.Collections;
 using UnityEngine;
 
 public class JokerParser : MonoBehaviour
@@ -23,17 +24,40 @@ public class JokerParser : MonoBehaviour
             switch (jokerData.triggerEvents[i].triggerOption)
             {
                 case TriggerOptions.OnHandPlay:
-                    GameEventsManager.instance.OnHandPlayed += ()=> jokerContainer.JokerAction?.Invoke();
+                    GameEventsManager.instance.OnHandPlayed += () => jokerContainer.JokerAction?.Invoke();
                     break;
 
                 case TriggerOptions.OnHandEnd:
-                    GameEventsManager.instance.OnHandEnd += ()=> jokerContainer.JokerAction?.Invoke();
+                    GameEventsManager.instance.OnHandEnd += () => jokerContainer.JokerAction?.Invoke();
                     break;
 
                 case TriggerOptions.OnHandDiscard:
-                    GameEventsManager.instance.OnHandDiscarted += ()=> jokerContainer.JokerAction?.Invoke();
+                    GameEventsManager.instance.OnHandDiscarted += () => jokerContainer.JokerAction?.Invoke();
                     break;
             }
+
+        }
+        if (jokerData.requiredCardPlayedData.active)
+        {
+            GameEventsManager.instance.OnCardPlay += x =>
+            {
+
+                Debug.Log(jokerData.requiredCardPlayedData.cardSuit);
+                if (x.cardSuit == jokerData.requiredCardPlayedData.cardSuit)
+                {
+                    if (jokerData.requiredCardPlayedData.number > 0)
+                    {
+                        if (x.number == jokerData.requiredCardPlayedData.number)
+                        {
+                            jokerContainer.JokerAction?.Invoke();
+                        }
+                    }
+                    else
+                    {
+                        jokerContainer.JokerAction?.Invoke();
+                    }
+                }
+            };
         }
 
     }
@@ -44,7 +68,7 @@ public class JokerParser : MonoBehaviour
 
         if (jokerData.giveEvent.active)
         {
-            jokerContainer.JokerAction += ()=>jokerData.giveEvent.GiveAction();
+            jokerContainer.JokerAction += () => jokerData.giveEvent.GiveAction();
         }
 
     }

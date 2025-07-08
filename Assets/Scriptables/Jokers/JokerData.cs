@@ -9,6 +9,7 @@ public class JokerData : ScriptableObject
     public string triggerMessage;
 
     public TriggerData[] triggerEvents;
+    public RequiredCardPlayedData requiredCardPlayedData;
     public GiveEvent giveEvent;
 }
 
@@ -17,6 +18,13 @@ public class TriggerData
 {
     public TriggerOptions triggerOption;
     public string extraData;
+}
+[System.Serializable]
+public class RequiredCardPlayedData
+{
+    public bool active;
+    public Suit cardSuit;
+    public int number = -1;
 }
 
 public enum TriggerOptions
