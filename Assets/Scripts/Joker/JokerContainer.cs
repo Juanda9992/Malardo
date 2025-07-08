@@ -15,6 +15,7 @@ public class JokerContainer : MonoBehaviour
 
     public void SetUpJoker()
     {
+        JokerAction += () => ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
         JokerParser.instance.ParseJoker(this);
     }
 

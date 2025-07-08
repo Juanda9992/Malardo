@@ -1077,6 +1077,7 @@ GameObject:
   - component: {fileID: 621395127}
   - component: {fileID: 621395128}
   - component: {fileID: 621395129}
+  - component: {fileID: 621395130}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1102,6 +1103,7 @@ MonoBehaviour:
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   deckCounter: {fileID: 228441445}
   cards: []
+  cardsOnScreen: []
 --- !u!4 &621395120
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,6 +1268,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4199c63bf62f7774089506454d7e2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &621395130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621395118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103ec50633d50fb4b8fc64c97f11bf51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsParent: {fileID: 836230736}
 --- !u!1 &676285006
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,6 +3090,9 @@ MonoBehaviour:
   increaseTime: 0.1
   timetoHide: 0.5
   scoreSignText: {fileID: 305541660}
+  chipColor: {r: 0, g: 0.013594627, b: 1, a: 1}
+  multColor: {r: 1, g: 0.06582225, b: 0, a: 1}
+  bgImage: {fileID: 1895056727}
 --- !u!1 &1990014784
 GameObject:
   m_ObjectHideFlags: 0

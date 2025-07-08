@@ -6,6 +6,7 @@ public class JokerData : ScriptableObject
 {
     public string jokerName;
     public string description;
+    public string triggerMessage;
 
     public TriggerData[] triggerEvents;
     public GiveEvent giveEvent;
