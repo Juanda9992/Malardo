@@ -37,47 +37,72 @@ public class HandDetector : MonoBehaviour
         }
         if (CheckIfFiveOfAKind())
         {
+            Debug.Log("Five of a kind");
+            CardPlayer.instance.ReceiveHandCards(handCards);
+            currentHand = allHands.Find(x => x.handType == HandType.Five_Of_A_Kind);
             AddHandToMult();
             return;
         }
         if (CheckIfColor())
         {
+            currentHand = allHands.Find(x => x.handType == HandType.Flush);
+            CardPlayer.instance.ReceiveHandCards(handCards);
+            Debug.Log("Suit");
             AddHandToMult();
             return;
         }
 
         if (CheckIfStraight())
         {
+            currentHand = allHands.Find(x => x.handType == HandType.Straight);
+            Debug.Log("Straight");
+            CardPlayer.instance.ReceiveHandCards(cardsSorted);
             AddHandToMult();
             return;
         }
 
         if (CheckIfFourOfAkind())
         {
+            Debug.Log("Four of a Kind");
+            CardPlayer.instance.ReceiveHandCards(realCards);
+            currentHand = allHands.Find(x => x.handType == HandType.Four_Of_A_Kind);
             AddHandToMult();
             return;
         }
 
         if (CheckIfFullHouse())
         {
+            Debug.Log("Full House");
+            CardPlayer.instance.ReceiveHandCards(handCards);
+            currentHand = allHands.Find(x => x.handType == HandType.Full_House);
             AddHandToMult();
             return;
         }
 
         if (CheckIfDoublePair())
         {
+            Debug.Log("Double pair");
+            CardPlayer.instance.ReceiveHandCards(realCards);
+            currentHand = allHands.Find(x => x.handType == HandType.Double_Pair);
             AddHandToMult();
             return;
         }
 
         if (CheckIfThreeOfAKind())
         {
+            CardPlayer.instance.ReceiveHandCards(realCards);
+            Debug.Log("Three of a kind");
+            currentHand = allHands.Find(x => x.handType == HandType.Three_Of_A_Kind);
             AddHandToMult();
             return;
         }
 
         if (CheckIfPair())
         {
+
+            Debug.Log("Pair");
+            CardPlayer.instance.ReceiveHandCards(realCards);
+            currentHand = allHands.Find(x => x.handType == HandType.Pair);
             AddHandToMult();
             return;
         }
@@ -121,9 +146,6 @@ public class HandDetector : MonoBehaviour
             }
             if (Mathf.Abs(cardsSorted[3].number - cardsSorted[4].number) == 1)
             {
-                currentHand = allHands.Find(x => x.handType == HandType.Straight);
-                Debug.Log("Straight");
-                CardPlayer.instance.ReceiveHandCards(cardsSorted);
                 return true;
             }
         }
@@ -143,9 +165,6 @@ public class HandDetector : MonoBehaviour
                 return false;
             }
         }
-        currentHand = allHands.Find(x => x.handType == HandType.Flush);
-        CardPlayer.instance.ReceiveHandCards(handCards);
-        Debug.Log("Suit");
         return true;
     }
     private bool CheckIfFiveOfAKind()
@@ -157,9 +176,6 @@ public class HandDetector : MonoBehaviour
 
         if (GetCardsInHandByNumber(handCards, handCards[0].number).Count == 5)
         {
-            Debug.Log("Five of a kind");
-            CardPlayer.instance.ReceiveHandCards(handCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Five_Of_A_Kind);
             return true;
         }
 
@@ -175,17 +191,12 @@ public class HandDetector : MonoBehaviour
         realCards = GetCardsInHandByNumber(handCards, handCards[0].number);
         if (realCards.Count == 4)
         {
-            Debug.Log("Four of a Kind");
-            CardPlayer.instance.ReceiveHandCards(realCards);
             return true;
         }
 
         realCards = GetCardsInHandByNumber(handCards, handCards[3].number);
         if (realCards.Count == 4)
         {
-            Debug.Log("Four of a Kind");
-            CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Four_Of_A_Kind);
             return true;
         }
         return false;
@@ -202,9 +213,6 @@ public class HandDetector : MonoBehaviour
             realCards = GetCardsInHandByNumber(handCards, handCards[i].number);
             if (realCards.Count == 3)
             {
-                CardPlayer.instance.ReceiveHandCards(realCards);
-                Debug.Log("Three of a kind");
-                currentHand = allHands.Find(x => x.handType == HandType.Three_Of_A_Kind);
                 return true;
             }
         }
@@ -227,13 +235,6 @@ public class HandDetector : MonoBehaviour
                 pairsFound++;
                 realCards.Add(handCards[i]);
             }
-        }
-
-        if (pairsFound == 4)
-        {
-            Debug.Log("Double pair");
-            CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Double_Pair);
         }
         return pairsFound == 4;
     }
@@ -272,14 +273,6 @@ public class HandDetector : MonoBehaviour
                 continue;
             }
         }
-
-        if (matches == 2)
-        {
-            Debug.Log("Full House");
-            CardPlayer.instance.ReceiveHandCards(handCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Full_House);
-        }
-
         return matches == 2;
     }
     private bool CheckIfPair()
@@ -299,13 +292,6 @@ public class HandDetector : MonoBehaviour
                 realCards.Add(handCards[i]);
                 matches++;
             }
-        }
-
-        if (matches == 2)
-        {
-            Debug.Log("Pair");
-            CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Pair);
         }
         return matches == 2;
     }
@@ -327,6 +313,7 @@ public class HandDetector : MonoBehaviour
 
     private void ResetValues()
     {
+        CardPlayer.instance.SetHandPlayed(currentHand);
         realCards.Clear();
         handCards.Clear();
         cardsSorted.Clear();
