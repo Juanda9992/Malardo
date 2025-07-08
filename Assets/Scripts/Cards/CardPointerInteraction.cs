@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler
 {
     [SerializeField] private InputAction mousePos;
@@ -88,8 +89,22 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         yield return new WaitForEndOfFrame();
         grabbed = false;
-        transform.localPosition = previousPos;
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        HandManager.instance.UpdateHandCardsPosition();
 
+    }
+
+    public void UpdateCardPos()
+    {
+        if (selected)
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x, initialY + moveYOffset);
+        }
+        else
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x, initialY);
+        }
     }
 
     void Update()
@@ -115,6 +130,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         selected = false;
         transform.DOLocalMoveY(initialY, animationTime);
+        previousPos = new Vector2(transform.localPosition.x, initialY);
         HandManager.instance.RemoveCardFromHand(card_Data.currentCard);
     }
 

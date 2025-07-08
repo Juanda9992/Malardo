@@ -113,6 +113,14 @@ public class HandManager : MonoBehaviour
         UpdateHandText();
     }
 
+    public void UpdateHandCardsPosition()
+    {
+        foreach (var card in handCards)
+        {
+            card.linkedCard.pointerInteraction.UpdateCardPos();
+        }
+    }
+
     private void ResetHandsAndDiscards()
     {
         hands = 4;
