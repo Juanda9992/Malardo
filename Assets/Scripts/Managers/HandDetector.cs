@@ -21,7 +21,7 @@ public class HandDetector : MonoBehaviour
     void Start()
     {
         HandManager.instance.OnHandChanged += DetectHandPlayed;
-        HandManager.instance.OnHandPlayed += x => ResetValues();
+        GameEventsManager.instance.OnHandEnd += ResetValues;
         RemoveHandFromMult();
     }
 
@@ -123,7 +123,7 @@ public class HandDetector : MonoBehaviour
         ScoreManager.instance.ResetChipsAndMult();
     }
 
-    private bool CheckIfStraight()
+    public bool CheckIfStraight()
     {
         if (handCards.Count != 5)
         {
@@ -151,7 +151,7 @@ public class HandDetector : MonoBehaviour
         }
         return true;
     }
-    private bool CheckIfColor()
+    public bool CheckIfColor()
     {
         if (handCards.Count != 5)
         {
@@ -167,7 +167,7 @@ public class HandDetector : MonoBehaviour
         }
         return true;
     }
-    private bool CheckIfFiveOfAKind()
+    public bool CheckIfFiveOfAKind()
     {
         if (handCards.Count < 5)
         {
@@ -181,7 +181,7 @@ public class HandDetector : MonoBehaviour
 
         return false;
     }
-    private bool CheckIfFourOfAkind()
+    public bool CheckIfFourOfAkind()
     {
         if (handCards.Count < 4)
         {
@@ -201,7 +201,7 @@ public class HandDetector : MonoBehaviour
         }
         return false;
     }
-    private bool CheckIfThreeOfAKind()
+    public bool CheckIfThreeOfAKind()
     {
         if (handCards.Count < 3)
         {
@@ -218,7 +218,7 @@ public class HandDetector : MonoBehaviour
         }
         return false;
     }
-    private bool CheckIfDoublePair()
+    public bool CheckIfDoublePair()
     {
         if (handCards.Count < 4)
         {
@@ -238,7 +238,7 @@ public class HandDetector : MonoBehaviour
         }
         return pairsFound == 4;
     }
-    private bool CheckIfFullHouse()
+    public bool CheckIfFullHouse()
     {
         if (handCards.Count < 5)
         {
@@ -275,7 +275,7 @@ public class HandDetector : MonoBehaviour
         }
         return matches == 2;
     }
-    private bool CheckIfPair()
+    public bool CheckIfPair()
     {
         if (handCards.Count < 2)
         {
@@ -295,7 +295,7 @@ public class HandDetector : MonoBehaviour
         }
         return matches == 2;
     }
-    private void SetHighCard()
+    public void SetHighCard()
     {
         if (handCards.Count > 0)
         {
@@ -313,7 +313,7 @@ public class HandDetector : MonoBehaviour
 
     private void ResetValues()
     {
-        CardPlayer.instance.SetHandPlayed(currentHand);
+        CardPlayer.instance.SetHandPlayed(currentHand.handType);
         realCards.Clear();
         handCards.Clear();
         cardsSorted.Clear();

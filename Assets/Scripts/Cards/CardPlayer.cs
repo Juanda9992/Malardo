@@ -7,6 +7,7 @@ public class CardPlayer : MonoBehaviour
 {
     public static CardPlayer instance;
     private List<Card> currentHand;
+    private HandType lastHandPlayed;
 
     void Awake()
     {
@@ -15,13 +16,17 @@ public class CardPlayer : MonoBehaviour
 
     void Start()
     {
-        GameEventsManager.instance.OnHandPlayed += ()=>StartCoroutine(nameof(PlayCards));
+        GameEventsManager.instance.OnHandPlayed += () => StartCoroutine(nameof(PlayCards));
     }
     public void ReceiveHandCards(List<Card> cards)
     {
         currentHand = cards;
 
         currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
+    }
+    public void SetHandPlayed(HandType handData)
+    {
+        lastHandPlayed = handData;
     }
 
     private IEnumerator PlayCards()
@@ -34,6 +39,11 @@ public class CardPlayer : MonoBehaviour
             currentHand[i].linkedCard.pointerInteraction.ShakeCard();
             GameEventsManager.instance.TriggerCardPlayed(currentHand[i]);
         }
+
+        yield return new WaitForSeconds(0.5f);
+
+        GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
+        Debug.Log(lastHandPlayed);
 
         yield return new WaitForSeconds(0.5f);
 
