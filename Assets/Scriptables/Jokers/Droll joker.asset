@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Jolly Joker
+  m_Name: Droll joker
   m_EditorClassIdentifier: 
-  jokerName: Jolly Joker
-  description: +8 Mult if played hand contains a Pair
-  triggerMessage: +8
+  jokerName: Zany Joker
+  description: +10 Mult if played hand contains a Flush
+  triggerMessage: +10
   triggerEvents: []
   requiredCardPlayedData:
     active: 0
@@ -22,8 +22,8 @@ MonoBehaviour:
     number: -1
   requiredHandPlayed:
     active: 1
-    requiredHand: 1
+    requiredHand: 5
   giveEvent:
     active: 1
-    ammount: 8
+    ammount: 10
     giveType: 1
