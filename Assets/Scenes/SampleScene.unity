@@ -532,7 +532,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.55
+  m_fontSize: 27.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a9c3d4c0ea445418f09804fbdeb8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joker: {fileID: 11400000, guid: 7dd7dfe29abdd7c428f78d60e5d743e5, type: 2}
+  _joker: {fileID: 11400000, guid: 6ae9522665ed1294a9675198c6309b63, type: 2}
   jokerText: {fileID: 1877186247}
 --- !u!1 &500020279
 GameObject:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultHandSize: 8
-  cardGenerationPresset: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
+  cardGenerationPresset: {fileID: 11400000, guid: f2fd5d82db193cc46ba9af50b5b6991a, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   deckCounter: {fileID: 228441445}
@@ -1184,6 +1184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610d94c1834f1714aa9815b72a243c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHand: []
 --- !u!114 &621395125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3171,7 +3172,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -175}
-  m_SizeDelta: {x: 100, y: 40}
+  m_SizeDelta: {x: 130, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895056727
 MonoBehaviour:

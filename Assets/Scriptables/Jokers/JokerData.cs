@@ -7,10 +7,18 @@ public class JokerData : ScriptableObject
     public string jokerName;
     public string description;
     public string triggerMessage;
+    public JokerRarity jokerRarity;
     public RequiredCardPlayedData requiredCardPlayedData;
     public RequiredHandPlayed requiredHandPlayed;
     public RequiredHandSizeData requiredHandSizeData;
     public GiveEvent giveEvent;
+}
+public enum JokerRarity
+{
+    Common,
+    Uncommon,
+    Rare,
+    Legendary
 }
 
 [System.Serializable]
