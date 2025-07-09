@@ -19,28 +19,37 @@ public class JokerParser : MonoBehaviour
     private void HandleTriggerEvents(JokerContainer jokerContainer)
     {
         JokerData jokerData = jokerContainer._joker;
-        if (jokerData.requiredCardPlayedData.active)
-        {
-            GameEventsManager.instance.OnCardPlay += x =>
-            {
 
-                Debug.Log(jokerData.requiredCardPlayedData.cardSuit);
-                if (x.cardSuit == jokerData.requiredCardPlayedData.cardSuit)
+        if (jokerData.defaultTrigger.active)
+        {
+            if (jokerData.defaultTrigger.triggerOptions == TriggerOptions.OnHandEnd)
+            {
+                GameEventsManager.instance.OnHandEnd += ()=> jokerContainer.JokerAction?.Invoke();
+            }
+        }
+
+        if (jokerData.requiredCardPlayedData.active)
+            {
+                GameEventsManager.instance.OnCardPlay += x =>
                 {
-                    if (jokerData.requiredCardPlayedData.number > 0)
+
+                    Debug.Log(jokerData.requiredCardPlayedData.cardSuit);
+                    if (x.cardSuit == jokerData.requiredCardPlayedData.cardSuit)
                     {
-                        if (x.number == jokerData.requiredCardPlayedData.number)
+                        if (jokerData.requiredCardPlayedData.number > 0)
+                        {
+                            if (x.number == jokerData.requiredCardPlayedData.number)
+                            {
+                                jokerContainer.JokerAction?.Invoke();
+                            }
+                        }
+                        else
                         {
                             jokerContainer.JokerAction?.Invoke();
                         }
                     }
-                    else
-                    {
-                        jokerContainer.JokerAction?.Invoke();
-                    }
-                }
-            };
-        }
+                };
+            }
 
         if (jokerData.requiredHandPlayed.active)
         {
