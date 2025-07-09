@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: CleverJoker
+  m_Name: Devious Joker
   m_EditorClassIdentifier: 
-  jokerName: Clever Joker
-  description: +80 Chips if played hand contains a Two Pair
-  triggerMessage: +80 Chips
+  jokerName: Devious Joker
+  description: +100 Chips if played hand contains a Straight
+  triggerMessage: +100 Chips
   triggerEvents: []
   requiredCardPlayedData:
     active: 0
@@ -22,8 +22,8 @@ MonoBehaviour:
     number: -1
   requiredHandPlayed:
     active: 1
-    requiredHand: 2
+    requiredHand: 4
   giveEvent:
     active: 1
-    ammount: 80
+    ammount: 100
     giveType: 0

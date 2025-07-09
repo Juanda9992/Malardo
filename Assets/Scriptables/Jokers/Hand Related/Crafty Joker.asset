@@ -25,5 +25,5 @@ MonoBehaviour:
     requiredHand: 5
   giveEvent:
     active: 1
-    ammount: 100
+    ammount: 80
     giveType: 0
