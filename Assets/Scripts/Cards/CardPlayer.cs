@@ -6,7 +6,7 @@ using UnityEngine;
 public class CardPlayer : MonoBehaviour
 {
     public static CardPlayer instance;
-    private List<Card> currentHand;
+    public List<Card> currentHand;
     private HandType lastHandPlayed;
 
     void Awake()

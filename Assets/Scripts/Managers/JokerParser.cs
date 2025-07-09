@@ -19,24 +19,6 @@ public class JokerParser : MonoBehaviour
     private void HandleTriggerEvents(JokerContainer jokerContainer)
     {
         JokerData jokerData = jokerContainer._joker;
-        for (int i = 0; i < jokerData.triggerEvents.Length; i++)
-        {
-            switch (jokerData.triggerEvents[i].triggerOption)
-            {
-                case TriggerOptions.OnHandPlay:
-                    GameEventsManager.instance.OnHandPlayed += () => jokerContainer.JokerAction?.Invoke();
-                    break;
-
-                case TriggerOptions.OnHandEnd:
-                    GameEventsManager.instance.OnHandEnd += () => jokerContainer.JokerAction?.Invoke();
-                    break;
-
-                case TriggerOptions.OnHandDiscard:
-                    GameEventsManager.instance.OnHandDiscarted += () => jokerContainer.JokerAction?.Invoke();
-                    break;
-            }
-
-        }
         if (jokerData.requiredCardPlayedData.active)
         {
             GameEventsManager.instance.OnCardPlay += x =>
@@ -62,8 +44,21 @@ public class JokerParser : MonoBehaviour
 
         if (jokerData.requiredHandPlayed.active)
         {
-
             CheckIfHandPlayed(jokerContainer);
+        }
+
+        if (jokerData.requiredHandSizeData.active)
+        {
+            RequiredHandSizeData data = jokerData.requiredHandSizeData;
+            GameEventsManager.instance.OnHandEnd += () =>
+            {
+                int handPlayedSize = CardPlayer.instance.currentHand.Count;
+                Debug.Log(handPlayedSize);
+                if (handPlayedSize >= data.minAmmount && handPlayedSize <= data.maxAmmount)
+                {
+                    jokerContainer.JokerAction?.Invoke();
+                }
+            };
         }
 
     }
@@ -82,7 +77,7 @@ public class JokerParser : MonoBehaviour
             bool hasStraight = HandDetector.instance.CheckIfStraight();
             bool hasFlush = HandDetector.instance.CheckIfColor();
 
-            Debug.Log("Needs " +jokerContainer._joker.requiredHandPlayed.requiredHand);
+            Debug.Log("Needs " + jokerContainer._joker.requiredHandPlayed.requiredHand);
             switch (jokerData.requiredHandPlayed.requiredHand)
             {
                 case HandType.Pair:
