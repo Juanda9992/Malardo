@@ -221,3 +221,9 @@ MonoBehaviour:
     number: 13
     cardSuit: 3
     faceCard: 1
+  presetCard:
+    linkedCard: {fileID: 0}
+    number: 1
+    cardSuit: 0
+    faceCard: 0
+  timesToGenerate: 0

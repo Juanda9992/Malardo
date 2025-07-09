@@ -25,4 +25,17 @@ public class CardGenerationPresset : ScriptableObject
             }
         }
     }
+
+    public Card presetCard;
+    public float timesToGenerate;
+
+    [ContextMenu("Add custom card")]
+    public void AddCustomCard()
+    {
+        for (int i = 0; i < timesToGenerate; i++)
+        {
+            allCards.Add(new Card(){number = presetCard.number, cardSuit = presetCard.cardSuit});
+        }
+        
+    }
 }
