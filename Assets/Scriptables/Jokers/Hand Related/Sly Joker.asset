@@ -15,7 +15,11 @@ MonoBehaviour:
   jokerName: Sly Joker
   description: +50 Chips if played hand contains a Pair
   triggerMessage: +50 Chips
-  triggerEvents: []
+  overrideEffect: 50
+  jokerRarity: 0
+  defaultTrigger:
+    active: 0
+    triggerOptions: 0
   requiredCardPlayedData:
     active: 0
     cardSuit: 3
@@ -23,7 +27,9 @@ MonoBehaviour:
   requiredHandPlayed:
     active: 1
     requiredHand: 1
-  giveEvent:
-    active: 1
-    ammount: 50
-    giveType: 0
+  requiredHandSizeData:
+    active: 0
+    minAmmount: 0
+    maxAmmount: 0
+  effects:
+  - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}

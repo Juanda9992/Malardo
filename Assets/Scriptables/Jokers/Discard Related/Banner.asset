@@ -10,26 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Droll joker
+  m_Name: Banner
   m_EditorClassIdentifier: 
-  jokerName: Zany Joker
-  description: +10 Mult if played hand contains a Flush
-  triggerMessage: +10
-  overrideEffect: 10
+  jokerName: Banner
+  description: +30 Chips for each remaining discard
+  triggerMessage: xxx
   jokerRarity: 0
   defaultTrigger:
-    active: 0
-    triggerOptions: 0
+    active: 1
+    triggerOptions: 1
   requiredCardPlayedData:
     active: 0
-    cardSuit: 3
+    cardSuit: 0
     number: -1
   requiredHandPlayed:
-    active: 1
-    requiredHand: 5
+    active: 0
+    requiredHand: 0
   requiredHandSizeData:
     active: 0
     minAmmount: 0
     maxAmmount: 0
-  effects:
-  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+  giveModifier:
+    active: 1
+    forEach: 1
+    give: 30
+    giveType: 0
+  giveEvent:
+    active: 0
+    ammount: 0
+    giveType: 0

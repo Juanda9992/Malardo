@@ -15,7 +15,11 @@ MonoBehaviour:
   jokerName: Crazy joker
   description: +12 Mult if played hand contains a Straight
   triggerMessage: +12
-  triggerEvents: []
+  overrideEffect: 12
+  jokerRarity: 0
+  defaultTrigger:
+    active: 0
+    triggerOptions: 0
   requiredCardPlayedData:
     active: 0
     cardSuit: 3
@@ -23,7 +27,9 @@ MonoBehaviour:
   requiredHandPlayed:
     active: 1
     requiredHand: 4
-  giveEvent:
-    active: 1
-    ammount: 12
-    giveType: 1
+  requiredHandSizeData:
+    active: 0
+    minAmmount: 0
+    maxAmmount: 0
+  effects:
+  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}

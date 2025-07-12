@@ -15,7 +15,11 @@ MonoBehaviour:
   jokerName: Jolly Joker
   description: +8 Mult if played hand contains a Pair
   triggerMessage: +8
-  triggerEvents: []
+  overrideEffect: 8
+  jokerRarity: 0
+  defaultTrigger:
+    active: 0
+    triggerOptions: 0
   requiredCardPlayedData:
     active: 0
     cardSuit: 3
@@ -23,7 +27,9 @@ MonoBehaviour:
   requiredHandPlayed:
     active: 1
     requiredHand: 1
-  giveEvent:
-    active: 1
-    ammount: 8
-    giveType: 1
+  requiredHandSizeData:
+    active: 0
+    minAmmount: 0
+    maxAmmount: 0
+  effects:
+  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}

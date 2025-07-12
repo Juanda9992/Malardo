@@ -1,18 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-
 [CreateAssetMenu(fileName = "Joker", menuName = "Scriptables/Joker")]
 public class JokerData : ScriptableObject
 {
     public string jokerName;
     public string description;
     public string triggerMessage;
+    public int overrideEffect = 0;
     public JokerRarity jokerRarity;
     public DefaultTriggerEvent defaultTrigger;
     public RequiredCardPlayedData requiredCardPlayedData;
     public RequiredHandPlayed requiredHandPlayed;
     public RequiredHandSizeData requiredHandSizeData;
-    public GiveEvent giveEvent;
+
+    public List<JokerEffect> effects;
 }
 public enum JokerRarity
 {
@@ -54,6 +55,19 @@ public class RequiredHandSizeData
 public enum TriggerOptions
 {
     OnHandPlay, OnHandEnd, OnCardPlay, OnHandDiscard
+}
+
+[System.Serializable]
+public class GiveModifier
+{
+    public bool active;
+    public QuantityType forEach;
+    public int give;
+    public GiveEvent.GiveType giveType;
+}
+public enum QuantityType
+{
+    Hand, Discard
 }
 
 [System.Serializable]

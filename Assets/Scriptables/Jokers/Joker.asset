@@ -15,10 +15,21 @@ MonoBehaviour:
   jokerName: Joker
   description: +4 Multi
   triggerMessage: +4
-  triggerEvents:
-  - triggerOption: 1
-    extraData: 
-  giveEvent:
+  overrideEffect: 4
+  jokerRarity: 0
+  defaultTrigger:
     active: 1
-    ammount: 4
-    giveType: 1
+    triggerOptions: 1
+  requiredCardPlayedData:
+    active: 0
+    cardSuit: 0
+    number: -1
+  requiredHandPlayed:
+    active: 0
+    requiredHand: 0
+  requiredHandSizeData:
+    active: 0
+    minAmmount: 0
+    maxAmmount: 0
+  effects:
+  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}

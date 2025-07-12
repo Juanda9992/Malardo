@@ -13,8 +13,15 @@ public class JokerParser : MonoBehaviour
     {
         JokerData jokerData = jokercontainer._joker;
         jokercontainer.JokerAction += () => Debug.Log(jokercontainer._joker.jokerName);
+        jokercontainer.JokerAction += () =>
+        {
+            for (int i = 0; i < jokerData.effects.Count; i++)
+            {
+                jokerData.effects[i].ammount = jokerData.overrideEffect;
+                jokerData.effects[i].ApplyEffect();
+            }
+        };
         HandleTriggerEvents(jokercontainer);
-        HandleExecutionEvents(jokercontainer);
     }
     private void HandleTriggerEvents(JokerContainer jokerContainer)
     {
@@ -24,32 +31,32 @@ public class JokerParser : MonoBehaviour
         {
             if (jokerData.defaultTrigger.triggerOptions == TriggerOptions.OnHandEnd)
             {
-                GameEventsManager.instance.OnHandEnd += ()=> jokerContainer.JokerAction?.Invoke();
+                GameEventsManager.instance.OnHandEnd += () => jokerContainer.JokerAction?.Invoke();
             }
         }
 
         if (jokerData.requiredCardPlayedData.active)
+        {
+            GameEventsManager.instance.OnCardPlay += x =>
             {
-                GameEventsManager.instance.OnCardPlay += x =>
-                {
 
-                    Debug.Log(jokerData.requiredCardPlayedData.cardSuit);
-                    if (x.cardSuit == jokerData.requiredCardPlayedData.cardSuit)
+                Debug.Log(jokerData.requiredCardPlayedData.cardSuit);
+                if (x.cardSuit == jokerData.requiredCardPlayedData.cardSuit)
+                {
+                    if (jokerData.requiredCardPlayedData.number > 0)
                     {
-                        if (jokerData.requiredCardPlayedData.number > 0)
-                        {
-                            if (x.number == jokerData.requiredCardPlayedData.number)
-                            {
-                                jokerContainer.JokerAction?.Invoke();
-                            }
-                        }
-                        else
+                        if (x.number == jokerData.requiredCardPlayedData.number)
                         {
                             jokerContainer.JokerAction?.Invoke();
                         }
                     }
-                };
-            }
+                    else
+                    {
+                        jokerContainer.JokerAction?.Invoke();
+                    }
+                }
+            };
+        }
 
         if (jokerData.requiredHandPlayed.active)
         {
@@ -136,14 +143,4 @@ public class JokerParser : MonoBehaviour
         };
     }
 
-    private void HandleExecutionEvents(JokerContainer jokerContainer)
-    {
-        JokerData jokerData = jokerContainer._joker;
-
-        if (jokerData.giveEvent.active)
-        {
-            jokerContainer.JokerAction += () => jokerData.giveEvent.GiveAction();
-        }
-
-    }
 }

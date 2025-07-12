@@ -15,6 +15,11 @@ MonoBehaviour:
   jokerName: Half Joker
   description: +20 Mult if played hand contains 3 or fewer cards
   triggerMessage: +20 Mult
+  overrideEffect: 20
+  jokerRarity: 0
+  defaultTrigger:
+    active: 0
+    triggerOptions: 0
   requiredCardPlayedData:
     active: 0
     cardSuit: 0
@@ -26,7 +31,5 @@ MonoBehaviour:
     active: 1
     minAmmount: 1
     maxAmmount: 3
-  giveEvent:
-    active: 1
-    ammount: 20
-    giveType: 1
+  effects:
+  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}

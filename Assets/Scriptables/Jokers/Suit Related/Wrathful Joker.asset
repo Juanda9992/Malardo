@@ -15,12 +15,21 @@ MonoBehaviour:
   jokerName: Wrathful Joker
   description: Played cards with Spade suit give +3 Mult when scored
   triggerMessage: +3
-  triggerEvents: []
+  overrideEffect: 3
+  jokerRarity: 0
+  defaultTrigger:
+    active: 0
+    triggerOptions: 0
   requiredCardPlayedData:
     active: 1
     cardSuit: 2
     number: -1
-  giveEvent:
-    active: 1
-    ammount: 3
-    giveType: 1
+  requiredHandPlayed:
+    active: 0
+    requiredHand: 0
+  requiredHandSizeData:
+    active: 0
+    minAmmount: 0
+    maxAmmount: 0
+  effects:
+  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
