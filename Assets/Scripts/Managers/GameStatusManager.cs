@@ -7,9 +7,13 @@ public class GameStatusManager : MonoBehaviour
     public static GameStatus _Status;
     public GameStatus currentStatus = new GameStatus();
     public static event Action<GameStatus> OnStatusChanged;
-    private IEnumerator Start()
+
+    void Awake()
     {
         _Status = new GameStatus();
+    }
+    private IEnumerator Start()
+    {
         while (true)
         {
             currentStatus = _Status;
@@ -22,6 +26,12 @@ public class GameStatusManager : MonoBehaviour
         SetGameEvent(TriggerOptions.CardPlay);
         TriggerStatusChanged();
         _Status.cardPlayed = null;
+    }
+
+    public static void SetHandSize(int size)
+    {
+        _Status.handSize = size;
+        TriggerStatusChanged();
     }
 
     public static void SetHandsRemaining(int size)

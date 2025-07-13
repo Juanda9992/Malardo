@@ -17,19 +17,9 @@ MonoBehaviour:
   triggerMessage: +20 Mult
   overrideEffect: 20
   jokerRarity: 0
-  defaultTrigger:
-    active: 0
-    triggerOptions: 0
-  requiredCardPlayedData:
-    active: 0
-    cardSuit: 0
-    number: -1
-  requiredHandPlayed:
-    active: 0
-    requiredHand: 0
-  requiredHandSizeData:
-    active: 1
-    minAmmount: 1
-    maxAmmount: 3
+  triggers:
+  - {fileID: 11400000, guid: f989c1d464a96804b8e7e789b3d81bce, type: 2}
+  - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+  jokerTransform: {fileID: 0}

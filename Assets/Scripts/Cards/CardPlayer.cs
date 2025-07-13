@@ -23,6 +23,7 @@ public class CardPlayer : MonoBehaviour
         currentHand = cards;
 
         currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
+        GameStatusManager.SetHandSize(currentHand.Count);
     }
     public void SetHandPlayed(HandType handData)
     {
@@ -31,6 +32,7 @@ public class CardPlayer : MonoBehaviour
 
     private IEnumerator PlayCards()
     {
+
         for (int i = 0; i < currentHand.Count; i++)
         {
             yield return new WaitForSeconds(0.3f);

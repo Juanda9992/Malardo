@@ -21,18 +21,16 @@ public class JokerContainer : MonoBehaviour
     {
         jokerText.text = _joker.jokerName;
 
-        JokerAction += () => ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
-    }
-
-    public void ParseJoker()
-    {
         JokerAction += () =>
         {
+            Debug.Log(_joker.effects.Count);
             for (int i = 0; i < _joker.effects.Count; i++)
             {
                 _joker.effects[i].ammount = _joker.overrideEffect;
+                _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage(); 
                 _joker.effects[i].ApplyEffect();
             }
+            ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
         };
     }
     private void HandleTriggerEvents(GameStatus gameStatus)
