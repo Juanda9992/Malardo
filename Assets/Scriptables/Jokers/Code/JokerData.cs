@@ -9,10 +9,10 @@ public class JokerData : ScriptableObject
     public int overrideEffect = 0;
     public JokerRarity jokerRarity;
     public DefaultTriggerEvent defaultTrigger;
-    public RequiredCardPlayedData requiredCardPlayedData;
     public RequiredHandPlayed requiredHandPlayed;
     public RequiredHandSizeData requiredHandSizeData;
 
+    public List<JokerTrigger> triggers;
     public List<JokerEffect> effects;
 }
 public enum JokerRarity
@@ -31,13 +31,6 @@ public class DefaultTriggerEvent
 }
 
 [System.Serializable]
-public class RequiredCardPlayedData
-{
-    public bool active;
-    public Suit cardSuit;
-    public int number = -1;
-}
-[System.Serializable]
 public class RequiredHandPlayed
 {
     public bool active;
@@ -50,11 +43,6 @@ public class RequiredHandSizeData
     public bool active;
     public int minAmmount;
     public int maxAmmount;
-}
-
-public enum TriggerOptions
-{
-    OnHandPlay, OnHandEnd, OnCardPlay, OnHandDiscard
 }
 
 [System.Serializable]
