@@ -24,6 +24,11 @@ public class CardPlayer : MonoBehaviour
 
         currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
         GameStatusManager.SetHandSize(currentHand.Count);
+
+        for (int i = 0; i < currentHand.Count; i++)
+        {
+            CardManager.instance.cardsOnScreen.Remove(currentHand[i].linkedCard);
+        }
     }
     public void SetHandPlayed(HandType handData)
     {
