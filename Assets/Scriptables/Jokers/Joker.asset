@@ -20,10 +20,6 @@ MonoBehaviour:
   defaultTrigger:
     active: 1
     triggerOptions: 1
-  requiredCardPlayedData:
-    active: 0
-    cardSuit: 0
-    number: -1
   requiredHandPlayed:
     active: 0
     requiredHand: 0
@@ -31,5 +27,7 @@ MonoBehaviour:
     active: 0
     minAmmount: 0
     maxAmmount: 0
+  triggers:
+  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}

@@ -19,6 +19,7 @@ public class GameStatusManager : MonoBehaviour
     public static void SetLastCardPlayed(Card card)
     {
         _Status.cardPlayed = card;
+        SetGameEvent(TriggerOptions.CardPlay);
         TriggerStatusChanged();
         _Status.cardPlayed = null;
     }
