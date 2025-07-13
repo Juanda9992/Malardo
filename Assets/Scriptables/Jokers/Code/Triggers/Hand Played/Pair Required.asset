@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6968e77cecbaef54e92d0f655a9fdb26, type: 3}
-  m_Name: Hand End Trigger
+  m_Script: {fileID: 11500000, guid: cba650995f553f54290fb43b735fb0c6, type: 3}
+  m_Name: Pair Required
   m_EditorClassIdentifier: 
-  triggerOption: 2
+  requiredHandType: 010000000200000003000000060000000700000008000000

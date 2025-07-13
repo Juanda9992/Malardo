@@ -113,6 +113,7 @@ public class HandDetector : MonoBehaviour
     private void AddHandToMult()
     {
         handNameText.text = currentHand.name;
+        GameStatusManager.SetHandPlayed(currentHand.handType);
         ScoreManager.instance.SetChips(currentHand.baseChips);
         ScoreManager.instance.SetMult(currentHand.baseMult);
     }

@@ -27,7 +27,6 @@ public class CardPlayer : MonoBehaviour
     public void SetHandPlayed(HandType handData)
     {
         lastHandPlayed = handData;
-        GameStatusManager.SetHandPlayed(handData);
     }
 
     private IEnumerator PlayCards()
