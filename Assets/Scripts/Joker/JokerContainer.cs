@@ -27,8 +27,16 @@ public class JokerContainer : MonoBehaviour
             for (int i = 0; i < _joker.effects.Count; i++)
             {
                 _joker.effects[i].ammount = _joker.overrideEffect;
-                _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage(); 
+                _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage();
                 _joker.effects[i].ApplyEffect();
+
+                if (_joker.effects[i].jokerOutput != string.Empty)
+                {
+                    if (_joker.effects[i].jokerOutput == "Destroy")
+                    {
+                        Destroy(gameObject);
+                    }
+                }
             }
             ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
         };
