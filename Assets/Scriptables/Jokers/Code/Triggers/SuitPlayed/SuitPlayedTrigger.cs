@@ -4,10 +4,6 @@ using UnityEngine;
 public class SuitPlayedTrigger : JokerTrigger
 {
     public Suit requiredSuit;
-    public override void TriggerEffect()
-    {
-
-    }
     public override bool MeetCondition(GameStatus gameStatus)
     {
         if (gameStatus.cardPlayed == null)
