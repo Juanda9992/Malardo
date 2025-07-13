@@ -87,6 +87,8 @@ public class HandManager : MonoBehaviour
 
         handCards.Clear();
 
+        GameStatusManager.SetDiscardsRemaining(discards);
+
         CardManager.instance.TryGenerateCardsOnHand(requiredCards);
 
         SetPlayButtonsState(false);
