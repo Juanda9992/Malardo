@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Fibonacci
+  m_Name: Scary Face
   m_EditorClassIdentifier: 
-  jokerName: Fibonacci
-  description: Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored
-  triggerMessage: 8
-  overrideEffect: 8
+  jokerName: Scary Face
+  description: Played face cards give +30 Chips when scored
+  triggerMessage: +30
+  overrideEffect: 30
   jokerRarity: 0
   triggers:
-  - {fileID: 11400000, guid: 353da75c3b8fe094fa854b0233262b1e, type: 2}
+  - {fileID: 11400000, guid: dfa3bd0105164e14f8c93cc5ae3ab4fe, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   effects:
-  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+  - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
   jokerTransform: {fileID: 0}

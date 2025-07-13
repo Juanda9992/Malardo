@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a9c3d4c0ea445418f09804fbdeb8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joker: {fileID: 11400000, guid: 2b19d6e0f5685294894d6b086232e245, type: 2}
+  _joker: {fileID: 11400000, guid: 690742e0a5dc9fb44bc49a05514e78b3, type: 2}
   jokerText: {fileID: 1877186247}
 --- !u!1 &500020279
 GameObject:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultHandSize: 8
-  cardGenerationPresset: {fileID: 11400000, guid: e7f96305dbf9f2548bc5ad31dad7d193, type: 2}
+  cardGenerationPresset: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   deckCounter: {fileID: 228441445}
