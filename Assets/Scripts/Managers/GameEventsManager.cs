@@ -17,6 +17,7 @@ public class GameEventsManager : MonoBehaviour
     {
         instance = this;
     }
+
     public void TriggerHandPlayed()
     {
         OnHandPlayed?.Invoke();
