@@ -12,13 +12,13 @@ public class JokerContainer : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(_joker.jokerName);
         GameStatusManager.OnStatusChanged += HandleTriggerEvents;
-        SetUpJoker();
     }
 
-    public void SetUpJoker()
+    public void SetUpJoker(JokerData jokerData)
     {
+
+        _joker = jokerData;
         jokerText.text = _joker.jokerName;
 
         JokerAction += () =>
