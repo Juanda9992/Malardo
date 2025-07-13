@@ -8,12 +8,9 @@ public class JokerData : ScriptableObject
     public string triggerMessage;
     public int overrideEffect = 0;
     public JokerRarity jokerRarity;
-    public DefaultTriggerEvent defaultTrigger;
-    public RequiredHandPlayed requiredHandPlayed;
-    public RequiredHandSizeData requiredHandSizeData;
-
     public List<JokerTrigger> triggers;
     public List<JokerEffect> effects;
+    [HideInInspector] public Transform jokerTransform;
 }
 public enum JokerRarity
 {
@@ -24,56 +21,9 @@ public enum JokerRarity
 }
 
 [System.Serializable]
-public class DefaultTriggerEvent
-{
-    public bool active;
-    public TriggerOptions triggerOptions;
-}
-
-[System.Serializable]
-public class RequiredHandPlayed
-{
-    public bool active;
-    public HandType requiredHand;
-}
-
-[System.Serializable]
 public class RequiredHandSizeData
 {
     public bool active;
     public int minAmmount;
     public int maxAmmount;
-}
-
-[System.Serializable]
-public class GiveModifier
-{
-    public bool active;
-    public QuantityType forEach;
-    public int give;
-    public GiveEvent.GiveType giveType;
-}
-public enum QuantityType
-{
-    Hand, Discard
-}
-
-[System.Serializable]
-public class GiveEvent
-{
-    public enum GiveType { Chips, Mult }
-    public bool active;
-    public int ammount;
-    public GiveType giveType;
-    public void GiveAction()
-    {
-        if (giveType == GiveType.Chips)
-        {
-            ScoreManager.instance.AddChips(ammount);
-        }
-        else if (giveType == GiveType.Mult)
-        {
-            ScoreManager.instance.AddMult(ammount);
-        }
-    }
 }

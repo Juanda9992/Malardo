@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a9c3d4c0ea445418f09804fbdeb8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joker: {fileID: 11400000, guid: 0a8333f26c6e00445ad32ac93f80b394, type: 2}
+  _joker: {fileID: 11400000, guid: 263a9464303c02b41af6c02751c70b30, type: 2}
   jokerText: {fileID: 1877186247}
 --- !u!1 &500020279
 GameObject:
@@ -1078,7 +1078,6 @@ GameObject:
   - component: {fileID: 621395126}
   - component: {fileID: 621395127}
   - component: {fileID: 621395128}
-  - component: {fileID: 621395129}
   - component: {fileID: 621395130}
   - component: {fileID: 621395131}
   m_Layer: 0
@@ -1260,18 +1259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugger: 0
---- !u!114 &621395129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621395118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199c63bf62f7774089506454d7e2f9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &621395130
 MonoBehaviour:
   m_ObjectHideFlags: 0
