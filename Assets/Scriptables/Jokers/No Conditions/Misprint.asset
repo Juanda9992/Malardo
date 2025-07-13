@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokerName: Misprint
   description: +0-23 Mult
-  triggerMessage: 
+  triggerMessage: +14
   overrideEffect: 0
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
-  - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+  - {fileID: 11400000, guid: 3f22e5bb438d80040a29e91adf152769, type: 2}
   jokerTransform: {fileID: 0}
