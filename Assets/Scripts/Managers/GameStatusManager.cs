@@ -62,6 +62,10 @@ public class GameStatusManager : MonoBehaviour
         OnStatusChanged?.Invoke(_Status);
     }
 
+    public static void SetJokersInMatch(int ammount)
+    {
+        _Status.jokersInMatch = ammount;
+    }
 }
 
 public enum TriggerOptions
@@ -78,4 +82,5 @@ public class GameStatus
     public Card cardPlayed;
     public HandType playedHand;
     public TriggerOptions currentGameStatus = TriggerOptions.None;
+    public int jokersInMatch;
 }

@@ -10,6 +10,14 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private Transform jokerParent;
 
     [SerializeField] private JokerData testjoker;
+
+    public int JokersInHand {get{ return currentJokers.Count; }}
+    public static JokerManager instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
     public void AddJoker(JokerData jokerData)
     {
         currentJokers.Add(jokerData);
@@ -17,6 +25,8 @@ public class JokerManager : MonoBehaviour
         GameObject newJoker = Instantiate(jokerCard, jokerParent);
 
         newJoker.GetComponent<JokerContainer>().SetUpJoker(jokerData);
+
+        GameStatusManager.SetJokersInMatch(currentJokers.Count);
     }
 
 
