@@ -27,6 +27,7 @@ public class CardPlayer : MonoBehaviour
     public void SetHandPlayed(HandType handData)
     {
         lastHandPlayed = handData;
+        GameStatusManager.SetHandPlayed(handData);
     }
 
     private IEnumerator PlayCards()
@@ -38,28 +39,28 @@ public class CardPlayer : MonoBehaviour
             ScoreSign.instance.SetScoreSign(currentHand[i]);
             currentHand[i].linkedCard.pointerInteraction.ShakeCard();
             GameEventsManager.instance.TriggerCardPlayed(currentHand[i]);
+
+            GameStatusManager.SetLastCardPlayed(currentHand[i]);
         }
 
+        currentHand.Clear();
         yield return new WaitForSeconds(0.5f);
 
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
-        Debug.Log(lastHandPlayed);
 
         yield return new WaitForSeconds(0.5f);
 
+        Debug.Log("Hand end");
         GameEventsManager.instance.TriggerHandEnd();
+        GameStatusManager.SetGameEvent(TriggerOptions.HandEnd);
 
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(0.5f);
         ScoreManager.instance.CalculateScore();
 
         yield return new WaitForSeconds(0.3f);
+        StartCoroutine(HandManager.instance.ClearHandPlayed());
 
-        HandManager.instance.DiscardAllCards();
-
-        yield return new WaitForSeconds(0.35f);
-
-        currentHand.Clear();
+        yield return new WaitForSeconds(0.3f);
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
 

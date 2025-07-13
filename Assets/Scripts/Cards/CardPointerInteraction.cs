@@ -3,7 +3,6 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.XR;
 public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler
 {
     [SerializeField] private InputAction mousePos;
@@ -133,23 +132,10 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         previousPos = new Vector2(transform.localPosition.x, initialY);
         HandManager.instance.RemoveCardFromHand(card_Data.currentCard);
     }
-
-    public void DiscardCard()
-    {
-        CardManager.instance.RemoveCardFromDeck(card_Data.currentCard);
-        transform.DOScale(0, 0.2f).OnComplete(() =>
-        {
-            CardManager.instance.GenerateCardOnHand();
-            Destroy(gameObject);
-        });
-    }
-
     public void DestroyCard()
     {
-        transform.DOScale(0, 0.2f).OnComplete(() =>
-        {
-            Destroy(gameObject);
-        });
+        CardManager.instance.RemoveCardFromDeck(card_Data.currentCard);
+        transform.DOScale(0, 0.2f).OnComplete(() => Destroy(gameObject));
     }
 
     public void ShakeCard()

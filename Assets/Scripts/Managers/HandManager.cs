@@ -39,6 +39,9 @@ public class HandManager : MonoBehaviour
         SetPlayButtonsState(false);
 
         BlindManager.instance.OnBlindDefeated += ResetHandsAndDiscards;
+
+        GameStatusManager.SetHandsRemaining(hands);
+        GameStatusManager.SetDiscardsRemaining(discards);
     }
 
     public void AddCardToHand(Card card)
@@ -71,18 +74,38 @@ public class HandManager : MonoBehaviour
     public void DiscardAllCards()
     {
         discards--;
+        int requiredCards = handCards.Count;
         if (handCards.Count > 0)
         {
             for (int i = handCards.Count - 1; i >= 0; i--)
             {
-                handCards[i].linkedCard.pointerInteraction.DiscardCard();
+                handCards[i].linkedCard.pointerInteraction.DestroyCard();
+                CardManager.instance.RemoveCardFromDeck(handCards[i]);
+                GameStatusManager.SetGameEvent(TriggerOptions.CardDiscard);
             }
         }
 
-        GameEventsManager.instance.TriggerHandDiscard();
         handCards.Clear();
-        UpdateDiscardText();
+
+        CardManager.instance.TryGenerateCardsOnHand(requiredCards);
+
         SetPlayButtonsState(false);
+        GameEventsManager.instance.TriggerHandDiscard();
+        UpdateDiscardText();
+    }
+
+    public IEnumerator ClearHandPlayed()
+    {
+        int requiredHandNumber = handCards.Count;
+        for (int i = 0; i < handCards.Count; i++)
+        {
+            handCards[i].linkedCard.pointerInteraction.DestroyCard();
+        }
+        handCards.Clear();
+
+        yield return new WaitForSeconds(0.2f);
+
+        CardManager.instance.TryGenerateCardsOnHand(requiredHandNumber);
     }
 
     private void SetPlayButtonsState(bool active)
@@ -109,6 +132,7 @@ public class HandManager : MonoBehaviour
         hands--;
         OnHandPlayed?.Invoke(handCards);
         GameEventsManager.instance.TriggerHandPlayed();
+        GameStatusManager.SetGameEvent(TriggerOptions.BeforeHandPlay);
         SetPlayButtonsState(false);
         UpdateHandText();
     }

@@ -28,7 +28,7 @@ public class CardManager : MonoBehaviour
     {
 
         GenerateCardsCoroutine();
-        BlindManager.instance.OnBlindDefeated += GenerateCardsCoroutine;
+        //BlindManager.instance.OnBlindDefeated += GenerateCardsCoroutine;
     }
     private IEnumerator GenerateCards()
     {
@@ -87,6 +87,14 @@ public class CardManager : MonoBehaviour
 
         currentCard.GetComponent<Card_Data>().SetCardData(card);
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
+    }
+
+    public void TryGenerateCardsOnHand(int ammount)
+    {
+        for (int i = 0; i < ammount; i++)
+        {
+            GenerateCardOnHand();
+        }
     }
 
     public void RemoveCardFromDeck(Card card)
