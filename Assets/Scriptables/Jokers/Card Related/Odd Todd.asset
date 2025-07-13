@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Odd Todd
+  m_EditorClassIdentifier: 
+  jokerName: Odd Todd
+  description: Played cards with odd rank give +31 Chips when scored (A, 9, 7, 5,
+    3)
+  triggerMessage: +31
+  overrideEffect: 31
+  jokerRarity: 0
+  triggers:
+  - {fileID: 11400000, guid: cade981a36ee27f4fbf4bb7c4608f8b7, type: 2}
+  - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+  effects:
+  - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
+  jokerTransform: {fileID: 0}
