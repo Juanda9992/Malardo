@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Mystic Summit
+  m_Name: Misprint
   m_EditorClassIdentifier: 
-  jokerName: Mystic Summit
-  description: +15 Mult when 0 discards remaining
-  triggerMessage: +15
-  overrideEffect: 15
+  jokerName: Misprint
+  description: +0-23 Mult
+  triggerMessage: 
+  overrideEffect: 0
   jokerRarity: 0
   triggers:
-  - {fileID: 11400000, guid: 71f6d9c9f290661448ba1274c3c24cfa, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
