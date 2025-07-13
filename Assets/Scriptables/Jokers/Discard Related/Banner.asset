@@ -15,27 +15,10 @@ MonoBehaviour:
   jokerName: Banner
   description: +30 Chips for each remaining discard
   triggerMessage: xxx
+  overrideEffect: 30
   jokerRarity: 0
-  defaultTrigger:
-    active: 1
-    triggerOptions: 1
-  requiredCardPlayedData:
-    active: 0
-    cardSuit: 0
-    number: -1
-  requiredHandPlayed:
-    active: 0
-    requiredHand: 0
-  requiredHandSizeData:
-    active: 0
-    minAmmount: 0
-    maxAmmount: 0
-  giveModifier:
-    active: 1
-    forEach: 1
-    give: 30
-    giveType: 0
-  giveEvent:
-    active: 0
-    ammount: 0
-    giveType: 0
+  triggers:
+  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+  effects:
+  - {fileID: 11400000, guid: df2f67fa98e05704ab23dd99a3662494, type: 2}
+  jokerTransform: {fileID: 0}
