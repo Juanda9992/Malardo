@@ -10,6 +10,12 @@ public class SuitPlayedTrigger : JokerTrigger
     }
     public override bool MeetCondition(GameStatus gameStatus)
     {
+        if (gameStatus.cardPlayed == null)
+        {
+            return false;
+        }
+
         return gameStatus.cardPlayed.cardSuit == requiredSuit;
+        
     }
 }
