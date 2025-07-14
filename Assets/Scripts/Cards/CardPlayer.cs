@@ -49,7 +49,6 @@ public class CardPlayer : MonoBehaviour
             GameStatusManager.SetLastCardPlayed(currentHand[i]);
         }
 
-        currentHand.Clear();
         yield return new WaitForSeconds(0.5f);
 
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
@@ -65,6 +64,7 @@ public class CardPlayer : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         StartCoroutine(HandManager.instance.ClearHandPlayed());
+        currentHand.Clear();
 
         yield return new WaitForSeconds(0.3f);
         HandDetector.instance.RemoveHandFromMult();
