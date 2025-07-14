@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Cavendish
+  m_Name: Acrobat Joker
   m_EditorClassIdentifier: 
-  jokerName: Cavendish
-  description: X3 Mult 1 in 1000 chance this card is destroyed at the end of round
-  triggerMessage: x3
+  jokerName: Acrobat
+  description: X3 Mult on final hand of round
+  triggerMessage: X3
   overrideEffect: 3
   jokerRarity: 0
   triggers:
+  - {fileID: 11400000, guid: b1b42719297f9214eb7c4a71447dbe5e, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
-  - {fileID: 11400000, guid: 3a022d71740d4714db7bb145221f3a77, type: 2}
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   jokerTransform: {fileID: 0}
