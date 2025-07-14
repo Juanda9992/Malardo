@@ -213,6 +213,7 @@ MonoBehaviour:
     number: 8
     cardSuit: 2
     faceCard: 0
+  startingMoney: 100
   presetCard:
     linkedCard: {fileID: 0}
     number: 8

@@ -221,6 +221,7 @@ MonoBehaviour:
     number: 13
     cardSuit: 3
     faceCard: 1
+  startingMoney: 3
   presetCard:
     linkedCard: {fileID: 0}
     number: 1

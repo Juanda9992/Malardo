@@ -6,6 +6,8 @@ public class CardGenerationPresset : ScriptableObject
 {
     public List<Card> allCards;
 
+    public int startingMoney;
+
     [ContextMenu("Generate Random Deck")]
     private void GenerateBasicDeck()
     {

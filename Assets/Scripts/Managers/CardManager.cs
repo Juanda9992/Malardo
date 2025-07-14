@@ -28,6 +28,7 @@ public class CardManager : MonoBehaviour
     {
 
         GenerateCardsCoroutine();
+        CurrencyManager.instance.SetCurrency(cardGenerationPresset.startingMoney);
         //BlindManager.instance.OnBlindDefeated += GenerateCardsCoroutine;
     }
     private IEnumerator GenerateCards()
