@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class JokerEffect : ScriptableObject
 {
-    public int ammount;
+    public float ammount;
     public abstract void ApplyEffect();
 
     public string jokerOutput;

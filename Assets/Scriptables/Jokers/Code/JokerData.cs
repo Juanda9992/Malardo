@@ -6,7 +6,7 @@ public class JokerData : ScriptableObject
     public string jokerName;
     public string description;
     public string triggerMessage;
-    public int overrideEffect = 0;
+    public float overrideEffect = 0;
     public JokerRarity jokerRarity;
     public List<JokerTrigger> triggers;
     public List<JokerEffect> effects;

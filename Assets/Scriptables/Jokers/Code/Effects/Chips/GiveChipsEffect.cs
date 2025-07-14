@@ -6,6 +6,6 @@ public class GiveChipEffect : JokerEffect
     public override void ApplyEffect()
     {
 
-        ScoreManager.instance.AddChips(ammount);
+        ScoreManager.instance.AddChips((int)ammount);
     }
 }

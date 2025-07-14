@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour
         chipsText.text = chips.ToString();
     }
 
-    public void AddMult(int value)
+    public void AddMult(float value)
     {
         mult += value;
         multText.text = mult.ToString();
@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
         multText.text = mult.ToString();
     }
 
-    public void MultiplyMulti(int multiplier)
+    public void MultiplyMulti(float multiplier)
     {
         mult *= multiplier;
         multText.text = mult.ToString();
