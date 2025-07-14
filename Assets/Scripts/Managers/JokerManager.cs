@@ -5,7 +5,7 @@ using UnityEngine;
 public class JokerManager : MonoBehaviour
 {
     public List<JokerData> currentJokers = new List<JokerData>();
-
+    public int maximumJokers = 5;
     [SerializeField] private GameObject jokerCard;
     [SerializeField] private Transform jokerParent;
 

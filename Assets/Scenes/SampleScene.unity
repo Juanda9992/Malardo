@@ -1219,9 +1219,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
+  maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
-  testjoker: {fileID: 11400000, guid: 156d4c105b8be154b82072ea4a656fa9, type: 2}
+  testjoker: {fileID: 11400000, guid: 1b7e61602243d134a9dcbf3d6b618a9b, type: 2}
 --- !u!1 &676285006
 GameObject:
   m_ObjectHideFlags: 0
