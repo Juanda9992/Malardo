@@ -6,7 +6,7 @@ public class GiveChipsPerDiscard : JokerEffect
     public int chipsPerDiscard;
     public override void ApplyEffect()
     {
-        chipsPerDiscard = ammount * GameStatusManager._Status.discardsRemaining;
+        chipsPerDiscard = (int)ammount * GameStatusManager._Status.discardsRemaining;
         ScoreManager.instance.AddChips(chipsPerDiscard);
         Debug.Log("Chips given: " + chipsPerDiscard);
     }
