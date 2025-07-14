@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Joker", menuName = "Scriptables/Joker")]
+[CreateAssetMenu(fileName = "Joker", menuName = "Scriptables/Joker/Template")]
 public class JokerData : ScriptableObject
 {
     public string jokerName;
