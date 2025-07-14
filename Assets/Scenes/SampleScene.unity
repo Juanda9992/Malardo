@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCurrency: 0
-  currencyText: {fileID: 0}
+  currencyText: {fileID: 1458651287}
 --- !u!1 &676285006
 GameObject:
   m_ObjectHideFlags: 0
