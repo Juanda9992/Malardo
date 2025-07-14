@@ -45,6 +45,12 @@ public class ScoreManager : MonoBehaviour
         multText.text = mult.ToString();
     }
 
+    public void MultiplyMulti(int multiplier)
+    {
+        mult *= multiplier;
+        multText.text = mult.ToString();
+    }
+
     public void CalculateScore()
     {
         float currentScore = chips * mult;
