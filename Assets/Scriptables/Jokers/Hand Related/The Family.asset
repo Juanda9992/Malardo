@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: The Trio
+  m_Name: The Family
   m_EditorClassIdentifier: 
-  jokerName: The Trio
-  description: X3 Mult if played hand contains Three of a Kind
-  triggerMessage: x3
-  overrideEffect: 3
+  jokerName: The Family
+  description: X4 Mult if played hand contains a Four of a Kind
+  triggerMessage: x4
+  overrideEffect: 4
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
-  - {fileID: 11400000, guid: 73fb12fe01be8314ebfa560d7cd606c7, type: 2}
+  - {fileID: 11400000, guid: 11acb593de062e049a72244006ad3b3c, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   jokerTransform: {fileID: 0}
