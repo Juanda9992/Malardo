@@ -8,7 +8,7 @@ public class GiveMultByCardOnScreen : JokerEffect
     {
         if (CardPlayer.instance.currentHand.Count > 0)
         {
-            ScoreManager.instance.AddMult(CardPlayer.instance.currentHand.FindAll(x => x.number == requiredNumber).Count * multammount);
+            ScoreManager.instance.AddMult(CardManager.instance.cardsOnScreen.FindAll(x => x.currentCard.number == requiredNumber).Count * multammount);
         }
     }
 
