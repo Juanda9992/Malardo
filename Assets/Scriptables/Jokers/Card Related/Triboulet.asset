@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Baron
+  m_Name: Triboulet
   m_EditorClassIdentifier: 
-  jokerName: Baron
-  description: Each King held in hand gives X1.5 Mult
-  triggerMessage: X3
-  overrideEffect: 0
+  jokerName: Triboulet
+  description: Played Kings and Queens each give X2 Mult when scored
+  triggerMessage: X2
+  overrideEffect: 2
   jokerRarity: 0
   triggers:
-  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+  - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+  - {fileID: 11400000, guid: 74ffea6f249174c4da3db124309a727f, type: 2}
   effects:
-  - {fileID: 11400000, guid: 2bcf1456dd6cd974084409412df1ad13, type: 2}
+  - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   jokerTransform: {fileID: 0}
