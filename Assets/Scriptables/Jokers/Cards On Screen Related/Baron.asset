@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Shoot the Moon
+  m_Name: Baron
   m_EditorClassIdentifier: 
-  jokerName: Shoot the Moon
-  description: "Each Queen held in hand gives +13 Mult\t"
+  jokerName: Baron
+  description: Each King held in hand gives X1.5 Mult
   triggerMessage: +13
   overrideEffect: 0
   jokerRarity: 0

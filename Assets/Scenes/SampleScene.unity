@@ -1224,7 +1224,7 @@ MonoBehaviour:
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
-  testjoker: {fileID: 11400000, guid: 4023807382835c44ba52b3e568b02128, type: 2}
+  testjoker: {fileID: 11400000, guid: 757e55113947f6242aa5d10cdb22a9e7, type: 2}
 --- !u!114 &621395133
 MonoBehaviour:
   m_ObjectHideFlags: 0
