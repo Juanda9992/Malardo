@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 44.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7307092385432561963}
   - component: {fileID: 3875479698092377031}
   - component: {fileID: 3912447272564296643}
+  - component: {fileID: 6538719352392439572}
   m_Layer: 5
   m_Name: Joker
   m_TagString: Untagged
@@ -225,3 +226,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joker: {fileID: 0}
   jokerText: {fileID: 1592527842947618694}
+--- !u!114 &6538719352392439572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353045118887296221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46436a59f3cdcc44f94c75355e9aac55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: -100
+  jokerContainer: {fileID: 3912447272564296643}
