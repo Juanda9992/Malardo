@@ -5,13 +5,13 @@ using UnityEngine.Events;
 public class JokerHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private float hoverScale;
-    [SerializeField] private float descriptionYOffset;
+    [SerializeField] private float descriptionXOffset;
     [SerializeField] private JokerContainer jokerContainer;
     [SerializeField] private UnityEvent OnClicked;
     public void OnPointerEnter(PointerEventData data)
     {
         transform.DOScale(hoverScale, 0.3f);
-        JokerDescription.instance.SetDescriptionOn(jokerContainer._joker, (Vector2)transform.position + new Vector2(0, descriptionYOffset));
+        JokerDescription.instance.SetDescriptionOn(jokerContainer._joker, (Vector2)transform.position + new Vector2(descriptionXOffset,0));
     }
 
     public void OnPointerExit(PointerEventData data)

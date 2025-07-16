@@ -25,8 +25,14 @@ public class JokerManager : MonoBehaviour
         GameObject newJoker = Instantiate(jokerCard, jokerParent);
 
         newJoker.GetComponent<JokerContainer>().SetUpJoker(jokerData);
+        newJoker.GetComponent<JokerContainer>().isOnShop = false;
 
         GameStatusManager.SetJokersInMatch(currentJokers.Count);
+    }
+    public void RemoveJoker(JokerContainer jokerContainer)
+    {
+        currentJokers.Remove(jokerContainer._joker);
+        Destroy(jokerContainer.gameObject);
     }
 
 

@@ -26,11 +26,43 @@ public class JokerButtonActions : MonoBehaviour
         actionButton.gameObject.SetActive(true);
         if (jokerContainer.isOnShop)
         {
-            actionButtonText.text = "Buy";
+            actionButtonText.text = "Buy" + " $" + jokerContainer._joker.shopValue;
+            actionButton.interactable = CheckIfEnoughCurrencyForBuy();
         }
         else
         {
-            actionButtonText.text = "Sell";
+            actionButtonText.text = "Sell " + "$" + jokerContainer._joker.sellValue;
         }
     }
+
+    public void ProcessBuyButton()
+    {
+        if (jokerContainer.isOnShop)
+        {
+            BuyJoker();
+        }
+        else
+        {
+            SellJoker();
+        }
+    }
+
+    private void BuyJoker()
+    {
+        CurrencyManager.instance.RemoveCurrency(jokerContainer._joker.sellValue);
+        JokerManager.instance.AddJoker(jokerContainer._joker);
+        Destroy(this.gameObject);
+    }
+
+    private void SellJoker()
+    {
+        CurrencyManager.instance.AddCurrency(jokerContainer._joker.sellValue);
+        JokerManager.instance.RemoveJoker(jokerContainer);
+    }
+
+    private bool CheckIfEnoughCurrencyForBuy()
+    {
+        return CurrencyManager.instance.currentCurrency >= jokerContainer._joker.shopValue;
+    }
+
 }
