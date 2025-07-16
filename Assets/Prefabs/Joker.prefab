@@ -238,5 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46436a59f3cdcc44f94c75355e9aac55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yOffset: -100
+  hoverScale: 1.1
+  descriptionYOffset: -100
   jokerContainer: {fileID: 3912447272564296643}
