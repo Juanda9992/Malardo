@@ -16,10 +16,10 @@ MonoBehaviour:
   description: +15 Mult when 0 discards remaining
   triggerMessage: +15
   overrideEffect: 15
+  shopValue: 5
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 71f6d9c9f290661448ba1274c3c24cfa, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  jokerTransform: {fileID: 0}

@@ -16,17 +16,8 @@ MonoBehaviour:
   description: +4 Multi
   triggerMessage: +4
   overrideEffect: 4
+  shopValue: 2
   jokerRarity: 0
-  defaultTrigger:
-    active: 1
-    triggerOptions: 1
-  requiredHandPlayed:
-    active: 0
-    requiredHand: 0
-  requiredHandSizeData:
-    active: 0
-    minAmmount: 0
-    maxAmmount: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:

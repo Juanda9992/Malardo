@@ -16,17 +16,8 @@ MonoBehaviour:
   description: +50 Chips if played hand contains a Pair
   triggerMessage: +50 Chips
   overrideEffect: 50
+  shopValue: 3
   jokerRarity: 0
-  defaultTrigger:
-    active: 0
-    triggerOptions: 0
-  requiredHandPlayed:
-    active: 1
-    requiredHand: 1
-  requiredHandSizeData:
-    active: 0
-    minAmmount: 0
-    maxAmmount: 0
   triggers:
   - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
   - {fileID: 11400000, guid: a9db76683635b5d4f905a0d16b528b3a, type: 2}

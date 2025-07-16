@@ -16,9 +16,9 @@ MonoBehaviour:
   description: +2 Chips for each remaining card in deck
   triggerMessage: 
   overrideEffect: 2
+  shopValue: 5
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 0c846bbae7d5167418a2485cad100387, type: 2}
-  jokerTransform: {fileID: 0}

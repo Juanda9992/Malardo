@@ -17,10 +17,10 @@ MonoBehaviour:
     card, and  Spade card
   triggerMessage: x3
   overrideEffect: 3
-  jokerRarity: 0
+  shopValue: 6
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 92ee8c32c82724b499a6bbebc41dbbf5, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
-  jokerTransform: {fileID: 0}

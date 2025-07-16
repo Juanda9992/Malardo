@@ -16,9 +16,9 @@ MonoBehaviour:
   description: "Each Queen held in hand gives +13 Mult\t"
   triggerMessage: +13
   overrideEffect: 0
-  jokerRarity: 0
+  shopValue: 5
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 02cd79535338059489c121ba4a6e2ba7, type: 2}
-  jokerTransform: {fileID: 0}

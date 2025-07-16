@@ -16,10 +16,10 @@ MonoBehaviour:
   description: Played Aces give +20 Chips and +4 Mult when scored
   triggerMessage: +4
   overrideEffect: 4
+  shopValue: 4
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 82fc3da7d0d38ad4ca01b0761e1d4624, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  jokerTransform: {fileID: 0}

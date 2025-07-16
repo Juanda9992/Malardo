@@ -16,6 +16,7 @@ MonoBehaviour:
   description: Played face cards have a 1 in 2 chance to give $2 when scored
   triggerMessage: $2
   overrideEffect: 2
+  shopValue: 4
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: dfa3bd0105164e14f8c93cc5ae3ab4fe, type: 2}
@@ -23,4 +24,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b74f2e93f4b7a4a48b6975c6447d3e63, type: 2}
   effects:
   - {fileID: 11400000, guid: cb6db422352abc449af465fb0e1fc16a, type: 2}
-  jokerTransform: {fileID: 0}

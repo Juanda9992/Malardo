@@ -16,9 +16,9 @@ MonoBehaviour:
   description: Each King held in hand gives X1.5 Mult
   triggerMessage: X3
   overrideEffect: 0
-  jokerRarity: 0
+  shopValue: 8
+  jokerRarity: 2
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 2bcf1456dd6cd974084409412df1ad13, type: 2}
-  jokerTransform: {fileID: 0}

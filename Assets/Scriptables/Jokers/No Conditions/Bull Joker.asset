@@ -16,9 +16,9 @@ MonoBehaviour:
   description: +2 Chips for each $1 you have
   triggerMessage: 
   overrideEffect: 0
-  jokerRarity: 0
+  shopValue: 6
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: e1b54e123421b924ca2b1c00fc726330, type: 2}
-  jokerTransform: {fileID: 0}

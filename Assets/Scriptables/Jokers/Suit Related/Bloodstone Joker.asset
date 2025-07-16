@@ -17,10 +17,10 @@ MonoBehaviour:
     when scored
   triggerMessage: x1.5
   overrideEffect: 1.5
-  jokerRarity: 0
+  shopValue: 7
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 389abb70097dab447ab2b36300c157e2, type: 2}
   - {fileID: 11400000, guid: b74f2e93f4b7a4a48b6975c6447d3e63, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
-  jokerTransform: {fileID: 0}

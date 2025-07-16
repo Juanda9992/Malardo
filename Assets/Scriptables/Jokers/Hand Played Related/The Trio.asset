@@ -16,10 +16,10 @@ MonoBehaviour:
   description: X3 Mult if played hand contains Three of a Kind
   triggerMessage: x3
   overrideEffect: 3
-  jokerRarity: 0
+  shopValue: 8
+  jokerRarity: 2
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   - {fileID: 11400000, guid: 73fb12fe01be8314ebfa560d7cd606c7, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
-  jokerTransform: {fileID: 0}

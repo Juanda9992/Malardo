@@ -16,9 +16,9 @@ MonoBehaviour:
   description: +3 Mult for each Joker card
   triggerMessage: +3
   overrideEffect: 3
+  shopValue: 4
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: b3328726befe0da439008dc5d4819747, type: 2}
-  jokerTransform: {fileID: 0}

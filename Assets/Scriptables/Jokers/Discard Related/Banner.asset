@@ -16,9 +16,9 @@ MonoBehaviour:
   description: +30 Chips for each remaining discard
   triggerMessage: xxx
   overrideEffect: 30
+  shopValue: 5
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: df2f67fa98e05704ab23dd99a3662494, type: 2}
-  jokerTransform: {fileID: 0}

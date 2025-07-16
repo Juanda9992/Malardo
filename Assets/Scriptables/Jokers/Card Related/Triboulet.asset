@@ -16,10 +16,10 @@ MonoBehaviour:
   description: Played Kings and Queens each give X2 Mult when scored
   triggerMessage: X2
   overrideEffect: 2
-  jokerRarity: 0
+  shopValue: 0
+  jokerRarity: 3
   triggers:
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   - {fileID: 11400000, guid: 74ffea6f249174c4da3db124309a727f, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
-  jokerTransform: {fileID: 0}

@@ -17,10 +17,10 @@ MonoBehaviour:
     3)
   triggerMessage: +31
   overrideEffect: 31
+  shopValue: 4
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: cade981a36ee27f4fbf4bb7c4608f8b7, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   effects:
   - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
-  jokerTransform: {fileID: 0}

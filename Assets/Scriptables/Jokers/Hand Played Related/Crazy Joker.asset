@@ -16,17 +16,8 @@ MonoBehaviour:
   description: +12 Mult if played hand contains a Straight
   triggerMessage: +12
   overrideEffect: 12
+  shopValue: 4
   jokerRarity: 0
-  defaultTrigger:
-    active: 0
-    triggerOptions: 0
-  requiredHandPlayed:
-    active: 1
-    requiredHand: 4
-  requiredHandSizeData:
-    active: 0
-    minAmmount: 0
-    maxAmmount: 0
   triggers:
   - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
   - {fileID: 11400000, guid: b2a9226bb018d11448cafeb6df4f16ff, type: 2}

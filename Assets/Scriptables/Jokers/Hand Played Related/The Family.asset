@@ -16,10 +16,10 @@ MonoBehaviour:
   description: X4 Mult if played hand contains a Four of a Kind
   triggerMessage: x4
   overrideEffect: 4
-  jokerRarity: 0
+  shopValue: 8
+  jokerRarity: 2
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   - {fileID: 11400000, guid: 11acb593de062e049a72244006ad3b3c, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
-  jokerTransform: {fileID: 0}

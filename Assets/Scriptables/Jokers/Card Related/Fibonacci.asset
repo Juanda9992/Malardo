@@ -16,10 +16,10 @@ MonoBehaviour:
   description: Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored
   triggerMessage: 8
   overrideEffect: 8
-  jokerRarity: 0
+  shopValue: 8
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 353da75c3b8fe094fa854b0233262b1e, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  jokerTransform: {fileID: 0}

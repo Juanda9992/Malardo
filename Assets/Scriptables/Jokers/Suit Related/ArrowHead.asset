@@ -16,9 +16,9 @@ MonoBehaviour:
   description: Played cards with  Spade suit give +50 Chips when scored
   triggerMessage: +50
   overrideEffect: 50
-  jokerRarity: 0
+  shopValue: 7
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 1b419d045012b4c45a52d8e9082b521a, type: 2}
   effects:
   - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
-  jokerTransform: {fileID: 0}

@@ -16,17 +16,8 @@ MonoBehaviour:
   description: Played cards with Spade suit give +3 Mult when scored
   triggerMessage: +3
   overrideEffect: 3
+  shopValue: 5
   jokerRarity: 0
-  defaultTrigger:
-    active: 0
-    triggerOptions: 0
-  requiredHandPlayed:
-    active: 0
-    requiredHand: 0
-  requiredHandSizeData:
-    active: 0
-    minAmmount: 0
-    maxAmmount: 0
   triggers:
   - {fileID: 11400000, guid: 1b419d045012b4c45a52d8e9082b521a, type: 2}
   effects:

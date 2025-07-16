@@ -16,10 +16,10 @@ MonoBehaviour:
   description: +20 Mult if played hand contains 3 or fewer cards
   triggerMessage: +20 Mult
   overrideEffect: 20
+  shopValue: 5
   jokerRarity: 0
   triggers:
   - {fileID: 11400000, guid: f989c1d464a96804b8e7e789b3d81bce, type: 2}
   - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  jokerTransform: {fileID: 0}

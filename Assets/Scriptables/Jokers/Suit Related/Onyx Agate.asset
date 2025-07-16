@@ -16,9 +16,9 @@ MonoBehaviour:
   description: Played cards with  Club suit give +7 Mult when scored
   triggerMessage: +7
   overrideEffect: 7
-  jokerRarity: 0
+  shopValue: 7
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: a67c9fb5934ce8a4da11237db2758912, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  jokerTransform: {fileID: 0}

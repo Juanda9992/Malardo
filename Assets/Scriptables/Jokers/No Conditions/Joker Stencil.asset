@@ -16,9 +16,9 @@ MonoBehaviour:
   description: X1 Mult for each empty Joker slot. Joker Stencil included
   triggerMessage: X3
   overrideEffect: 0
-  jokerRarity: 0
+  shopValue: 8
+  jokerRarity: 1
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 1ab17c8e8cc43f34f9d2cfe7b4eb227e, type: 2}
-  jokerTransform: {fileID: 0}
