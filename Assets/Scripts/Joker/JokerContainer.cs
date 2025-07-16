@@ -5,7 +5,7 @@ using UnityEngine;
 public class JokerContainer : MonoBehaviour
 {
     public JokerData _joker;
-
+    public bool isOnShop = true;
     public Action JokerAction;
 
     [SerializeField] private TextMeshProUGUI jokerText; 
