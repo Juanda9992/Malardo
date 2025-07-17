@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class CurrencyScreenManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI requiredBLindText;
+    [SerializeField] private GameObject moneyCharPrefab;
+    [SerializeField] private Transform moneyParent;
     [SerializeField] private GameObject currencyScreen;
     [SerializeField] private Button nextRoundButton;
     [SerializeField] private TextMeshProUGUI nextRoundButtonText;
@@ -26,15 +29,28 @@ public class CurrencyScreenManager : MonoBehaviour
         CardManager.instance.SetCardsVisibility(false);
         yield return new WaitForEndOfFrame();
         currencyScreen.SetActive(true);
+        roundScore = 0;
+        SetBlindData();
         CalculateScore();
         CalculateInvest();
 
         UpdateScoreButtonText();
     }
+
+    private void SetBlindData()
+    {
+        requiredBLindText.text = BlindManager.instance.requiredScore.ToString();
+
+        for (int i = 0; i < BlindManager.instance.blindMoney; i++)
+        {
+            Instantiate(moneyCharPrefab, moneyParent);
+        }
+
+        roundScore += BlindManager.instance.blindMoney;
+    }
     private void CalculateScore()
     {
         int handsRemaining = HandManager.instance.hands;
-        roundScore = 0;
         roundScore += handsRemaining;
 
         GameObject row = Instantiate(currencyRowPrefab, currencyParent);

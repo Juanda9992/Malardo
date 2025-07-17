@@ -5,4 +5,5 @@ public class BlindScoreData : ScriptableObject
 {
     public int[] baseScore;
     public float[] scoreMultiplier;
+    public int[] blindMoney;
 }

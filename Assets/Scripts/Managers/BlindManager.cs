@@ -8,7 +8,8 @@ public class BlindManager : MonoBehaviour
 {
     public static BlindManager instance;
     public int anteLevel;
-    [SerializeField] private int requiredScore;
+    public int blindMoney;
+    public int requiredScore;
     [SerializeField] private BlindScoreData blindScoreData;
     [SerializeField] private int currentBlindProgress; //0 to 2;
 
@@ -30,6 +31,7 @@ public class BlindManager : MonoBehaviour
     {
         requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.scoreMultiplier[currentBlindProgress]);
         requiredScoreText.text = requiredScore.ToString();
+        blindMoney = blindScoreData.blindMoney[currentBlindProgress];
     }
 
     public bool BlindDefeated(int scoreToCompare)
