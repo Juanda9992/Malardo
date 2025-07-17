@@ -8,7 +8,7 @@ public class JokerContainer : MonoBehaviour
     public bool isOnShop = true;
     public Action JokerAction;
 
-    [SerializeField] private TextMeshProUGUI jokerText; 
+    [SerializeField] private TextMeshProUGUI jokerText;
 
     void Start()
     {
@@ -17,29 +17,10 @@ public class JokerContainer : MonoBehaviour
 
     public void SetUpJoker(JokerData jokerData)
     {
-
         _joker = jokerData;
         jokerText.text = _joker.jokerName;
 
-        JokerAction += () =>
-        {
-            Debug.Log(_joker.effects.Count);
-            for (int i = 0; i < _joker.effects.Count; i++)
-            {
-                _joker.effects[i].ammount = _joker.overrideEffect;
-                _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage();
-                _joker.effects[i].ApplyEffect();
-
-                if (_joker.effects[i].jokerOutput != string.Empty)
-                {
-                    if (_joker.effects[i].jokerOutput == "Destroy")
-                    {
-                        Destroy(gameObject);
-                    }
-                }
-            }
-            ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
-        };
+        JokerAction += JokerExecuteAction;
     }
     private void HandleTriggerEvents(GameStatus gameStatus)
     {
@@ -53,6 +34,31 @@ public class JokerContainer : MonoBehaviour
 
         JokerAction?.Invoke();
 
+    }
+
+    private void JokerExecuteAction()
+    {
+        for (int i = 0; i < _joker.effects.Count; i++)
+        {
+            _joker.effects[i].ammount = _joker.overrideEffect;
+            _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage();
+            _joker.effects[i].ApplyEffect();
+
+            if (_joker.effects[i].jokerOutput != string.Empty)
+            {
+                if (_joker.effects[i].jokerOutput == "Destroy")
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+        ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
+    }
+
+
+    void OnDisable()
+    {
+        JokerAction -= JokerExecuteAction;
     }
 
     [ContextMenu("Test Joker")]
