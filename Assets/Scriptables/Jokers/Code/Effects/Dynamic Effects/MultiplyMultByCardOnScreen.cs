@@ -15,6 +15,8 @@ public class MultiplyMultByCardOnScreen : JokerEffect
             {
                 founds += CardManager.instance.cardsOnScreen.FindAll(x => x.currentCard.number == requiredNumbers[i]).Count;
             }
+
+            founds = founds == 0 ? 1 : founds;
             ScoreManager.instance.MultiplyMulti(founds * multiplier);
         }
     }
