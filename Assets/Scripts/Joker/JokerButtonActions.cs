@@ -26,6 +26,12 @@ public class JokerButtonActions : MonoBehaviour
         actionButton.gameObject.SetActive(true);
         if (jokerContainer.isOnShop)
         {
+            if (!JokerManager.instance.CanAddJoker())
+            {
+                actionButtonText.text = "No Space";
+                actionButton.interactable = false;
+                return;
+            }
             actionButtonText.text = "Buy" + " $" + jokerContainer._joker.shopValue;
             actionButton.interactable = CheckIfEnoughCurrencyForBuy();
         }

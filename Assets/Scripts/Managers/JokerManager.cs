@@ -35,6 +35,12 @@ public class JokerManager : MonoBehaviour
         Destroy(jokerContainer.gameObject);
     }
 
+    public bool CanAddJoker()
+    {
+        Debug.Log(currentJokers.Count + " " + maximumJokers);
+        return currentJokers.Count < maximumJokers;
+    }
+
 
     [ContextMenu("Test Add joker")]
     private void TestJoker()
