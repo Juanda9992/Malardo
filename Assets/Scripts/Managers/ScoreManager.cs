@@ -48,7 +48,7 @@ public class ScoreManager : MonoBehaviour
     public void MultiplyMulti(float multiplier)
     {
         mult *= multiplier;
-        multText.text = mult.ToString();
+        multText.text = mult.ToString("0.##");
     }
 
     public void CalculateScore()
