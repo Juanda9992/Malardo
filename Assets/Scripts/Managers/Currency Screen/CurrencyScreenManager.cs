@@ -3,27 +3,29 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityEngine.XR;
 
 public class CurrencyScreenManager : MonoBehaviour
 {
+    [SerializeField] private GameObject currencyScreen;
     [SerializeField] private Button nextRoundButton;
     [SerializeField] private TextMeshProUGUI nextRoundButtonText;
     [SerializeField] private Transform currencyParent;
     [SerializeField] private GameObject currencyRowPrefab;
     [SerializeField] private UnityEvent OnCashOut;
+
+    public static CurrencyScreenManager instance;
+
     private int roundScore;
     void Awake()
     {
+        instance = this;
         nextRoundButton.onClick.AddListener(CashMoney);
     }
-    void OnEnable()
+    public IEnumerator SetUpCurrencyScreen()
     {
-        StartCoroutine(nameof(SetUpCurrencyScreen));
-    }
-    private IEnumerator SetUpCurrencyScreen()
-    {
+        CardManager.instance.SetCardsVisibility(false);
         yield return new WaitForEndOfFrame();
+        currencyScreen.SetActive(true);
         CalculateScore();
         CalculateInvest();
 

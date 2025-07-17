@@ -66,7 +66,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (BlindManager.instance.BlindDefeated((int)roundScore))
         {
-            ShopManager.instance.ShowShop();
+            StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
         }
         else
         {

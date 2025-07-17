@@ -27,10 +27,8 @@ public class CardManager : MonoBehaviour
 
     void Start()
     {
-
         GenerateCardsCoroutine();
         CurrencyManager.instance.SetCurrency(cardGenerationPresset.startingMoney);
-        //BlindManager.instance.OnBlindDefeated += GenerateCardsCoroutine;
     }
     private IEnumerator GenerateCards()
     {
@@ -104,7 +102,11 @@ public class CardManager : MonoBehaviour
         cards.Remove(card);
         cardsOnScreen.Remove(card.linkedCard);
         UpdateDeckCounter();
+    }
 
+    public void SetCardsVisibility(bool value)
+    {
+        cardsContainer.SetActive(value);
     }
 
 
