@@ -70,7 +70,7 @@ public class GameStatusManager : MonoBehaviour
 
 public enum TriggerOptions
 {
-    None, BeforeHandPlay, HandEnd, CardPlay, CardDiscard
+    None, BeforeHandPlay, HandEnd, CardPlay, CardDiscard, RoundEnd
 }
 
 [System.Serializable]

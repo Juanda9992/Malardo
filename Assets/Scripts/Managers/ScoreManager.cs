@@ -67,6 +67,7 @@ public class ScoreManager : MonoBehaviour
         if (BlindManager.instance.BlindDefeated((int)roundScore))
         {
             StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
+            GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
         }
         else
         {
