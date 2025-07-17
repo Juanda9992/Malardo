@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsContainer: {fileID: 0}
   defaultHandSize: 8
-  cardGenerationPresset: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
+  cardGenerationPresset: {fileID: 11400000, guid: e7f96305dbf9f2548bc5ad31dad7d193, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   deckCounter: {fileID: 228441445}

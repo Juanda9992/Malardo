@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class CurrencyScreenManager : MonoBehaviour
 {
@@ -30,14 +31,23 @@ public class CurrencyScreenManager : MonoBehaviour
     }
     private void CalculateScore()
     {
+        int handsRemaining = HandManager.instance.hands;
         roundScore = 0;
-        roundScore += HandManager.instance.hands;
+        roundScore += handsRemaining;
+
+        GameObject row = Instantiate(currencyRowPrefab, currencyParent);
+        row.GetComponent<CurrencyIndicator>().SetIndicator(handsRemaining, "Hands Remaining ($1 per remaining)", handsRemaining, Color.blue);
     }
 
     private void CalculateInvest()
     {
         int invest = Mathf.FloorToInt(CurrencyManager.instance.currentCurrency / 5);
         roundScore += invest;
+        if (invest > 0)
+        {
+            GameObject row = Instantiate(currencyRowPrefab, currencyParent);
+            row.GetComponent<CurrencyIndicator>().SetIndicator(invest, "Invest ($1 per $5)", invest, Color.yellow);
+        }
     }
     private void UpdateScoreButtonText()
     {
