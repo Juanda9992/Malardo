@@ -45,8 +45,9 @@ public class CardManager : MonoBehaviour
 
     }
 
-    private void GenerateCardsCoroutine()
+    public void GenerateCardsCoroutine()
     {
+        cardsContainer.SetActive(true);
         StartCoroutine(nameof(GenerateCards));
     }
 
