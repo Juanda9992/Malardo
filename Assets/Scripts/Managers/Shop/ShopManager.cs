@@ -20,5 +20,6 @@ public class ShopManager : MonoBehaviour
     public void ShowShop()
     {
         showShopEvent?.Invoke();
+        jokerGenerator.SetActive(true);
     }
 }
