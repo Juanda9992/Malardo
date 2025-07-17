@@ -74,6 +74,26 @@ public class CurrencyScreenManager : MonoBehaviour
     private void CashMoney()
     {
         CurrencyManager.instance.AddCurrency(roundScore);
+        ClearUI();
         OnCashOut?.Invoke();
+    }
+
+    public void ClearUI()
+    {
+        DeleteChildsInParent(currencyParent);
+        DeleteChildsInParent(moneyParent);
+    }
+
+    private void DeleteChildsInParent(Transform parent)
+    {
+        Transform[] existingUI = parent.GetComponentsInChildren<Transform>();
+        if (existingUI.Length > 1)
+        {
+            for (int i = 1; i < existingUI.Length; i++)
+            {
+                Destroy(existingUI[i].gameObject);
+            }
+        }
+
     }
 }
