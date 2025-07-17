@@ -66,7 +66,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (BlindManager.instance.BlindDefeated((int)roundScore))
         {
-            BlindManager.instance.IncreaseBetlevel();
+            ShopManager.instance.ShowShop();
         }
         else
         {

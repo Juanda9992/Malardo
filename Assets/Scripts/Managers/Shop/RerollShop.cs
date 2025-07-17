@@ -12,7 +12,6 @@ public class RerollShop : MonoBehaviour
     void Start()
     {
         reRollButton.onClick.AddListener(Reroll);
-        SetRerollText();
     }
 
     private void SetRerollText()
@@ -35,5 +34,10 @@ public class RerollShop : MonoBehaviour
     private bool CheckIfEnoughCurrencyForReRoll()
     {
         return CurrencyManager.instance.currentCurrency >= currentValue;
+    }
+    public void SetDefaultValues()
+    {
+        SetRerollText();
+        currentValue = 5;
     }
 }

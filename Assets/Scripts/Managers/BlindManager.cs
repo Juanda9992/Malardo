@@ -37,7 +37,7 @@ public class BlindManager : MonoBehaviour
         return scoreToCompare > requiredScore;
     }
 
-    [ContextMenu("Defeat Blind")]
+    [ContextMenu("After Shop")]
     public void IncreaseBetlevel()
     {
         OnBlindDefeated?.Invoke();
@@ -50,6 +50,11 @@ public class BlindManager : MonoBehaviour
         }
 
         SetRequiredScore();
+    }
+
+    public void HideShop()
+    {
+        gameObject.SetActive(false);
     }
 
 }

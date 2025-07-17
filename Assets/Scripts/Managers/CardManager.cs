@@ -7,6 +7,7 @@ public class CardManager : MonoBehaviour
 {
     public static CardManager instance;
 
+    [SerializeField] private GameObject cardsContainer;
     [SerializeField] private int defaultHandSize = 8;
     [SerializeField] private CardGenerationPresset cardGenerationPresset;
 
