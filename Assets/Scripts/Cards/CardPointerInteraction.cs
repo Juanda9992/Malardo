@@ -138,7 +138,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     }
     public void DestroyCard()
     {
-        CardManager.instance.RemoveCardFromDeck(card_Data.currentCard);
+        DeckManager.instance.RemoveCardFromDeck(card_Data.currentCard);
         transform.DOScale(0, 0.2f).OnComplete(() => Destroy(gameObject));
     }
 

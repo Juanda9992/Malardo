@@ -1827,11 +1827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardsContainer: {fileID: 836230732}
-  defaultHandSize: 8
-  cardGenerationPresset: {fileID: 11400000, guid: e566a6b87f679e549ad663342b3a5efe, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
-  deckCounter: {fileID: 228441445}
   cards: []
   cardsOnScreen: []
 --- !u!4 &621395120
@@ -1849,6 +1846,7 @@ Transform:
   m_Children:
   - {fileID: 887212916}
   - {fileID: 989210042}
+  - {fileID: 2083763015}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621395121
@@ -5770,6 +5768,55 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!1 &2083763014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083763015}
+  - component: {fileID: 2083763016}
+  m_Layer: 0
+  m_Name: Deck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2083763015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083763014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621395120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083763016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083763014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceDeck: {fileID: 11400000, guid: f2fd5d82db193cc46ba9af50b5b6991a, type: 2}
+  fullMatchDeck: []
+  roundDeck: []
+  currentHandSize: 8
+  deckCounter: {fileID: 228441445}
 --- !u!1 &2111986515
 GameObject:
   m_ObjectHideFlags: 0

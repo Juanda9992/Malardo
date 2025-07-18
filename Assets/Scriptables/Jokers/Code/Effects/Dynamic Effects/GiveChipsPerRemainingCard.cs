@@ -6,11 +6,11 @@ public class GiveChipsPerRemainingCard : JokerEffect
     public int chipAmmount;
     public override void ApplyEffect()
     {
-        ScoreManager.instance.AddChips(chipAmmount * CardManager.instance.cards.Count);
+        ScoreManager.instance.AddChips(chipAmmount * DeckManager.instance.roundDeck.Count);
     }
 
     public override string GetCustomMessage()
     {
-        return (chipAmmount * CardManager.instance.cards.Count).ToString();
+        return (chipAmmount * DeckManager.instance.roundDeck.Count).ToString();
     }
 }

@@ -12,6 +12,10 @@ public class CurrencyManager : MonoBehaviour
     {
         instance = this;
     }
+    void Start()
+    {
+        AddCurrency(DeckManager.instance.referenceDeck.startingMoney);
+    }
     public void SetCurrency(int ammount)
     {
         currentCurrency = ammount;
