@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
@@ -8,104 +6,24 @@ public class CardManager : MonoBehaviour
     public static CardManager instance;
 
     [SerializeField] private GameObject cardsContainer;
-    [SerializeField] private int defaultHandSize = 8;
-    [SerializeField] private CardGenerationPresset cardGenerationPresset;
-
     [SerializeField] private Transform handParent;
     [SerializeField] private GameObject cardprefab;
-
-    [SerializeField] private TextMeshProUGUI deckCounter;
-    public List<Card> cards;
     public List<Card_Data> cardsOnScreen;
-
-    private int initialDeckSize;
-
     void Awake()
     {
         instance = this;
     }
+ 
 
-    void Start()
+    public void GenerateCardOnHand(Card card)
     {
-        GenerateCardsCoroutine();
-        CurrencyManager.instance.SetCurrency(cardGenerationPresset.startingMoney);
-    }
-    private IEnumerator GenerateCards()
-    {
-        TryDestroyExistingCards();
-        yield return new WaitForSeconds(0.1f);
-        cards = new List<Card>(cardGenerationPresset.allCards);
-        cardsOnScreen = new List<Card_Data>();
-        initialDeckSize = cards.Count;
-        for (int i = 0; i < defaultHandSize; i++)
-        {
-            GenerateCardOnHand();
-        }
-        UpdateDeckCounter();
-
-    }
-
-    public void GenerateCardsCoroutine()
-    {
-        cardsContainer.SetActive(true);
-        StartCoroutine(nameof(GenerateCards));
-    }
-
-    private void TryDestroyExistingCards()
-    {
-        if (handParent.childCount == 0)
-        {
-            return;
-        }
-        CardPointerInteraction[] handChilds = handParent.GetComponentsInChildren<CardPointerInteraction>();
-        for (int i = 0; i < handChilds.Length; i++)
-        {
-            handChilds[i].DestroyCard();
-        }
-    }
-
-    public void AddCartToList(Card card)
-    {
-        cards.Add(card);
-    }
-    private void UpdateDeckCounter()
-    {
-        deckCounter.text = cards.Count + " / " + initialDeckSize;
-    }
-
-    public void GenerateCardOnHand()
-    {
-        if (cards.Count == 0)
-        {
-            return;
-        }
-        Card card = cards[Random.Range(0, cards.Count)];
-
-        cards.Remove(card);
-
         GameObject currentCard = Instantiate(cardprefab, handParent);
 
-
-        currentCard.GetComponent<Card_Data>().SetCardData(card);
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
+        currentCard.GetComponent<Card_Data>().SetCardData(card);
     }
 
-    public void TryGenerateCardsOnHand(int ammount)
-    {
-        for (int i = 0; i < ammount; i++)
-        {
-            GenerateCardOnHand();
-        }
-    }
-
-    public void RemoveCardFromDeck(Card card)
-    {
-        cards.Remove(card);
-        cardsOnScreen.Remove(card.linkedCard);
-        UpdateDeckCounter();
-    }
-
-    public void SetCardsVisibility(bool value)
+    public void SetHandVisibility(bool value)
     {
         cardsContainer.SetActive(value);
     }

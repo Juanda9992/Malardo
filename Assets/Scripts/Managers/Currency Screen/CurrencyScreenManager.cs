@@ -26,7 +26,7 @@ public class CurrencyScreenManager : MonoBehaviour
     }
     public IEnumerator SetUpCurrencyScreen()
     {
-        CardManager.instance.SetCardsVisibility(false);
+        CardManager.instance.SetHandVisibility(false);
         yield return new WaitForEndOfFrame();
         currencyScreen.SetActive(true);
         roundScore = 0;
