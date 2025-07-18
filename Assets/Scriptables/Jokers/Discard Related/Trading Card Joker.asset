@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Trading Card Joker
+  m_EditorClassIdentifier: 
+  jokerName: Trading Card
+  description: If first discard of round has only 1 card, destroy it and earn $3
+  triggerMessage: $3
+  overrideEffect: 3
+  shopValue: 6
+  jokerRarity: 1
+  triggers:
+  - {fileID: 11400000, guid: 18f8413de999d2b4198be33072595a7e, type: 2}
+  - {fileID: 11400000, guid: ccc764b995beff0449276aa07a4b4bc3, type: 2}
+  - {fileID: 11400000, guid: 05ec5d42a673d4b42ad5057c5112f838, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 45b8bdd7a74743946b4f38961c682d46, type: 2}
+  - {fileID: 11400000, guid: cb6db422352abc449af465fb0e1fc16a, type: 2}

@@ -69,6 +69,10 @@ public class DeckManager : MonoBehaviour
     {
         deckCounter.text = roundDeck.Count + " / " + fullMatchDeck.Count;
     }
+    public void DestroyCardFromFullDeck(Card card)
+    {
+        fullMatchDeck.Remove(card);
+    }
 
     #region GetValues
     public int GerRemainingCardOnDeck()

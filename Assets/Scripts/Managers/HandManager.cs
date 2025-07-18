@@ -74,6 +74,8 @@ public class HandManager : MonoBehaviour
     public void DiscardAllCards()
     {
         discards--;
+        GameStatusManager.SetDiscardData(handCards);
+        GameStatusManager.SetGameEvent(TriggerOptions.CardDiscard);
         if (handCards.Count > 0)
         {
             ClearHandPlayed();

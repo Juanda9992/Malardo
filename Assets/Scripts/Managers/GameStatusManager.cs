@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameStatusManager : MonoBehaviour
@@ -66,6 +67,12 @@ public class GameStatusManager : MonoBehaviour
     {
         _Status.jokersInMatch = ammount;
     }
+    public static void SetDiscardData(List<Card> cardsDiscard)
+    {
+        _Status.discardData.discardCount++;
+        _Status.discardData.discardSize = cardsDiscard.Count;
+        _Status.discardData.discardCards = new List<Card>(cardsDiscard);
+    }
 }
 
 public enum TriggerOptions
@@ -83,4 +90,13 @@ public class GameStatus
     public HandType playedHand;
     public TriggerOptions currentGameStatus = TriggerOptions.None;
     public int jokersInMatch;
+    [Header("Discards")]
+    public DiscardData discardData;
+    [System.Serializable]
+    public class DiscardData
+    {
+        public int discardSize;
+        public int discardCount;
+        public List<Card> discardCards;
+    }
 }
