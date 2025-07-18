@@ -35,12 +35,25 @@ public class DeckManager : MonoBehaviour
     {
         for (int i = 0; i < currentHandSize; i++)
         {
-            int randomIndex = Random.Range(0, roundDeck.Count);
-            Card cardToGenerate = roundDeck[randomIndex];
-            roundDeck.RemoveAt(randomIndex);
-
-            CardManager.instance.GenerateCardOnHand(cardToGenerate);
+            CreateRandomCard();
         }
+    }
+
+    public void GenerateCardsOnDeck(int ammount)
+    {
+        for (int i = 0; i < ammount; i++)
+        {
+            CreateRandomCard();
+        }
+    }
+
+    private void CreateRandomCard()
+    {
+        int randomIndex = Random.Range(0, roundDeck.Count);
+        Card cardToGenerate = roundDeck[randomIndex];
+        roundDeck.RemoveAt(randomIndex);
+
+        CardManager.instance.GenerateCardOnHand(cardToGenerate);
     }
 
     public void RemoveCardFromDeck(Card card)

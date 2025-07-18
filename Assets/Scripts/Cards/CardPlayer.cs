@@ -63,7 +63,7 @@ public class CardPlayer : MonoBehaviour
         ScoreManager.instance.CalculateScore();
 
         yield return new WaitForSeconds(0.3f);
-        StartCoroutine(HandManager.instance.ClearHandPlayed());
+        HandManager.instance.ClearHandPlayed();
         currentHand.Clear();
 
         yield return new WaitForSeconds(0.3f);

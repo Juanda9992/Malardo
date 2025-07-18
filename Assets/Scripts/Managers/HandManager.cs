@@ -74,40 +74,26 @@ public class HandManager : MonoBehaviour
     public void DiscardAllCards()
     {
         discards--;
-        int requiredCards = handCards.Count;
         if (handCards.Count > 0)
         {
-            for (int i = handCards.Count - 1; i >= 0; i--)
-            {
-                handCards[i].linkedCard.pointerInteraction.DestroyCard();
-                CardManager.instance.RemoveCardFromDeck(handCards[i]);
-                GameStatusManager.SetGameEvent(TriggerOptions.CardDiscard);
-            }
+            ClearHandPlayed();
         }
 
-        handCards.Clear();
-
         GameStatusManager.SetDiscardsRemaining(discards);
-
-        CardManager.instance.TryGenerateCardsOnHand(requiredCards);
 
         SetPlayButtonsState(false);
         GameEventsManager.instance.TriggerHandDiscard();
         UpdateDiscardText();
     }
 
-    public IEnumerator ClearHandPlayed()
+    public void ClearHandPlayed()
     {
-        int requiredHandNumber = handCards.Count;
         for (int i = 0; i < handCards.Count; i++)
         {
             handCards[i].linkedCard.pointerInteraction.DestroyCard();
         }
+        DeckManager.instance.GenerateCardsOnDeck(handCards.Count);
         handCards.Clear();
-
-        yield return new WaitForSeconds(0.2f);
-
-        CardManager.instance.TryGenerateCardsOnHand(requiredHandNumber);
     }
 
     private void SetPlayButtonsState(bool active)
