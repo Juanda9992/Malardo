@@ -71,13 +71,17 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     }
 
     public void OnPointerDown(PointerEventData data)
-    {
+    {   
+        if (data.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
         StartCoroutine(nameof(StartDragging));
     }
 
     private IEnumerator StartDragging()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         CardsReorder.instance.DisableLayout();
         transform.SetSiblingIndex(transform.parent.childCount);
         previousPos = transform.localPosition;
