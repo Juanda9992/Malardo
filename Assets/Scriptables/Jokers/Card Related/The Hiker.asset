@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: The Hiker
+  m_EditorClassIdentifier: 
+  jokerName: The Hiker
+  description: Every played card permanently gains +5 Chips when scored
+  triggerMessage: +5
+  overrideEffect: 5
+  shopValue: 5
+  jokerRarity: 1
+  triggers:
+  - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+  effects:
+  - {fileID: 11400000, guid: de2f629d4fc6f064fa775b44b7c74228, type: 2}

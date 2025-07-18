@@ -38,7 +38,7 @@ public class Card
     public Suit cardSuit;
     public FaceCard faceCard = FaceCard.None;
 
-    public CardType cardType = CardType.Stone;
+    public CardType cardType = CardType.Default;
     public Card GenerateRandomCard()
     {
         Card card = new Card();

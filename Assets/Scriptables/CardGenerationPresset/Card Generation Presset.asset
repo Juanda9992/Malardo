@@ -15,216 +15,322 @@ MonoBehaviour:
   allCards:
   - linkedCard: {fileID: 0}
     number: 1
+    chipAmmount: 11
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 2
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 3
+    chipAmmount: 3
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 4
+    chipAmmount: 9
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 5
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 6
+    chipAmmount: 11
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 7
+    chipAmmount: 7
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 8
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 9
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 10
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 11
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 3
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 12
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 2
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 13
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 1
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 1
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 2
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 3
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 4
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 5
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 6
+    chipAmmount: 11
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 7
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 8
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 9
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 10
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 11
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 3
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 12
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 2
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 13
+    chipAmmount: 0
     cardSuit: 1
     faceCard: 1
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 1
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 2
+    chipAmmount: 2
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 3
+    chipAmmount: 3
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 4
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 5
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 6
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 7
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 8
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 9
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 10
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 11
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 3
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 12
+    chipAmmount: 10
     cardSuit: 2
     faceCard: 2
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 13
+    chipAmmount: 0
     cardSuit: 2
     faceCard: 1
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 1
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 2
+    chipAmmount: 2
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 3
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 4
+    chipAmmount: 9
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 5
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 6
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 7
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 8
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 9
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 10
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 0
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 11
+    chipAmmount: 10
     cardSuit: 3
     faceCard: 3
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 12
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 2
+    cardType: 0
   - linkedCard: {fileID: 0}
     number: 13
+    chipAmmount: 0
     cardSuit: 3
     faceCard: 1
-  startingMoney: 3
+    cardType: 0
+  startingMoney: 0
   presetCard:
     linkedCard: {fileID: 0}
     number: 1
+    chipAmmount: 0
     cardSuit: 0
     faceCard: 0
+    cardType: 0
   timesToGenerate: 0

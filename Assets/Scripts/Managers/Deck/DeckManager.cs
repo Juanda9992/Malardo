@@ -100,5 +100,10 @@ public class DeckManager : MonoBehaviour
     {
         return fullMatchDeck.Count;
     }
+
+    public Card GetFullDeckCard(Card card)
+    {
+        return fullMatchDeck.Find(x=> x == card);
+    }
     #endregion
 }
