@@ -69,4 +69,36 @@ public class DeckManager : MonoBehaviour
     {
         deckCounter.text = roundDeck.Count + " / " + fullMatchDeck.Count;
     }
+
+    #region GetValues
+    public int GerRemainingCardOnDeck()
+    {
+        return roundDeck.Count;
+    }
+
+    public int GetAllCardsOnFullDeckByNumber(int numberRequired)
+    {
+        return fullMatchDeck.FindAll(x => x.number == numberRequired).Count;
+    }
+
+    public int GetAllCardsOnFullDeckBySuit(Suit suitRequired)
+    {
+        return fullMatchDeck.FindAll(x => x.cardSuit == suitRequired).Count;
+    }
+
+    public int GetAllStoneCardsOnFullDeck()
+    {
+        return fullMatchDeck.FindAll(x => x.cardType == CardType.Stone).Count;
+    }
+
+    public int GetRemainingCardsOnMatchDeck()
+    {
+        return roundDeck.Count;
+    }
+
+    public int GetRemainingCardsOnFullDeck()
+    {
+        return fullMatchDeck.Count;
+    }
+    #endregion
 }
