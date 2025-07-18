@@ -131,6 +131,7 @@ public class HandDetector : MonoBehaviour
             cardsSorted.Clear();
             return false;
         }
+        if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
         cardsSorted = new List<Card>(handCards);
         cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
 
@@ -158,6 +159,7 @@ public class HandDetector : MonoBehaviour
         {
             return false;
         }
+        if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
         Suit currentSuit = handCards[0].cardSuit;
         for (int i = 0; i < handCards.Count; i++)
         {
@@ -175,6 +177,8 @@ public class HandDetector : MonoBehaviour
             return false;
         }
 
+        if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
+
         if (GetCardsInHandByNumber(handCards, handCards[0].number).Count == 5)
         {
             return true;
@@ -187,6 +191,10 @@ public class HandDetector : MonoBehaviour
         if (handCards.Count < 4)
         {
             return false;
+        }
+        if (handCards.Find(x => x.cardType == CardType.Stone) != null)
+        {
+            realCards.Add(handCards.Find(x => x.cardType == CardType.Stone));
         }
 
         realCards = GetCardsInHandByNumber(handCards, handCards[0].number);
@@ -211,6 +219,11 @@ public class HandDetector : MonoBehaviour
 
         for (int i = 0; i < handCards.Count; i++)
         {
+            if (handCards[i].cardType == CardType.Stone)
+            {
+                realCards.Add(handCards[i]);
+                continue;
+            }
             realCards = GetCardsInHandByNumber(handCards, handCards[i].number);
             if (realCards.Count == 3)
             {
@@ -231,6 +244,11 @@ public class HandDetector : MonoBehaviour
 
         for (int i = 0; i < handCards.Count; i++)
         {
+            if (handCards[i].cardType == CardType.Stone)
+            {
+                realCards.Add(handCards[i]);
+                continue;
+            }
             if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
                 pairsFound++;
@@ -254,6 +272,11 @@ public class HandDetector : MonoBehaviour
         bool three = false;
         for (int i = realCards.Count - 1; i >= 0; i--)
         {
+            if (handCards[i].cardType == CardType.Stone)
+            {
+                realCards.Add(handCards[i]);
+                continue;
+            }
             if (realCards[i].number == match1)
             {
                 continue;
@@ -288,6 +311,11 @@ public class HandDetector : MonoBehaviour
         realCards = new List<Card>();
         for (int i = 0; i < handCards.Count; i++)
         {
+            if (handCards[i].cardType == CardType.Stone)
+            {
+                realCards.Add(handCards[i]);
+                continue;
+            }
             if (GetCardsInHandByNumber(handCards, handCards[i].number).Count == 2)
             {
                 realCards.Add(handCards[i]);
@@ -301,14 +329,14 @@ public class HandDetector : MonoBehaviour
         if (handCards.Count > 0)
         {
             realCards = realCards.OrderBy(x => x.number).ToList();
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(new List<Card>() { realCards[0] });
             currentHand = allHands.Find(x => x.handType == HandType.High_Card);
             AddHandToMult();
         }
     }
     private List<Card> GetCardsInHandByNumber(List<Card> cards, int predicate)
     {
-        List<Card> validCards = cards.FindAll(x => x.number == predicate);
+        List<Card> validCards = cards.FindAll(x => x.number == predicate && x.cardType != CardType.Stone);
         return validCards;
     }
 
