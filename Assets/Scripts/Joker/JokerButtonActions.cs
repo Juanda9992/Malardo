@@ -55,6 +55,7 @@ public class JokerButtonActions : MonoBehaviour
 
     private void BuyJoker()
     {
+        JokerDescription.instance.SetDescriptionOff();
         CurrencyManager.instance.RemoveCurrency(jokerContainer._joker.sellValue);
         JokerManager.instance.AddJoker(jokerContainer._joker);
         Destroy(this.gameObject);
