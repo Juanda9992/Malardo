@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsContainer: {fileID: 836230732}
   defaultHandSize: 8
-  cardGenerationPresset: {fileID: 11400000, guid: e7f96305dbf9f2548bc5ad31dad7d193, type: 2}
+  cardGenerationPresset: {fileID: 11400000, guid: e566a6b87f679e549ad663342b3a5efe, type: 2}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   deckCounter: {fileID: 228441445}
@@ -2022,8 +2022,10 @@ MonoBehaviour:
     cardPlayed:
       linkedCard: {fileID: 0}
       number: 0
+      chipAmmount: 0
       cardSuit: 0
       faceCard: 0
+      cardType: 2
     playedHand: 0
     currentGameStatus: 0
     jokersInMatch: 0

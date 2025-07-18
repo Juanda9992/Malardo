@@ -36,7 +36,7 @@ public class CardGenerationPresset : ScriptableObject
     {
         for (int i = 0; i < timesToGenerate; i++)
         {
-            allCards.Add(new Card(){number = presetCard.number, cardSuit = presetCard.cardSuit});
+            allCards.Add(new Card(){number = presetCard.number, cardSuit = presetCard.cardSuit, cardType = presetCard.cardType});
         }
         
     }

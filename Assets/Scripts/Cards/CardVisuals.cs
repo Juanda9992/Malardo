@@ -29,12 +29,12 @@ public class CardVisuals : MonoBehaviour
     private void SetLetterOrNumber()
     {
 
-        if (_card.cardType == CardType.Gold || _card.cardType == CardType.Stone)
+        if (_card.cardType == CardType.Gold)
         {
-            if (_card.cardType == CardType.Gold)
-            {
-                cardImage.color = Color.yellow;
-            }
+            cardImage.color = Color.yellow;
+        }
+        if (_card.cardType == CardType.Stone)
+        {
             if (_card.cardType == CardType.Stone)
             {
                 cardImage.color = Color.grey;
@@ -43,21 +43,21 @@ public class CardVisuals : MonoBehaviour
             lowerNumber.gameObject.SetActive(false);
         }
         if (_card.number == 11)
-            {
-                SetNumberTextValue("J");
-            }
-            else if (_card.number == 12)
-            {
-                SetNumberTextValue("Q");
-            }
-            else if (_card.number == 13)
-            {
-                SetNumberTextValue("K");
-            }
-            else
-            {
-                SetNumberTextValue(_card.number.ToString());
-            }
+        {
+            SetNumberTextValue("J");
+        }
+        else if (_card.number == 12)
+        {
+            SetNumberTextValue("Q");
+        }
+        else if (_card.number == 13)
+        {
+            SetNumberTextValue("K");
+        }
+        else
+        {
+            SetNumberTextValue(_card.number.ToString());
+        }
     }
     private void SetVisualsColors(int number)
     {
