@@ -41,6 +41,11 @@ public class JokerManager : MonoBehaviour
         return currentJokers.Count < maximumJokers;
     }
 
+    public int GetCurrentJokersByRarity(JokerRarity rarity)
+    {
+        return currentJokers.FindAll(x => x.jokerRarity == rarity).Count;
+    }
+
 
     [ContextMenu("Test Add joker")]
     private void TestJoker()
