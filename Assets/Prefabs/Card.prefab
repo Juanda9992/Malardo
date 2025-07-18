@@ -366,6 +366,7 @@ MonoBehaviour:
     number: 7
     cardSuit: 2
     faceCard: 1
+    cardType: 2
   visuals: {fileID: 188735570829389083}
   pointerInteraction: {fileID: 737717448346528800}
 --- !u!114 &188735570829389083
@@ -382,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperNumber: {fileID: 7363589721812805500}
   lowerNumber: {fileID: 3424280198990115009}
+  cardImage: {fileID: 8267480270788336155}
   rotationRange: 3
 --- !u!114 &737717448346528800
 MonoBehaviour:
@@ -417,6 +419,7 @@ MonoBehaviour:
   hoverScale: 1.2
   moveYOffset: 100
   _rectTransform: {fileID: 2834401486058771544}
+  grabbed: 0
 --- !u!1 &7446671074219286334
 GameObject:
   m_ObjectHideFlags: 0

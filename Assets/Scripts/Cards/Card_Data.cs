@@ -18,6 +18,7 @@ public class Card_Data : MonoBehaviour
     {
         currentCard = card;
         currentCard.linkedCard = this;
+        card.SetCardChipAmmount();
         visuals.SetVisuals(currentCard);
     }
 
@@ -33,9 +34,11 @@ public class Card
 {
     public Card_Data linkedCard;
     [Range(1, 13)] public int number;
+    public int chipAmmount;
     public Suit cardSuit;
     public FaceCard faceCard = FaceCard.None;
 
+    public CardType cardType = CardType.Stone;
     public Card GenerateRandomCard()
     {
         Card card = new Card();
@@ -54,6 +57,24 @@ public class Card
         return (cards[Random.Range(0, cards.Length)]);
     }
 
+    public void SetCardChipAmmount()
+    {
+        Debug.Log("Enter here");
+        if (number >= 11 && number < 13)
+        {
+            chipAmmount = 10;
+        }
+
+        if (number == 1)
+        {
+            chipAmmount = 11;
+        }
+
+        if (cardType == CardType.Stone)
+        {
+            chipAmmount = 50;
+        }
+    }
     public void SetCardNumber(int _number)
     {
         number = _number;
@@ -93,6 +114,12 @@ public enum Suit
     Clover
 }
 
+public enum CardType
+{
+    Default,
+    Gold,
+    Stone
+}
 public enum FaceCard
 {
     None,

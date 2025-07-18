@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardVisuals : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
+    [SerializeField] private Image cardImage;
     [SerializeField] private int rotationRange;
     private Card _card;
 
@@ -26,22 +28,36 @@ public class CardVisuals : MonoBehaviour
 
     private void SetLetterOrNumber()
     {
+
+        if (_card.cardType == CardType.Gold || _card.cardType == CardType.Stone)
+        {
+            if (_card.cardType == CardType.Gold)
+            {
+                cardImage.color = Color.yellow;
+            }
+            if (_card.cardType == CardType.Stone)
+            {
+                cardImage.color = Color.grey;
+            }
+            upperNumber.gameObject.SetActive(false);
+            lowerNumber.gameObject.SetActive(false);
+        }
         if (_card.number == 11)
-        {
-            SetNumberTextValue("J");
-        }
-        else if (_card.number == 12)
-        {
-            SetNumberTextValue("Q");
-        }
-        else if (_card.number == 13)
-        {
-            SetNumberTextValue("K");
-        }
-        else
-        {
-            SetNumberTextValue(_card.number.ToString());
-        }
+            {
+                SetNumberTextValue("J");
+            }
+            else if (_card.number == 12)
+            {
+                SetNumberTextValue("Q");
+            }
+            else if (_card.number == 13)
+            {
+                SetNumberTextValue("K");
+            }
+            else
+            {
+                SetNumberTextValue(_card.number.ToString());
+            }
     }
     private void SetVisualsColors(int number)
     {
