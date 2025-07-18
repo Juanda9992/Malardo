@@ -22,7 +22,6 @@ public class DeckManager : MonoBehaviour
     void Start()
     {
         OnRoundStart();
-        UpdateDeckCounter();
         RegenerateDeck();
     }
 
@@ -49,11 +48,16 @@ public class DeckManager : MonoBehaviour
 
     private void CreateRandomCard()
     {
+        if (roundDeck.Count == 0)
+        {
+            return;
+        }
         int randomIndex = Random.Range(0, roundDeck.Count);
         Card cardToGenerate = roundDeck[randomIndex];
         roundDeck.RemoveAt(randomIndex);
 
         CardManager.instance.GenerateCardOnHand(cardToGenerate);
+        UpdateDeckCounter();
     }
 
     public void RemoveCardFromDeck(Card card)
