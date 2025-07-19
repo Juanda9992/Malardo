@@ -13,7 +13,7 @@ public class CardManager : MonoBehaviour
     {
         instance = this;
     }
- 
+
 
     public void GenerateCardOnHand(Card card)
     {
@@ -23,10 +23,26 @@ public class CardManager : MonoBehaviour
         currentCard.GetComponent<Card_Data>().SetCardData(card);
     }
 
+    public void DestroyCardsOnHand()
+    {
+        DeleteChildsInParent(handParent);
+    }
+
     public void SetHandVisibility(bool value)
     {
         cardsContainer.SetActive(value);
     }
 
+    private void DeleteChildsInParent(Transform parent)
+    {
+        Transform[] existingUI = parent.GetComponentsInChildren<Transform>();
+        if (existingUI.Length > 1)
+        {
+            for (int i = 1; i < existingUI.Length; i++)
+            {
+                Destroy(existingUI[i].gameObject);
+            }
+        }
+    }
 
 }
