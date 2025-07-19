@@ -36,7 +36,7 @@ public class BlindManager : MonoBehaviour
 
     public bool BlindDefeated(int scoreToCompare)
     {
-        return scoreToCompare > requiredScore;
+        return scoreToCompare >= requiredScore;
     }
 
     [ContextMenu("After Shop")]
