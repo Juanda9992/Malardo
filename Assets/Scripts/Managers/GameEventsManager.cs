@@ -1,6 +1,6 @@
 using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class GameEventsManager : MonoBehaviour
 {
@@ -12,10 +12,16 @@ public class GameEventsManager : MonoBehaviour
     public event Action OnHandDiscarted;
     public event Action<HandType> OnSpecificHandPlayed;
     public event Action<Card> OnCardPlay;
+    public event Action OnRoundBegins;
 
     void Awake()
     {
         instance = this;
+    }
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.1f);
+        TriggerRoundBegins();
     }
 
     public void TriggerHandPlayed()
@@ -29,7 +35,7 @@ public class GameEventsManager : MonoBehaviour
     {
         OnSpecificHandPlayed?.Invoke(handData);
 
-        if (debugger) Debug.Log(handData + " " +"Played");
+        if (debugger) Debug.Log(handData + " " + "Played");
     }
 
     public void TriggerHandEnd()
@@ -49,7 +55,12 @@ public class GameEventsManager : MonoBehaviour
     public void TriggerCardPlayed(Card card)
     {
         OnCardPlay?.Invoke(card);
-        
+
         if (debugger) card.DegubCardInfo();
+    } 
+    
+    public void TriggerRoundBegins()
+    {
+        OnRoundBegins?.Invoke();
     } 
 }

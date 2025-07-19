@@ -59,7 +59,6 @@ public class Card
 
     public void SetCardChipAmmount()
     {
-        Debug.Log("Enter here");
         chipAmmount = number;
         if (number >= 11 && number < 13)
         {

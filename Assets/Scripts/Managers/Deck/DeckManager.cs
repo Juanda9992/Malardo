@@ -21,13 +21,13 @@ public class DeckManager : MonoBehaviour
     }
     void Start()
     {
-        OnRoundStart();
-        RegenerateDeck();
+        GameEventsManager.instance.OnRoundBegins += OnRoundStart;
     }
 
     private void OnRoundStart()
     {
         roundDeck = new List<Card>(fullMatchDeck);
+        RegenerateDeck();
     }
 
     public void RegenerateDeck()

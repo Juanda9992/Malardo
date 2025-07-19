@@ -37,7 +37,6 @@ public class JokerManager : MonoBehaviour
 
     public bool CanAddJoker()
     {
-        Debug.Log(currentJokers.Count + " " + maximumJokers);
         return currentJokers.Count < maximumJokers;
     }
 

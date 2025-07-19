@@ -14,6 +14,10 @@ public class CardManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        GameEventsManager.instance.OnRoundBegins += SetupDeck;
+    }
 
     public void GenerateCardOnHand(Card card)
     {
@@ -43,6 +47,12 @@ public class CardManager : MonoBehaviour
                 Destroy(existingUI[i].gameObject);
             }
         }
+    }
+
+    private void SetupDeck()
+    {
+        SetHandVisibility(true);
+        DestroyCardsOnHand();
     }
 
 }
