@@ -36,8 +36,8 @@ public class Card
     [Range(1, 13)] public int number;
     public int chipAmmount;
     public Suit cardSuit;
-    public FaceCard faceCard = FaceCard.None;
-
+    public bool IsFaceCard {get { return number >= 11 && number <= 13; }}
+    public bool IsSpecialCard {get { return cardType == CardType.Gold || cardType == CardType.Stone; }}
     public CardType cardType = CardType.Default;
     public Card GenerateRandomCard()
     {
@@ -45,7 +45,6 @@ public class Card
 
         card.number = Random.Range(1, 14);
         card.cardSuit = GetRandomCardSuit();
-        SetCardFace(card);
 
         return card;
     }
@@ -80,26 +79,6 @@ public class Card
         number = _number;
     }
 
-    public void SetCardFace(Card card)
-    {
-        if (card.number == 11)
-        {
-            card.faceCard = FaceCard.Joker;
-        }
-        else if (card.number == 12)
-        {
-            card.faceCard = FaceCard.Queen;
-        }
-        else if (card.number == 13)
-        {
-            card.faceCard = FaceCard.King;
-        }
-        else
-        {
-            card.faceCard = FaceCard.None;
-        }
-    }
-
     public void DegubCardInfo()
     {
         Debug.Log($"Number {number}, Suit {cardSuit}");
@@ -119,11 +98,4 @@ public enum CardType
     Default,
     Gold,
     Stone
-}
-public enum FaceCard
-{
-    None,
-    King,
-    Queen,
-    Joker
 }

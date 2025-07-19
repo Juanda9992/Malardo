@@ -21,7 +21,6 @@ public class CardGenerationPresset : ScriptableObject
                 Card card = new Card();
                 card.SetCardNumber(j);
                 card.cardSuit = suits[i];
-                card.SetCardFace(card);
 
                 allCards.Add(card);
             }
