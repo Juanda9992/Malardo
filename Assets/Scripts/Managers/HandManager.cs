@@ -53,6 +53,7 @@ public class HandManager : MonoBehaviour
 
     public void RemoveCardFromHand(Card card)
     {
+
         handCards.Remove(card);
         OnHandChanged?.Invoke(handCards);
         SetPlayButtonsState(handCards.Count > 0);
@@ -61,6 +62,7 @@ public class HandManager : MonoBehaviour
 
     public void RemoveAllCards()
     {
+        if (CardPlayer.instance.isPlayingCards) return;
         if (handCards.Count > 0)
         {
             for (int i = handCards.Count - 1; i >= 0; i--)

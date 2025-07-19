@@ -36,7 +36,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerClick(PointerEventData data)
     {
-        if (grabbed)
+        if (grabbed || CardPlayer.instance.isPlayingCards)
         {
             return;
         }
@@ -72,7 +72,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerDown(PointerEventData data)
     {   
-        if (data.button != PointerEventData.InputButton.Left)
+        if (data.button != PointerEventData.InputButton.Left || CardPlayer.instance.isPlayingCards)
         {
             return;
         }
