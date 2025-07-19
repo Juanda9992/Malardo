@@ -69,6 +69,11 @@ public class DeckManager : MonoBehaviour
     {
         deckCounter.text = roundDeck.Count + " / " + fullMatchDeck.Count;
     }
+
+    public void AddCardOnFullDeck(Card card)
+    {
+        fullMatchDeck.Add(card);
+    }
     public void DestroyCardFromFullDeck(Card card)
     {
         fullMatchDeck.Remove(card);

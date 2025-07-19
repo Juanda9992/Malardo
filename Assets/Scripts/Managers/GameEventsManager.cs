@@ -61,6 +61,7 @@ public class GameEventsManager : MonoBehaviour
     
     public void TriggerRoundBegins()
     {
+        GameStatusManager.SetGameEvent(TriggerOptions.RoundBegin);
         OnRoundBegins?.Invoke();
     } 
 }

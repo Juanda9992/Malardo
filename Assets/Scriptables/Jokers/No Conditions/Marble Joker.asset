@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Marble Joker
+  m_EditorClassIdentifier: 
+  jokerName: Marble Joker
+  description: Adds one Stone card to the deck when Blind is selected
+  triggerMessage: +1 Stone Card
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 1
+  triggers:
+  - {fileID: 11400000, guid: 8d53d29f60d46d04384b94b483748298, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 50f8babcfb0d88444bd563ce55bc4178, type: 2}
