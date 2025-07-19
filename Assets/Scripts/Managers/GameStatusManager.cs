@@ -91,7 +91,7 @@ public class GameStatus
     public TriggerOptions currentGameStatus = TriggerOptions.None;
     public int jokersInMatch;
     [Header("Discards")]
-    public DiscardData discardData;
+    public DiscardData discardData = new DiscardData();
     [System.Serializable]
     public class DiscardData
     {
