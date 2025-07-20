@@ -84,6 +84,16 @@ public class JokerManager : MonoBehaviour
         return currentJokers.FindAll(x => x._joker.jokerRarity == rarity).Count;
     }
 
+    public int GetSellValueFromAllJokers()
+    {
+        int ammount = 0;
+        foreach (var joker in currentJokers)
+        {
+            ammount += joker._joker.sellValue;
+        }
+        return ammount;
+    }
+
 
     [ContextMenu("Test Add joker")]
     private void TestJoker()
