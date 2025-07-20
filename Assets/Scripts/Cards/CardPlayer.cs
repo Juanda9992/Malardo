@@ -24,12 +24,6 @@ public class CardPlayer : MonoBehaviour
         currentHand = cards;
 
         currentHand = currentHand.OrderBy(x => x.linkedCard.transform.GetSiblingIndex()).ToList();
-        GameStatusManager.SetHandSize(currentHand.Count);
-
-        for (int i = 0; i < currentHand.Count; i++)
-        {
-            CardManager.instance.cardsOnScreen.Remove(currentHand[i].linkedCard);
-        }
     }
     public void SetHandPlayed(HandType handData)
     {
@@ -39,26 +33,23 @@ public class CardPlayer : MonoBehaviour
     private IEnumerator PlayCards()
     {
         isPlayingCards = true;
+        RemovePlayedCardsFromList();
+        yield return new WaitForSeconds(0.1f);
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.2f);
 
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return CardManager.instance.ActivateCardHabilities();
 
-        Debug.Log("Hand end");
         GameStatusManager._Status.currentGameStatus = TriggerOptions.HandEnd;
         GameEventsManager.instance.TriggerHandEnd();
         yield return JokerManager.instance.PlayJokersEndMatch();
-
-        yield return new WaitForSeconds(0.5f);
         ScoreManager.instance.CalculateScore();
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         HandManager.instance.ClearHandPlayed();
         currentHand.Clear();
-
-        yield return new WaitForSeconds(0.3f);
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
         isPlayingCards = false;
@@ -128,5 +119,15 @@ public class CardPlayer : MonoBehaviour
         }
 
 
+    }
+
+    private void RemovePlayedCardsFromList()
+    {
+        GameStatusManager.SetHandSize(currentHand.Count);
+
+        for (int i = 0; i < currentHand.Count; i++)
+        {
+            CardManager.instance.cardsOnScreen.Remove(currentHand[i].linkedCard);
+        }
     }
 }

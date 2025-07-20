@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +46,25 @@ public class CardManager : MonoBehaviour
             for (int i = 1; i < existingUI.Length; i++)
             {
                 Destroy(existingUI[i].gameObject);
+            }
+        }
+    }
+
+    public IEnumerator ActivateCardHabilities()
+    {
+        for (int i = 0; i < cardsOnScreen.Count; i++)
+        {
+            if (cardsOnScreen[i].currentCard.cardType == CardType.Gold)
+            {
+                CurrencyManager.instance.AddCurrency(4);
+                ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
+                yield return new WaitForSeconds(0.3f);
+            }
+            else if (cardsOnScreen[i].currentCard.cardType == CardType.Silver)
+            {
+                ScoreManager.instance.MultiplyMulti(1.5f);
+                ScoreSign.instance.SetMessage(Color.red, "X1.5", cardsOnScreen[i].transform.position);
+                yield return new WaitForSeconds(0.3f);
             }
         }
     }

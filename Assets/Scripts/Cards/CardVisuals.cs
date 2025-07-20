@@ -80,11 +80,15 @@ public class CardVisuals : MonoBehaviour
         {
             cardImage.color = Color.yellow;
         }
+        if (_card.cardType == CardType.Silver)
+        {
+            cardImage.color = Color.grey;
+        }
         if (_card.cardType == CardType.Stone)
         {
             if (_card.cardType == CardType.Stone)
             {
-                cardImage.color = Color.grey;
+                cardImage.color = Color.black;
             }
             upperNumber.gameObject.SetActive(false);
             lowerNumber.gameObject.SetActive(false);

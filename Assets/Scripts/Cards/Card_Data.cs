@@ -115,5 +115,6 @@ public enum CardType
 {
     Default,
     Gold,
-    Stone
+    Stone,
+    Silver
 }
