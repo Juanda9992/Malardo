@@ -1264,6 +1264,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379208405}
   m_CullTransparentMesh: 1
+--- !u!1 &430010865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430010866}
+  - component: {fileID: 430010867}
+  m_Layer: 0
+  m_Name: Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430010866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430010865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621395120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430010867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430010865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdcfd0a4ed82124cbcb51b4f53fbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardColorDatabase: {fileID: 11400000, guid: 7c2d778a4a165c748b20f6cde6148bf7, type: 2}
 --- !u!1 &500020279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1891,7 @@ Transform:
   - {fileID: 887212916}
   - {fileID: 989210042}
   - {fileID: 2083763015}
+  - {fileID: 430010866}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621395121
@@ -2048,7 +2094,7 @@ MonoBehaviour:
   testingJokers:
   - {fileID: 11400000, guid: 4d9a33f656804e841b0dd2fa5e610184, type: 2}
   - {fileID: 11400000, guid: 0a8333f26c6e00445ad32ac93f80b394, type: 2}
-  - {fileID: 11400000, guid: 4368700281508514f869dd2965d7793e, type: 2}
+  - {fileID: 11400000, guid: a573912ec120e414eba61e6985e31c45, type: 2}
   - {fileID: 11400000, guid: 95fa914dcfc9a3944affdb56a6be88e5, type: 2}
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   maximumJokers: 5

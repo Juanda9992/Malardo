@@ -78,17 +78,17 @@ public class CardVisuals : MonoBehaviour
 
         if (_card.cardType == CardType.Gold)
         {
-            cardImage.color = Color.yellow;
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
         }
         if (_card.cardType == CardType.Silver)
         {
-            cardImage.color = Color.grey;
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.steelCard;
         }
         if (_card.cardType == CardType.Stone)
         {
             if (_card.cardType == CardType.Stone)
             {
-                cardImage.color = Color.black;
+                cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
             }
             upperNumber.gameObject.SetActive(false);
             lowerNumber.gameObject.SetActive(false);
