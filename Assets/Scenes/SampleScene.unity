@@ -2049,7 +2049,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d9a33f656804e841b0dd2fa5e610184, type: 2}
   - {fileID: 11400000, guid: 0a8333f26c6e00445ad32ac93f80b394, type: 2}
   - {fileID: 11400000, guid: 20efb4f113c7fa84daf7bcf481c0078d, type: 2}
-  - {fileID: 11400000, guid: f141d46c4e5d81d4393217ddbdfa3b37, type: 2}
+  - {fileID: 11400000, guid: 95fa914dcfc9a3944affdb56a6be88e5, type: 2}
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
