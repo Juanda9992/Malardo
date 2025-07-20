@@ -70,6 +70,17 @@ public class CardPlayer : MonoBehaviour
                 yield return new WaitForSeconds(0.3f);
                 yield return PlayCard(currentHand[i]);
             }
+
+            if (currentHand[i].cardType == CardType.Glass)
+            {
+                if (Random.Range(0, 4) == 0)
+                {
+                    Debug.Log("Destroyed");
+                    DeckManager.instance.DestroyCardFromFullDeck(currentHand[i]);
+                    Destroy(currentHand[i].linkedCard.gameObject);
+                    yield return new WaitForSeconds(0.3f);
+                }
+            }
             yield return new WaitForSeconds(0.2f);
         }
     }
@@ -111,6 +122,13 @@ public class CardPlayer : MonoBehaviour
                 ScoreSign.instance.SetMessage(Color.yellow, "$20", card.linkedCard.transform.position);
                 yield return new WaitForSeconds(0.3f);
             }
+        }
+
+        if (card.cardType == CardType.Glass)
+        {
+            ScoreManager.instance.MultiplyMulti(2);
+            ScoreSign.instance.SetMessage(Color.red, "X2", card.linkedCard.transform.position);
+            yield return new WaitForSeconds(0.3f);
         }
 
         switch (card.cardEdition)

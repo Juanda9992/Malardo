@@ -95,6 +95,11 @@ public class CardVisuals : MonoBehaviour
             upperNumber.gameObject.SetActive(false);
             lowerNumber.gameObject.SetActive(false);
         }
+
+        if (_card.cardType == CardType.Glass)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
+        }
         if (_card.number == 11)
         {
             SetNumberTextValue("J");

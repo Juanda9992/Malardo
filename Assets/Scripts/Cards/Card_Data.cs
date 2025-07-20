@@ -117,5 +117,6 @@ public enum CardType
     Gold,
     Stone,
     Silver,
-    Lucky
+    Lucky,
+    Glass
 }
