@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Golden Ticket
+  m_Name: Swashbuckler
   m_EditorClassIdentifier: 
-  jokerName: Golden Ticket
-  description: Played Gold cards earn $4 when scored
-  triggerMessage: $4
-  overrideEffect: 4
-  shopValue: 5
+  jokerName: Swashbuckler
+  description: Adds the sell value of all other owned Jokers to Mult
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 4
   jokerRarity: 0
   triggers:
-  - {fileID: 11400000, guid: 323a527aef006824b9f045999350bc6e, type: 2}
-  - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
-  - {fileID: 11400000, guid: cb6db422352abc449af465fb0e1fc16a, type: 2}
+  - {fileID: 11400000, guid: 3b37dab17f9f80547a93a34415226868, type: 2}
