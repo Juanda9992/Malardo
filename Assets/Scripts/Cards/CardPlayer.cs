@@ -97,6 +97,22 @@ public class CardPlayer : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
         }
 
+        if (card.cardType == CardType.Lucky)
+        {
+            if (Random.Range(0, 5) == 0)
+            {
+                ScoreManager.instance.AddMult(20);
+                ScoreSign.instance.SetMessage(Color.red, "+20", card.linkedCard.transform.position);
+                yield return new WaitForSeconds(0.3f);
+            }
+            if (Random.Range(0, 15) == 0)
+            {
+                CurrencyManager.instance.AddCurrency(20);
+                ScoreSign.instance.SetMessage(Color.yellow, "$20", card.linkedCard.transform.position);
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+
         switch (card.cardEdition)
         {
             case CardEdition.Base:

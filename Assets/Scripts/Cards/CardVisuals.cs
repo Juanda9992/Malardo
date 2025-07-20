@@ -80,16 +80,18 @@ public class CardVisuals : MonoBehaviour
         {
             cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
         }
+
         if (_card.cardType == CardType.Silver)
         {
             cardImage.color = DatabaseManager.instance.cardColorDatabase.steelCard;
         }
+        if (_card.cardType == CardType.Lucky)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.luckyCard;
+        }
         if (_card.cardType == CardType.Stone)
         {
-            if (_card.cardType == CardType.Stone)
-            {
-                cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
-            }
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
             upperNumber.gameObject.SetActive(false);
             lowerNumber.gameObject.SetActive(false);
         }
