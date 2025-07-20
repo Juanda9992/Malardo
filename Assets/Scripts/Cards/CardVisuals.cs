@@ -12,6 +12,7 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
+    [SerializeField] private Image seal;
     private Card _card;
 
     void Awake()
@@ -27,6 +28,7 @@ public class CardVisuals : MonoBehaviour
         SetLetterOrNumber();
         SetCardColor();
         SetCardEdition();
+        SetCardSeal();
     }
 
     private void SetCardEdition()
@@ -43,6 +45,32 @@ public class CardVisuals : MonoBehaviour
         {
             editionsContainer[2].SetActive(true);
         }
+    }
+
+    private void SetCardSeal()
+    {
+        if (_card.cardSeal == Seal.Gold)
+        {
+            seal.color = Color.yellow;
+        }
+        else if (_card.cardSeal == Seal.Red)
+        {
+            seal.color = Color.red;
+        }
+        else if (_card.cardSeal == Seal.Blue)
+        {
+            seal.color = Color.blue;
+        }
+        else if (_card.cardSeal == Seal.Purple)
+        {
+            seal.color = Color.magenta;
+        }
+        else
+        {
+            seal.gameObject.SetActive(false);
+        }
+
+
     }
 
     private void SetLetterOrNumber()

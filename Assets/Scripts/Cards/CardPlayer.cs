@@ -69,7 +69,7 @@ public class CardPlayer : MonoBehaviour
         for (int i = 0; i < currentHand.Count; i++)
         {
 
-            for (int j = 0; j < 1; j++)
+            for (int j = 0; j < 10; j++)
             {
                 yield return PlayCard(currentHand[i]);
                 yield return new WaitForSeconds(0.2f);
@@ -92,27 +92,34 @@ public class CardPlayer : MonoBehaviour
         GameEventsManager.instance.TriggerCardPlayed(card);
         GameStatusManager.SetLastCardPlayed(card);
 
-        switch (card.cardEdition)
+        if (card.cardSeal == Seal.Gold)
         {
-            case CardEdition.Base:
-                break;
-            case CardEdition.Foil:
-                ScoreManager.instance.AddChips(50);
-                ScoreSign.instance.SetMessage(Color.blue, "+50", card.linkedCard.transform.position);
-                yield return new WaitForSeconds(0.4f);
-                break;
-            case CardEdition.Holographic:
-                ScoreManager.instance.AddMult(10);
-                ScoreSign.instance.SetMessage(Color.red, "+10", card.linkedCard.transform.position);
-                yield return new WaitForSeconds(0.4f);
-                break;
-            case CardEdition.Polychrome:
-                ScoreManager.instance.MultiplyMulti(1.5f);
-                ScoreSign.instance.SetMessage(Color.red, "X1.5", card.linkedCard.transform.position);
-                yield return new WaitForSeconds(0.3f);
-                break;
-            
+            CurrencyManager.instance.AddCurrency(4);
+            ScoreSign.instance.SetMessage(Color.yellow, "$4", card.linkedCard.transform.position);
+            yield return new WaitForSeconds(0.3f);
         }
+
+        switch (card.cardEdition)
+            {
+                case CardEdition.Base:
+                    break;
+                case CardEdition.Foil:
+                    ScoreManager.instance.AddChips(50);
+                    ScoreSign.instance.SetMessage(Color.blue, "+50", card.linkedCard.transform.position);
+                    yield return new WaitForSeconds(0.4f);
+                    break;
+                case CardEdition.Holographic:
+                    ScoreManager.instance.AddMult(10);
+                    ScoreSign.instance.SetMessage(Color.red, "+10", card.linkedCard.transform.position);
+                    yield return new WaitForSeconds(0.4f);
+                    break;
+                case CardEdition.Polychrome:
+                    ScoreManager.instance.MultiplyMulti(1.5f);
+                    ScoreSign.instance.SetMessage(Color.red, "X1.5", card.linkedCard.transform.position);
+                    yield return new WaitForSeconds(0.3f);
+                    break;
+
+            }
 
 
     }
