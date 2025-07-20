@@ -6,6 +6,7 @@ using UnityEngine;
 public class CardPlayer : MonoBehaviour
 {
     public static CardPlayer instance;
+    public bool isPlayingCards = false;
     public List<Card> currentHand;
     private HandType lastHandPlayed;
 
@@ -37,27 +38,18 @@ public class CardPlayer : MonoBehaviour
 
     private IEnumerator PlayCards()
     {
-
-        for (int i = 0; i < currentHand.Count; i++)
-        {
-            yield return new WaitForSeconds(0.3f);
-            ScoreManager.instance.AddChips(currentHand[i].chipAmmount);
-            ScoreSign.instance.SetScoreSign(currentHand[i]);
-            currentHand[i].linkedCard.pointerInteraction.ShakeCard();
-            GameEventsManager.instance.TriggerCardPlayed(currentHand[i]);
-
-            GameStatusManager.SetLastCardPlayed(currentHand[i]);
-        }
-
-        yield return new WaitForSeconds(0.5f);
+        isPlayingCards = true;
+        yield return TriggerHandCards();
+        yield return new WaitForSeconds(0.2f);
 
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
 
         Debug.Log("Hand end");
+        GameStatusManager._Status.currentGameStatus = TriggerOptions.HandEnd;
         GameEventsManager.instance.TriggerHandEnd();
-        GameStatusManager.SetGameEvent(TriggerOptions.HandEnd);
+        yield return JokerManager.instance.PlayJokersEndMatch();
 
         yield return new WaitForSeconds(0.5f);
         ScoreManager.instance.CalculateScore();
@@ -69,6 +61,35 @@ public class CardPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
+        isPlayingCards = false;
+    }
 
+    private IEnumerator TriggerHandCards()
+    {
+        for (int i = 0; i < currentHand.Count; i++)
+        {
+
+            for (int j = 0; j < 1; j++)
+            {
+                yield return PlayCard(currentHand[i]);
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+    }
+
+    private IEnumerator PlayCard(Card card)
+    {
+        //SCORE LOGIC
+        ScoreManager.instance.AddChips(card.chipAmmount);
+        ScoreSign.instance.SetScoreSign(card);
+
+
+        //VISUAL LOGIC
+        card.linkedCard.pointerInteraction.ShakeCard();
+
+        yield return new WaitForSeconds(0.3f);
+        //EVENTS
+        GameEventsManager.instance.TriggerCardPlayed(card);
+        GameStatusManager.SetLastCardPlayed(card);
     }
 }
