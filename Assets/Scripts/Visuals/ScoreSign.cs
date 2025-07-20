@@ -36,10 +36,20 @@ public class ScoreSign : MonoBehaviour
         bgImage.color = multColor;
         transform.position = jokerPos;
     }
+
+    public void SetMessage(Color bgColor, string displayMessage, Vector2 pos)
+    {
+        StopCoroutine(nameof(AutoHide));
+
+        HandleHideAnim();
+        bgImage.color = bgColor;
+        scoreSignText.text = displayMessage;
+        transform.position = pos;
+    }
     private void HandleHideAnim()
     {
         transform.DOScale(0, 0);
-        transform.DOScale(1, increaseTime).OnComplete(()=>StartCoroutine(nameof(AutoHide)));
+        transform.DOScale(1, increaseTime).OnComplete(() => StartCoroutine(nameof(AutoHide)));
     }
 
     private IEnumerator AutoHide()

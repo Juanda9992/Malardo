@@ -2023,6 +2023,7 @@ MonoBehaviour:
       chipAmmount: 0
       cardSuit: 0
       cardType: 2
+      cardEdition: 0
     playedHand: 0
     currentGameStatus: 0
     jokersInMatch: 0
@@ -5822,7 +5823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceDeck: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
+  referenceDeck: {fileID: 11400000, guid: ddc1730436c59c0498bf7b3a81c9a4dd, type: 2}
   fullMatchDeck: []
   roundDeck: []
   currentHandSize: 8

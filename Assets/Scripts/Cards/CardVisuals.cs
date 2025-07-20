@@ -10,6 +10,8 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
     [SerializeField] private Image cardImage;
     [SerializeField] private int rotationRange;
+
+    [SerializeField] private GameObject[] editionsContainer;
     private Card _card;
 
     void Awake()
@@ -24,6 +26,23 @@ public class CardVisuals : MonoBehaviour
         _card = card;
         SetLetterOrNumber();
         SetCardColor();
+        SetCardEdition();
+    }
+
+    private void SetCardEdition()
+    {
+        if (_card.cardEdition == CardEdition.Foil)
+        {
+            editionsContainer[0].SetActive(true);
+        }
+        else if (_card.cardEdition == CardEdition.Holographic)
+        {
+            editionsContainer[1].SetActive(true);
+        }
+        else if (_card.cardEdition == CardEdition.Polychrome)
+        {
+            editionsContainer[2].SetActive(true);
+        }
     }
 
     private void SetLetterOrNumber()

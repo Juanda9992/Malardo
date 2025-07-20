@@ -91,5 +91,29 @@ public class CardPlayer : MonoBehaviour
         //EVENTS
         GameEventsManager.instance.TriggerCardPlayed(card);
         GameStatusManager.SetLastCardPlayed(card);
+
+        switch (card.cardEdition)
+        {
+            case CardEdition.Base:
+                break;
+            case CardEdition.Foil:
+                ScoreManager.instance.AddChips(50);
+                ScoreSign.instance.SetMessage(Color.blue, "+50", card.linkedCard.transform.position);
+                yield return new WaitForSeconds(0.4f);
+                break;
+            case CardEdition.Holographic:
+                ScoreManager.instance.AddMult(10);
+                ScoreSign.instance.SetMessage(Color.red, "+10", card.linkedCard.transform.position);
+                yield return new WaitForSeconds(0.4f);
+                break;
+            case CardEdition.Polychrome:
+                ScoreManager.instance.MultiplyMulti(1.5f);
+                ScoreSign.instance.SetMessage(Color.red, "X1.5", card.linkedCard.transform.position);
+                yield return new WaitForSeconds(0.3f);
+                break;
+            
+        }
+
+
     }
 }
