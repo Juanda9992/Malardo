@@ -17,308 +17,534 @@ MonoBehaviour:
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 6
     chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 1
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 0
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
   - linkedCard: {fileID: 0}
     number: 9
     chipAmmount: 50
     cardSuit: 2
-    faceCard: 0
     cardType: 2
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
+  - linkedCard: {fileID: 0}
+    number: 11
+    chipAmmount: 0
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
   startingMoney: 100
   presetCard:
     linkedCard: {fileID: 0}
-    number: 9
+    number: 11
     chipAmmount: 0
-    cardSuit: 2
-    faceCard: 0
-    cardType: 2
+    cardSuit: 3
+    cardType: 3
+    cardSeal: 0
+    cardEdition: 0
   timesToGenerate: 25

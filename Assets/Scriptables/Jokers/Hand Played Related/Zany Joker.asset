@@ -19,7 +19,7 @@ MonoBehaviour:
   shopValue: 4
   jokerRarity: 0
   triggers:
-  - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
   - {fileID: 11400000, guid: 73fb12fe01be8314ebfa560d7cd606c7, type: 2}
+  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
