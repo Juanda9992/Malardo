@@ -39,6 +39,7 @@ public class Card
     public bool IsFaceCard {get { return number >= 11 && number <= 13; }}
     public bool IsSpecialCard {get { return cardType == CardType.Gold || cardType == CardType.Stone; }}
     public CardType cardType = CardType.Default;
+    public Seal cardSeal = Seal.None;
     public CardEdition cardEdition = CardEdition.Base;
     public Card GenerateRandomCard()
     {
@@ -92,6 +93,14 @@ public enum Suit
     Hearth,
     Spades,
     Clover
+}
+public enum Seal
+{
+    None,
+    Gold,
+    Red,
+    Blue,
+    Purple
 }
 
 public enum CardEdition
