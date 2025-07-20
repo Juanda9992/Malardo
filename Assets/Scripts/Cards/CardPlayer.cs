@@ -89,6 +89,7 @@ public class CardPlayer : MonoBehaviour
         GameEventsManager.instance.TriggerCardPlayed(card);
         GameStatusManager.SetLastCardPlayed(card);
 
+        yield return new WaitForSeconds(0.3f);
         if (card.cardSeal == Seal.Gold)
         {
             CurrencyManager.instance.AddCurrency(4);
@@ -117,7 +118,6 @@ public class CardPlayer : MonoBehaviour
                 break;
 
         }
-
 
     }
 
