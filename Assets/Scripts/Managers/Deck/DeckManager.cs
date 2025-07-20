@@ -100,6 +100,11 @@ public class DeckManager : MonoBehaviour
         return fullMatchDeck.FindAll(x => x.cardType == CardType.Stone).Count;
     }
 
+    public int GetAllSilverCardsInDeck()
+    {
+        return fullMatchDeck.FindAll(x => x.cardType == CardType.Silver).Count;
+    }
+
     public int GetRemainingCardsOnMatchDeck()
     {
         return roundDeck.Count;
