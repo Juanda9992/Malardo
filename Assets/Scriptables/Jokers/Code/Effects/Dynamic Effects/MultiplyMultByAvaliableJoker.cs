@@ -4,11 +4,19 @@ public class MultiplyMultByAvaliableJoker : JokerEffect
 {
     public override void ApplyEffect()
     {
-        ScoreManager.instance.MultiplyMulti(JokerManager.instance.maximumJokers - JokerManager.instance.currentJokers.Count);
+        ScoreManager.instance.MultiplyMulti(JokerOutput());
+    }
+
+    private int JokerOutput()
+    {
+        int outPut = JokerManager.instance.maximumJokers - JokerManager.instance.currentJokers.Count;
+        outPut = outPut == 0 ? 1 : outPut;
+
+        return outPut;
     }
 
     public override string GetCustomMessage()
     {
-        return "X" + (JokerManager.instance.maximumJokers - JokerManager.instance.currentJokers.Count).ToString();
+        return "X" + JokerOutput().ToString();
     }
 }
