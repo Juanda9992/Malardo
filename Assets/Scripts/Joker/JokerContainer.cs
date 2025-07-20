@@ -36,6 +36,23 @@ public class JokerContainer : MonoBehaviour
 
     }
 
+    public bool CanBeTriggered()
+    {
+        for (int i = 0; i < _joker.triggers.Count; i++)
+        {
+            if (!_joker.triggers[i].MeetCondition(GameStatusManager._Status))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void TriggerActions()
+    {
+        JokerExecuteAction();
+    }
+
     private void JokerExecuteAction()
     {
         for (int i = 0; i < _joker.effects.Count; i++)

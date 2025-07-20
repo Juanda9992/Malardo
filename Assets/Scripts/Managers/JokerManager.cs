@@ -4,34 +4,73 @@ using UnityEngine;
 
 public class JokerManager : MonoBehaviour
 {
-    public List<JokerData> currentJokers = new List<JokerData>();
+    public List<JokerContainer> currentJokers = new List<JokerContainer>();
+    [SerializeField] private List<JokerData> testingJokers;
     public int maximumJokers = 5;
     [SerializeField] private GameObject jokerCard;
     [SerializeField] private Transform jokerParent;
 
     [SerializeField] private JokerData testjoker;
 
-    public int JokersInHand {get{ return currentJokers.Count; }}
+    [SerializeField] private JokerTrigger endHandTrigger;
+
+    public int JokersInHand { get { return currentJokers.Count; } }
     public static JokerManager instance;
 
     void Awake()
     {
         instance = this;
+        UpdateJokerList();
+    }
+
+    public IEnumerator PlayJokersEndMatch()
+    {
+        List<JokerContainer> endJokers = new List<JokerContainer>();
+
+        for (int i = 0; i < currentJokers.Count; i++)
+        {
+            if (currentJokers[i]._joker.triggers.Contains(endHandTrigger))
+            {
+                endJokers.Add(currentJokers[i]);
+            }
+        }
+        for (int i = 0; i < endJokers.Count; i++)
+        {
+            if (endJokers[i].CanBeTriggered())
+            {
+                endJokers[i].TriggerActions();
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        yield return new WaitForSeconds(0.2f);
     }
     public void AddJoker(JokerData jokerData)
     {
-        currentJokers.Add(jokerData);
+        JokerContainer createdJoker = CreateJoker(jokerData);
+        GameStatusManager.SetJokersInMatch(currentJokers.Count);
+        currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+    }
 
+    private JokerContainer CreateJoker(JokerData jokerData)
+    {
         GameObject newJoker = Instantiate(jokerCard, jokerParent);
 
-        newJoker.GetComponent<JokerContainer>().SetUpJoker(jokerData);
-        newJoker.GetComponent<JokerContainer>().isOnShop = false;
+        JokerContainer jokerContainer = newJoker.GetComponent<JokerContainer>();
+        jokerContainer.SetUpJoker(jokerData);
+        jokerContainer.isOnShop = false;
+        return jokerContainer;
+    }
 
-        GameStatusManager.SetJokersInMatch(currentJokers.Count);
+    public void UpdateJokerList()
+    {
+        for (int i = 0; i < testingJokers.Count; i++)
+        {
+            currentJokers.Add(CreateJoker(testingJokers[i]));
+        }
     }
     public void RemoveJoker(JokerContainer jokerContainer)
     {
-        currentJokers.Remove(jokerContainer._joker);
+        currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);
     }
 
@@ -42,7 +81,7 @@ public class JokerManager : MonoBehaviour
 
     public int GetCurrentJokersByRarity(JokerRarity rarity)
     {
-        return currentJokers.FindAll(x => x.jokerRarity == rarity).Count;
+        return currentJokers.FindAll(x => x._joker.jokerRarity == rarity).Count;
     }
 
 
