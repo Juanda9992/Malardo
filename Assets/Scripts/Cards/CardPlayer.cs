@@ -55,6 +55,7 @@ public class CardPlayer : MonoBehaviour
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
         isPlayingCards = false;
+        GameStatusManager.SetGameEvent(TriggerOptions.None);
     }
 
     private IEnumerator TriggerHandCards()
@@ -166,7 +167,7 @@ public class CardPlayer : MonoBehaviour
 
         }
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
     }
 
     private void RemovePlayedCardsFromList()
