@@ -19,6 +19,7 @@ public class Card_Data : MonoBehaviour
         currentCard = card;
         currentCard.linkedCard = this;
         card.SetCardChipAmmount();
+        card.SetCardName();
         visuals.SetVisuals(currentCard);
     }
 
@@ -32,12 +33,13 @@ public class Card_Data : MonoBehaviour
 [System.Serializable]
 public class Card
 {
+    public string cardName;
     public Card_Data linkedCard;
     [Range(1, 13)] public int number;
     public int chipAmmount;
     public Suit cardSuit;
-    public bool IsFaceCard {get { return number >= 11 && number <= 13; }}
-    public bool IsSpecialCard {get { return cardType == CardType.Gold || cardType == CardType.Stone; }}
+    public bool IsFaceCard { get { return number >= 11 && number <= 13; } }
+    public bool IsSpecialCard { get { return cardType == CardType.Gold || cardType == CardType.Stone; } }
     public CardType cardType = CardType.Default;
     public Seal cardSeal = Seal.None;
     public CardEdition cardEdition = CardEdition.Base;
@@ -79,6 +81,11 @@ public class Card
     public void SetCardNumber(int _number)
     {
         number = _number;
+    }
+
+    public void SetCardName()
+    {
+        cardName = number + " of " + cardSuit.ToString();
     }
 
     public void DegubCardInfo()
