@@ -99,6 +99,10 @@ public class Card
         {
             cardName = "King of " + cardSuit.ToString();
         }
+        else if (number == 1)
+        {
+            cardName = "Ace of " + cardSuit.ToString();
+        }
     }
 
     public void DegubCardInfo()
