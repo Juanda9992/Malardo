@@ -112,6 +112,10 @@ public class CardVisuals : MonoBehaviour
         {
             SetNumberTextValue("K");
         }
+        else if (_card.number == 1)
+        {
+            SetNumberTextValue("A");
+        }
         else
         {
             SetNumberTextValue(_card.number.ToString());
