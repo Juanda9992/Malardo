@@ -12,6 +12,7 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
+    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals;
     [SerializeField] private Image seal;
     private Card _card;
 
@@ -29,6 +30,7 @@ public class CardVisuals : MonoBehaviour
         SetCardColor();
         SetCardEdition();
         SetCardSeal();
+        SetCardTypeVisuals();
     }
 
     private void SetCardEdition()
@@ -76,30 +78,6 @@ public class CardVisuals : MonoBehaviour
     private void SetLetterOrNumber()
     {
 
-        if (_card.cardType == CardType.Gold)
-        {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
-        }
-
-        if (_card.cardType == CardType.Silver)
-        {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.steelCard;
-        }
-        if (_card.cardType == CardType.Lucky)
-        {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.luckyCard;
-        }
-        if (_card.cardType == CardType.Stone)
-        {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
-            upperNumber.gameObject.SetActive(false);
-            lowerNumber.gameObject.SetActive(false);
-        }
-
-        if (_card.cardType == CardType.Glass)
-        {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
-        }
         if (_card.number == 11)
         {
             SetNumberTextValue("J");
@@ -119,6 +97,41 @@ public class CardVisuals : MonoBehaviour
         else
         {
             SetNumberTextValue(_card.number.ToString());
+        }
+    }
+
+    private void SetCardTypeVisuals()
+    {
+        if (_card.cardType == CardType.Gold)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
+        }
+
+        else if (_card.cardType == CardType.Silver)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.steelCard;
+        }
+        else if (_card.cardType == CardType.Lucky)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.luckyCard;
+        }
+        else if (_card.cardType == CardType.Stone)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
+            upperNumber.gameObject.SetActive(false);
+            lowerNumber.gameObject.SetActive(false);
+        }
+        else if (_card.cardType == CardType.Glass)
+        {
+            cardImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
+        }
+        else if (_card.cardType == CardType.Bonus)
+        {
+            bonusCardVisuals.SetActive(true);
+        }
+        else if (_card.cardType == CardType.Mult)
+        {
+            multCardVisuals.SetActive(true);
         }
     }
     private void SetVisualsColors(int number)
