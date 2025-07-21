@@ -8,14 +8,16 @@ public class JokerHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private float descriptionXOffset;
     [SerializeField] private JokerContainer jokerContainer;
     [SerializeField] private UnityEvent OnClicked;
+    private Tween animateTween;
     public void OnPointerEnter(PointerEventData data)
     {
-        transform.DOScale(hoverScale, 0.3f);
-        JokerDescription.instance.SetDescriptionOn(jokerContainer._joker, (Vector2)transform.position + new Vector2(descriptionXOffset,0));
+        animateTween = transform.DOScale(hoverScale, 0.3f);
+        JokerDescription.instance.SetDescriptionOn(jokerContainer._joker, (Vector2)transform.position + new Vector2(descriptionXOffset, 0));
     }
 
     public void OnPointerExit(PointerEventData data)
     {
+        animateTween.Kill();
         transform.DOScale(1, 0.2f);
         JokerDescription.instance.SetDescriptionOff();
     }
