@@ -2194,8 +2194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStatus:
-    handSize: 0
-    handsRemaining: 0
     discardsRemaining: 0
     cardPlayed:
       cardName: 
@@ -2213,6 +2211,11 @@ MonoBehaviour:
       discardSize: 0
       discardCount: 0
       discardCards: []
+    handSize: 0
+    handsRemaining: 0
+    handPlayedData:
+      playedHandsInRun: 
+      playedHandsInRound: 
 --- !u!114 &621395132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2227,7 +2230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 4d9a33f656804e841b0dd2fa5e610184, type: 2}
+  - {fileID: 11400000, guid: d12b0f6c90ea9ac4cb944b2eb8e32d7e, type: 2}
   - {fileID: 11400000, guid: 0a8333f26c6e00445ad32ac93f80b394, type: 2}
   - {fileID: 11400000, guid: a573912ec120e414eba61e6985e31c45, type: 2}
   - {fileID: 11400000, guid: 95fa914dcfc9a3944affdb56a6be88e5, type: 2}
@@ -6160,7 +6163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceDeck: {fileID: 11400000, guid: e566a6b87f679e549ad663342b3a5efe, type: 2}
+  referenceDeck: {fileID: 11400000, guid: e7f96305dbf9f2548bc5ad31dad7d193, type: 2}
   fullMatchDeck: []
   roundDeck: []
   currentHandSize: 8

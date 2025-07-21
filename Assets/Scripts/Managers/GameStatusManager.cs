@@ -106,6 +106,36 @@ public class GameStatus
     [System.Serializable]
     public class HandPlayedData
     {
+        public List<HandType> playedHandsInRun = new List<HandType>();
         public List<HandType> playedHandsInRound = new List<HandType>();
+
+        public bool CheckIfHandPlayed(HandType[] handType)
+        {
+            for (int i = 0; i < handType.Length; i++)
+            {
+                if (playedHandsInRound.Contains(handType[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int CheckNumberHandPlayed(HandType[] handType, bool round)
+        {
+            int coincidences = 0;
+            for (int i = 0; i < handType.Length; i++)
+            {
+                if (round)
+                {
+                    coincidences += playedHandsInRound.FindAll(x => x == handType[i]).Count;
+                }
+                else
+                {
+                    coincidences += playedHandsInRun.FindAll(x => x == handType[i]).Count;
+                }
+            }
+            return coincidences;
+        }
     }
 }

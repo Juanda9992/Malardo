@@ -38,7 +38,8 @@ public class CardPlayer : MonoBehaviour
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.2f);
 
-        GameStatusManager._Status.handPlayedData.playedHandsInRound.Add(lastHandPlayed);
+        GameStatusManager._Status.handPlayedData.playedHandsInRun.Add(GameStatusManager._Status.playedHand);
+        GameStatusManager._Status.handPlayedData.playedHandsInRound.Add(GameStatusManager._Status.playedHand);
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
 
         yield return CardManager.instance.ActivateCardHabilities();
