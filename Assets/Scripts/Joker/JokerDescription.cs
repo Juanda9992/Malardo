@@ -16,6 +16,7 @@ public class JokerDescription : MonoBehaviour
     public void SetDescriptionOn(JokerData jokerData, Vector2 jokerPos)
     {
         transform.localScale = Vector2.one;
+        nameText.text = jokerData.jokerName;
         descriptionText.text = jokerData.description;
         transform.position = jokerPos;
     }
