@@ -86,6 +86,19 @@ public class Card
     public void SetCardName()
     {
         cardName = number + " of " + cardSuit.ToString();
+
+        if (number == 11)
+        {
+            cardName = "Jack of " + cardSuit.ToString();
+        }
+        else if (number == 12)
+        {
+            cardName = "Queen of " + cardSuit.ToString();
+        }
+        else if (number == 13)
+        {
+            cardName = "King of " + cardSuit.ToString();
+        }
     }
 
     public void DegubCardInfo()
