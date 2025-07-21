@@ -38,6 +38,7 @@ public class CardPlayer : MonoBehaviour
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.2f);
 
+        GameStatusManager._Status.handPlayedData.playedHandsInRound.Add(lastHandPlayed);
         GameEventsManager.instance.TriggerSpecificandPlayed(lastHandPlayed);
 
         yield return CardManager.instance.ActivateCardHabilities();
@@ -59,7 +60,7 @@ public class CardPlayer : MonoBehaviour
     {
         for (int i = 0; i < currentHand.Count; i++)
         {
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 1; j++)
             {
                 yield return PlayCard(currentHand[i]);
             }

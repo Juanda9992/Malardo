@@ -68,6 +68,7 @@ public class ScoreManager : MonoBehaviour
         {
             StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
             GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
+            GameStatusManager._Status.handPlayedData = new GameStatus.HandPlayedData();
         }
         else
         {

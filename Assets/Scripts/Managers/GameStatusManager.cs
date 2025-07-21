@@ -83,8 +83,6 @@ public enum TriggerOptions
 [System.Serializable]
 public class GameStatus
 {
-    public int handSize;
-    public int handsRemaining;
     public int discardsRemaining;
     public Card cardPlayed;
     public HandType playedHand;
@@ -92,11 +90,22 @@ public class GameStatus
     public int jokersInMatch;
     [Header("Discards")]
     public DiscardData discardData = new DiscardData();
+    [Header("Hands")]
+    public int handSize;
+    public int handsRemaining;
+    public HandPlayedData handPlayedData = new HandPlayedData();
+
     [System.Serializable]
     public class DiscardData
     {
         public int discardSize;
         public int discardCount;
         public List<Card> discardCards;
+    }
+
+    [System.Serializable]
+    public class HandPlayedData
+    {
+        public List<HandType> playedHandsInRound = new List<HandType>();
     }
 }

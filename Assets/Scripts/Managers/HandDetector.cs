@@ -314,7 +314,7 @@ public class HandDetector : MonoBehaviour
         if (handCards.Count > 0)
         {
             realCards = handCards.OrderBy(x => x.number).ToList();
-            Card highestCard = realCards[0];
+            Card highestCard = realCards[realCards.Count-1];
 
             realCards.Clear();
 
