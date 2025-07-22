@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f13ee1dd9c403748ba04e7c7d00dbbe, type: 3}
   m_Name: Color Database
   m_EditorClassIdentifier: 
-  goldCard: {r: 1, g: 0.8625782, b: 0, a: 1}
+  goldCard: {r: 0.9962183, g: 1, b: 0, a: 1}
   steelCard: {r: 0.78113204, g: 0.78113204, b: 0.78113204, a: 1}
   stoneCard: {r: 0.82641506, g: 0.7914794, b: 0.73441786, a: 1}
   luckyCard: {r: 1, g: 0.98425084, b: 0.7528302, a: 1}

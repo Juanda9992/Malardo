@@ -9,7 +9,7 @@ public class SetDiscards : JokerEffect
     {
         if (addAmmount)
         {
-            HandManager.instance.SetDefaultDiscards(HandManager.instance.defaultHands + discardAmmount);
+            HandManager.instance.SetDefaultDiscards(HandManager.instance.defaultDiscards + discardAmmount);
         }
         else
         {
