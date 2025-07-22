@@ -58,6 +58,11 @@ public class JokerManager : MonoBehaviour
         JokerContainer jokerContainer = newJoker.GetComponent<JokerContainer>();
         jokerContainer.SetUpJoker(jokerData);
         jokerContainer.isOnShop = false;
+
+        for (int i = 0; i < jokerContainer._joker.OnSetUpJoker.Count; i++)
+        {
+            jokerContainer._joker.OnSetUpJoker[i].ApplyEffect();
+        }
         return jokerContainer;
     }
 
