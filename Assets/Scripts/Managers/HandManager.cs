@@ -161,6 +161,11 @@ public class HandManager : MonoBehaviour
     public void SetDefaultHands(int ammount)
     {
         defaultHands = ammount;
+        if (hands > defaultHands)
+        {
+            hands = defaultHands;
+            UpdateHandText();
+        }
     }
 
     public void SetDefaultDiscards(int ammount)
