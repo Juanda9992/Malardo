@@ -38,7 +38,7 @@ public class CardManager : MonoBehaviour
         if (cardsOnScreen.Count > newCardValue)
         {
             Debug.Log("Enter here");
-            for (int i = 0; i < cardsOnScreen.Count - newCardValue; i++)
+            for (int i = 0; i <= cardsOnScreen.Count - newCardValue; i++)
             {
                 Destroy(cardsOnScreen[cardsOnScreen.Count - 1].gameObject);
                 cardsOnScreen.RemoveAt(cardsOnScreen.Count - 1);
