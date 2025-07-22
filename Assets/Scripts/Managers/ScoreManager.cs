@@ -72,7 +72,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            if (HandManager.instance.hands == 0)
+            if (HandManager.instance.GetHandsRemaining() == 0)
             {
                 Debug.Log("Game lost");
             }

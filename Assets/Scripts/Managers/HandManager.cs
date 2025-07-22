@@ -8,8 +8,10 @@ using UnityEngine.UI;
 
 public class HandManager : MonoBehaviour
 {
-    [SerializeField] private int discards = 3;
-    public int hands = 4;
+    public int defaultDiscards = 3;
+    [SerializeField] private int discards;
+    public int defaultHands = 4;
+    [SerializeField] private int hands;
     public static HandManager instance;
     public List<Card> handCards;
     [SerializeField] private int handLimit = 5;
@@ -29,19 +31,27 @@ public class HandManager : MonoBehaviour
         instance = this;
         handCards = new List<Card>();
 
-        UpdateDiscardText();
-        UpdateHandText();
     }
 
-    void Start()
+    IEnumerator Start()
     {
         rightClick.action.performed += _ => RemoveAllCards();
         SetPlayButtonsState(false);
 
         BlindManager.instance.OnBlindDefeated += ResetHandsAndDiscards;
 
+
+        yield return new WaitForSeconds(0.5f);
+
+        hands = defaultHands;
+        discards = defaultDiscards;
+        UpdateDiscardText();
+        UpdateHandText();
+
+
         GameStatusManager.SetHandsRemaining(hands);
         GameStatusManager.SetDiscardsRemaining(discards);
+
     }
 
     public void AddCardToHand(Card card)
@@ -141,10 +151,25 @@ public class HandManager : MonoBehaviour
 
     private void ResetHandsAndDiscards()
     {
-        hands = 4;
-        discards = 3;
+        hands = defaultHands;
+        discards = defaultDiscards;
 
         UpdateDiscardText();
         UpdateHandText();
+    }
+
+    public void SetDefaultHands(int ammount)
+    {
+        defaultHands = ammount;
+    }
+
+    public void SetDefaultDiscards(int ammount)
+    {
+        defaultDiscards = ammount;
+    }
+
+    public int GetHandsRemaining()
+    {
+        return hands;
     }
 }
