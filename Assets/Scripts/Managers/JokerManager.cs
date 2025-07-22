@@ -20,7 +20,7 @@ public class JokerManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        UpdateJokerList();
+        StartCoroutine("UpdateJokerList");
     }
 
     public IEnumerator PlayJokersEndMatch()
@@ -66,8 +66,9 @@ public class JokerManager : MonoBehaviour
         return jokerContainer;
     }
 
-    public void UpdateJokerList()
+    public IEnumerator UpdateJokerList()
     {
+        yield return new WaitForEndOfFrame();
         for (int i = 0; i < testingJokers.Count; i++)
         {
             currentJokers.Add(CreateJoker(testingJokers[i]));

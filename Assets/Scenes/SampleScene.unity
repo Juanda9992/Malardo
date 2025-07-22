@@ -2233,7 +2233,7 @@ MonoBehaviour:
   currentJokers: []
   testingJokers:
   - {fileID: 11400000, guid: d12b0f6c90ea9ac4cb944b2eb8e32d7e, type: 2}
-  - {fileID: 11400000, guid: c038c857d4fd22e4598f466691c94f20, type: 2}
+  - {fileID: 11400000, guid: 0a50b67a994c4a84ea0d2d5cf6f9986a, type: 2}
   - {fileID: 11400000, guid: a573912ec120e414eba61e6985e31c45, type: 2}
   - {fileID: 11400000, guid: 95fa914dcfc9a3944affdb56a6be88e5, type: 2}
   - {fileID: 11400000, guid: 9affeb2e8d42930488206f65e9a7ff75, type: 2}
