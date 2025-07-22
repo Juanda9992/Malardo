@@ -171,6 +171,12 @@ public class HandManager : MonoBehaviour
     public void SetDefaultDiscards(int ammount)
     {
         defaultDiscards = ammount;
+
+        if (discards > defaultDiscards)
+        {
+            discards = defaultDiscards;
+            UpdateDiscardText();
+        }
     }
 
     public int GetHandsRemaining()
