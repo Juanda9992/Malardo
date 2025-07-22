@@ -79,6 +79,23 @@ public class DeckManager : MonoBehaviour
         fullMatchDeck.Remove(card);
     }
 
+    public void AddHandSize(int ammount)
+    {
+        currentHandSize += ammount;
+        CardManager.instance.TrimDeck(currentHandSize); 
+    }
+
+    [ContextMenu("Add 1 hands size")]
+    private void Add1HandSize()
+    {
+        AddHandSize(+1);
+    }
+    [ContextMenu("Substract 1 hands size")]
+    private void Substract1HandSize()
+    {
+        AddHandSize(-1);
+    }
+
     #region GetValues
     public int GerRemainingCardOnDeck()
     {

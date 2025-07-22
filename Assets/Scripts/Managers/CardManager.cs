@@ -33,6 +33,19 @@ public class CardManager : MonoBehaviour
         DeleteChildsInParent(handParent);
     }
 
+    public void TrimDeck(int newCardValue)
+    {
+        if (cardsOnScreen.Count > newCardValue)
+        {
+            Debug.Log("Enter here");
+            for (int i = 0; i < cardsOnScreen.Count - newCardValue; i++)
+            {
+                Destroy(cardsOnScreen[cardsOnScreen.Count - 1].gameObject);
+                cardsOnScreen.RemoveAt(cardsOnScreen.Count - 1);
+            }
+        }
+    }
+
     public void SetHandVisibility(bool value)
     {
         cardsContainer.SetActive(value);
