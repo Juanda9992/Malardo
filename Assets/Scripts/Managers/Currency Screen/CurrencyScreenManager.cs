@@ -50,7 +50,7 @@ public class CurrencyScreenManager : MonoBehaviour
     }
     private void CalculateScore()
     {
-        int handsRemaining = HandManager.instance.hands;
+        int handsRemaining = HandManager.instance.GetHandsRemaining();
         roundScore += handsRemaining;
 
         GameObject row = Instantiate(currencyRowPrefab, currencyParent);

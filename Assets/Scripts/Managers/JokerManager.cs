@@ -75,6 +75,11 @@ public class JokerManager : MonoBehaviour
     }
     public void RemoveJoker(JokerContainer jokerContainer)
     {
+        Debug.Log("Joker Removed");
+        for (int i = 0; i < jokerContainer._joker.OnSellEffect.Count; i++)
+        {
+            jokerContainer._joker.OnSellEffect[i].ApplyEffect();
+        }
         currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);
     }

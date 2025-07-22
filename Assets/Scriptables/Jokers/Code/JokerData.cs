@@ -14,7 +14,7 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> effects;
 
     public List<JokerEffect> OnSetUpJoker;
-    public JokerEffect OnSellEffect;
+    public List<JokerEffect> OnSellEffect;
 }
 public enum JokerRarity
 {
