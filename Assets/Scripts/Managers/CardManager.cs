@@ -44,6 +44,13 @@ public class CardManager : MonoBehaviour
                 cardsOnScreen.RemoveAt(cardsOnScreen.Count - 1);
             }
         }
+        else
+        {
+            for (int i = 0; i < newCardValue - cardsOnScreen.Count; i++)
+            {
+                DeckManager.instance.CreateRandomCard();
+            }
+        }
     }
 
     public void SetHandVisibility(bool value)

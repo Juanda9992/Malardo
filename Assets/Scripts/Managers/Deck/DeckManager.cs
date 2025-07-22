@@ -46,7 +46,7 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    private void CreateRandomCard()
+    public void CreateRandomCard()
     {
         if (roundDeck.Count == 0)
         {
