@@ -30,11 +30,13 @@ public class CardManager : MonoBehaviour
 
     public void DestroyCardsOnHand()
     {
+        cardsOnScreen.Clear();
         DeleteChildsInParent(handParent);
     }
 
     public void TrimDeck(int newCardValue)
     {
+        Debug.Log(newCardValue);
         if (cardsOnScreen.Count > newCardValue)
         {
             Debug.Log("Enter here");
@@ -46,7 +48,7 @@ public class CardManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < newCardValue - cardsOnScreen.Count; i++)
+            for (int i = 0; i <= newCardValue - cardsOnScreen.Count; i++)
             {
                 DeckManager.instance.CreateRandomCard();
             }
