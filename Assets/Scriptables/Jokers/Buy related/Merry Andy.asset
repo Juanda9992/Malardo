@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Merry Andy
+  m_EditorClassIdentifier: 
+  jokerName: Merry Andy
+  description: +3 discards each round, -1 hand size
+  triggerMessage: +3 DIscards - 1 Hand Size
+  overrideEffect: 0
+  shopValue: 7
+  jokerRarity: 1
+  triggers: []
+  effects: []
+  OnSetUpJoker:
+  - {fileID: 11400000, guid: e7ec39dabdd45b14681a80e750646bbb, type: 2}
+  - {fileID: 11400000, guid: 909262aa9659a91428928f120a8f9668, type: 2}
+  OnSellEffect:
+  - {fileID: 11400000, guid: 48601e1366dac464998af4ae7173b6e3, type: 2}
+  - {fileID: 11400000, guid: 70ef89940715e7f4f863a3b052258379, type: 2}
