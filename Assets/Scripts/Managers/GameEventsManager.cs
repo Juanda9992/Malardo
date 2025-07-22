@@ -13,6 +13,7 @@ public class GameEventsManager : MonoBehaviour
     public event Action<HandType> OnSpecificHandPlayed;
     public event Action<Card> OnCardPlay;
     public event Action OnRoundBegins;
+    public event Action OnRoundEnds;
 
     void Awake()
     {
@@ -57,11 +58,16 @@ public class GameEventsManager : MonoBehaviour
         OnCardPlay?.Invoke(card);
 
         if (debugger) card.DegubCardInfo();
-    } 
-    
+    }
+
     public void TriggerRoundBegins()
     {
         GameStatusManager.SetGameEvent(TriggerOptions.RoundBegin);
         OnRoundBegins?.Invoke();
-    } 
+    }
+
+    public void TriggerRoundEnd()
+    {
+        OnRoundEnds?.Invoke();
+    }
 }
