@@ -24,6 +24,10 @@ public class JokerContainer : MonoBehaviour
     }
     private void HandleTriggerEvents(GameStatus gameStatus)
     {
+        if (_joker.triggers.Count == 0)
+        {
+            return;
+        }
         for (int i = 0; i < _joker.triggers.Count; i++)
         {
             if (!_joker.triggers[i].MeetCondition(gameStatus))
