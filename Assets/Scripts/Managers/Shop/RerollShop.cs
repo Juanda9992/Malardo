@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class RerollShop : MonoBehaviour
 {
+    public static int freeRerollsValue = 0;
+    private int currentFreeRerolls;
     public int currentValue;
     [SerializeField] private TextMeshProUGUI rerollButtonText;
     [SerializeField] private ShopManager shopManager;
@@ -11,21 +13,27 @@ public class RerollShop : MonoBehaviour
 
     void Start()
     {
+        currentFreeRerolls = freeRerollsValue;
         reRollButton.onClick.AddListener(Reroll);
     }
 
     private void SetRerollText()
     {
-        rerollButtonText.text = "Reroll" + "\n" + "$" + currentValue;
+        int value = currentFreeRerolls == 0 ? currentValue : 0;
+        rerollButtonText.text = "Reroll" + "\n" + "$" + value;
         reRollButton.interactable = CheckIfEnoughCurrencyForReRoll();
     }
 
     private void Reroll()
     {
-        if (CheckIfEnoughCurrencyForReRoll())
+        if (CheckIfEnoughCurrencyForReRoll() || currentFreeRerolls > 0)
         {
-            CurrencyManager.instance.RemoveCurrency(currentValue);
-            currentValue++;
+            if (currentFreeRerolls == 0)
+            {
+                CurrencyManager.instance.RemoveCurrency(currentValue);
+                currentValue++;
+            }
+            currentFreeRerolls--;
             shopManager.SetGenerateJokersAction();
             SetRerollText();
         }
@@ -37,7 +45,13 @@ public class RerollShop : MonoBehaviour
     }
     public void SetDefaultValues()
     {
-        SetRerollText();
         currentValue = 5;
+        currentFreeRerolls = freeRerollsValue;
+        SetRerollText();
+    }
+
+    public void AddFreeRerolls(int ammount)
+    {
+        freeRerollsValue += ammount;
     }
 }
