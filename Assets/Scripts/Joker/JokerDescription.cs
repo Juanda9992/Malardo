@@ -33,4 +33,12 @@ public class JokerDescription : MonoBehaviour
         transform.position = (Vector2)card_Data.transform.position + new Vector2(0, cardDescriptionOffsetY);
         descriptionText.text = $"+{card_Data.currentCard.chipAmmount} chips";
     }
+
+    public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition)
+    {
+        nameText.text = itemName;
+        descriptionText.text = itemDescription;
+        transform.position = itemPosition;
+        transform.localScale = Vector2.one;
+    }
 }
