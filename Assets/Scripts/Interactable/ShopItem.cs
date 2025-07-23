@@ -18,4 +18,9 @@ public class ShopItem : MonoBehaviour
         interactButton.interactable = CurrencyManager.instance.currentCurrency > ammountRequired;
         buyLabel.text = "Buy $" + ammountRequired;
     }
+    public void BuyItem()
+    {
+        CurrencyManager.instance.RemoveCurrency(ammountRequired);
+        Debug.Log("Bought");
+    }
 }
