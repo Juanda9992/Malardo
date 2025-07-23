@@ -82,7 +82,7 @@ public class DeckManager : MonoBehaviour
     public void AddHandSize(int ammount)
     {
         currentHandSize += ammount;
-        CardManager.instance.TrimDeck(currentHandSize); 
+        CardManager.instance.TrimDeck(currentHandSize);
     }
 
     [ContextMenu("Add 1 hands size")]
@@ -134,7 +134,12 @@ public class DeckManager : MonoBehaviour
 
     public Card GetFullDeckCard(Card card)
     {
-        return fullMatchDeck.Find(x=> x == card);
+        return fullMatchDeck.Find(x => x == card);
+    }
+
+    public int GetNumberOfSpecialCardsInDeck()
+    {
+        return fullMatchDeck.FindAll(x => x.cardType != CardType.Default).Count;
     }
     #endregion
 }

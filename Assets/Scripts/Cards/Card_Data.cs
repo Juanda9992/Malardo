@@ -39,7 +39,7 @@ public class Card
     public int chipAmmount;
     public Suit cardSuit;
     public bool IsFaceCard { get { return number >= 11 && number <= 13; } }
-    public bool IsSpecialCard { get { return cardType == CardType.Gold || cardType == CardType.Stone; } }
+    public bool IsSpecialCard { get { return cardType != CardType.Default; } }
     public CardType cardType = CardType.Default;
     public Seal cardSeal = Seal.None;
     public CardEdition cardEdition = CardEdition.Base;
