@@ -44,6 +44,12 @@ public class PackManager : MonoBehaviour
 
         }
     }
+
+    //CALLED BY UI BUTTON
+    public void SkipPackage()
+    {
+        SetAllUIStatus(true);
+    }
 }
 
 public enum PackType
