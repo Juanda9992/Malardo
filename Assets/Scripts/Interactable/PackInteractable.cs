@@ -19,5 +19,7 @@ public class PackInteractable : MonoBehaviour
                 JokerManager.instance.AddJoker(jokerData);
                 break;
         }
+
+        PackManager.instance.SelectItem();
     }
 }

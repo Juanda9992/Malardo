@@ -8,6 +8,7 @@ public class PackManager : MonoBehaviour
     [SerializeField] private JokerListContainer jokerListContainer;
     [SerializeField] private GameObject PackInteractablePrefab;
     [SerializeField] private Transform itemsDisplay;
+    private int maxSelections = 1;
     void Awake()
     {
         instance = this;
@@ -15,6 +16,7 @@ public class PackManager : MonoBehaviour
 
     public void ReceiveCreatePackInstruction(PackType packDesired)
     {
+        maxSelections = 1;
         SetAllUIStatus(false);
         switch (packDesired)
         {
@@ -42,6 +44,16 @@ public class PackManager : MonoBehaviour
             GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
             item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
 
+        }
+    }
+
+    public void SelectItem()
+    {
+        maxSelections--;
+
+        if (maxSelections == 0)
+        {
+            SkipPackage();
         }
     }
 
