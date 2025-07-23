@@ -8,6 +8,7 @@ public class ShopItem : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI buyLabel;
     [SerializeField] private Button interactButton;
+    [SerializeField] private PackType packType = PackType.None;
     void Start()
     {
         UpdateBuyButtonStatus();
@@ -21,6 +22,9 @@ public class ShopItem : MonoBehaviour
     public void BuyItem()
     {
         CurrencyManager.instance.RemoveCurrency(ammountRequired);
-        Debug.Log("Bought");
+        if (packType != PackType.None)
+        {
+            PackManager.instance.ReceiveCreatePackInstruction(packType);
+        }
     }
 }
