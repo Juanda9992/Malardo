@@ -15,4 +15,10 @@ public class DescriptionContainer : MonoBehaviour
     {
         JokerDescription.instance.SetDescriptionOff();
     }
+
+    public void SetNameAndDescription(string itemName, string itemDescription)
+    {
+        description = itemDescription;
+        contentName = itemName;
+    }
 }
