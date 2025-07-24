@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +8,7 @@ public class BlindManager : MonoBehaviour
     public int anteLevel;
     public int blindMoney;
     public int requiredScore;
+    public int curerntRound;
     [SerializeField] private BlindScoreData blindScoreData;
     [SerializeField] private int currentBlindProgress; //0 to 2;
 
@@ -44,6 +43,7 @@ public class BlindManager : MonoBehaviour
     {
         OnBlindDefeated?.Invoke();
         currentBlindProgress++;
+        curerntRound++;
 
         if (currentBlindProgress > 2)
         {
