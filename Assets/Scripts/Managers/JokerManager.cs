@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class JokerManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private JokerData testjoker;
 
     [SerializeField] private JokerTrigger endHandTrigger;
+    [SerializeField] private TextMeshProUGUI jokerCounter;
 
     public int JokersInHand { get { return currentJokers.Count; } }
     public static JokerManager instance;
@@ -49,6 +51,7 @@ public class JokerManager : MonoBehaviour
         JokerContainer createdJoker = CreateJoker(jokerData);
         GameStatusManager.SetJokersInMatch(currentJokers.Count);
         currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
     private JokerContainer CreateJoker(JokerData jokerData)
@@ -73,16 +76,18 @@ public class JokerManager : MonoBehaviour
         {
             currentJokers.Add(CreateJoker(testingJokers[i]));
         }
+        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
     public void RemoveJoker(JokerContainer jokerContainer)
     {
-        Debug.Log("Joker Removed");
         for (int i = 0; i < jokerContainer._joker.OnSellEffect.Count; i++)
         {
             jokerContainer._joker.OnSellEffect[i].ApplyEffect();
         }
         currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);
+
+        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
     public bool CanAddJoker()
