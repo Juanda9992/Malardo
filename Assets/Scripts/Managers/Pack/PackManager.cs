@@ -14,14 +14,14 @@ public class PackManager : MonoBehaviour
         instance = this;
     }
 
-    public void ReceiveCreatePackInstruction(PackType packDesired)
+    public void ReceiveCreatePackInstruction(PackData packDesired)
     {
-        maxSelections = 1;
+        maxSelections = packDesired.selectCards;
         SetAllUIStatus(false);
-        switch (packDesired)
+        switch (packDesired.packType)
         {
             case PackType.Buffon:
-                CreateBuffonPack();
+                CreateBuffonPack(packDesired.numberOfCards);
                 break;
         }
     }
@@ -35,11 +35,9 @@ public class PackManager : MonoBehaviour
         packSection.SetActive(!status);
     }
 
-    private void CreateBuffonPack()
+    private void CreateBuffonPack(int cardsToCreate)
     {
-        Debug.Log("Created Buffon Pack");
-
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < cardsToCreate; i++)
         {
             GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
             item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
