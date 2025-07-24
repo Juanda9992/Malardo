@@ -15,6 +15,7 @@ public class BlindManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI requiredScoreText;
     [SerializeField] private TextMeshProUGUI currentRoundText, currentBetLevelText;
+    [SerializeField] private TextMeshProUGUI rewardLabel;
 
     public event Action OnBlindDefeated;
     void Awake()
@@ -35,6 +36,14 @@ public class BlindManager : MonoBehaviour
         requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.scoreMultiplier[currentBlindProgress]);
         requiredScoreText.text = requiredScore.ToString();
         blindMoney = blindScoreData.blindMoney[currentBlindProgress];
+
+        rewardLabel.text = "Reward <color=yellow><b>";
+        for (int i = 0; i < blindMoney; i++)
+        {
+            rewardLabel.text += "$";
+        }
+
+        rewardLabel.text += "</b></color>";
     }
 
     public bool BlindDefeated(int scoreToCompare)
