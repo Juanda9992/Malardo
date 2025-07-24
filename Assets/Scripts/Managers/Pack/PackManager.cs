@@ -68,6 +68,7 @@ public class PackManager : MonoBehaviour
     public void SkipPackage()
     {
         SetAllUIStatus(true);
+        CardManager.DestroyChildsInParent(itemsDisplay);
     }
 }
 

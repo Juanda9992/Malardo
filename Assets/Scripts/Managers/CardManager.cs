@@ -33,6 +33,17 @@ public class CardManager : MonoBehaviour
         cardsOnScreen.Clear();
         DeleteChildsInParent(handParent);
     }
+    public static void DestroyChildsInParent(Transform parent)
+    {
+        Transform[] existingUI = parent.GetComponentsInChildren<Transform>();
+        if (existingUI.Length > 1)
+        {
+            for (int i = 1; i < existingUI.Length; i++)
+            {
+                Destroy(existingUI[i].gameObject);
+            }
+        }
+    }
 
     public void TrimDeck(int newCardValue)
     {

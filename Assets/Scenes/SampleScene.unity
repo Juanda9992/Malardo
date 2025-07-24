@@ -1236,7 +1236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherUI:
   - {fileID: 1683800526}
-  - {fileID: 836230732}
   packSection: {fileID: 416426809}
   jokerListContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   PackInteractablePrefab: {fileID: 8474415298235704520, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
@@ -6357,7 +6356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1683800527
 RectTransform:
   m_ObjectHideFlags: 0
