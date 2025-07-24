@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,7 +8,9 @@ public class hoverBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField] private float hoverScaleFactor;
 
-    [SerializeField] private UnityEvent OnHoverIn, OnHoverOut, OnClicked;
+    [SerializeField] private UnityEvent OnHoverIn, OnHoverOut, OnClicked, OnUnselect;
+
+    public static Action<GameObject> OnSelectObject;
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.DOScale(hoverScaleFactor, 0.2f);
@@ -21,6 +24,25 @@ public class hoverBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
     public void OnPointerClick(PointerEventData data)
     {
+        OnSelectObject?.Invoke(this.gameObject);
         OnClicked?.Invoke();
+    }
+
+    private void CheckForObjectSelected(GameObject selectedObj)
+    {
+        if (!GameObject.ReferenceEquals(this.gameObject, selectedObj))
+        {
+            OnUnselect?.Invoke();
+        }
+    }
+
+    void OnEnable()
+    {
+        OnSelectObject += CheckForObjectSelected;
+    }
+
+    void OnDisable()
+    {
+        OnSelectObject -= CheckForObjectSelected;
     }
 }

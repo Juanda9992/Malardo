@@ -12,4 +12,10 @@ public class InteractButton : MonoBehaviour
 
         interactButton.SetActive(selected);
     }
+
+    public void SetSelection(bool status)
+    {
+        selected = status;
+        interactButton.SetActive(status);
+    }
 }
