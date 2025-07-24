@@ -17,6 +17,8 @@ public class ShopManager : MonoBehaviour
     {
         jokerGenerator.SetActive(true);
     }
+
+    [ContextMenu("Show Shop")]
     public void ShowShop()
     {
         showShopEvent?.Invoke();

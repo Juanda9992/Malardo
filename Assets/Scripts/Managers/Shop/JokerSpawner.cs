@@ -22,7 +22,6 @@ public class JokerSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         GenerateJokers();
-        GenerateShopPacks();
     }
     public void GenerateJokers()
     {
@@ -43,7 +42,7 @@ public class JokerSpawner : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void GenerateShopPacks()
+    public void GenerateShopPacks()
     {
         Transform[] packs = packsTransform.GetComponentsInChildren<Transform>();
         if (packs.Length > 1)

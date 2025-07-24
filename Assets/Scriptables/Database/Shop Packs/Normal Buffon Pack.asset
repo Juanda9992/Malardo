@@ -16,5 +16,5 @@ MonoBehaviour:
   packDescription: Choose 1 of up to 2 Joker cards
   packCost: 4
   packType: 1
-  numberOfCards: 4
+  numberOfCards: 2
   selectCards: 1
