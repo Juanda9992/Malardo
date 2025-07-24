@@ -4,6 +4,15 @@ using UnityEngine;
 public class BlindScoreData : ScriptableObject
 {
     public int[] baseScore;
-    public float[] scoreMultiplier;
-    public int[] blindMoney;
+    public BlindData[] allBlinds;
+}
+
+[System.Serializable]
+public class BlindData
+{
+    public string blindName;
+    public float scoreMultiplier;
+    public int blindMoney;
+
+    public Color blindColor;
 }

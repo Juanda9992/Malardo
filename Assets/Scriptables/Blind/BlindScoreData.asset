@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: BlindScoreData
   m_EditorClassIdentifier: 
   baseScore: 2c01000020030000d007000088130000f82a0000204e0000b888000050c30000
-  scoreMultiplier:
-  - 1
-  - 1.5
-  - 2
-  blindMoney: 030000000400000005000000
+  allBlinds:
+  - blindName: Small Blind
+    scoreMultiplier: 1
+    blindMoney: 3
+    blindColor: {r: 0.19243142, g: 0.25972635, b: 0.7132075, a: 1}
+  - blindName: Medium Blind
+    scoreMultiplier: 1.5
+    blindMoney: 4
+    blindColor: {r: 0.7735849, g: 0.6099914, b: 0.20288353, a: 1}
+  - blindName: Big Blind
+    scoreMultiplier: 2
+    blindMoney: 5
+    blindColor: {r: 0.8415094, g: 0, b: 0.031144425, a: 1}
