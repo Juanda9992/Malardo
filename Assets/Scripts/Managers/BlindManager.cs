@@ -8,12 +8,12 @@ public class BlindManager : MonoBehaviour
     public int anteLevel;
     public int blindMoney;
     public int requiredScore;
-    public int curerntRound;
+    public int currentRound = 1;
     [SerializeField] private BlindScoreData blindScoreData;
     [SerializeField] private int currentBlindProgress; //0 to 2;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI requiredScoreText;
+    [SerializeField] private TextMeshProUGUI requiredScoreText, currentRoundText;
 
     public event Action OnBlindDefeated;
     void Awake()
@@ -23,11 +23,12 @@ public class BlindManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetRequiredScore();
+        SetRequiredScore();        
     }
 
     public void SetRequiredScore()
     {
+        currentRoundText.text = currentRound.ToString();
         requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.scoreMultiplier[currentBlindProgress]);
         requiredScoreText.text = requiredScore.ToString();
         blindMoney = blindScoreData.blindMoney[currentBlindProgress];
@@ -43,14 +44,14 @@ public class BlindManager : MonoBehaviour
     {
         OnBlindDefeated?.Invoke();
         currentBlindProgress++;
-        curerntRound++;
+        currentRound++;
 
         if (currentBlindProgress > 2)
         {
             currentBlindProgress = 0;
             anteLevel++;
         }
-
+        currentRoundText.text = currentRound.ToString();
         SetRequiredScore();
     }
 

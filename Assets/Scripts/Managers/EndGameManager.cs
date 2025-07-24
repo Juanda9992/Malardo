@@ -28,6 +28,6 @@ public class EndGameManager : MonoBehaviour
 
     public bool ReachedEndGame()
     {
-        return BlindManager.instance.curerntRound >= maxRoundLimit;
+        return BlindManager.instance.currentRound >= maxRoundLimit;
     }
 }
