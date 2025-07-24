@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float mult = 1;
     [SerializeField] private float roundScore;
 
-    [SerializeField] private TextMeshProUGUI scoreText, chipsText, multText;
+    [SerializeField] private TextMeshProUGUI scoreText, chipsText, multText,totalScoreText;
     void Awake()
     {
         instance = this;
@@ -57,7 +57,8 @@ public class ScoreManager : MonoBehaviour
 
         roundScore += currentScore;
 
-        scoreText.text = roundScore.ToString();
+        totalScoreText.text = roundScore.ToString();
+        scoreText.text = currentScore.ToString();
 
         CheckBlindWin();
     }
