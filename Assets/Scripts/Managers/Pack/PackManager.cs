@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PackManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class PackManager : MonoBehaviour
     [SerializeField] private JokerListContainer jokerListContainer;
     [SerializeField] private GameObject PackInteractablePrefab;
     [SerializeField] private Transform itemsDisplay;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI packNameLabel;
+    [SerializeField] private TextMeshProUGUI selectAmmountLabel;
     private int maxSelections = 1;
     void Awake()
     {
@@ -18,6 +22,10 @@ public class PackManager : MonoBehaviour
     {
         maxSelections = packDesired.selectCards;
         SetAllUIStatus(false);
+
+        packNameLabel.text = packDesired.packName;
+        selectAmmountLabel.text = "Choose " + maxSelections;
+
         switch (packDesired.packType)
         {
             case PackType.Buffon:
@@ -53,6 +61,7 @@ public class PackManager : MonoBehaviour
         {
             SkipPackage();
         }
+        selectAmmountLabel.text = "Choose " + maxSelections;
     }
 
     //CALLED BY UI BUTTON
