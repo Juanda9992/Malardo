@@ -56,7 +56,12 @@ public class BlindManager : MonoBehaviour
 
         foreach (var bg in bgImages)
         {
-            bg.color = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+            float previousAlpha = bg.color.a;
+            Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+            blindColor.a = previousAlpha;
+
+            bg.color = blindColor;
+            
         }
 
         blindNameText.text = blindScoreData.allBlinds[currentBlindProgress].blindName;
