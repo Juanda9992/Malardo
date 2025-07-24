@@ -42,7 +42,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         {
             return;
         }
-        if (data.pointerId != -1)
+        if (data.button != PointerEventData.InputButton.Left)
         {
             return;
         }
@@ -52,6 +52,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else
         {
+
             Select();
         }
     }
