@@ -4,6 +4,7 @@ public class PackInteractable : MonoBehaviour
 {
     public PackType itemType;
     public JokerData jokerData;
+    public PackData packData;
 
     public void SetJokerInfo(JokerData createdJoker)
     {

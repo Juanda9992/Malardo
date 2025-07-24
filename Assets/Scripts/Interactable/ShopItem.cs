@@ -27,4 +27,10 @@ public class ShopItem : MonoBehaviour
             PackManager.instance.ReceiveCreatePackInstruction(packType);
         }
     }
+
+    public void SetPackData(PackData data)
+    {
+        GetComponent<DescriptionContainer>().SetNameAndDescription(data.packName, data.packDescription);
+        ammountRequired = data.packCost;
+    }
 }
