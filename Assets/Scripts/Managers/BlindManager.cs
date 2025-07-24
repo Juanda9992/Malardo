@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlindManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI requiredScoreText;
     [SerializeField] private TextMeshProUGUI currentRoundText, currentBetLevelText;
     [SerializeField] private TextMeshProUGUI rewardLabel;
+    [SerializeField] private TextMeshProUGUI blindNameText;
+    [SerializeField] private Image[] bgImages;
 
     public event Action OnBlindDefeated;
     void Awake()
@@ -33,10 +36,15 @@ public class BlindManager : MonoBehaviour
         currentRoundText.text = currentRound.ToString();
         currentBetLevelText.text = (anteLevel + 1) + " / 4";
 
-        requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.scoreMultiplier[currentBlindProgress]);
-        requiredScoreText.text = requiredScore.ToString();
-        blindMoney = blindScoreData.blindMoney[currentBlindProgress];
+        requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.allBlinds[currentBlindProgress].scoreMultiplier);
+        blindMoney = blindScoreData.allBlinds[currentBlindProgress].blindMoney;
 
+        SetUpUI();
+
+    }
+    private void SetUpUI()
+    {
+        requiredScoreText.text = requiredScore.ToString();
         rewardLabel.text = "Reward <color=yellow><b>";
         for (int i = 0; i < blindMoney; i++)
         {
@@ -44,6 +52,14 @@ public class BlindManager : MonoBehaviour
         }
 
         rewardLabel.text += "</b></color>";
+
+
+        foreach (var bg in bgImages)
+        {
+            bg.color = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+        }
+
+        blindNameText.text = blindScoreData.allBlinds[currentBlindProgress].blindName;
     }
 
     public bool BlindDefeated(int scoreToCompare)
