@@ -104,8 +104,11 @@ public class HandManager : MonoBehaviour
     {
         for (int i = 0; i < handCards.Count; i++)
         {
-            handCards[i].linkedCard.pointerInteraction.DestroyCard();
-            CardManager.instance.cardsOnScreen.Remove(handCards[i].linkedCard);
+            if (handCards[i].linkedCard != null)
+            {
+                handCards[i].linkedCard.pointerInteraction.DestroyCard();
+                CardManager.instance.cardsOnScreen.Remove(handCards[i].linkedCard);
+            }
         }
         DeckManager.instance.GenerateCardsOnDeck(handCards.Count);
         handCards.Clear();

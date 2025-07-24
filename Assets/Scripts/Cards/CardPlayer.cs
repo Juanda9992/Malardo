@@ -48,10 +48,10 @@ public class CardPlayer : MonoBehaviour
         GameEventsManager.instance.TriggerHandEnd();
         yield return JokerManager.instance.PlayJokersEndMatch();
         ScoreManager.instance.CalculateScore();
+        currentHand.Clear();
 
         yield return new WaitForSeconds(0.5f);
         HandManager.instance.ClearHandPlayed();
-        currentHand.Clear();
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
         isPlayingCards = false;
