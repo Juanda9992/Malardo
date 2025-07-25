@@ -429,7 +429,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
-  startingMoney: 0
+  startingMoney: 5
   presetCard:
     cardName: 
     linkedCard: {fileID: 0}
