@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Disclaimer : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Disclaimer : MonoBehaviour
     void Start()
     {
         disclaimerText.text = disclaimerMessage;
-        canvasGroup.DOFade(1, 1).SetDelay(2);   
+        canvasGroup.DOFade(1, 1).SetDelay(2).OnComplete(()=>SceneManager.LoadScene("Gameplay_Scene"));   
     }
 
 }
