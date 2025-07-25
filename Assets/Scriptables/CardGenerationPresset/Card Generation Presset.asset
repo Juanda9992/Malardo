@@ -13,324 +13,430 @@ MonoBehaviour:
   m_Name: Card Generation Presset
   m_EditorClassIdentifier: 
   allCards:
-  - linkedCard: {fileID: 0}
+  - cardName: Ace of Diamond
+    linkedCard: {fileID: 0}
     number: 1
     chipAmmount: 11
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 2 of Diamond
+    linkedCard: {fileID: 0}
     number: 2
-    chipAmmount: 0
+    chipAmmount: 2
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 3 of Diamond
+    linkedCard: {fileID: 0}
     number: 3
     chipAmmount: 3
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 4 of Diamond
+    linkedCard: {fileID: 0}
     number: 4
-    chipAmmount: 9
+    chipAmmount: 4
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 5 of Diamond
+    linkedCard: {fileID: 0}
     number: 5
-    chipAmmount: 0
+    chipAmmount: 5
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 6 of Diamond
+    linkedCard: {fileID: 0}
     number: 6
-    chipAmmount: 11
+    chipAmmount: 6
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 7 of Diamond
+    linkedCard: {fileID: 0}
     number: 7
     chipAmmount: 7
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 8 of Diamond
+    linkedCard: {fileID: 0}
     number: 8
-    chipAmmount: 0
+    chipAmmount: 8
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 9 of Diamond
+    linkedCard: {fileID: 0}
     number: 9
-    chipAmmount: 0
+    chipAmmount: 9
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 10 of Diamond
+    linkedCard: {fileID: 0}
     number: 10
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 0
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Jack of Diamond
+    linkedCard: {fileID: 0}
     number: 11
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 0
-    faceCard: 3
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Queen of Diamond
+    linkedCard: {fileID: 0}
     number: 12
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 0
-    faceCard: 2
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: King of Diamond
+    linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 0
-    faceCard: 1
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Ace of Hearth
+    linkedCard: {fileID: 0}
     number: 1
-    chipAmmount: 0
-    cardSuit: 1
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 2
-    chipAmmount: 0
-    cardSuit: 1
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    chipAmmount: 0
-    cardSuit: 1
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    chipAmmount: 0
-    cardSuit: 1
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    chipAmmount: 0
-    cardSuit: 1
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 6
     chipAmmount: 11
     cardSuit: 1
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 2 of Hearth
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 2
+    cardSuit: 1
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 3 of Hearth
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 3
+    cardSuit: 1
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 4 of Hearth
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 4
+    cardSuit: 1
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 5 of Hearth
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 5
+    cardSuit: 1
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 6 of Hearth
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 6
+    cardSuit: 1
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 7 of Hearth
+    linkedCard: {fileID: 0}
     number: 7
-    chipAmmount: 0
+    chipAmmount: 7
     cardSuit: 1
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 8 of Hearth
+    linkedCard: {fileID: 0}
     number: 8
-    chipAmmount: 0
+    chipAmmount: 8
     cardSuit: 1
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 9 of Hearth
+    linkedCard: {fileID: 0}
     number: 9
-    chipAmmount: 0
+    chipAmmount: 9
     cardSuit: 1
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 10 of Hearth
+    linkedCard: {fileID: 0}
     number: 10
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 1
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Jack of Hearth
+    linkedCard: {fileID: 0}
     number: 11
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 1
-    faceCard: 3
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Queen of Hearth
+    linkedCard: {fileID: 0}
     number: 12
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 1
-    faceCard: 2
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: King of Hearth
+    linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 1
-    faceCard: 1
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Ace of Spades
+    linkedCard: {fileID: 0}
     number: 1
-    chipAmmount: 0
+    chipAmmount: 11
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 2 of Spades
+    linkedCard: {fileID: 0}
     number: 2
     chipAmmount: 2
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 3 of Spades
+    linkedCard: {fileID: 0}
     number: 3
     chipAmmount: 3
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 4 of Spades
+    linkedCard: {fileID: 0}
     number: 4
-    chipAmmount: 0
+    chipAmmount: 4
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 5 of Spades
+    linkedCard: {fileID: 0}
     number: 5
-    chipAmmount: 0
+    chipAmmount: 5
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 6 of Spades
+    linkedCard: {fileID: 0}
     number: 6
-    chipAmmount: 0
+    chipAmmount: 6
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 7 of Spades
+    linkedCard: {fileID: 0}
     number: 7
-    chipAmmount: 0
+    chipAmmount: 7
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 8 of Spades
+    linkedCard: {fileID: 0}
     number: 8
-    chipAmmount: 0
+    chipAmmount: 8
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 9 of Spades
+    linkedCard: {fileID: 0}
     number: 9
-    chipAmmount: 0
+    chipAmmount: 9
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 10 of Spades
+    linkedCard: {fileID: 0}
     number: 10
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 2
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Jack of Spades
+    linkedCard: {fileID: 0}
     number: 11
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 2
-    faceCard: 3
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Queen of Spades
+    linkedCard: {fileID: 0}
     number: 12
     chipAmmount: 10
     cardSuit: 2
-    faceCard: 2
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: King of Spades
+    linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 2
-    faceCard: 1
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Ace of Clover
+    linkedCard: {fileID: 0}
     number: 1
-    chipAmmount: 0
+    chipAmmount: 11
     cardSuit: 3
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 2 of Clover
+    linkedCard: {fileID: 0}
     number: 2
     chipAmmount: 2
     cardSuit: 3
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 3 of Clover
+    linkedCard: {fileID: 0}
     number: 3
-    chipAmmount: 0
+    chipAmmount: 3
     cardSuit: 3
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 4 of Clover
+    linkedCard: {fileID: 0}
     number: 4
+    chipAmmount: 4
+    cardSuit: 3
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 5 of Clover
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 5
+    cardSuit: 3
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 6 of Clover
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 6
+    cardSuit: 3
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 7 of Clover
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 7
+    cardSuit: 3
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 8 of Clover
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 8
+    cardSuit: 3
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 9 of Clover
+    linkedCard: {fileID: 0}
+    number: 9
     chipAmmount: 9
     cardSuit: 3
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    chipAmmount: 0
-    cardSuit: 3
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    chipAmmount: 0
-    cardSuit: 3
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 7
-    chipAmmount: 0
-    cardSuit: 3
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 8
-    chipAmmount: 0
-    cardSuit: 3
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
-    number: 9
-    chipAmmount: 0
-    cardSuit: 3
-    faceCard: 0
-    cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: 10 of Clover
+    linkedCard: {fileID: 0}
     number: 10
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 3
-    faceCard: 0
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Jack of Clover
+    linkedCard: {fileID: 0}
     number: 11
     chipAmmount: 10
     cardSuit: 3
-    faceCard: 3
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: Queen of Clover
+    linkedCard: {fileID: 0}
     number: 12
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 3
-    faceCard: 2
     cardType: 0
-  - linkedCard: {fileID: 0}
+    cardSeal: 0
+    cardEdition: 0
+  - cardName: King of Clover
+    linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 0
+    chipAmmount: 10
     cardSuit: 3
-    faceCard: 1
     cardType: 0
+    cardSeal: 0
+    cardEdition: 0
   startingMoney: 0
   presetCard:
+    cardName: 
     linkedCard: {fileID: 0}
     number: 1
     chipAmmount: 0
     cardSuit: 0
-    faceCard: 0
     cardType: 0
+    cardSeal: 0
+    cardEdition: 0
   timesToGenerate: 0
