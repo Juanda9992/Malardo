@@ -1,8 +1,10 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class CurrencyManager : MonoBehaviour
 {
+    public static event Action<int> OnMoneyChanged;
     public static CurrencyManager instance;
     public int currentCurrency;
 
@@ -20,18 +22,21 @@ public class CurrencyManager : MonoBehaviour
     {
         currentCurrency = ammount;
         UpdateCurrencyText();
+        OnMoneyChanged?.Invoke(currentCurrency);
     }
     
     public void AddCurrency(int ammount)
     {
         currentCurrency += ammount;
         UpdateCurrencyText();
+        OnMoneyChanged?.Invoke(currentCurrency);
     }
 
     public void RemoveCurrency(int ammount)
     {
         currentCurrency -= ammount;
         UpdateCurrencyText();
+        OnMoneyChanged?.Invoke(currentCurrency);
     }
 
     private void UpdateCurrencyText()

@@ -7,17 +7,19 @@ public class ShopItem : MonoBehaviour
     public int ammountRequired;
 
     [SerializeField] private TextMeshProUGUI buyLabel;
+    [SerializeField] private TextMeshProUGUI contentText;
     [SerializeField] private Button interactButton;
     [SerializeField] private PackType packType = PackType.None;
     private PackData _itemPack;
     void Start()
     {
-        UpdateBuyButtonStatus();
+        UpdateBuyButtonStatus(CurrencyManager.instance.currentCurrency);
     }
 
-    private void UpdateBuyButtonStatus()
+    private void UpdateBuyButtonStatus(int ammount)
     {
-        interactButton.interactable = CurrencyManager.instance.currentCurrency > ammountRequired;
+        Debug.Log(ammount);
+        interactButton.interactable = ammount > ammountRequired;
         buyLabel.text = "Buy $" + ammountRequired;
     }
     public void BuyItem()
@@ -34,7 +36,17 @@ public class ShopItem : MonoBehaviour
         GetComponent<DescriptionContainer>().SetNameAndDescription(data.packName, data.packDescription);
         ammountRequired = data.packCost;
         packType = data.packType;
-
+        contentText.text = data.packName;
         _itemPack = data;
+    }
+
+    void OnEnable()
+    {
+        CurrencyManager.OnMoneyChanged += UpdateBuyButtonStatus;
+    }
+
+    void OnDisable()
+    {
+        CurrencyManager.OnMoneyChanged -= UpdateBuyButtonStatus;
     }
 }

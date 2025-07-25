@@ -173,6 +173,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7886833945148016626}
   m_SourcePrefab: {fileID: 100100000, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
+--- !u!114 &1768189967661908232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6951491976497953986, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
+  m_PrefabInstance: {fileID: 8714877009488428490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4982406563334533795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4455298255204880233, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
@@ -204,4 +215,5 @@ MonoBehaviour:
   itemType: 0
   jokerData: {fileID: 0}
   packData: {fileID: 0}
+  cardName: {fileID: 1768189967661908232}
   actionButton: {fileID: 4982406563334533795}

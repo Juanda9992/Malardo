@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class PackInteractable : MonoBehaviour
     public JokerData jokerData;
     public PackData packData;
 
+    [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
 
     public void SetJokerInfo(JokerData createdJoker)
@@ -14,6 +16,7 @@ public class PackInteractable : MonoBehaviour
         jokerData = createdJoker;
         itemType = PackType.Buffon;
         GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description);
+        cardName.text = createdJoker.jokerName;
         ListenForAvaliability();
     }
 
