@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler
 {
-    [SerializeField] private InputAction mousePos;
+    [SerializeField] private InputActionReference mousePos;
     [SerializeField] private Card_Data card_Data;
 
     [SerializeField] private float animationTime;
@@ -22,7 +22,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         yield return new WaitForEndOfFrame();
         initialY = _rectTransform.localPosition.y;
-        mousePos.Enable();
+        mousePos.action.Enable();
     }
     public void OnPointerEnter(PointerEventData data)
     {
@@ -117,7 +117,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         if (grabbed)
         {
-            transform.position = mousePos.ReadValue<Vector2>();
+            transform.position = mousePos.action.ReadValue<Vector2>();
         }
     }
     #endregion
