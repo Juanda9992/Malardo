@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
     {
         BlindManager.instance.OnBlindDefeated += ResetRoundScore;
         scoreText.text = "0";
+        totalScoreText.text = "0";
     }
 
     public void AddChips(int value)
