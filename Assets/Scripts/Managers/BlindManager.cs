@@ -41,6 +41,18 @@ public class BlindManager : MonoBehaviour
 
         SetUpUI();
 
+        if (currentBlindProgress == 2)
+        {
+            Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+
+            blindColor *= 0.6f;
+            BackgroundManager.instance.SetBgColor(blindColor);
+        }
+        else
+        {
+            BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
+        }
+
     }
     private void SetUpUI()
     {

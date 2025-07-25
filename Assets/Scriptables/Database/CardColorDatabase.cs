@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Color Database",menuName = "Scriptables/Database/Color Database")]
+[CreateAssetMenu(fileName = "Color Database", menuName = "Scriptables/Database/Color Database")]
 public class CardColorDatabase : ScriptableObject
 {
     [Header("Card Type Colors")]
@@ -13,4 +13,6 @@ public class CardColorDatabase : ScriptableObject
     [Header("Card Edition Colors")]
     public Color foilColor;
     public Color holographicColor;
+
+    public Color defaultBgColor;
 }
