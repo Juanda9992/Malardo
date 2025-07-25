@@ -45,6 +45,7 @@ public class PackManager : MonoBehaviour
 
     private void CreateBuffonPack(int cardsToCreate)
     {
+        BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
         for (int i = 0; i < cardsToCreate; i++)
         {
             GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
@@ -69,6 +70,7 @@ public class PackManager : MonoBehaviour
     {
         SetAllUIStatus(true);
         CardManager.DestroyChildsInParent(itemsDisplay);
+        BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
     }
 }
 

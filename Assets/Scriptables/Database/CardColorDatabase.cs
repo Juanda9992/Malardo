@@ -15,4 +15,5 @@ public class CardColorDatabase : ScriptableObject
     public Color holographicColor;
 
     public Color defaultBgColor;
+    public Color buffonPackBgColor;
 }
