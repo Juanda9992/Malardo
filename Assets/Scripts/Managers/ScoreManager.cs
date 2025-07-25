@@ -81,7 +81,7 @@ public class ScoreManager : MonoBehaviour
         {
             if (HandManager.instance.GetHandsRemaining() == 0)
             {
-                Debug.Log("Game lost");
+                LoseManager.instance.SetLoseScreen();
             }
         }
     }
