@@ -39,7 +39,18 @@
                 {
                     "name": "",
                     "id": "c7a57fb9-d063-4488-9820-e4516fd785fb",
-                    "path": "<Pointer>/position",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b492733-ef8b-4cf7-8ea3-5ea5c416f2ec",
+                    "path": "<Touchscreen>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

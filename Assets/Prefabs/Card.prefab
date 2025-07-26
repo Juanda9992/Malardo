@@ -599,6 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePos: {fileID: 3273841000410172905, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
+  touchPos: {fileID: 1959133882089097584, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
   card_Data: {fileID: 5501412372648086110}
   animationTime: 0.2
   hoverScale: 1.2
