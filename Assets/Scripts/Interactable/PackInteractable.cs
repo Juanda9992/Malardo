@@ -10,6 +10,7 @@ public class PackInteractable : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
+    private Card createdCard;
     public void SetJokerInfo(JokerData createdJoker)
     {
         jokerData = createdJoker;
@@ -21,7 +22,8 @@ public class PackInteractable : MonoBehaviour
 
     public void SetPackCard()
     {
-        Card createdCard = new Card();
+        itemType = PackType.Card;
+        createdCard = new Card();
         createdCard = createdCard.GenerateRandomCard();
 
         GetComponent<CardVisuals>().SetVisuals(createdCard);
@@ -41,6 +43,9 @@ public class PackInteractable : MonoBehaviour
         {
             case PackType.Buffon:
                 JokerManager.instance.AddJoker(jokerData);
+                break;
+            case PackType.Card:
+                DeckManager.instance.AddCardOnFullDeck(createdCard);
                 break;
         }
 
