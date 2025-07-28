@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JokerContainer : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class JokerContainer : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI jokerText;
 
+    [SerializeField] private Image jokerBg;
     void Start()
     {
         GameStatusManager.OnStatusChanged += HandleTriggerEvents;
@@ -21,6 +23,10 @@ public class JokerContainer : MonoBehaviour
         jokerText.text = _joker.jokerName;
 
         JokerAction += JokerExecuteAction;
+        if (jokerData.jokerVisuals.bgColor != Color.black)
+        {
+            jokerBg.color = jokerData.jokerVisuals.bgColor;
+        }
     }
     private void HandleTriggerEvents(GameStatus gameStatus)
     {

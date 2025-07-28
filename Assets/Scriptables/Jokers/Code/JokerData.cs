@@ -16,6 +16,8 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
 
+    public JokerVisuals jokerVisuals;
+
 }
 public enum JokerRarity
 {
@@ -31,4 +33,10 @@ public class RequiredHandSizeData
     public bool active;
     public int minAmmount;
     public int maxAmmount;
+}
+
+[System.Serializable]
+public class JokerVisuals
+{
+    public Color bgColor;
 }

@@ -23,3 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11acb593de062e049a72244006ad3b3c, type: 2}
   effects:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  jokerVisuals:
+    bgColor: {r: 0.21509439, g: 0.014204316, b: 0.014204316, a: 1}

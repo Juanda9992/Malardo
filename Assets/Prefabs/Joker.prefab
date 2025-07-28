@@ -572,6 +572,7 @@ MonoBehaviour:
   _joker: {fileID: 0}
   isOnShop: 1
   jokerText: {fileID: 1592527842947618694}
+  jokerBg: {fileID: 6199330102263620309}
 --- !u!114 &6538719352392439572
 MonoBehaviour:
   m_ObjectHideFlags: 0
