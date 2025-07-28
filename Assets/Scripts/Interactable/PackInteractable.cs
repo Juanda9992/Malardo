@@ -10,7 +10,6 @@ public class PackInteractable : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
-
     public void SetJokerInfo(JokerData createdJoker)
     {
         jokerData = createdJoker;
@@ -18,6 +17,15 @@ public class PackInteractable : MonoBehaviour
         GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description);
         cardName.text = createdJoker.jokerName;
         ListenForAvaliability();
+    }
+
+    public void SetPackCard()
+    {
+        Card createdCard = new Card();
+        createdCard = createdCard.GenerateRandomCard();
+
+        GetComponent<CardVisuals>().SetVisuals(createdCard);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips");
     }
 
     public void ListenForAvaliability()

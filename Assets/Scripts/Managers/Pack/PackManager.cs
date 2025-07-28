@@ -8,11 +8,13 @@ public class PackManager : MonoBehaviour
     [SerializeField] private GameObject packSection;
     [SerializeField] private JokerListContainer jokerListContainer;
     [SerializeField] private GameObject PackInteractablePrefab;
+    [SerializeField] private GameObject cardPackInteractablePrefab;
     [SerializeField] private Transform itemsDisplay;
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI packNameLabel;
     [SerializeField] private TextMeshProUGUI selectAmmountLabel;
     private int maxSelections = 1;
+    [SerializeField] private PackData testPack;
     void Awake()
     {
         instance = this;
@@ -26,12 +28,7 @@ public class PackManager : MonoBehaviour
         packNameLabel.text = packDesired.packName;
         selectAmmountLabel.text = "Choose " + maxSelections;
 
-        switch (packDesired.packType)
-        {
-            case PackType.Buffon:
-                CreateBuffonPack(packDesired.numberOfCards);
-                break;
-        }
+        CreatePack(packDesired.numberOfCards, packDesired.packType);
     }
     private void SetAllUIStatus(bool status)
     {
@@ -43,13 +40,22 @@ public class PackManager : MonoBehaviour
         packSection.SetActive(!status);
     }
 
-    private void CreateBuffonPack(int cardsToCreate)
+    private void CreatePack(int cardsToCreate, PackType packType)
     {
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
         for (int i = 0; i < cardsToCreate; i++)
         {
-            GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
-            item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
+
+            if (packType == PackType.Buffon)
+            {
+                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
+                item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
+            }
+            else if (packType == PackType.Card)
+            {
+                GameObject item = Instantiate(cardPackInteractablePrefab, itemsDisplay);
+                item.GetComponent<PackInteractable>().SetPackCard();
+            }
 
         }
     }
@@ -72,6 +78,11 @@ public class PackManager : MonoBehaviour
         CardManager.DestroyChildsInParent(itemsDisplay);
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
     }
+    [ContextMenu("Create pack")]
+    private void TestPack()
+    {
+        ReceiveCreatePackInstruction(testPack);
+    }
 }
 
 public enum PackType
@@ -80,5 +91,6 @@ public enum PackType
     Buffon,
     Tarot,
     Planet,
-    Spectral
+    Spectral,
+    Card
 }

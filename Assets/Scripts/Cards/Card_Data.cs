@@ -45,12 +45,38 @@ public class Card
     public CardEdition cardEdition = CardEdition.Base;
     public Card GenerateRandomCard()
     {
-        Card card = new Card();
+        
+        this.number = Random.Range(1, 14);
+        this.cardSuit = GetRandomCardSuit();
+        this.cardType = GetRandomCardType();
+        this.cardSeal = GenerateRandomSeal();
+        this.cardEdition = GenerateRandomEdition();
 
-        card.number = Random.Range(1, 14);
-        card.cardSuit = GetRandomCardSuit();
+        SetCardChipAmmount();
+        SetCardName();
 
-        return card;
+        return this;
+    }
+
+    private CardEdition GenerateRandomEdition()
+    {
+        CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
+
+        return cardEditions[Random.Range(0, cardEditions.Length)];
+    }
+
+    private CardType GetRandomCardType()
+    {
+        CardType[] cardTypes = new CardType[] { CardType.Default, CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult };
+
+        return cardTypes[Random.Range(0, cardTypes.Length)];
+    }
+
+    private Seal GenerateRandomSeal()
+    {
+        Seal[] allSeals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
+
+        return allSeals[Random.Range(0, allSeals.Length)];
     }
 
     private Suit GetRandomCardSuit()
