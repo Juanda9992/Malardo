@@ -57,7 +57,7 @@ public class JokerSpawner : MonoBehaviour
         for (int i = 0; i < 2; i++)
         {
             GameObject shopPack = Instantiate(shopPackPrefab, packsTransform);
-            shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomBuffonPack());
+            shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomPack());
         }
     }
 }

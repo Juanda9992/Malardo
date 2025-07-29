@@ -1943,9 +1943,11 @@ MonoBehaviour:
   packSection: {fileID: 416426809}
   jokerListContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   PackInteractablePrefab: {fileID: 8474415298235704520, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
+  cardPackInteractablePrefab: {fileID: 6688547606430180803, guid: 91f5b06580d35e34c8eedaeb4d207707, type: 3}
   itemsDisplay: {fileID: 1586341713}
   packNameLabel: {fileID: 356507890}
   selectAmmountLabel: {fileID: 579035401}
+  testPack: {fileID: 11400000, guid: 8f53d24fdb30580469f14bb84252af0b, type: 2}
 --- !u!1 &246778548
 GameObject:
   m_ObjectHideFlags: 0
