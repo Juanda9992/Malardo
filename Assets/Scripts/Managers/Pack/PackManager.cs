@@ -42,17 +42,18 @@ public class PackManager : MonoBehaviour
 
     private void CreatePack(int cardsToCreate, PackType packType)
     {
-        BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
         for (int i = 0; i < cardsToCreate; i++)
         {
 
             if (packType == PackType.Buffon)
             {
+                BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
                 GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
             }
             else if (packType == PackType.Card)
             {
+                BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.cardPackBgColor);
                 GameObject item = Instantiate(cardPackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetPackCard();
             }
