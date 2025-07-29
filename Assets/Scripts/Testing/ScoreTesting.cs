@@ -16,4 +16,16 @@ public class ScoreTesting : MonoBehaviour
     {
         ScoreManager.instance.AddChips(chips);
     }
+    [ContextMenu("Generate Cards")]
+    private void TestCardTypes()
+    {
+        Card card = new Card();
+        for (int i = 0; i < 1000; i++)
+        {
+            card = card.GenerateRandomCard();
+            Debug.Log(card.cardEdition);
+            Debug.Log(card.cardSeal);
+            Debug.Log(card.cardType);
+        }
+    }
 }

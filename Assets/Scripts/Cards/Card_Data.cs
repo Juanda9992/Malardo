@@ -45,7 +45,7 @@ public class Card
     public CardEdition cardEdition = CardEdition.Base;
     public Card GenerateRandomCard()
     {
-        
+
         this.number = Random.Range(1, 14);
         this.cardSuit = GetRandomCardSuit();
         this.cardType = GetRandomCardType();
@@ -60,23 +60,52 @@ public class Card
 
     private CardEdition GenerateRandomEdition()
     {
-        CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
+        int chanceGenerator = Random.Range(0, 100);
 
-        return cardEditions[Random.Range(0, cardEditions.Length)];
+        if (chanceGenerator < 92)
+        {
+            return CardEdition.Base;
+        }
+        else if (chanceGenerator < 96)
+        {
+            return CardEdition.Foil;
+        }
+        else if (chanceGenerator < 98)
+        {
+            return CardEdition.Holographic;
+        }
+        else
+        {
+            return CardEdition.Polychrome;
+        }
+
     }
 
     private CardType GetRandomCardType()
     {
-        CardType[] cardTypes = new CardType[] { CardType.Default, CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult };
+        int generator = Random.Range(0, 100);
+        CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult };
 
-        return cardTypes[Random.Range(0, cardTypes.Length)];
+
+        if (generator < 30)
+        {
+            return cardTypes[Random.Range(0, cardTypes.Length)];
+        }
+        else
+        {
+            return CardType.Default;
+        }
     }
 
     private Seal GenerateRandomSeal()
     {
-        Seal[] allSeals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
-
-        return allSeals[Random.Range(0, allSeals.Length)];
+        Seal[] allSeals = new Seal[] { Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
+        int generator = Random.Range(0, 100);
+        if (generator < 20)
+        {
+            return allSeals[Random.Range(0, allSeals.Length)];
+        }
+        return Seal.None;
     }
 
     private Suit GetRandomCardSuit()
