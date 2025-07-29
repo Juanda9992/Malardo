@@ -1947,7 +1947,7 @@ MonoBehaviour:
   itemsDisplay: {fileID: 1586341713}
   packNameLabel: {fileID: 356507890}
   selectAmmountLabel: {fileID: 579035401}
-  testPack: {fileID: 11400000, guid: 8f53d24fdb30580469f14bb84252af0b, type: 2}
+  testPack: {fileID: 11400000, guid: 20db63ab0f6ba65429dbbdf9ffdbd2d6, type: 2}
 --- !u!1 &246778548
 GameObject:
   m_ObjectHideFlags: 0
