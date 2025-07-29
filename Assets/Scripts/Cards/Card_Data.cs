@@ -158,6 +158,10 @@ public class Card
         {
             cardName = "Ace of " + cardSuit.ToString();
         }
+        if (cardType == CardType.Stone)
+        {
+            cardName = "Stone Card";
+        }
     }
 
     public void DegubCardInfo()
