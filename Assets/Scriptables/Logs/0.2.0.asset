@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: 0.2.0
   m_EditorClassIdentifier: 
   versionName: Alpha 0.2.0
-  logcontent: "<b>Added</>\n- Standard Packs: This packs contains game cards that
+  logcontent: "<b>Added</b>\n\n- Standard Packs: This packs contains game cards that
     can be added to your full deck. This packs appear randomly at the shop and appear
-    on 3 sizes (Normal, Jumbo and Mega).\n\n-Card Editions: These are modifiers applied
-    to the cards with extra effects:\n\t\u2022Foil: Gives +50 chips when the card
-    scores.\n\t\u2022Holographic: Gives +4 mult when the card scores.\n\t\u2022Polychrome:
-    Gives x1.5 mult when the card scores.\n- Card Seals: Seals are modifiers with
-    different effects.\n\t\u2022Red Seal: Reactivates the card 1 more time.\n\t\u2022Gold
-    Seal: Gives $4 money when the card scores. \n-Card Types: Card types are modifiers
-    that changes the card behaviour:\n\t\u2022Mult Card: Gives 4 mult when the card
-    scores.\n\t\u2022Bonus Card: Gives 30 chips when the card scores.\n\t\u2022Glass
-    Card: Gives x2 mult when scored, 1 in 4 to break the card.\n\t\u2022Lucky Card:
-    1 in 5 chance for +20 Mult and 1 in 15 chance to win $20.\n\t\u2022Stone Card:
-    Gives +50 chips when scored, can be played in every hand.\n\t\u2022Gold Card:
-    Gives $3 when the card remains in the hand.\n\t\u2022Steel Card: Gives x1.5 mult
-    when the card remains in the hand\n-Visuals for the mult and bonus card.\n-Background
-    colors on some jokers.\n\n<b>Fixed</>\n-Stone card was not setting it\xB4s name
-    properly."
+    on 3 sizes (Normal, Jumbo and Mega).\n\n- Card Editions: These are modifiers
+    applied to the cards with extra effects:\n\t\u2022 Foil: Gives +50 chips when
+    the card scores.\n\t\u2022 Holographic: Gives +4 mult when the card scores.\n\t\u2022
+    Polychrome: Gives x1.5 mult when the card scores.\n\n- Card Seals: Seals are
+    modifiers with different effects.\n\t\u2022 Red Seal: Reactivates the card 1
+    more time.\n\t\u2022 Gold Seal: Gives $4 money when the card scores. \n\n-Card
+    Types: Card types are modifiers that changes the card behaviour:\n\t\u2022 Mult
+    Card: Gives 4 mult when the card scores.\n\t\u2022 Bonus Card: Gives 30 chips
+    when the card scores.\n\t\u2022 Glass Card: Gives x2 mult when scored, 1 in 4
+    to break the card.\n\t\u2022 Lucky Card: 1 in 5 chance for +20 Mult and 1 in
+    15 chance to win $20.\n\t\u2022 Stone Card: Gives +50 chips when scored, can
+    be played in every hand.\n\t\u2022 Gold Card: Gives $3 when the card remains
+    in the hand.\n\t\u2022 Steel Card: Gives x1.5 mult when the card remains in the
+    hand.\n\n-Background colors on some jokers.\n\n<b>Fixed</b>\n\n- Stone card was
+    not setting it\xB4s name properly."
