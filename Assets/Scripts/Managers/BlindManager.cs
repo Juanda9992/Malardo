@@ -18,6 +18,7 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentRoundText, currentBetLevelText;
     [SerializeField] private TextMeshProUGUI rewardLabel;
     [SerializeField] private TextMeshProUGUI blindNameText;
+    [SerializeField] private Image blindSprite;
     [SerializeField] private Image[] bgImages;
 
     public event Action OnBlindDefeated;
@@ -65,7 +66,7 @@ public class BlindManager : MonoBehaviour
 
         rewardLabel.text += "</b></color>";
 
-
+        blindSprite.sprite = blindScoreData.allBlinds[currentBlindProgress].blindSprite;
         foreach (var bg in bgImages)
         {
             float previousAlpha = bg.color.a;

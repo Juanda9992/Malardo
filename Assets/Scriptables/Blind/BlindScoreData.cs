@@ -14,5 +14,6 @@ public class BlindData
     public float scoreMultiplier;
     public int blindMoney;
 
+    public Sprite blindSprite;
     public Color blindColor;
 }
