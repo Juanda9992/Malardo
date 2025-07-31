@@ -4619,6 +4619,7 @@ MonoBehaviour:
   currentBetLevelText: {fileID: 53951767}
   rewardLabel: {fileID: 2007653571}
   blindNameText: {fileID: 1100527645}
+  blindSprite: {fileID: 56644138}
   bgImages:
   - {fileID: 1932899721}
   - {fileID: 331842989}

@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardVisuals : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI upperNumber, lowerNumber;
     [SerializeField] private Image cardImage;
     [SerializeField] private int rotationRange;
 
@@ -26,8 +22,7 @@ public class CardVisuals : MonoBehaviour
     public void SetVisuals(Card card)
     {
         _card = card;
-        SetLetterOrNumber();
-        SetCardColor();
+        cardImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
@@ -75,31 +70,6 @@ public class CardVisuals : MonoBehaviour
 
     }
 
-    private void SetLetterOrNumber()
-    {
-
-        if (_card.number == 11)
-        {
-            SetNumberTextValue("J");
-        }
-        else if (_card.number == 12)
-        {
-            SetNumberTextValue("Q");
-        }
-        else if (_card.number == 13)
-        {
-            SetNumberTextValue("K");
-        }
-        else if (_card.number == 1)
-        {
-            SetNumberTextValue("A");
-        }
-        else
-        {
-            SetNumberTextValue(_card.number.ToString());
-        }
-    }
-
     private void SetCardTypeVisuals()
     {
         if (_card.cardType == CardType.Gold)
@@ -118,8 +88,6 @@ public class CardVisuals : MonoBehaviour
         else if (_card.cardType == CardType.Stone)
         {
             cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
-            upperNumber.gameObject.SetActive(false);
-            lowerNumber.gameObject.SetActive(false);
         }
         else if (_card.cardType == CardType.Glass)
         {
@@ -134,33 +102,5 @@ public class CardVisuals : MonoBehaviour
             multCardVisuals.SetActive(true);
         }
     }
-    private void SetVisualsColors(int number)
-    {
-        upperNumber.color = CardVisualsDatabase.GetInstance().suitsColor[number];
-        lowerNumber.color = CardVisualsDatabase.GetInstance().suitsColor[number];
-    }
-    private void SetNumberTextValue(string value)
-    {
-        upperNumber.text = value;
-        lowerNumber.text = value;
-    }
 
-    private void SetCardColor()
-    {
-        switch (_card.cardSuit)
-        {
-            case Suit.Hearth:
-                SetVisualsColors(0);
-                break;
-            case Suit.Diamond:
-                SetVisualsColors(1);
-                break;
-            case Suit.Spades:
-                SetVisualsColors(2);
-                break;
-            case Suit.Clover:
-                SetVisualsColors(3);
-                break;
-        }
-    }
 }
