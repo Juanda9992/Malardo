@@ -62,10 +62,17 @@ public class CardPlayer : MonoBehaviour
     {
         for (int i = 0; i < currentHand.Count; i++)
         {
-            for (int j = 0; j < 1; j++)
+            if (!currentHand[i].canPlay)
             {
-                yield return PlayCard(currentHand[i]);
+                ScoreSign.instance.SetMessage(Color.black, "NO!", currentHand[i].linkedCard.transform.position);
+                yield return new WaitForSeconds(0.4f);
+                continue;
             }
+            for (int j = 0; j < 1; j++)
+                {
+                    yield return PlayCard(currentHand[i]);
+
+                }
 
             if (currentHand[i].cardSeal == Seal.Red)
             {
