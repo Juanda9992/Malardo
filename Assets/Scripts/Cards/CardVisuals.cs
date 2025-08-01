@@ -8,7 +8,7 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
-    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals;
+    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals, disabledCardVisuals;
     [SerializeField] private Image seal;
     private Card _card;
 
@@ -101,6 +101,11 @@ public class CardVisuals : MonoBehaviour
         {
             multCardVisuals.SetActive(true);
         }
+    }
+    public void SetCardDisabled(bool disabled)
+    {
+        Debug.Log(disabled);
+        disabledCardVisuals.SetActive(disabled);
     }
 
 }

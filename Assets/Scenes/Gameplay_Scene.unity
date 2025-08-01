@@ -3626,6 +3626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardColorDatabase: {fileID: 11400000, guid: 7c2d778a4a165c748b20f6cde6148bf7, type: 2}
   shopPacksDatabase: {fileID: 11400000, guid: 55a2077b955cb9740a835b6b6d0afb79, type: 2}
+  cardSpriteDatabase: {fileID: 11400000, guid: 24948b442d2bee74d8186869dffde7f1, type: 2}
 --- !u!1 &500020279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,7 +4433,6 @@ GameObject:
   - component: {fileID: 621395124}
   - component: {fileID: 621395125}
   - component: {fileID: 621395126}
-  - component: {fileID: 621395127}
   - component: {fileID: 621395128}
   - component: {fileID: 621395130}
   - component: {fileID: 621395132}
@@ -4482,6 +4482,7 @@ Transform:
   - {fileID: 691819087}
   - {fileID: 351884984}
   - {fileID: 1460685955}
+  - {fileID: 1192478474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621395121
@@ -4596,33 +4597,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa2e98bf5bb4ba74fb53fbda71efef14, type: 2}
   - {fileID: 11400000, guid: aa8644c9217636f4aafee0b56a8556b5, type: 2}
   handNameText: {fileID: 676285008}
---- !u!114 &621395127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621395118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c6417fd0f61ac4439648833284623ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anteLevel: 0
-  blindMoney: 0
-  requiredScore: 0
-  currentRound: 1
-  blindScoreData: {fileID: 11400000, guid: f171bf8cc83c86941840c7450e2ca553, type: 2}
-  currentBlindProgress: 0
-  requiredScoreText: {fileID: 1521434767}
-  currentRoundText: {fileID: 1243770143}
-  currentBetLevelText: {fileID: 53951767}
-  rewardLabel: {fileID: 2007653571}
-  blindNameText: {fileID: 1100527645}
-  blindSprite: {fileID: 56644138}
-  bgImages:
-  - {fileID: 1932899721}
-  - {fileID: 331842989}
 --- !u!114 &621395128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7588,7 +7562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 621395127}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BlindManager, Assembly-CSharp
         m_MethodName: IncreaseBetlevel
         m_Mode: 1
@@ -8539,6 +8513,65 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: 0}
   m_SizeDelta: {x: -60, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1192478473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192478474}
+  - component: {fileID: 1192478476}
+  m_Layer: 0
+  m_Name: Blind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192478474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192478473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621395120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1192478476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192478473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6417fd0f61ac4439648833284623ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anteLevel: 0
+  blindMoney: 0
+  requiredScore: 0
+  currentRound: 1
+  blindScoreData: {fileID: 11400000, guid: f171bf8cc83c86941840c7450e2ca553, type: 2}
+  currentBlindProgress: 0
+  requiredScoreText: {fileID: 1521434767}
+  currentRoundText: {fileID: 1243770143}
+  currentBetLevelText: {fileID: 53951767}
+  rewardLabel: {fileID: 2007653571}
+  blindNameText: {fileID: 1100527645}
+  blindSprite: {fileID: 56644138}
+  bgImages:
+  - {fileID: 1932899721}
+  - {fileID: 331842989}
 --- !u!1 &1195999453
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,12 +21,63 @@ public class Card_Data : MonoBehaviour
         card.SetCardChipAmmount();
         card.SetCardName();
         visuals.SetVisuals(currentCard);
+        if (DebuffSuitBlind.suitDebuffed == currentCard.cardSuit)
+        {
+            DebuffCard();
+        }
     }
 
     [ContextMenu("TestVisuals")]
     private void TestCardVisuals()
     {
         visuals.SetVisuals(currentCard);
+    }
+
+    private void DisableCard()
+    {
+        currentCard.canPlay = false;
+    }
+
+    private void EnableCard()
+    {
+        currentCard.canPlay = true;
+    }
+
+    private void CheckForSuitDebuffed(Suit suit, bool status)
+    {
+        if (!status)
+        {
+            BuffCard();
+        }
+        if (currentCard.cardSuit == suit)
+        {
+            DebuffCard();
+        }
+        else
+        {
+            BuffCard();
+        }
+    }
+
+    private void DebuffCard()
+    {
+        visuals.SetCardDisabled(true);
+        DisableCard();
+    }
+    private void BuffCard()
+    {
+        visuals.SetCardDisabled(false);
+        EnableCard();
+    }
+
+    void OnEnable()
+    {
+        DebuffSuitBlind.OnDebuffBlindStatus += CheckForSuitDebuffed;
+    }
+
+    void OnDisable()
+    {
+        DebuffSuitBlind.OnDebuffBlindStatus -= CheckForSuitDebuffed;
     }
 }
 
@@ -43,6 +94,7 @@ public class Card
     public CardType cardType = CardType.Default;
     public Seal cardSeal = Seal.None;
     public CardEdition cardEdition = CardEdition.Base;
+    public bool canPlay = true;
     public Card GenerateRandomCard()
     {
 
@@ -168,6 +220,7 @@ public class Card
     {
         Debug.Log($"Number {number}, Suit {cardSuit}");
     }
+
 }
 
 public enum Suit
@@ -175,7 +228,8 @@ public enum Suit
     Diamond,
     Hearth,
     Spades,
-    Clover
+    Clover,
+    None
 }
 public enum Seal
 {
