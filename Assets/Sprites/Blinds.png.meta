@@ -110,43 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small_Blind
+      name: Blinds_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 96
-        height: 98
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70781841edc924e44b15938aaee90fc4
-      internalID: -1537404773
+      spriteID: 6a88fa1131372574ea2a4ea0211ce3ea
+      internalID: 616133785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Blind
+      name: Blinds_1
       rect:
         serializedVersion: 2
-        x: 102
+        x: 100
         y: 0
-        width: 96
-        height: 98
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5594247a25d92e4e90cc146f54efe73
-      internalID: 1162639697
+      spriteID: 24bb336617802fe49af679750b92da2c
+      internalID: -59247362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blinds_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1663dd1a456ffae4b86e607111a01565
+      internalID: 849174279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blinds_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd83c45ef835004c8ed9dafe848241a
+      internalID: -1325151995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blinds_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff953c73c6a82f2419bfbd5a0890e2a3
+      internalID: -1312987366
       vertices: []
       indices: 
       edges: []
@@ -162,8 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Big_Blind: 1162639697
-      Small_Blind: -1537404773
+      Blinds_0: 616133785
+      Blinds_1: -59247362
+      Blinds_2: 849174279
+      Blinds_3: -1325151995
+      Blinds_4: -1312987366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
