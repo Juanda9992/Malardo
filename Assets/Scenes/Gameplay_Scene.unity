@@ -4646,6 +4646,7 @@ MonoBehaviour:
       cardType: 2
       cardSeal: 0
       cardEdition: 0
+      canPlay: 1
     playedHand: 0
     currentGameStatus: 0
     jokersInMatch: 0
