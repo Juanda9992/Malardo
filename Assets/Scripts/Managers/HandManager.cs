@@ -154,6 +154,7 @@ public class HandManager : MonoBehaviour
 
     private void ResetHandsAndDiscards()
     {
+        Debug.Log("Reset");
         hands = defaultHands;
         discards = defaultDiscards;
 

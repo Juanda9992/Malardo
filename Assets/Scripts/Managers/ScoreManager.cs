@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
     {
         BlindManager.instance.OnBlindDefeated += ResetRoundScore;
         scoreText.text = "0";
-        totalScoreText.text = "0";
+        totalScoreText.text = "";
     }
 
     public void AddChips(int value)
@@ -77,6 +77,7 @@ public class ScoreManager : MonoBehaviour
             StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
             GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
             GameStatusManager._Status.handPlayedData.playedHandsInRound = new System.Collections.Generic.List<HandType>();
+            totalScoreText.text = "0";
         }
         else
         {
