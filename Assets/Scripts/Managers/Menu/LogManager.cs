@@ -17,8 +17,8 @@ public class LogManager : MonoBehaviour
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < logContainer.logStory.Count; i++)
         {
-            stringBuilder.Append(logContainer.logStory[i].versionName + '\n'+'\n');
-            stringBuilder.Append(logContainer.logStory[i].logcontent);
+            stringBuilder.Append("<size=200%><b>" +logContainer.logStory[i].versionName + "</b></size>" + '\n'+'\n');
+            stringBuilder.Append(logContainer.logStory[i].logcontent+'\n'+'\n');
         }
 
         logText.text = stringBuilder.ToString();
