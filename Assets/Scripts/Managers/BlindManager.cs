@@ -29,7 +29,7 @@ public class BlindManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetRequiredScore();        
+        SetRequiredScore();
     }
 
     public void SetRequiredScore()
@@ -42,17 +42,10 @@ public class BlindManager : MonoBehaviour
 
         SetUpUI();
 
-        if (currentBlindProgress == 2)
-        {
-            Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+        Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
 
-            blindColor *= 0.6f;
-            BackgroundManager.instance.SetBgColor(blindColor);
-        }
-        else
-        {
-            BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
-        }
+        blindColor *= 0.6f;
+        BackgroundManager.instance.SetBgColor(blindColor);
 
     }
     private void SetUpUI()
@@ -74,7 +67,7 @@ public class BlindManager : MonoBehaviour
             blindColor.a = previousAlpha;
 
             bg.color = blindColor;
-            
+
         }
 
         blindNameText.text = blindScoreData.allBlinds[currentBlindProgress].blindName;
