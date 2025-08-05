@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94150b3482866574ca8ba2f07f2e13c5, type: 3}
+  m_Name: The Water
+  m_EditorClassIdentifier: 
+  blindName: The Water
+  blindDescription: Starts with 0 discards
+  blindSprite: {fileID: 2117460178, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
+  blindColor: {r: 0.7764706, g: 0.8784314, b: 0.92156863, a: 1}
+  noDiscards: 1
