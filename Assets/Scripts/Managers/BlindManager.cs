@@ -49,8 +49,15 @@ public class BlindManager : MonoBehaviour
     private void SetUpBGColor(Color currentBlindColor)
     {
         Color blindColor = currentBlindColor;
-        blindColor *= 0.6f;
-        BackgroundManager.instance.SetBgColor(blindColor);
+        BackgroundManager.instance.SetBgColor(blindColor * 0.6f);
+
+        foreach (var bg in bgImages)
+        {
+            float previousAlpha = bg.color.a;
+            blindColor.a = previousAlpha;
+
+            bg.color = blindColor;
+        }
     }
     private void SetUpUI()
     {
@@ -64,15 +71,6 @@ public class BlindManager : MonoBehaviour
         rewardLabel.text += "</b></color>";
 
         blindSprite.sprite = blindScoreData.allBlinds[currentBlindProgress].blindSprite;
-        foreach (var bg in bgImages)
-        {
-            float previousAlpha = bg.color.a;
-            Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
-            blindColor.a = previousAlpha;
-
-            bg.color = blindColor;
-
-        }
 
         blindNameText.text = blindScoreData.allBlinds[currentBlindProgress].blindName;
     }
@@ -111,6 +109,7 @@ public class BlindManager : MonoBehaviour
         SetUpBGColor(currentBlind.blindColor);
 
         currentBlind.ApplyEffect();
+        blindNameText.text = blindScoreData.bossBlinds[currentBlindProgress].blindName;
     }
 
     public void HideShop()
