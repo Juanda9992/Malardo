@@ -277,6 +277,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Blinds_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa7196d736d91540b1107ad8dec3c9b
+      internalID: 2117460178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -296,6 +317,7 @@ TextureImporter:
       Blinds_5: -525266090
       Blinds_6: 366731200
       Blinds_7: 335826847
+      Blinds_8: 2117460178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
