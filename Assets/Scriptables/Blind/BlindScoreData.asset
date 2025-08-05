@@ -29,3 +29,8 @@ MonoBehaviour:
     blindMoney: 5
     blindSprite: {fileID: 1162639697, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
     blindColor: {r: 0.8415094, g: 0, b: 0.031144425, a: 1}
+  bossBlinds:
+  - {fileID: 11400000, guid: ba96e22f798d54b40a7d8442376c7996, type: 2}
+  - {fileID: 11400000, guid: 4fe84dcbffc409e418885297de0d7972, type: 2}
+  - {fileID: 11400000, guid: 5dd29b097f999ec489ed5b5236339eca, type: 2}
+  - {fileID: 11400000, guid: 52ba9948000e38847a55f6296ff655d3, type: 2}

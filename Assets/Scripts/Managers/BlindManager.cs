@@ -1,4 +1,5 @@
 using System;
+using Random = UnityEngine.Random;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,12 +42,15 @@ public class BlindManager : MonoBehaviour
         blindMoney = blindScoreData.allBlinds[currentBlindProgress].blindMoney;
 
         SetUpUI();
+        SetUpBGColor(blindScoreData.allBlinds[currentBlindProgress].blindColor);
 
-        Color blindColor = blindScoreData.allBlinds[currentBlindProgress].blindColor;
+    }
 
+    private void SetUpBGColor(Color currentBlindColor)
+    {
+        Color blindColor = currentBlindColor;
         blindColor *= 0.6f;
         BackgroundManager.instance.SetBgColor(blindColor);
-
     }
     private void SetUpUI()
     {
@@ -92,6 +96,21 @@ public class BlindManager : MonoBehaviour
         }
         currentRoundText.text = currentRound.ToString();
         SetRequiredScore();
+
+        if (currentBlindProgress == 2)
+        {
+            SetUpBossBlind();
+        }
+    }
+
+    private void SetUpBossBlind()
+    {
+        CurrentBlind currentBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.allBlinds.Length)];
+        Debug.Log(currentBlind.blindName);
+
+        SetUpBGColor(currentBlind.blindColor);
+
+        currentBlind.ApplyEffect();
     }
 
     public void HideShop()

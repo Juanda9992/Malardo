@@ -5,6 +5,7 @@ public class BlindScoreData : ScriptableObject
 {
     public int[] baseScore;
     public BlindData[] allBlinds;
+    public CurrentBlind[] bossBlinds;
 }
 
 [System.Serializable]
