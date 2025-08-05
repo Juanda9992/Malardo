@@ -172,15 +172,19 @@ public class HandManager : MonoBehaviour
         }
     }
 
-    public void SetDefaultDiscards(int ammount)
+    public void SetDefaultDiscards(int ammount, bool matchDiscards = false)
     {
         defaultDiscards = ammount;
 
         if (discards > defaultDiscards)
         {
             discards = defaultDiscards;
-            UpdateDiscardText();
         }
+        if (matchDiscards)
+        {
+            discards = ammount;
+        }
+        UpdateDiscardText();
     }
 
     public int GetHandsRemaining()
