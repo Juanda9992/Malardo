@@ -49,6 +49,12 @@ public class BlindManager : MonoBehaviour
 
     }
 
+    public void SetCustomRequiredScore(int newScore)
+    {
+        requiredScore = newScore;
+        requiredScoreText.text = requiredScore.ToString();
+    }
+
     private void SetUpBGColor(Color currentBlindColor)
     {
         Color blindColor = currentBlindColor;
@@ -129,6 +135,11 @@ public class BlindManager : MonoBehaviour
     public void HideShop()
     {
         gameObject.SetActive(false);
+    }
+
+    public int GetRoundBaseScore()
+    {
+        return blindScoreData.baseScore[anteLevel];
     }
 
 }
