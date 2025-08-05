@@ -22,7 +22,7 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blindNameText;
     [SerializeField] private Image blindSprite;
     [SerializeField] private Image[] bgImages;
-    [SerializeField] private TextMeshProUGUI blindEffectText;
+    [SerializeField] private TextMeshProUGUI blindEffectText, blindDescriptionText;
 
     public event Action OnBlindDefeated;
     void Awake()
@@ -37,6 +37,7 @@ public class BlindManager : MonoBehaviour
 
     public void SetRequiredScore()
     {
+        blindDescriptionText.text = string.Empty;
         currentRoundText.text = currentRound.ToString();
         currentBetLevelText.text = (anteLevel + 1) + " / 4";
 
@@ -114,6 +115,7 @@ public class BlindManager : MonoBehaviour
         blindNameText.text = blindScoreData.bossBlinds[currentBlindProgress].blindName;
         blindEffectText.gameObject.SetActive(true);
         blindEffectText.text = currentBlind.blindDescription;
+        blindDescriptionText.text = currentBlind.blindDescription;
 
         StartCoroutine(nameof(HideBlindText));
     }
