@@ -3,6 +3,7 @@ using Random = UnityEngine.Random;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class BlindManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blindNameText;
     [SerializeField] private Image blindSprite;
     [SerializeField] private Image[] bgImages;
+    [SerializeField] private TextMeshProUGUI blindEffectText;
 
     public event Action OnBlindDefeated;
     void Awake()
@@ -110,6 +112,16 @@ public class BlindManager : MonoBehaviour
 
         currentBlind.ApplyEffect();
         blindNameText.text = blindScoreData.bossBlinds[currentBlindProgress].blindName;
+        blindEffectText.gameObject.SetActive(true);
+        blindEffectText.text = currentBlind.blindDescription;
+
+        StartCoroutine(nameof(HideBlindText));
+    }
+
+    private IEnumerator HideBlindText()
+    {
+        yield return new WaitForSeconds(5);
+        blindEffectText.gameObject.SetActive(false);
     }
 
     public void HideShop()
