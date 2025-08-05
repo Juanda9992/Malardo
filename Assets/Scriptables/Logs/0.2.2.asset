@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
-  m_Name: 0.2.0 1
+  m_Name: 0.2.2
   m_EditorClassIdentifier: 
-  versionName: Alpha 0.2.1
+  versionName: Alpha 0.2.2
   logcontent: '<b>Fixed</b>
 
 
-    - Background colors not seting properly on each
-    blind.
-
-    - Hands, discards and score not reseting on every round.'
+    - Ace sprite was missing on every suit'

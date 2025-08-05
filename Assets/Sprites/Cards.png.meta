@@ -113,7 +113,7 @@ TextureImporter:
       name: Cards_0
       rect:
         serializedVersion: 2
-        x: 140
+        x: 0
         y: 570
         width: 142
         height: 190
@@ -134,7 +134,7 @@ TextureImporter:
       name: Cards_1
       rect:
         serializedVersion: 2
-        x: 282
+        x: 142
         y: 570
         width: 142
         height: 190
@@ -155,7 +155,7 @@ TextureImporter:
       name: Cards_2
       rect:
         serializedVersion: 2
-        x: 424
+        x: 284
         y: 570
         width: 142
         height: 190
@@ -176,7 +176,7 @@ TextureImporter:
       name: Cards_3
       rect:
         serializedVersion: 2
-        x: 566
+        x: 426
         y: 570
         width: 142
         height: 190
@@ -197,7 +197,7 @@ TextureImporter:
       name: Cards_4
       rect:
         serializedVersion: 2
-        x: 708
+        x: 568
         y: 570
         width: 142
         height: 190
@@ -218,7 +218,7 @@ TextureImporter:
       name: Cards_5
       rect:
         serializedVersion: 2
-        x: 850
+        x: 710
         y: 570
         width: 142
         height: 190
@@ -239,7 +239,7 @@ TextureImporter:
       name: Cards_6
       rect:
         serializedVersion: 2
-        x: 992
+        x: 852
         y: 570
         width: 142
         height: 190
@@ -260,7 +260,7 @@ TextureImporter:
       name: Cards_7
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 994
         y: 570
         width: 142
         height: 190
@@ -281,7 +281,7 @@ TextureImporter:
       name: Cards_8
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 1136
         y: 570
         width: 142
         height: 190
@@ -302,7 +302,7 @@ TextureImporter:
       name: Cards_9
       rect:
         serializedVersion: 2
-        x: 1418
+        x: 1278
         y: 570
         width: 142
         height: 190
@@ -323,7 +323,7 @@ TextureImporter:
       name: Cards_10
       rect:
         serializedVersion: 2
-        x: 1560
+        x: 1420
         y: 570
         width: 142
         height: 190
@@ -344,7 +344,7 @@ TextureImporter:
       name: Cards_11
       rect:
         serializedVersion: 2
-        x: 1702
+        x: 1562
         y: 570
         width: 142
         height: 190
@@ -365,7 +365,7 @@ TextureImporter:
       name: Cards_12
       rect:
         serializedVersion: 2
-        x: 1844
+        x: 1704
         y: 570
         width: 142
         height: 190
@@ -386,7 +386,7 @@ TextureImporter:
       name: Cards_13
       rect:
         serializedVersion: 2
-        x: 140
+        x: 0
         y: 380
         width: 142
         height: 190
@@ -407,7 +407,7 @@ TextureImporter:
       name: Cards_14
       rect:
         serializedVersion: 2
-        x: 282
+        x: 142
         y: 380
         width: 142
         height: 190
@@ -428,7 +428,7 @@ TextureImporter:
       name: Cards_15
       rect:
         serializedVersion: 2
-        x: 424
+        x: 284
         y: 380
         width: 142
         height: 190
@@ -449,7 +449,7 @@ TextureImporter:
       name: Cards_16
       rect:
         serializedVersion: 2
-        x: 566
+        x: 426
         y: 380
         width: 142
         height: 190
@@ -470,7 +470,7 @@ TextureImporter:
       name: Cards_17
       rect:
         serializedVersion: 2
-        x: 708
+        x: 568
         y: 380
         width: 142
         height: 190
@@ -491,7 +491,7 @@ TextureImporter:
       name: Cards_18
       rect:
         serializedVersion: 2
-        x: 850
+        x: 710
         y: 380
         width: 142
         height: 190
@@ -512,7 +512,7 @@ TextureImporter:
       name: Cards_19
       rect:
         serializedVersion: 2
-        x: 992
+        x: 852
         y: 380
         width: 142
         height: 190
@@ -533,7 +533,7 @@ TextureImporter:
       name: Cards_20
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 994
         y: 380
         width: 142
         height: 190
@@ -554,7 +554,7 @@ TextureImporter:
       name: Cards_21
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 1136
         y: 380
         width: 142
         height: 190
@@ -575,7 +575,7 @@ TextureImporter:
       name: Cards_22
       rect:
         serializedVersion: 2
-        x: 1418
+        x: 1278
         y: 380
         width: 142
         height: 190
@@ -596,7 +596,7 @@ TextureImporter:
       name: Cards_23
       rect:
         serializedVersion: 2
-        x: 1560
+        x: 1420
         y: 380
         width: 142
         height: 190
@@ -617,7 +617,7 @@ TextureImporter:
       name: Cards_24
       rect:
         serializedVersion: 2
-        x: 1702
+        x: 1562
         y: 380
         width: 142
         height: 190
@@ -638,7 +638,7 @@ TextureImporter:
       name: Cards_25
       rect:
         serializedVersion: 2
-        x: 1844
+        x: 1704
         y: 380
         width: 142
         height: 190
@@ -659,7 +659,7 @@ TextureImporter:
       name: Cards_26
       rect:
         serializedVersion: 2
-        x: 140
+        x: 0
         y: 190
         width: 142
         height: 190
@@ -680,7 +680,7 @@ TextureImporter:
       name: Cards_27
       rect:
         serializedVersion: 2
-        x: 282
+        x: 142
         y: 190
         width: 142
         height: 190
@@ -701,7 +701,7 @@ TextureImporter:
       name: Cards_28
       rect:
         serializedVersion: 2
-        x: 424
+        x: 284
         y: 190
         width: 142
         height: 190
@@ -722,7 +722,7 @@ TextureImporter:
       name: Cards_29
       rect:
         serializedVersion: 2
-        x: 566
+        x: 426
         y: 190
         width: 142
         height: 190
@@ -743,7 +743,7 @@ TextureImporter:
       name: Cards_30
       rect:
         serializedVersion: 2
-        x: 708
+        x: 568
         y: 190
         width: 142
         height: 190
@@ -764,7 +764,7 @@ TextureImporter:
       name: Cards_31
       rect:
         serializedVersion: 2
-        x: 850
+        x: 710
         y: 190
         width: 142
         height: 190
@@ -785,7 +785,7 @@ TextureImporter:
       name: Cards_32
       rect:
         serializedVersion: 2
-        x: 992
+        x: 852
         y: 190
         width: 142
         height: 190
@@ -806,7 +806,7 @@ TextureImporter:
       name: Cards_33
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 994
         y: 190
         width: 142
         height: 190
@@ -827,7 +827,7 @@ TextureImporter:
       name: Cards_34
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 1136
         y: 190
         width: 142
         height: 190
@@ -848,7 +848,7 @@ TextureImporter:
       name: Cards_35
       rect:
         serializedVersion: 2
-        x: 1418
+        x: 1278
         y: 190
         width: 142
         height: 190
@@ -869,7 +869,7 @@ TextureImporter:
       name: Cards_36
       rect:
         serializedVersion: 2
-        x: 1560
+        x: 1420
         y: 190
         width: 142
         height: 190
@@ -890,7 +890,7 @@ TextureImporter:
       name: Cards_37
       rect:
         serializedVersion: 2
-        x: 1702
+        x: 1562
         y: 190
         width: 142
         height: 190
@@ -911,7 +911,7 @@ TextureImporter:
       name: Cards_38
       rect:
         serializedVersion: 2
-        x: 1844
+        x: 1704
         y: 190
         width: 142
         height: 190
@@ -932,7 +932,7 @@ TextureImporter:
       name: Cards_39
       rect:
         serializedVersion: 2
-        x: 140
+        x: 0
         y: 0
         width: 142
         height: 190
@@ -953,7 +953,7 @@ TextureImporter:
       name: Cards_40
       rect:
         serializedVersion: 2
-        x: 282
+        x: 142
         y: 0
         width: 142
         height: 190
@@ -974,7 +974,7 @@ TextureImporter:
       name: Cards_41
       rect:
         serializedVersion: 2
-        x: 424
+        x: 284
         y: 0
         width: 142
         height: 190
@@ -995,7 +995,7 @@ TextureImporter:
       name: Cards_42
       rect:
         serializedVersion: 2
-        x: 566
+        x: 426
         y: 0
         width: 142
         height: 190
@@ -1016,7 +1016,7 @@ TextureImporter:
       name: Cards_43
       rect:
         serializedVersion: 2
-        x: 708
+        x: 568
         y: 0
         width: 142
         height: 190
@@ -1037,7 +1037,7 @@ TextureImporter:
       name: Cards_44
       rect:
         serializedVersion: 2
-        x: 850
+        x: 710
         y: 0
         width: 142
         height: 190
@@ -1058,7 +1058,7 @@ TextureImporter:
       name: Cards_45
       rect:
         serializedVersion: 2
-        x: 992
+        x: 852
         y: 0
         width: 142
         height: 190
@@ -1079,7 +1079,7 @@ TextureImporter:
       name: Cards_46
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 994
         y: 0
         width: 142
         height: 190
@@ -1100,7 +1100,7 @@ TextureImporter:
       name: Cards_47
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 1136
         y: 0
         width: 142
         height: 190
@@ -1121,7 +1121,7 @@ TextureImporter:
       name: Cards_48
       rect:
         serializedVersion: 2
-        x: 1418
+        x: 1278
         y: 0
         width: 142
         height: 190
@@ -1142,7 +1142,7 @@ TextureImporter:
       name: Cards_49
       rect:
         serializedVersion: 2
-        x: 1560
+        x: 1420
         y: 0
         width: 142
         height: 190
@@ -1163,7 +1163,7 @@ TextureImporter:
       name: Cards_50
       rect:
         serializedVersion: 2
-        x: 1702
+        x: 1562
         y: 0
         width: 142
         height: 190
@@ -1184,7 +1184,7 @@ TextureImporter:
       name: Cards_51
       rect:
         serializedVersion: 2
-        x: 1844
+        x: 1704
         y: 0
         width: 142
         height: 190
