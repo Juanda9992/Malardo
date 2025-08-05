@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Card_Data : MonoBehaviour
 {
-
     public Card currentCard;
     [SerializeField] private CardVisuals visuals;
     public CardPointerInteraction pointerInteraction;
@@ -24,6 +23,13 @@ public class Card_Data : MonoBehaviour
         if (DebuffSuitBlind.suitDebuffed == currentCard.cardSuit)
         {
             DebuffCard();
+            return;
+        }
+
+        if (IsNumberDebuffed(DebuffCustomCards.numbersDebuffed))
+        {
+            DebuffCard();
+            return;
         }
     }
 
@@ -59,6 +65,34 @@ public class Card_Data : MonoBehaviour
         }
     }
 
+    private void CheckForNumberDebuffed(int[] numbers)
+    {
+        if (IsNumberDebuffed(numbers))
+        {
+            DebuffCard();
+        }
+        else
+        {
+            BuffCard();
+        }
+    }
+
+    private bool IsNumberDebuffed(int[] numbers)
+    {
+        if (numbers == null)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (currentCard.number == numbers[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     private void DebuffCard()
     {
         visuals.SetCardDisabled(true);
@@ -73,11 +107,13 @@ public class Card_Data : MonoBehaviour
     void OnEnable()
     {
         DebuffSuitBlind.OnDebuffBlindStatus += CheckForSuitDebuffed;
+        DebuffCustomCards.OnNumbersDebuffed += CheckForNumberDebuffed;
     }
 
     void OnDisable()
     {
         DebuffSuitBlind.OnDebuffBlindStatus -= CheckForSuitDebuffed;
+        DebuffCustomCards.OnNumbersDebuffed -= CheckForNumberDebuffed;
     }
 }
 
