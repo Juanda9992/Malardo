@@ -16,7 +16,7 @@ public class Card_Data : MonoBehaviour
 
     public void SetCardData(Card card)
     {
-        currentCard = card;
+        currentCard = new Card(card);
         currentCard.linkedCard = this;
         card.SetCardChipAmmount();
         card.SetCardName();
@@ -108,6 +108,18 @@ public class Card
         SetCardName();
 
         return this;
+    }
+    public Card(Card card = null)
+    {
+        this.number = card.number;
+        this.chipAmmount = card.chipAmmount;
+        this.cardSuit = card.cardSuit;
+        this.canPlay = card.canPlay;
+        this.cardEdition = card.cardEdition;
+        this.cardSeal = card.cardSeal;
+        this.cardType = card.cardType;
+        this.cardName = card.cardName;
+        this.linkedCard = card.linkedCard;
     }
 
     private CardEdition GenerateRandomEdition()

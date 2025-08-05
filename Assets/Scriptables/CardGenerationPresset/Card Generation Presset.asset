@@ -21,6 +21,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 2 of Diamond
     linkedCard: {fileID: 0}
     number: 2
@@ -29,6 +30,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 3 of Diamond
     linkedCard: {fileID: 0}
     number: 3
@@ -37,6 +39,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 4 of Diamond
     linkedCard: {fileID: 0}
     number: 4
@@ -45,6 +48,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 5 of Diamond
     linkedCard: {fileID: 0}
     number: 5
@@ -53,6 +57,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 6 of Diamond
     linkedCard: {fileID: 0}
     number: 6
@@ -61,6 +66,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 7 of Diamond
     linkedCard: {fileID: 0}
     number: 7
@@ -69,6 +75,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 8 of Diamond
     linkedCard: {fileID: 0}
     number: 8
@@ -77,6 +84,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 9 of Diamond
     linkedCard: {fileID: 0}
     number: 9
@@ -85,6 +93,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 10 of Diamond
     linkedCard: {fileID: 0}
     number: 10
@@ -93,6 +102,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Jack of Diamond
     linkedCard: {fileID: 0}
     number: 11
@@ -101,6 +111,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Queen of Diamond
     linkedCard: {fileID: 0}
     number: 12
@@ -109,14 +120,16 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: King of Diamond
     linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 10
+    chipAmmount: 13
     cardSuit: 0
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Ace of Hearth
     linkedCard: {fileID: 0}
     number: 1
@@ -125,6 +138,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 2 of Hearth
     linkedCard: {fileID: 0}
     number: 2
@@ -133,6 +147,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 3 of Hearth
     linkedCard: {fileID: 0}
     number: 3
@@ -141,6 +156,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 4 of Hearth
     linkedCard: {fileID: 0}
     number: 4
@@ -149,6 +165,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 5 of Hearth
     linkedCard: {fileID: 0}
     number: 5
@@ -157,6 +174,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 6 of Hearth
     linkedCard: {fileID: 0}
     number: 6
@@ -165,6 +183,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 7 of Hearth
     linkedCard: {fileID: 0}
     number: 7
@@ -173,6 +192,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 8 of Hearth
     linkedCard: {fileID: 0}
     number: 8
@@ -181,6 +201,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 9 of Hearth
     linkedCard: {fileID: 0}
     number: 9
@@ -189,6 +210,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 10 of Hearth
     linkedCard: {fileID: 0}
     number: 10
@@ -197,6 +219,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Jack of Hearth
     linkedCard: {fileID: 0}
     number: 11
@@ -205,6 +228,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Queen of Hearth
     linkedCard: {fileID: 0}
     number: 12
@@ -213,14 +237,16 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: King of Hearth
     linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 10
+    chipAmmount: 13
     cardSuit: 1
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Ace of Spades
     linkedCard: {fileID: 0}
     number: 1
@@ -229,6 +255,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 2 of Spades
     linkedCard: {fileID: 0}
     number: 2
@@ -237,6 +264,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 3 of Spades
     linkedCard: {fileID: 0}
     number: 3
@@ -245,6 +273,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 4 of Spades
     linkedCard: {fileID: 0}
     number: 4
@@ -253,6 +282,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 5 of Spades
     linkedCard: {fileID: 0}
     number: 5
@@ -261,6 +291,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 6 of Spades
     linkedCard: {fileID: 0}
     number: 6
@@ -269,6 +300,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 7 of Spades
     linkedCard: {fileID: 0}
     number: 7
@@ -277,6 +309,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 8 of Spades
     linkedCard: {fileID: 0}
     number: 8
@@ -285,6 +318,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 9 of Spades
     linkedCard: {fileID: 0}
     number: 9
@@ -293,6 +327,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 10 of Spades
     linkedCard: {fileID: 0}
     number: 10
@@ -301,6 +336,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Jack of Spades
     linkedCard: {fileID: 0}
     number: 11
@@ -309,6 +345,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Queen of Spades
     linkedCard: {fileID: 0}
     number: 12
@@ -317,14 +354,16 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: King of Spades
     linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 10
+    chipAmmount: 13
     cardSuit: 2
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Ace of Clover
     linkedCard: {fileID: 0}
     number: 1
@@ -333,6 +372,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 2 of Clover
     linkedCard: {fileID: 0}
     number: 2
@@ -341,6 +381,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 3 of Clover
     linkedCard: {fileID: 0}
     number: 3
@@ -349,6 +390,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 4 of Clover
     linkedCard: {fileID: 0}
     number: 4
@@ -357,6 +399,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 5 of Clover
     linkedCard: {fileID: 0}
     number: 5
@@ -365,6 +408,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 6 of Clover
     linkedCard: {fileID: 0}
     number: 6
@@ -373,6 +417,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 7 of Clover
     linkedCard: {fileID: 0}
     number: 7
@@ -381,6 +426,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 8 of Clover
     linkedCard: {fileID: 0}
     number: 8
@@ -389,6 +435,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 9 of Clover
     linkedCard: {fileID: 0}
     number: 9
@@ -397,6 +444,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: 10 of Clover
     linkedCard: {fileID: 0}
     number: 10
@@ -405,6 +453,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Jack of Clover
     linkedCard: {fileID: 0}
     number: 11
@@ -413,6 +462,7 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: Queen of Clover
     linkedCard: {fileID: 0}
     number: 12
@@ -421,14 +471,16 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   - cardName: King of Clover
     linkedCard: {fileID: 0}
     number: 13
-    chipAmmount: 10
+    chipAmmount: 13
     cardSuit: 3
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   startingMoney: 5
   presetCard:
     cardName: 
@@ -439,4 +491,5 @@ MonoBehaviour:
     cardType: 0
     cardSeal: 0
     cardEdition: 0
+    canPlay: 1
   timesToGenerate: 0
