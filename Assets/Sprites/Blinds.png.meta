@@ -319,6 +319,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Blinds_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cceb9208c29413e43a2e27c0c449d8b2
+      internalID: 145610555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -332,6 +353,7 @@ TextureImporter:
     nameFileIdTable:
       Blinds_0: 616133785
       Blinds_1: -59247362
+      Blinds_10: 145610555
       Blinds_2: 849174279
       Blinds_3: -1325151995
       Blinds_4: -1312987366
