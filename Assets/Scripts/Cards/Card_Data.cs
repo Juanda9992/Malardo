@@ -147,15 +147,18 @@ public class Card
     }
     public Card(Card card = null)
     {
-        this.number = card.number;
-        this.chipAmmount = card.chipAmmount;
-        this.cardSuit = card.cardSuit;
-        this.canPlay = card.canPlay;
-        this.cardEdition = card.cardEdition;
-        this.cardSeal = card.cardSeal;
-        this.cardType = card.cardType;
-        this.cardName = card.cardName;
-        this.linkedCard = card.linkedCard;
+        if (card != null)
+        {
+            this.number = card.number;
+            this.chipAmmount = card.chipAmmount;
+            this.cardSuit = card.cardSuit;
+            this.canPlay = card.canPlay;
+            this.cardEdition = card.cardEdition;
+            this.cardSeal = card.cardSeal;
+            this.cardType = card.cardType;
+            this.cardName = card.cardName;
+            this.linkedCard = card.linkedCard;
+        }
     }
 
     private CardEdition GenerateRandomEdition()
