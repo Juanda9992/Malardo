@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Modify Stats Blind", menuName = "Scriptables/Blind/Modify Stats Blind")]
 public class ModifyStatsBlind : CurrentBlind
 {
+    public bool oneHandSizeLess;
     public bool noDiscards;
     public int handAmmount = -1;
 
@@ -22,6 +23,10 @@ public class ModifyStatsBlind : CurrentBlind
             lastHands = HandManager.instance.GetHandsRemaining();
             HandManager.instance.SetDefaultHands(handAmmount, true);
         }
+        if (oneHandSizeLess)
+        {
+            DeckManager.instance.AddHandSize(-1);
+        }
 
     }
     [ContextMenu("Revert Effect")]
@@ -35,6 +40,11 @@ public class ModifyStatsBlind : CurrentBlind
         if (handAmmount > 0)
         {
             HandManager.instance.SetDefaultHands(lastHands, true);
+        }
+
+        if (oneHandSizeLess)
+        {
+            DeckManager.instance.AddHandSize(+1);
         }
     }
 }

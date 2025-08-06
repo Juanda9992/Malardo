@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94150b3482866574ca8ba2f07f2e13c5, type: 3}
+  m_Name: The Manacle
+  m_EditorClassIdentifier: 
+  blindName: The Manacle
+  blindDescription: -1 Hand Size
+  blindSprite: {fileID: 145610555, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
+  blindColor: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  oneHandSizeLess: 1
+  noDiscards: 0
+  handAmmount: -1
