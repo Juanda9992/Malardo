@@ -25,6 +25,8 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blindEffectText, blindDescriptionText;
 
     public event Action OnBlindDefeated;
+
+    private CurrentBlind activeBossBlind = null;
     void Awake()
     {
         instance = this;
@@ -108,22 +110,36 @@ public class BlindManager : MonoBehaviour
         {
             SetUpBossBlind();
         }
+        else
+        {
+            ResetBossBlind();
+        }
     }
 
     private void SetUpBossBlind()
     {
-        CurrentBlind currentBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.allBlinds.Length)];
-        Debug.Log(currentBlind.blindName);
+        activeBossBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.allBlinds.Length)];
+        Debug.Log(activeBossBlind.blindName);
 
-        SetUpBGColor(currentBlind.blindColor);
+        SetUpBGColor(activeBossBlind.blindColor);
 
-        currentBlind.ApplyEffect();
+        activeBossBlind.ApplyEffect();
         blindNameText.text = blindScoreData.bossBlinds[currentBlindProgress].blindName;
         blindEffectText.gameObject.SetActive(true);
-        blindEffectText.text = currentBlind.blindDescription;
-        blindDescriptionText.text = currentBlind.blindDescription;
+        blindEffectText.text = activeBossBlind.blindDescription;
+        blindDescriptionText.text = activeBossBlind.blindDescription;
 
         StartCoroutine(nameof(HideBlindText));
+    }
+
+    private void ResetBossBlind()
+    {
+        if (activeBossBlind == null)
+        {
+            return;
+        }
+
+        activeBossBlind.RevertEffect();
     }
 
     private IEnumerator HideBlindText()
