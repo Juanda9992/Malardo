@@ -13,7 +13,7 @@ public class BlindManager : MonoBehaviour
     public int requiredScore;
     public int currentRound = 1;
     [SerializeField] private BlindScoreData blindScoreData;
-    [SerializeField] private int currentBlindProgress; //0 to 2;
+    public int currentBlindProgress; //0 to 2;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI requiredScoreText;
@@ -30,11 +30,6 @@ public class BlindManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetRequiredScore();
     }
 
     public void SetRequiredScore()

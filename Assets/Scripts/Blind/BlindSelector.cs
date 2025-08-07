@@ -1,14 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class BlindSelector : MonoBehaviour
 {
+    public UnityEvent OnBlindSelected; 
     [SerializeField] private Image bossBlindSprite;
     [SerializeField] private TextMeshProUGUI bossBlindName, bossDescriptionText;
     [SerializeField] private BlindScoreData blindScoreData;
     [SerializeField] private Image[] imageColors;
     [SerializeField] private TextMeshProUGUI[] scoresText;
+    [SerializeField] private GameObject[] blindBlockers;
     private CurrentBlind bossBlind;
 
     [ContextMenu("Generate new blind")]
@@ -16,6 +19,7 @@ public class BlindSelector : MonoBehaviour
     {
         PickUpRandomBossBlind();
         SetUpScoresUI();
+        UpdateBlockers();
     }
     private void PickUpRandomBossBlind()
     {
@@ -42,5 +46,20 @@ public class BlindSelector : MonoBehaviour
         }
 
         scoresText[2].text = (blindScoreData.baseScore[ante] * bossBlind.blindMultiplier).ToString();
+    }
+
+    private void UpdateBlockers()
+    {
+        foreach (var blocker in blindBlockers)
+        {
+            blocker.SetActive(true);
+        }
+
+        blindBlockers[BlindManager.instance.currentBlindProgress].SetActive(false);
+    }
+
+    public void SelectBlind()
+    {
+        OnBlindSelected?.Invoke();
     }
 }
