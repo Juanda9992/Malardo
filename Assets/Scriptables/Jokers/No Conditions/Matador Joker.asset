@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Matador Joker
+  m_EditorClassIdentifier: 
+  jokerName: Matador
+  description: Earn $8 when the boss blind is selected.
+  triggerMessage: $8
+  overrideEffect: 8
+  shopValue: 7
+  jokerRarity: 1
+  triggers:
+  - {fileID: 11400000, guid: 8d53d29f60d46d04384b94b483748298, type: 2}
+  - {fileID: 11400000, guid: 05345cdff2e5afe4592897e29d621cbf, type: 2}
+  effects:
+  - {fileID: 11400000, guid: cb6db422352abc449af465fb0e1fc16a, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}

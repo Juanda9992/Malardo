@@ -7140,7 +7140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers: []
+  testingJokers:
+  - {fileID: 11400000, guid: 7126c715ad796be46bc89e3c6d9fce46, type: 2}
+  - {fileID: 11400000, guid: a2db5a0f5dccb374c9c130e1c157424d, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -12191,6 +12193,7 @@ MonoBehaviour:
   - {fileID: 331842989}
   blindEffectText: {fileID: 1335449067}
   blindDescriptionText: {fileID: 315573068}
+  activeBossBlind: {fileID: 0}
 --- !u!114 &1192478477
 MonoBehaviour:
   m_ObjectHideFlags: 0

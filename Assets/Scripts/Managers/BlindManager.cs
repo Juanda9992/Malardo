@@ -26,7 +26,7 @@ public class BlindManager : MonoBehaviour
 
     public event Action OnBlindDefeated;
 
-    private CurrentBlind activeBossBlind = null;
+    public CurrentBlind activeBossBlind = null;
     void Awake()
     {
         instance = this;
