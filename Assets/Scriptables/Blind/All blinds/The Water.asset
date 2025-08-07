@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Water
   blindDescription: Starts with 0 discards
+  blindMultiplier: 2
   blindSprite: {fileID: 2117460178, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.7764706, g: 0.8784314, b: 0.92156863, a: 1}
+  oneHandSizeLess: 0
   noDiscards: 1
+  handAmmount: -1

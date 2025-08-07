@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6661ae171409fd04fb8b6478ddc825d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 94150b3482866574ca8ba2f07f2e13c5, type: 3}
   m_Name: The Wall
   m_EditorClassIdentifier: 
   blindName: The Wall
   blindDescription: Extra large Blind
+  blindMultiplier: 4
   blindSprite: {fileID: 366731200, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.5411765, g: 0.34901962, b: 0.64705884, a: 1}
-  applyMultiplier: 4
-  revertMultiplier: 2
+  oneHandSizeLess: 0
+  noDiscards: 0
+  handAmmount: -1

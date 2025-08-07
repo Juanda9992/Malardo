@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Club
   blindDescription: All Club cards are debuffed
+  blindMultiplier: 2
   blindSprite: {fileID: 849174279, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.7254902, g: 0.79607844, b: 0.57254905, a: 1}
   suitToDebuff: 3

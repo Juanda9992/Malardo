@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Goad
   blindDescription: All Spade cards are debuffed
+  blindMultiplier: 2
   blindSprite: {fileID: -1325151995, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.7254902, g: 0.35686275, b: 0.58431375, a: 1}
   suitToDebuff: 2

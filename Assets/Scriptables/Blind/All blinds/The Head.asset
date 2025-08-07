@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Head
   blindDescription: All Heath cards are debuffed
+  blindMultiplier: 2
   blindSprite: {fileID: -1312987366, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.50980395, g: 0.46666667, b: 0.53333336, a: 1}
   suitToDebuff: 1

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Window
   blindDescription: All Diamond cards are debuffed
+  blindMultiplier: 2
   blindSprite: {fileID: -1312987366, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.6627451, g: 0.63529414, b: 0.58431375, a: 1}
   suitToDebuff: 0
