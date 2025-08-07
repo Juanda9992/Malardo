@@ -10526,18 +10526,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192478476}
-        m_TargetAssemblyTypeName: BlindManager, Assembly-CSharp
-        m_MethodName: IncreaseBetlevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1683800526}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10550,9 +10538,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 621395128}
-        m_TargetAssemblyTypeName: GameEventsManager, Assembly-CSharp
-        m_MethodName: TriggerRoundBegins
+      - m_Target: {fileID: 1192478477}
+        m_TargetAssemblyTypeName: BlindSelector, Assembly-CSharp
+        m_MethodName: UpdateBlockers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10560,7 +10548,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 173726155}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1078951522
 MonoBehaviour:
@@ -12047,9 +12047,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 621395128}
-        m_TargetAssemblyTypeName: GameEventsManager, Assembly-CSharp
-        m_MethodName: TriggerRoundBegins
+      - m_Target: {fileID: 1192478476}
+        m_TargetAssemblyTypeName: BlindManager, Assembly-CSharp
+        m_MethodName: IncreaseBetlevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12059,9 +12059,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1192478476}
-        m_TargetAssemblyTypeName: BlindManager, Assembly-CSharp
-        m_MethodName: SetRequiredScore
+      - m_Target: {fileID: 621395128}
+        m_TargetAssemblyTypeName: GameEventsManager, Assembly-CSharp
+        m_MethodName: TriggerRoundBegins
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

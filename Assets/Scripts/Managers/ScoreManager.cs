@@ -74,6 +74,7 @@ public class ScoreManager : MonoBehaviour
                 EndGameManager.instance.SetEndGame();
                 return;
             }
+            BlindManager.instance.SetBlindDefeated();
             StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
             GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
             GameStatusManager._Status.handPlayedData.playedHandsInRound = new System.Collections.Generic.List<HandType>();

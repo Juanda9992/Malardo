@@ -89,9 +89,6 @@ public class BlindManager : MonoBehaviour
     [ContextMenu("After Shop")]
     public void IncreaseBetlevel()
     {
-        OnBlindDefeated?.Invoke();
-        currentBlindProgress++;
-        currentRound++;
 
         if (currentBlindProgress > 2)
         {
@@ -111,9 +108,16 @@ public class BlindManager : MonoBehaviour
         }
     }
 
+    public void SetBlindDefeated()
+    {
+        OnBlindDefeated?.Invoke();
+        currentBlindProgress++;
+        currentRound++;
+    }
+
     private void SetUpBossBlind()
     {
-        activeBossBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.allBlinds.Length)];
+        activeBossBlind = GameObject.FindObjectOfType<BlindSelector>().GetCurrentBossBlind();
         Debug.Log(activeBossBlind.blindName);
 
         SetUpBGColor(activeBossBlind.blindColor);

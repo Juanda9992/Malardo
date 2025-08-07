@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BlindSelector : MonoBehaviour
 {
-    public UnityEvent OnBlindSelected; 
+    public UnityEvent OnBlindSelected;
     [SerializeField] private Image bossBlindSprite;
     [SerializeField] private TextMeshProUGUI bossBlindName, bossDescriptionText;
     [SerializeField] private BlindScoreData blindScoreData;
@@ -14,13 +14,19 @@ public class BlindSelector : MonoBehaviour
     [SerializeField] private GameObject[] blindBlockers;
     private CurrentBlind bossBlind;
 
-    [ContextMenu("Generate new blind")]
     void Start()
     {
+        GenerateRoundBlinds();
+    }
+
+    [ContextMenu("Generate new blind")]
+    public void GenerateRoundBlinds()
+    {        
         PickUpRandomBossBlind();
         SetUpScoresUI();
         UpdateBlockers();
     }
+
     private void PickUpRandomBossBlind()
     {
         bossBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.bossBlinds.Length)];
@@ -48,7 +54,7 @@ public class BlindSelector : MonoBehaviour
         scoresText[2].text = (blindScoreData.baseScore[ante] * bossBlind.blindMultiplier).ToString();
     }
 
-    private void UpdateBlockers()
+    public void UpdateBlockers()
     {
         foreach (var blocker in blindBlockers)
         {
@@ -61,5 +67,10 @@ public class BlindSelector : MonoBehaviour
     public void SelectBlind()
     {
         OnBlindSelected?.Invoke();
+    }
+
+    public CurrentBlind GetCurrentBossBlind()
+    {
+        return bossBlind;
     }
 }
