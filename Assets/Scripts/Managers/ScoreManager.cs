@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float mult = 1;
     [SerializeField] private float roundScore;
 
-    [SerializeField] private TextMeshProUGUI scoreText, chipsText, multText,totalScoreText;
+    [SerializeField] private TextMeshProUGUI scoreText, chipsText, multText, totalScoreText;
     void Awake()
     {
         instance = this;
@@ -69,16 +69,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (BlindManager.instance.BlindDefeated((int)roundScore))
         {
-            if (EndGameManager.instance.ReachedEndGame())
-            {
-                EndGameManager.instance.SetEndGame();
-                return;
-            }
-            BlindManager.instance.SetBlindDefeated();
-            StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
-            GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
-            GameStatusManager._Status.handPlayedData.playedHandsInRound = new System.Collections.Generic.List<HandType>();
-            totalScoreText.text = "0";
+            OnBlindDefeated();
         }
         else
         {
@@ -87,6 +78,21 @@ public class ScoreManager : MonoBehaviour
                 LoseManager.instance.SetLoseScreen();
             }
         }
+    }
+
+    [ContextMenu("Skip Match")]
+    private void OnBlindDefeated()
+    {
+        if (EndGameManager.instance.ReachedEndGame())
+        {
+            EndGameManager.instance.SetEndGame();
+            return;
+        }
+        BlindManager.instance.SetBlindDefeated();
+        StartCoroutine(CurrencyScreenManager.instance.SetUpCurrencyScreen());
+        GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
+        GameStatusManager._Status.handPlayedData.playedHandsInRound = new System.Collections.Generic.List<HandType>();
+        totalScoreText.text = "0";
     }
 
     public void ResetChipsAndMult()
