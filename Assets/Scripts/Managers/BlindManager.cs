@@ -133,7 +133,7 @@ public class BlindManager : MonoBehaviour
         StartCoroutine(nameof(HideBlindText));
     }
 
-    private void ResetBossBlind()
+    public void ResetBossBlind()
     {
         if (activeBossBlind == null)
         {
