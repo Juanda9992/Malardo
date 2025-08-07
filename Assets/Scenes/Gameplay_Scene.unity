@@ -7672,7 +7672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameCanvas: {fileID: 1787594834}
-  maxRoundLimit: 12
+  maxRoundLimit: 15
   allUI:
   - {fileID: 2001360745}
   - {fileID: 2026572769}
@@ -7680,8 +7680,8 @@ MonoBehaviour:
   - {fileID: 1650242788}
   - {fileID: 416426809}
   endLabelText: You've reached the end of the game! As it is still under development,
-    the highest round you can achieve is 12. We encourage you to leave a review,
-    report any bugs, or share your ideas for custom jokers.
+    the highest round you can achieve is 15. I encourage you to leave a review, report
+    any bugs, or share your ideas for custom jokers.
   endLabel: {fileID: 707448990}
 --- !u!1 &707448988
 GameObject:
