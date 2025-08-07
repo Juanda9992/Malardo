@@ -8,11 +8,14 @@ public class BlindSelector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bossBlindName, bossDescriptionText;
     [SerializeField] private BlindScoreData blindScoreData;
     [SerializeField] private Image[] imageColors;
+    [SerializeField] private TextMeshProUGUI[] scoresText;
     private CurrentBlind bossBlind;
 
+    [ContextMenu("Generate new blind")]
     void Start()
     {
         PickUpRandomBossBlind();
+        SetUpScoresUI();
     }
     private void PickUpRandomBossBlind()
     {
@@ -29,5 +32,15 @@ public class BlindSelector : MonoBehaviour
         {
             bg.color = blindColor;
         }
+    }
+    private void SetUpScoresUI()
+    {
+        int ante = BlindManager.instance.anteLevel;
+        for (int i = 0; i < scoresText.Length; i++)
+        {
+            scoresText[i].text = (blindScoreData.baseScore[ante] * blindScoreData.allBlinds[i].scoreMultiplier).ToString();
+        }
+
+        scoresText[2].text = (blindScoreData.baseScore[ante] * bossBlind.blindMultiplier).ToString();
     }
 }
