@@ -19,11 +19,6 @@ public class GameEventsManager : MonoBehaviour
     {
         instance = this;
     }
-    IEnumerator Start()
-    {
-        yield return new WaitForSeconds(0.1f);
-        TriggerRoundBegins();
-    }
 
     public void TriggerHandPlayed()
     {
