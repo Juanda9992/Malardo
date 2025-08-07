@@ -27,6 +27,7 @@ public class ModifyStatsBlind : CurrentBlind
         {
             DeckManager.instance.AddHandSize(-1);
         }
+        BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
     [ContextMenu("Revert Effect")]
@@ -46,5 +47,6 @@ public class ModifyStatsBlind : CurrentBlind
         {
             DeckManager.instance.AddHandSize(+1);
         }
+        BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
 }
