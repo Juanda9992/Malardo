@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blindName: The Needle
   blindDescription: Play only 1 hand
+  blindMultiplier: 1
   blindSprite: {fileID: -1708530336, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
   blindColor: {r: 0.36078432, g: 0.43137255, b: 0.19215687, a: 1}
   oneHandSizeLess: 0
