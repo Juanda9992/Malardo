@@ -90,11 +90,6 @@ public class BlindManager : MonoBehaviour
     public void IncreaseBetlevel()
     {
 
-        if (currentBlindProgress > 2)
-        {
-            currentBlindProgress = 0;
-            anteLevel++;
-        }
         currentRoundText.text = currentRound.ToString();
         SetRequiredScore();
 
@@ -113,6 +108,13 @@ public class BlindManager : MonoBehaviour
         OnBlindDefeated?.Invoke();
         currentBlindProgress++;
         currentRound++;
+
+        if (currentBlindProgress > 2)
+        {
+            currentBlindProgress = 0;
+            anteLevel++;
+            GameObject.FindObjectOfType<BlindSelector>().GenerateRoundBlinds();
+        }
     }
 
     private void SetUpBossBlind()
