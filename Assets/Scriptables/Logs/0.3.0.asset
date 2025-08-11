@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.3.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.3.0
+  logcontent: "<b>Added</b>\n\n- Blind bosses: They have special effects every 3
+    blinds.\n\t-The Plant: Disable all the face cards.\n\t-The Club: Disable all
+    club cards.\n\t-The Goad: Disable all spade cards.\n\t-The Window: Disable all
+    diamond cards.\n\t-The Head: Disable all hearth cards.\n\t\n\t-The Needle: Only
+    play 1 hand.\n\t.The Water: Start with 0 discards.\n\t-The Manacle: Reduce 1
+    hand size.\n\t-The Wall: Extra big score requeriments.\n\n-Blind Selector screen:
+    You can select the blinds and the score requeriments.\n-Blind info: Watch the
+    blind info and score requeriments at any time.\n\n-2 new Jokers:\n\t-Matador:
+    Gain $8 when selected boss blind.\n\t-Chicot: Disable all blind bosses at the
+    start.\n\t-Luchador: Disable the current boss blind when sold.\n\n<b>Updated</b>\n-Increase
+    round cap limit to 15.\n\n<b>Fixed</b>\n\n- Standar packs always generating 7
+    cards."
