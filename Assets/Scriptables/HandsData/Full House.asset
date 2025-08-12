@@ -15,3 +15,5 @@ MonoBehaviour:
   baseChips: 40
   baseMult: 4
   handType: 6
+  chipsUpgrade: 25
+  multUpgrade: 2

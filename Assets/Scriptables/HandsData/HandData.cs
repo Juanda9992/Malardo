@@ -6,6 +6,8 @@ public class HandData : ScriptableObject
     public int baseChips;
     public int baseMult;
     public HandType handType;
+    public int chipsUpgrade;
+    public int multUpgrade;
 }
 
 public enum HandType
