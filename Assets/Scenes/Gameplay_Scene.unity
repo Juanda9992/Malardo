@@ -6245,12 +6245,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af6cc9086e0d1649bf5dfbf651df45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handNameText: {fileID: 676285008}
   multUpgrade:
     animationContainer: {fileID: 1154148760}
     upgradeText: {fileID: 397523606}
   chipUpgrade:
     animationContainer: {fileID: 1094530142}
     upgradeText: {fileID: 1808016636}
+  upgradeData: 0
 --- !u!1 &333597080
 GameObject:
   m_ObjectHideFlags: 0

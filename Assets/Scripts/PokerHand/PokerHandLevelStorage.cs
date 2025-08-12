@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PokerHandLevelStorage : MonoBehaviour
 {
-    public List<PokerHandLevelData> pokerHands;
+    public static PokerHandLevelStorage instance;
+    [SerializeField] private List<PokerHandLevelData> pokerHands;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     [ContextMenu("Debug Hands")]
     public void DebugAllHands()
@@ -13,6 +19,11 @@ public class PokerHandLevelStorage : MonoBehaviour
         {
             hand.DebugPokerHandData();
         }
+    }
+
+    public PokerHandLevelData GetHandData(HandType handType)
+    {
+        return pokerHands.Find(x => x.pokerHand.handType == handType);
     }
 }
 

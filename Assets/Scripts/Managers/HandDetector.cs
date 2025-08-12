@@ -12,7 +12,7 @@ public class HandDetector : MonoBehaviour
     [SerializeField] private List<HandData> allHands;
 
     [SerializeField] private TextMeshProUGUI handNameText;
-    private HandData currentHand;
+    private PokerHandLevelData currentHand;
     void Awake()
     {
         instance = this;
@@ -38,13 +38,13 @@ public class HandDetector : MonoBehaviour
         {
             Debug.Log("Five of a kind");
             CardPlayer.instance.ReceiveHandCards(handCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Five_Of_A_Kind);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Five_Of_A_Kind);
             AddHandToMult();
             return;
         }
         if (CheckIfColor())
         {
-            currentHand = allHands.Find(x => x.handType == HandType.Flush);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush);
             CardPlayer.instance.ReceiveHandCards(handCards);
             Debug.Log("Suit");
             AddHandToMult();
@@ -53,7 +53,7 @@ public class HandDetector : MonoBehaviour
 
         if (CheckIfStraight())
         {
-            currentHand = allHands.Find(x => x.handType == HandType.Straight);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Straight);
             Debug.Log("Straight");
             CardPlayer.instance.ReceiveHandCards(cardsSorted);
             AddHandToMult();
@@ -64,7 +64,7 @@ public class HandDetector : MonoBehaviour
         {
             Debug.Log("Four of a Kind");
             CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Four_Of_A_Kind);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Four_Of_A_Kind);
             AddHandToMult();
             return;
         }
@@ -73,7 +73,7 @@ public class HandDetector : MonoBehaviour
         {
             Debug.Log("Full House");
             CardPlayer.instance.ReceiveHandCards(handCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Full_House);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Full_House);
             AddHandToMult();
             return;
         }
@@ -82,7 +82,7 @@ public class HandDetector : MonoBehaviour
         {
             Debug.Log("Double pair");
             CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Double_Pair);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Double_Pair);
             AddHandToMult();
             return;
         }
@@ -91,7 +91,7 @@ public class HandDetector : MonoBehaviour
         {
             CardPlayer.instance.ReceiveHandCards(realCards);
             Debug.Log("Three of a kind");
-            currentHand = allHands.Find(x => x.handType == HandType.Three_Of_A_Kind);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Three_Of_A_Kind);
             AddHandToMult();
             return;
         }
@@ -101,7 +101,7 @@ public class HandDetector : MonoBehaviour
 
             Debug.Log("Pair");
             CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.Pair);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Pair);
             AddHandToMult();
             return;
         }
@@ -111,10 +111,10 @@ public class HandDetector : MonoBehaviour
 
     private void AddHandToMult()
     {
-        handNameText.text = currentHand.name;
-        GameStatusManager.SetHandPlayed(currentHand.handType);
-        ScoreManager.instance.SetChips(currentHand.baseChips);
-        ScoreManager.instance.SetMult(currentHand.baseMult);
+        handNameText.text = currentHand.pokerHand.name + " <color=blue> lvl." + currentHand.handLevel + "</color>";
+        GameStatusManager.SetHandPlayed(currentHand.pokerHand.handType);
+        ScoreManager.instance.SetChips(currentHand.GetTotalChips());
+        ScoreManager.instance.SetMult(currentHand.GetTotalMult());
     }
 
     public void RemoveHandFromMult()
@@ -313,14 +313,14 @@ public class HandDetector : MonoBehaviour
         if (handCards.Count > 0)
         {
             realCards = handCards.OrderBy(x => x.number).ToList();
-            Card highestCard = realCards[realCards.Count-1];
+            Card highestCard = realCards[realCards.Count - 1];
 
             realCards.Clear();
 
             realCards.Add(highestCard);
             realCards.AddRange(handCards.FindAll(x => x.cardType == CardType.Stone));
             CardPlayer.instance.ReceiveHandCards(realCards);
-            currentHand = allHands.Find(x => x.handType == HandType.High_Card);
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.High_Card);
             AddHandToMult();
         }
     }
@@ -332,7 +332,7 @@ public class HandDetector : MonoBehaviour
 
     private void ResetValues()
     {
-        CardPlayer.instance.SetHandPlayed(currentHand.handType);
+        CardPlayer.instance.SetHandPlayed(currentHand.pokerHand.handType);
         realCards.Clear();
         handCards.Clear();
         cardsSorted.Clear();

@@ -9,7 +9,7 @@ public class PokerHandUpgrader : MonoBehaviour
     public StatUpgrade multUpgrade;
     public StatUpgrade chipUpgrade;
 
-    [SerializeField] private PokerHandLevelData upgradeData;
+    [SerializeField] private HandType upgradeData;
     public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData)
     {
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
@@ -25,7 +25,7 @@ public class PokerHandUpgrader : MonoBehaviour
         multUpgrade.animationContainer.SetActive(true);
         multUpgrade.upgradeText.text = "+" + pokerHandLevelData.pokerHand.multUpgrade;
 
-        upgradeData.UpgradeHand();
+        pokerHandLevelData.UpgradeHand();
 
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
         yield return new WaitForSeconds(0.6f);
@@ -38,12 +38,13 @@ public class PokerHandUpgrader : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         chipUpgrade.upgradeText.text = "0";
         multUpgrade.upgradeText.text = "0";
+        handNameText.text = "";
     }
 
     [ContextMenu("Test upgrade UI")]
     private void TestUpgrade()
     {
-        StartCoroutine(UpgradeVisuals(upgradeData));
+        StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(upgradeData)));
     }
 }
 
