@@ -35,6 +35,11 @@ public class PokerHandLevelData
         return pokerHand.baseMult +(pokerHand.multUpgrade * (handLevel -1));
     }
 
+    public void UpgradeHand()
+    {
+        handLevel++;
+    }
+
     public void DebugPokerHandData()
     {
         Debug.Log($"{pokerHand.handType} lvl.{handLevel}, Chips{GetTotalChips()} mult {GetTotalMult()}");
