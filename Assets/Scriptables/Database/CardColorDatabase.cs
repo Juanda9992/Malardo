@@ -17,4 +17,5 @@ public class CardColorDatabase : ScriptableObject
     public Color defaultBgColor;
     public Color buffonPackBgColor;
     public Color cardPackBgColor;
+    public Color planetPackBgColor;
 }

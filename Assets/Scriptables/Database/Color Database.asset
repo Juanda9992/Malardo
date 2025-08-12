@@ -22,3 +22,4 @@ MonoBehaviour:
   defaultBgColor: {r: 0.09132784, g: 0.381132, b: 0.14566612, a: 0}
   buffonPackBgColor: {r: 0.28539133, g: 0, b: 0.4113207, a: 0}
   cardPackBgColor: {r: 0.4113207, g: 0.16092214, b: 0, a: 0}
+  planetPackBgColor: {r: 0.07203276, g: 0.07225596, b: 0.2528302, a: 1}

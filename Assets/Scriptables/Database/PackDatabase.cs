@@ -6,6 +6,7 @@ public class PackDatabase : ScriptableObject
 {
     public List<PackData> buffonPacks;
     public List<PackData> cardPacks;
+    public List<PackData> planetPacks;
 
     public PackData GetRandomBuffonPack()
     {
@@ -17,16 +18,25 @@ public class PackDatabase : ScriptableObject
         return cardPacks[Random.Range(0, cardPacks.Count)];
     }
 
+    public PackData GetRandomPlanetPack()
+    {
+        return planetPacks[Random.Range(0, planetPacks.Count)];
+    }
+
     public PackData GetRandomPack()
     {
-        int packIndex = Random.Range(0, 2);
+        int packIndex = Random.Range(0, 3);
         if (packIndex == 0)
         {
             return GetRandomBuffonPack();
         }
-        else
+        else if (packIndex == 1)
         {
             return GetRandomCardPack();
+        }
+        else
+        {
+            return GetRandomPlanetPack();
         }
 
     }
