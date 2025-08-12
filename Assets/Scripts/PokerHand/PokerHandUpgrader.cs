@@ -5,11 +5,23 @@ using UnityEngine;
 
 public class PokerHandUpgrader : MonoBehaviour
 {
+    public static PokerHandUpgrader instance;
     public TextMeshProUGUI handNameText;
     public StatUpgrade multUpgrade;
     public StatUpgrade chipUpgrade;
 
     [SerializeField] private HandType upgradeData;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    public void RequestUpgradeHand(HandType handType)
+    {
+        StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
+    }
+
     public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData)
     {
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";

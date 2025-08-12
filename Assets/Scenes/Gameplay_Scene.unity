@@ -4239,6 +4239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherUI:
   - {fileID: 1683800526}
+  - {fileID: 173726155}
   packSection: {fileID: 416426809}
   jokerListContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   PackInteractablePrefab: {fileID: 8474415298235704520, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
@@ -4246,7 +4247,7 @@ MonoBehaviour:
   itemsDisplay: {fileID: 1586341713}
   packNameLabel: {fileID: 356507890}
   selectAmmountLabel: {fileID: 579035401}
-  testPack: {fileID: 11400000, guid: 20db63ab0f6ba65429dbbdf9ffdbd2d6, type: 2}
+  testPack: {fileID: 11400000, guid: 58d401007a1aec04eb4322500d0a3140, type: 2}
 --- !u!1 &246016253
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,6 +7362,7 @@ MonoBehaviour:
   cardColorDatabase: {fileID: 11400000, guid: 7c2d778a4a165c748b20f6cde6148bf7, type: 2}
   shopPacksDatabase: {fileID: 11400000, guid: 55a2077b955cb9740a835b6b6d0afb79, type: 2}
   cardSpriteDatabase: {fileID: 11400000, guid: 24948b442d2bee74d8186869dffde7f1, type: 2}
+  planetCardsDatabase: {fileID: 11400000, guid: 0178c579f3ec151418d28b4a63f8ae4e, type: 2}
 --- !u!1 &466614442
 GameObject:
   m_ObjectHideFlags: 0

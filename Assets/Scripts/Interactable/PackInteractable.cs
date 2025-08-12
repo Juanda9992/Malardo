@@ -11,6 +11,7 @@ public class PackInteractable : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
     private Card createdCard;
+    private PlanetCardData _planetCardData;
     public void SetJokerInfo(JokerData createdJoker)
     {
         jokerData = createdJoker;
@@ -30,6 +31,17 @@ public class PackInteractable : MonoBehaviour
         GetComponent<DescriptionContainer>().SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips");
     }
 
+    public void SetPlanetCard(PlanetCardData planetCardData)
+    {
+        _planetCardData = planetCardData;
+        itemType = PackType.Planet;
+
+        PokerHandLevelData pokerHand = PokerHandLevelStorage.instance.GetHandData(_planetCardData.handType);
+        string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
+        cardName.text = planetCardData.cardName;
+        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc);
+    }
+
     public void ListenForAvaliability()
     {
         if (itemType == PackType.Buffon)
@@ -46,6 +58,9 @@ public class PackInteractable : MonoBehaviour
                 break;
             case PackType.Card:
                 DeckManager.instance.AddCardOnFullDeck(createdCard);
+                break;
+            case PackType.Planet:
+                PokerHandUpgrader.instance.RequestUpgradeHand(_planetCardData.handType);
                 break;
         }
 
