@@ -20,3 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f53d24fdb30580469f14bb84252af0b, type: 2}
   - {fileID: 11400000, guid: 04c232963a7afac488b4c12235894609, type: 2}
   - {fileID: 11400000, guid: 20db63ab0f6ba65429dbbdf9ffdbd2d6, type: 2}
+  planetPacks:
+  - {fileID: 11400000, guid: d2cabd88bd20f8e47b20c3a817c22380, type: 2}
+  - {fileID: 11400000, guid: a5c3e9dc48a217b46a508ffd3fd895ff, type: 2}
+  - {fileID: 11400000, guid: 58d401007a1aec04eb4322500d0a3140, type: 2}

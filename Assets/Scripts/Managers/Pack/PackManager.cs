@@ -57,6 +57,13 @@ public class PackManager : MonoBehaviour
                 GameObject item = Instantiate(cardPackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetPackCard();
             }
+            else if (packType == PackType.Planet)
+            {
+                BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.planetPackBgColor);
+
+                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
+                item.GetComponent<PackInteractable>().SetPlanetCard(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
+            }
 
         }
     }
