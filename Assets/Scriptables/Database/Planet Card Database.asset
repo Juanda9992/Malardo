@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b79918568049544bab60b58340f51ff, type: 3}
+  m_Name: Planet Card Database
+  m_EditorClassIdentifier: 
+  allPlanetCards:
+  - {fileID: 11400000, guid: 0466ee7fa9344cb46959e88d2749d6bc, type: 2}
+  - {fileID: 11400000, guid: 04e88e9a1e2ec4943a7ed8b903c55fac, type: 2}
+  - {fileID: 11400000, guid: db8ea29507a22b148bc9d1402c3f90da, type: 2}
+  - {fileID: 11400000, guid: 58e20ae5db4b1b44192a128d8d1c68e3, type: 2}
+  - {fileID: 11400000, guid: 3f3527c749d43ba4fa2df4ee455fc4ed, type: 2}
+  - {fileID: 11400000, guid: 243bc1f557f55014dad1ca9b0c7b075f, type: 2}
+  - {fileID: 11400000, guid: bc3d9c05b27b41448a9994148bc23ab9, type: 2}
+  - {fileID: 11400000, guid: 9c601421abe352a478ca93b1da0d897e, type: 2}
+  - {fileID: 11400000, guid: c5f2d6a7cb8e4b34297b156e0cde1f1b, type: 2}
