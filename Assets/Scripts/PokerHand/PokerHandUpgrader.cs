@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class PokerHandUpgrader : MonoBehaviour
 {
+    public TextMeshProUGUI handNameText;
     public StatUpgrade multUpgrade;
     public StatUpgrade chipUpgrade;
 
     [SerializeField] private PokerHandLevelData upgradeData;
     public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData)
     {
+        handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
+
         chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
         multUpgrade.upgradeText.text = pokerHandLevelData.GetTotalMult().ToString();
 
@@ -24,7 +27,7 @@ public class PokerHandUpgrader : MonoBehaviour
 
         upgradeData.UpgradeHand();
 
-
+        handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
         yield return new WaitForSeconds(0.6f);
 
         chipUpgrade.animationContainer.SetActive(false);
