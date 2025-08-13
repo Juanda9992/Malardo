@@ -24,6 +24,7 @@ public class ConsumableItem : MonoBehaviour
     }
     public void UseItem()
     {
+        ConsumableManager.instance.DecreaseConsumable();
         PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
         Destroy(gameObject);
     }
@@ -35,6 +36,7 @@ public class ConsumableItem : MonoBehaviour
 
     public void SellItem()
     {
+        ConsumableManager.instance.DecreaseConsumable();
         CurrencyManager.instance.AddCurrency(sellValue);
         Destroy(gameObject);
     }
