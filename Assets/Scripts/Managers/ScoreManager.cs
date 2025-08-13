@@ -61,27 +61,15 @@ public class ScoreManager : MonoBehaviour
 
         totalScoreText.text = roundScore.ToString();
         scoreText.text = currentScore.ToString();
-
-        CheckBlindWin();
     }
 
-    private void CheckBlindWin()
+    public bool CheckBlindDefeated()
     {
-        if (BlindManager.instance.BlindDefeated((int)roundScore))
-        {
-            OnBlindDefeated();
-        }
-        else
-        {
-            if (HandManager.instance.GetHandsRemaining() == 0)
-            {
-                LoseManager.instance.SetLoseScreen();
-            }
-        }
+        return BlindManager.instance.BlindDefeated((int)roundScore);
     }
 
     [ContextMenu("Skip Match")]
-    private void OnBlindDefeated()
+    public void OnBlindDefeated()
     {
         if (EndGameManager.instance.ReachedEndGame())
         {
@@ -93,6 +81,14 @@ public class ScoreManager : MonoBehaviour
         GameStatusManager.SetGameEvent(TriggerOptions.RoundEnd);
         GameStatusManager._Status.handPlayedData.playedHandsInRound = new System.Collections.Generic.List<HandType>();
         totalScoreText.text = "0";
+    }
+
+    public void TryEndMatch()
+    {
+        if (HandManager.instance.GetHandsRemaining() == 0)
+        {
+            LoseManager.instance.SetLoseScreen();
+        }
     }
 
     public void ResetChipsAndMult()

@@ -50,6 +50,16 @@ public class CardPlayer : MonoBehaviour
         ScoreManager.instance.CalculateScore();
         currentHand.Clear();
 
+
+        if (ScoreManager.instance.CheckBlindDefeated())
+        {
+            yield return new WaitForSeconds(0.2f);
+            yield return CardManager.instance.TriggerEndRoundCardAbilities();
+            yield return new WaitForSeconds(0.2f);
+            ScoreManager.instance.OnBlindDefeated();
+        }
+
+        ScoreManager.instance.TryEndMatch();
         yield return new WaitForSeconds(0.5f);
         HandManager.instance.ClearHandPlayed();
         HandDetector.instance.RemoveHandFromMult();
