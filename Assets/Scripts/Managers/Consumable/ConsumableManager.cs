@@ -15,6 +15,8 @@ public class ConsumableManager : MonoBehaviour
 
     public static ConsumableManager instance;
 
+    public bool CanAddConsumable { get { return consumableAmmount < maxConsumables; } }
+
     private int consumableAmmount;
 
     void Awake()

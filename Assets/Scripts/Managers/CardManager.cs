@@ -100,15 +100,18 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < cardsOnScreen.Count; i++)
         {
             if (cardsOnScreen[i].currentCard.cardType == CardType.Gold)
-                {
-                    CurrencyManager.instance.AddCurrency(4);
-                    ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
-                    yield return new WaitForSeconds(0.3f);
-                }
+            {
+                CurrencyManager.instance.AddCurrency(4);
+                ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
+                yield return new WaitForSeconds(0.3f);
+            }
             if (cardsOnScreen[i].currentCard.cardSeal == Seal.Blue)
             {
-                ConsumableManager.instance.GeneratePlanetCard(GameStatusManager._Status.playedHand);
-                yield return new WaitForSeconds(0.3f);
+                if (ConsumableManager.instance.CanAddConsumable)
+                {
+                    ConsumableManager.instance.GeneratePlanetCard(GameStatusManager._Status.playedHand);
+                    yield return new WaitForSeconds(0.3f);
+                }
             }
         }
 
