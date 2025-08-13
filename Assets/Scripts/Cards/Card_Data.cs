@@ -17,6 +17,7 @@ public class Card_Data : MonoBehaviour
     {
         currentCard = new Card(card);
         currentCard.linkedCard = this;
+        currentCard.canPlay = true;
         card.SetCardChipAmmount();
         card.SetCardName();
         visuals.SetVisuals(currentCard);
@@ -224,7 +225,7 @@ public class Card
     public void SetCardChipAmmount()
     {
         chipAmmount = number;
-        if (number >= 11 && number < 13)
+        if (number >= 11 && number <= 13)
         {
             chipAmmount = 10;
         }
