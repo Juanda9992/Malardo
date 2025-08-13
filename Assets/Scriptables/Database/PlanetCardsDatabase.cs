@@ -8,6 +8,11 @@ public class PlanetCardsDatabase : ScriptableObject
 
     public PlanetCardData GetRandomPlanetCard()
     {
-        return allPlanetCards[Random.Range(0,allPlanetCards.Count)];
+        return allPlanetCards[Random.Range(0, allPlanetCards.Count)];
+    }
+
+    public PlanetCardData GetPlanetCardByHandType(HandType handType)
+    {
+        return allPlanetCards.Find(x => x.handType == handType);
     }
 }
