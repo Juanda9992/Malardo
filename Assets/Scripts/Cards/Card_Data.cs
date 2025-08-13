@@ -158,6 +158,9 @@ public class Card
             this.cardType = card.cardType;
             this.cardName = card.cardName;
             this.linkedCard = card.linkedCard;
+
+            SetCardChipAmmount();
+            SetCardName();
         }
     }
 

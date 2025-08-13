@@ -10,6 +10,13 @@ public class ConsumableManager : MonoBehaviour
     [Header("Testing")]
     [SerializeField] private PlanetCardData generatePlanetCard;
 
+    public static ConsumableManager instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     public void GenerateConsumableOnSlot(PackType packType)
     {
         if (packType == PackType.Planet)
@@ -25,6 +32,13 @@ public class ConsumableManager : MonoBehaviour
     {
         GameObject go = Instantiate(consumablePrefab, spawnParent);
         go.GetComponent<ConsumableItem>().SetPlanetData(generatePlanetCard);
+
+    }
+
+    public void GeneratePlanetCard(HandType handType)
+    {
+        GameObject go = Instantiate(consumablePrefab, spawnParent);
+        go.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetPlanetCardByHandType(handType));
 
     }
 

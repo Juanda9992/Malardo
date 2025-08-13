@@ -99,6 +99,12 @@ public class CardManager : MonoBehaviour
                 ScoreSign.instance.SetMessage(Color.red, "X1.5", cardsOnScreen[i].transform.position);
                 yield return new WaitForSeconds(0.3f);
             }
+
+
+            if (cardsOnScreen[i].currentCard.cardSeal == Seal.Blue)
+            {
+                ConsumableManager.instance.GeneratePlanetCard(GameStatusManager._Status.playedHand);
+            }
         }
     }
 

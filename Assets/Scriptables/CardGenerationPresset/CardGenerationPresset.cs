@@ -18,7 +18,7 @@ public class CardGenerationPresset : ScriptableObject
         {
             for (int j = 1; j < 14; j++)
             {
-                Card card = new Card();
+                Card card = new Card(presetCard);
                 card.SetCardNumber(j);
                 card.cardSuit = suits[i];
 
