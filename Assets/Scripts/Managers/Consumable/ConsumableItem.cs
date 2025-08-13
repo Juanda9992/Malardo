@@ -7,7 +7,9 @@ public class ConsumableItem : MonoBehaviour
 {
     public PlanetCardData planetCardData;
     [SerializeField] private TextMeshProUGUI textDescription;
+    [SerializeField] private TextMeshProUGUI sellButtonText;
 
+    [SerializeField] private int sellValue;
     public void SetPlanetData(PlanetCardData planetCard)
     {
         planetCardData = planetCard;
@@ -17,9 +19,23 @@ public class ConsumableItem : MonoBehaviour
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         textDescription.text = planetCardData.cardName;
         GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc);
+
+        SetPrice();
     }
     public void UseItem()
     {
         PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
+        Destroy(gameObject);
+    }
+
+    private void SetPrice()
+    {
+        sellButtonText.text = $"Sell \n ${sellValue}";
+    }
+
+    public void SellItem()
+    {
+        CurrencyManager.instance.AddCurrency(sellValue);
+        Destroy(gameObject);
     }
 }

@@ -16780,8 +16780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnParent: {fileID: 500020280}
-  consumablePrefab: {fileID: 0}
-  generatePlanetCard: 0
+  consumablePrefab: {fileID: 6311828478413497438, guid: e267077690abfe74492c3c641e7c4960, type: 3}
+  generatePlanetCard: {fileID: 0}
 --- !u!1 &1315391528
 GameObject:
   m_ObjectHideFlags: 0

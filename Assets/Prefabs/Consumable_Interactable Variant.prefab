@@ -390,7 +390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2778723258696395712}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3410746949518315761}
+        m_TargetAssemblyTypeName: ConsumableItem, Assembly-CSharp
+        m_MethodName: SellItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &4736843270299960782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,6 +519,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3410746949518315761}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UseItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ConsumableItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4603698088894946857, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -605,3 +645,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetCardData: {fileID: 0}
   textDescription: {fileID: 6950208976908496177}
+  sellButtonText: {fileID: 3295080383160983130}
+  sellValue: 3
