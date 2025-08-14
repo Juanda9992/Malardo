@@ -51,7 +51,7 @@ public class ConsumableItem : MonoBehaviour
         {
             if (!ConsumableManager.instance.CanAddConsumable)
             {
-                Debug.Log("No Space!");
+                StartCoroutine(FullSlotAnimation.instance.ShowConsumableAnimation());
                 return;
             }
             CurrencyManager.instance.RemoveCurrency(buyValue);
