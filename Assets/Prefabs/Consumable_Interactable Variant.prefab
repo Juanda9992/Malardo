@@ -1048,6 +1048,7 @@ MonoBehaviour:
   planetCardData: {fileID: 0}
   isOnShop: 0
   bottomButton: {fileID: 3239079179221691954}
+  upperButton: {fileID: 6879724684221006894}
   textDescription: {fileID: 6950208976908496177}
   sellButtonText: {fileID: 3295080383160983130}
   buyButtonText: {fileID: 3593115817259145006}

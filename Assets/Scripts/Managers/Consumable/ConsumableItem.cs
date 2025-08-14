@@ -11,6 +11,7 @@ public class ConsumableItem : MonoBehaviour
     public bool isOnShop = false;
 
     [SerializeField] private Button bottomButton;
+    [SerializeField] private Button upperButton;
 
     [SerializeField] private TextMeshProUGUI textDescription;
     [SerializeField] private TextMeshProUGUI sellButtonText;
@@ -60,9 +61,18 @@ public class ConsumableItem : MonoBehaviour
 
     public void SellItem()
     {
-        ConsumableManager.instance.DecreaseConsumable();
-        CurrencyManager.instance.AddCurrency(sellValue);
-        Destroy(gameObject);
+        if (!isOnShop)
+        {
+            ConsumableManager.instance.DecreaseConsumable();
+            CurrencyManager.instance.AddCurrency(sellValue);
+            Destroy(gameObject);
+        }
+        else
+        {
+            isOnShop = false;
+            CurrencyManager.instance.RemoveCurrency(buyValue);
+            UseItem();
+        }
     }
 
     public void SetUpButtons()
@@ -72,6 +82,8 @@ public class ConsumableItem : MonoBehaviour
             SetUpShopControls?.Invoke();
 
             bottomButton.interactable = CurrencyManager.instance.currentCurrency >= buyValue;
+            upperButton.interactable = bottomButton.interactable;
+
         }
         else
         {
