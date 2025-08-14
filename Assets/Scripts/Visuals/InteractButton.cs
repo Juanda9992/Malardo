@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractButton : MonoBehaviour
 {
+    public UnityEvent OnSelected;
     public GameObject interactButton;
     public GameObject sellButton;
 
@@ -13,6 +15,11 @@ public class InteractButton : MonoBehaviour
 
         interactButton.SetActive(selected);
 
+        if (selected)
+        {
+            OnSelected?.Invoke();
+        }
+
         if (sellButton == null) return;
         sellButton.SetActive(selected);
     }
@@ -22,7 +29,22 @@ public class InteractButton : MonoBehaviour
         selected = status;
         interactButton.SetActive(status);
 
+        if (status)
+        {
+            OnSelected?.Invoke();
+        }
+
         if (sellButton == null) return;
         sellButton.SetActive(selected);
+    }
+
+    public void SetInteractButton(GameObject button)
+    {
+        interactButton = button;
+    }
+
+    public void SetSecondaryButton(GameObject button)
+    {
+        sellButton = button;
     }
 }
