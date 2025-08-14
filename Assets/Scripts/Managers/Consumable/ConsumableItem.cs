@@ -49,6 +49,11 @@ public class ConsumableItem : MonoBehaviour
         }
         else
         {
+            if (!ConsumableManager.instance.CanAddConsumable)
+            {
+                Debug.Log("No Space!");
+                return;
+            }
             CurrencyManager.instance.RemoveCurrency(buyValue);
             ConsumableManager.instance.AddFromShop(this);
         }
