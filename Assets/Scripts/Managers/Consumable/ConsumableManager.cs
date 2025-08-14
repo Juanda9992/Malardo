@@ -42,8 +42,8 @@ public class ConsumableManager : MonoBehaviour
             GameObject go = Instantiate(consumablePrefab, spawnParent);
             go.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
         }
-        consumableAmmount++;
-        UpdateConsumableText();
+
+        IncreaseConsumables();
     }
 
     [ContextMenu("Generate Planet Card")]
@@ -53,8 +53,8 @@ public class ConsumableManager : MonoBehaviour
 
         GameObject go = Instantiate(consumablePrefab, spawnParent);
         go.GetComponent<ConsumableItem>().SetPlanetData(generatePlanetCard);
-        consumableAmmount++;
-        UpdateConsumableText();
+
+        IncreaseConsumables();
     }
 
     public void GeneratePlanetCard(HandType handType)
@@ -63,8 +63,21 @@ public class ConsumableManager : MonoBehaviour
 
         GameObject go = Instantiate(consumablePrefab, spawnParent);
         go.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetPlanetCardByHandType(handType));
-        consumableAmmount++;
+        IncreaseConsumables();
+    }
 
+    public void AddFromShop(ConsumableItem consumable)
+    {
+        consumable.transform.SetParent(spawnParent);
+        consumable.isOnShop = false;
+        consumable.SetUpButtons();
+
+        IncreaseConsumables();
+    }
+
+    public void IncreaseConsumables()
+    {
+        consumableAmmount++;
         UpdateConsumableText();
     }
 
