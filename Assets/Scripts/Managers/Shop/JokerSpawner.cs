@@ -4,8 +4,6 @@ using UnityEngine;
 public class JokerSpawner : MonoBehaviour
 {
     [SerializeField] private int shopItemSlots = 2;
-    public JokerData[] allJokers;
-
     [Header("Joker Spawning")]
     [SerializeField] private Transform jokerTransform;
     [SerializeField] private GameObject jokerPrefab;
@@ -33,7 +31,7 @@ public class JokerSpawner : MonoBehaviour
             if (Random.Range(0, 2) == 0)
             {
                 GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
-                currentJoker.GetComponent<JokerContainer>().SetUpJoker(allJokers[Random.Range(0, allJokers.Length)]);
+                currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJoker());
             }
             else
             {
