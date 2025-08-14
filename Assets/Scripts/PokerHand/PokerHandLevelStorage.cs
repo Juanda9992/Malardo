@@ -25,6 +25,11 @@ public class PokerHandLevelStorage : MonoBehaviour
     {
         return pokerHands.Find(x => x.pokerHand.handType == handType);
     }
+
+    public List<PokerHandLevelData> GetPokerHands()
+    {
+        return pokerHands;
+    }
 }
 
 [System.Serializable]
