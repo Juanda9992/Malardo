@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class JokerSpawner : MonoBehaviour
 {
+    [SerializeField] private int shopItemSlots = 2;
     public JokerData[] allJokers;
-    [SerializeField] private int defaultJokersAtTime = 2;
 
     [Header("Joker Spawning")]
     [SerializeField] private Transform jokerTransform;
     [SerializeField] private GameObject jokerPrefab;
+    [SerializeField] private GameObject planetCardprefab;
 
     [Header("Packs Database")]
     [SerializeField] private Transform packsTransform;
@@ -21,27 +22,41 @@ public class JokerSpawner : MonoBehaviour
     private IEnumerator GenerateStuff()
     {
         yield return new WaitForSeconds(0.1f);
-        GenerateJokers();
+        GenerateItems();
     }
-    public void GenerateJokers()
+    public void GenerateItems()
     {
-        Transform[] existingJokers = jokerTransform.GetComponentsInChildren<Transform>();
-        if (existingJokers.Length > 1)
+        ClearItemsInShop();
+
+        for (int i = 0; i < shopItemSlots; i++)
         {
-            for (int i = 1; i < existingJokers.Length; i++)
+            if (Random.Range(0, 2) == 0)
             {
-                Destroy(existingJokers[i].gameObject);
+                GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
+                currentJoker.GetComponent<JokerContainer>().SetUpJoker(allJokers[Random.Range(0, allJokers.Length)]);
             }
-        }
-        for (int i = 0; i < defaultJokersAtTime; i++)
-        {
-            GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
-            currentJoker.GetComponent<JokerContainer>().SetUpJoker(allJokers[Random.Range(0, allJokers.Length)]);
+            else
+            {
+                GameObject planetCard = Instantiate(planetCardprefab, jokerTransform);
+                planetCard.GetComponent<ConsumableItem>().isOnShop = true;
+                planetCard.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
+            }
         }
 
         gameObject.SetActive(false);
     }
 
+    private void ClearItemsInShop()
+    {
+        Transform[] existingItems = jokerTransform.GetComponentsInChildren<Transform>();
+        if (existingItems.Length > 1)
+        {
+            for (int i = 1; i < existingItems.Length; i++)
+            {
+                Destroy(existingItems[i].gameObject);
+            }
+        }
+    }
     public void GenerateShopPacks()
     {
         Transform[] packs = packsTransform.GetComponentsInChildren<Transform>();
