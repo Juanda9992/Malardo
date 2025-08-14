@@ -21,6 +21,8 @@ public class ConsumableItem : MonoBehaviour
     [SerializeField] private int sellValue;
 
     [SerializeField] private UnityEvent SetUpShopControls, SetUpConsumableControls;
+
+    private bool directlyused;
     public void SetPlanetData(PlanetCardData planetCard)
     {
         planetCardData = planetCard;
@@ -38,7 +40,10 @@ public class ConsumableItem : MonoBehaviour
     {
         if (!isOnShop)
         {
-            ConsumableManager.instance.DecreaseConsumable();
+            if (!directlyused)
+            {
+                ConsumableManager.instance.DecreaseConsumable();
+            }
             PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
             Destroy(gameObject);
         }
@@ -70,6 +75,7 @@ public class ConsumableItem : MonoBehaviour
         else
         {
             isOnShop = false;
+            directlyused = true;
             CurrencyManager.instance.RemoveCurrency(buyValue);
             UseItem();
         }
@@ -84,10 +90,15 @@ public class ConsumableItem : MonoBehaviour
             bottomButton.interactable = CurrencyManager.instance.currentCurrency >= buyValue;
             upperButton.interactable = bottomButton.interactable;
 
+            upperButton.targetGraphic.color = Color.magenta;
+            sellButtonText.text = "BUY & USE";
+
         }
         else
         {
             SetUpConsumableControls?.Invoke();
+            upperButton.targetGraphic.color = Color.green;
+            sellButtonText.text = "SELL $"+sellValue;
         }
     }
 }
