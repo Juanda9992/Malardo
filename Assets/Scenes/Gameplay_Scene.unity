@@ -1551,7 +1551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &81758939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6184,6 +6184,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa2e98bf5bb4ba74fb53fbda71efef14, type: 2}
   - {fileID: 11400000, guid: aa8644c9217636f4aafee0b56a8556b5, type: 2}
   handNameText: {fileID: 676285008}
+  currentHand:
+    pokerHand: {fileID: 0}
+    handLevel: 1
+    handPlayedTime: 0
 --- !u!114 &333037843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6199,22 +6203,31 @@ MonoBehaviour:
   pokerHands:
   - pokerHand: {fileID: 11400000, guid: 5e2e08f6febad004ca8a1ed68729982b, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: f16e176f7fceab747af063a084c1b096, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: fde5881c15b94d54fb998f59140a5f62, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: bec2afeab9665f144a12f3046916303f, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: fa2e98bf5bb4ba74fb53fbda71efef14, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: aa8644c9217636f4aafee0b56a8556b5, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: 5211b70355135484ca6e5fe079ce88cf, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: c9df8a840cd97c641923ec52f8096320, type: 2}
     handLevel: 1
+    handPlayedTime: 0
   - pokerHand: {fileID: 11400000, guid: 6f25c04d46d698744b5c8fc10ffd5c34, type: 2}
     handLevel: 1
+    handPlayedTime: 0
 --- !u!114 &333037844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6227,6 +6240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af6cc9086e0d1649bf5dfbf651df45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUpgrading: 0
   handNameText: {fileID: 676285008}
   multUpgrade:
     animationContainer: {fileID: 1154148760}
@@ -9149,7 +9163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers: []
+  testingJokers:
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -14664,9 +14679,9 @@ RectTransform:
   - {fileID: 1265824194}
   m_Father: {fileID: 236423024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 814.5, y: -50}
   m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107032409
@@ -24071,9 +24086,9 @@ RectTransform:
   - {fileID: 1985233062}
   m_Father: {fileID: 236423024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271.5, y: -50}
   m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869497749
