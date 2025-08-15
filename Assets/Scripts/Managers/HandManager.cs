@@ -30,7 +30,6 @@ public class HandManager : MonoBehaviour
     {
         instance = this;
         handCards = new List<Card>();
-
     }
 
     IEnumerator Start()
@@ -157,6 +156,7 @@ public class HandManager : MonoBehaviour
         Debug.Log("Reset");
         hands = defaultHands;
         discards = defaultDiscards;
+        GameStatusManager._Status.discardData.discardsOnMatch = 0;
 
         UpdateDiscardText();
         UpdateHandText();
