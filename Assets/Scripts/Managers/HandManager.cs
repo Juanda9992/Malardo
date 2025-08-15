@@ -136,10 +136,10 @@ public class HandManager : MonoBehaviour
     public void PlayHand()
     {
         hands--;
+        GameStatusManager.SetGameEvent(TriggerOptions.BeforeHandPlay);
         GameStatusManager.SetHandsRemaining(hands);
         OnHandPlayed?.Invoke(handCards);
         GameEventsManager.instance.TriggerHandPlayed();
-        GameStatusManager.SetGameEvent(TriggerOptions.BeforeHandPlay);
         SetPlayButtonsState(false);
         UpdateHandText();
     }

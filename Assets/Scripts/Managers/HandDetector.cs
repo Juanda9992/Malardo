@@ -12,7 +12,7 @@ public class HandDetector : MonoBehaviour
     [SerializeField] private List<HandData> allHands;
 
     [SerializeField] private TextMeshProUGUI handNameText;
-    private PokerHandLevelData currentHand;
+    public PokerHandLevelData currentHand;
     void Awake()
     {
         instance = this;

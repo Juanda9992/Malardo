@@ -33,6 +33,8 @@ public class CardPlayer : MonoBehaviour
     private IEnumerator PlayCards()
     {
         isPlayingCards = true;
+
+        yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
         RemovePlayedCardsFromList();
         Debug.Log(lastHandPlayed);
 

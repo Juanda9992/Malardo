@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PokerHandUpgrader : MonoBehaviour
 {
+    public bool isUpgrading;
     public static PokerHandUpgrader instance;
     public TextMeshProUGUI handNameText;
     public StatUpgrade multUpgrade;
@@ -24,6 +25,7 @@ public class PokerHandUpgrader : MonoBehaviour
 
     public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData)
     {
+        isUpgrading = true;
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
 
         chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
@@ -51,6 +53,14 @@ public class PokerHandUpgrader : MonoBehaviour
         chipUpgrade.upgradeText.text = "0";
         multUpgrade.upgradeText.text = "0";
         handNameText.text = "";
+        if (CardPlayer.instance.isPlayingCards)
+        {
+            handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
+            ScoreManager.instance.SetChips(pokerHandLevelData.GetTotalChips());
+            ScoreManager.instance.SetMult(pokerHandLevelData.GetTotalMult());
+            yield return new WaitForSeconds(0.2f);
+        }
+        isUpgrading = false;
     }
 
     [ContextMenu("Test upgrade UI")]
