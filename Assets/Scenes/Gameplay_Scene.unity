@@ -7334,6 +7334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430010866}
   - component: {fileID: 430010867}
+  - component: {fileID: 430010868}
   m_Layer: 0
   m_Name: Database
   m_TagString: Untagged
@@ -7373,6 +7374,23 @@ MonoBehaviour:
   cardSpriteDatabase: {fileID: 11400000, guid: 24948b442d2bee74d8186869dffde7f1, type: 2}
   planetCardsDatabase: {fileID: 11400000, guid: 0178c579f3ec151418d28b4a63f8ae4e, type: 2}
   jokerContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
+  pricesDatabase: {fileID: 430010868}
+--- !u!114 &430010868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430010865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6accfc839546a664eb3ea5211cdd9850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalPackPrice: 3
+  jumboPackPrice: 6
+  megaPackPrice: 8
+  freePlanetPacks: 0
 --- !u!1 &466614442
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,8 +9182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers:
-  - {fileID: 0}
+  testingJokers: []
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
