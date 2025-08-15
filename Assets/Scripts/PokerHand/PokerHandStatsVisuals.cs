@@ -15,6 +15,6 @@ public class PokerHandStatsVisuals : MonoBehaviour
         pokerHandNameText.text = pokerHandLevel.pokerHand.name;
         chipAmmountText.text = pokerHandLevel.GetTotalChips().ToString();
         multAmmountext.text = pokerHandLevel.GetTotalMult().ToString();
-        playedTimesText.text = "0";
+        playedTimesText.text = pokerHandLevel.handPlayedTime.ToString();
     }
 }

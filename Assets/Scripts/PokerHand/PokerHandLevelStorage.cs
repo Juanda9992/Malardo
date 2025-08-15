@@ -37,6 +37,7 @@ public class PokerHandLevelData
 {
     public HandData pokerHand;
     public int handLevel = 1;
+    public int handPlayedTime = 0;
     public PokerHandLevelData()
     {
         this.handLevel = 1;
@@ -54,6 +55,12 @@ public class PokerHandLevelData
     public void UpgradeHand()
     {
         handLevel++;
+    }
+
+    public void IncreasePlayTime()
+    {
+        handPlayedTime++;
+        Debug.Log("Played");
     }
 
     public void DebugPokerHandData()

@@ -113,6 +113,7 @@ public class HandDetector : MonoBehaviour
     {
         handNameText.text = currentHand.pokerHand.name + " <color=blue> lvl." + currentHand.handLevel + "</color>";
         GameStatusManager.SetHandPlayed(currentHand.pokerHand.handType);
+        CardPlayer.instance.SetHandPlayed(currentHand.pokerHand.handType);
         ScoreManager.instance.SetChips(currentHand.GetTotalChips());
         ScoreManager.instance.SetMult(currentHand.GetTotalMult());
     }
@@ -332,7 +333,6 @@ public class HandDetector : MonoBehaviour
 
     private void ResetValues()
     {
-        CardPlayer.instance.SetHandPlayed(currentHand.pokerHand.handType);
         realCards.Clear();
         handCards.Clear();
         cardsSorted.Clear();

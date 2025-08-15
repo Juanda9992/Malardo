@@ -34,6 +34,9 @@ public class CardPlayer : MonoBehaviour
     {
         isPlayingCards = true;
         RemovePlayedCardsFromList();
+        Debug.Log(lastHandPlayed);
+
+        PokerHandLevelStorage.instance.GetHandData(lastHandPlayed).IncreasePlayTime();
         yield return new WaitForSeconds(0.1f);
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.2f);
