@@ -73,4 +73,11 @@ public class JokerSpawner : MonoBehaviour
             shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomPack());
         }
     }
+
+    [ContextMenu("Generate All Shop")]
+    private void GenerateAllShop()
+    {
+        GenerateShopPacks();
+        GenerateStuff();
+    }
 }
