@@ -34,7 +34,12 @@ public class ShopItem : MonoBehaviour
     public void SetPackData(PackData data)
     {
         GetComponent<DescriptionContainer>().SetNameAndDescription(data.packName, data.packDescription);
+
         ammountRequired = data.packCost;
+        if (data.packType == PackType.Planet)
+        {
+            ammountRequired = DatabaseManager.instance.pricesDatabase.freePlanetPacks ? 0 : data.packCost;
+        }
         packType = data.packType;
         contentText.text = data.packName;
         _itemPack = data;

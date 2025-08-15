@@ -8,6 +8,7 @@ public class DatabaseManager : MonoBehaviour
     public CardSpriteDatabase cardSpriteDatabase;
     public PlanetCardsDatabase planetCardsDatabase;
     public JokerListContainer jokerContainer;
+    public PricesDatabase pricesDatabase;
     void Awake()
     {
         instance = this;
