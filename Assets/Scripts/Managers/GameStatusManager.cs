@@ -123,21 +123,5 @@ public class GameStatus
             return false;
         }
 
-        public int CheckNumberHandPlayed(HandType[] handType, bool round)
-        {
-            int coincidences = 0;
-            for (int i = 0; i < handType.Length; i++)
-            {
-                if (round)
-                {
-                    coincidences += playedHandsInRound.FindAll(x => x == handType[i]).Count;
-                }
-                else
-                {
-                    coincidences += playedHandsInRun.FindAll(x => x == handType[i]).Count;
-                }
-            }
-            return coincidences;
-        }
     }
 }

@@ -38,7 +38,6 @@ public class CardPlayer : MonoBehaviour
         RemovePlayedCardsFromList();
         Debug.Log(lastHandPlayed);
 
-        PokerHandLevelStorage.instance.GetHandData(lastHandPlayed).IncreasePlayTime();
         yield return new WaitForSeconds(0.1f);
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.2f);
@@ -52,6 +51,7 @@ public class CardPlayer : MonoBehaviour
         GameStatusManager._Status.currentGameStatus = TriggerOptions.HandEnd;
         GameEventsManager.instance.TriggerHandEnd();
         yield return JokerManager.instance.PlayJokersEndMatch();
+        PokerHandLevelStorage.instance.GetHandData(lastHandPlayed).IncreasePlayTime();
         ScoreManager.instance.CalculateScore();
         currentHand.Clear();
 

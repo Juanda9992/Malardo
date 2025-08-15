@@ -21,6 +21,14 @@ public class PokerHandLevelStorage : MonoBehaviour
         }
     }
 
+    public void ResetHandsPlayedInRound()
+    {
+        foreach (var hand in pokerHands)
+        {
+            hand.playedInRound = false;
+        }
+    }
+
     public PokerHandLevelData GetHandData(HandType handType)
     {
         return pokerHands.Find(x => x.pokerHand.handType == handType);
@@ -38,6 +46,7 @@ public class PokerHandLevelData
     public HandData pokerHand;
     public int handLevel = 1;
     public int handPlayedTime = 0;
+    public bool playedInRound = false;
     public PokerHandLevelData()
     {
         this.handLevel = 1;
@@ -60,6 +69,7 @@ public class PokerHandLevelData
     public void IncreasePlayTime()
     {
         handPlayedTime++;
+        playedInRound = true;
         Debug.Log("Played");
     }
 

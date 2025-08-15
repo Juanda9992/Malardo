@@ -4219,7 +4219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherUI:
   - {fileID: 1683800526}
-  - {fileID: 173726155}
   packSection: {fileID: 416426809}
   jokerListContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   PackInteractablePrefab: {fileID: 8474415298235704520, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
@@ -6188,6 +6187,7 @@ MonoBehaviour:
     pokerHand: {fileID: 0}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
 --- !u!114 &333037843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6204,30 +6204,39 @@ MonoBehaviour:
   - pokerHand: {fileID: 11400000, guid: 5e2e08f6febad004ca8a1ed68729982b, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: f16e176f7fceab747af063a084c1b096, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: fde5881c15b94d54fb998f59140a5f62, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: bec2afeab9665f144a12f3046916303f, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: fa2e98bf5bb4ba74fb53fbda71efef14, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: aa8644c9217636f4aafee0b56a8556b5, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: 5211b70355135484ca6e5fe079ce88cf, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: c9df8a840cd97c641923ec52f8096320, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: 6f25c04d46d698744b5c8fc10ffd5c34, type: 2}
     handLevel: 1
     handPlayedTime: 0
+    playedInRound: 0
 --- !u!114 &333037844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9182,7 +9191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers: []
+  testingJokers:
+  - {fileID: 11400000, guid: d12b0f6c90ea9ac4cb944b2eb8e32d7e, type: 2}
+  - {fileID: 11400000, guid: 9affeb2e8d42930488206f65e9a7ff75, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}

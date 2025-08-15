@@ -105,6 +105,7 @@ public class BlindManager : MonoBehaviour
 
     public void SetBlindDefeated()
     {
+        PokerHandLevelStorage.instance.ResetHandsPlayedInRound();
         OnBlindDefeated?.Invoke();
         currentBlindProgress++;
         currentRound++;
