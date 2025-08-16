@@ -9192,8 +9192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: d12b0f6c90ea9ac4cb944b2eb8e32d7e, type: 2}
-  - {fileID: 11400000, guid: 9affeb2e8d42930488206f65e9a7ff75, type: 2}
+  - {fileID: 11400000, guid: c122ec63764f03b4cabca74be53f286f, type: 2}
+  - {fileID: 11400000, guid: 5a410551343d8c0408c7a0c35d2b2e19, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -9392,7 +9392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16311,6 +16311,7 @@ MonoBehaviour:
   - {fileID: 779340048}
   - {fileID: 224703337}
   - {fileID: 1946890383}
+  bossBlind: {fileID: 0}
 --- !u!114 &1192478478
 MonoBehaviour:
   m_ObjectHideFlags: 0
