@@ -12,7 +12,7 @@ public class BlindSelector : MonoBehaviour
     [SerializeField] private Image[] imageColors;
     [SerializeField] private TextMeshProUGUI[] scoresText;
     [SerializeField] private GameObject[] blindBlockers;
-    private CurrentBlind bossBlind;
+    public CurrentBlind bossBlind;
 
     void Start()
     {

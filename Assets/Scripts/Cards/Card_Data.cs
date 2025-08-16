@@ -66,7 +66,7 @@ public class Card_Data : MonoBehaviour
         }
     }
 
-    private void CheckForNumberDebuffed(int[] numbers)
+    public void CheckForNumberDebuffed(int[] numbers)
     {
         if (IsNumberDebuffed(numbers))
         {
@@ -126,7 +126,8 @@ public class Card
     [Range(1, 13)] public int number;
     public int chipAmmount;
     public Suit cardSuit;
-    public bool IsFaceCard { get { return number >= 11 && number <= 13; } }
+    public bool IsFaceCard { get { return (number >= 11 && number <= 13) || overrideFaceCard; } }
+    public static bool overrideFaceCard;
     public bool IsSpecialCard { get { return cardType != CardType.Default; } }
     public CardType cardType = CardType.Default;
     public Seal cardSeal = Seal.None;
