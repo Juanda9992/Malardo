@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Required Face Card
   m_EditorClassIdentifier: 
   requiredCard: 0b0000000c0000000d000000
+  requireFaceCard: 1

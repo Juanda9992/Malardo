@@ -4,12 +4,13 @@ using UnityEngine;
 public class RequiredCardTrigger : JokerTrigger
 {
     public int[] requiredCard;
+    public bool requireFaceCard;
     public override bool MeetCondition(GameStatus gameStatus)
     {
         if (gameStatus.cardPlayed == null) return false;
         for (int i = 0; i < requiredCard.Length; i++)
         {
-            if (requiredCard[i] == gameStatus.cardPlayed.number)
+            if (requiredCard[i] == gameStatus.cardPlayed.number || (requireFaceCard && Card.overrideFaceCard))
             {
                 return true;
             }
