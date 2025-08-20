@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Sock and Buskin Joker
+  m_Name: Hack Joker
   m_EditorClassIdentifier: 
-  jokerName: Hanging Chad
-  description: Retrigger first played card used in scoring 2 additional times
+  jokerName: Hack
+  description: Retrigger each played 2, 3, 4, or 5
   triggerMessage: Again!
   overrideEffect: 0
   shopValue: 4
