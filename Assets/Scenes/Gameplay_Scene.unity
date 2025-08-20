@@ -6189,6 +6189,7 @@ MonoBehaviour:
     handPlayedTime: 0
     playedInRound: 0
   requiredAmmountForFlush: 5
+  gapForStraights: 1
 --- !u!114 &333037843
 MonoBehaviour:
   m_ObjectHideFlags: 0
