@@ -5,6 +5,7 @@ public class ReactivateCard : JokerEffect
     public int reactivationTimes;
     public bool firstCard;
     public bool faceCards;
+    public bool lastround;
     public int[] numberRange;
 
     public override void ApplyEffect()
@@ -35,6 +36,15 @@ public class ReactivateCard : JokerEffect
             if (cardToPlay.number == numberRange[i])
             {
                 activations += reactivationTimes;
+            }
+        }
+
+        if (lastround)
+        {
+            Debug.Log(HandManager.instance.GetHandsRemaining());
+            if (HandManager.instance.GetHandsRemaining() == 0)
+            {
+                activations++;
             }
         }
 
