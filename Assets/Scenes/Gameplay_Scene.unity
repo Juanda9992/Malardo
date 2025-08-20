@@ -6188,6 +6188,7 @@ MonoBehaviour:
     handLevel: 1
     handPlayedTime: 0
     playedInRound: 0
+  requiredAmmountForFlush: 5
 --- !u!114 &333037843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9191,7 +9192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers: []
+  testingJokers:
+  - {fileID: 11400000, guid: b198a07776840e242b9717c830dd1cb9, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
