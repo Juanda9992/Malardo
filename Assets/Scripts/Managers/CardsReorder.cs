@@ -44,4 +44,36 @@ public class CardsReorder : MonoBehaviour
     {
         cardsParent.enabled = false;
     }
+
+    public void SortByColor()
+    {
+        DisableLayout();
+        List<Card_Data> cardsData = new List<Card_Data>(CardManager.instance.cardsOnScreen);
+
+
+        cardsData = cardsData.OrderBy(x => x.currentCard.cardSuit).ToList();
+
+        for (int i = 0; i < cardsData.Count; i++)
+        {
+            cardsData[i].transform.SetSiblingIndex(i);
+        }
+
+        StartCoroutine(ResetLayout());
+    }
+
+    public void SortByNumber()
+    {
+        DisableLayout();
+        List<Card_Data> cardsData = new List<Card_Data>(CardManager.instance.cardsOnScreen);
+
+
+        cardsData = cardsData.OrderBy(x => x.currentCard.number).ToList();
+
+        for (int i = 0; i < cardsData.Count; i++)
+        {
+            cardsData[i].transform.SetSiblingIndex(i);
+        }
+
+        StartCoroutine(ResetLayout());
+    }
 }
