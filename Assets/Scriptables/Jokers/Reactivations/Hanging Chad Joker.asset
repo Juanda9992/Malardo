@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Hanging Chad Joker
+  m_EditorClassIdentifier: 
+  jokerName: Sock and Buskin
+  description: Retrigger all played face cards
+  triggerMessage: Again!
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 0
+  triggers: []
+  effects: []
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 11400000, guid: 3e0475217a7e0df439234f44b2f44d7a, type: 2}
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}
