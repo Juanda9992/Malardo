@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Reactivate Card",menuName = "Scriptables/Joker/Effect/Reactivation/Reactivate Card")]
+[CreateAssetMenu(fileName = "Reactivate Card", menuName = "Scriptables/Joker/Effect/Reactivation/Reactivate Card")]
 public class ReactivateCard : JokerEffect
 {
     public int reactivationTimes;
@@ -48,6 +48,6 @@ public class ReactivateCard : JokerEffect
             }
         }
 
-        return cardToPlay.activations + activations;
+        return activations;
     }
 }

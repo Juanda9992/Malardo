@@ -10,6 +10,8 @@ public class CardPlayer : MonoBehaviour
     public List<Card> currentHand;
     private HandType lastHandPlayed;
 
+    [SerializeField] private List<JokerContainer> reactivationJokers;
+
     void Awake()
     {
         instance = this;
@@ -79,6 +81,7 @@ public class CardPlayer : MonoBehaviour
 
         for (int i = 0; i < currentHand.Count; i++)
         {
+            int plays = 0;
             if (!currentHand[i].canPlay)
             {
                 ScoreSign.instance.SetMessage(Color.black, "NO!", currentHand[i].linkedCard.transform.position);
@@ -87,7 +90,18 @@ public class CardPlayer : MonoBehaviour
             }
             for (int j = 0; j < currentHand[i].activations; j++)
             {
+                if (plays > 0)
+                {
+                    if (currentHand[i].activations > 1 && reactivationJokers.Count > 0)
+                    {
+                        reactivationJokers[0].TriggerMessage();
+                        yield return new WaitForSeconds(0.3f);
+                        reactivationJokers.RemoveAt(0);
+                    }
+                }
                 yield return PlayCard(currentHand[i]);
+
+                plays++;
 
             }
 
@@ -113,13 +127,21 @@ public class CardPlayer : MonoBehaviour
     }
     private void CheckCardReactivations()
     {
+        reactivationJokers = new List<JokerContainer>();
         for (int i = 0; i < currentHand.Count; i++)
         {
             foreach (var Joker in JokerManager.instance.currentJokers)
             {
                 if (Joker._joker.reactivationJoker != null)
                 {
-                    currentHand[i].activations = Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]);
+                    int activations = Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]);
+
+                    currentHand[i].activations += activations;
+                    Debug.Log(Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]) + " " + Joker._joker.jokerName);
+                    for (int r = 0; r < activations; r++)
+                    {
+                        reactivationJokers.Add(Joker);
+                    }
                 }
             }
         }

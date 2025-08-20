@@ -58,6 +58,11 @@ public class JokerContainer : MonoBehaviour
         return true;
     }
 
+    public void TriggerMessage()
+    {
+        ScoreSign.instance.SetMessage(Color.green, _joker.triggerMessage, transform.position);
+    }
+
     public void TriggerActions()
     {
         JokerExecuteAction();
