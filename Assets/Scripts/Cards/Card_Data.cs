@@ -133,6 +133,7 @@ public class Card
     public Seal cardSeal = Seal.None;
     public CardEdition cardEdition = CardEdition.Base;
     public bool canPlay = true;
+    public int activations = 1;
     public Card GenerateRandomCard()
     {
 
