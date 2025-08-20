@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Shortcut
+  m_Name: To The Moon Joker
   m_EditorClassIdentifier: 
-  jokerName: Shortcut
-  description: 'Allows Straights to be made with gaps of 1 rank (ex: 10 8 6 5 3)'
+  jokerName: To the Moon
+  description: Earn an extra $1 of interest for every $5 you have at end of round
   triggerMessage: 
   overrideEffect: 0
-  shopValue: 7
+  shopValue: 5
   jokerRarity: 1
   triggers: []
   effects: []
   OnSetUpJoker:
-  - {fileID: 11400000, guid: afcde6d1ca2eacf418bba0ded77e6629, type: 2}
+  - {fileID: 11400000, guid: 9618db49a81611d45b38b059510b0b70, type: 2}
   OnSellEffect:
-  - {fileID: 11400000, guid: 0270c12064b4758438caa3edc21f35a1, type: 2}
+  - {fileID: 11400000, guid: 21cf48914f0d619409134e8d3eb2a6e9, type: 2}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}

@@ -9194,7 +9194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: b198a07776840e242b9717c830dd1cb9, type: 2}
+  - {fileID: 11400000, guid: 87a91c58085b361459f6c4ccc51f1aed, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -12890,6 +12890,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  investMultiplier: 1
 --- !u!1 &989674094
 GameObject:
   m_ObjectHideFlags: 0
