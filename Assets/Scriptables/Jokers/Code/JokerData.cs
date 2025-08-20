@@ -15,6 +15,7 @@ public class JokerData : ScriptableObject
 
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
+    public JokerEffect reactivationJoker;
 
     public JokerVisuals jokerVisuals;
 

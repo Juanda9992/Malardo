@@ -75,6 +75,8 @@ public class CardPlayer : MonoBehaviour
 
     private IEnumerator TriggerHandCards()
     {
+        CheckCardReactivations();
+
         for (int i = 0; i < currentHand.Count; i++)
         {
             if (!currentHand[i].canPlay)
@@ -83,11 +85,11 @@ public class CardPlayer : MonoBehaviour
                 yield return new WaitForSeconds(0.4f);
                 continue;
             }
-            for (int j = 0; j < 1; j++)
-                {
-                    yield return PlayCard(currentHand[i]);
+            for (int j = 0; j < currentHand[i].activations; j++)
+            {
+                yield return PlayCard(currentHand[i]);
 
-                }
+            }
 
             if (currentHand[i].cardSeal == Seal.Red)
             {
@@ -107,6 +109,19 @@ public class CardPlayer : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+    private void CheckCardReactivations()
+    {
+        for (int i = 0; i < currentHand.Count; i++)
+        {
+            foreach (var Joker in JokerManager.instance.currentJokers)
+            {
+                if (Joker._joker.reactivationJoker != null)
+                {
+                    currentHand[i].activations = Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]);
+                }
+            }
         }
     }
 
