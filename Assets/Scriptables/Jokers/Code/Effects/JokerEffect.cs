@@ -11,4 +11,8 @@ public abstract class JokerEffect : ScriptableObject
     {
         return string.Empty;
     }
+    public virtual int CheckForActivation(Card card)
+    {
+        return 1;
+    }
 }
