@@ -12,12 +12,15 @@ public class DeckManager : MonoBehaviour
 
     public List<Card> roundDeck;
     public int currentHandSize = 8;
+    public int initialDeckSize;
+    public int roundDeckSize;
     [SerializeField] private TextMeshProUGUI deckCounter;
 
     void Awake()
     {
         instance = this;
         fullMatchDeck = new List<Card>(referenceDeck.allCards);
+        initialDeckSize = fullMatchDeck.Count;
     }
     void Start()
     {
@@ -26,6 +29,7 @@ public class DeckManager : MonoBehaviour
 
     private void OnRoundStart()
     {
+        roundDeckSize = fullMatchDeck.Count;
         roundDeck = new List<Card>(fullMatchDeck);
         RegenerateDeck();
     }
