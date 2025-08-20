@@ -13,6 +13,7 @@ public class HandDetector : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI handNameText;
     public PokerHandLevelData currentHand;
+    public int requiredAmmountForFlush = 5;
     void Awake()
     {
         instance = this;
@@ -155,20 +156,20 @@ public class HandDetector : MonoBehaviour
     }
     public bool CheckIfColor()
     {
-        if (handCards.Count != 5)
+        if (handCards.Count < requiredAmmountForFlush)
         {
             return false;
         }
         if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
-        Suit currentSuit = handCards[0].cardSuit;
+
         for (int i = 0; i < handCards.Count; i++)
         {
-            if (handCards[i].cardSuit != currentSuit)
+            if (handCards.FindAll(x => x.cardSuit == handCards[i].cardSuit).Count >= requiredAmmountForFlush)
             {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
     public bool CheckIfFiveOfAKind()
     {
