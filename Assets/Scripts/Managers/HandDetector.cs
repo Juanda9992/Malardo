@@ -14,6 +14,7 @@ public class HandDetector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI handNameText;
     public PokerHandLevelData currentHand;
     public int requiredAmmountForFlush = 5;
+    public int gapForStraights = 1;
     void Awake()
     {
         instance = this;
@@ -130,7 +131,6 @@ public class HandDetector : MonoBehaviour
         if (handCards.Count < requiredAmmountForFlush)
         {
             cardsSorted.Clear();
-            Debug.Log("Enter here");
             return false;
         }
         if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
@@ -144,9 +144,8 @@ public class HandDetector : MonoBehaviour
             nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
             if (nextCard != null)
             {
-                if (Mathf.Abs(cardsSorted[i].number - nextCard.number) != 1)
+                if (Mathf.Abs(cardsSorted[i].number - nextCard.number) > gapForStraights)
                 {
-                    Debug.Log(cardsSorted[i].number + " " + nextCard.number);
                     coincidences--;
                 }
                 else
@@ -156,8 +155,6 @@ public class HandDetector : MonoBehaviour
 
             }
         }
-
-        Debug.Log(coincidences);
 
         return coincidences >= requiredAmmountForFlush -1;
     }
