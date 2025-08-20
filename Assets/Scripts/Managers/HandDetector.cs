@@ -127,14 +127,16 @@ public class HandDetector : MonoBehaviour
 
     public bool CheckIfStraight()
     {
-        if (handCards.Count != 5)
+        if (handCards.Count < requiredAmmountForFlush)
         {
             cardsSorted.Clear();
+            Debug.Log("Enter here");
             return false;
         }
         if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
         cardsSorted = new List<Card>(handCards);
         cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
+        int coincidences = 0;
 
         Card nextCard;
         for (int i = 0; i < cardsSorted.Count; i++)
@@ -144,15 +146,20 @@ public class HandDetector : MonoBehaviour
             {
                 if (Mathf.Abs(cardsSorted[i].number - nextCard.number) != 1)
                 {
-                    return false;
+                    Debug.Log(cardsSorted[i].number + " " + nextCard.number);
+                    coincidences--;
                 }
-            }
-            if (Mathf.Abs(cardsSorted[3].number - cardsSorted[4].number) == 1)
-            {
-                return true;
+                else
+                {
+                    coincidences++;
+                }
+
             }
         }
-        return true;
+
+        Debug.Log(coincidences);
+
+        return coincidences >= requiredAmmountForFlush -1;
     }
     public bool CheckIfColor()
     {
