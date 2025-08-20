@@ -16,6 +16,8 @@ public class CurrencyScreenManager : MonoBehaviour
     [SerializeField] private GameObject currencyRowPrefab;
     [SerializeField] private UnityEvent OnCashOut;
 
+    public int investMultiplier = 1;
+
     public static CurrencyScreenManager instance;
 
     private int roundScore;
@@ -59,12 +61,12 @@ public class CurrencyScreenManager : MonoBehaviour
 
     private void CalculateInvest()
     {
-        int invest = Mathf.FloorToInt(CurrencyManager.instance.currentCurrency / 5);
+        int invest = Mathf.FloorToInt(CurrencyManager.instance.currentCurrency / 5) * investMultiplier;
         roundScore += invest;
         if (invest > 0)
         {
             GameObject row = Instantiate(currencyRowPrefab, currencyParent);
-            row.GetComponent<CurrencyIndicator>().SetIndicator(invest, "Invest ($1 per $5)", invest, Color.yellow);
+            row.GetComponent<CurrencyIndicator>().SetIndicator(invest, $"Invest (${investMultiplier} per $5)", invest, Color.yellow);
         }
     }
     private void UpdateScoreButtonText()
