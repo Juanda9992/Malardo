@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Hack Joker
+  m_Name: Dusk Joker
   m_EditorClassIdentifier: 
-  jokerName: Hack
-  description: Retrigger each played 2, 3, 4, or 5
+  jokerName: Dusk
+  description: Retrigger all played cards in final hand of the round
   triggerMessage: Again!
   overrideEffect: 0
-  shopValue: 6
-  jokerRarity: 0
+  shopValue: 5
+  jokerRarity: 1
   triggers: []
   effects: []
   OnSetUpJoker: []
   OnSellEffect: []
-  reactivationJoker: {fileID: 11400000, guid: d77b62775a8d72d40942b4bf2681a56a, type: 2}
+  reactivationJoker: {fileID: 11400000, guid: c1411e5e6152d774c86de517768cd7b0, type: 2}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
