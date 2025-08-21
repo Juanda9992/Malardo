@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 3
   shopValue: 5
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 1b419d045012b4c45a52d8e9082b521a, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
   triggers:
   - {fileID: 11400000, guid: 1b419d045012b4c45a52d8e9082b521a, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.12029239, g: 0.0634318, b: 0.22264141, a: 1}
-  jokerInstance:
-    jokerDescription: Played cards with Spade suit give +3 Mult when scored
-    triggerMessage: +3
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -25,12 +28,3 @@ MonoBehaviour:
   OnSellEffect:
   - {fileID: 11400000, guid: 89fdc73d1178b934cac4810f050f8188, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: 1 free Reroll per shop
-    triggerMessage: +1 Reroll
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

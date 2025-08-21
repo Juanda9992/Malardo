@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 3
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: b3328726befe0da439008dc5d4819747, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: +3 Mult for each Joker card
-    triggerMessage: +3
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

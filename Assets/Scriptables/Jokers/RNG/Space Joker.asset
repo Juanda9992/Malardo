@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 5
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 47d9fdf131b555d4ba98e8bd16fad62b, type: 2}
+    - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 8f1452255a39d704d8b52e3f2bef2556, type: 2}
   triggers:
   - {fileID: 11400000, guid: 47d9fdf131b555d4ba98e8bd16fad62b, type: 2}
   - {fileID: 11400000, guid: 1228c9801b98a0e4ea69a542b5390a8a, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: 1 in 4 chance to upgrade level of played poker hand
-    triggerMessage: UPGRADE
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

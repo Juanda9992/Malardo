@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 8
   jokerRarity: 2
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 05ec5d42a673d4b42ad5057c5112f838, type: 2}
+    - {fileID: 11400000, guid: d7171630f04dd2343b31ff99ad025233, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 8f1452255a39d704d8b52e3f2bef2556, type: 2}
   triggers:
   - {fileID: 11400000, guid: 05ec5d42a673d4b42ad5057c5112f838, type: 2}
   - {fileID: 11400000, guid: d7171630f04dd2343b31ff99ad025233, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Upgrade the level of the first discarded poker hand each round
-    triggerMessage: UPGRADED
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

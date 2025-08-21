@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 3
   shopValue: 6
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    - {fileID: 11400000, guid: fdfcc177ccc2e324e939448bf457dd01, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   - {fileID: 11400000, guid: fdfcc177ccc2e324e939448bf457dd01, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: X3 Mult if played poker hand has already been played this round
-    triggerMessage: X3
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

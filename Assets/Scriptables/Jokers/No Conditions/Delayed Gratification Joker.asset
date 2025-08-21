@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 2
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 745c6ff10c80bdf4b8d0152546cf188f, type: 2}
+    - {fileID: 11400000, guid: 286df26395af24243a093434aa04cb7d, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 29f21cc67ff0b734db6b9bb41815a386, type: 2}
   triggers:
   - {fileID: 11400000, guid: 745c6ff10c80bdf4b8d0152546cf188f, type: 2}
   - {fileID: 11400000, guid: 286df26395af24243a093434aa04cb7d, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Earn $2 per discard if no discards are used by end of the round
-    triggerMessage: $0
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

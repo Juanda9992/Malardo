@@ -18,17 +18,11 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 6
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 11400000, guid: 3e0475217a7e0df439234f44b2f44d7a, type: 2}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Retrigger first played card used in scoring 2 additional times
-    triggerMessage: Again!
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

@@ -19,6 +19,12 @@ MonoBehaviour:
   overrideEffect: 2
   shopValue: 6
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 01910386e93e5e642894a2dc4d652b6d, type: 2}
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   triggers:
   - {fileID: 11400000, guid: 01910386e93e5e642894a2dc4d652b6d, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
@@ -27,13 +33,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: X2 Mult if played hand has a scoring  Club card and a scoring
-      card of any other suit
-    triggerMessage: x2
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

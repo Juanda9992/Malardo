@@ -19,6 +19,12 @@ MonoBehaviour:
   overrideEffect: 4
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 41aa565b8b23f2748b669cb4b8505b72, type: 2}
+    - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
   triggers:
   - {fileID: 11400000, guid: 41aa565b8b23f2748b669cb4b8505b72, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
@@ -27,13 +33,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Played cards with even rank give +4 Mult when scored (10, 8,
-      6, 4, 2)
-    triggerMessage: +4
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

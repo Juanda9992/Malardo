@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 7
   shopValue: 7
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: a67c9fb5934ce8a4da11237db2758912, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
   triggers:
   - {fileID: 11400000, guid: a67c9fb5934ce8a4da11237db2758912, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.36986113, g: 0.5745088, b: 0.6830188, a: 1}
-  jokerInstance:
-    jokerDescription: Played cards with  Club suit give +7 Mult when scored
-    triggerMessage: +7
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

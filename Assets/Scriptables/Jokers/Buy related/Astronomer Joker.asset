@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 8
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -25,12 +28,3 @@ MonoBehaviour:
   OnSellEffect:
   - {fileID: 11400000, guid: a18b52f3254a6f4418fa6d071f698534, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: All Planet cards and Celestial Packs in the shop are free
-    triggerMessage: 
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

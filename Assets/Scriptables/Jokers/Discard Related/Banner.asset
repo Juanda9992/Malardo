@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 30
   shopValue: 5
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: df2f67fa98e05704ab23dd99a3662494, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: +30 Chips for each remaining discard
-    triggerMessage: xxx
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

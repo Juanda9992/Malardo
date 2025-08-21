@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 30
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: dfa3bd0105164e14f8c93cc5ae3ab4fe, type: 2}
+    - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
   triggers:
   - {fileID: 11400000, guid: dfa3bd0105164e14f8c93cc5ae3ab4fe, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.043777343, g: 0.042912036, b: 0.18490559, a: 1}
-  jokerInstance:
-    jokerDescription: Played face cards give +30 Chips when scored
-    triggerMessage: +30
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

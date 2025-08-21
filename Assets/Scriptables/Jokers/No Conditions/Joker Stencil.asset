@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 8
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 1ab17c8e8cc43f34f9d2cfe7b4eb227e, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: X1 Mult for each empty Joker slot. Joker Stencil included
-    triggerMessage: X3
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

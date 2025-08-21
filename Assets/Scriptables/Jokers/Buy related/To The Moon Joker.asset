@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 5
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -25,13 +28,3 @@ MonoBehaviour:
   OnSellEffect:
   - {fileID: 11400000, guid: 21cf48914f0d619409134e8d3eb2a6e9, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Earn an extra $1 of interest for every $5 you have at end of
-      round
-    triggerMessage: 
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

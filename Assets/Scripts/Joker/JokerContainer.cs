@@ -82,7 +82,7 @@ public class JokerContainer : MonoBehaviour
                 }
             }
         }
-        ScoreSign.instance.SetJokerSign(_jokerInstance.data.triggerMessage, transform.position);
+        ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
     }
 
 

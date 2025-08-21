@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 4
   shopValue: 8
   jokerRarity: 2
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    - {fileID: 11400000, guid: 11acb593de062e049a72244006ad3b3c, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   - {fileID: 11400000, guid: 11acb593de062e049a72244006ad3b3c, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.21509439, g: 0.014204316, b: 0.014204316, a: 1}
-  jokerInstance:
-    jokerDescription: X4 Mult if played hand contains a Four of a Kind
-    triggerMessage: x4
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

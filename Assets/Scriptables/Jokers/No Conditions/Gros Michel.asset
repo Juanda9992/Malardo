@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 15
   shopValue: 5
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 8f50e3623a09544449243f25f8be772d, type: 2}
+    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.38044673, g: 0.83396226, b: 0.14948371, a: 1}
-  jokerInstance:
-    jokerDescription: +15 Mult 1 in 6 chance this is destroyed at the end of round.
-    triggerMessage: +15
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

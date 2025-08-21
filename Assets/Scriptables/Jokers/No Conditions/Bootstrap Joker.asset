@@ -18,6 +18,11 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 7
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 6c74b9d6c2b67c040a96b603943e2fed, type: 2}
   triggers:
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   effects:
@@ -25,12 +30,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.8867924, g: 0.7193847, b: 0.2058027, a: 1}
-  jokerInstance:
-    jokerDescription: +2 Mult for every $5 you have (Currently +0 Mult)
-    triggerMessage: 
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 20
   shopValue: 5
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: f989c1d464a96804b8e7e789b3d81bce, type: 2}
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
   triggers:
   - {fileID: 11400000, guid: f989c1d464a96804b8e7e789b3d81bce, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: +20 Mult if played hand contains 3 or fewer cards
-    triggerMessage: +20 Mult
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

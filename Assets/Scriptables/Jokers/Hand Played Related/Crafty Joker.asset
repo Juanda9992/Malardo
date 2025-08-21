@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 80
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: 9fe6ecac9cd1f2f40a9a2a018e8aa950, type: 2}
+    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
   triggers:
   - {fileID: 11400000, guid: 9fe6ecac9cd1f2f40a9a2a018e8aa950, type: 2}
   - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: +80 Chips if played hand contains a Flush
-    triggerMessage: +80 Chips
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

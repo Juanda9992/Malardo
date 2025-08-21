@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 6
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -27,12 +30,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e7ec39dabdd45b14681a80e750646bbb, type: 2}
   - {fileID: 11400000, guid: 02ee9e9b8d6ac0c4f99f2d5b74c0b7f6, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: When Blind is selected, gain +3 Hands and lose all discards
-    triggerMessage: +3 Hands 0 Discards
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

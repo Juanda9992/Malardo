@@ -18,6 +18,12 @@ MonoBehaviour:
   overrideEffect: 1
   shopValue: 7
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: fc28927c7bd922146842b3c4a848e2d0, type: 2}
+    - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: cb6db422352abc449af465fb0e1fc16a, type: 2}
   triggers:
   - {fileID: 11400000, guid: fc28927c7bd922146842b3c4a848e2d0, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
@@ -26,12 +32,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0.79622644, g: 0.5653928, b: 0.29295114, a: 1}
-  jokerInstance:
-    jokerDescription: Played cards with  Diamond suit earn $1 when scored
-    triggerMessage: $1
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

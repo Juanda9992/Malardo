@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 7
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -27,12 +30,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48601e1366dac464998af4ae7173b6e3, type: 2}
   - {fileID: 11400000, guid: 70ef89940715e7f4f863a3b052258379, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: +3 discards each round, -1 hand size
-    triggerMessage: +3 DIscards - 1 Hand Size
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

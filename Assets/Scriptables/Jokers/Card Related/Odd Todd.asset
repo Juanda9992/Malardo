@@ -19,6 +19,12 @@ MonoBehaviour:
   overrideEffect: 31
   shopValue: 4
   jokerRarity: 0
+  jokerLogics:
+  - jokerTrigger:
+    - {fileID: 11400000, guid: cade981a36ee27f4fbf4bb7c4608f8b7, type: 2}
+    - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
   triggers:
   - {fileID: 11400000, guid: cade981a36ee27f4fbf4bb7c4608f8b7, type: 2}
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
@@ -27,13 +33,3 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: Played cards with odd rank give +31 Chips when scored (A, 9,
-      7, 5, 3)
-    triggerMessage: +31
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0

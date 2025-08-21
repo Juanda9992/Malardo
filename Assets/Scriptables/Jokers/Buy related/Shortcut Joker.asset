@@ -18,6 +18,9 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 7
   jokerRarity: 1
+  jokerLogics:
+  - jokerTrigger: []
+    jokerEffect: []
   triggers: []
   effects: []
   OnSetUpJoker:
@@ -25,13 +28,3 @@ MonoBehaviour:
   OnSellEffect:
   - {fileID: 11400000, guid: 0270c12064b4758438caa3edc21f35a1, type: 2}
   reactivationJoker: {fileID: 0}
-  jokerVisuals:
-    bgColor: {r: 0, g: 0, b: 0, a: 0}
-  jokerInstance:
-    jokerDescription: 'Allows Straights to be made with gaps of 1 rank (ex: 10 8
-      6 5 3)'
-    triggerMessage: 
-    data: {fileID: 0}
-    totalChips: 0
-    totalMult: 0
-    totalMultiplier: 0
