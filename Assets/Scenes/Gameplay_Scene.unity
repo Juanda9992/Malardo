@@ -9697,6 +9697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayingCards: 0
   currentHand: []
+  reactivationJokers: []
 --- !u!114 &621395125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9793,8 +9794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers:
-  - {fileID: 11400000, guid: df2558e6506b28b46b177a126ac3a2fe, type: 2}
+  testingJokers: []
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}

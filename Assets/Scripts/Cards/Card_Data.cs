@@ -123,7 +123,7 @@ public class Card
 {
     public string cardName;
     public Card_Data linkedCard;
-    [Range(1, 13)] public int number;
+    [Range(1, 14)] public int number;
     public int chipAmmount;
     public Suit cardSuit;
     public bool IsFaceCard { get { return (number >= 11 && number <= 13) || overrideFaceCard; } }
@@ -161,6 +161,7 @@ public class Card
             this.cardType = card.cardType;
             this.cardName = card.cardName;
             this.linkedCard = card.linkedCard;
+            this.activations = card.activations;
 
             SetCardChipAmmount();
             SetCardName();

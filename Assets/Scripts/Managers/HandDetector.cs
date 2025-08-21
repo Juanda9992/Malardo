@@ -139,6 +139,11 @@ public class HandDetector : MonoBehaviour
         int coincidences = 0;
 
         Card nextCard;
+
+        if (cardsSorted.Any(x => x.number == 1))
+        {
+            cardsSorted.Add(new Card() { number = 14 }); coincidences++;
+        }
         for (int i = 0; i < cardsSorted.Count; i++)
         {
             nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
@@ -150,13 +155,19 @@ public class HandDetector : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Coincidence");
                     coincidences++;
                 }
 
             }
         }
 
-        return coincidences >= requiredAmmountForFlush -1;
+        if (coincidences >= requiredAmmountForFlush - 1 && cardsSorted.Any(x => x.number == 14))
+        {
+            cardsSorted.RemoveAt(cardsSorted.Count-1);
+        }
+
+        return coincidences >= requiredAmmountForFlush - 1;
     }
     public bool CheckIfColor()
     {
