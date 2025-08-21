@@ -70,7 +70,6 @@ public class PokerHandLevelData
     {
         handPlayedTime++;
         playedInRound = true;
-        Debug.Log("Played");
     }
 
     public void DebugPokerHandData()

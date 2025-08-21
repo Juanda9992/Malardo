@@ -69,12 +69,10 @@ public class JokerContainer : MonoBehaviour
     {
         for (int i = 0; i < _jokerInstance.data.effects.Count; i++)
         {
+            _jokerInstance.data.effects[i].ApplyEffect(_jokerInstance);
             _jokerInstance.data.effects[i].ammount = _jokerInstance.data.overrideEffect;
             _jokerInstance.data.triggerMessage = _jokerInstance.data.effects[i].GetCustomMessage() == string.Empty ? _jokerInstance.data.triggerMessage : _jokerInstance.data.effects[i].GetCustomMessage();
-            //_jokerInstance.data.effects[i].ApplyEffect();
 
-            _jokerInstance.data.effects[i].ApplyEffect(_jokerInstance);
-            Debug.Log(_jokerInstance.data.effects[i].name);
 
             if (_jokerInstance.data.effects[i].jokerOutput != string.Empty)
             {

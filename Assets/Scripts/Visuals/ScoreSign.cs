@@ -26,8 +26,6 @@ public class ScoreSign : MonoBehaviour
         HandleHideAnim();
         transform.position = card.linkedCard.transform.position;
         scoreSignText.text = card.chipAmmount.ToString();
-
-        Debug.Log(card.chipAmmount);
     }
     public void SetJokerSign(string message, Vector2 jokerPos)
     {

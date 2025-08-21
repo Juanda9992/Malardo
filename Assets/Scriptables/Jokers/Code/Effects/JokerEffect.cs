@@ -17,8 +17,7 @@ public abstract class JokerEffect : ScriptableObject
 
     public abstract void ApplyEffect(JokerInstance instance);
 
-
     public virtual void UpdateDescription(JokerInstance instance)
-    { 
+    {
     }
 }
