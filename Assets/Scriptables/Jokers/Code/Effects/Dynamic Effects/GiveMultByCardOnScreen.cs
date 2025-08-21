@@ -4,7 +4,7 @@ public class GiveMultByCardOnScreen : JokerEffect
 {
     public int multammount;
     public int requiredNumber;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (CardPlayer.instance.currentHand.Count > 0)
         {

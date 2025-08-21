@@ -15,16 +15,7 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
     public JokerEffect reactivationJoker;
-    public bool requireInstance = false;
     public JokerInstance jokerInstance;
-
-
-    [ContextMenu("Set Data")]
-    private void SetNameAndDescription()
-    {
-        jokerInstance.jokerDescription = description;
-        jokerInstance.triggerMessage = triggerMessage;
-    }
 }
 
 [System.Serializable]

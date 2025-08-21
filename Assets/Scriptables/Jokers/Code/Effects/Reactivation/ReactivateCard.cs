@@ -8,7 +8,7 @@ public class ReactivateCard : JokerEffect
     public bool lastround;
     public int[] numberRange;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
 
     }

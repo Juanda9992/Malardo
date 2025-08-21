@@ -2,7 +2,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Multiply multi per avaliable Joker", menuName = "Scriptables/Joker/Effect/Multiply Mult per Avaliable Joker")]
 public class MultiplyMultByAvaliableJoker : JokerEffect
 {
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.MultiplyMulti(JokerOutput());
     }

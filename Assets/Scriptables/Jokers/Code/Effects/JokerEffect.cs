@@ -3,7 +3,6 @@ using UnityEngine;
 public abstract class JokerEffect : ScriptableObject
 {
     public float ammount;
-    public virtual void ApplyEffect(){}
 
     public string jokerOutput;
 
@@ -16,8 +15,10 @@ public abstract class JokerEffect : ScriptableObject
         return 1;
     }
 
-    public virtual void ApplyEffect(JokerInstance instance)
-    {
+    public abstract void ApplyEffect(JokerInstance instance);
 
+
+    public virtual void UpdateDescription(JokerInstance instance)
+    { 
     }
 }

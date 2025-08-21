@@ -5,7 +5,7 @@ public class OverrideFaceCards : JokerEffect
 {
     public bool setFaceCardValue;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         Card.overrideFaceCard = setFaceCardValue;
 

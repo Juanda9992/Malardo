@@ -5,7 +5,7 @@ public class MultiplyMultByCardOnScreen : JokerEffect
 {
     public int[] requiredNumbers;
     public float multiplier;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (CardPlayer.instance.currentHand.Count > 0)
         {

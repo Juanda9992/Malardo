@@ -5,7 +5,7 @@ using UnityEngine;
 public class LowestCardOnScreen : JokerEffect
 {
     int lowestCardNumber;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(lowestCardNumber);
     }

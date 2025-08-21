@@ -6,7 +6,7 @@ public class SelfDestructEffect : JokerEffect
     public int maxRange;
     public int requiredNumber;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (Random.Range(0, maxRange) == requiredNumber)
         {

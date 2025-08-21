@@ -5,7 +5,7 @@ public class SetPackPrice : JokerEffect
 {
 
     public bool freePlanetPacks;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         DatabaseManager.instance.pricesDatabase.freePlanetPacks = freePlanetPacks;
     }

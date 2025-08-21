@@ -5,7 +5,7 @@ public class SetHands : JokerEffect
 {
     public int handAmmount;
     public bool addAmmount;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (addAmmount)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 public class GiveChipsPerRemainingCard : JokerEffect
 {
     public int chipAmmount;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddChips(chipAmmount * DeckManager.instance.roundDeck.Count);
     }

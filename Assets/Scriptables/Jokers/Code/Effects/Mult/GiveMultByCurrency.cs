@@ -6,7 +6,7 @@ public class GiveMultByCurrency : JokerEffect
 {
     public int divider;
     public int multValue;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(Mathf.Ceil(CurrencyManager.instance.currentCurrency / divider));
     }

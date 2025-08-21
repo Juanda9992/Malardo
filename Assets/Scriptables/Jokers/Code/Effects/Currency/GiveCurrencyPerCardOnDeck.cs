@@ -4,7 +4,7 @@ using UnityEngine;
 public class GiveCurrencyPerCardOnDeck : JokerEffect
 {
     public int requiredNumber;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         CurrencyManager.instance.AddCurrency(DeckManager.instance.GetAllCardsOnFullDeckByNumber(9));
     }

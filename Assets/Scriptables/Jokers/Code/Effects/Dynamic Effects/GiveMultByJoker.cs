@@ -5,7 +5,7 @@ public class GiveMultByJoker : JokerEffect
 {
     public int multammount;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(multammount * JokerManager.instance.JokersInHand);
     }

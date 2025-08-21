@@ -68,7 +68,7 @@ public class JokerManager : MonoBehaviour
 
         for (int i = 0; i < jokerContainer._jokerInstance.data.OnSetUpJoker.Count; i++)
         {
-            jokerContainer._jokerInstance.data.OnSetUpJoker[i].ApplyEffect();
+            jokerContainer._jokerInstance.data.OnSetUpJoker[i].ApplyEffect(jokerInstance);
         }
         return jokerContainer;
     }
@@ -86,7 +86,7 @@ public class JokerManager : MonoBehaviour
     {
         for (int i = 0; i < jokerContainer._jokerInstance.data.OnSellEffect.Count; i++)
         {
-            jokerContainer._jokerInstance.data.OnSellEffect[i].ApplyEffect();
+            jokerContainer._jokerInstance.data.OnSellEffect[i].ApplyEffect(jokerContainer._jokerInstance);
         }
         currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);

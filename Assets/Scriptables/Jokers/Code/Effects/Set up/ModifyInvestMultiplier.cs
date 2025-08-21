@@ -4,7 +4,7 @@ public class ModifyInvestMultiplier : JokerEffect
 {
     public bool increase;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (increase)
         {

@@ -5,7 +5,7 @@ public class MultiplyMultByJokerRarity : JokerEffect
 {
     public JokerRarity jokerRarityRequired;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         int foundJokers = CalculateValues();
         ScoreManager.instance.MultiplyMulti(foundJokers * ammount);

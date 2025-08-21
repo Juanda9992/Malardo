@@ -5,7 +5,7 @@ public class SetDiscards : JokerEffect
 {
     public int discardAmmount;
     public bool addAmmount;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         if (addAmmount)
         {

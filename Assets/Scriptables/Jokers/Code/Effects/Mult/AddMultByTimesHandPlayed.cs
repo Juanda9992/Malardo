@@ -2,7 +2,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Add mult by hand played x times",menuName = "Scriptables/Joker/Effect/Mult/Add mult by hand played x times")]
 public class AddMultByTimesHandPlayed : JokerEffect
 {
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(GetValue());
     }

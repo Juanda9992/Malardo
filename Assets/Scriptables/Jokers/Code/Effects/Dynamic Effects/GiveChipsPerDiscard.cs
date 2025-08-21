@@ -4,7 +4,7 @@ using UnityEngine;
 public class GiveChipsPerDiscard : JokerEffect
 {
     public int chipsPerDiscard;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         chipsPerDiscard = (int)ammount * GameStatusManager._Status.discardsRemaining;
         ScoreManager.instance.AddChips(chipsPerDiscard);

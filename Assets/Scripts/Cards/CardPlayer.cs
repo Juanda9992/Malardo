@@ -151,7 +151,6 @@ public class CardPlayer : MonoBehaviour
 
     private IEnumerator PlayCard(Card card)
     {
-        Debug.Log("Enter here");
         //SCORE LOGIC
         ScoreManager.instance.AddChips(card.chipAmmount);
         ScoreSign.instance.SetScoreSign(card);

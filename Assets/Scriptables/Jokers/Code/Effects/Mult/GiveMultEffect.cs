@@ -4,7 +4,7 @@ using UnityEngine;
 public class GiveMultEffect : JokerEffect
 {
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(ammount);
     }

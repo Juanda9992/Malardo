@@ -3,7 +3,7 @@ using UnityEngine;
 public class AddCardOnDeck : JokerEffect
 {
     public Card card;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         DeckManager.instance.AddCardOnFullDeck(card);
     }

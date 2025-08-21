@@ -4,7 +4,7 @@ using UnityEngine;
 public class SetHandSize : JokerEffect
 {
     public int handAmmount;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         DeckManager.instance.AddHandSize(handAmmount);
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Give Currency", menuName = "Scriptables/Joker/Effect/Give Currency")]
 public class GiveCurrency : JokerEffect
 {
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         CurrencyManager.instance.AddCurrency((int)ammount);
     }

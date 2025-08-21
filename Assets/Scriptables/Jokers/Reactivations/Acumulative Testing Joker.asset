@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Acumulative Testing Joker
+  m_EditorClassIdentifier: 
+  jokerName: Testing
+  description: 'Get +4 chips on every hand play (Current: _R_)'
+  triggerMessage: +4
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 0
+  triggers:
+  - {fileID: 11400000, guid: 8d53d29f60d46d04384b94b483748298, type: 2}
+  effects:
+  - {fileID: 11400000, guid: dc28d88e316a10b4486c93a0c1b630f3, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
+  jokerInstance:
+    jokerDescription: Retrigger first played card used in scoring 2 additional times
+    triggerMessage: Again!
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

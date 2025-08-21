@@ -4,7 +4,7 @@ public class SetFlushSize : JokerEffect
 {
     public int newSize;
 
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         HandDetector.instance.requiredAmmountForFlush = newSize;
     }

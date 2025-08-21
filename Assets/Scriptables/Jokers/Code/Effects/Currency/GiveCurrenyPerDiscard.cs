@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Give Currency per Discard", menuName = "Scriptables/Joker/Effect/Currency/Give Curerncy per Discard")]
 public class GiveCurrenyPerDiscard : JokerEffect
 {
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         CurrencyManager.instance.AddCurrency((int)ammount * GameStatusManager._Status.discardsRemaining);
     }

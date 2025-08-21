@@ -5,7 +5,7 @@ public class GiveRandomMult : JokerEffect
 {
     public int minRange, maxRange;
     private int multGiven;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(multGiven);
     }

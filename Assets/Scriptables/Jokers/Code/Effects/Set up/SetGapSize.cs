@@ -4,7 +4,7 @@ using UnityEngine;
 public class SetGapSize : JokerEffect
 {
     public int gapSize;
-    public override void ApplyEffect()
+    public override void ApplyEffect(JokerInstance jokerInstance)
     {
         HandDetector.instance.gapForStraights = gapSize;
     }
