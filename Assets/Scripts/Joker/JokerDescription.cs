@@ -13,11 +13,11 @@ public class JokerDescription : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText, descriptionText;
 
     [SerializeField] private float cardDescriptionOffsetY;
-    public void SetDescriptionOn(JokerData jokerData, Vector2 jokerPos)
+    public void SetDescriptionOn(JokerInstance jokerData, Vector2 jokerPos)
     {
         transform.localScale = Vector2.one;
-        nameText.text = jokerData.jokerName;
-        descriptionText.text = jokerData.description;
+        nameText.text = jokerData.data.jokerName;
+        descriptionText.text = jokerData.jokerDescription;
         transform.position = jokerPos;
     }
 

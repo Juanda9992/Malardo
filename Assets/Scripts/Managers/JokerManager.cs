@@ -109,7 +109,7 @@ public class JokerManager : MonoBehaviour
         int ammount = 0;
         foreach (var joker in currentJokers)
         {
-            ammount += joker._jokerInstance.data.sellValue;
+            ammount += joker._jokerInstance.sellValue;
         }
         return ammount;
     }

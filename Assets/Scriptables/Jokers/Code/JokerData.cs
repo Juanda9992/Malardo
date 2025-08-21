@@ -8,7 +8,6 @@ public class JokerData : ScriptableObject
     public string triggerMessage;
     public float overrideEffect = 0;
     public int shopValue;
-    public int sellValue { get { return Mathf.FloorToInt((float)shopValue / 2); } }
     public JokerRarity jokerRarity;
     public List<JokerTrigger> triggers;
     public List<JokerEffect> effects;
@@ -41,7 +40,11 @@ public class JokerInstance
     public JokerInstance(JokerData jokerData)
     {
         data = jokerData;
+        jokerDescription = data.description;
+        triggerMessage = data.triggerMessage;
     }
+
+    public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2); } }
 }
 public enum JokerRarity
 {

@@ -37,7 +37,7 @@ public class JokerButtonActions : MonoBehaviour
         }
         else
         {
-            actionButtonText.text = "Sell " + "$" + jokerContainer._jokerInstance.data.sellValue;
+            actionButtonText.text = "Sell " + "$" + jokerContainer._jokerInstance.sellValue;
         }
     }
 
@@ -56,14 +56,14 @@ public class JokerButtonActions : MonoBehaviour
     private void BuyJoker()
     {
         JokerDescription.instance.SetDescriptionOff();
-        CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.data.sellValue);
+        CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.AddJoker(jokerContainer._jokerInstance.data);
         Destroy(this.gameObject);
     }
 
     private void SellJoker()
     {
-        CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.data.sellValue);
+        CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);
     }
 
