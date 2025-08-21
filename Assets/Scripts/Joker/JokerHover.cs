@@ -12,7 +12,7 @@ public class JokerHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void OnPointerEnter(PointerEventData data)
     {
         animateTween = transform.DOScale(hoverScale, 0.3f);
-        JokerDescription.instance.SetDescriptionOn(jokerContainer._joker, (Vector2)transform.position + new Vector2(descriptionXOffset, 0));
+        JokerDescription.instance.SetDescriptionOn(jokerContainer._jokerInstance.data, (Vector2)transform.position + new Vector2(descriptionXOffset, 0));
     }
 
     public void OnPointerExit(PointerEventData data)

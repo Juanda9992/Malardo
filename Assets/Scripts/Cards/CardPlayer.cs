@@ -132,12 +132,12 @@ public class CardPlayer : MonoBehaviour
         {
             foreach (var Joker in JokerManager.instance.currentJokers)
             {
-                if (Joker._joker.reactivationJoker != null)
+                if (Joker._jokerInstance.data.reactivationJoker != null)
                 {
-                    int activations = Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]);
+                    int activations = Joker._jokerInstance.data.reactivationJoker.CheckForActivation(currentHand[i]);
 
                     currentHand[i].activations += activations;
-                    Debug.Log(Joker._joker.reactivationJoker.CheckForActivation(currentHand[i]) + " " + Joker._joker.jokerName);
+                    Debug.Log(Joker._jokerInstance.data.reactivationJoker.CheckForActivation(currentHand[i]) + " " + Joker._jokerInstance.data.jokerName);
                     for (int r = 0; r < activations; r++)
                     {
                         reactivationJokers.Add(Joker);

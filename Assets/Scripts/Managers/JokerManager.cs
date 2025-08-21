@@ -31,7 +31,7 @@ public class JokerManager : MonoBehaviour
 
         for (int i = 0; i < currentJokers.Count; i++)
         {
-            if (currentJokers[i]._joker.triggers.Contains(endHandTrigger))
+            if (currentJokers[i]._jokerInstance.data.triggers.Contains(endHandTrigger))
             {
                 endJokers.Add(currentJokers[i]);
             }
@@ -66,9 +66,9 @@ public class JokerManager : MonoBehaviour
         jokerContainer.SetUpJoker(jokerInstance);
         jokerContainer.isOnShop = false;
 
-        for (int i = 0; i < jokerContainer._joker.OnSetUpJoker.Count; i++)
+        for (int i = 0; i < jokerContainer._jokerInstance.data.OnSetUpJoker.Count; i++)
         {
-            jokerContainer._joker.OnSetUpJoker[i].ApplyEffect();
+            jokerContainer._jokerInstance.data.OnSetUpJoker[i].ApplyEffect();
         }
         return jokerContainer;
     }
@@ -84,9 +84,9 @@ public class JokerManager : MonoBehaviour
     }
     public void RemoveJoker(JokerContainer jokerContainer)
     {
-        for (int i = 0; i < jokerContainer._joker.OnSellEffect.Count; i++)
+        for (int i = 0; i < jokerContainer._jokerInstance.data.OnSellEffect.Count; i++)
         {
-            jokerContainer._joker.OnSellEffect[i].ApplyEffect();
+            jokerContainer._jokerInstance.data.OnSellEffect[i].ApplyEffect();
         }
         currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);
@@ -101,7 +101,7 @@ public class JokerManager : MonoBehaviour
 
     public int GetCurrentJokersByRarity(JokerRarity rarity)
     {
-        return currentJokers.FindAll(x => x._joker.jokerRarity == rarity).Count;
+        return currentJokers.FindAll(x => x._jokerInstance.data.jokerRarity == rarity).Count;
     }
 
     public int GetSellValueFromAllJokers()
@@ -109,7 +109,7 @@ public class JokerManager : MonoBehaviour
         int ammount = 0;
         foreach (var joker in currentJokers)
         {
-            ammount += joker._joker.sellValue;
+            ammount += joker._jokerInstance.data.sellValue;
         }
         return ammount;
     }

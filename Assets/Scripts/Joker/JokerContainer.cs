@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class JokerContainer : MonoBehaviour
 {
     public JokerInstance _jokerInstance;
-    public JokerData _joker;
     public bool isOnShop = true;
     public Action JokerAction;
 
@@ -21,21 +20,20 @@ public class JokerContainer : MonoBehaviour
     public void SetUpJoker(JokerInstance jokerData)
     {
         _jokerInstance = jokerData;
-        _joker = jokerData.data;
-        jokerText.text = _joker.jokerName;
+        jokerText.text = _jokerInstance.data.jokerName;
 
         JokerAction += JokerExecuteAction;
     }
 
     private void HandleTriggerEvents(GameStatus gameStatus)
     {
-        if (_joker.triggers.Count == 0)
+        if (_jokerInstance.data.triggers.Count == 0)
         {
             return;
         }
-        for (int i = 0; i < _joker.triggers.Count; i++)
+        for (int i = 0; i < _jokerInstance.data.triggers.Count; i++)
         {
-            if (!_joker.triggers[i].MeetCondition(gameStatus))
+            if (!_jokerInstance.data.triggers[i].MeetCondition(gameStatus))
             {
                 return;
             }
@@ -47,9 +45,9 @@ public class JokerContainer : MonoBehaviour
 
     public bool CanBeTriggered()
     {
-        for (int i = 0; i < _joker.triggers.Count; i++)
+        for (int i = 0; i < _jokerInstance.data.triggers.Count; i++)
         {
-            if (!_joker.triggers[i].MeetCondition(GameStatusManager._Status))
+            if (!_jokerInstance.data.triggers[i].MeetCondition(GameStatusManager._Status))
             {
                 return false;
             }
@@ -59,7 +57,7 @@ public class JokerContainer : MonoBehaviour
 
     public void TriggerMessage()
     {
-        ScoreSign.instance.SetMessage(Color.green, _joker.triggerMessage, transform.position);
+        ScoreSign.instance.SetMessage(Color.green, _jokerInstance.data.triggerMessage, transform.position);
     }
 
     public void TriggerActions()
@@ -69,21 +67,21 @@ public class JokerContainer : MonoBehaviour
 
     private void JokerExecuteAction()
     {
-        for (int i = 0; i < _joker.effects.Count; i++)
+        for (int i = 0; i < _jokerInstance.data.effects.Count; i++)
         {
-            _joker.effects[i].ammount = _joker.overrideEffect;
-            _joker.triggerMessage = _joker.effects[i].GetCustomMessage() == string.Empty ? _joker.triggerMessage : _joker.effects[i].GetCustomMessage();
-            _joker.effects[i].ApplyEffect();
+            _jokerInstance.data.effects[i].ammount = _jokerInstance.data.overrideEffect;
+            _jokerInstance.data.triggerMessage = _jokerInstance.data.effects[i].GetCustomMessage() == string.Empty ? _jokerInstance.data.triggerMessage : _jokerInstance.data.effects[i].GetCustomMessage();
+            _jokerInstance.data.effects[i].ApplyEffect();
 
-            if (_joker.effects[i].jokerOutput != string.Empty)
+            if (_jokerInstance.data.effects[i].jokerOutput != string.Empty)
             {
-                if (_joker.effects[i].jokerOutput == "Destroy")
+                if (_jokerInstance.data.effects[i].jokerOutput == "Destroy")
                 {
                     Destroy(gameObject);
                 }
             }
         }
-        ScoreSign.instance.SetJokerSign(_joker.triggerMessage, transform.position);
+        ScoreSign.instance.SetJokerSign(_jokerInstance.data.triggerMessage, transform.position);
     }
 
 

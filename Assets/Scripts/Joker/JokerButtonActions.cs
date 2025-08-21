@@ -32,12 +32,12 @@ public class JokerButtonActions : MonoBehaviour
                 actionButton.interactable = false;
                 return;
             }
-            actionButtonText.text = "Buy" + " $" + jokerContainer._joker.shopValue;
+            actionButtonText.text = "Buy" + " $" + jokerContainer._jokerInstance.data.shopValue;
             actionButton.interactable = CheckIfEnoughCurrencyForBuy();
         }
         else
         {
-            actionButtonText.text = "Sell " + "$" + jokerContainer._joker.sellValue;
+            actionButtonText.text = "Sell " + "$" + jokerContainer._jokerInstance.data.sellValue;
         }
     }
 
@@ -56,20 +56,20 @@ public class JokerButtonActions : MonoBehaviour
     private void BuyJoker()
     {
         JokerDescription.instance.SetDescriptionOff();
-        CurrencyManager.instance.RemoveCurrency(jokerContainer._joker.sellValue);
-        JokerManager.instance.AddJoker(jokerContainer._joker);
+        CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.data.sellValue);
+        JokerManager.instance.AddJoker(jokerContainer._jokerInstance.data);
         Destroy(this.gameObject);
     }
 
     private void SellJoker()
     {
-        CurrencyManager.instance.AddCurrency(jokerContainer._joker.sellValue);
+        CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.data.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);
     }
 
     private bool CheckIfEnoughCurrencyForBuy()
     {
-        return CurrencyManager.instance.currentCurrency >= jokerContainer._joker.shopValue;
+        return CurrencyManager.instance.currentCurrency >= jokerContainer._jokerInstance.data.shopValue;
     }
 
 }
