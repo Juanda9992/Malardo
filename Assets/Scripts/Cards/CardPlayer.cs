@@ -137,18 +137,21 @@ public class CardPlayer : MonoBehaviour
                     int activations = Joker._jokerInstance.data.reactivationJoker.CheckForActivation(currentHand[i]);
 
                     currentHand[i].activations += activations;
-                    Debug.Log(Joker._jokerInstance.data.reactivationJoker.CheckForActivation(currentHand[i]) + " " + Joker._jokerInstance.data.jokerName);
                     for (int r = 0; r < activations; r++)
                     {
                         reactivationJokers.Add(Joker);
                     }
                 }
+
             }
+            currentHand[i].activations = currentHand[i].activations == 0 ? 1 : currentHand[i].activations;
         }
+        
     }
 
     private IEnumerator PlayCard(Card card)
     {
+        Debug.Log("Enter here");
         //SCORE LOGIC
         ScoreManager.instance.AddChips(card.chipAmmount);
         ScoreSign.instance.SetScoreSign(card);

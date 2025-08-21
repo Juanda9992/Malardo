@@ -14,7 +14,7 @@ public class ReactivateCard : JokerEffect
     }
     public override int CheckForActivation(Card cardToPlay)
     {
-        int activations = 0;
+        int activations = 1;
         if (firstCard)
         {
             if (cardToPlay == CardPlayer.instance.currentHand[0])
