@@ -23,5 +23,13 @@ MonoBehaviour:
   OnSetUpJoker: []
   OnSellEffect:
   - {fileID: 11400000, guid: dd789c0b3d577f140a824fd3fc60ec0b, type: 2}
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: Sell this card to disable the current Boss Blind
+    triggerMessage: Disabled
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

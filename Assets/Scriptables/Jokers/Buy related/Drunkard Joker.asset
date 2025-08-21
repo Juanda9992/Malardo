@@ -24,3 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ccd027b25f3a30841bc7d01f277243d0, type: 2}
   OnSellEffect:
   - {fileID: 11400000, guid: f3a5176ab397bbd4c97c7afd01be5a52, type: 2}
+  reactivationJoker: {fileID: 0}
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: When Blind is selected, gain +3 Hands and lose all discards
+    triggerMessage: +1 Discard
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

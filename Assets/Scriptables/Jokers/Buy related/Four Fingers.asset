@@ -24,5 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4b53da072e0dfc46bc806cffaf7b2d3, type: 2}
   OnSellEffect:
   - {fileID: 11400000, guid: 3ac4eadec9bd4e74b953caa580dac3c7, type: 2}
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: All Flushes and Straights can be made with 4 cards
+    triggerMessage: 
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

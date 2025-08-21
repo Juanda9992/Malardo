@@ -25,5 +25,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0.44067636, g: 0.630395, b: 0.78113204, a: 1}
+  jokerInstance:
+    jokerDescription: Played Kings and Queens each give X2 Mult when scored
+    triggerMessage: X2
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

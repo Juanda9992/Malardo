@@ -18,7 +18,28 @@ public class JokerData : ScriptableObject
     public JokerEffect reactivationJoker;
 
     public JokerVisuals jokerVisuals;
+    public bool requireInstance = false;
+    public JokerInstance jokerInstance = new JokerInstance();
 
+
+    [ContextMenu("Set Data")]
+    private void SetNameAndDescription()
+    {
+        jokerInstance.jokerDescription = description;
+        jokerInstance.triggerMessage = triggerMessage;
+    }
+}
+
+[System.Serializable]
+public class JokerInstance
+{
+    public string jokerDescription;
+    public string triggerMessage;
+    public JokerData data;
+
+    public int totalChips;
+    public int totalMult;
+    public int totalMultiplier;
 }
 public enum JokerRarity
 {

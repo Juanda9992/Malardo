@@ -26,5 +26,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0.7509433, g: 0.4859878, b: 0.61846554, a: 1}
+  jokerInstance:
+    jokerDescription: 1 in 2 chance for played cards with  Heart suit to give X1.5
+      Mult when scored
+    triggerMessage: x1.5
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

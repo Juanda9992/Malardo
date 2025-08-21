@@ -23,3 +23,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2c2c610c51b51134b8ad59bf0c71a876, type: 2}
   effects:
   - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored
+    triggerMessage: 8
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

@@ -24,5 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d93451209efe97a4abb62ccdedb3a574, type: 2}
   OnSellEffect:
   - {fileID: 11400000, guid: 0960d22153612064e9a2d303954b6068, type: 2}
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: All cards are considered face cards
+    triggerMessage: 
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

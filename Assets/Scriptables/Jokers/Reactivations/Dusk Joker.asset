@@ -25,3 +25,10 @@ MonoBehaviour:
   reactivationJoker: {fileID: 11400000, guid: c1411e5e6152d774c86de517768cd7b0, type: 2}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: Retrigger all played cards in final hand of the round
+    triggerMessage: Again!
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

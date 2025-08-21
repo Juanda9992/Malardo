@@ -24,5 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d70960655bd5cd749ad17987b705d4ec, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
+  reactivationJoker: {fileID: 0}
   jokerVisuals:
     bgColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  jokerInstance:
+    jokerDescription: Gives X0.2 Mult for each Steel Card in your full deck
+    triggerMessage: 
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

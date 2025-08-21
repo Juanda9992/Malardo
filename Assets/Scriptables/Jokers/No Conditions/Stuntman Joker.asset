@@ -26,3 +26,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4b88b070eec081248bab80a0ada05d99, type: 2}
   OnSellEffect:
   - {fileID: 11400000, guid: 90cc30f9307847a41a0439f0f55706cd, type: 2}
+  reactivationJoker: {fileID: 0}
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: +250 Chips, -2 hand size
+    triggerMessage: +250
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

@@ -23,3 +23,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 286df26395af24243a093434aa04cb7d, type: 2}
   effects:
   - {fileID: 11400000, guid: 29f21cc67ff0b734db6b9bb41815a386, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
+  jokerVisuals:
+    bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: Earn $2 per discard if no discards are used by end of the round
+    triggerMessage: $0
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0

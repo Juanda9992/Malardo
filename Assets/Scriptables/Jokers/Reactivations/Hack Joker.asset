@@ -25,3 +25,10 @@ MonoBehaviour:
   reactivationJoker: {fileID: 11400000, guid: d77b62775a8d72d40942b4bf2681a56a, type: 2}
   jokerVisuals:
     bgColor: {r: 0, g: 0, b: 0, a: 0}
+  jokerInstance:
+    jokerDescription: Retrigger each played 2, 3, 4, or 5
+    triggerMessage: Again!
+    data: {fileID: 0}
+    totalChips: 0
+    totalMult: 0
+    totalMultiplier: 0
