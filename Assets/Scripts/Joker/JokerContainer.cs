@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class JokerContainer : MonoBehaviour
 {
+    public JokerInstance _jokerInstance;
     public JokerData _joker;
     public bool isOnShop = true;
     public Action JokerAction;
@@ -17,13 +18,15 @@ public class JokerContainer : MonoBehaviour
         GameStatusManager.OnStatusChanged += HandleTriggerEvents;
     }
 
-    public void SetUpJoker(JokerData jokerData)
+    public void SetUpJoker(JokerInstance jokerData)
     {
-        _joker = jokerData;
+        _jokerInstance = jokerData;
+        _joker = jokerData.data;
         jokerText.text = _joker.jokerName;
 
         JokerAction += JokerExecuteAction;
     }
+
     private void HandleTriggerEvents(GameStatus gameStatus)
     {
         if (_joker.triggers.Count == 0)

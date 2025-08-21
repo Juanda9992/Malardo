@@ -5,8 +5,8 @@ public class JokerListContainer : ScriptableObject
 {
     public List<JokerData> allJokersInGame;
 
-    public JokerData GetRandomJoker()
+    public JokerInstance GetRandomJoker()
     {
-        return allJokersInGame[Random.Range(0, allJokersInGame.Count)];
+        return new JokerInstance(allJokersInGame[Random.Range(0, allJokersInGame.Count)]);
     }
 }

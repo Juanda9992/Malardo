@@ -51,6 +51,8 @@ public class JokerManager : MonoBehaviour
         JokerContainer createdJoker = CreateJoker(jokerData);
         GameStatusManager.SetJokersInMatch(currentJokers.Count);
         currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+
+        
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
@@ -59,7 +61,9 @@ public class JokerManager : MonoBehaviour
         GameObject newJoker = Instantiate(jokerCard, jokerParent);
 
         JokerContainer jokerContainer = newJoker.GetComponent<JokerContainer>();
-        jokerContainer.SetUpJoker(jokerData);
+
+        JokerInstance jokerInstance = new JokerInstance(jokerData);
+        jokerContainer.SetUpJoker(jokerInstance);
         jokerContainer.isOnShop = false;
 
         for (int i = 0; i < jokerContainer._joker.OnSetUpJoker.Count; i++)

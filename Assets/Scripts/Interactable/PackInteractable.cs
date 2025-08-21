@@ -12,12 +12,12 @@ public class PackInteractable : MonoBehaviour
     [SerializeField] private Button actionButton;
     private Card createdCard;
     private PlanetCardData _planetCardData;
-    public void SetJokerInfo(JokerData createdJoker)
+    public void SetJokerInfo(JokerInstance createdJoker)
     {
-        jokerData = createdJoker;
+        jokerData = createdJoker.data;
         itemType = PackType.Buffon;
         GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description);
-        cardName.text = createdJoker.jokerName;
+        cardName.text = createdJoker.data.jokerName;
         ListenForAvaliability();
     }
 
