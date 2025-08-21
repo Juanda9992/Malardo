@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class JokerEffect : ScriptableObject
 {
     public float ammount;
-    public abstract void ApplyEffect();
+    public virtual void ApplyEffect(){}
 
     public string jokerOutput;
 
@@ -14,5 +14,10 @@ public abstract class JokerEffect : ScriptableObject
     public virtual int CheckForActivation(Card card)
     {
         return 1;
+    }
+
+    public virtual void ApplyEffect(JokerInstance instance)
+    {
+
     }
 }

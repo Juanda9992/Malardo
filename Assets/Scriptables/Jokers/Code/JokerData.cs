@@ -17,7 +17,7 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> OnSellEffect;
     public JokerEffect reactivationJoker;
     public bool requireInstance = false;
-    public JokerInstance jokerInstance = new JokerInstance();
+    public JokerInstance jokerInstance;
 
 
     [ContextMenu("Set Data")]
@@ -38,6 +38,10 @@ public class JokerInstance
     public int totalChips;
     public int totalMult;
     public int totalMultiplier;
+    public JokerInstance(JokerData jokerData)
+    {
+        data = jokerData;
+    }
 }
 public enum JokerRarity
 {
