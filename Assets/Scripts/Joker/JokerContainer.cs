@@ -23,10 +23,6 @@ public class JokerContainer : MonoBehaviour
         jokerText.text = _joker.jokerName;
 
         JokerAction += JokerExecuteAction;
-        if (jokerData.jokerVisuals.bgColor != Color.clear)
-        {
-            jokerBg.color = jokerData.jokerVisuals.bgColor;
-        }
     }
     private void HandleTriggerEvents(GameStatus gameStatus)
     {

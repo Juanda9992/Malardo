@@ -16,8 +16,6 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
     public JokerEffect reactivationJoker;
-
-    public JokerVisuals jokerVisuals;
     public bool requireInstance = false;
     public JokerInstance jokerInstance = new JokerInstance();
 
@@ -57,8 +55,3 @@ public class RequiredHandSizeData
     public int maxAmmount;
 }
 
-[System.Serializable]
-public class JokerVisuals
-{
-    public Color bgColor;
-}
