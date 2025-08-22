@@ -67,6 +67,7 @@ public class BlindSelector : MonoBehaviour
     public void SelectBlind()
     {
         OnBlindSelected?.Invoke();
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.BlindSelected));
     }
 
     public CurrentBlind GetCurrentBossBlind()

@@ -77,6 +77,7 @@ public class DeckManager : MonoBehaviour
     public void AddCardOnFullDeck(Card card)
     {
         fullMatchDeck.Add(card);
+        UpdateDeckCounter();
     }
     public void DestroyCardFromFullDeck(Card card)
     {
