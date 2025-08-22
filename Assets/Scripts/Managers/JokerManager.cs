@@ -12,8 +12,6 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private Transform jokerParent;
 
     [SerializeField] private JokerData testjoker;
-
-    [SerializeField] private JokerTrigger endHandTrigger;
     [SerializeField] private TextMeshProUGUI jokerCounter;
 
     [SerializeField] private List<JokerExecution> jokers;
