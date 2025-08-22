@@ -68,9 +68,10 @@ public enum TriggerEvent
 {
     BlindSelected = 0,
     RoundBegin = 1,
-    OnHandPlay =2 ,
+    OnHandPlay = 2,
     OnHandEnd = 3,
-    OnCardPlay = 4
+    OnCardPlay = 4,
+    OnBlindDefeated = 5
 }
 public enum JokerRarity
 {
