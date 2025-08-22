@@ -3,16 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Give Chips By Discard", menuName = "Scriptables/Joker/Effect/Give Chips by Discard")]
 public class GiveChipsPerDiscard : JokerEffect
 {
-    public int chipsPerDiscard;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        chipsPerDiscard = (int)ammount * GameStatusManager._Status.discardsRemaining;
-        ScoreManager.instance.AddChips(chipsPerDiscard);
-        Debug.Log("Chips given: " + chipsPerDiscard);
+        ScoreManager.instance.AddChips(CalculateChips());
+        jokerInstance.triggerMessage = "+" + CalculateChips();
+        jokerInstance.jokerContainer.TriggerMessage();
+    }
+    private int CalculateChips()
+    {
+        return (int)ammount * GameStatusManager._Status.discardsRemaining;
     }
 
-    public override string GetCustomMessage()
-    {
-        return "+" + chipsPerDiscard;
-    }
 }

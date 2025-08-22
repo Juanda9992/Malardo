@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9cb83430dc0ae42a0fb43eb3f6efb2, type: 3}
   m_Name: Give Chips By Discard
   m_EditorClassIdentifier: 
-  ammount: 0
-  chipsPerDiscard: 0
+  ammount: 30
