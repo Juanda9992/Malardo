@@ -5,11 +5,14 @@ public class GiveChipsPerStoneCard : JokerEffect
 {
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        ScoreManager.instance.AddChips((int)ammount * DeckManager.instance.GetAllStoneCardsOnFullDeck());
+        ScoreManager.instance.AddChips(CalculateChips());
+        jokerInstance.triggerMessage = "+" + CalculateChips();
+        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", CalculateChips().ToString());
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
-    public override string GetCustomMessage()
+    private int CalculateChips()
     {
-        return "+"+((int)ammount * DeckManager.instance.GetAllStoneCardsOnFullDeck()).ToString();
+        return (int)ammount * DeckManager.instance.GetAllStoneCardsOnFullDeck();
     }
 }
