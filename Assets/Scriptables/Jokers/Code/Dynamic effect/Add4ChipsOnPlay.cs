@@ -7,11 +7,11 @@ public class Add4ChipsOnPlay : JokerEffect
     {
         instance.totalChips += 4;
         UpdateDescription(instance);
+        instance.triggerMessage = "+4";
+        instance.jokerContainer.TriggerMessage();
     }
     public override void UpdateDescription(JokerInstance instance)
     {
-        string Template = instance.data.description;
-        instance.jokerDescription = Template.Replace("_R_", instance.totalChips.ToString());
-        instance.triggerMessage = "+" +instance.totalChips.ToString();
+        instance.jokerDescription = instance.data.description.Replace("_R_", instance.totalChips.ToString());
     }
 }

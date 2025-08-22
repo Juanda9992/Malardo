@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba8a2d4c2b81244fad9a2f353462eb9, type: 3}
-  m_Name: Add 4 Chips
+  m_Script: {fileID: 11500000, guid: 6efbf18608dd3bd418a8e128c242ecfe, type: 3}
+  m_Name: ConsumeJokerChips
   m_EditorClassIdentifier: 
   ammount: 0
-  jokerOutput: 
-  description: 
+  chips: 1

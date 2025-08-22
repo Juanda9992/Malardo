@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Joker
+  m_EditorClassIdentifier: 
+  jokerName: Testing
+  description: Gain 4 chips at the start of the match (Current _R_)
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 0
+  jokerRarity: 0
+  jokerLogics:
+  - triggerEvent: 7
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 54fc2d4a1aed2744f811b809cd9e825d, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: aa4f6756762f3ed478468af448ba96a4, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
