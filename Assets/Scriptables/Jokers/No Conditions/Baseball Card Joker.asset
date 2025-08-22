@@ -19,9 +19,8 @@ MonoBehaviour:
   shopValue: 8
   jokerRarity: 2
   jokerLogics:
-  - triggerEvent: 1
-    jokerTrigger:
-    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
     jokerEffect:
     - {fileID: 11400000, guid: 19a7ae08150f096498c79d93b72c9512, type: 2}
   OnSetUpJoker: []

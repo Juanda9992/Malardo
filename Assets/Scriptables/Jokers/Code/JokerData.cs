@@ -66,9 +66,11 @@ public class JokerLogic
 
 public enum TriggerEvent
 {
-    OnHandPlay,
-    OnHandEnd,
-    OnCardPlay
+    BlindSelected = 0,
+    RoundBegin = 1,
+    OnHandPlay =2 ,
+    OnHandEnd = 3,
+    OnCardPlay = 4
 }
 public enum JokerRarity
 {
