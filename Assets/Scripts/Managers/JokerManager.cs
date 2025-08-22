@@ -16,7 +16,7 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private JokerTrigger endHandTrigger;
     [SerializeField] private TextMeshProUGUI jokerCounter;
 
-    [SerializeField] private List<JokerExecution> endJokers;
+    [SerializeField] private List<JokerExecution> jokers;
     public int JokersInHand { get { return currentJokers.Count; } }
     public static JokerManager instance;
 
@@ -26,32 +26,33 @@ public class JokerManager : MonoBehaviour
         StartCoroutine("UpdateJokerList");
     }
 
-    public IEnumerator PlayJokersEndMatch()
+    public IEnumerator PlayJokersAtTime(TriggerEvent eventJokertrigger)
     {
-        endJokers = new List<JokerExecution>();
+        jokers = new List<JokerExecution>();
 
         for (int i = 0; i < currentJokers.Count; i++)
         {
             foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
             {
-                foreach (var trigger in logics.jokerTrigger)
+                if (logics.triggerEvent == eventJokertrigger)
                 {
-                    if (trigger == endHandTrigger)
-                    {
-                        endJokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
-                    }
+                    jokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
                 }
             }
         }
-        Debug.Log(endJokers.Count);
-        foreach (var joker in endJokers)
+        foreach (var joker in jokers) 
         {
-            if (joker.logic.CanBetriggered())
+            Debug.Log(joker.logic.CanBetriggered());
+
+            for (int i = 0; i < joker.logic.jokerTrigger.Length; i++)
             {
-                Debug.Log("Exevute");
-                joker.container.TriggerActions(joker.logic);
-                yield return new WaitForSeconds(1f);
+                Debug.Log(joker.logic.jokerTrigger[i].MeetCondition(GameStatusManager._Status) + " " + joker.logic.jokerTrigger[i].name);
             }
+            if (joker.logic.CanBetriggered())
+                {
+                    joker.container.TriggerActions(joker.logic);
+                    yield return new WaitForSeconds(1f);
+                }
         }
         yield return new WaitForSeconds(0.2f);
     }

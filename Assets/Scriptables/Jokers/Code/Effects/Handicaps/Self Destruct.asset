@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Self Destruct
   m_EditorClassIdentifier: 
   ammount: 15
-  jokerOutput: 
+  jokerOutput: 0
   maxRange: 6
   requiredNumber: 0

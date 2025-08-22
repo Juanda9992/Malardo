@@ -13,7 +13,7 @@ public class JokerContainer : MonoBehaviour
     [SerializeField] private Image jokerBg;
     void Start()
     {
-        GameStatusManager.OnStatusChanged += HandleTriggerEvents;
+        //GameStatusManager.OnStatusChanged += HandleTriggerEvents;
     }
 
     public void SetUpJoker(JokerInstance jokerData)

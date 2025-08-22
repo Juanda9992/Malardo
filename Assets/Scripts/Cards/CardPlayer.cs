@@ -38,7 +38,6 @@ public class CardPlayer : MonoBehaviour
 
         yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
         RemovePlayedCardsFromList();
-        Debug.Log(lastHandPlayed);
 
         yield return new WaitForSeconds(0.1f);
         yield return TriggerHandCards();
@@ -52,7 +51,7 @@ public class CardPlayer : MonoBehaviour
 
         GameStatusManager._Status.currentGameStatus = TriggerOptions.HandEnd;
         GameEventsManager.instance.TriggerHandEnd();
-        yield return JokerManager.instance.PlayJokersEndMatch();
+        yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnHandEnd);
         PokerHandLevelStorage.instance.GetHandData(lastHandPlayed).IncreasePlayTime();
         ScoreManager.instance.CalculateScore();
         currentHand.Clear();
@@ -164,6 +163,8 @@ public class CardPlayer : MonoBehaviour
         GameEventsManager.instance.TriggerCardPlayed(card);
         GameStatusManager.SetLastCardPlayed(card);
 
+        yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardPlay);
+
         yield return new WaitForSeconds(0.2f);
 
         if (card.cardSeal == Seal.Gold)
@@ -227,6 +228,8 @@ public class CardPlayer : MonoBehaviour
                 break;
 
         }
+
+        GameStatusManager._Status.cardPlayed = null;
     }
 
     private void RemovePlayedCardsFromList()

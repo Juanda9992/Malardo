@@ -19,14 +19,11 @@ MonoBehaviour:
   shopValue: 7
   jokerRarity: 2
   jokerLogics:
-  - jokerTrigger:
+  - triggerEvent: 1
+    jokerTrigger:
     - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
     jokerEffect:
     - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
-  triggers:
-  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
-  effects:
-  - {fileID: 11400000, guid: f46d9ce6223ecae418d429b353195bce, type: 2}
   OnSetUpJoker:
   - {fileID: 11400000, guid: 4b88b070eec081248bab80a0ada05d99, type: 2}
   OnSellEffect:

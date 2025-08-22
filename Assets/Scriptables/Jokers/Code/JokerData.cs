@@ -48,7 +48,7 @@ public class JokerInstance
 [System.Serializable]
 public class JokerLogic
 {
-
+    public TriggerEvent triggerEvent;
     public bool CanBetriggered()
     {
         for (int i = 0; i < jokerTrigger.Length; i++)
@@ -62,6 +62,13 @@ public class JokerLogic
     }
     public JokerTrigger[] jokerTrigger;
     public JokerEffect[] jokerEffect;
+}
+
+public enum TriggerEvent
+{
+    OnHandPlay,
+    OnHandEnd,
+    OnCardPlay
 }
 public enum JokerRarity
 {

@@ -26,7 +26,6 @@ public class GameStatusManager : MonoBehaviour
         _Status.cardPlayed = card;
         SetGameEvent(TriggerOptions.CardPlay);
         TriggerStatusChanged();
-        _Status.cardPlayed = null;
     }
 
     public static void SetHandSize(int size)

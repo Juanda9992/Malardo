@@ -8,5 +8,6 @@ public class GiveMultEffect : JokerEffect
     {
         ScoreManager.instance.AddMult(ammount);
         jokerInstance.triggerMessage = "+" + ammount;
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 }
