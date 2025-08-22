@@ -13,20 +13,16 @@ MonoBehaviour:
   m_Name: Blue Joker
   m_EditorClassIdentifier: 
   jokerName: Blue Joker
-  description: +2 Chips for each remaining card in deck
+  description: '+2 Chips for each remaining card in deck (Current: _R_)'
   triggerMessage: 
   overrideEffect: 2
   shopValue: 5
   jokerRarity: 0
   jokerLogics:
-  - jokerTrigger:
-    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
     jokerEffect:
     - {fileID: 11400000, guid: 0c846bbae7d5167418a2485cad100387, type: 2}
-  triggers:
-  - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
-  effects:
-  - {fileID: 11400000, guid: 0c846bbae7d5167418a2485cad100387, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
