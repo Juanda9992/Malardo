@@ -145,11 +145,12 @@ public class CardPlayer : MonoBehaviour
             }
             currentHand[i].activations = currentHand[i].activations == 0 ? 1 : currentHand[i].activations;
         }
-        
+
     }
 
     private IEnumerator PlayCard(Card card)
     {
+        yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.BeforeHandPlay);
         //SCORE LOGIC
         ScoreManager.instance.AddChips(card.chipAmmount);
         ScoreSign.instance.SetScoreSign(card);

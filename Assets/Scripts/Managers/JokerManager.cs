@@ -43,7 +43,8 @@ public class JokerManager : MonoBehaviour
             if (joker.logic.CanBetriggered())
             {
                 joker.container.TriggerActions(joker.logic);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
+                yield return new WaitForSeconds(0.5f);
             }
             if (joker.container._jokerInstance.destroyJoker)
             {
