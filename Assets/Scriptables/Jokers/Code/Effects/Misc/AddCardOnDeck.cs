@@ -6,5 +6,7 @@ public class AddCardOnDeck : JokerEffect
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
         DeckManager.instance.AddCardOnFullDeck(card);
+        jokerInstance.triggerMessage = "+1 Card";
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 }
