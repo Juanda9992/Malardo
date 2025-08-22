@@ -7,20 +7,16 @@ public class GiveMultByLowerDeckNumber : JokerEffect
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(GetCalculation());
+        jokerInstance.triggerMessage = $"+{GetCalculation()}";
+        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", GetCalculation().ToString());
     }
 
-    public override string GetCustomMessage()
-    {
-        return "+" + GetCalculation();
-    }
 
     private int GetCalculation()
     {
         int result = DeckManager.instance.initialDeckSize - DeckManager.instance.roundDeckSize;
 
         result = result < 0 ? 0 : result;
-
-        Debug.Log(DeckManager.instance.initialDeckSize + "" + DeckManager.instance.roundDeckSize);
         return result * multammount;
     }
 }
