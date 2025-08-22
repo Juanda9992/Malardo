@@ -68,6 +68,7 @@ public enum TriggerEvent
 {
     BlindSelected = 0,
     RoundBegin = 1,
+    BeforeHandPlay = 7,
     OnHandPlay = 2,
     OnHandEnd = 3,
     OnCardPlay = 4,

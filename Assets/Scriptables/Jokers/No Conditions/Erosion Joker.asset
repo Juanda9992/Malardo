@@ -21,8 +21,7 @@ MonoBehaviour:
   jokerRarity: 1
   jokerLogics:
   - triggerEvent: 3
-    jokerTrigger:
-    - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
+    jokerTrigger: []
     jokerEffect:
     - {fileID: 11400000, guid: 444cf7ddbf6de114eb743018178a7300, type: 2}
   OnSetUpJoker: []

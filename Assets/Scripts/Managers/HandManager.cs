@@ -137,6 +137,7 @@ public class HandManager : MonoBehaviour
         hands--;
         GameStatusManager.SetGameEvent(TriggerOptions.BeforeHandPlay);
         GameStatusManager.SetHandsRemaining(hands);
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.BeforeHandPlay));
         OnHandPlayed?.Invoke(handCards);
         GameEventsManager.instance.TriggerHandPlayed();
         SetPlayButtonsState(false);
