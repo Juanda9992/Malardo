@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Give Chips By Currency",menuName = "Scriptables/Joker/Effect/Give Chips by Currency")]
+[CreateAssetMenu(fileName = "Give Chips By Currency", menuName = "Scriptables/Joker/Effect/Give Chips by Currency")]
 public class GiveChipsByCurrency : JokerEffect
 {
     public int chipAmmount;
@@ -8,6 +8,7 @@ public class GiveChipsByCurrency : JokerEffect
         ScoreManager.instance.AddChips(Calculate());
         jokerInstance.triggerMessage = $"+{Calculate()}";
         jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", Calculate().ToString());
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
     private int Calculate()

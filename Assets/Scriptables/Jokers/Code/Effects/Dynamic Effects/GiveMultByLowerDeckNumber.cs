@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Get Mult by lower deck count",menuName = "Scriptables/Joker/Effect/Mult/Give Mult by lower deck")]
+[CreateAssetMenu(fileName = "Get Mult by lower deck count", menuName = "Scriptables/Joker/Effect/Mult/Give Mult by lower deck")]
 public class GiveMultByLowerDeckNumber : JokerEffect
 {
     public int multammount;
@@ -9,6 +9,7 @@ public class GiveMultByLowerDeckNumber : JokerEffect
         ScoreManager.instance.AddMult(GetCalculation());
         jokerInstance.triggerMessage = $"+{GetCalculation()}";
         jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", GetCalculation().ToString());
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
 

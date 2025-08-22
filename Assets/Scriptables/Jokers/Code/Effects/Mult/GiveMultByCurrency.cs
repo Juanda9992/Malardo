@@ -12,6 +12,7 @@ public class GiveMultByCurrency : JokerEffect
 
         jokerInstance.triggerMessage = "+" + Calculate();
         jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", Calculate().ToString());
+        jokerInstance.triggerMessage = "+" + Calculate();
         jokerInstance.jokerContainer.TriggerMessage();
     }
 
