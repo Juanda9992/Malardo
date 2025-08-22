@@ -8,11 +8,15 @@ public class GiveMultByCurrency : JokerEffect
     public int multValue;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        ScoreManager.instance.AddMult(Mathf.Ceil(CurrencyManager.instance.currentCurrency / divider));
+        ScoreManager.instance.AddMult(Calculate());
+
+        jokerInstance.triggerMessage = "+" + Calculate();
+        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", Calculate().ToString());
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
-    public override string GetCustomMessage()
+    private float Calculate()
     {
-        return (Mathf.Ceil(CurrencyManager.instance.currentCurrency / divider) * multValue).ToString();
+        return Mathf.Ceil(CurrencyManager.instance.currentCurrency / divider);
     }
 }
