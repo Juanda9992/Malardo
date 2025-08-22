@@ -11,50 +11,19 @@ public class JokerContainer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jokerText;
 
     [SerializeField] private Image jokerBg;
-    void Start()
-    {
-        //GameStatusManager.OnStatusChanged += HandleTriggerEvents;
-    }
-
     public void SetUpJoker(JokerInstance jokerData)
     {
         _jokerInstance = jokerData;
         jokerText.text = _jokerInstance.data.jokerName;
         _jokerInstance.SetJokerContainer(this);
-    }
 
-    private void HandleTriggerEvents(GameStatus gameStatus)
-    {
-        if (_jokerInstance.jokerLogics.Length == 0)
+        foreach (var logic in _jokerInstance.jokerLogics)
         {
-            return;
-        }
-
-        foreach (var logics in _jokerInstance.jokerLogics)
-        {
-            if (logics.CanBetriggered())
+            foreach (var effect in logic.jokerEffect)
             {
-                TriggerActions(logics);
-            }
-
-        }
-
-    }
-
-    public bool CanBeTriggered()
-    {
-
-        foreach (var logics in _jokerInstance.data.jokerLogics)
-        {
-            for (int i = 0; i < logics.jokerTrigger.Length; i++)
-            {
-                if (!logics.jokerTrigger[i].MeetCondition(GameStatusManager._Status))
-                {
-                    return false;
-                }
+                effect.UpdateDescription(_jokerInstance);
             }
         }
-        return true;
     }
 
     public void TriggerMessage()

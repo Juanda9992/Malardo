@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Abstract Joker
   m_EditorClassIdentifier: 
   jokerName: Abstract Joker
-  description: +3 Mult for each Joker card
+  description: '+3 Mult for each Joker card (Current: _R_)'
   triggerMessage: +3
   overrideEffect: 3
   shopValue: 4

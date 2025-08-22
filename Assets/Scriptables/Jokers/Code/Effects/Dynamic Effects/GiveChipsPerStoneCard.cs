@@ -11,6 +11,11 @@ public class GiveChipsPerStoneCard : JokerEffect
         jokerInstance.jokerContainer.TriggerMessage();
     }
 
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", CalculateChips().ToString());
+    }
+
     private int CalculateChips()
     {
         return (int)ammount * DeckManager.instance.GetAllStoneCardsOnFullDeck();

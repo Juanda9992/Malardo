@@ -16,4 +16,9 @@ public class GiveChipsPerRemainingCard : JokerEffect
     {
         return chipAmmount * DeckManager.instance.roundDeck.Count;
     }
+
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", ChipAmmount().ToString());
+    }
 }

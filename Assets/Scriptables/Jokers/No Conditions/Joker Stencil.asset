@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Joker Stencil
   m_EditorClassIdentifier: 
   jokerName: Joker Stencil
-  description: X1 Mult for each empty Joker slot. Joker Stencil included
+  description: 'X1 Mult for each empty Joker slot. Joker Stencil included (Current:
+    _R_)'
   triggerMessage: X3
   overrideEffect: 0
   shopValue: 8

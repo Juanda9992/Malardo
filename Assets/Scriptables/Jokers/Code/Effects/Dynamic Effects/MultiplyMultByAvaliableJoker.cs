@@ -5,6 +5,9 @@ public class MultiplyMultByAvaliableJoker : JokerEffect
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.MultiplyMulti(JokerOutput());
+        jokerInstance.triggerMessage = "X" + JokerOutput().ToString();
+        UpdateDescription(jokerInstance);
+        jokerInstance.jokerContainer.TriggerMessage();   
     }
 
     private int JokerOutput()
@@ -15,8 +18,8 @@ public class MultiplyMultByAvaliableJoker : JokerEffect
         return outPut;
     }
 
-    public override string GetCustomMessage()
+    public override void UpdateDescription(JokerInstance instance)
     {
-        return "X" + JokerOutput().ToString();
+        instance.jokerDescription = instance.data.description.Replace("_R_", "X"+JokerOutput().ToString());
     }
 }

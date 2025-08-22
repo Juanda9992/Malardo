@@ -17,5 +17,6 @@ public abstract class JokerEffect : ScriptableObject
 
     public virtual void UpdateDescription(JokerInstance instance)
     {
+        instance.jokerDescription = instance.data.description;
     }
 }

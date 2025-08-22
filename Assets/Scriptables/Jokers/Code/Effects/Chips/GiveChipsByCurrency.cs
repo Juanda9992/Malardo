@@ -15,4 +15,8 @@ public class GiveChipsByCurrency : JokerEffect
     {
         return chipAmmount * CurrencyManager.instance.currentCurrency;
     }
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", Calculate().ToString());
+    }
 }

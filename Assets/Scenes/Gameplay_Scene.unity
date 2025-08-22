@@ -9795,16 +9795,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 79ed734afb42ad848b2ec4324dff6803, type: 2}
-  - {fileID: 11400000, guid: 0a8333f26c6e00445ad32ac93f80b394, type: 2}
-  - {fileID: 11400000, guid: 20efb4f113c7fa84daf7bcf481c0078d, type: 2}
-  - {fileID: 11400000, guid: 8e1aefbe983c22d4ea14df99043b31af, type: 2}
-  - {fileID: 11400000, guid: f73fd9e85e7177f4f9b80150ae7ccbcc, type: 2}
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
+  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
   testjoker: {fileID: 11400000, guid: 79527a3680d94974ba8fe4a006e51fe0, type: 2}
-  endHandTrigger: {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
   jokerCounter: {fileID: 640011039}
   jokers: []
 --- !u!114 &621395133

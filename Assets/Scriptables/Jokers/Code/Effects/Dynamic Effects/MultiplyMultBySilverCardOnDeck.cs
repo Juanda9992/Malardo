@@ -7,11 +7,16 @@ public class MultiplyMultBySilverCardOnDeck : JokerEffect
     {
         ScoreManager.instance.MultiplyMulti(JokerOutput());
         jokerInstance.triggerMessage = "X" + JokerOutput();
-        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", JokerOutput().ToString());
         jokerInstance.jokerContainer.TriggerMessage();
+        UpdateDescription(jokerInstance);
     }
     private float JokerOutput()
     {
         return 1f + (ammount * DeckManager.instance.GetAllSilverCardsInDeck());
+    }
+
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", JokerOutput().ToString());
     }
 }

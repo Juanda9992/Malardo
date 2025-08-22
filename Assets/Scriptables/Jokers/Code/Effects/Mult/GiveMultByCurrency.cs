@@ -20,4 +20,9 @@ public class GiveMultByCurrency : JokerEffect
     {
         return Mathf.Ceil(CurrencyManager.instance.currentCurrency / divider);
     }
+
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", Calculate().ToString());
+    }
 }
