@@ -71,8 +71,8 @@ public class JokerContainer : MonoBehaviour
     {
         for (int i = 0; i < jokerLogic.jokerEffect.Length; i++)
         {
-            jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
             jokerLogic.jokerEffect[i].ammount = _jokerInstance.data.overrideEffect;
+            jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
 
             if (jokerLogic.jokerEffect[i].jokerOutput != string.Empty)
             {

@@ -24,7 +24,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
     jokerEffect:
     - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
-  - triggerEvent: 0
+  - triggerEvent: 1
     jokerTrigger:
     - {fileID: 11400000, guid: 8d5c1758a78102a46bed62272d5acd8e, type: 2}
     jokerEffect:

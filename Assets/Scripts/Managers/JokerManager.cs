@@ -42,12 +42,6 @@ public class JokerManager : MonoBehaviour
         }
         foreach (var joker in jokers) 
         {
-            Debug.Log(joker.logic.CanBetriggered());
-
-            for (int i = 0; i < joker.logic.jokerTrigger.Length; i++)
-            {
-                Debug.Log(joker.logic.jokerTrigger[i].MeetCondition(GameStatusManager._Status) + " " + joker.logic.jokerTrigger[i].name);
-            }
             if (joker.logic.CanBetriggered())
                 {
                     joker.container.TriggerActions(joker.logic);
