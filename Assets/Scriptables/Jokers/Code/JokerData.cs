@@ -16,30 +16,12 @@ public class JokerData : ScriptableObject
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
     public JokerEffect reactivationJoker;
-
-    [ContextMenu("Create JokerLogic")]
-    private void SetJokerLogics()
-    {
-        jokerLogics = new JokerLogic[1]{new JokerLogic()};
-
-        jokerLogics[0].jokerEffect = new JokerEffect[effects.Count];
-        jokerLogics[0].jokerTrigger = new JokerTrigger[triggers.Count];
-
-        for (int i = 0; i < jokerLogics[0].jokerEffect.Length; i++)
-        {
-            jokerLogics[0].jokerEffect[i] = effects[i];
-        }
-        
-        for (int i = 0; i < jokerLogics[0].jokerTrigger.Length;i++)
-        {
-            jokerLogics[0].jokerTrigger[i] = triggers[i];
-        }
-    }
 }
 
 [System.Serializable]
 public class JokerInstance
 {
+    public JokerContainer jokerContainer;
     public string jokerDescription;
     public string triggerMessage;
     public JokerData data;
@@ -52,7 +34,16 @@ public class JokerInstance
         data = jokerData;
         jokerDescription = data.description;
         triggerMessage = data.triggerMessage;
+        jokerLogics = jokerData.jokerLogics;
     }
+
+    public void SetJokerContainer(JokerContainer container)
+    {
+        jokerContainer = container;
+    }
+
+    public JokerLogic[] jokerLogics;
+    public bool destroyJoker;
 
     public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2); } }
 }
@@ -60,6 +51,18 @@ public class JokerInstance
 [System.Serializable]
 public class JokerLogic
 {
+
+    public bool CanBetriggered()
+    {
+        for (int i = 0; i < jokerTrigger.Length; i++)
+        {
+            if (!jokerTrigger[i].MeetCondition(GameStatusManager._Status))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     public JokerTrigger[] jokerTrigger;
     public JokerEffect[] jokerEffect;
 }

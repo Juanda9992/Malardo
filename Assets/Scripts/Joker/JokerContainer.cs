@@ -7,7 +7,6 @@ public class JokerContainer : MonoBehaviour
 {
     public JokerInstance _jokerInstance;
     public bool isOnShop = true;
-    public Action JokerAction;
 
     [SerializeField] private TextMeshProUGUI jokerText;
 
@@ -21,8 +20,7 @@ public class JokerContainer : MonoBehaviour
     {
         _jokerInstance = jokerData;
         jokerText.text = _jokerInstance.data.jokerName;
-
-        JokerAction += JokerExecuteAction;
+        _jokerInstance.SetJokerContainer(this);
     }
 
     private void HandleTriggerEvents(GameStatus gameStatus)
@@ -31,25 +29,33 @@ public class JokerContainer : MonoBehaviour
         {
             return;
         }
-        for (int i = 0; i < _jokerInstance.data.triggers.Count; i++)
-        {
-            if (!_jokerInstance.data.triggers[i].MeetCondition(gameStatus))
-            {
-                return;
-            }
-        }
 
-        JokerAction?.Invoke();
+        foreach (var logics in _jokerInstance.data.jokerLogics)
+        {
+            for (int i = 0; i < logics.jokerTrigger.Length; i++)
+            {
+                if (!_jokerInstance.data.triggers[i].MeetCondition(gameStatus))
+                {
+                    break; ;
+                }
+                TriggerActions(logics);
+            }
+
+        }
 
     }
 
     public bool CanBeTriggered()
     {
-        for (int i = 0; i < _jokerInstance.data.triggers.Count; i++)
+
+        foreach (var logics in _jokerInstance.data.jokerLogics)
         {
-            if (!_jokerInstance.data.triggers[i].MeetCondition(GameStatusManager._Status))
+            for (int i = 0; i < logics.jokerTrigger.Length; i++)
             {
-                return false;
+                if (!logics.jokerTrigger[i].MeetCondition(GameStatusManager._Status))
+                {
+                    return false;
+                }
             }
         }
         return true;
@@ -57,43 +63,29 @@ public class JokerContainer : MonoBehaviour
 
     public void TriggerMessage()
     {
-        ScoreSign.instance.SetMessage(Color.green, _jokerInstance.data.triggerMessage, transform.position);
+        ScoreSign.instance.SetMessage(Color.green, _jokerInstance.triggerMessage, transform.position);
     }
 
-    public void TriggerActions()
+    public void TriggerActions(JokerLogic logics)
     {
-        JokerExecuteAction();
+        JokerExecuteAction(logics);
     }
 
-    private void JokerExecuteAction()
+    private void JokerExecuteAction(JokerLogic jokerLogic)
     {
-        for (int i = 0; i < _jokerInstance.data.effects.Count; i++)
+        for (int i = 0; i < jokerLogic.jokerEffect.Length; i++)
         {
-            _jokerInstance.data.effects[i].ApplyEffect(_jokerInstance);
-            _jokerInstance.data.effects[i].ammount = _jokerInstance.data.overrideEffect;
-            _jokerInstance.data.triggerMessage = _jokerInstance.data.effects[i].GetCustomMessage() == string.Empty ? _jokerInstance.data.triggerMessage : _jokerInstance.data.effects[i].GetCustomMessage();
+            jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
+            jokerLogic.jokerEffect[i].ammount = _jokerInstance.data.overrideEffect;
 
-
-            if (_jokerInstance.data.effects[i].jokerOutput != string.Empty)
+            if (jokerLogic.jokerEffect[i].jokerOutput != string.Empty)
             {
-                if (_jokerInstance.data.effects[i].jokerOutput == "Destroy")
+                if (jokerLogic.jokerEffect[i].jokerOutput == "Destroy")
                 {
                     Destroy(gameObject);
                 }
             }
         }
         ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
-    }
-
-
-    void OnDisable()
-    {
-        JokerAction -= JokerExecuteAction;
-    }
-
-    [ContextMenu("Test Joker")]
-    private void TestJoker()
-    {
-        JokerAction?.Invoke();
     }
 }

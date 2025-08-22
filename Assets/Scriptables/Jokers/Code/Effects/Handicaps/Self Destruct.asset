@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881a176da1ff0ad41b9dbcbdb55d3ff5, type: 3}
   m_Name: Self Destruct
   m_EditorClassIdentifier: 
-  ammount: 0
+  ammount: 15
+  jokerOutput: 
   maxRange: 6
   requiredNumber: 0

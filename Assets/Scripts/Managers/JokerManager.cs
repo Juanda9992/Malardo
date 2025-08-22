@@ -16,6 +16,7 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private JokerTrigger endHandTrigger;
     [SerializeField] private TextMeshProUGUI jokerCounter;
 
+    [SerializeField] private List<JokerExecution> endJokers;
     public int JokersInHand { get { return currentJokers.Count; } }
     public static JokerManager instance;
 
@@ -27,21 +28,29 @@ public class JokerManager : MonoBehaviour
 
     public IEnumerator PlayJokersEndMatch()
     {
-        List<JokerContainer> endJokers = new List<JokerContainer>();
+        endJokers = new List<JokerExecution>();
 
         for (int i = 0; i < currentJokers.Count; i++)
         {
-            if (currentJokers[i]._jokerInstance.data.triggers.Contains(endHandTrigger))
+            foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
             {
-                endJokers.Add(currentJokers[i]);
+                foreach (var trigger in logics.jokerTrigger)
+                {
+                    if (trigger == endHandTrigger)
+                    {
+                        endJokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
+                    }
+                }
             }
         }
-        for (int i = 0; i < endJokers.Count; i++)
+        Debug.Log(endJokers.Count);
+        foreach (var joker in endJokers)
         {
-            if (endJokers[i].CanBeTriggered())
+            if (joker.logic.CanBetriggered())
             {
-                endJokers[i].TriggerActions();
-                yield return new WaitForSeconds(0.5f);
+                Debug.Log("Exevute");
+                joker.container.TriggerActions(joker.logic);
+                yield return new WaitForSeconds(1f);
             }
         }
         yield return new WaitForSeconds(0.2f);
@@ -52,7 +61,7 @@ public class JokerManager : MonoBehaviour
         GameStatusManager.SetJokersInMatch(currentJokers.Count);
         currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
 
-        
+
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
@@ -120,4 +129,11 @@ public class JokerManager : MonoBehaviour
     {
         AddJoker(testjoker);
     }
+}
+
+[System.Serializable]
+public class JokerExecution
+{
+    public JokerContainer container;
+    public JokerLogic logic;
 }

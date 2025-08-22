@@ -10,7 +10,14 @@ public class SelfDestructEffect : JokerEffect
     {
         if (Random.Range(0, maxRange) == requiredNumber)
         {
-            jokerOutput = "Destroy";
+            jokerInstance.triggerMessage = "BYE!";
+            jokerInstance.destroyJoker = true;
         }
+        else
+        {
+            jokerInstance.triggerMessage = "Safe!";
+        }
+
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 }
