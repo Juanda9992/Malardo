@@ -10,9 +10,6 @@ public class JokerData : ScriptableObject
     public int shopValue;
     public JokerRarity jokerRarity;
     public JokerLogic[] jokerLogics;
-    public List<JokerTrigger> triggers;
-    public List<JokerEffect> effects;
-
     public List<JokerEffect> OnSetUpJoker;
     public List<JokerEffect> OnSellEffect;
     public JokerEffect reactivationJoker;

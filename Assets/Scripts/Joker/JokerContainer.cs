@@ -25,19 +25,15 @@ public class JokerContainer : MonoBehaviour
 
     private void HandleTriggerEvents(GameStatus gameStatus)
     {
-        if (_jokerInstance.data.triggers.Count == 0)
+        if (_jokerInstance.jokerLogics.Length == 0)
         {
             return;
         }
 
-        foreach (var logics in _jokerInstance.data.jokerLogics)
+        foreach (var logics in _jokerInstance.jokerLogics)
         {
-            for (int i = 0; i < logics.jokerTrigger.Length; i++)
+            if (logics.CanBetriggered())
             {
-                if (!_jokerInstance.data.triggers[i].MeetCondition(gameStatus))
-                {
-                    break; ;
-                }
                 TriggerActions(logics);
             }
 
