@@ -5,10 +5,8 @@ public class AddJokerSellValueToMult : JokerEffect
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
         ScoreManager.instance.AddMult(JokerManager.instance.GetSellValueFromAllJokers());
-    }
-
-    public override string GetCustomMessage()
-    {
-        return "+" +JokerManager.instance.GetSellValueFromAllJokers();
+        jokerInstance.triggerMessage = "+" + JokerManager.instance.GetSellValueFromAllJokers().ToString();
+        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", jokerInstance.triggerMessage);
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 }
