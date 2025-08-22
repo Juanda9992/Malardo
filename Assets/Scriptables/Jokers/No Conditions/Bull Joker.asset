@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bull Joker
   m_EditorClassIdentifier: 
   jokerName: Bull
-  description: +2 Chips for each $1 you have
+  description: '+2 Chips for each $1 you have (Current: _R_)'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

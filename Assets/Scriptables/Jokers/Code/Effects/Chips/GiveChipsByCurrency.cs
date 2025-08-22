@@ -5,11 +5,13 @@ public class GiveChipsByCurrency : JokerEffect
     public int chipAmmount;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        ScoreManager.instance.AddChips(chipAmmount * CurrencyManager.instance.currentCurrency);
+        ScoreManager.instance.AddChips(Calculate());
+        jokerInstance.triggerMessage = $"+{Calculate()}";
+        jokerInstance.jokerDescription = jokerInstance.data.description.Replace("_R_", Calculate().ToString());
     }
 
-    public override string GetCustomMessage()
+    private int Calculate()
     {
-        return (chipAmmount * CurrencyManager.instance.currentCurrency).ToString();
+        return chipAmmount * CurrencyManager.instance.currentCurrency;
     }
 }
