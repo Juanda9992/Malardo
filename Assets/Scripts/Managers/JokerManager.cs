@@ -40,13 +40,18 @@ public class JokerManager : MonoBehaviour
                 }
             }
         }
-        foreach (var joker in jokers) 
+        foreach (var joker in jokers)
         {
             if (joker.logic.CanBetriggered())
-                {
-                    joker.container.TriggerActions(joker.logic);
-                    yield return new WaitForSeconds(1f);
-                }
+            {
+                joker.container.TriggerActions(joker.logic);
+                yield return new WaitForSeconds(1f);
+            }
+            if (joker.container._jokerInstance.destroyJoker)
+            {
+                RemoveJoker(joker.container);
+                yield return new WaitForSeconds(0.3f);
+            }
         }
         yield return new WaitForSeconds(0.2f);
     }

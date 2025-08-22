@@ -73,14 +73,6 @@ public class JokerContainer : MonoBehaviour
         {
             jokerLogic.jokerEffect[i].ammount = _jokerInstance.data.overrideEffect;
             jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
-
-            if (jokerLogic.jokerEffect[i].jokerOutput != string.Empty)
-            {
-                if (jokerLogic.jokerEffect[i].jokerOutput == "Destroy")
-                {
-                    Destroy(gameObject);
-                }
-            }
         }
         ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
     }

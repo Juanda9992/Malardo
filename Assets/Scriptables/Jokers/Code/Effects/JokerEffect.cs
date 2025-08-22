@@ -4,8 +4,6 @@ public abstract class JokerEffect : ScriptableObject
 {
     public float ammount;
 
-    public string jokerOutput;
-
     public virtual string GetCustomMessage()
     {
         return string.Empty;
