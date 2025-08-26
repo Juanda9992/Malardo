@@ -48,6 +48,8 @@ public class JokerManager : MonoBehaviour
             }
             if (joker.container._jokerInstance.destroyJoker)
             {
+                joker.container._jokerInstance.triggerMessage = "BYE!";
+                joker.container.TriggerMessage();
                 RemoveJoker(joker.container);
                 yield return new WaitForSeconds(0.3f);
             }
