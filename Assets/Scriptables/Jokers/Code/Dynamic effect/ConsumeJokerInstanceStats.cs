@@ -14,7 +14,7 @@ public class ConsumeJokerInstanceStats : JokerEffect
 
         if (mult)
         {
-            ScoreManager.instance.AddChips(instance.totalMult);
+            ScoreManager.instance.AddMult(instance.totalMult);
             instance.triggerMessage = "+" + instance.totalMult;
         }
 
