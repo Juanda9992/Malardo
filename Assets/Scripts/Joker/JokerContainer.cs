@@ -21,6 +21,7 @@ public class JokerContainer : MonoBehaviour
         {
             foreach (var effect in logic.jokerEffect)
             {
+                effect.SetupEffect(_jokerInstance);
                 effect.UpdateDescription(_jokerInstance);
             }
         }
@@ -43,6 +44,10 @@ public class JokerContainer : MonoBehaviour
             jokerLogic.jokerEffect[i].ammount = _jokerInstance.data.overrideEffect;
             jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
         }
-        ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
+
+        if (_jokerInstance.triggerMessage != String.Empty)
+        {
+            ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
+        }
     }
 }

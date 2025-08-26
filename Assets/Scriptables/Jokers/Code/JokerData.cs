@@ -26,6 +26,7 @@ public class JokerInstance
     public int totalChips;
     public int totalMult;
     public int totalMultiplier;
+    public int dynamicVariable;
     public JokerInstance(JokerData jokerData)
     {
         data = jokerData;

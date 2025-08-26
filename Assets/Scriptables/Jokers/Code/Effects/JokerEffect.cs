@@ -19,4 +19,9 @@ public abstract class JokerEffect : ScriptableObject
     {
         instance.jokerDescription = instance.data.description;
     }
+
+    public virtual void SetupEffect(JokerInstance jokerInstance)
+    {
+
+    }
 }
