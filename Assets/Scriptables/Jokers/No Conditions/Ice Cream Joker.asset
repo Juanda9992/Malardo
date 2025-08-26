@@ -10,23 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Joker
+  m_Name: Ice Cream Joker
   m_EditorClassIdentifier: 
-  jokerName: Testing
-  description: Gain 4 chips at the start of the match (Current _R_)
+  jokerName: Ice Cream
+  description: +_R_ Chips -5 Chips for every hand played
   triggerMessage: 
   overrideEffect: 0
-  shopValue: 0
+  shopValue: 5
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 3
     jokerTrigger: []
     jokerEffect:
-    - {fileID: 11400000, guid: aa4f6756762f3ed478468af448ba96a4, type: 2}
-  - triggerEvent: 7
-    jokerTrigger: []
-    jokerEffect:
-    - {fileID: 11400000, guid: 54fc2d4a1aed2744f811b809cd9e825d, type: 2}
+    - {fileID: 11400000, guid: 8d3c6bb37f50fc648b02d9b7cf8f65fa, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
