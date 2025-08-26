@@ -13,18 +13,22 @@ MonoBehaviour:
   m_Name: Wee Joker
   m_EditorClassIdentifier: 
   jokerName: Wee Joker
-  description: Played cards with even rank give +4 Mult when scored (10, 8, 6, 4,
-    2)
-  triggerMessage: +4
-  overrideEffect: 4
+  description: This Joker gains +8 Chips when each played 2 is scored (Currently
+    +_R_ Chips)
+  triggerMessage: 
+  overrideEffect: 0
   shopValue: 8
   jokerRarity: 2
   jokerLogics:
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: aa4f6756762f3ed478468af448ba96a4, type: 2}
   - triggerEvent: 4
     jokerTrigger:
-    - {fileID: 11400000, guid: 41aa565b8b23f2748b669cb4b8505b72, type: 2}
+    - {fileID: 11400000, guid: 2e0fbbc9f9a4d9845bbfb342a0b7a3a4, type: 2}
     jokerEffect:
-    - {fileID: 11400000, guid: 35d723538455e1543848a81e47380d16, type: 2}
+    - {fileID: 11400000, guid: e182ec7fa3f90d441aaf6b46f11bca49, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}
