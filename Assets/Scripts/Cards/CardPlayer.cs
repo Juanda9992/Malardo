@@ -77,6 +77,7 @@ public class CardPlayer : MonoBehaviour
     private IEnumerator TriggerHandCards()
     {
         CheckCardReactivations();
+        yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.BeforeHandPlay);
 
         for (int i = 0; i < currentHand.Count; i++)
         {
@@ -150,7 +151,6 @@ public class CardPlayer : MonoBehaviour
 
     private IEnumerator PlayCard(Card card)
     {
-        yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.BeforeHandPlay);
         //SCORE LOGIC
         ScoreManager.instance.AddChips(card.chipAmmount);
         ScoreSign.instance.SetScoreSign(card);
