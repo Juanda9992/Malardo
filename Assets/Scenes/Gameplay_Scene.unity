@@ -9661,7 +9661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultDiscards: 3
   discards: 3
-  defaultHands: 4
+  defaultHands: 10
   hands: 4
   handCards: []
   handLimit: 5
@@ -9795,11 +9795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 79ed734afb42ad848b2ec4324dff6803, type: 2}
-  - {fileID: 11400000, guid: f73fd9e85e7177f4f9b80150ae7ccbcc, type: 2}
-  - {fileID: 11400000, guid: aa4f86f3bacff15438a0874644445673, type: 2}
-  - {fileID: 11400000, guid: fb18f88669f50144b88e4343f0ecb65a, type: 2}
-  - {fileID: 11400000, guid: 465f7b01c8e06a543b5bf35b4d9d81ed, type: 2}
+  - {fileID: 11400000, guid: 3740f42d710495b45affa4711b049b9f, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -25254,7 +25250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a83ef8b48a6653409ad7be0d6520112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseTime: 0.1
+  increaseTime: 0.05
   timetoHide: 2
   scoreSignText: {fileID: 305541660}
   chipColor: {r: 0, g: 0.013594627, b: 1, a: 1}
