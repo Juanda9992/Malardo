@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: PopCorn Joker
+  m_Name: Spare Trousers Joker
   m_EditorClassIdentifier: 
-  jokerName: PopCorn
-  description: +_R_ Mult -4 Mult per round played
-  triggerMessage: 
+  jokerName: Spare Trousers
+  description: This Joker gains +2 Mult if played hand contains a Two Pair (Currently
+    +_R_ Mult)
+  triggerMessage: +4 Mult
   overrideEffect: 0
-  shopValue: 5
-  jokerRarity: 0
+  shopValue: 6
+  jokerRarity: 1
   jokerLogics:
   - triggerEvent: 3
     jokerTrigger: []
     jokerEffect:
     - {fileID: 11400000, guid: 9c1fbd7c534e2824fbd7d82f3cfc8659, type: 2}
-  - triggerEvent: 5
-    jokerTrigger: []
+  - triggerEvent: 7
+    jokerTrigger:
+    - {fileID: 11400000, guid: a9db76683635b5d4f905a0d16b528b3a, type: 2}
     jokerEffect:
-    - {fileID: 11400000, guid: 7a61e403855f06345887d1ca63e25ee7, type: 2}
+    - {fileID: 11400000, guid: d0a056e1e9c83fe47a0d896d29771f02, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}

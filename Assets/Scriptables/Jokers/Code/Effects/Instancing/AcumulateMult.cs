@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Acumulate Mult",menuName = "Scriptables/Joker/Effect/Instance Effects/Acumulate Mult")]
+[CreateAssetMenu(fileName = "Acumulate Mult", menuName = "Scriptables/Joker/Effect/Instance Effects/Acumulate Mult")]
 public class AcumulateMult : JokerEffect
 {
     public int multAmmount;
@@ -15,6 +15,11 @@ public class AcumulateMult : JokerEffect
     public override void UpdateDescription(JokerInstance instance)
     {
         instance.jokerDescription = instance.data.description.Replace("_R_", instance.totalMult.ToString());
+    }
+
+    public override void SetupEffect(JokerInstance jokerInstance)
+    {
+        UpdateDescription(jokerInstance);
     }
 
 
