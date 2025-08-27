@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204926f63fa60be4088a5b6bba8a0960, type: 3}
-  m_Name: Reactivate face cards
+  m_Script: {fileID: 11500000, guid: deb77a3c3b08a9a40b6f65ae81a9af35, type: 3}
+  m_Name: 10Var-1
   m_EditorClassIdentifier: 
   ammount: 0
-  reactivationTimes: 1
-  firstCard: 0
-  faceCards: 0
-  lastround: 0
-  numberRange: 
-  allCards: 1
+  initialAmmount: 10
+  decreaseRate: 1
+  chip: 0
+  mult: 0
+  dynamicVariable: 1
+  autoDestroy: 1

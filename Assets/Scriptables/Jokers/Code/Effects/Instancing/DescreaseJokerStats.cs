@@ -6,6 +6,7 @@ public class DescreaseJokerStats : JokerEffect
     public int decreaseRate;
     public bool chip;
     public bool mult;
+    public bool dynamicVariable;
     public bool autoDestroy;
     public override void ApplyEffect(JokerInstance instance)
     {
@@ -20,6 +21,10 @@ public class DescreaseJokerStats : JokerEffect
         {
             instance.totalMult -= decreaseRate;
         }
+        if (dynamicVariable)
+        {
+            instance.dynamicVariable -= decreaseRate;
+        }
         UpdateDescription(instance);
         if (autoDestroy)
         {
@@ -30,6 +35,10 @@ public class DescreaseJokerStats : JokerEffect
             if (mult)
             {
                 instance.destroyJoker = instance.totalMult == 0;
+            }
+            if (dynamicVariable)
+            {
+                instance.destroyJoker = instance.dynamicVariable == 0;
             }
         }
     }
@@ -43,6 +52,13 @@ public class DescreaseJokerStats : JokerEffect
         {
             jokerInstance.totalMult = initialAmmount;
         }
+
+        if (dynamicVariable)
+        {
+            jokerInstance.dynamicVariable = initialAmmount;
+        }
+
+        UpdateDescription(jokerInstance);
     }
 
     public override void UpdateDescription(JokerInstance instance)
@@ -54,6 +70,10 @@ public class DescreaseJokerStats : JokerEffect
         if (chip)
         {
             instance.jokerDescription = instance.data.description.Replace("_R_", instance.totalChips.ToString());
+        }
+        if (dynamicVariable)
+        {
+            instance.jokerDescription = instance.data.description.Replace("_R_", instance.dynamicVariable.ToString());
         }
     }
 }
