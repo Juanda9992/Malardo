@@ -74,14 +74,18 @@ public class PackManager : MonoBehaviour
 
         if (maxSelections == 0)
         {
-            SkipPackage();
+            SkipPackage(false);
         }
         selectAmmountLabel.text = "Choose " + maxSelections;
     }
 
     //CALLED BY UI BUTTON
-    public void SkipPackage()
+    public void SkipPackage(bool effect = true)
     {
+        if (effect)
+        {
+            StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPackSkipped));
+        }
         SetAllUIStatus(true);
         CardManager.DestroyChildsInParent(itemsDisplay);
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
