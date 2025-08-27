@@ -152,12 +152,10 @@ public class HandDetector : MonoBehaviour
                 diference = Mathf.Abs(cardsSorted[i].number - nextCard.number);
                 if (diference > gapForStraights || diference == 0)
                 {
-                    Debug.Log(diference);
                     coincidences--;
                 }
                 else
                 {
-                    Debug.Log("Coincidence");
                     coincidences++;
                 }
 

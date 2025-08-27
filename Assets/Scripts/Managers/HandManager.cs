@@ -37,7 +37,7 @@ public class HandManager : MonoBehaviour
         rightClick.action.performed += _ => RemoveAllCards();
         SetPlayButtonsState(false);
 
-        BlindManager.instance.OnBlindDefeated += ResetHandsAndDiscards;
+        BlindManager.instance.OnBlindSelected += ResetHandsAndDiscards;
 
 
         yield return new WaitForSeconds(0.5f);

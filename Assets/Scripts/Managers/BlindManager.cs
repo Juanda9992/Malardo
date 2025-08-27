@@ -24,7 +24,7 @@ public class BlindManager : MonoBehaviour
     [SerializeField] private Image[] bgImages;
     [SerializeField] private TextMeshProUGUI blindEffectText, blindDescriptionText;
 
-    public event Action OnBlindDefeated;
+    public event Action OnBlindDefeated, OnBlindSelected;
 
     public CurrentBlind activeBossBlind = null;
     void Awake()
@@ -101,6 +101,8 @@ public class BlindManager : MonoBehaviour
         {
             ResetBossBlind();
         }
+
+        OnBlindSelected?.Invoke();
     }
 
     public void SetBlindDefeated()
