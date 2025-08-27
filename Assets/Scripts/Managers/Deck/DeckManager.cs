@@ -76,6 +76,7 @@ public class DeckManager : MonoBehaviour
 
     public void AddCardOnFullDeck(Card card)
     {
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardAdded));
         fullMatchDeck.Add(card);
         UpdateDeckCounter();
     }

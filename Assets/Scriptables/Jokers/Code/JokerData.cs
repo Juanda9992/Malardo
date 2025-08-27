@@ -76,7 +76,8 @@ public enum TriggerEvent
     OnHandDiscard = 6,
     BeforeHandPlay = 7,
     OnPlanetCardUse = 8,
-    OnPackSkipped = 9
+    OnPackSkipped = 9,
+    OnCardAdded = 10
 }
 public enum JokerRarity
 {
