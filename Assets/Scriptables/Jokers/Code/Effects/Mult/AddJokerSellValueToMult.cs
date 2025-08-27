@@ -14,4 +14,9 @@ public class AddJokerSellValueToMult : JokerEffect
     {
         instance.jokerDescription = instance.data.description.Replace("_R_", instance.triggerMessage);
     }
+
+    public override void SetupEffect(JokerInstance jokerInstance)
+    {
+        UpdateDescription(jokerInstance);
+    }
 }
