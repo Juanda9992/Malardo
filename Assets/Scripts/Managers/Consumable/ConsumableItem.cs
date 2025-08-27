@@ -45,6 +45,7 @@ public class ConsumableItem : MonoBehaviour
                 ConsumableManager.instance.DecreaseConsumable();
             }
             PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
+            StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
             Destroy(gameObject);
         }
         else
@@ -65,6 +66,13 @@ public class ConsumableItem : MonoBehaviour
 
         if (isOnShop)
         {
+            if (planetCardData != null)
+            {
+                if (DatabaseManager.instance.pricesDatabase.freePlanetPacks)
+                {
+                    buyValue = 0;
+                }
+            }
             buyButtonText.text = "Buy $" + buyValue;
         }
     }
