@@ -7,9 +7,11 @@ public class AcumulateMult : JokerEffect
     public override void ApplyEffect(JokerInstance instance)
     {
         instance.totalMult += multAmmount;
-        UpdateDescription(instance);
-        instance.triggerMessage = "+" + multAmmount.ToString();
+        instance.totalMult = instance.totalMult < 0 ? 0 : instance.totalMult;
+        instance.triggerMessage = (multAmmount > 0 ? "+" : "-") + Mathf.Abs(multAmmount).ToString();
         instance.jokerContainer.TriggerMessage();
+        UpdateDescription(instance);
+
     }
 
     public override void UpdateDescription(JokerInstance instance)
