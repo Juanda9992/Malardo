@@ -51,10 +51,9 @@ public class JokerManager : MonoBehaviour
                 joker.container._jokerInstance.triggerMessage = "BYE!";
                 joker.container.TriggerMessage();
                 RemoveJoker(joker.container);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.2f);
             }
         }
-        yield return new WaitForSeconds(0.2f);
     }
     public void AddJoker(JokerData jokerData)
     {
