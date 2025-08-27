@@ -3,9 +3,10 @@ using UnityEngine;
 public class DescreaseJokerStats : JokerEffect
 {
     public int initialAmmount;
-    public int decreaseRate;
+    public float decreaseRate;
     public bool chip;
     public bool mult;
+    public bool multiplier;
     public bool dynamicVariable;
     public bool autoDestroy;
     public override void ApplyEffect(JokerInstance instance)
@@ -15,7 +16,7 @@ public class DescreaseJokerStats : JokerEffect
 
         if (chip)
         {
-            instance.totalChips -= decreaseRate;
+            instance.totalChips -= (int)decreaseRate;
         }
         if (mult)
         {
@@ -23,7 +24,11 @@ public class DescreaseJokerStats : JokerEffect
         }
         if (dynamicVariable)
         {
-            instance.dynamicVariable -= decreaseRate;
+            instance.dynamicVariable -= (int)decreaseRate;
+        }
+        if (multiplier)
+        {
+            instance.totalMultiplier -= decreaseRate;
         }
         UpdateDescription(instance);
         if (autoDestroy)
@@ -39,6 +44,10 @@ public class DescreaseJokerStats : JokerEffect
             if (dynamicVariable)
             {
                 instance.destroyJoker = instance.dynamicVariable == 0;
+            }
+            if (multiplier)
+            {
+                instance.destroyJoker = instance.totalMultiplier-1 <= 0;
             }
         }
     }
@@ -58,6 +67,11 @@ public class DescreaseJokerStats : JokerEffect
             jokerInstance.dynamicVariable = initialAmmount;
         }
 
+        if (multiplier)
+        {
+            jokerInstance.totalMultiplier = initialAmmount;
+        }
+
         UpdateDescription(jokerInstance);
     }
 
@@ -74,6 +88,11 @@ public class DescreaseJokerStats : JokerEffect
         if (dynamicVariable)
         {
             instance.jokerDescription = instance.data.description.Replace("_R_", instance.dynamicVariable.ToString());
+        }
+
+        if (multiplier)
+        {
+            instance.jokerDescription = instance.data.description.Replace("_R_", instance.totalMultiplier.ToString());
         }
     }
 }

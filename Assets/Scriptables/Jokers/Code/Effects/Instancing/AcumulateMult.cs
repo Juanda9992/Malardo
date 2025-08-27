@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Acumulate Mult", menuName = "Scriptables/Joker/Effect/Instance Effects/Acumulate Mult")]
 public class AcumulateMult : JokerEffect
 {
-    public int multAmmount;
+    public float multAmmount;
     public override void ApplyEffect(JokerInstance instance)
     {
         instance.totalMult += multAmmount;

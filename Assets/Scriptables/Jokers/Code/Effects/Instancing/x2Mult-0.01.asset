@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032375104e9c2ee43b896aa24b15a7d0, type: 3}
-  m_Name: Decrease 1 Mult
+  m_Script: {fileID: 11500000, guid: deb77a3c3b08a9a40b6f65ae81a9af35, type: 3}
+  m_Name: x2Mult-0.01
   m_EditorClassIdentifier: 
   ammount: 0
-  multAmmount: -1
+  initialAmmount: 2
+  decreaseRate: 0.01
+  chip: 0
+  mult: 0
+  multiplier: 1
+  dynamicVariable: 0
+  autoDestroy: 1
