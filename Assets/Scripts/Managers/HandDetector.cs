@@ -137,7 +137,7 @@ public class HandDetector : MonoBehaviour
         cardsSorted = new List<Card>(handCards);
         cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
         int coincidences = 0;
-
+        int diference;
         Card nextCard;
 
         if (cardsSorted.Any(x => x.number == 1))
@@ -149,8 +149,10 @@ public class HandDetector : MonoBehaviour
             nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
             if (nextCard != null)
             {
-                if (Mathf.Abs(cardsSorted[i].number - nextCard.number) > gapForStraights)
+                diference = Mathf.Abs(cardsSorted[i].number - nextCard.number);
+                if (diference > gapForStraights || diference == 0)
                 {
+                    Debug.Log(diference);
                     coincidences--;
                 }
                 else
