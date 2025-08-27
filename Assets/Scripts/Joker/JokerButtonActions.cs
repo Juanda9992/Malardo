@@ -6,7 +6,8 @@ public class JokerButtonActions : MonoBehaviour
 {
     [SerializeField] private JokerContainer jokerContainer;
     [SerializeField] private Button actionButton;
-    [SerializeField] private TextMeshProUGUI actionButtonText;
+    [SerializeField] private Button sellButton;
+    [SerializeField] private TextMeshProUGUI actionButtonText,sellButtonText;
     private bool selected = false;
 
     public void SwitchSelectedLogic()
@@ -19,6 +20,7 @@ public class JokerButtonActions : MonoBehaviour
         else
         {
             actionButton.gameObject.SetActive(false);
+            sellButton.gameObject.SetActive(false);
         }
     }
     private void SetButtonState()
@@ -34,26 +36,18 @@ public class JokerButtonActions : MonoBehaviour
             }
             actionButtonText.text = "Buy" + " $" + jokerContainer._jokerInstance.data.shopValue;
             actionButton.interactable = CheckIfEnoughCurrencyForBuy();
+            actionButton.gameObject.SetActive(true);
+            sellButton.gameObject.SetActive(false);
         }
         else
         {
-            actionButtonText.text = "Sell " + "$" + jokerContainer._jokerInstance.sellValue;
+            sellButtonText.text = "Sell " + "$" + jokerContainer._jokerInstance.sellValue;
+            actionButton.gameObject.SetActive(false);
+            sellButton.gameObject.SetActive(true);
         }
     }
 
-    public void ProcessBuyButton()
-    {
-        if (jokerContainer.isOnShop)
-        {
-            BuyJoker();
-        }
-        else
-        {
-            SellJoker();
-        }
-    }
-
-    private void BuyJoker()
+    public void BuyJoker()
     {
         JokerDescription.instance.SetDescriptionOff();
         CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.sellValue);
@@ -61,7 +55,7 @@ public class JokerButtonActions : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void SellJoker()
+    public void SellJoker()
     {
         CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);
