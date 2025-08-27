@@ -37,6 +37,7 @@ public class RerollShop : MonoBehaviour
             shopManager.SetGenerateJokersAction();
             SetRerollText();
         }
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnShopReroll));
     }
 
     private bool CheckIfEnoughCurrencyForReRoll()
