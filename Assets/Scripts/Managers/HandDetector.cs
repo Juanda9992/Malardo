@@ -36,14 +36,22 @@ public class HandDetector : MonoBehaviour
             cardsSorted.Clear();
             return;
         }
-        if (CheckIfColor() && CheckIfFullHouse())
+        if(CheckIfColor() && CheckIfFiveOfAKind())
         {
-            Debug.Log("Flush House");
-            CardPlayer.instance.ReceiveHandCards(handCards);
-            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush_House);
-            AddHandToMult();
-            return;
+                Debug.Log("Flush Five");
+                CardPlayer.instance.ReceiveHandCards(handCards);
+                currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush_Five);
+                AddHandToMult();
+                return;            
         }
+        if (CheckIfColor() && CheckIfFullHouse())
+            {
+                Debug.Log("Flush House");
+                CardPlayer.instance.ReceiveHandCards(handCards);
+                currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush_House);
+                AddHandToMult();
+                return;
+            }
         if (CheckIfFiveOfAKind())
         {
             Debug.Log("Five of a kind");

@@ -6472,6 +6472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokerHands:
+  - pokerHand: {fileID: 11400000, guid: 34dff802e72330748931d5fca413f7d8, type: 2}
+    handLevel: 1
+    handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: 2aad09eb48bca4a4fb34cc70bab4303b, type: 2}
     handLevel: 1
     handPlayedTime: 0
