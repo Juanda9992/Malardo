@@ -6472,6 +6472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokerHands:
+  - pokerHand: {fileID: 11400000, guid: 89c1244ec901e7740920aaa976a5a482, type: 2}
+    handLevel: 1
+    handPlayedTime: 0
+    playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: 5e2e08f6febad004ca8a1ed68729982b, type: 2}
     handLevel: 1
     handPlayedTime: 0
@@ -9661,7 +9665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultDiscards: 3
   discards: 3
-  defaultHands: 10
+  defaultHands: 4
   hands: 4
   handCards: []
   handLimit: 5
@@ -27381,7 +27385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceDeck: {fileID: 11400000, guid: e566a6b87f679e549ad663342b3a5efe, type: 2}
+  referenceDeck: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
   fullMatchDeck: []
   roundDeck: []
   currentHandSize: 8

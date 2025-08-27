@@ -44,6 +44,14 @@ public class HandDetector : MonoBehaviour
             AddHandToMult();
             return;
         }
+        if (CheckIfColor() && CheckIfStraight())
+        {
+            currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Straight_Flush);
+            CardPlayer.instance.ReceiveHandCards(handCards);
+            Debug.Log("Straight Flush");
+            AddHandToMult();
+            return;
+        }
         if (CheckIfColor())
         {
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush);
@@ -164,7 +172,7 @@ public class HandDetector : MonoBehaviour
 
         if (coincidences >= requiredAmmountForFlush - 1 && cardsSorted.Any(x => x.number == 14))
         {
-            cardsSorted.RemoveAt(cardsSorted.Count-1);
+            cardsSorted.RemoveAt(cardsSorted.Count - 1);
         }
 
         return coincidences >= requiredAmmountForFlush - 1;

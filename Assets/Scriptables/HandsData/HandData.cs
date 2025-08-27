@@ -12,13 +12,14 @@ public class HandData : ScriptableObject
 
 public enum HandType
 {
-    High_Card,
-    Pair,
-    Double_Pair,
-    Three_Of_A_Kind,
-    Straight,
-    Flush,
-    Full_House,
-    Four_Of_A_Kind,
-    Five_Of_A_Kind
+    High_Card = 0,
+    Pair = 1,
+    Double_Pair = 2,
+    Three_Of_A_Kind = 3,
+    Straight = 4,
+    Flush = 5,
+    Full_House = 6,
+    Four_Of_A_Kind = 7,
+    Five_Of_A_Kind = 8,
+    Straight_Flush = 9
 }
