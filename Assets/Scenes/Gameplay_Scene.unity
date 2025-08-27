@@ -9795,8 +9795,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 6771ed56a3b69c04abe3732843942cdb, type: 2}
-  - {fileID: 11400000, guid: a573912ec120e414eba61e6985e31c45, type: 2}
+  - {fileID: 11400000, guid: 8f46c0f36c243604cb888e21ae95dd44, type: 2}
+  - {fileID: 11400000, guid: df2558e6506b28b46b177a126ac3a2fe, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -27382,7 +27382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceDeck: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
+  referenceDeck: {fileID: 11400000, guid: e566a6b87f679e549ad663342b3a5efe, type: 2}
   fullMatchDeck: []
   roundDeck: []
   currentHandSize: 8
