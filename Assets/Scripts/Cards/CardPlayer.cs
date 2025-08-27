@@ -67,7 +67,7 @@ public class CardPlayer : MonoBehaviour
 
         ScoreManager.instance.TryEndMatch();
         yield return new WaitForSeconds(0.5f);
-        HandManager.instance.ClearHandPlayed();
+        yield return HandManager.instance.ClearHandPlayed();
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
         isPlayingCards = false;

@@ -90,7 +90,7 @@ public class HandManager : MonoBehaviour
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnHandDiscard));
         if (handCards.Count > 0)
         {
-            ClearHandPlayed();
+            StartCoroutine(ClearHandPlayed(true));
         }
 
         GameStatusManager.SetDiscardsRemaining(discards);
@@ -100,14 +100,19 @@ public class HandManager : MonoBehaviour
         UpdateDiscardText();
     }
 
-    public void ClearHandPlayed()
+    public IEnumerator ClearHandPlayed(bool triggerEvent = false)
     {
         for (int i = 0; i < handCards.Count; i++)
         {
             if (handCards[i].linkedCard != null)
             {
+                if (triggerEvent)
+                {
+                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
+                }
                 handCards[i].linkedCard.pointerInteraction.DestroyCard();
                 CardManager.instance.cardsOnScreen.Remove(handCards[i].linkedCard);
+                yield return new WaitForSeconds(0.05f);
             }
         }
         DeckManager.instance.GenerateCardsOnDeck(handCards.Count);
