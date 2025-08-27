@@ -183,12 +183,14 @@ public class CardPlayer : MonoBehaviour
                     ScoreManager.instance.AddMult(20);
                     ScoreSign.instance.SetMessage(Color.red, "+20", card.linkedCard.transform.position);
                     yield return new WaitForSeconds(0.3f);
+                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnLuckyCardPlay);
                 }
                 if (Random.Range(0, 15) == 0)
                 {
                     CurrencyManager.instance.AddCurrency(20);
                     ScoreSign.instance.SetMessage(Color.yellow, "$20", card.linkedCard.transform.position);
                     yield return new WaitForSeconds(0.3f);
+                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnLuckyCardPlay);
                 }
                 break;
             case CardType.Glass:
