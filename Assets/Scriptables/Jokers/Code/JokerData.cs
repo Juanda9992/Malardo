@@ -25,7 +25,7 @@ public class JokerInstance
 
     public int totalChips;
     public int totalMult;
-    public int totalMultiplier;
+    public float totalMultiplier;
     public int dynamicVariable;
     public JokerInstance(JokerData jokerData)
     {
@@ -69,12 +69,13 @@ public enum TriggerEvent
 {
     BlindSelected = 0,
     RoundBegin = 1,
-    BeforeHandPlay = 7,
     OnHandPlay = 2,
     OnHandEnd = 3,
     OnCardPlay = 4,
     OnBlindDefeated = 5,
     OnHandDiscard = 6,
+    BeforeHandPlay = 7,
+    OnPlanetCardUse = 8
 }
 public enum JokerRarity
 {
