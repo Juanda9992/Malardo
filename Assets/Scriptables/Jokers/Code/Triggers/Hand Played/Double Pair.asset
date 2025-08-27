@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba650995f553f54290fb43b735fb0c6, type: 3}
   m_Name: Double Pair
   m_EditorClassIdentifier: 
-  requiredHandType: 02000000
+  requiredHandType: 02000000060000000a000000
