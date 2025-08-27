@@ -27385,7 +27385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3401c05753505784f86c3ccf657efc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceDeck: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
+  referenceDeck: {fileID: 11400000, guid: f2fd5d82db193cc46ba9af50b5b6991a, type: 2}
   fullMatchDeck: []
   roundDeck: []
   currentHandSize: 8

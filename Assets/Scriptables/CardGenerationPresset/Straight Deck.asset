@@ -13,110 +13,366 @@ MonoBehaviour:
   m_Name: Straight Deck
   m_EditorClassIdentifier: 
   allCards:
-  - linkedCard: {fileID: 0}
-    number: 2
+  - cardName: 8 of Diamond
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 8
     cardSuit: 0
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 2
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 0
     cardSuit: 0
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 2
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 0
     cardSuit: 0
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 2
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 0
     cardSuit: 0
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 2
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 8 of Diamond
+    linkedCard: {fileID: 0}
+    number: 8
+    chipAmmount: 8
     cardSuit: 0
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 3
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 4
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 5
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    cardSuit: 2
-    faceCard: 0
-  - linkedCard: {fileID: 0}
-    number: 6
-    cardSuit: 2
-    faceCard: 0
-  startingMoney: 5
-  presetCard:
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 7 of Diamond
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 7
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 7
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 6 of Diamond
     linkedCard: {fileID: 0}
     number: 6
-    cardSuit: 2
-    faceCard: 0
+    chipAmmount: 6
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 6
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 5 of Diamond
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 5
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 5
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 4 of Diamond
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 4
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 4 of Diamond
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 4
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 4
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 3 of Diamond
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 3
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 3 of Diamond
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 3
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 3
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 2 of Diamond
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 2
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 2 of Diamond
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 2
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  - cardName: 
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
+  startingMoney: 0
+  presetCard:
+    cardName: 
+    linkedCard: {fileID: 0}
+    number: 2
+    chipAmmount: 0
+    cardSuit: 0
+    cardType: 0
+    cardSeal: 0
+    cardEdition: 0
+    canPlay: 1
+    activations: 1
   timesToGenerate: 5
