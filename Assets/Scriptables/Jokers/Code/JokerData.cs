@@ -42,8 +42,8 @@ public class JokerInstance
 
     public JokerLogic[] jokerLogics;
     public bool destroyJoker;
-
-    public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2); } }
+    public int extraSellValue = 0;
+    public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2)+extraSellValue; } }
 }
 
 [System.Serializable]
