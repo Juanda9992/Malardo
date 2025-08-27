@@ -3370,14 +3370,14 @@ MonoBehaviour:
       - m_Target: {fileID: 239341329}
         m_TargetAssemblyTypeName: PackManager, Assembly-CSharp
         m_MethodName: SkipPackage
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &219165889
 MonoBehaviour:
@@ -9795,8 +9795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 5664350817fd3c44bb6edfde964019ed, type: 2}
-  - {fileID: 11400000, guid: a077aad5bd4660844843fc25dd5d149b, type: 2}
+  - {fileID: 11400000, guid: 6707eb7c7168dc844acaf05f241b4d87, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
