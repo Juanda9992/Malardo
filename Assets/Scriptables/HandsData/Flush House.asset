@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6611f305a0fef5748b888c06b7fb9c6c, type: 3}
-  m_Name: Five of a Kind
+  m_Name: Flush House
   m_EditorClassIdentifier: 
-  baseChips: 120
-  baseMult: 12
-  handType: 8
+  baseChips: 140
+  baseMult: 14
+  handType: 10
   chipsUpgrade: 35
   multUpgrade: 3

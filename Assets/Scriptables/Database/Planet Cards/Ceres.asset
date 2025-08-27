@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6611f305a0fef5748b888c06b7fb9c6c, type: 3}
-  m_Name: Five of a Kind
+  m_Script: {fileID: 11500000, guid: 75acdb83f3993ef439dd3b17fc2f37b2, type: 3}
+  m_Name: Ceres
   m_EditorClassIdentifier: 
-  baseChips: 120
-  baseMult: 12
-  handType: 8
-  chipsUpgrade: 35
-  multUpgrade: 3
+  cardName: Ceres
+  cardDescription: +3 Mult and +35 Chips
+  handType: 10
