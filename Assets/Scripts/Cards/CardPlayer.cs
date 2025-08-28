@@ -32,9 +32,26 @@ public class CardPlayer : MonoBehaviour
         lastHandPlayed = handData;
     }
 
+    public void StopPlayCoroutine()
+    {
+        StopCoroutine("PlayCards");
+        StartCoroutine("InvalidateHand");
+    }
+
+    private IEnumerator InvalidateHand()
+    {
+        yield return new WaitForSeconds(1);
+        yield return HandManager.instance.ClearHandPlayed();
+        isPlayingCards = false;
+    }
+
     private IEnumerator PlayCards()
     {
         isPlayingCards = true;
+        if (BlindManager.instance.activeBossBlind != null)
+        {
+            yield return BlindManager.instance.activeBossBlind.CheckEffect();
+        }
 
         yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
         RemovePlayedCardsFromList();
