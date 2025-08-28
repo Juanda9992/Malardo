@@ -67,11 +67,45 @@ public class JokerSpawner : MonoBehaviour
             }
         }
 
-
+        PackSize packSize;
         for (int i = 0; i < 2; i++)
         {
             GameObject shopPack = Instantiate(shopPackPrefab, packsTransform);
-            shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomPack());
+            int randomPack = Random.Range(0, 100);
+            int randomPackSize = Random.Range(0, 100);
+
+            if (randomPackSize < 61)
+            {
+                packSize = PackSize.Normal;
+            }
+            else if (randomPackSize < 91)
+            {
+                packSize = PackSize.Jumbo;
+            }
+            else
+            {
+                packSize = PackSize.Mega;
+            }
+
+
+            if (randomPack < 68)
+            {
+                //CELESTIAL / STANDARD
+                int packChoice = Random.Range(0, 2);
+                if (packChoice == 0)
+                {
+                    shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomPlanetPack(packSize));
+                }
+                else
+                {
+                    shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomCardPack(packSize));
+                }
+            }
+            else
+            {
+                //Buffon
+                shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomBuffonPack(packSize));
+            }
         }
     }
 

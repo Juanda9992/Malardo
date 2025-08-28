@@ -8,36 +8,27 @@ public class PackDatabase : ScriptableObject
     public List<PackData> cardPacks;
     public List<PackData> planetPacks;
 
-    public PackData GetRandomBuffonPack()
+    public PackData GetRandomBuffonPack(PackSize packSize)
     {
-        return buffonPacks[Random.Range(0, buffonPacks.Count)];
+        List<PackData> packsGathered = buffonPacks.FindAll(x => x.packSize == packSize);
+        return packsGathered[Random.Range(0, packsGathered.Count)];
     }
 
-    public PackData GetRandomCardPack()
+    public PackData GetRandomCardPack(PackSize packSize)
     {
-        return cardPacks[Random.Range(0, cardPacks.Count)];
+        List<PackData> packsGathered = cardPacks.FindAll(x => x.packSize == packSize);
+        return packsGathered[Random.Range(0, packsGathered.Count)];
     }
 
-    public PackData GetRandomPlanetPack()
+    public PackData GetRandomPlanetPack(PackSize packSize)
     {
-        return planetPacks[Random.Range(0, planetPacks.Count)];
+        List<PackData> packsGathered = planetPacks.FindAll(x => x.packSize == packSize);
+        return packsGathered[Random.Range(0, packsGathered.Count)];
     }
-
-    public PackData GetRandomPack()
-    {
-        int packIndex = Random.Range(0, 3);
-        if (packIndex == 0)
-        {
-            return GetRandomBuffonPack();
-        }
-        else if (packIndex == 1)
-        {
-            return GetRandomCardPack();
-        }
-        else
-        {
-            return GetRandomPlanetPack();
-        }
-
-    }
+}
+public enum PackSize
+{
+    Normal,
+    Jumbo,
+    Mega
 }

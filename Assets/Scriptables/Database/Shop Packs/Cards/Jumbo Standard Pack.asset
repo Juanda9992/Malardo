@@ -18,3 +18,4 @@ MonoBehaviour:
   packType: 5
   numberOfCards: 5
   selectCards: 1
+  packSize: 1

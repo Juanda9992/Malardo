@@ -9,4 +9,5 @@ public class PackData : ScriptableObject
     public PackType packType;
     public int numberOfCards;
     public int selectCards;
+    public PackSize packSize;
 }
