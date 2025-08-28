@@ -28,7 +28,8 @@ public class JokerSpawner : MonoBehaviour
 
         for (int i = 0; i < shopItemSlots; i++)
         {
-            if (Random.Range(0, 2) == 0)
+            int randomChoice = Random.Range(0, 100);
+            if (randomChoice < 71)
             {
                 GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
                 currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJoker());
