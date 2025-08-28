@@ -6517,7 +6517,7 @@ MonoBehaviour:
     handPlayedTime: 0
     playedInRound: 0
   - pokerHand: {fileID: 11400000, guid: 6f25c04d46d698744b5c8fc10ffd5c34, type: 2}
-    handLevel: 1
+    handLevel: 34
     handPlayedTime: 0
     playedInRound: 0
 --- !u!114 &333037844
