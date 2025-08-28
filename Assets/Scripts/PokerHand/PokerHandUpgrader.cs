@@ -23,9 +23,22 @@ public class PokerHandUpgrader : MonoBehaviour
         StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
     }
 
-    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData)
+    public void RequestDecreasePokerHand(HandType handType)
+    {
+        PokerHandLevelData pokerHand = PokerHandLevelStorage.instance.GetHandData(handType);
+
+        if (pokerHand.handLevel > 1)
+        {
+            StartCoroutine(UpgradeVisuals(pokerHand, false));
+        }
+    }
+
+    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData,bool upgrade = true)
     {
         isUpgrading = true;
+
+        string pokerOperator = upgrade ? "+" : "-"; 
+
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
 
         chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
@@ -33,13 +46,20 @@ public class PokerHandUpgrader : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         chipUpgrade.animationContainer.SetActive(true);
-        chipUpgrade.upgradeText.text = "+" + pokerHandLevelData.pokerHand.chipsUpgrade;
+        chipUpgrade.upgradeText.text = pokerOperator + pokerHandLevelData.pokerHand.chipsUpgrade;
 
         yield return new WaitForSeconds(0.4f);
         multUpgrade.animationContainer.SetActive(true);
-        multUpgrade.upgradeText.text = "+" + pokerHandLevelData.pokerHand.multUpgrade;
+        multUpgrade.upgradeText.text = pokerOperator + pokerHandLevelData.pokerHand.multUpgrade;
 
-        pokerHandLevelData.UpgradeHand();
+        if (upgrade)
+        {
+            pokerHandLevelData.UpgradeHand();
+        }
+        else
+        {
+            pokerHandLevelData.DecreaseHand();
+        }
 
         handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
         yield return new WaitForSeconds(0.6f);

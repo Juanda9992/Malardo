@@ -66,6 +66,11 @@ public class PokerHandLevelData
         handLevel++;
     }
 
+    public void DecreaseHand()
+    {
+        handLevel--;
+    }
+
     public void IncreasePlayTime()
     {
         handPlayedTime++;
