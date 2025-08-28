@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public abstract class CurrentBlind : ScriptableObject
 {
     public string blindName;
@@ -9,4 +9,14 @@ public abstract class CurrentBlind : ScriptableObject
     public Color blindColor;
     public abstract void ApplyEffect();
     public abstract void RevertEffect();
+
+    public virtual IEnumerator CheckEffect()
+    {
+        yield return null;
+    }
+    [ContextMenu("Force Select")]
+    protected void ForceBlindSelect()
+    {
+        BlindManager.instance.SetUpBossBlind(this);
+    }
 }

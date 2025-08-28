@@ -121,9 +121,16 @@ public class BlindManager : MonoBehaviour
         }
     }
 
-    private void SetUpBossBlind()
+    public void SetUpBossBlind(CurrentBlind currentBlind = null)
     {
-        activeBossBlind = GameObject.FindObjectOfType<BlindSelector>().GetCurrentBossBlind();
+        if (currentBlind != null)
+        {
+            activeBossBlind = currentBlind;
+        }
+        else
+        {
+            activeBossBlind = GameObject.FindObjectOfType<BlindSelector>().GetCurrentBossBlind();
+        }
         Debug.Log(activeBossBlind.blindName);
 
         SetUpBGColor(activeBossBlind.blindColor);
@@ -134,6 +141,12 @@ public class BlindManager : MonoBehaviour
         blindEffectText.text = activeBossBlind.blindDescription;
         blindDescriptionText.text = activeBossBlind.blindDescription;
 
+        StartCoroutine(nameof(HideBlindText));
+    }
+    public void ShowInvalidateMessage()
+    {
+        blindEffectText.gameObject.SetActive(true);
+        blindEffectText.text = "Won´t Play";
         StartCoroutine(nameof(HideBlindText));
     }
 
