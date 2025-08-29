@@ -80,7 +80,8 @@ public enum TriggerEvent
     OnCardAdded = 10,
     OnLuckyCardPlay = 11,
     OnShopReroll = 12,
-    OnCardDiscard = 13
+    OnCardDiscard = 13,
+    OnGlassCardDestroyed = 14
 }
 public enum JokerRarity
 {

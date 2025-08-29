@@ -138,6 +138,7 @@ public class CardPlayer : MonoBehaviour
                 if (Random.Range(0, 4) == 0)
                 {
                     Debug.Log("Destroyed");
+                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnGlassCardDestroyed);
                     DeckManager.instance.DestroyCardFromFullDeck(currentHand[i]);
                     Destroy(currentHand[i].linkedCard.gameObject);
                     yield return new WaitForSeconds(0.3f);
