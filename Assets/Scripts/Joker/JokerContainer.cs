@@ -11,6 +11,7 @@ public class JokerContainer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jokerText;
 
     [SerializeField] private Image jokerBg;
+    private bool triggered;
     public void SetUpJoker(JokerInstance jokerData)
     {
         _jokerInstance = jokerData;
@@ -29,6 +30,7 @@ public class JokerContainer : MonoBehaviour
 
     public void TriggerMessage()
     {
+        triggered = true;
         ScoreSign.instance.SetMessage(Color.green, _jokerInstance.triggerMessage, transform.position);
     }
 
@@ -45,7 +47,7 @@ public class JokerContainer : MonoBehaviour
             jokerLogic.jokerEffect[i].ApplyEffect(_jokerInstance);
         }
 
-        if (_jokerInstance.triggerMessage != String.Empty)
+        if (_jokerInstance.triggerMessage != String.Empty && !triggered)
         {
             ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
         }

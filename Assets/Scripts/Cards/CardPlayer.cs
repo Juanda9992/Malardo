@@ -76,13 +76,17 @@ public class CardPlayer : MonoBehaviour
 
         if (ScoreManager.instance.CheckBlindDefeated())
         {
+            Debug.Log("Enter here");
             yield return new WaitForSeconds(0.2f);
             yield return CardManager.instance.TriggerEndRoundCardAbilities();
             yield return new WaitForSeconds(0.2f);
             ScoreManager.instance.OnBlindDefeated();
         }
+        else
+        {
+            ScoreManager.instance.TryEndMatch();
+        }
 
-        ScoreManager.instance.TryEndMatch();
         yield return new WaitForSeconds(0.5f);
         yield return HandManager.instance.ClearHandPlayed();
         HandDetector.instance.RemoveHandFromMult();
