@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.5.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.5.0
+  logcontent: "<b>Added</b>\n\n- 3 new Poker Hands:\n\t-Five of a Kind.\n\t-Flush
+    House.\n\t-Flush Five.\n\n- 3 new Planet Cards:\n\t-Eris.\n\t-Planet X.\n\t-Ceres.\n\n-
+    2 new blind bosses:\n\t- The Psychic: Must play 5 cards.\n\t- The Arm: Decrease
+    the level of the poker hand.\n\n-Card Reactivations Logic.\n\n- 28 new Jokers:\n\t-Four
+    Fingers\n\t-Shortcut.\n\t-To the Moon.\n\t-Erosion.\n\t-Dusk.\n\t-Seltzer.\n\t-Sock
+    and Buskin.\n\t-Hanging Chad.\n\t-Hack.\t\n\t-Loyalty Card.\n\t-Ride the Bus.\n\t-Runner.\n\t-Ice
+    Cream.\n\t-PopCorn.\n\t-Ramen.\n\t-Square Joker.\n\t-Spare Trouser.\n\t-Wee Joker.\n\t-Egg.\n\t-Constelation.\n\t-Green
+    Joker.\n\t-Red Joker.\n\t-Gift Card.\n\t-Hologram.\t\n\t-Lucky Cat.\n\t-Glass
+    Joker.\n\t-Flash Card.\n\t-Turtle Bean.\n\n- Dynamic Description for most jokers.\n\n<b>Updated</b>\n\n-
+    If space joker effect triggers, the game waits to the poker hand to be upgraded.\n-
+    Rewritten joker activation logic.\n- Straights can be made with Ace (5,4,3,2,A
+    and A,K,Q,J,10).\n- Action buttons position when selectig a joker.\n- Shop chances
+    (Buffon Packs, Jokers and Planet Cards).\n- Increase cap of the game to the round
+    18.\n<b>Fixed</b>\n\n- When adding a card, the card counter wasn\xB4t updating.\n-
+    Astronomer were not setting planet cards\xB4s price to 0.\n- Straighs can be
+    done with pair cards (Example: A,A,K,Q,J).\n- Hands were being reseted before
+    the invest calculation."
