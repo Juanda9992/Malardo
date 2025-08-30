@@ -18,7 +18,6 @@ public class ShopItem : MonoBehaviour
 
     private void UpdateBuyButtonStatus(int ammount)
     {
-        Debug.Log(ammount);
         interactButton.interactable = ammount > ammountRequired;
         buyLabel.text = "Buy $" + ammountRequired;
     }

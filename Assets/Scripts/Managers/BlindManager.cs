@@ -38,7 +38,8 @@ public class BlindManager : MonoBehaviour
         currentRoundText.text = currentRound.ToString();
         currentBetLevelText.text = (anteLevel + 1) + " / 4";
 
-        requiredScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.allBlinds[currentBlindProgress].scoreMultiplier);
+        int newScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.allBlinds[currentBlindProgress].scoreMultiplier);
+        requiredScore = newScore;
         blindMoney = blindScoreData.allBlinds[currentBlindProgress].blindMoney;
 
         SetUpUI();
@@ -91,7 +92,6 @@ public class BlindManager : MonoBehaviour
     {
 
         currentRoundText.text = currentRound.ToString();
-        SetRequiredScore();
 
         if (currentBlindProgress == 2)
         {
@@ -100,6 +100,7 @@ public class BlindManager : MonoBehaviour
         else
         {
             ResetBossBlind();
+            SetRequiredScore();
         }
 
         OnBlindSelected?.Invoke();
