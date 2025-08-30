@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2078819994135115820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34,11 +34,11 @@ RectTransform:
   - {fileID: 7669057879480601875}
   m_Father: {fileID: 3321883175046472565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 0}
-  m_SizeDelta: {x: 90, y: 80}
-  m_Pivot: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 90, y: 70}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6631548010763225467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
+  m_fontSize: 26.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -850,6 +850,7 @@ MonoBehaviour:
     dynamicVariable: 0
     jokerLogics: []
     destroyJoker: 0
+    extraSellValue: 0
   isOnShop: 1
   jokerText: {fileID: 1592527842947618694}
   jokerBg: {fileID: 6199330102263620309}
