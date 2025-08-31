@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.5.3
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.5.3
+  logcontent: '<b>Fixed</b>
+
+
+    - Swashbuckler description on the shop were giving
+    wrong score.
+
+    - Cloud 9 Description on the shop were not displaying how much
+    value it will give.
+
+    - Silver joker were missing an "X" on the description.
+
+    -
+    Most of the text were not rendering properly on the description.
+
+    - Some
+    jokers on the shop were crashing the game.
+
+    - Some blinds were not setting
+    their score properly.
+
+    - Blind boss sprite were not being setted properly.'
