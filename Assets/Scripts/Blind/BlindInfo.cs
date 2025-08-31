@@ -40,7 +40,7 @@ public class BlindInfo : MonoBehaviour
     private void SetUpScoresUI()
     {
         int ante = BlindManager.instance.anteLevel;
-        for (int i = 0; i < blindScoreRequirements.Length; i++)
+        for (int i = 0; i < blindScoreRequirements.Length-1; i++)
         {
             blindScoreRequirements[i].text = (blindScoreData.baseScore[ante] * blindScoreData.allBlinds[i].scoreMultiplier).ToString();
         }
