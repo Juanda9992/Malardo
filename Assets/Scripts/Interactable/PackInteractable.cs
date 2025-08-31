@@ -66,5 +66,6 @@ public class PackInteractable : MonoBehaviour
         }
 
         PackManager.instance.SelectItem();
+        JokerDescription.instance.SetDescriptionOff();
     }
 }
