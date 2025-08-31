@@ -44,14 +44,14 @@ public class JokerManager : MonoBehaviour
             {
                 joker.container.TriggerActions(joker.logic);
                 yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.3f);
             }
             if (joker.container._jokerInstance.destroyJoker)
             {
                 joker.container._jokerInstance.triggerMessage = "BYE!";
                 joker.container.TriggerMessage();
-                RemoveJoker(joker.container);
                 yield return new WaitForSeconds(0.2f);
+                RemoveJoker(joker.container);
             }
         }
     }
