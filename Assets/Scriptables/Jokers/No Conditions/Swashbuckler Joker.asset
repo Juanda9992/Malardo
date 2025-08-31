@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Swashbuckler
+  m_Name: Swashbuckler Joker
   m_EditorClassIdentifier: 
   jokerName: Swashbuckler
-  description: 'Adds the sell value of all other owned Jokers to Mult (Current: _R_)'
+  description: 'Adds the sell value of all other owned Jokers to Mult (Current: +_R_)'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 4

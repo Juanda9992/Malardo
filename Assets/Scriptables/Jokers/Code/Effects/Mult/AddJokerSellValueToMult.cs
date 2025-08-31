@@ -12,7 +12,7 @@ public class AddJokerSellValueToMult : JokerEffect
 
     public override void UpdateDescription(JokerInstance instance)
     {
-        instance.jokerDescription = instance.data.description.Replace("_R_", instance.triggerMessage);
+        instance.jokerDescription = instance.data.description.Replace("_R_", JokerManager.instance.GetSellValueFromAllJokers().ToString());
     }
 
     public override void SetupEffect(JokerInstance jokerInstance)
