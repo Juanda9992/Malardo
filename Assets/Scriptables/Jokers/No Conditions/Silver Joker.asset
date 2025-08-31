@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Silver Joker
   m_EditorClassIdentifier: 
   jokerName: Silver Joker
-  description: 'Gives X0.2 Mult for each Steel Card in your full deck (Current: _R_)'
+  description: 'Gives X0.2 Mult for each Steel Card in your full deck (Current: X_R_)'
   triggerMessage: 
   overrideEffect: 0.25
   shopValue: 7
