@@ -6,11 +6,17 @@ public class GiveCurrencyPerCardOnDeck : JokerEffect
     public int requiredNumber;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        CurrencyManager.instance.AddCurrency(DeckManager.instance.GetAllCardsOnFullDeckByNumber(9));
+        CurrencyManager.instance.AddCurrency(Output());
+        jokerInstance.triggerMessage = "$" + Output().ToString();
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
-    public override string GetCustomMessage()
+    private int Output()
     {
-        return "$" + DeckManager.instance.GetAllCardsOnFullDeckByNumber(9);
+        return DeckManager.instance.GetAllCardsOnFullDeckByNumber(requiredNumber);
+    }
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", Output().ToString());
     }
 }
