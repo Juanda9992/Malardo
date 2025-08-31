@@ -58,6 +58,7 @@ public class JokerButtonActions : MonoBehaviour
     {
         CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);
+        JokerDescription.instance.SetDescriptionOff();
     }
 
     private bool CheckIfEnoughCurrencyForBuy()
