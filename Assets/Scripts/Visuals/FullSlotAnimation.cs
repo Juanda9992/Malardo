@@ -4,7 +4,7 @@ using DG.Tweening;
 
 public class FullSlotAnimation : MonoBehaviour
 {
-    public GameObject consumableSlotAnimation;
+    public GameObject consumableSlotAnimation,jokerSlotAnimation;
 
     public static FullSlotAnimation instance;
 
@@ -13,12 +13,23 @@ public class FullSlotAnimation : MonoBehaviour
         instance = this;
     }
 
-    public IEnumerator ShowConsumableAnimation()
+
+    public void ShowConsumableAnimation()
     {
-        consumableSlotAnimation.gameObject.SetActive(true);
-        consumableSlotAnimation.transform.DOShakePosition(2,4);
+        StartCoroutine(ShowFullSlot(consumableSlotAnimation));
+    }
+    
+    public void ShowJokerAnimation()
+    {
+        StartCoroutine(ShowFullSlot(jokerSlotAnimation));
+    }
+
+    public IEnumerator ShowFullSlot(GameObject desiredObject)
+    {
+        desiredObject.gameObject.SetActive(true);
+        desiredObject.transform.DOShakePosition(2, 4);
         yield return new WaitForSeconds(0.8f);
 
-        consumableSlotAnimation.gameObject.SetActive(false);
+        desiredObject.gameObject.SetActive(false);
     }
 }

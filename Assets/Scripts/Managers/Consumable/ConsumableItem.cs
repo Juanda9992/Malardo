@@ -52,7 +52,7 @@ public class ConsumableItem : MonoBehaviour
         {
             if (!ConsumableManager.instance.CanAddConsumable)
             {
-                StartCoroutine(FullSlotAnimation.instance.ShowConsumableAnimation());
+                FullSlotAnimation.instance.ShowConsumableAnimation();
                 return;
             }
             CurrencyManager.instance.RemoveCurrency(buyValue);
