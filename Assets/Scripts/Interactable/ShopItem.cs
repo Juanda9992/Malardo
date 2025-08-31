@@ -28,6 +28,7 @@ public class ShopItem : MonoBehaviour
         {
             PackManager.instance.ReceiveCreatePackInstruction(_itemPack);
         }
+        JokerDescription.instance.SetDescriptionOff();
     }
 
     public void SetPackData(PackData data)
