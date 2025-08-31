@@ -141,7 +141,7 @@ public class BlindManager : MonoBehaviour
         blindEffectText.gameObject.SetActive(true);
         blindEffectText.text = activeBossBlind.blindDescription;
         blindDescriptionText.text = activeBossBlind.blindDescription;
-
+        blindSprite.sprite = activeBossBlind.blindSprite;
         StartCoroutine(nameof(HideBlindText));
     }
     public void ShowInvalidateMessage()
