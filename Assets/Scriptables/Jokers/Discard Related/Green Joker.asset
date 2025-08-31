@@ -22,7 +22,7 @@ MonoBehaviour:
   - triggerEvent: 6
     jokerTrigger: []
     jokerEffect:
-    - {fileID: 11400000, guid: 35f26d124bbcfd94f88c190e9853da6d, type: 2}
+    - {fileID: 11400000, guid: 2bcc5600fdcaa454ab3e04d56697adba, type: 2}
   - triggerEvent: 7
     jokerTrigger: []
     jokerEffect:

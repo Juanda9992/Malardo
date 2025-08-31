@@ -18,11 +18,7 @@ MonoBehaviour:
   overrideEffect: 0
   shopValue: 7
   jokerRarity: 1
-  jokerLogics:
-  - jokerTrigger: []
-    jokerEffect: []
-  triggers: []
-  effects: []
+  jokerLogics: []
   OnSetUpJoker:
   - {fileID: 11400000, guid: afcde6d1ca2eacf418bba0ded77e6629, type: 2}
   OnSellEffect:
