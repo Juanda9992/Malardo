@@ -9,9 +9,7 @@ public class JokerDescription : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI nameText, descriptionText;
     [SerializeField] private float cardDescriptionOffsetY;
-    [SerializeField] private Image rarityBgColor;
-    [SerializeField] private TextMeshProUGUI rarityText;
-    [SerializeField] private GameObject rarityObj;
+    [SerializeField] private ExtraTagContainer[] extraTags;
     void Awake()
     {
         instance = this;
@@ -36,44 +34,56 @@ public class JokerDescription : MonoBehaviour
     {
         if (card_Data.currentCard.cardType == CardType.Default)
         {
-            SetDescriptionRarity(DescriptionType.None);
-            return;
+            SetDescriptionRarity(extraTags[0], DescriptionType.None);
         }
 
         switch (card_Data.currentCard.cardType)
         {
             case CardType.Glass:
                 descriptionText.text += '\n' + "<style=Mult>X2 Mult</style> \n 1 in 4 chance to destroy card";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Glass Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Glass Card");
                 break;
 
             case CardType.Stone:
                 descriptionText.text += '\n' + "no rank or suit";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Stone Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Stone Card");
                 break;
             case CardType.Lucky:
                 descriptionText.text += '\n' + "1 in 5 chance \n for <style=Mult>+20 mult</style>\n1 in 15 chance \n to win <style=Cash>$20</style> ";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Lucky Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Lucky Card");
                 break;
             case CardType.Silver:
                 descriptionText.text += '\n' + "<style=Mult>X1.5 Mult</style> \n while this card \n stays in hand";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Silver Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Silver Card");
                 break;
             case CardType.Gold:
                 descriptionText.text += '\n' + "<style=Cash>$3</style> if this \n card is held in hand \n at the end of the round";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Gold Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Gold Card");
                 break;
             case CardType.Bonus:
                 descriptionText.text += '\n' + "<style=Chips>+30</style> Extra Chips";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Bonus Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Bonus Card");
                 break;
             case CardType.Mult:
                 descriptionText.text += '\n' + "<style=Mult>+4</style> Mult";
-                SetDescriptionRarity(DescriptionType.Special_Card, "Mult Card");
+                SetDescriptionRarity(extraTags[0], DescriptionType.Special_Card, "Mult Card");
                 break;
+        }
 
-
-
+        switch (card_Data.currentCard.cardSeal)
+        {
+            case Seal.None:
+                SetDescriptionRarity(extraTags[1], DescriptionType.None);
+                break;
+            case Seal.Red:
+                SetDescriptionRarity(extraTags[1], DescriptionType.Voucher, "Red Seal");
+                break;
+            case Seal.Blue:
+                SetDescriptionRarity(extraTags[1], DescriptionType.Common, "Blue Seal");
+                break;
+            case Seal.Gold:
+                SetDescriptionRarity(extraTags[1], DescriptionType.Gold_Seal, "Gold Seal");
+                break;
         }
     }
 
@@ -84,7 +94,7 @@ public class JokerDescription : MonoBehaviour
         transform.position = itemPosition;
         transform.localScale = Vector2.one;
 
-        SetDescriptionRarity(descriptionType);
+        SetDescriptionRarity(extraTags[0],descriptionType);
 
         StartCoroutine("ForceRebuildDesc");
     }
@@ -95,33 +105,41 @@ public class JokerDescription : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
 
     }
-    private void SetDescriptionRarity(DescriptionType descriptionType, string auxText = "")
+
+    private void SetDescriptionRarity(ExtraTagContainer extraTagContainer, DescriptionType descriptionType, string auxText = "")
     {
+        extraTags[0].extraTagObj.SetActive(false);
+        extraTags[1].extraTagObj.SetActive(false);
         if (descriptionType == DescriptionType.None)
         {
-            rarityObj.SetActive(false);
+            extraTagContainer.extraTagObj.SetActive(false);
             return;
         }
 
 
-        rarityObj.SetActive(true);
+        extraTagContainer.extraTagObj.SetActive(true);
         DescriptionColor descriptionColor = DatabaseManager.instance.cardColorDatabase.descriptionColors.Find(x => x.descriptionType == descriptionType);
 
-        rarityBgColor.color = descriptionColor.instanceColor;
+        extraTagContainer.extraTagBg.color = descriptionColor.instanceColor;
         if (auxText != string.Empty)
         {
-            rarityText.text = auxText;
+            extraTagContainer.extraTagText.text = auxText;
 
         }
         else
         {
-            rarityText.text = descriptionColor.descriptionType.ToString();
+            extraTagContainer.extraTagText.text = descriptionColor.descriptionType.ToString();
         }
     }
-
-
 }
 
+[System.Serializable]
+public class ExtraTagContainer
+{
+    public GameObject extraTagObj;
+    public TextMeshProUGUI extraTagText;
+    public Image extraTagBg;
+}
 public enum DescriptionType
 {
     None = -1,
@@ -134,5 +152,6 @@ public enum DescriptionType
     Tarot = 6,
     Spectral = 7,
     Voucher = 8,
-    Special_Card = 9
+    Special_Card = 9,
+    Gold_Seal = 10,
 }
