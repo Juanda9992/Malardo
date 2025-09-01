@@ -44,20 +44,24 @@ public class JokerDescription : MonoBehaviour
         {
             case CardType.Glass:
                 descriptionText.text += '\n' + "<style=Mult>X2 Mult</style> \n 1 in 4 chance to destroy card";
-                SetDescriptionRarity(DescriptionType.Glass_Card, true);
+                SetDescriptionRarity(DescriptionType.Special_Card, "Glass Card");
                 break;
 
             case CardType.Stone:
                 descriptionText.text += '\n' + "no rank or suit";
-                SetDescriptionRarity(DescriptionType.Stone, true);
+                SetDescriptionRarity(DescriptionType.Special_Card, "Stone Card");
                 break;
             case CardType.Lucky:
                 descriptionText.text += '\n' + "1 in 5 chance \n for +4 mult \n1 in 15 chance \n to win $20 ";
-                SetDescriptionRarity(DescriptionType.Lucky_Card, true);
+                SetDescriptionRarity(DescriptionType.Special_Card, "Lucky Card");
                 break;
             case CardType.Silver:
                 descriptionText.text += '\n' + "<style=Mult>X1.5 Mult</style> \n while this card \n stays in hand";
-                SetDescriptionRarity(DescriptionType.Steel_Card, true);
+                SetDescriptionRarity(DescriptionType.Special_Card, "Silver Card");
+                break;
+            case CardType.Gold:
+                descriptionText.text += '\n' + "<style=Cash>$3</style> if this \n card is held in hand \n at the end of the round";
+                SetDescriptionRarity(DescriptionType.Special_Card, "Gold Card");
                 break;
 
 
@@ -83,7 +87,7 @@ public class JokerDescription : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
 
     }
-    private void SetDescriptionRarity(DescriptionType descriptionType, bool useAuxText = false)
+    private void SetDescriptionRarity(DescriptionType descriptionType, string auxText = "")
     {
         if (descriptionType == DescriptionType.None)
         {
@@ -96,9 +100,9 @@ public class JokerDescription : MonoBehaviour
         DescriptionColor descriptionColor = DatabaseManager.instance.cardColorDatabase.descriptionColors.Find(x => x.descriptionType == descriptionType);
 
         rarityBgColor.color = descriptionColor.instanceColor;
-        if (useAuxText)
+        if (auxText != string.Empty)
         {
-            rarityText.text = descriptionColor.auxText;
+            rarityText.text = auxText;
 
         }
         else
@@ -122,8 +126,5 @@ public enum DescriptionType
     Tarot = 6,
     Spectral = 7,
     Voucher = 8,
-    Glass_Card = 9,
-    Stone = 10,
-    Lucky_Card = 11,
-    Steel_Card =12,
+    Special_Card = 9
 }

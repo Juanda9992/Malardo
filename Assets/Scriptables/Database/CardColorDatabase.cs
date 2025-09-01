@@ -28,7 +28,6 @@ public class DescriptionColor
 {
     public DescriptionType descriptionType;
     public Color instanceColor;
-    public string auxText;
     public static DescriptionType GetTypeByjokerRarity(JokerInstance jokerInstance)
     {
         if (jokerInstance.data.jokerRarity == JokerRarity.Common)
