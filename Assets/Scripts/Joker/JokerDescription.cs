@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,8 +40,15 @@ public class JokerDescription : MonoBehaviour
 
         SetDescriptionRarity(descriptionType);
 
+        StartCoroutine("ForceRebuildDesc");
     }
+    private IEnumerator ForceRebuildDesc()
+    {
+        descriptionText.gameObject.SetActive(false);
+        yield return new WaitForEndOfFrame();
+        descriptionText.gameObject.SetActive(true);
 
+    }
     private void SetDescriptionRarity(DescriptionType descriptionType)
     {
         if (descriptionType == DescriptionType.None)

@@ -19,7 +19,6 @@ public class GiveMultByJoker : JokerEffect
     }
     public override void UpdateDescription(JokerInstance instance)
     {
-        Debug.Log(instance.jokerDescription.Replace("_R_", Calculate().ToString()));
         instance.jokerDescription = instance.data.description.Replace("_R_", Calculate().ToString());
     }
 
