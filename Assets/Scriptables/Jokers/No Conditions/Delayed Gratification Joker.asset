@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
   m_Name: Delayed Gratification Joker
   m_EditorClassIdentifier: 
-  jokerName: Delyaed Gratification
+  jokerName: Delayed Gratification
   description: Earn <style="Cash">$2</style> per discard if no discards are used
     by end of the round.
   triggerMessage: $0

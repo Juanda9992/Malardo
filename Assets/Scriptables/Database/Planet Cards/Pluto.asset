@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pluto
   m_EditorClassIdentifier: 
   cardName: Pluto
-  cardDescription: +1 Mult and +10 Chips
+  cardDescription: '<style="Mult">+1 mult</style> and <style="Chips">+10 chips</style> '
   handType: 0

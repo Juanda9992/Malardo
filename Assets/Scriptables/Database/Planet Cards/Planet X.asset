@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Planet X
   m_EditorClassIdentifier: 
   cardName: Planet X
-  cardDescription: +3 Mult and +35 Chips
+  cardDescription: '<style="Mult">+3 mult</style> and <style="Chips">+35 chips</style> '
   handType: 8

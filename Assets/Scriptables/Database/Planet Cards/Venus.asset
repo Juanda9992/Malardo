@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Venus
   m_EditorClassIdentifier: 
   cardName: Venus
-  cardDescription: +2 Mult and +20 Chips
+  cardDescription: '<style="Mult">+2 mult</style> and <style="Chips">+20 chips</style> '
   handType: 3

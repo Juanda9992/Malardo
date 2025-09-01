@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Saturn
   m_EditorClassIdentifier: 
   cardName: Saturn
-  cardDescription: +3 Mult and +30 Chips
+  cardDescription: '<style="Mult">+3 mult</style> and <style="Chips">+30 chips</style> '
   handType: 4

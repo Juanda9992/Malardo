@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Eris
   m_EditorClassIdentifier: 
   cardName: Eris
-  cardDescription: +16 Mult and +160 Chips
+  cardDescription: '<style="Mult">+16 mult</style> and <style="Chips">+160 chips</style> '
   handType: 11

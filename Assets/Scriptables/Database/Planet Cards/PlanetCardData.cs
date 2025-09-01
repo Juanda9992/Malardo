@@ -3,6 +3,6 @@ using UnityEngine;
 public class PlanetCardData : ScriptableObject
 {
     public string cardName;
-    public string cardDescription;
+    [TextArea] public string cardDescription;
     public HandType handType;
 }

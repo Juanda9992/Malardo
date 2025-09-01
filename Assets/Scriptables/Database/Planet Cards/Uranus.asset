@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Uranus
   m_EditorClassIdentifier: 
   cardName: Uranus
-  cardDescription: +1 Mult and +20 Chips
+  cardDescription: '<style="Mult">+1 mult</style> and <style="Chips">+20 chips</style> '
   handType: 2

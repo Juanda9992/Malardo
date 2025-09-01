@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Neptune
   m_EditorClassIdentifier: 
   cardName: Neptune
-  cardDescription: +4 Mult and +40 Chips
+  cardDescription: '<style="Mult">+4 mult</style> and <style="Chips">+40 chips</style> '
   handType: 9

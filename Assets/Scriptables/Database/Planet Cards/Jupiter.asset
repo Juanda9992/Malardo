@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Jupiter
   m_EditorClassIdentifier: 
   cardName: Jupiter
-  cardDescription: +2 Mult and +15 Chips
+  cardDescription: '<style="Mult">+2 mult</style> and <style="Chips">+15 chips</style> '
   handType: 5
