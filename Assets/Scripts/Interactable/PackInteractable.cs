@@ -16,9 +16,31 @@ public class PackInteractable : MonoBehaviour
     {
         jokerData = createdJoker.data;
         itemType = PackType.Buffon;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description,GetTypeByjokerRarity(createdJoker));
         cardName.text = createdJoker.data.jokerName;
         ListenForAvaliability();
+    }
+
+    public DescriptionType GetTypeByjokerRarity(JokerInstance jokerInstance)
+    {
+        if (jokerInstance.data.jokerRarity == JokerRarity.Common)
+        {
+            return DescriptionType.Common;
+        }
+        else if (jokerInstance.data.jokerRarity == JokerRarity.Uncommon)
+        {
+            return DescriptionType.Uncommon;
+        }
+        else if (jokerInstance.data.jokerRarity == JokerRarity.Rare)
+        {
+            return DescriptionType.Rare;
+        }
+        else if (jokerInstance.data.jokerRarity == JokerRarity.Legendary)
+        {
+            return DescriptionType.Legendary;
+        }
+
+        return DescriptionType.None;
     }
 
     public void SetPackCard()
@@ -28,7 +50,7 @@ public class PackInteractable : MonoBehaviour
         createdCard = createdCard.GenerateRandomCard();
 
         GetComponent<CardVisuals>().SetVisuals(createdCard);
-        GetComponent<DescriptionContainer>().SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips");
+        GetComponent<DescriptionContainer>().SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips", DescriptionType.None);
     }
 
     public void SetPlanetCard(PlanetCardData planetCardData)
@@ -39,7 +61,7 @@ public class PackInteractable : MonoBehaviour
         PokerHandLevelData pokerHand = PokerHandLevelStorage.instance.GetHandData(_planetCardData.handType);
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         cardName.text = planetCardData.cardName;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
     }
 
     public void ListenForAvaliability()

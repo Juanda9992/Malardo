@@ -31,7 +31,7 @@ public class ConsumableItem : MonoBehaviour
 
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         textDescription.text = planetCardData.cardName;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
 
         SetPrice();
         SetUpButtons();

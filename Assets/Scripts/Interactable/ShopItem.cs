@@ -33,7 +33,7 @@ public class ShopItem : MonoBehaviour
 
     public void SetPackData(PackData data)
     {
-        GetComponent<DescriptionContainer>().SetNameAndDescription(data.packName, data.packDescription);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(data.packName, data.packDescription, DescriptionType.Booster);
 
         ammountRequired = data.packCost;
         if (data.packType == PackType.Planet)
