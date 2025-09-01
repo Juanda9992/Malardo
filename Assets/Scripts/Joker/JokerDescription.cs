@@ -28,7 +28,26 @@ public class JokerDescription : MonoBehaviour
         transform.localScale = Vector2.one;
         transform.position = (Vector2)card_Data.transform.position + new Vector2(0, cardDescriptionOffsetY);
         descriptionText.text = $"+{card_Data.currentCard.chipAmmount} chips";
-        SetDescriptionRarity(DescriptionType.None);
+        SetCardData(card_Data);
+        StartCoroutine("ForceRebuildDesc");
+    }
+
+    private void SetCardData(Card_Data card_Data)
+    {
+        if (card_Data.currentCard.cardType == CardType.Default)
+        {
+            SetDescriptionRarity(DescriptionType.None);
+            return;
+        }
+
+        switch (card_Data.currentCard.cardType)
+        {
+            case CardType.Glass:
+                descriptionText.text += '\n' + "1 in 4 chance to destroy card";
+                SetDescriptionRarity(DescriptionType.Glass_Card,true);
+                break;
+
+        }
     }
 
     public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType)
@@ -49,7 +68,7 @@ public class JokerDescription : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
 
     }
-    private void SetDescriptionRarity(DescriptionType descriptionType)
+    private void SetDescriptionRarity(DescriptionType descriptionType,bool useAuxText = false)
     {
         if (descriptionType == DescriptionType.None)
         {
@@ -62,7 +81,15 @@ public class JokerDescription : MonoBehaviour
         DescriptionColor descriptionColor = DatabaseManager.instance.cardColorDatabase.descriptionColors.Find(x => x.descriptionType == descriptionType);
 
         rarityBgColor.color = descriptionColor.instanceColor;
-        rarityText.text = descriptionColor.descriptionType.ToString();
+        if (useAuxText)
+        {
+            rarityText.text = descriptionColor.auxText;
+
+        }
+        else
+        {
+            rarityText.text = descriptionColor.descriptionType.ToString();
+        }
     }
 
 
@@ -79,5 +106,6 @@ public enum DescriptionType
     Planet = 5,
     Tarot = 6,
     Spectral = 7,
-    Voucher = 8
+    Voucher = 8,
+    Glass_Card = 9
 }
