@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stone Joker
   m_EditorClassIdentifier: 
   jokerName: Stone Joker
-  description: 'Gives +25 Chips for each Stone Card in your full deck (Current: _R_)'
+  description: 'Gives <style="Chips">+25 chips</style> for each Stone Card in your
+    full deck (Current: <style="Chips">+_R_ chips</style>).'
   triggerMessage: 
   overrideEffect: 25
   shopValue: 6

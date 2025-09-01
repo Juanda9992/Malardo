@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Devious Joker
   m_EditorClassIdentifier: 
   jokerName: Devious Joker
-  description: +100 Chips if played hand contains a Straight
+  description: <style="Chips">+100 chips</style> if played hand contains a <style="Cash">Straight</style>.
   triggerMessage: +100 Chips
   overrideEffect: 100
   shopValue: 4

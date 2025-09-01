@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokerName: Hologram
   description: This Joker gains X0.25 Mult every time a playing card is added to
-    your deck (Currently X_R_ Mult)
+    your deck (Currently <style="Mult">X_R_ mult</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 7

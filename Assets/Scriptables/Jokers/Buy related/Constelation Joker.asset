@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Constelation Joker
   m_EditorClassIdentifier: 
   jokerName: Constelation
-  description: This Joker gains X0.1 Mult every time a Planet card is used (Currently
-    X_R_ Mult)
+  description: This Joker gains <style="Mult">X0.1 mult</style> every time a Planet
+    card is used (Currently <style="Mult">_R_ mult</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trading Card Joker
   m_EditorClassIdentifier: 
   jokerName: Trading Card
-  description: If first discard of round has only 1 card, destroy it and earn $3
+  description: 'If first discard of round has only 1 card, destroy it and earn <style="Cash">$3t</style> '
   triggerMessage: $3
   overrideEffect: 3
   shopValue: 6

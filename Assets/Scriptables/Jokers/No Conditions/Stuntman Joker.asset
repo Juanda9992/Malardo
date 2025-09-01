@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stuntman Joker
   m_EditorClassIdentifier: 
   jokerName: Stuntman
-  description: +250 Chips, -2 hand size
+  description: <style="Chips">+250 chips</style> , -2 hand size
   triggerMessage: +250
   overrideEffect: 250
   shopValue: 7

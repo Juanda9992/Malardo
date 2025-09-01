@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Card Sharp Joker
   m_EditorClassIdentifier: 
   jokerName: Card Sharp
-  description: X3 Mult if played poker hand has already been played this round
+  description: <style="Mult">X3 mult</style> if played poker hand has already been
+    played this round
   triggerMessage: X3
   overrideEffect: 3
   shopValue: 6

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baron
   m_EditorClassIdentifier: 
   jokerName: Baron
-  description: Each King held in hand gives X1.5 Mult
+  description: Each King held in hand gives <style="Mult">X1.5 mult</style>.
   triggerMessage: X3
   overrideEffect: 0
   shopValue: 8

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Order
   m_EditorClassIdentifier: 
   jokerName: The Order
-  description: X3 Mult if played hand contains a Straight
+  description: '<style="Mult">X3 mult</style> if played hand contains a <style="Cash">Straightt</style> '
   triggerMessage: x3
   overrideEffect: 3
   shopValue: 8

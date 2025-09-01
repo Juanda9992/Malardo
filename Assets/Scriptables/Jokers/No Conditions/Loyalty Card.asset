@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Loyalty Card
   m_EditorClassIdentifier: 
   jokerName: Loyalty Card
-  description: X4 Mult every 6 hands played (_R_ Remaining)
+  description: <style="Mult">X4 mult</style> every 6 hands played (_R_ Remaining)
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

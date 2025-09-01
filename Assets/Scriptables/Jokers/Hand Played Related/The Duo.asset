@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Duo
   m_EditorClassIdentifier: 
   jokerName: The Duo
-  description: X2 Mult if played hand contains a Pair
+  description: '<style="Mult">X2 mult</style> if played hand contains a <style="Cash">Pairt</style> '
   triggerMessage: x2
   overrideEffect: 2
   shopValue: 8

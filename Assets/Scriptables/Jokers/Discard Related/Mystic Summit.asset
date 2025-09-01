@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mystic Summit
   m_EditorClassIdentifier: 
   jokerName: Mystic Summit
-  description: +15 Mult when 0 discards remaining
+  description: <style="Mult">+15 mult</style> when <style="Mult">0 discards</style>
+    remaining
   triggerMessage: +15
   overrideEffect: 15
   shopValue: 5

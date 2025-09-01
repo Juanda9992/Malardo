@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Acrobat Joker
   m_EditorClassIdentifier: 
   jokerName: Acrobat
-  description: X3 Mult on final hand of round
+  description: <style="Mult">X3 mult</style> on final hand of round.
   triggerMessage: X3
   overrideEffect: 3
   shopValue: 6

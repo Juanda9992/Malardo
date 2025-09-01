@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scary Face
   m_EditorClassIdentifier: 
   jokerName: Scary Face
-  description: Played face cards give +30 Chips when scored
+  description: Played face cards give <style="Mult">+30 chips</style> when scored.
   triggerMessage: +30
   overrideEffect: 30
   shopValue: 4

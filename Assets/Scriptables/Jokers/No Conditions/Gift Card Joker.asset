@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Gift Card Joker
   m_EditorClassIdentifier: 
   jokerName: Gift Card
-  description: Add $1 of sell value to every Joker and Consumable card at end of
-    round
+  description: Add $<style="Cash">$1</style> of sell value to every Joker and Consumable
+    card at end of round.
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

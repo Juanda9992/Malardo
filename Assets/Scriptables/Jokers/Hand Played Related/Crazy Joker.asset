@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crazy Joker
   m_EditorClassIdentifier: 
   jokerName: Crazy joker
-  description: +12 Mult if played hand contains a Straight
+  description: <style="Mult">+12 mult</style> if played hand contains a <style="Cash">Straight</style>.
   triggerMessage: +12
   overrideEffect: 12
   shopValue: 4

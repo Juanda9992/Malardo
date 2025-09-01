@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Troubadour
   m_EditorClassIdentifier: 
   jokerName: Troubadour
-  description: +2 hand size, -1 hand per round
+  description: '+2 hand size
+
+    <style="Chips">-1 handmult</style> per round'
   triggerMessage: +2 Hand Size - 1 Hand
   overrideEffect: 0
   shopValue: 6

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Spare Trousers Joker
   m_EditorClassIdentifier: 
   jokerName: Spare Trousers
-  description: This Joker gains +2 Mult if played hand contains a Two Pair (Currently
-    +_R_ Mult)
+  description: This Joker gains <style="Mult">+2 mult</style> if played hand contains
+    a <style="Cash">Two Pair</style> (Currently <style="Mult">+_R_ mult</style> )
   triggerMessage: +4 Mult
   overrideEffect: 0
   shopValue: 6

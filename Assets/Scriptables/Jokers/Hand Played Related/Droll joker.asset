@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Droll joker
   m_EditorClassIdentifier: 
   jokerName: Zany Joker
-  description: +10 Mult if played hand contains a Flush
+  description: <style="Mult">+10 mult</style> if played hand contains a <style="Cash">Flush</style>.
   triggerMessage: +10
   overrideEffect: 10
   shopValue: 4

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Green Joker
   m_EditorClassIdentifier: 
   jokerName: Green Joker
-  description: +1 Mult per hand played -1 Mult per discard (Currently +_R_ Mult)
+  description: <style="Mult">+1 mult</style> per <style="Chips">hand</style> played
+    <style="Mult">-1 mult</style> per <style="Mult">discard</style> (Currently <style="Mult">+_R_
+    mult</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 4

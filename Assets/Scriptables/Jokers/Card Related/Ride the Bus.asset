@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ride the Bus
   m_EditorClassIdentifier: 
   jokerName: Ride the Bus
-  description: This Joker gains +1 Mult per consecutive hand played without a scoring
-    face card (Currently +_R_ Mult)
+  description: This Joker gains <style="Mult">+1 mult</style> per consecutive hand
+    played without a scoring face card (Currently <style="Mult">+_R_ mult</style>
+    )
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Wily Joker
   m_EditorClassIdentifier: 
   jokerName: Wily Joker
-  description: +100 Chips if played hand contains a Three of a Kind
+  description: '<style="Chips">+100 chips</style> if played hand contains a <style="Cash">Three
+    of a Kind</style> '
   triggerMessage: +100 Chips
   overrideEffect: 100
   shopValue: 4

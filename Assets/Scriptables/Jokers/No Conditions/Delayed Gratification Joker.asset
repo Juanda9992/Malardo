@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Delayed Gratification Joker
   m_EditorClassIdentifier: 
   jokerName: Delyaed Gratification
-  description: Earn $2 per discard if no discards are used by end of the round
+  description: Earn <style="Cash">$2</style> per discard if no discards are used
+    by end of the round.
   triggerMessage: $0
   overrideEffect: 2
   shopValue: 4

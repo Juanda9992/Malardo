@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Clever Joker
   m_EditorClassIdentifier: 
   jokerName: Clever Joker
-  description: +80 Chips if played hand contains a Two Pair
+  description: <style="Chips">+80</style> if played hand contains a <style="Cash">Two
+    Pair</style>.
   triggerMessage: +80 Chips
   overrideEffect: 80
   shopValue: 4

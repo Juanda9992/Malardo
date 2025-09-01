@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: The Hiker
   m_EditorClassIdentifier: 
   jokerName: The Hiker
-  description: Every played card permanently gains +5 Chips when scored
+  description: Every played card permanently gains <style="Chips">+5 chips</style>
+    when scored
   triggerMessage: +5
   overrideEffect: 5
   shopValue: 5

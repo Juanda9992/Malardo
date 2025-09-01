@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Egg Joker
   m_EditorClassIdentifier: 
   jokerName: Egg
-  description: Gains $3 of sell value at end of round
+  description: Gains <style="Cash">$3</style> of sell value at end of round.
   triggerMessage: 
   overrideEffect: 0
   shopValue: 4

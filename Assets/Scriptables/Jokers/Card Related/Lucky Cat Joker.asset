@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Lucky Cat Joker
   m_EditorClassIdentifier: 
   jokerName: Lucky Cat
-  description: This Joker gains X0.25 Mult every time a Lucky card successfully triggers
-    (Currently X_R_ Mult)
+  description: This Joker gains <style="Mult">X0.25 mult</style> every time a Lucky
+    card successfully triggers (Currently <style="Mult">X_R_</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

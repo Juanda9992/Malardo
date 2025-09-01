@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Merry Andy
   m_EditorClassIdentifier: 
   jokerName: Merry Andy
-  description: +3 discards each round, -1 hand size
+  description: <style="Mult">+3 discards</style> each round, -1 hand size
   triggerMessage: +3 DIscards - 1 Hand Size
   overrideEffect: 0
   shopValue: 7

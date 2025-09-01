@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Glass Joker
   m_EditorClassIdentifier: 
   jokerName: Glass Joker
-  description: This Joker gains X0.75 Mult for every Glass Card that is destroyed
-    (Currently X_R_ Mult)
+  description: This Joker gains <style="Mult">X0.75 mult</style> for every Glass
+    Card that is destroyed (Currently <style="Mult">X_R_ mult</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

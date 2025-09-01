@@ -4,7 +4,7 @@ using UnityEngine;
 public class JokerData : ScriptableObject
 {
     public string jokerName;
-    public string description;
+    [TextArea]public string description;
     public string triggerMessage;
     public float overrideEffect = 0;
     public int shopValue;

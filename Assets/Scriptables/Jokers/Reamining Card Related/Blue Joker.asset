@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Blue Joker
   m_EditorClassIdentifier: 
   jokerName: Blue Joker
-  description: '+2 Chips for each remaining card in deck (Current: _R_)'
+  description: '<style="Chips">+2 chips</style>for each remaining card in deck (Current:
+    <style="Chips">_R_ chips</style>).'
   triggerMessage: 
   overrideEffect: 2
   shopValue: 5

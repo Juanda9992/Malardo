@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Seeing Double
   m_EditorClassIdentifier: 
   jokerName: Seeing Double
-  description: X2 Mult if played hand has a scoring  Club card and a scoring card
-    of any other suit
+  description: <style="Mult">X2 mult</style>  if played hand has a scoring Club card
+    and a scoring card of any other suit
   triggerMessage: x2
   overrideEffect: 2
   shopValue: 6

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Cavendish
   m_EditorClassIdentifier: 
   jokerName: Cavendish
-  description: X3 Mult 1 in 1000 chance this card is destroyed at the end of round
+  description: "<style=\"Mult\">X3 mult</style> \n1 in 1000 chance this card is destroyed
+    at the end of round"
   triggerMessage: x3
   overrideEffect: 3
   shopValue: 4
@@ -22,8 +23,11 @@ MonoBehaviour:
   - triggerEvent: 3
     jokerTrigger: []
     jokerEffect:
-    - {fileID: 11400000, guid: 3a022d71740d4714db7bb145221f3a77, type: 2}
     - {fileID: 11400000, guid: af00c4ae7b5cd564db3b34d21a4b3e4e, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 3a022d71740d4714db7bb145221f3a77, type: 2}
   OnSetUpJoker: []
   OnSellEffect: []
   reactivationJoker: {fileID: 0}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GreedyJoker
   m_EditorClassIdentifier: 
   jokerName: Greedy Joker
-  description: Played cards with  Diamond suit give +3 Mult when scored
+  description: Played cards with Diamond suit give <style="Mult">+3 mult</style>
+    when scored
   triggerMessage: +3
   overrideEffect: 3
   shopValue: 5

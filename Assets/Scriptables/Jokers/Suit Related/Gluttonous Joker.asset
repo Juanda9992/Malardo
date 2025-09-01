@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Gluttonous Joker
   m_EditorClassIdentifier: 
   jokerName: Gluttonous Joker
-  description: Played cards with Club suit give +3 Mult when scored
+  description: Played cards with Club suit give <style="Mult">+3 mult</style> when
+    scored.
   triggerMessage: +3
   overrideEffect: 3
   shopValue: 5

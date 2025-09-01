@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Matador Joker
   m_EditorClassIdentifier: 
   jokerName: Matador
-  description: Earn $8 when the boss blind is selected.
+  description: Earn <style="Cash">$8</style> when the boss blind is selected.
   triggerMessage: $8
   overrideEffect: 8
   shopValue: 7

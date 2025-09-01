@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PopCorn Joker
   m_EditorClassIdentifier: 
   jokerName: PopCorn
-  description: +_R_ Mult -4 Mult per round played
+  description: "<style=\"Mult\">+_R_ mult</style> \n<style=\"Mult\">-4 mult</style> 
+    per round played"
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Zany Joker
   m_EditorClassIdentifier: 
   jokerName: Zany Joker
-  description: +12 Mult if played hand contains a Three of a Kind
+  description: '<style="Mult">+12 mult</style> if played hand contains a <style="Cash">Three
+    of a Kindt</style> '
   triggerMessage: +12
   overrideEffect: 12
   shopValue: 4

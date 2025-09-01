@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Burglar Joker
   m_EditorClassIdentifier: 
   jokerName: Burglar
-  description: When Blind is selected, gain +3 Hands and lose all discards
+  description: When Blind is selected, gain <style="Chips">+3 hands</style> and lose
+    all <style="Mult">discards</style>.
   triggerMessage: +3 Hands 0 Discards
   overrideEffect: 0
   shopValue: 6

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Erosion Joker
   m_EditorClassIdentifier: 
   jokerName: Erosion
-  description: '+4 Mult for each card below [the deck''s starting size] in your full
-    deck (Current: _R_)'
+  description: '<style="Mult">+4 mult</style>.for each card below [the deck''s starting
+    size] in your full deck (Current: <style="Mult">_R_ mult</style>).'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6

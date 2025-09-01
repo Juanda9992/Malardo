@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wee Joker
   m_EditorClassIdentifier: 
   jokerName: Wee Joker
-  description: This Joker gains +8 Chips when each played 2 is scored (Currently
-    +_R_ Chips)
+  description: This Joker gains <style="Chips">+8 chips</style> when each played
+    2 is scored (Currently <style="Chips">+_R_ chips</style> )
   triggerMessage: 
   overrideEffect: 0
   shopValue: 8

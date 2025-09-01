@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Wrathful Joker
   m_EditorClassIdentifier: 
   jokerName: Wrathful Joker
-  description: Played cards with Spade suit give +3 Mult when scored
+  description: Played cards with Spade suit give <style="Mult">+3 mult</style>  when
+    scored
   triggerMessage: +3
   overrideEffect: 3
   shopValue: 5

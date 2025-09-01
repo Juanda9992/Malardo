@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shoot the Moon
   m_EditorClassIdentifier: 
   jokerName: Shoot the Moon
-  description: "Each Queen held in hand gives +13 Mult\t"
+  description: "Each Queen held in hand gives <style=\"Mult\">+13 mult</style> \t"
   triggerMessage: +13
   overrideEffect: 0
   shopValue: 5

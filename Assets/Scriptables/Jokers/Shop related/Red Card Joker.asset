@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Red Card Joker
   m_EditorClassIdentifier: 
   jokerName: Red Card
-  description: This Joker gains +3 Mult when any Booster Pack is skipped (Currently
-    +_R_ Mult)
+  description: This Joker gains <style="Mult">+3 mult</style> when any Booster Pack
+    is skipped (Currently <style="Mult">+_R_ mult</style> )
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baseball Card Joker
   m_EditorClassIdentifier: 
   jokerName: Baseball Card Joker
-  description: Uncommon Jokers each give X1.5 Mult
+  description: Uncommon Jokers each give <style="Mult">X1.5 mult</style>.
   triggerMessage: 
   overrideEffect: 1.5
   shopValue: 8

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Misprint
   m_EditorClassIdentifier: 
   jokerName: Misprint
-  description: +0-23 Mult
+  description: '<style="Mult">+0 - 23 mult</style> '
   triggerMessage: +14
   overrideEffect: 0
   shopValue: 4

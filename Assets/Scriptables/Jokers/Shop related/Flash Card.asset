@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Flash Card
   m_EditorClassIdentifier: 
   jokerName: Flash Card
-  description: This Joker gains +2 Mult per reroll in the shop (Currently +_R_ Mult)
+  description: This Joker gains <style="Mult">+2 mult</style> per reroll in the shop
+    (Currently <style="Mult">+_R_ mult</style>).
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

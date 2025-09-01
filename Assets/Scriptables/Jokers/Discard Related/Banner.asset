@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Banner
   m_EditorClassIdentifier: 
   jokerName: Banner
-  description: +30 Chips for each remaining discard
+  description: <style="Chips">+30 Chips</style> for each remaining discard.
   triggerMessage: xxx
   overrideEffect: 30
   shopValue: 5

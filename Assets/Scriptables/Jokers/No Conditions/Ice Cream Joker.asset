@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Ice Cream Joker
   m_EditorClassIdentifier: 
   jokerName: Ice Cream
-  description: +_R_ Chips -5 Chips for every hand played
+  description: '<style="Chips">+_R_chips
+
+    -_R2_ chips</style> for every hand
+    played.'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

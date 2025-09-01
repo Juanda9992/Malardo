@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: To The Moon Joker
   m_EditorClassIdentifier: 
   jokerName: To the Moon
-  description: Earn an extra $1 of interest for every $5 you have at end of round
+  description: Earn an extra <style="Cash">$1</style>  of interest for every <style="Cash">$5</style> 
+    you have at end of round
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

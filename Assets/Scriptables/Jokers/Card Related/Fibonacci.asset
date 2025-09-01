@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fibonacci
   m_EditorClassIdentifier: 
   jokerName: Fibonacci
-  description: Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored
+  description: Each played Ace, 2, 3, 5, or 8 gives <style="Mult">+8 mult</style>
+    when scored.
   triggerMessage: 8
   overrideEffect: 8
   shopValue: 8

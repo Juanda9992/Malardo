@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Raised Fist
   m_EditorClassIdentifier: 
   jokerName: Raised Fist
-  description: Adds double the rank of lowest ranked card held in hand to Mult
+  description: 'Adds double the rank of lowest ranked card held in hand to <style="Mult">Mult</style> '
   triggerMessage: 
   overrideEffect: 0
   shopValue: 5

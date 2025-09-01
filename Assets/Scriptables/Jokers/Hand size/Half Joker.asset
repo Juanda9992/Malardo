@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Half Joker
   m_EditorClassIdentifier: 
   jokerName: Half Joker
-  description: +20 Mult if played hand contains 3 or fewer cards
+  description: <style="Mult">+20 mult</style> if played hand contains 3 or fewer
+    cards
   triggerMessage: +20 Mult
   overrideEffect: 20
   shopValue: 5

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Business Card
   m_EditorClassIdentifier: 
   jokerName: Business Card
-  description: Played face cards have a 1 in 2 chance to give $2 when scored
+  description: Played face cards have a 1 in 2 chance to give <style="Cash">$2 mult</style>
+    when scored
   triggerMessage: $2
   overrideEffect: 2
   shopValue: 4

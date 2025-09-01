@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jolly Joker
   m_EditorClassIdentifier: 
   jokerName: Jolly Joker
-  description: +8 Mult if played hand contains a Pair
+  description: '<style="Mult">+8 mult</style> if played hand contains a <style="Cash">Pair</style> '
   triggerMessage: +8
   overrideEffect: 8
   shopValue: 3

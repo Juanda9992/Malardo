@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crafty Joker
   m_EditorClassIdentifier: 
   jokerName: Crafty Joker
-  description: +80 Chips if played hand contains a Flush
+  description: <style="Chips">+80 chips</style> if played hand contains a <style="Cash">Flush</style>.
   triggerMessage: +80 Chips
   overrideEffect: 80
   shopValue: 4

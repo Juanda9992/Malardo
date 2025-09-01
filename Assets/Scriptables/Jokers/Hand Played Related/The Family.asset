@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: The Family
   m_EditorClassIdentifier: 
   jokerName: The Family
-  description: X4 Mult if played hand contains a Four of a Kind
+  description: '<style="Mult">X4 mult</style> if played hand contains a <style="Cash">Four
+    of a Kind</style> '
   triggerMessage: x4
   overrideEffect: 4
   shopValue: 8

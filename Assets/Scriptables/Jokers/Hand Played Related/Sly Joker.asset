@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sly Joker
   m_EditorClassIdentifier: 
   jokerName: Sly Joker
-  description: +50 Chips if played hand contains a Pair
+  description: '<style="Chips">+50 chips</style> if played hand contains a <style="Cash">Pair</style> '
   triggerMessage: +50 Chips
   overrideEffect: 50
   shopValue: 3

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Supernova Joker
   m_EditorClassIdentifier: 
   jokerName: Supernova
-  description: Adds the number of times poker hand has been played this run to Mult
+  description: 'Adds the number of times <style="Cash">poker hand</style> has been
+    played this run to <style="Mult">mult</style> '
   triggerMessage: +1
   overrideEffect: 0
   shopValue: 5

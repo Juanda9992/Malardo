@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Triboulet
   m_EditorClassIdentifier: 
   jokerName: Triboulet
-  description: Played Kings and Queens each give X2 Mult when scored
+  description: Played Kings and Queens each give <style="Mult">X2 mult</style> when
+    scored
   triggerMessage: X2
   overrideEffect: 2
   shopValue: 0

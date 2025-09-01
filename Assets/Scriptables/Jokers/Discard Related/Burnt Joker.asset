@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Burnt Joker
   m_EditorClassIdentifier: 
   jokerName: Burnt Joker
-  description: Upgrade the level of the first discarded poker hand each round
+  description: Upgrade the level of the first <style="Cash">discarded poker hand</style>
+    each round.
   triggerMessage: UPGRADED
   overrideEffect: 0
   shopValue: 8

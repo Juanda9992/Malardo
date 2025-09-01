@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ramen Joker
   m_EditorClassIdentifier: 
   jokerName: Ramen
-  description: X_R_ Mult, loses X0.01 Mult per card discarded
+  description: "<style=\"Mult\">X_R_ mult</style> \nloses <style=\"Mult\">X0.01 mult</style>
+    per card discarded"
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6
