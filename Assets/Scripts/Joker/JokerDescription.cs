@@ -10,6 +10,9 @@ public class JokerDescription : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText, descriptionText;
     [SerializeField] private float cardDescriptionOffsetY;
     [SerializeField] private ExtraTagContainer[] extraTags;
+
+    [SerializeField] private TextMeshProUGUI editionTitle, editionDescription;
+    [SerializeField] private GameObject editionContainer;
     void Awake()
     {
         instance = this;
@@ -98,6 +101,8 @@ public class JokerDescription : MonoBehaviour
                 SetDescriptionRarity(extraTags[2], DescriptionType.Special_Card, "Polychrome");
                 break;
         }
+
+        SetEditionDescription(card_Data.currentCard.cardEdition);
     }
 
     public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType)
@@ -107,7 +112,7 @@ public class JokerDescription : MonoBehaviour
         transform.position = itemPosition;
         transform.localScale = Vector2.one;
 
-        SetDescriptionRarity(extraTags[0],descriptionType);
+        SetDescriptionRarity(extraTags[0], descriptionType);
 
         StartCoroutine("ForceRebuildDesc");
     }
@@ -121,6 +126,7 @@ public class JokerDescription : MonoBehaviour
 
     private void SetDescriptionRarity(ExtraTagContainer extraTagContainer, DescriptionType descriptionType, string auxText = "")
     {
+        editionContainer.SetActive(false);
         extraTags[0].extraTagBg.gameObject.SetActive(false);
         extraTags[1].extraTagBg.gameObject.SetActive(false);
         extraTags[2].extraTagBg.gameObject.SetActive(false);
@@ -144,6 +150,32 @@ public class JokerDescription : MonoBehaviour
         {
             extraTagContainer.extraTagText.text = descriptionColor.descriptionType.ToString();
         }
+    }
+
+    private void SetEditionDescription(CardEdition cardEdition)
+    {
+        if (cardEdition == CardEdition.Base)
+        {
+            editionContainer.SetActive(false);
+        }
+        if (cardEdition == CardEdition.Foil)
+        {
+            editionDescription.text = "<style=Chips>+50</style> Chips when scored";
+        }
+
+        if (cardEdition == CardEdition.Holographic)
+        {
+            editionDescription.text = "<style=Mult>+10</style> Mult when scored";
+        }
+
+        if (cardEdition == CardEdition.Polychrome)
+        {
+            editionDescription.text = "<style=Mult>X1.5</style> Mult when scored";
+        }
+
+        editionTitle.text = cardEdition.ToString();
+
+        editionContainer.SetActive(true);
     }
 }
 
