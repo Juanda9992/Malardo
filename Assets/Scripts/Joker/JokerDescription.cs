@@ -51,6 +51,10 @@ public class JokerDescription : MonoBehaviour
                 descriptionText.text += '\n' + "no rank or suit";
                 SetDescriptionRarity(DescriptionType.Stone, true);
                 break;
+            case CardType.Lucky:
+                descriptionText.text += '\n' + "1 in 5 chance \n for +4 mult \n1 in 15 chance \n to win $20 ";
+                SetDescriptionRarity(DescriptionType.Lucky_Card, true);
+                break;
 
         }
     }
@@ -113,5 +117,6 @@ public enum DescriptionType
     Spectral = 7,
     Voucher = 8,
     Glass_Card = 9,
-    Stone =10
+    Stone = 10,
+    Lucky_Card=11
 }
