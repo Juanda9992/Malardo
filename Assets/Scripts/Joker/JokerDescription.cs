@@ -44,7 +44,12 @@ public class JokerDescription : MonoBehaviour
         {
             case CardType.Glass:
                 descriptionText.text += '\n' + "1 in 4 chance to destroy card";
-                SetDescriptionRarity(DescriptionType.Glass_Card,true);
+                SetDescriptionRarity(DescriptionType.Glass_Card, true);
+                break;
+
+            case CardType.Stone:
+                descriptionText.text += '\n' + "no rank or suit";
+                SetDescriptionRarity(DescriptionType.Stone, true);
                 break;
 
         }
@@ -68,7 +73,7 @@ public class JokerDescription : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
 
     }
-    private void SetDescriptionRarity(DescriptionType descriptionType,bool useAuxText = false)
+    private void SetDescriptionRarity(DescriptionType descriptionType, bool useAuxText = false)
     {
         if (descriptionType == DescriptionType.None)
         {
@@ -107,5 +112,6 @@ public enum DescriptionType
     Tarot = 6,
     Spectral = 7,
     Voucher = 8,
-    Glass_Card = 9
+    Glass_Card = 9,
+    Stone =10
 }
