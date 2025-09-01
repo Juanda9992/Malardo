@@ -63,6 +63,14 @@ public class JokerDescription : MonoBehaviour
                 descriptionText.text += '\n' + "<style=Cash>$3</style> if this \n card is held in hand \n at the end of the round";
                 SetDescriptionRarity(DescriptionType.Special_Card, "Gold Card");
                 break;
+            case CardType.Bonus:
+                descriptionText.text += '\n' + "<style=Chips>+30</style> Extra Chips";
+                SetDescriptionRarity(DescriptionType.Special_Card, "Bonus Card");
+                break;
+            case CardType.Mult:
+                descriptionText.text += '\n' + "<style=Mult>+4</style> Mult";
+                SetDescriptionRarity(DescriptionType.Special_Card, "Mult Card");
+                break;
 
 
 
