@@ -52,7 +52,7 @@ public class JokerDescription : MonoBehaviour
                 SetDescriptionRarity(DescriptionType.Special_Card, "Stone Card");
                 break;
             case CardType.Lucky:
-                descriptionText.text += '\n' + "1 in 5 chance \n for +4 mult \n1 in 15 chance \n to win $20 ";
+                descriptionText.text += '\n' + "1 in 5 chance \n for <style=Mult>+20 mult</style>\n1 in 15 chance \n to win <style=Cash>$20</style> ";
                 SetDescriptionRarity(DescriptionType.Special_Card, "Lucky Card");
                 break;
             case CardType.Silver:
