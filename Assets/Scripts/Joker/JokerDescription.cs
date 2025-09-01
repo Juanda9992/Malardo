@@ -85,6 +85,19 @@ public class JokerDescription : MonoBehaviour
                 SetDescriptionRarity(extraTags[1], DescriptionType.Gold_Seal, "Gold Seal");
                 break;
         }
+
+        switch (card_Data.currentCard.cardEdition)
+        {
+            case CardEdition.Foil:
+                SetDescriptionRarity(extraTags[2], DescriptionType.Special_Card, "Foil");
+                break;
+            case CardEdition.Holographic:
+                SetDescriptionRarity(extraTags[2], DescriptionType.Special_Card, "Holographic");
+                break;
+            case CardEdition.Polychrome:
+                SetDescriptionRarity(extraTags[2], DescriptionType.Special_Card, "Polychrome");
+                break;
+        }
     }
 
     public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType)
@@ -108,16 +121,17 @@ public class JokerDescription : MonoBehaviour
 
     private void SetDescriptionRarity(ExtraTagContainer extraTagContainer, DescriptionType descriptionType, string auxText = "")
     {
-        extraTags[0].extraTagObj.SetActive(false);
-        extraTags[1].extraTagObj.SetActive(false);
+        extraTags[0].extraTagBg.gameObject.SetActive(false);
+        extraTags[1].extraTagBg.gameObject.SetActive(false);
+        extraTags[2].extraTagBg.gameObject.SetActive(false);
         if (descriptionType == DescriptionType.None)
         {
-            extraTagContainer.extraTagObj.SetActive(false);
+            extraTagContainer.extraTagBg.gameObject.SetActive(false);
             return;
         }
 
 
-        extraTagContainer.extraTagObj.SetActive(true);
+        extraTagContainer.extraTagBg.gameObject.SetActive(true);
         DescriptionColor descriptionColor = DatabaseManager.instance.cardColorDatabase.descriptionColors.Find(x => x.descriptionType == descriptionType);
 
         extraTagContainer.extraTagBg.color = descriptionColor.instanceColor;
@@ -136,7 +150,6 @@ public class JokerDescription : MonoBehaviour
 [System.Serializable]
 public class ExtraTagContainer
 {
-    public GameObject extraTagObj;
     public TextMeshProUGUI extraTagText;
     public Image extraTagBg;
 }
