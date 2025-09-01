@@ -54,6 +54,9 @@ MonoBehaviour:
   - descriptionType: 11
     instanceColor: {r: 0.42745098, g: 0.48235294, b: 0.8745098, a: 1}
     auxText: Lucky Card
+  - descriptionType: 12
+    instanceColor: {r: 0.42745098, g: 0.48235294, b: 0.8745098, a: 1}
+    auxText: Steel Card
   foilColor: {r: 0.41320753, g: 0.6152129, b: 1, a: 0.27450982}
   holographicColor: {r: 1, g: 0.4584905, b: 0.4584905, a: 0.27450982}
   defaultBgColor: {r: 0.09132784, g: 0.381132, b: 0.14566612, a: 0}

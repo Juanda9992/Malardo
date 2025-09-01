@@ -43,7 +43,7 @@ public class JokerDescription : MonoBehaviour
         switch (card_Data.currentCard.cardType)
         {
             case CardType.Glass:
-                descriptionText.text += '\n' + "1 in 4 chance to destroy card";
+                descriptionText.text += '\n' + "<style=Mult>X2 Mult</style> \n 1 in 4 chance to destroy card";
                 SetDescriptionRarity(DescriptionType.Glass_Card, true);
                 break;
 
@@ -55,6 +55,12 @@ public class JokerDescription : MonoBehaviour
                 descriptionText.text += '\n' + "1 in 5 chance \n for +4 mult \n1 in 15 chance \n to win $20 ";
                 SetDescriptionRarity(DescriptionType.Lucky_Card, true);
                 break;
+            case CardType.Silver:
+                descriptionText.text += '\n' + "<style=Mult>X1.5 Mult</style> \n while this card \n stays in hand";
+                SetDescriptionRarity(DescriptionType.Steel_Card, true);
+                break;
+
+
 
         }
     }
@@ -118,5 +124,6 @@ public enum DescriptionType
     Voucher = 8,
     Glass_Card = 9,
     Stone = 10,
-    Lucky_Card=11
+    Lucky_Card = 11,
+    Steel_Card =12,
 }
