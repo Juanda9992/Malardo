@@ -27,7 +27,7 @@ public class JokerDescription : MonoBehaviour
         nameText.text = card_Data.currentCard.cardName;
         transform.localScale = Vector2.one;
         transform.position = (Vector2)card_Data.transform.position + new Vector2(0, cardDescriptionOffsetY);
-        descriptionText.text = $"+{card_Data.currentCard.chipAmmount} chips";
+        descriptionText.text = $"<style=Chips>+{card_Data.currentCard.chipAmmount} </style>chips";
         SetCardData(card_Data);
         StartCoroutine("ForceRebuildDesc");
     }
