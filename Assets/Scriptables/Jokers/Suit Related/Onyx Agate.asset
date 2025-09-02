@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Onyx Agate
   m_EditorClassIdentifier: 
   jokerName: Onyx Agate
-  description: Played cards with Club suit give <style="Mult">+7 mult</style> when
-    scored
+  description: Played cards with <style="Club">Club </style>suit give <style="Mult">+7
+    mult</style> when scored
   triggerMessage: +7
   overrideEffect: 7
   shopValue: 7

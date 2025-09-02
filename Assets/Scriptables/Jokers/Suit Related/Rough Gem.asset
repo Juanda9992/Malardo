@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Rough Gem
   m_EditorClassIdentifier: 
   jokerName: Rough Gem
-  description: Played cards with Diamond suit earn <style="Cash">$1</style> when
-    scored
+  description: Played cards with <style="Diamond">Diamond </style>suit earn <style="Cash">$1</style>
+    when scored
   triggerMessage: $1
   overrideEffect: 1
   shopValue: 7

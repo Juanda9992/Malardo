@@ -143,17 +143,17 @@ MonoBehaviour:
     m_ClosingTagUnicodeArray: 3c0000002f000000630000006f0000006c0000006f000000720000003e0000003c0000002f000000620000003e000000
   - m_Name: Club
     m_HashCode: 2488728
-    m_OpeningDefinition: 
+    m_OpeningDefinition: <color=#074540><b>
     m_ClosingDefinition: 
-    m_OpeningTagArray: 
+    m_OpeningTagArray: 3c000000630000006f0000006c0000006f000000720000003d000000230000003000000037000000340000003500000034000000300000003e0000003c000000620000003e000000
     m_ClosingTagArray: 
-    m_OpeningTagUnicodeArray: 
+    m_OpeningTagUnicodeArray: 3c000000630000006f0000006c0000006f000000720000003d000000230000003000000037000000340000003500000034000000300000003e0000003c000000620000003e000000
     m_ClosingTagUnicodeArray: 
   - m_Name: Normal
     m_HashCode: -1183493901
-    m_OpeningDefinition: 
+    m_OpeningDefinition: </color></b>
     m_ClosingDefinition: 
-    m_OpeningTagArray: 
+    m_OpeningTagArray: 3c0000002f000000630000006f0000006c0000006f000000720000003e0000003c0000002f000000620000003e000000
     m_ClosingTagArray: 
-    m_OpeningTagUnicodeArray: 
+    m_OpeningTagUnicodeArray: 3c0000002f000000630000006f0000006c0000006f000000720000003e0000003c0000002f000000620000003e000000
     m_ClosingTagUnicodeArray: 

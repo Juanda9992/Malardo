@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gros Michel
   m_EditorClassIdentifier: 
   jokerName: Gros Michel
-  description: "<style=\"Mult\">}15 mult</style> \n1 in 6 chance this is destroyed
+  description: "<style=\"Mult\">15 mult</style> \n1 in 6 chance this is destroyed
     at the end of round."
   triggerMessage: +15
   overrideEffect: 15

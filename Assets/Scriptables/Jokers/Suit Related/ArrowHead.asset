@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ArrowHead
   m_EditorClassIdentifier: 
   jokerName: Arrowhead
-  description: Played cards with  Spade suit give <style="Chips">+50 Chips</style>
-    when scored
+  description: Played cards with  <style="Spade">Spade </style>suit give <style="Chips">+50
+    Chips</style> when scored
   triggerMessage: +50
   overrideEffect: 50
   shopValue: 7

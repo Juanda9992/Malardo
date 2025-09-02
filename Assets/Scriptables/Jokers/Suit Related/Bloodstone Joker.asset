@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bloodstone Joker
   m_EditorClassIdentifier: 
   jokerName: Bloodstone
-  description: 1 in 2 chance for played cards with  Heart suit to give <style="Mult">X1.5
-    mult</style> when scored.
+  description: 1 in 2 chance for played cards with  <style="Hearth">Heart </style>suit
+    to give <style="Mult">X1.5 mult</style> when scored.
   triggerMessage: x1.5
   overrideEffect: 1.5
   shopValue: 7
