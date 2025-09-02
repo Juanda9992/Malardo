@@ -30,6 +30,7 @@ public class CardVisuals : MonoBehaviour
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
+        _card.SetCardName();
     }
 
     private void SetCardEdition()
