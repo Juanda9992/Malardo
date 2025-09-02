@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -20,7 +21,9 @@ public class DeckManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        fullMatchDeck = new List<Card>(referenceDeck.allCards);
+        Card[] cards = new Card[referenceDeck.allCards.Count];
+        referenceDeck.allCards.CopyTo(cards);
+        fullMatchDeck = new List<Card>(cards.ToList());
         for (int i = 0; i < fullMatchDeck.Count; i++)
         {
             fullMatchDeck[i].identifier = cardIndex;
