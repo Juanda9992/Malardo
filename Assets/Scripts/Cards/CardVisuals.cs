@@ -117,6 +117,16 @@ public class CardVisuals : MonoBehaviour
         StartCoroutine(FlipCard(() => UpdateCardSuit(suit)));
     }
 
+    public void UpdateCardTypeCoroutineRequest(CardType cardType)
+    {
+        StartCoroutine(FlipCard(() => UpdateCardType(cardType)));
+    }
+
+    private void UpdateCardType(CardType cardType)
+    {
+        _card.cardType = cardType;
+        SetVisuals(_card);
+    }
     private void UpdateCardSuit(Suit suit)
     {
         _card.cardSuit = suit;
@@ -132,9 +142,9 @@ public class CardVisuals : MonoBehaviour
     private IEnumerator FlipCard(Action action)
     {
         yield return transform.DOLocalRotate(Vector3.up * 90, 0.2f);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         action?.Invoke();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         yield return transform.DOLocalRotate(Vector3.up * 0, 0.2f);
     }
 
