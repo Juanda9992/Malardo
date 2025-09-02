@@ -11,11 +11,17 @@ public class TarotCardData : ScriptableObject
     public CardEffect cardEffect;
 }
 
-[CreateAssetMenu(fileName = "Tarot Card Effect",menuName = "Scriptables/Tarot Card/Effect")]
+[CreateAssetMenu(fileName = "Tarot Card Effect", menuName = "Scriptables/Tarot Card/Effect")]
 public class CardEffect : ScriptableObject
 {
     public virtual void ApplyEffect()
     {
         Debug.Log("Applied");
+    }
+
+    [ContextMenu("Apply Effect")]
+    protected void TestEffect()
+    {
+        ApplyEffect();
     }
 }
