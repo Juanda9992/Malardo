@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ConsumableItem : MonoBehaviour
 {
     public PlanetCardData planetCardData;
+    public TarotCardData tarotCardData;
     public bool isOnShop = false;
 
     [SerializeField] private Button bottomButton;
@@ -36,6 +37,17 @@ public class ConsumableItem : MonoBehaviour
         SetPrice();
         SetUpButtons();
     }
+
+    public void SetTarotData(TarotCardData _tarotCardData)
+    {
+        tarotCardData = _tarotCardData;
+
+        textDescription.text = tarotCardData.cardName;
+        GetComponent<DescriptionContainer>().SetNameAndDescription(tarotCardData.cardName, _tarotCardData.cardDescription, DescriptionType.Tarot);
+
+        SetPrice();
+        SetUpButtons();
+    }
     public void UseItem()
     {
         if (!isOnShop)
@@ -44,9 +56,7 @@ public class ConsumableItem : MonoBehaviour
             {
                 ConsumableManager.instance.DecreaseConsumable();
             }
-            PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
-            StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
-            Destroy(gameObject);
+            SwitchCardBehavior();
         }
         else
         {
@@ -58,6 +68,21 @@ public class ConsumableItem : MonoBehaviour
             CurrencyManager.instance.RemoveCurrency(buyValue);
             ConsumableManager.instance.AddFromShop(this);
         }
+    }
+
+    private void SwitchCardBehavior()
+    {
+        if (planetCardData != null)
+        {
+            PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
+            StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
+        }
+
+        if (tarotCardData != null)
+        {
+            tarotCardData.cardEffect.ApplyEffect();
+        }
+        Destroy(gameObject);
     }
 
     private void SetPrice()
@@ -111,8 +136,15 @@ public class ConsumableItem : MonoBehaviour
         {
             SetUpConsumableControls?.Invoke();
             upperButton.targetGraphic.color = Color.green;
-            sellButtonText.text = "SELL $"+sellValue;
+            sellButtonText.text = "SELL $" + sellValue;
         }
+    }
+
+    [ContextMenu("Generate Tarot Card")]
+    private void GenerateTarotCard()
+    {
+        SetTarotData(tarotCardData);
+        ConsumableManager.instance.AddFromShop(this);
     }
 }
 

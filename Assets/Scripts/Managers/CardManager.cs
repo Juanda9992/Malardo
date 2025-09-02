@@ -26,7 +26,6 @@ public class CardManager : MonoBehaviour
     {
         GameObject currentCard = Instantiate(cardprefab, handParent);
 
-        Debug.Log(card.identifier);
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
         UpdateCardSpacing();
