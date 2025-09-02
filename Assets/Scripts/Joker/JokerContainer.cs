@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,6 +38,7 @@ public class JokerContainer : MonoBehaviour
     public void TriggerActions(JokerLogic logics)
     {
         JokerExecuteAction(logics);
+        transform.DOPunchScale(Vector3.one * 0.3f, 0.15f);
     }
 
     private void JokerExecuteAction(JokerLogic jokerLogic)
