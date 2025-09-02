@@ -5,9 +5,6 @@ public class TarotCardData : ScriptableObject
 {
     public string cardName;
     [TextArea] public string cardDescription;
-
-    public int minCardsRequired, maxCardsRequired;
-
     public CardEffect cardEffect;
     public bool CanApplyEffect()
     {
