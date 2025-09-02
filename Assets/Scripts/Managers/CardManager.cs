@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] private GameObject cardsContainer;
     [SerializeField] private Transform handParent;
     [SerializeField] private GameObject cardprefab;
+    [SerializeField] private HorizontalLayoutGroup cardsLayout;
     public List<Card_Data> cardsOnScreen;
     void Awake()
     {
@@ -26,6 +28,20 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
+        UpdateCardSpacing();
+    }
+
+    private void UpdateCardSpacing()
+    {
+        if (handParent.childCount > 8)
+        {
+            Debug.Log("Pass limit");
+            cardsLayout.spacing = -handParent.childCount * 5;
+        }
+        else
+        {
+            cardsLayout.spacing = 0;
+        }
     }
 
     public void DestroyCardsOnHand()
