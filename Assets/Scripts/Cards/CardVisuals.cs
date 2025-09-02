@@ -26,11 +26,12 @@ public class CardVisuals : MonoBehaviour
     public void SetVisuals(Card card)
     {
         _card = card;
+        _card.SetCardName();
+        _card.SetCardChipAmmount();
         cardImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
-        _card.SetCardName();
     }
 
     private void SetCardEdition()
