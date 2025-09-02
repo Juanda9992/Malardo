@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Tarot Card",menuName = "Scriptables/Tarot Card/Template")]
+[CreateAssetMenu(fileName = "Tarot Card", menuName = "Scriptables/Tarot Card/Template")]
 public class TarotCardData : ScriptableObject
 {
     public string cardName;
@@ -9,6 +9,10 @@ public class TarotCardData : ScriptableObject
     public int minCardsRequired, maxCardsRequired;
 
     public CardEffect cardEffect;
+    public bool CanApplyEffect()
+    {
+        return cardEffect.CanBeUsed();
+    }
 }
 
 [CreateAssetMenu(fileName = "Tarot Card Effect", menuName = "Scriptables/Tarot Card/Effect")]
@@ -23,5 +27,10 @@ public class CardEffect : ScriptableObject
     protected void TestEffect()
     {
         ApplyEffect();
+    }
+
+    public virtual bool CanBeUsed()
+    {
+        return true;
     }
 }

@@ -13,6 +13,7 @@ public class ConsumableItem : MonoBehaviour
 
     [SerializeField] private Button bottomButton;
     [SerializeField] private Button upperButton;
+    [SerializeField] private Button interactButton;
 
     [SerializeField] private TextMeshProUGUI textDescription;
     [SerializeField] private TextMeshProUGUI sellButtonText;
@@ -47,6 +48,17 @@ public class ConsumableItem : MonoBehaviour
 
         SetPrice();
         SetUpButtons();
+
+        StartCoroutine(ListenForEffect());
+    }
+
+    private IEnumerator ListenForEffect()
+    {
+        while (true)
+        {
+            interactButton.interactable = tarotCardData.CanApplyEffect();
+            yield return new WaitForSeconds(0.2f);
+        }
     }
     public void UseItem()
     {

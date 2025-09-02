@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Change to suit",menuName ="Scriptables/Tarot Card/Effect/Change Suit Effect")]
+[CreateAssetMenu(fileName = "Change to suit", menuName = "Scriptables/Tarot Card/Effect/Change Suit Effect")]
 public class SuitEffects : CardEffect
 {
     public Suit desiredSuit;
-
+    public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
         DeckManager.instance.StartCoroutine(ChangeCards());
@@ -19,4 +19,9 @@ public class SuitEffects : CardEffect
             yield return new WaitForSeconds(0.1f);
         }
     }
+    public override bool CanBeUsed()
+    {
+        return HandManager.instance.handCards.Count >= minCardsRequired && HandManager.instance.handCards.Count <= maxCardsRequired;
+    }
 }
+

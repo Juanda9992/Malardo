@@ -1046,9 +1046,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetCardData: {fileID: 0}
+  tarotCardData: {fileID: 0}
   isOnShop: 0
   bottomButton: {fileID: 3239079179221691954}
   upperButton: {fileID: 6879724684221006894}
+  interactButton: {fileID: 7432668917746594357}
   textDescription: {fileID: 6950208976908496177}
   sellButtonText: {fileID: 3295080383160983130}
   buyButtonText: {fileID: 3593115817259145006}
@@ -1132,3 +1134,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7432668917746594357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2781677400855066619, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+  m_PrefabInstance: {fileID: 4736843270299960782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4191668498855046949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
