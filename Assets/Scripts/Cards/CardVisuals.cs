@@ -112,7 +112,12 @@ public class CardVisuals : MonoBehaviour
         disabledCardVisuals.SetActive(disabled);
     }
 
-    public void UpdateCardSuit(Suit suit)
+    public void UpdateCardSuitCoroutineRequest(Suit suit)
+    {
+        StartCoroutine(FlipCard(() => UpdateCardSuit(suit)));
+    }
+
+    private void UpdateCardSuit(Suit suit)
     {
         _card.cardSuit = suit;
         SetVisuals(_card);
@@ -121,7 +126,7 @@ public class CardVisuals : MonoBehaviour
     [ContextMenu("Test Card FLip")]
     private void AnimateCard()
     {
-        StartCoroutine(FlipCard(()=>UpdateCardSuit(testSuit)));
+        StartCoroutine(FlipCard(()=>UpdateCardSuitCoroutineRequest(testSuit)));
     }
 
     private IEnumerator FlipCard(Action action)

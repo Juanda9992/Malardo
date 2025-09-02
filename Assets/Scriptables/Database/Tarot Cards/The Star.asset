@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
-  m_Name: Temperance
+  m_Name: The Star
   m_EditorClassIdentifier: 
-  cardName: Temperance (XIV)
-  cardDescription: 'Gives the total sell value of all current Jokers
-
-    (Max of
-    $50)'
+  cardName: The Star (XVII)
+  cardDescription: Converts up to 3 selected cards to Diamonds
   minCardsRequired: 0
   maxCardsRequired: 0
-  cardEffect: {fileID: 11400000, guid: 5920fe8773ac29b4a8ade9e0a031af9c, type: 2}
+  cardEffect: {fileID: 11400000, guid: 2ac67525538abcc40a22f4f22730cd28, type: 2}

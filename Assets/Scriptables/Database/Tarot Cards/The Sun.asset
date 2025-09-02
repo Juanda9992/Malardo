@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
-  m_Name: Temperance
+  m_Name: The Sun
   m_EditorClassIdentifier: 
-  cardName: Temperance (XIV)
-  cardDescription: 'Gives the total sell value of all current Jokers
-
-    (Max of
-    $50)'
+  cardName: The Sun (XIX)
+  cardDescription: Converts up to 3 selected cards to Hearths
   minCardsRequired: 0
   maxCardsRequired: 0
-  cardEffect: {fileID: 11400000, guid: 5920fe8773ac29b4a8ade9e0a031af9c, type: 2}
+  cardEffect: {fileID: 11400000, guid: 05884917090e5e845a42f0423f014418, type: 2}

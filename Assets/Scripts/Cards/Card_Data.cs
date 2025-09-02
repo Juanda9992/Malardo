@@ -3,7 +3,7 @@ using UnityEngine;
 public class Card_Data : MonoBehaviour
 {
     public Card currentCard;
-    [SerializeField] private CardVisuals visuals;
+    public CardVisuals visuals;
     public CardPointerInteraction pointerInteraction;
     [ContextMenu("Generate Card")]
     private void GenerateRandomCard()
