@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Astronomer Joker
   m_EditorClassIdentifier: 
   jokerName: Astronomer
-  description: All Planet cards and Celestial Packs in the shop are free
+  description: All <style=Planet>Planet cards </style>and <style=Planet>Celestial
+    Packs </style>in the shop are free
   triggerMessage: 
   overrideEffect: 0
   shopValue: 8
