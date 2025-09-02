@@ -10,9 +10,13 @@ public class CurrencyEffects : CardEffect
         {
             int ammount = CurrencyManager.instance.currentCurrency;
             ammount = Mathf.Clamp(ammount, 0, 20);
-
             CurrencyManager.instance.AddCurrency(ammount);
-            Debug.Log(ammount);
+        }
+        if (sellValueToMoney)
+        {
+            int ammount = JokerManager.instance.GetSellValueFromAllJokers();
+            ammount = Mathf.Clamp(ammount, 0, 50);
+            CurrencyManager.instance.AddCurrency(ammount);
         }
     }
 }
