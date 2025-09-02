@@ -13,6 +13,9 @@ public class JokerDescription : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI editionTitle, editionDescription;
     [SerializeField] private GameObject editionContainer;
+
+    [SerializeField] private TextMeshProUGUI sealTitle, sealDescription;
+    [SerializeField] private GameObject sealContainer;
     void Awake()
     {
         instance = this;
@@ -103,6 +106,7 @@ public class JokerDescription : MonoBehaviour
         }
 
         SetEditionDescription(card_Data.currentCard.cardEdition);
+        SetSealDescription(card_Data.currentCard.cardSeal);
     }
 
     public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType)
@@ -127,6 +131,7 @@ public class JokerDescription : MonoBehaviour
     private void SetDescriptionRarity(ExtraTagContainer extraTagContainer, DescriptionType descriptionType, string auxText = "")
     {
         editionContainer.SetActive(false);
+        sealContainer.SetActive(false);
         extraTags[0].extraTagBg.gameObject.SetActive(false);
         extraTags[1].extraTagBg.gameObject.SetActive(false);
         extraTags[2].extraTagBg.gameObject.SetActive(false);
@@ -157,6 +162,7 @@ public class JokerDescription : MonoBehaviour
         if (cardEdition == CardEdition.Base)
         {
             editionContainer.SetActive(false);
+            return;
         }
         if (cardEdition == CardEdition.Foil)
         {
@@ -176,6 +182,38 @@ public class JokerDescription : MonoBehaviour
         editionTitle.text = cardEdition.ToString();
 
         editionContainer.SetActive(true);
+    }
+
+    private void SetSealDescription(Seal seal)
+    {
+        if (seal == Seal.None)
+        {
+            sealContainer.SetActive(false);
+            return;
+        }
+        if (seal == Seal.Gold)
+        {
+            sealDescription.text = "Earn <style=Cash>$3</style> when this card is played and scores";
+        }
+
+        if (seal == Seal.Red)
+        {
+            sealDescription.text = "Retrigger this card <style=Mult>1</style> time";
+        }
+
+        if (seal == Seal.Blue)
+        {
+            sealDescription.text = "Creates the <style=Planet>Planet</style> card for final played poker hand of round if held in hand (Must have room)";
+        }
+
+        if (seal == Seal.Purple)
+        {
+            sealDescription.text = "Creates a <style=Tarot>Tarot</style> card when discarded (Must have room)";
+        }
+
+        sealTitle.text = seal.ToString() + " Seal";
+
+        sealContainer.SetActive(true);
     }
 }
 
