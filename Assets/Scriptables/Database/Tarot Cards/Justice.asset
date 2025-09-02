@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
+  m_Name: Justice
+  m_EditorClassIdentifier: 
+  cardName: Justice (VIII)
+  cardDescription: Enhances 1 selected card into a Glass Card
+  cardEffect: {fileID: 11400000, guid: 9be9f211cd755f24caed9c601d17be3a, type: 2}
