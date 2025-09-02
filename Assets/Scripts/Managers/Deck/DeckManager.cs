@@ -21,11 +21,12 @@ public class DeckManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        Card[] cards = new Card[referenceDeck.allCards.Count];
-        referenceDeck.allCards.CopyTo(cards);
-        fullMatchDeck = new List<Card>(cards.ToList());
-        for (int i = 0; i < fullMatchDeck.Count; i++)
+
+        fullMatchDeck = new List<Card>();
+        for (int i = 0; i < referenceDeck.allCards.Count; i++)
         {
+            Card newCard = new Card(referenceDeck.allCards[i]);
+            fullMatchDeck.Add(newCard);
             fullMatchDeck[i].identifier = cardIndex;
             cardIndex++;
         }
@@ -113,10 +114,10 @@ public class DeckManager : MonoBehaviour
         AddHandSize(-1);
     }
 
-    public void UpdateCardOnFullDeck(Card oldCard,Card newCard)
+    public void UpdateCardOnFullDeck(Card oldCard, Card newCard)
     {
         int index = fullMatchDeck.IndexOf(oldCard);
-        Debug.Log(fullMatchDeck.Find(x =>x==oldCard));
+        Debug.Log(fullMatchDeck.Find(x => x == oldCard));
         //fullMatchDeck[index] = newCard;
     }
 
