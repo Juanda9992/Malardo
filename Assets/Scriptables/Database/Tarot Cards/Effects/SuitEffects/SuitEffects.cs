@@ -5,6 +5,7 @@ using UnityEngine;
 public class SuitEffects : CardEffect
 {
     public Suit desiredSuit;
+    public CardType cardType;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
@@ -13,10 +14,22 @@ public class SuitEffects : CardEffect
 
     private IEnumerator ChangeCards()
     {
-        for (int i = 0; i < HandManager.instance.handCards.Count; i++)
+        if (desiredSuit != Suit.None)
         {
-            HandManager.instance.handCards[i].linkedCard.visuals.UpdateCardSuitCoroutineRequest(desiredSuit);
-            yield return new WaitForSeconds(0.1f);
+            for (int i = 0; i < HandManager.instance.handCards.Count; i++)
+            {
+                HandManager.instance.handCards[i].linkedCard.visuals.UpdateCardSuitCoroutineRequest(desiredSuit);
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        if (cardType != CardType.Default)
+        {
+            for (int i = 0; i < HandManager.instance.handCards.Count; i++)
+            {
+                HandManager.instance.handCards[i].linkedCard.visuals.UpdateCardTypeCoroutineRequest(cardType);
+                yield return new WaitForSeconds(0.1f);
+            }
         }
     }
     public override bool CanBeUsed()

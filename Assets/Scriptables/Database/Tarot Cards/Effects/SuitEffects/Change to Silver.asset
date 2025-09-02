@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a5f4812dfc41544d8106d6300236206, type: 3}
-  m_Name: Change to Hearth
+  m_Name: Change to Silver
   m_EditorClassIdentifier: 
-  desiredSuit: 1
+  desiredSuit: 4
+  cardType: 3
   minCardsRequired: 1
-  maxCardsRequired: 3
+  maxCardsRequired: 1

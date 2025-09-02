@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Change to Diamond
   m_EditorClassIdentifier: 
   desiredSuit: 0
+  minCardsRequired: 1
+  maxCardsRequired: 3

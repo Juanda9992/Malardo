@@ -5,7 +5,6 @@ using UnityEngine;
 public class CardGenerationPresset : ScriptableObject
 {
     public List<Card> allCards;
-
     public int startingMoney;
 
     [ContextMenu("Generate Random Deck")]
@@ -25,6 +24,12 @@ public class CardGenerationPresset : ScriptableObject
                 allCards.Add(card);
             }
         }
+    }
+
+    [System.Serializable]
+    public struct Cards
+    {
+        public List<Card> referenceCards;
     }
 
     public Card presetCard;

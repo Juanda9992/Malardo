@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Change to Spade
   m_EditorClassIdentifier: 
   desiredSuit: 2
+  minCardsRequired: 1
+  maxCardsRequired: 3

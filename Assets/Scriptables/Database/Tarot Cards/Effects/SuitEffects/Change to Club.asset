@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Change to Club
   m_EditorClassIdentifier: 
   desiredSuit: 3
+  minCardsRequired: 1
+  maxCardsRequired: 3
