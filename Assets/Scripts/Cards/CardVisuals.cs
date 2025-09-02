@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class CardVisuals : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private GameObject[] editionsContainer;
     [SerializeField] private GameObject bonusCardVisuals, multCardVisuals, disabledCardVisuals;
     [SerializeField] private Image seal;
+    [SerializeField] private Suit testSuit;
     private Card _card;
 
     void Awake()
@@ -106,6 +110,27 @@ public class CardVisuals : MonoBehaviour
     {
         Debug.Log(disabled);
         disabledCardVisuals.SetActive(disabled);
+    }
+
+    public void UpdateCardSuit(Suit suit)
+    {
+        _card.cardSuit = suit;
+        SetVisuals(_card);
+    }
+
+    [ContextMenu("Test Card FLip")]
+    private void AnimateCard()
+    {
+        StartCoroutine(FlipCard(()=>UpdateCardSuit(testSuit)));
+    }
+
+    private IEnumerator FlipCard(Action action)
+    {
+        yield return transform.DOLocalRotate(Vector3.up * 90, 0.2f);
+        yield return new WaitForSeconds(0.1f);
+        action?.Invoke();
+        yield return new WaitForSeconds(0.1f);
+        yield return transform.DOLocalRotate(Vector3.up * 0, 0.2f);
     }
 
 }

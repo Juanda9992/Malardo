@@ -15,9 +15,9 @@ public class Card_Data : MonoBehaviour
 
     public void SetCardData(Card card)
     {
-        currentCard = new Card(card);
+        currentCard = card;
         currentCard.linkedCard = this;
-        currentCard.canPlay = true;
+        currentCard.canPlay = true; 
         card.SetCardChipAmmount();
         card.SetCardName();
         visuals.SetVisuals(currentCard);
@@ -134,6 +134,7 @@ public class Card
     public CardEdition cardEdition = CardEdition.Base;
     public bool canPlay = true;
     public int activations = 1;
+    public int identifier;
     public Card GenerateRandomCard()
     {
 

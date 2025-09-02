@@ -10813,6 +10813,7 @@ MonoBehaviour:
   cardsContainer: {fileID: 836230732}
   handParent: {fileID: 836230733}
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
+  cardsLayout: {fileID: 836230736}
   cardsOnScreen: []
 --- !u!4 &621395120
 Transform:
@@ -29499,7 +29500,7 @@ MonoBehaviour:
   referenceDeck: {fileID: 11400000, guid: 09afb4c2231c9fa4889fea9650fc9b71, type: 2}
   fullMatchDeck: []
   roundDeck: []
-  currentHandSize: 8
+  currentHandSize: 11
   initialDeckSize: 0
   roundDeckSize: 0
   deckCounter: {fileID: 228441445}

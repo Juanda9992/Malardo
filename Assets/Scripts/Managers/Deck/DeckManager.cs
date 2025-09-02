@@ -14,13 +14,20 @@ public class DeckManager : MonoBehaviour
     public int currentHandSize = 8;
     public int initialDeckSize;
     public int roundDeckSize;
+    public int cardIndex = 0;
     [SerializeField] private TextMeshProUGUI deckCounter;
 
     void Awake()
     {
         instance = this;
         fullMatchDeck = new List<Card>(referenceDeck.allCards);
+        for (int i = 0; i < fullMatchDeck.Count; i++)
+        {
+            fullMatchDeck[i].identifier = cardIndex;
+            cardIndex++;
+        }
         initialDeckSize = fullMatchDeck.Count;
+
     }
     void Start()
     {
@@ -58,6 +65,7 @@ public class DeckManager : MonoBehaviour
         }
         int randomIndex = Random.Range(0, roundDeck.Count);
         Card cardToGenerate = roundDeck[randomIndex];
+
         roundDeck.RemoveAt(randomIndex);
 
         CardManager.instance.GenerateCardOnHand(cardToGenerate);
@@ -100,6 +108,13 @@ public class DeckManager : MonoBehaviour
     private void Substract1HandSize()
     {
         AddHandSize(-1);
+    }
+
+    public void UpdateCardOnFullDeck(Card oldCard,Card newCard)
+    {
+        int index = fullMatchDeck.IndexOf(oldCard);
+        Debug.Log(fullMatchDeck.Find(x =>x==oldCard));
+        //fullMatchDeck[index] = newCard;
     }
 
     #region GetValues
