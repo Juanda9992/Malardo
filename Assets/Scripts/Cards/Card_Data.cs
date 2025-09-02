@@ -250,23 +250,23 @@ public class Card
 
     public void SetCardName()
     {
-        cardName = number + " of " + cardSuit.ToString();
+        cardName = number + " of " + GetFormatedCardSuit();
 
         if (number == 11)
         {
-            cardName = "Jack of " + cardSuit.ToString();
+            cardName = "Jack of " + GetFormatedCardSuit();
         }
         else if (number == 12)
         {
-            cardName = "Queen of " + cardSuit.ToString();
+            cardName = "Queen of " + GetFormatedCardSuit();
         }
         else if (number == 13)
         {
-            cardName = "King of " + cardSuit.ToString();
+            cardName = "King of " + GetFormatedCardSuit();
         }
         else if (number == 1)
         {
-            cardName = "Ace of " + cardSuit.ToString();
+            cardName = "Ace of " + GetFormatedCardSuit();
         }
         if (cardType == CardType.Stone)
         {
@@ -274,6 +274,25 @@ public class Card
         }
     }
 
+    private string GetFormatedCardSuit()
+    {
+        if (cardSuit == Suit.Hearth)
+        {
+            return "<style=Hearth>" + "Hearths" + "</style>";
+        }
+        else if (cardSuit == Suit.Diamond)
+        {
+            return "<style=Diamond>" + "Diamonds" + "</style>";
+        }
+        else if (cardSuit == Suit.Spades)
+        {
+            return "<style=Spade>" + "Spades" + "</style>";
+        }
+        else
+        {
+            return "<style=Club>" + "Clubs" + "</style>";
+        }
+    }
     public void DegubCardInfo()
     {
         Debug.Log($"Number {number}, Suit {cardSuit}");
