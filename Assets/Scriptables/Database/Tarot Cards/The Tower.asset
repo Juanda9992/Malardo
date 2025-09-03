@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Tower (XVI)
   cardDescription: Enhances 1 selected card into a Stone Card
-  cardEffect: {fileID: 11400000, guid: 128bb0c73b358e44996a9bb09e80aefd, type: 2}
+  cardEffect: {fileID: 11400000, guid: 7484fa70f2ce37244858d42dab694c98, type: 2}

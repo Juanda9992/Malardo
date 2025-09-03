@@ -6,6 +6,7 @@ public class SuitEffects : CardEffect
 {
     public Suit desiredSuit;
     public CardType cardType;
+    public bool increaseRank;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
@@ -28,6 +29,15 @@ public class SuitEffects : CardEffect
             for (int i = 0; i < HandManager.instance.handCards.Count; i++)
             {
                 HandManager.instance.handCards[i].linkedCard.visuals.UpdateCardTypeCoroutineRequest(cardType);
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        if (increaseRank)
+        {
+            for (int i = 0; i < HandManager.instance.handCards.Count; i++)
+            {
+                HandManager.instance.handCards[i].linkedCard.visuals.IncreaseCardRankCoroutineRequest(cardType);
                 yield return new WaitForSeconds(0.1f);
             }
         }

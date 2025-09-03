@@ -124,6 +124,19 @@ public class CardVisuals : MonoBehaviour
         StartCoroutine(FlipCard(() => UpdateCardType(cardType)));
     }
 
+    public void IncreaseCardRankCoroutineRequest(CardType cardType)
+    {
+        StartCoroutine(FlipCard(() => IncreaseRank()));
+    }
+
+    private void IncreaseRank()
+    {
+        _card.number++;
+
+        _card.number = _card.number == 14 ? 1 : _card.number;
+        SetVisuals(_card);
+    }
+
     private void UpdateCardType(CardType cardType)
     {
         _card.cardType = cardType;
