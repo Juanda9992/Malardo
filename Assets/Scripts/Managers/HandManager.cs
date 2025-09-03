@@ -110,7 +110,7 @@ public class HandManager : MonoBehaviour
                 {
                     yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
                 }
-                handCards[i].linkedCard.pointerInteraction.DestroyCard();
+                handCards[i].linkedCard.pointerInteraction.RemoveCard();
                 CardManager.instance.cardsOnScreen.Remove(handCards[i].linkedCard);
                 yield return new WaitForSeconds(0.05f);
             }

@@ -95,6 +95,7 @@ public class DeckManager : MonoBehaviour
     public void DestroyCardFromFullDeck(Card card)
     {
         fullMatchDeck.Remove(card);
+        UpdateDeckCounter();
     }
 
     public void AddHandSize(int ammount)

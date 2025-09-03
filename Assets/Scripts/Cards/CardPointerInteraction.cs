@@ -139,9 +139,16 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         previousPos = new Vector2(transform.localPosition.x, initialY);
         HandManager.instance.RemoveCardFromHand(card_Data.currentCard);
     }
-    public void DestroyCard()
+    public void RemoveCard()
     {
         DeckManager.instance.RemoveCardFromDeck(card_Data.currentCard);
+        transform.DOScale(0, 0.2f).OnComplete(() => Destroy(gameObject));
+    }
+
+    public void DestroyCard()
+    {
+        DeckManager.instance.DestroyCardFromFullDeck(card_Data.currentCard);
+        CardManager.instance.cardsOnScreen.Remove(card_Data);
         transform.DOScale(0, 0.2f).OnComplete(() => Destroy(gameObject));
     }
 
