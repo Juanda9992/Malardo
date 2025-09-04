@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
+  m_Name: The High Priestess
+  m_EditorClassIdentifier: 
+  cardName: The High Priestess (II)
+  cardDescription: 'Creates up to 2 random Planet cards
+
+    (Must have room)'
+  cardEffect: {fileID: 11400000, guid: 089b657136ead5342b4d981665a21d75, type: 2}
+  saveCard: 1

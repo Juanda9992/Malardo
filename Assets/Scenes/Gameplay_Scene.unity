@@ -8959,6 +8959,7 @@ MonoBehaviour:
   shopPacksDatabase: {fileID: 11400000, guid: 55a2077b955cb9740a835b6b6d0afb79, type: 2}
   cardSpriteDatabase: {fileID: 11400000, guid: 24948b442d2bee74d8186869dffde7f1, type: 2}
   planetCardsDatabase: {fileID: 11400000, guid: 0178c579f3ec151418d28b4a63f8ae4e, type: 2}
+  tarotCardDatabase: {fileID: 11400000, guid: 8e32bcb3d5c361542b18bdb19635d934, type: 2}
   jokerContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   pricesDatabase: {fileID: 430010868}
 --- !u!114 &430010868
@@ -10815,6 +10816,8 @@ MonoBehaviour:
   cardprefab: {fileID: 2220632853323432375, guid: cb419599cb7069846b2f4807509767eb, type: 3}
   cardsLayout: {fileID: 836230736}
   cardsOnScreen: []
+  lastPlanetCard: {fileID: 0}
+  lastTarotCard: {fileID: 0}
 --- !u!4 &621395120
 Transform:
   m_ObjectHideFlags: 0
