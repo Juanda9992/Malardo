@@ -84,6 +84,7 @@ public class PackInteractable : MonoBehaviour
             case PackType.Planet:
                 PokerHandUpgrader.instance.RequestUpgradeHand(_planetCardData.handType);
                 StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
+                CardManager.instance.UpdateLastCard(_planetCardData);
                 break;
         }
 

@@ -88,11 +88,17 @@ public class ConsumableItem : MonoBehaviour
         {
             PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
             StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
+            CardManager.instance.UpdateLastCard(planetCardData);
         }
 
         if (tarotCardData != null)
         {
             tarotCardData.cardEffect.ApplyEffect();
+
+            if (tarotCardData.saveCard)
+            {
+                tarotCardData.SaveCard();
+            }
         }
         Destroy(gameObject);
     }

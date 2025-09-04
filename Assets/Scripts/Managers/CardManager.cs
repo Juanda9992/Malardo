@@ -12,6 +12,9 @@ public class CardManager : MonoBehaviour
     [SerializeField] private GameObject cardprefab;
     [SerializeField] private HorizontalLayoutGroup cardsLayout;
     public List<Card_Data> cardsOnScreen;
+
+    public PlanetCardData lastPlanetCard;
+    public TarotCardData lastTarotCard;
     void Awake()
     {
         instance = this;
@@ -137,6 +140,18 @@ public class CardManager : MonoBehaviour
     {
         SetHandVisibility(true);
         DestroyCardsOnHand();
+    }
+
+    public void UpdateLastCard(PlanetCardData planetCardData)
+    {
+        lastPlanetCard = planetCardData;
+        lastTarotCard = null;
+    }
+
+    public void UpdateLastCard(TarotCardData tarotCardData)
+    {
+        lastPlanetCard = null;
+        lastTarotCard = tarotCardData;
     }
 
 }
