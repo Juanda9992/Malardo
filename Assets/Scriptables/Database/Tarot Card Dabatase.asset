@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e579534446cf34e979a512fe79a51b, type: 3}
+  m_Name: Tarot Card Dabatase
+  m_EditorClassIdentifier: 
+  tarotCards:
+  - {fileID: 11400000, guid: 6f95dfb6878aa6b47b6f70d9e65e8461, type: 2}
+  - {fileID: 11400000, guid: 4e4d2536ea9b29a4f8f5da8c6afb1c4d, type: 2}
+  - {fileID: 11400000, guid: 23c9b50c91528ca4a9c89bac7848c886, type: 2}
+  - {fileID: 11400000, guid: 3aff75af7406db34ab2c99e5d2b2ae37, type: 2}
+  - {fileID: 11400000, guid: b37a8af800ab1364cb9a380263c3ccc5, type: 2}
+  - {fileID: 11400000, guid: 97587d9c1d7231440903ea85e0c7b92f, type: 2}
+  - {fileID: 11400000, guid: 6d382ad7213135842b8b2350fd15209d, type: 2}
+  - {fileID: 11400000, guid: 8b342e12ce35d5f48b83584ddd1cad44, type: 2}
+  - {fileID: 11400000, guid: 347abfc473e39274f99b64df8bca1827, type: 2}
+  - {fileID: 11400000, guid: 06ef4eb1114481b44b789266c8e6dcd3, type: 2}
+  - {fileID: 11400000, guid: a289d93983e233b439623054433ac927, type: 2}
+  - {fileID: 11400000, guid: 65fd24405b3c8f04a91d0a7659cc9138, type: 2}
+  - {fileID: 11400000, guid: 90e36e9532fc2ba47af2428b5abe5068, type: 2}
+  - {fileID: 11400000, guid: b103582d7eab73040b3f36dc66ee6dcb, type: 2}
+  - {fileID: 11400000, guid: c707fd0aa8d35d24fa9434fe7c944b9e, type: 2}
+  - {fileID: 11400000, guid: c2c40933fed1e0c49815345e3299bc75, type: 2}
+  - {fileID: 11400000, guid: 8e8fd2394ff8f424da7c7437dbc68536, type: 2}
+  - {fileID: 11400000, guid: 5047c9fbf22228446b36eb0f6ce4aef8, type: 2}
+  - {fileID: 11400000, guid: 711de39c43a1c4746bb659de9f15fb20, type: 2}
