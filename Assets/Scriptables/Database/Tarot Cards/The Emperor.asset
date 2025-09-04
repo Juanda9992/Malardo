@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
-  m_Name: The Fool
+  m_Name: The Emperor
   m_EditorClassIdentifier: 
-  cardName: The Fool (0)
-  cardDescription: 'Creates a copy of the last Tarot or Planet card used.
+  cardName: The Emperor (IV)
+  cardDescription: 'Creates up to 2 random Tarot cards
 
-    (
-    The Fool excluded)'
-  cardEffect: {fileID: 11400000, guid: cfceff78e9d8f084f8512ab04ca2178b, type: 2}
-  saveCard: 0
+    (Must have room)'
+  cardEffect: {fileID: 11400000, guid: a132d33031da2a8498a9690f71e710db, type: 2}
+  saveCard: 1
