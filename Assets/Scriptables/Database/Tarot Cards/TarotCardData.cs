@@ -6,9 +6,15 @@ public class TarotCardData : ScriptableObject
     public string cardName;
     [TextArea] public string cardDescription;
     public CardEffect cardEffect;
+    public bool saveCard;
     public bool CanApplyEffect()
     {
         return cardEffect.CanBeUsed();
+    }
+
+    public void SaveCard()
+    {
+        CardManager.instance.UpdateLastCard(this);
     }
 }
 

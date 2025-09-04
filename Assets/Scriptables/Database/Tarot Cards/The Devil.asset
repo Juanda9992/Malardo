@@ -15,3 +15,4 @@ MonoBehaviour:
   cardName: The Devil (XV)
   cardDescription: Enhances 1 selected card into a Gold Card
   cardEffect: {fileID: 11400000, guid: 907125defac1e324e9203959114c6b28, type: 2}
+  saveCard: 1

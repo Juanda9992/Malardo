@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The World (XXI)
   cardDescription: Converts up to 3 selected cards to Spades
-  minCardsRequired: 0
-  maxCardsRequired: 0
   cardEffect: {fileID: 11400000, guid: 3250353276a71f44e80ef119a0616d21, type: 2}
+  saveCard: 1

@@ -15,3 +15,4 @@ MonoBehaviour:
   cardName: The Empress (III)
   cardDescription: Enhances 2 selected cards to Mult Cards
   cardEffect: {fileID: 11400000, guid: a1f4769c4b321614e8f239e011ee8a63, type: 2}
+  saveCard: 1

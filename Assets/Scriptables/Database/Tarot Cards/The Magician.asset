@@ -15,3 +15,4 @@ MonoBehaviour:
   cardName: The Magician (I)
   cardDescription: Enhances 2 selected cards to Lucky Cards
   cardEffect: {fileID: 11400000, guid: 128bb0c73b358e44996a9bb09e80aefd, type: 2}
+  saveCard: 1

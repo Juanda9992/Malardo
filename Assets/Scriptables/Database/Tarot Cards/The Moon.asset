@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Moon (XVIII)
   cardDescription: Converts up to 3 selected cards to Clubs
-  minCardsRequired: 0
-  maxCardsRequired: 0
   cardEffect: {fileID: 11400000, guid: 58a2ee98112af7f4bbc6220f6eab3f0a, type: 2}
+  saveCard: 1

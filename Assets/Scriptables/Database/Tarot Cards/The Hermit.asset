@@ -16,6 +16,5 @@ MonoBehaviour:
   cardDescription: 'Doubles money
 
     (Max of $20)'
-  minCardsRequired: 0
-  maxCardsRequired: 0
   cardEffect: {fileID: 11400000, guid: a6f1dce4e4a7b9d4faeb4f8536e2a34e, type: 2}
+  saveCard: 1

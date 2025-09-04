@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Star (XVII)
   cardDescription: Converts up to 3 selected cards to Diamonds
-  minCardsRequired: 0
-  maxCardsRequired: 0
   cardEffect: {fileID: 11400000, guid: 2ac67525538abcc40a22f4f22730cd28, type: 2}
+  saveCard: 1

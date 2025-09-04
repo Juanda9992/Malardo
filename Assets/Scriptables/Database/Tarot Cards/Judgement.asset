@@ -18,3 +18,4 @@ MonoBehaviour:
     (Must
     have room)'
   cardEffect: {fileID: 11400000, guid: dae62568bbb86bc4daf0fc1482e0c663, type: 2}
+  saveCard: 1

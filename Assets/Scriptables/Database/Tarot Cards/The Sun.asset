@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Sun (XIX)
   cardDescription: Converts up to 3 selected cards to Hearths
-  minCardsRequired: 0
-  maxCardsRequired: 0
   cardEffect: {fileID: 11400000, guid: 05884917090e5e845a42f0423f014418, type: 2}
+  saveCard: 1
