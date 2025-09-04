@@ -8,6 +8,7 @@ public class SuitEffects : CardEffect
     public Suit desiredSuit;
     public CardType cardType;
     public bool increaseRank;
+    public bool copyCard;
     public bool destroyCards;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
@@ -52,6 +53,27 @@ public class SuitEffects : CardEffect
                 yield return new WaitForSeconds(0.1f);
             }
             HandManager.instance.handCards.Clear();
+        }
+
+        if (copyCard)
+        {
+            Card[] orderedCards = new Card[2];
+
+            if (HandManager.instance.handCards[0].linkedCard.transform.position.x < HandManager.instance.handCards[1].linkedCard.transform.position.x)
+            {
+                orderedCards[0] = HandManager.instance.handCards[0];
+                orderedCards[1] = HandManager.instance.handCards[1];
+            }
+            else
+            {
+                orderedCards[0] = HandManager.instance.handCards[1];
+                orderedCards[1] = HandManager.instance.handCards[0];
+            }
+
+            Debug.Log(orderedCards[0].linkedCard.transform.position.x+ " " + orderedCards[0].cardName);
+            Debug.Log(orderedCards[1].linkedCard.transform.position.x + " "+orderedCards[1].cardName);
+
+            orderedCards[0].linkedCard.visuals.CoptyCardCoroutineRequest(orderedCards[1]);
         }
     }
     public override bool CanBeUsed()
