@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
-  m_Name: The Hanged Man
+  m_Script: {fileID: 11500000, guid: 63872e9c8e7dd0242ac7962e77e34b21, type: 3}
+  m_Name: Create Random Joker
   m_EditorClassIdentifier: 
-  cardName: The Hanged Man (XII)
-  cardDescription: Destroys up to 2 selected cards
-  cardEffect: {fileID: 11400000, guid: 6c23139216f67e440af47b67d53651ab, type: 2}
+  anyJoker: 1
+  desiredRarity: 0
