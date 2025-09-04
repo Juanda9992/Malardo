@@ -66,6 +66,23 @@ public class ConsumableManager : MonoBehaviour
         IncreaseConsumables();
     }
 
+    public void GeneratePlanetCard(PlanetCardData planetCardData)
+    {
+        if (consumableAmmount >= maxConsumables) return;
+        GameObject go = Instantiate(consumablePrefab, spawnParent);
+        go.GetComponent<ConsumableItem>().SetPlanetData(planetCardData);
+        IncreaseConsumables();
+    }
+
+    public void GenerateTarotCard(TarotCardData tarotCard)
+    {
+        if (consumableAmmount >= maxConsumables) return;
+        GameObject go = Instantiate(consumablePrefab, spawnParent);
+        go.GetComponent<ConsumableItem>().SetTarotData(tarotCard);
+        IncreaseConsumables();
+    }
+
+
     public void AddFromShop(ConsumableItem consumable)
     {
         consumable.transform.SetParent(spawnParent);
