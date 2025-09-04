@@ -275,6 +275,18 @@ public class Card
         }
     }
 
+    public void CopyCardData(Card card)
+    {
+        number = card.number;
+        cardSuit = card.cardSuit;
+        cardSeal = card.cardSeal;
+        chipAmmount = card.chipAmmount;
+        cardEdition = card.cardEdition;
+        cardType = card.cardType;
+        canPlay = card.canPlay;
+        cardName = card.cardName;
+    }
+
     private string GetFormatedCardSuit()
     {
         if (cardSuit == Suit.Hearth)
