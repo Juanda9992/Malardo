@@ -41,10 +41,19 @@ public class DeckManager : MonoBehaviour
     private void OnRoundStart()
     {
         roundDeckSize = fullMatchDeck.Count;
-        roundDeck = new List<Card>(fullMatchDeck);
+        RegenerateRoundDeck();
         RegenerateDeck();
     }
 
+    public void RegenerateRoundDeck()
+    {
+        roundDeck = new List<Card>(fullMatchDeck);
+    }
+
+    public List<Card> GetRoundDeck()
+    {
+        return roundDeck;
+    }
     public void RegenerateDeck()
     {
         for (int i = 0; i < currentHandSize; i++)
