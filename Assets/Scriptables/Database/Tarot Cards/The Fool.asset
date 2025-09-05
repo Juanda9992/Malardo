@@ -15,7 +15,9 @@ MonoBehaviour:
   cardName: The Fool (0)
   cardDescription: 'Creates a copy of the last Tarot or Planet card used.
 
-    (
-    The Fool excluded)'
+    (The
+    Fool excluded)
+
+    (Current: _R_)'
   cardEffect: {fileID: 11400000, guid: cfceff78e9d8f084f8512ab04ca2178b, type: 2}
   saveCard: 0

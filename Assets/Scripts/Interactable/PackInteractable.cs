@@ -14,11 +14,16 @@ public class PackInteractable : MonoBehaviour
     [SerializeField] private Button actionButton;
     private Card createdCard;
     private PlanetCardData _planetCardData;
+    private DescriptionContainer description;
+    void Start()
+    {
+        description = GetComponent<DescriptionContainer>();
+    }
     public void SetJokerInfo(JokerInstance createdJoker)
     {
         jokerData = createdJoker.data;
         itemType = PackType.Buffon;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description, GetTypeByjokerRarity(createdJoker));
+        description.SetNameAndDescription(jokerData.jokerName, jokerData.description, GetTypeByjokerRarity(createdJoker));
         cardName.text = createdJoker.data.jokerName;
         StartCoroutine("ListenForAvaliability");
     }
@@ -52,7 +57,7 @@ public class PackInteractable : MonoBehaviour
         createdCard = createdCard.GenerateRandomCard();
 
         GetComponent<CardVisuals>().SetVisuals(createdCard);
-        GetComponent<DescriptionContainer>().SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips", DescriptionType.None);
+        description.SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips", DescriptionType.None);
     }
 
     public void SetPlanetCard(PlanetCardData planetCardData)
@@ -71,7 +76,7 @@ public class PackInteractable : MonoBehaviour
         itemType = PackType.Tarot;
         tarotCard = tarotCardData;
         cardName.text = tarotCardData.cardName;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(tarotCardData.cardName, tarotCardData.cardDescription, DescriptionType.Tarot);
+        description.SetNameAndDescription(tarotCardData.cardName, tarotCardData.cardDescription, DescriptionType.Tarot);
         StartCoroutine("ListenForAvaliability");
     }
 
@@ -87,6 +92,7 @@ public class PackInteractable : MonoBehaviour
             if (itemType == PackType.Tarot)
             {
                 actionButton.interactable = tarotCard.CanApplyEffect();
+                description.SetNameAndDescription(tarotCard.cardName,tarotCard.GetDescription(), DescriptionType.Tarot);
             }
             yield return new WaitForSeconds(0.2f);
         }

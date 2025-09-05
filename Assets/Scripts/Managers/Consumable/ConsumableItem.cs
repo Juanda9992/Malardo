@@ -25,6 +25,12 @@ public class ConsumableItem : MonoBehaviour
     [SerializeField] private UnityEvent SetUpShopControls, SetUpConsumableControls;
 
     private bool directlyused;
+    private DescriptionContainer descriptionContainer;
+
+    void Awake()
+    {
+        descriptionContainer = GetComponent<DescriptionContainer>();
+    }
     public void SetPlanetData(PlanetCardData planetCard)
     {
         planetCardData = planetCard;
@@ -33,7 +39,7 @@ public class ConsumableItem : MonoBehaviour
 
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         textDescription.text = planetCardData.cardName;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
+        descriptionContainer.SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
 
         SetPrice();
         SetUpButtons();
@@ -44,7 +50,7 @@ public class ConsumableItem : MonoBehaviour
         tarotCardData = _tarotCardData;
 
         textDescription.text = tarotCardData.cardName;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(tarotCardData.cardName, _tarotCardData.cardDescription, DescriptionType.Tarot);
+        descriptionContainer.SetNameAndDescription(tarotCardData.cardName, _tarotCardData.cardDescription, DescriptionType.Tarot);
 
         SetPrice();
         SetUpButtons();
@@ -59,10 +65,13 @@ public class ConsumableItem : MonoBehaviour
             if (!isOnShop)
             {
                 interactButton.interactable = tarotCardData.CanApplyEffect();
+                descriptionContainer.SetNameAndDescription(tarotCardData.cardName, tarotCardData.GetDescription(), DescriptionType.Tarot);
+
             }
             else
             {
                 upperButton.interactable = tarotCardData.CanApplyEffect();
+                descriptionContainer.SetNameAndDescription(tarotCardData.cardName, tarotCardData.GetDescription(), DescriptionType.Tarot);
             }
             yield return new WaitForSeconds(0.2f);
         }

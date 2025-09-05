@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Generate last Card",menuName = "Scriptables/Tarot Card/Effect/Generate Last Card")]
+[CreateAssetMenu(fileName = "Generate last Card", menuName = "Scriptables/Tarot Card/Effect/Generate Last Card")]
 public class CreateLastCardEffect : CardEffect
 {
     bool planetCard;
@@ -16,6 +16,20 @@ public class CreateLastCardEffect : CardEffect
         {
             ConsumableManager.instance.GenerateTarotCard(CardManager.instance.lastTarotCard);
         }
+    }
+
+    public override string GetDescription(string baseDescription)
+    {
+        if (planetCard)
+        {
+            return baseDescription.Replace("_R_", CardManager.instance.lastPlanetCard.cardName);
+        }
+        if (tarotCard)
+        {
+            return baseDescription.Replace("_R_", CardManager.instance.lastTarotCard.cardName);
+        }
+        return baseDescription.Replace("_R_", "None");
+
     }
 
     public override bool CanBeUsed()

@@ -12,6 +12,7 @@ public class ConsumableManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI consumableSlotText;
     [Header("Testing")]
     [SerializeField] private PlanetCardData generatePlanetCard;
+    [SerializeField] private TarotCardData generateTarot;
 
     public static ConsumableManager instance;
 
@@ -53,6 +54,17 @@ public class ConsumableManager : MonoBehaviour
 
         GameObject go = Instantiate(consumablePrefab, spawnParent);
         go.GetComponent<ConsumableItem>().SetPlanetData(generatePlanetCard);
+
+        IncreaseConsumables();
+    }
+
+    [ContextMenu("Generate Tarot")]
+    private void GenerateTarotCard()
+    {
+        if (consumableAmmount >= maxConsumables) return;
+
+        GameObject go = Instantiate(consumablePrefab, spawnParent);
+        go.GetComponent<ConsumableItem>().SetTarotData(generateTarot);
 
         IncreaseConsumables();
     }

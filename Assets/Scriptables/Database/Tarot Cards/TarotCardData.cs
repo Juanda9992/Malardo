@@ -16,6 +16,11 @@ public class TarotCardData : ScriptableObject
     {
         CardManager.instance.UpdateLastCard(this);
     }
+    public string GetDescription()
+    {
+        Debug.Log(cardEffect.GetDescription(cardDescription));
+        return cardEffect.GetDescription(cardDescription);
+    }
 }
 
 [CreateAssetMenu(fileName = "Tarot Card Effect", menuName = "Scriptables/Tarot Card/Effect")]
@@ -30,6 +35,11 @@ public class CardEffect : ScriptableObject
     protected void TestEffect()
     {
         ApplyEffect();
+    }
+
+    public virtual string GetDescription(string baseDescription)
+    {
+        return baseDescription;
     }
 
     public virtual bool CanBeUsed()
