@@ -107,6 +107,7 @@ public class PackManager : MonoBehaviour
         SetAllUIStatus(true);
         CardManager.DestroyChildsInParent(itemsDisplay);
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
+        CardManager.DestroyChildsInParent(cardManipulationManager.cardEffectParent);
         isOnPackMenu = false;
     }
     [ContextMenu("Create pack")]
