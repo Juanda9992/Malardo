@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Superposition Joker
+  m_EditorClassIdentifier: 
+  jokerName: Superposition
+  description: 'Create a <style=Tarot>Tarot </style> card if poker hand contains
+    an <style=Info>Ace</style> and a <style=Info>Straight</style>
+
+    (Must have
+    room)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 4
+  jokerRarity: 0
+  jokerLogics:
+  - triggerEvent: 7
+    jokerTrigger:
+    - {fileID: 11400000, guid: b2a9226bb018d11448cafeb6df4f16ff, type: 2}
+    - {fileID: 11400000, guid: 6e641a0263ce4e243aaba09b3f6da9ca, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: cb0116f102d28cf44bf7e9f94f7926ba, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
