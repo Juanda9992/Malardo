@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Judgement
   m_EditorClassIdentifier: 
   cardName: Judgement (XX)
-  cardDescription: 'Creates a random Joker card
+  cardDescription: 'Creates a random <style="Info">Joker </style>card
 
-    (Must have room)'
+    (Must
+    have room)'
   cardEffect: {fileID: 11400000, guid: dae62568bbb86bc4daf0fc1482e0c663, type: 2}
   saveCard: 1

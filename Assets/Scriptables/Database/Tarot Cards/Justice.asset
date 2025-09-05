@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Justice
   m_EditorClassIdentifier: 
   cardName: Justice (VIII)
-  cardDescription: Enhances 1 selected card into a Glass Card
+  cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Glass
+    Card</style>
   cardEffect: {fileID: 11400000, guid: 9be9f211cd755f24caed9c601d17be3a, type: 2}
   saveCard: 1

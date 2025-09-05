@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Strenght
   m_EditorClassIdentifier: 
   cardName: Strength (XI)
-  cardDescription: Increases rank of up to 2 selected cards by 1
+  cardDescription: Increases rank of up to <style="Info">2</style> selected cards
+    by <style="Info">1</style>
   cardEffect: {fileID: 11400000, guid: 2d0f469df75c66347b2b6ac5ece0bded, type: 2}
   saveCard: 1

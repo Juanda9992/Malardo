@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: The Emperor
   m_EditorClassIdentifier: 
   cardName: The Emperor (IV)
-  cardDescription: 'Creates up to 2 random Tarot cards
+  cardDescription: 'Creates up to <style="Info">2</style>random <style="Tarot">Tarot
+    Cards</style>
 
     (Must have room)'
   cardEffect: {fileID: 11400000, guid: a132d33031da2a8498a9690f71e710db, type: 2}

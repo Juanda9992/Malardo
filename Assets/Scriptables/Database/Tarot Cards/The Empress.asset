@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: The Empress
   m_EditorClassIdentifier: 
   cardName: The Empress (III)
-  cardDescription: Enhances 2 selected cards to Mult Cards
+  cardDescription: Enhances <style="Info">2</style> selected cards to <style="Info">Mult
+    Cards</style>
   cardEffect: {fileID: 11400000, guid: a1f4769c4b321614e8f239e011ee8a63, type: 2}
   saveCard: 1

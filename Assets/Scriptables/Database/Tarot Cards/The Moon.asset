@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: The Moon
   m_EditorClassIdentifier: 
   cardName: The Moon (XVIII)
-  cardDescription: Converts up to 3 selected cards to Clubs
+  cardDescription: Converts up to <style="Info">3</style> selected cards to <style="Club">Clubs</style>
   cardEffect: {fileID: 11400000, guid: 58a2ee98112af7f4bbc6220f6eab3f0a, type: 2}
   saveCard: 1

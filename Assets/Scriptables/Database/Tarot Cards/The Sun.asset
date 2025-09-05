@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: The Sun
   m_EditorClassIdentifier: 
   cardName: The Sun (XIX)
-  cardDescription: Converts up to 3 selected cards to Hearths
+  cardDescription: Converts up to <style="Info">3</style> selected cards to <style="Hearth">Hearths</style>
   cardEffect: {fileID: 11400000, guid: 05884917090e5e845a42f0423f014418, type: 2}
   saveCard: 1

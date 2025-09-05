@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: The Tower
   m_EditorClassIdentifier: 
   cardName: The Tower (XVI)
-  cardDescription: Enhances 1 selected card into a Stone Card
+  cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Stone
+    Card</style>
   cardEffect: {fileID: 11400000, guid: 7484fa70f2ce37244858d42dab694c98, type: 2}
   saveCard: 1

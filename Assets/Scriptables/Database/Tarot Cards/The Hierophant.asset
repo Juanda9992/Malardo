@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: The Hierophant
   m_EditorClassIdentifier: 
   cardName: The Hierophant (V)
-  cardDescription: Converts up to 2 selected cards to Hearths
+  cardDescription: Converts up to <style="Info">2</style> selected cards to <style="Info">Bonus
+    Cards</style>
   cardEffect: {fileID: 11400000, guid: 176fd245c093a184abb6d0f80a5d966a, type: 2}
   saveCard: 1

@@ -15,7 +15,7 @@ public class PackInteractable : MonoBehaviour
     private Card createdCard;
     private PlanetCardData _planetCardData;
     private DescriptionContainer description;
-    void Start()
+    void Awake()
     {
         description = GetComponent<DescriptionContainer>();
     }

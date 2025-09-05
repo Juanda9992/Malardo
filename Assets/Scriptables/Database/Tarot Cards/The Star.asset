@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: The Star
   m_EditorClassIdentifier: 
   cardName: The Star (XVII)
-  cardDescription: Converts up to 3 selected cards to Diamonds
+  cardDescription: Converts up to <style="Info">3</style> selected cards to <style="Diamond">Diamonds</style>
   cardEffect: {fileID: 11400000, guid: 2ac67525538abcc40a22f4f22730cd28, type: 2}
   saveCard: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: The High Priestess
   m_EditorClassIdentifier: 
   cardName: The High Priestess (II)
-  cardDescription: 'Creates up to 2 random Planet cards
+  cardDescription: 'Creates up to <style="Info">2</style> random <style="Planet">Planet
+    Cards</style>
 
     (Must have room)'
   cardEffect: {fileID: 11400000, guid: 089b657136ead5342b4d981665a21d75, type: 2}

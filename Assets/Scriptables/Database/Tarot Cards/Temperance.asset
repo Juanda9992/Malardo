@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Temperance
   m_EditorClassIdentifier: 
   cardName: Temperance (XIV)
-  cardDescription: 'Gives the total sell value of all current Jokers
+  cardDescription: 'Gives the total sell value of all current <style="Info">Jokers
+    </style>
 
-    (Max of
-    $50)
+    (Max of $<style="Info">50</style>)
 
-    (Current: _R_)'
+    (Current:<style="Cash">$_R_</style>)'
   cardEffect: {fileID: 11400000, guid: 5920fe8773ac29b4a8ade9e0a031af9c, type: 2}
   saveCard: 1

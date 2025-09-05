@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
-  m_Name: The Death
+  m_Name: Death
   m_EditorClassIdentifier: 
   cardName: Death (XIII)
-  cardDescription: 'Select 2 cards, convert the left card into the right card
+  cardDescription: 'Select <style="Info">2</style> cards, convert the <style="Info">left
+    </style>card into the <style="Info">right </style>card
 
-    (Drag
-    to rearrange)'
+    (Drag to rearrange)'
   cardEffect: {fileID: 11400000, guid: f266ebed0ec50d34db2b5274ea346423, type: 2}
   saveCard: 1

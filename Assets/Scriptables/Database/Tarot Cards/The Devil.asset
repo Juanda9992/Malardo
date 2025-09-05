@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: The Devil
   m_EditorClassIdentifier: 
   cardName: The Devil (XV)
-  cardDescription: Enhances 1 selected card into a Gold Card
+  cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Gold
+    Card</style>
   cardEffect: {fileID: 11400000, guid: 907125defac1e324e9203959114c6b28, type: 2}
   saveCard: 1
