@@ -7,6 +7,7 @@ public class PackDatabase : ScriptableObject
     public List<PackData> buffonPacks;
     public List<PackData> cardPacks;
     public List<PackData> planetPacks;
+    public List<PackData> tarotPacks;
 
     public PackData GetRandomBuffonPack(PackSize packSize)
     {
@@ -24,6 +25,13 @@ public class PackDatabase : ScriptableObject
     {
         List<PackData> packsGathered = planetPacks.FindAll(x => x.packSize == packSize);
         return packsGathered[Random.Range(0, packsGathered.Count)];
+    }
+
+    public PackData GetRandomArcanaPack(PackSize packSize)
+    {
+        List<PackData> packsGathered = tarotPacks.FindAll(x => x.packSize == packSize);
+        return packsGathered[Random.Range(0, packsGathered.Count)];
+
     }
 }
 public enum PackSize

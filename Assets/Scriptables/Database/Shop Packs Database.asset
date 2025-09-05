@@ -24,3 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2cabd88bd20f8e47b20c3a817c22380, type: 2}
   - {fileID: 11400000, guid: a5c3e9dc48a217b46a508ffd3fd895ff, type: 2}
   - {fileID: 11400000, guid: 58d401007a1aec04eb4322500d0a3140, type: 2}
+  tarotPacks:
+  - {fileID: 11400000, guid: 90f7b69ff3192e5498899e8a2604f241, type: 2}
+  - {fileID: 11400000, guid: 3371d8f31e8df1d459a98777bad6a08c, type: 2}
+  - {fileID: 11400000, guid: 82fffe76b8d8b804b9f49bd5a43186e8, type: 2}
