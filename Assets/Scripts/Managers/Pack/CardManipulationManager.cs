@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardManipulationManager : MonoBehaviour
 {
-    [SerializeField] private Transform cardEffectParent;
+    public Transform cardEffectParent;
     [SerializeField] private Transform handContainer;
     [SerializeField] private HorizontalLayoutGroup layoutGroup;
     [SerializeField] private GameObject packinteractable;

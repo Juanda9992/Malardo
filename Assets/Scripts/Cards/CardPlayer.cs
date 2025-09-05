@@ -80,6 +80,7 @@ public class CardPlayer : MonoBehaviour
             yield return CardManager.instance.TriggerEndRoundCardAbilities();
             yield return new WaitForSeconds(0.2f);
             ScoreManager.instance.OnBlindDefeated();
+            CardManager.instance.DestroyCardsOnHand();
         }
         else
         {
