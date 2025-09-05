@@ -16,6 +16,8 @@ MonoBehaviour:
   cardDescription: 'Gives the total sell value of all current Jokers
 
     (Max of
-    $50)'
+    $50)
+
+    (Current: _R_)'
   cardEffect: {fileID: 11400000, guid: 5920fe8773ac29b4a8ade9e0a031af9c, type: 2}
   saveCard: 1

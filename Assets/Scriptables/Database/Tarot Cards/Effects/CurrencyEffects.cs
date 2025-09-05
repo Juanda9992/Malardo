@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Currency Effect",menuName = "Scriptables/Tarot Card/Effect/Currency Effect")]
+[CreateAssetMenu(fileName = "Currency Effect", menuName = "Scriptables/Tarot Card/Effect/Currency Effect")]
 public class CurrencyEffects : CardEffect
 {
     public bool duplicateMoney;
@@ -8,15 +8,33 @@ public class CurrencyEffects : CardEffect
     {
         if (duplicateMoney)
         {
-            int ammount = CurrencyManager.instance.currentCurrency;
-            ammount = Mathf.Clamp(ammount, 0, 20);
-            CurrencyManager.instance.AddCurrency(ammount);
+            CurrencyManager.instance.AddCurrency(CardCalculation());
         }
         if (sellValueToMoney)
         {
-            int ammount = JokerManager.instance.GetSellValueFromAllJokers();
-            ammount = Mathf.Clamp(ammount, 0, 50);
-            CurrencyManager.instance.AddCurrency(ammount);
+            CurrencyManager.instance.AddCurrency(CardCalculation());
         }
+    }
+
+    private int CardCalculation()
+    {
+        int ammount;
+        if (duplicateMoney)
+        {
+            ammount = CurrencyManager.instance.currentCurrency;
+            ammount = Mathf.Clamp(ammount, 0, 20);
+        }
+        else
+        {
+            ammount = JokerManager.instance.GetSellValueFromAllJokers();
+            ammount = Mathf.Clamp(ammount, 0, 50);
+
+        }
+        return ammount;
+    }
+
+    public override string GetDescription(string baseDescription)
+    {
+        return baseDescription.Replace("_R_", CardCalculation().ToString());
     }
 }
