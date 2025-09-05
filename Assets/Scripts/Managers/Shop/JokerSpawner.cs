@@ -98,14 +98,18 @@ public class JokerSpawner : MonoBehaviour
             if (randomPack < 68)
             {
                 //CELESTIAL / STANDARD
-                int packChoice = Random.Range(0, 2);
+                int packChoice = Random.Range(0, 3);
                 if (packChoice == 0)
                 {
                     shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomPlanetPack(packSize));
                 }
-                else
+                else if (packChoice == 1)
                 {
                     shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomCardPack(packSize));
+                }
+                else
+                {
+                    shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomArcanaPack(packSize));
                 }
             }
             else

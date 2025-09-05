@@ -108,6 +108,11 @@ public class PackInteractable : MonoBehaviour
                 break;
             case PackType.Tarot:
                 tarotCard.cardEffect.ApplyEffect();
+
+                if (tarotCard.saveCard)
+                {
+                    tarotCard.SaveCard();
+                }
                 break;
         }
         PackManager.instance.SelectItem();
