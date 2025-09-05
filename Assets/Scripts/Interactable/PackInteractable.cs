@@ -7,6 +7,7 @@ public class PackInteractable : MonoBehaviour
     public PackType itemType;
     public JokerData jokerData;
     public PackData packData;
+    public TarotCardData tarotCard;
 
     [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
@@ -62,6 +63,13 @@ public class PackInteractable : MonoBehaviour
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         cardName.text = planetCardData.cardName;
         GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
+    }
+
+    public void SetTarotData(TarotCardData tarotCardData)
+    {
+        tarotCard = tarotCardData;
+        cardName.text = tarotCardData.cardName;
+        GetComponent<DescriptionContainer>().SetNameAndDescription(tarotCardData.cardName, tarotCardData.cardDescription, DescriptionType.Tarot);
     }
 
     public void ListenForAvaliability()

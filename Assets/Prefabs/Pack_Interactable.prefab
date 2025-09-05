@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 649758609934919251, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 649758609934919251, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 220
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 649758609934919251, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,5 +215,6 @@ MonoBehaviour:
   itemType: 0
   jokerData: {fileID: 0}
   packData: {fileID: 0}
+  tarotCard: {fileID: 0}
   cardName: {fileID: 1768189967661908232}
   actionButton: {fileID: 4982406563334533795}
