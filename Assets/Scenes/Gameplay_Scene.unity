@@ -2542,7 +2542,7 @@ MonoBehaviour:
   shopItemSlots: 2
   jokerTransform: {fileID: 37442309}
   jokerPrefab: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
-  planetCardprefab: {fileID: 6311828478413497438, guid: e267077690abfe74492c3c641e7c4960, type: 3}
+  consumableCardprefab: {fileID: 6311828478413497438, guid: e267077690abfe74492c3c641e7c4960, type: 3}
   packsTransform: {fileID: 989674095}
   shopPackPrefab: {fileID: 966688041894615298, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
 --- !u!1 &150085677
@@ -8641,7 +8641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &416426810
 RectTransform:
   m_ObjectHideFlags: 0

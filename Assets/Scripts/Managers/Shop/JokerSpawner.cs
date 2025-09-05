@@ -7,7 +7,7 @@ public class JokerSpawner : MonoBehaviour
     [Header("Joker Spawning")]
     [SerializeField] private Transform jokerTransform;
     [SerializeField] private GameObject jokerPrefab;
-    [SerializeField] private GameObject planetCardprefab;
+    [SerializeField] private GameObject consumableCardprefab;
 
     [Header("Packs Database")]
     [SerializeField] private Transform packsTransform;
@@ -34,11 +34,18 @@ public class JokerSpawner : MonoBehaviour
                 GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
                 currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJoker());
             }
+            else if (randomChoice < 85)
+            {
+                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform);
+                consumableCard.GetComponent<ConsumableItem>().isOnShop = true;
+                consumableCard.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
+            }
             else
             {
-                GameObject planetCard = Instantiate(planetCardprefab, jokerTransform);
-                planetCard.GetComponent<ConsumableItem>().isOnShop = true;
-                planetCard.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
+                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform);
+
+                consumableCard.GetComponent<ConsumableItem>().isOnShop = true;
+                consumableCard.GetComponent<ConsumableItem>().SetTarotData(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
             }
         }
 
