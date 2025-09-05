@@ -8,6 +8,8 @@ public class CreateTarotCard : JokerEffect
         if (ConsumableManager.instance.CanAddConsumable)
         {
             ConsumableManager.instance.GenerateTarotCard(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
+            instance.triggerMessage = "Create!";
+            instance.jokerContainer.TriggerMessage();
         }
     }
 }
