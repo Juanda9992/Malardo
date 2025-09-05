@@ -56,7 +56,14 @@ public class ConsumableItem : MonoBehaviour
     {
         while (true)
         {
-            interactButton.interactable = tarotCardData.CanApplyEffect();
+            if (!isOnShop)
+            {
+                interactButton.interactable = tarotCardData.CanApplyEffect();
+            }
+            else
+            {
+                upperButton.interactable = tarotCardData.CanApplyEffect();
+            }
             yield return new WaitForSeconds(0.2f);
         }
     }
@@ -144,7 +151,14 @@ public class ConsumableItem : MonoBehaviour
             SetUpShopControls?.Invoke();
 
             bottomButton.interactable = CurrencyManager.instance.currentCurrency >= buyValue;
-            upperButton.interactable = bottomButton.interactable;
+            if (tarotCardData != null)
+            {
+                upperButton.interactable = tarotCardData.CanApplyEffect();
+            }
+            else
+            {
+                upperButton.interactable = bottomButton.interactable;
+            }
 
             upperButton.targetGraphic.color = Color.magenta;
             sellButtonText.text = "BUY & USE";
@@ -153,6 +167,7 @@ public class ConsumableItem : MonoBehaviour
         else
         {
             SetUpConsumableControls?.Invoke();
+            upperButton.interactable = true;
             upperButton.targetGraphic.color = Color.green;
             sellButtonText.text = "SELL $" + sellValue;
         }
