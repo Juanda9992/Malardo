@@ -18,6 +18,7 @@ public class ConsumableManager : MonoBehaviour
 
     public bool CanAddConsumable { get { return consumableAmmount < maxConsumables; } }
 
+    public int tarotCardsUsed;
     private int consumableAmmount;
 
     void Awake()

@@ -28,16 +28,20 @@ public class JokerManager : MonoBehaviour
     {
         jokers = new List<JokerExecution>();
 
-        for (int i = 0; i < currentJokers.Count; i++)
+        if (eventJokertrigger == TriggerEvent.OnTarotCardUsed)
         {
-            foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
+            ConsumableManager.instance.tarotCardsUsed++;
+        }
+        for (int i = 0; i < currentJokers.Count; i++)
             {
-                if (logics.triggerEvent == eventJokertrigger)
+                foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
                 {
-                    jokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
+                    if (logics.triggerEvent == eventJokertrigger)
+                    {
+                        jokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
+                    }
                 }
             }
-        }
         foreach (var joker in jokers)
         {
             if (joker.logic.CanBetriggered())
