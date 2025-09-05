@@ -31,19 +31,28 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        UpdateCardSpacing();
+        UpdateCardSpacing(handParent,cardsLayout);
     }
 
-    private void UpdateCardSpacing()
+    public void GenerateCardOnHand(Card card,Transform parent,HorizontalLayoutGroup horizontalLayoutGroup)
     {
-        if (handParent.childCount > 8)
+        GameObject currentCard = Instantiate(cardprefab, parent.transform);
+
+        cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
+        currentCard.GetComponent<Card_Data>().SetCardData(card);
+        UpdateCardSpacing(parent,horizontalLayoutGroup);
+    }
+
+    private void UpdateCardSpacing(Transform parent,HorizontalLayoutGroup horizontalLayoutGroup)
+    {
+        if (parent.childCount > 8)
         {
             Debug.Log("Pass limit");
-            cardsLayout.spacing = -handParent.childCount * 5;
+            horizontalLayoutGroup.spacing = -parent.childCount * 5;
         }
         else
         {
-            cardsLayout.spacing = 0;
+            horizontalLayoutGroup.spacing = 0;
         }
     }
 
