@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,9 +18,9 @@ public class PackInteractable : MonoBehaviour
     {
         jokerData = createdJoker.data;
         itemType = PackType.Buffon;
-        GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description,GetTypeByjokerRarity(createdJoker));
+        GetComponent<DescriptionContainer>().SetNameAndDescription(jokerData.jokerName, jokerData.description, GetTypeByjokerRarity(createdJoker));
         cardName.text = createdJoker.data.jokerName;
-        ListenForAvaliability();
+        StartCoroutine("ListenForAvaliability");
     }
 
     public DescriptionType GetTypeByjokerRarity(JokerInstance jokerInstance)
@@ -67,16 +68,27 @@ public class PackInteractable : MonoBehaviour
 
     public void SetTarotData(TarotCardData tarotCardData)
     {
+        itemType = PackType.Tarot;
         tarotCard = tarotCardData;
         cardName.text = tarotCardData.cardName;
         GetComponent<DescriptionContainer>().SetNameAndDescription(tarotCardData.cardName, tarotCardData.cardDescription, DescriptionType.Tarot);
+        StartCoroutine("ListenForAvaliability");
     }
 
-    public void ListenForAvaliability()
+    public IEnumerator ListenForAvaliability()
     {
-        if (itemType == PackType.Buffon)
+        while (true)
         {
-            actionButton.interactable = JokerManager.instance.CanAddJoker();
+            if (itemType == PackType.Buffon)
+            {
+                actionButton.interactable = JokerManager.instance.CanAddJoker();
+            }
+
+            if (itemType == PackType.Tarot)
+            {
+                actionButton.interactable = tarotCard.CanApplyEffect();
+            }
+            yield return new WaitForSeconds(0.2f);
         }
     }
     public void SelectItem()
@@ -94,9 +106,10 @@ public class PackInteractable : MonoBehaviour
                 StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
                 CardManager.instance.UpdateLastCard(_planetCardData);
                 break;
+            case PackType.Tarot:
+                tarotCard.cardEffect.ApplyEffect();
+                break;
         }
-
         PackManager.instance.SelectItem();
-        JokerDescription.instance.SetDescriptionOff();
     }
 }
