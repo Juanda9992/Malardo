@@ -47,7 +47,7 @@ public class CardManager : MonoBehaviour
     {
         if (parent.childCount > 8)
         {
-            Debug.Log("Pass limit");
+            Debug.Log(parent.childCount);
             horizontalLayoutGroup.spacing = -parent.childCount * 5;
         }
         else
@@ -149,6 +149,13 @@ public class CardManager : MonoBehaviour
     {
         SetHandVisibility(true);
         DestroyCardsOnHand();
+        StartCoroutine("SetCardSpacing");
+    }
+    private IEnumerator SetCardSpacing()
+    {
+        yield return new WaitForEndOfFrame();
+        UpdateCardSpacing(handParent, cardsLayout);
+
     }
 
     public void UpdateLastCard(PlanetCardData planetCardData)
