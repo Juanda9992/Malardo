@@ -121,6 +121,10 @@ public class HandManager : MonoBehaviour
 
     private void SetPlayButtonsState(bool active)
     {
+        if (PackManager.instance.isOnPackMenu)
+        {
+            active = false;
+        }
         playButton.gameObject.SetActive(active);
 
         discardButton.gameObject.SetActive(active);
