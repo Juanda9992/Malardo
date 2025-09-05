@@ -61,19 +61,21 @@ public class PackManager : MonoBehaviour
         for (int i = 0; i < cardsToCreate; i++)
         {
 
-            GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
             if (packType == PackType.Buffon)
             {
+                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
                 item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
             }
             else if (packType == PackType.Card)
             {
+                GameObject item = Instantiate(cardPackInteractablePrefab, itemsDisplay);
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.cardPackBgColor);
                 item.GetComponent<PackInteractable>().SetPackCard();
             }
             else if (packType == PackType.Planet)
             {
+                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.planetPackBgColor);
                 item.GetComponent<PackInteractable>().SetPlanetCard(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
             }
