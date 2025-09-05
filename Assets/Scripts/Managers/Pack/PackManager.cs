@@ -1,18 +1,23 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class PackManager : MonoBehaviour
 {
+    public bool isOnPackMenu;
     public static PackManager instance;
     [SerializeField] private GameObject[] otherUI;
     [SerializeField] private GameObject packSection;
     [SerializeField] private JokerListContainer jokerListContainer;
     [SerializeField] private GameObject PackInteractablePrefab;
     [SerializeField] private GameObject cardPackInteractablePrefab;
+    [SerializeField] private CardManipulationManager cardManipulationManager;
     [SerializeField] private Transform itemsDisplay;
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI packNameLabel;
     [SerializeField] private TextMeshProUGUI selectAmmountLabel;
+    [SerializeField] private GameObject cardManipulationContainer;
+    [SerializeField] private GameObject defaultContainer;
     private int maxSelections = 1;
     [SerializeField] private PackData testPack;
     void Awake()
@@ -23,15 +28,26 @@ public class PackManager : MonoBehaviour
     public void ReceiveCreatePackInstruction(PackData packDesired)
     {
         maxSelections = packDesired.selectCards;
-        SetAllUIStatus(false);
 
+        SetAllUIStatus(false);
+        if (packDesired.packType == PackType.Tarot)
+        {
+            cardManipulationContainer.SetActive(true);
+            cardManipulationManager.SetCardLogic(packDesired.numberOfCards);
+        }
+        else
+        {
+            defaultContainer.SetActive(true);
+            CreatePack(packDesired.numberOfCards, packDesired.packType);
+        }
         packNameLabel.text = packDesired.packName;
         selectAmmountLabel.text = "Choose " + maxSelections;
-
-        CreatePack(packDesired.numberOfCards, packDesired.packType);
+        isOnPackMenu = true;
     }
     private void SetAllUIStatus(bool status)
     {
+        defaultContainer.SetActive(false);
+        cardManipulationContainer.SetActive(false);
         foreach (var element in otherUI)
         {
             element.SetActive(status);
@@ -45,38 +61,40 @@ public class PackManager : MonoBehaviour
         for (int i = 0; i < cardsToCreate; i++)
         {
 
+            GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
             if (packType == PackType.Buffon)
             {
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.buffonPackBgColor);
-                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetJokerInfo(jokerListContainer.GetRandomJoker());
             }
             else if (packType == PackType.Card)
             {
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.cardPackBgColor);
-                GameObject item = Instantiate(cardPackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetPackCard();
             }
             else if (packType == PackType.Planet)
             {
                 BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.planetPackBgColor);
-
-                GameObject item = Instantiate(PackInteractablePrefab, itemsDisplay);
                 item.GetComponent<PackInteractable>().SetPlanetCard(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
             }
-
         }
     }
 
     public void SelectItem()
     {
+        StartCoroutine("SelectItemWithDelay");
+    }
+    private IEnumerator SelectItemWithDelay()
+    {
+        selectAmmountLabel.text = "Choose " + maxSelections;
         maxSelections--;
-
+        JokerDescription.instance.SetDescriptionOff();
+        yield return new WaitForSeconds(1);
         if (maxSelections == 0)
         {
             SkipPackage(false);
         }
-        selectAmmountLabel.text = "Choose " + maxSelections;
+
     }
 
     //CALLED BY UI BUTTON
@@ -89,6 +107,7 @@ public class PackManager : MonoBehaviour
         SetAllUIStatus(true);
         CardManager.DestroyChildsInParent(itemsDisplay);
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
+        isOnPackMenu = false;
     }
     [ContextMenu("Create pack")]
     private void TestPack()
