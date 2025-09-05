@@ -70,11 +70,13 @@ public class SuitEffects : CardEffect
                 orderedCards[1] = HandManager.instance.handCards[0];
             }
 
-            Debug.Log(orderedCards[0].linkedCard.transform.position.x+ " " + orderedCards[0].cardName);
-            Debug.Log(orderedCards[1].linkedCard.transform.position.x + " "+orderedCards[1].cardName);
+            Debug.Log(orderedCards[0].linkedCard.transform.position.x + " " + orderedCards[0].cardName);
+            Debug.Log(orderedCards[1].linkedCard.transform.position.x + " " + orderedCards[1].cardName);
 
             orderedCards[0].linkedCard.visuals.CoptyCardCoroutineRequest(orderedCards[1]);
         }
+
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
     public override bool CanBeUsed()
     {

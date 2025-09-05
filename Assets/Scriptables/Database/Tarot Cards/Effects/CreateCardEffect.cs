@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Create Card",menuName ="Scriptables/Tarot Card/Effect/Create Card")]
+[CreateAssetMenu(fileName = "Create Card", menuName = "Scriptables/Tarot Card/Effect/Create Card")]
 public class CreateCardEffect : CardEffect
 {
     public bool planetCards;
@@ -26,5 +26,6 @@ public class CreateCardEffect : CardEffect
 
             }
         }
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
 }

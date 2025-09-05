@@ -14,6 +14,8 @@ public class CurrencyEffects : CardEffect
         {
             CurrencyManager.instance.AddCurrency(CardCalculation());
         }
+
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
 
     private int CardCalculation()

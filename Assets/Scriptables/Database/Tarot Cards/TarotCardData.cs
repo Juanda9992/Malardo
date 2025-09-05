@@ -18,7 +18,6 @@ public class TarotCardData : ScriptableObject
     }
     public string GetDescription()
     {
-        Debug.Log(cardEffect.GetDescription(cardDescription));
         return cardEffect.GetDescription(cardDescription);
     }
 }

@@ -16,6 +16,7 @@ public class CreateLastCardEffect : CardEffect
         {
             ConsumableManager.instance.GenerateTarotCard(CardManager.instance.lastTarotCard);
         }
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
 
     public override string GetDescription(string baseDescription)

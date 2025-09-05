@@ -24,5 +24,6 @@ public class CreateJokerEffect : CardEffect
 
         }
         JokerManager.instance.AddJoker(jokerData);
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
 }
