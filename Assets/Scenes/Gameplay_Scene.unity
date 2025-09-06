@@ -11032,8 +11032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJokers: []
-  testingJokers:
-  - {fileID: 11400000, guid: 1da69c36d9dd15140a4200df988444f2, type: 2}
+  testingJokers: []
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}

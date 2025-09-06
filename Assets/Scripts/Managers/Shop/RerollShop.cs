@@ -28,7 +28,7 @@ public class RerollShop : MonoBehaviour
     {
         if (CheckIfEnoughCurrencyForReRoll() || currentFreeRerolls > 0)
         {
-            if (currentFreeRerolls == 0)
+            if (currentFreeRerolls <= 0)
             {
                 CurrencyManager.instance.RemoveCurrency(currentValue);
                 currentValue++;
