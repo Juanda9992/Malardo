@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -68,6 +69,13 @@ public class DeckManager : MonoBehaviour
         {
             CreateRandomCard();
         }
+        StartCoroutine("SetHandSpacing");
+    }
+
+    private IEnumerator SetHandSpacing()
+    {
+        yield return new WaitForSeconds(0.2f);
+        CardManager.instance.SetHandSpacing();
     }
 
     public void CreateRandomCard()

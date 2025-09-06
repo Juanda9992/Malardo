@@ -43,7 +43,12 @@ public class CardManager : MonoBehaviour
         UpdateCardSpacing(parent,horizontalLayoutGroup);
     }
 
-    private void UpdateCardSpacing(Transform parent,HorizontalLayoutGroup horizontalLayoutGroup)
+    public void SetHandSpacing()
+    {
+        UpdateCardSpacing(handParent, cardsLayout);
+    }
+
+    private void UpdateCardSpacing(Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)
     {
         if (parent.childCount > 8)
         {
