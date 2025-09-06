@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PackManager : MonoBehaviour
 {
@@ -93,9 +94,10 @@ public class PackManager : MonoBehaviour
         maxSelections--;
         selectAmmountLabel.text = "Choose " + maxSelections;
         JokerDescription.instance.SetDescriptionOff();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
         if (maxSelections == 0)
         {
+            CardManager.DestroyChildsInParent(cardManipulationManager.cardEffectParent);
             SkipPackage(false);
             JokerDescription.instance.SetDescriptionOff();
         }
@@ -111,8 +113,10 @@ public class PackManager : MonoBehaviour
         }
         SetAllUIStatus(true);
         CardManager.DestroyChildsInParent(itemsDisplay);
+        CardManager.DestroyChildsInParent(cardManipulationManager.layoutGroup.transform);
+        CardManager.instance.cardsOnScreen.Clear();
+        HandManager.instance.handCards.Clear();
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);
-        CardManager.DestroyChildsInParent(cardManipulationManager.cardEffectParent);
         isOnPackMenu = false;
     }
     [ContextMenu("Create pack")]
