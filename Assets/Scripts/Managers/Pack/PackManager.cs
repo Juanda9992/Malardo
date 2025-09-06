@@ -97,6 +97,7 @@ public class PackManager : MonoBehaviour
         if (maxSelections == 0)
         {
             SkipPackage(false);
+            JokerDescription.instance.SetDescriptionOff();
         }
 
     }
