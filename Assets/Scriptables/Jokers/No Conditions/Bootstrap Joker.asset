@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bootstrap Joker
   m_EditorClassIdentifier: 
   jokerName: Bootstrap
-  description: <style="Mult">+2 mult</style>for every $5 you have (Currently <style="Mult">_R_
+  description: <style="Mult">+2 mult </style>for every $5 you have (Currently <style="Mult">_R_
     mult</style>)
   triggerMessage: 
   overrideEffect: 0
