@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Riff-Raff Joker
+  m_EditorClassIdentifier: 
+  jokerName: Riff-Raff
+  description: 'When <style=Info>Blind</style> is selected, create <style=Info>2</style>
+    <style=Chips>Common</style> <style=Info>Jokers</style>
+
+    (Must have room)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 0
+  jokerLogics:
+  - triggerEvent: 0
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 7fa2e85ed5af0244d8926a170faea886, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
