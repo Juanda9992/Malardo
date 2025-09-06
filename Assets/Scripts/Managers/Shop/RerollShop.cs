@@ -19,7 +19,7 @@ public class RerollShop : MonoBehaviour
 
     private void SetRerollText()
     {
-        int value = currentFreeRerolls == 0 ? currentValue : 0;
+        int value = currentFreeRerolls <= 0 ? currentValue : 0;
         rerollButtonText.text = "Reroll" + "\n" + "$" + value;
         reRollButton.interactable = CheckIfEnoughCurrencyForReRoll();
     }
