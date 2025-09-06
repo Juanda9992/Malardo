@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.6.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.6.0
+  logcontent: "<b>Added</b>\n\n- The texts appears with colors (Example: Any reference
+    to multi will be red, Chips => Blue, etc).\n- visual tags on the interactables
+    (Example: Planet Cards will have a blue tag \"Planet\" when hovered)\n- Card
+    edition Explanation when hovering.\n- Card Type Description when hovering.\n-
+    Seal explanation when hovering.\n\n- Purple Seal: It generates a tarot card when
+    the card is discarded.\n- Full Slot animation on the joker section when trying
+    to add a joker without avaliable space (Same for shop packs)\n\n- Tarot Cards:
+    These are consumables that will give you many effects to boost your strategy.
+    By the moment there are 20 cards:\n\t- The Fool.\r\n\t- The Magician.\r\n\t-
+    The High Priestess.\r\n\t- The Empress.\r\n\t- The Emperor.\r\r\n\t- The Hierophant.\r\r\n\t-
+    The Chariot.\r\n\t- Justice.\r\n\t- The Hermit.\r\r\n\t- Strength.\r\n\t- The
+    Hanged Man.\r\n\t- Death.\r\r\n\t- Temperance.\r\n\t- The Devil.\r\n\t- The Tower.\r\n\t-
+    The Star.\r\n\t- The Moon.\r\n\t- The Sun\r\n\t- Judgement.\r\n\t- The World.\n\n-
+    Arcana Packs: These packs contain tarot cards ready to use.\n\n- Adeed 7 Jokers:\n\t-
+    8 ball.\n\t- Vagabond.\n\t- Riff-Raff.\n\t- Fortune Teller.\n\t- Hallucination.\n\t-
+    Cartomancer.\n\t- Superposition.\n\n<b>Updated</b>\n\n- The base speed of all
+    actions, now the game brings faster matches.\n- The description of the jokers
+    will be turn off after selling it.\n- The hand size now adjust the spacing between
+    cards (With more cards, less space between them)\n- Now when a joker is trigered,
+    it will shake it\xB4s card.\n- Tarot Cards now can appear on the shop.\n\n<b>Fixed</b>\n\n-
+    Free rerolls after rerolling for first time."
