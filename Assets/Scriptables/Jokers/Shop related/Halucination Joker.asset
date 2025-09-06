@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Halucination Joker
+  m_EditorClassIdentifier: 
+  jokerName: Hallucination
+  description: '1 in 2 chance to create a Tarot card when any Booster Pack is opened
+
+    (Must
+    have room)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 4
+  jokerRarity: 0
+  jokerLogics:
+  - triggerEvent: 16
+    jokerTrigger:
+    - {fileID: 11400000, guid: b74f2e93f4b7a4a48b6975c6447d3e63, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: cb0116f102d28cf44bf7e9f94f7926ba, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
