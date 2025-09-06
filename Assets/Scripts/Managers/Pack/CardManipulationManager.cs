@@ -7,7 +7,7 @@ public class CardManipulationManager : MonoBehaviour
 {
     public Transform cardEffectParent;
     [SerializeField] private Transform handContainer;
-    [SerializeField] private HorizontalLayoutGroup layoutGroup;
+    public HorizontalLayoutGroup layoutGroup;
     [SerializeField] private GameObject packinteractable;
     public void SetCardLogic(int cards)
     {
