@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Tribe
   m_EditorClassIdentifier: 
   jokerName: The Tribe
-  description: '<style="Mult">X2 multstyle> if played hand contains a <style="Cash">Flush</style> '
+  description: '<style="Mult">X2 mult</style> if played hand contains a <style="Cash">Flush</style> '
   triggerMessage: x2
   overrideEffect: 2
   shopValue: 8
