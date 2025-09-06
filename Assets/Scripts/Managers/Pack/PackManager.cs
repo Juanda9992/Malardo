@@ -90,8 +90,8 @@ public class PackManager : MonoBehaviour
     }
     private IEnumerator SelectItemWithDelay()
     {
-        selectAmmountLabel.text = "Choose " + maxSelections;
         maxSelections--;
+        selectAmmountLabel.text = "Choose " + maxSelections;
         JokerDescription.instance.SetDescriptionOff();
         yield return new WaitForSeconds(1);
         if (maxSelections == 0)
