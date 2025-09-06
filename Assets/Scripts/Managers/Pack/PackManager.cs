@@ -43,6 +43,8 @@ public class PackManager : MonoBehaviour
         packNameLabel.text = packDesired.packName;
         selectAmmountLabel.text = "Choose " + maxSelections;
         isOnPackMenu = true;
+
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnBoosterPackOpened));
     }
     private void SetAllUIStatus(bool status)
     {
