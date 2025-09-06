@@ -17,7 +17,7 @@ MonoBehaviour:
   triggerMessage: Disabled
   overrideEffect: 0
   shopValue: 10
-  jokerRarity: 0
+  jokerRarity: 3
   jokerLogics:
   - triggerEvent: 0
     jokerTrigger: []
