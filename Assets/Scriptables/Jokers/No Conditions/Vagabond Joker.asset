@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Vagabond Joker
   m_EditorClassIdentifier: 
   jokerName: Vagabond
-  description: Create a <style=Tarot>Tarot </style>card if hand is played with <style=Info>$4</style>or
-    less
+  description: Create a <style=Tarot>Tarot </style>card if hand is played with <style=Info>$4</style>
+    or less
   triggerMessage: 
   overrideEffect: 0
   shopValue: 8
