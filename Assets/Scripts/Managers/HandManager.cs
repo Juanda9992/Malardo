@@ -108,6 +108,13 @@ public class HandManager : MonoBehaviour
             {
                 if (triggerEvent)
                 {
+                    if (handCards[i].cardSeal == Seal.Purple)
+                    {
+                        if (ConsumableManager.instance.CanAddConsumable)
+                        {
+                            ConsumableManager.instance.GenerateTarotCard(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
+                        }
+                    }
                     yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
                 }
                 handCards[i].linkedCard.pointerInteraction.RemoveCard();
