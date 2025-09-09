@@ -5,7 +5,7 @@ public class CreateJokerEffect : CardEffect
 {
     public bool anyJoker;
     public JokerRarity desiredRarity;
-
+    public bool blankCurrency;
     public override bool CanBeUsed()
     {
         return JokerManager.instance.CanAddJoker();
@@ -22,6 +22,11 @@ public class CreateJokerEffect : CardEffect
         {
             jokerData = DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(desiredRarity).data;
 
+        }
+
+        if (blankCurrency)
+        {
+            CurrencyManager.instance.SetCurrency(0);
         }
         JokerManager.instance.AddJoker(jokerData);
         JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
