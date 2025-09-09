@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -33,15 +34,15 @@ public class JokerManager : MonoBehaviour
             ConsumableManager.instance.tarotCardsUsed++;
         }
         for (int i = 0; i < currentJokers.Count; i++)
+        {
+            foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
             {
-                foreach (var logics in currentJokers[i]._jokerInstance.jokerLogics)
+                if (logics.triggerEvent == eventJokertrigger)
                 {
-                    if (logics.triggerEvent == eventJokertrigger)
-                    {
-                        jokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
-                    }
+                    jokers.Add(new JokerExecution() { container = currentJokers[i], logic = logics });
                 }
             }
+        }
         foreach (var joker in jokers)
         {
             if (joker.logic.CanBetriggered())
@@ -69,6 +70,23 @@ public class JokerManager : MonoBehaviour
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
+    public void AddJoker(JokerInstance jokerInstance)
+    {
+        JokerContainer createdJoker = CreateJoker(jokerInstance.data);
+
+        createdJoker._jokerInstance.SetInstanceData(jokerInstance);
+        GameStatusManager.SetJokersInMatch(currentJokers.Count);
+
+        foreach (var logic in createdJoker._jokerInstance.jokerLogics)
+        {
+            logic.jokerEffect[0].UpdateDescription(createdJoker._jokerInstance);
+        }
+        currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+
+
+        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
+    }
+
     private JokerContainer CreateJoker(JokerData jokerData)
     {
         GameObject newJoker = Instantiate(jokerCard, jokerParent);
@@ -85,7 +103,6 @@ public class JokerManager : MonoBehaviour
         }
         return jokerContainer;
     }
-
     public IEnumerator UpdateJokerList()
     {
         yield return new WaitForEndOfFrame();
@@ -127,6 +144,34 @@ public class JokerManager : MonoBehaviour
         return ammount;
     }
 
+    [ContextMenu("Copy Joker")]
+    private void SetCopyRandomJokerCoroutine()
+    {
+        StartCoroutine("CopyRandomJoker");
+    }
+
+    public IEnumerator CopyRandomJoker()
+    {
+        JokerInstance copyJoker = currentJokers[Random.Range(0, currentJokers.Count)]._jokerInstance;
+
+        ClearAllJokers();
+
+        yield return new WaitForSeconds(1f);
+
+        AddJoker(copyJoker);
+        AddJoker(copyJoker);
+    }
+
+    private void ClearAllJokers()
+    {
+        foreach (var joker in currentJokers)
+        {
+            Destroy(joker.gameObject);
+        }
+
+        currentJokers.Clear();
+        jokerCounter.text = "0/" + maximumJokers;
+    }
 
     [ContextMenu("Test Add joker")]
     private void TestJoker()

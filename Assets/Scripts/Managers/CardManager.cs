@@ -52,7 +52,6 @@ public class CardManager : MonoBehaviour
     {
         if (parent.childCount > 8)
         {
-            Debug.Log(parent.childCount);
             horizontalLayoutGroup.spacing = -parent.childCount * 5;
         }
         else

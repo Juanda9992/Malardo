@@ -35,6 +35,14 @@ public class JokerInstance
         jokerLogics = jokerData.jokerLogics;
     }
 
+    public void SetInstanceData(JokerInstance jokerInstance)
+    {
+        totalChips = jokerInstance.totalChips;
+        totalMult = jokerInstance.totalMult;
+        totalMultiplier = jokerInstance.totalMultiplier;
+        dynamicVariable = jokerInstance.dynamicVariable;
+    }
+
     public void SetJokerContainer(JokerContainer container)
     {
         jokerContainer = container;
