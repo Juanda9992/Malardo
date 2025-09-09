@@ -7,7 +7,7 @@ public class DestroyAddEnhancedCard : CardEffect
     public int cardsToCreate;
 
     public bool faceCards;
-
+    public bool aces;
     public override void ApplyEffect()
     {
         DeckManager.instance.StartCoroutine(EffectSequence());
@@ -23,31 +23,37 @@ public class DestroyAddEnhancedCard : CardEffect
         }
 
         yield return new WaitForSeconds(0.2f);
+
         if (cardsToCreate > 0)
         {
             CardType[] cardTypes = new CardType[] { CardType.Stone, CardType.Gold, CardType.Bonus, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Mult };
-            if (faceCards)
+            for (int i = 0; i < cardsToCreate; i++)
             {
-                for (int i = 0; i < cardsToCreate; i++)
+                Card card = new Card();
+                if (faceCards)
                 {
-                    Card card = new Card();
                     card.number = Random.Range(11, 14);
-                    card.cardType = cardTypes[Random.Range(0, cardTypes.Length)];
-                    card.SetCardChipAmmount();
-                    card.SetCardName();
-                    DeckManager.instance.AddCardOnFullDeck(card);
-
-                    if (PackManager.instance.isOnPackMenu)
-                    {
-
-                    }
-                    else
-                    {
-                        CardManager.instance.GenerateCardOnHand(card);
-                    }
-
-                    yield return new WaitForSeconds(0.15f);
                 }
+                if (aces)
+                {
+                    card.number = 1;
+                }
+                card.cardType = cardTypes[Random.Range(0, cardTypes.Length)];
+                card.cardSuit = CommonOperations.GetRandomSuit();
+                card.SetCardChipAmmount();
+                card.SetCardName();
+                DeckManager.instance.AddCardOnFullDeck(card);
+
+                if (PackManager.instance.isOnPackMenu)
+                {
+
+                }
+                else
+                {
+                    CardManager.instance.GenerateCardOnHand(card);
+                }
+
+                yield return new WaitForSeconds(0.15f);
             }
 
         }
