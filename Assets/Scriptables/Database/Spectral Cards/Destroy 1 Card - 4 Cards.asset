@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e499384c402b2724d9671409fb8a4ab9, type: 3}
-  m_Name: Destroy 1 Card - 2 Aces
+  m_Name: Destroy 1 Card - 4 Cards
   m_EditorClassIdentifier: 
   cardsToDestroy: 1
-  cardsToCreate: 2
+  cardsToCreate: 4
+  numberedCards: 1
   faceCards: 0
-  aces: 1
+  aces: 0

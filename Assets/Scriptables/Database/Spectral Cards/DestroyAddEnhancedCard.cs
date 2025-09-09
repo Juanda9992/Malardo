@@ -6,6 +6,7 @@ public class DestroyAddEnhancedCard : CardEffect
     public int cardsToDestroy;
     public int cardsToCreate;
 
+    public bool numberedCards;
     public bool faceCards;
     public bool aces;
     public override void ApplyEffect()
@@ -37,6 +38,10 @@ public class DestroyAddEnhancedCard : CardEffect
                 if (aces)
                 {
                     card.number = 1;
+                }
+                if (numberedCards)
+                {
+                    card.number = Random.Range(2, 11);
                 }
                 card.cardType = cardTypes[Random.Range(0, cardTypes.Length)];
                 card.cardSuit = CommonOperations.GetRandomSuit();
