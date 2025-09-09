@@ -52,6 +52,7 @@ public class CardVisuals : MonoBehaviour
 
     private void SetCardSeal()
     {
+        seal.gameObject.SetActive(true);
         if (_card.cardSeal == Seal.Gold)
         {
             seal.color = Color.yellow;

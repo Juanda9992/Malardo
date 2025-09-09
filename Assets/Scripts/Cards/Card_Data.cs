@@ -139,9 +139,9 @@ public class Card
     {
 
         this.number = Random.Range(1, 14);
-        this.cardSuit = GetRandomCardSuit();
+        this.cardSuit = CommonOperations.GetRandomSuit();
         this.cardType = GetRandomCardType();
-        this.cardSeal = GenerateRandomSeal();
+        this.cardSeal = CommonOperations.GetRandomSeal(true);
         this.cardEdition = GenerateRandomEdition();
 
         SetCardChipAmmount();
@@ -206,24 +206,6 @@ public class Card
         {
             return CardType.Default;
         }
-    }
-
-    private Seal GenerateRandomSeal()
-    {
-        Seal[] allSeals = new Seal[] { Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
-        int generator = Random.Range(0, 100);
-        if (generator < 20)
-        {
-            return allSeals[Random.Range(0, allSeals.Length)];
-        }
-        return Seal.None;
-    }
-
-    private Suit GetRandomCardSuit()
-    {
-        Suit[] cards = new Suit[] { Suit.Diamond, Suit.Clover, Suit.Hearth, Suit.Spades };
-
-        return (cards[Random.Range(0, cards.Length)]);
     }
 
     public void SetCardChipAmmount()
@@ -352,9 +334,22 @@ public enum CardType
 
 public static class CommonOperations
 {
-    public static Suit[] suits = new Suit[] { Suit.Clover, Suit.Diamond, Suit.Spades, Suit.Hearth };
+    private static Suit[] suits = new Suit[] { Suit.Clover, Suit.Diamond, Suit.Spades, Suit.Hearth };
+    private static Seal[] seals = new Seal[] { Seal.None,Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
     public static Suit GetRandomSuit()
     {
         return suits[Random.Range(0, suits.Length)];
+    }
+
+    public static Seal GetRandomSeal(bool noneIncluded)
+    {
+        if (noneIncluded)
+        {
+            return seals[Random.Range(0, seals.Length)];
+        }
+        else
+        {
+            return seals[Random.Range(1, seals.Length)];
+        }
     }
 }

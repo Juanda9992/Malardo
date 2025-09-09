@@ -31,18 +31,7 @@ public class DestroyAddEnhancedCard : CardEffect
             for (int i = 0; i < cardsToCreate; i++)
             {
                 Card card = new Card();
-                if (faceCards)
-                {
-                    card.number = Random.Range(11, 14);
-                }
-                if (aces)
-                {
-                    card.number = 1;
-                }
-                if (numberedCards)
-                {
-                    card.number = Random.Range(2, 11);
-                }
+                card.number = GetCardNumber();
                 card.cardType = cardTypes[Random.Range(0, cardTypes.Length)];
                 card.cardSuit = CommonOperations.GetRandomSuit();
                 card.SetCardChipAmmount();
@@ -62,5 +51,23 @@ public class DestroyAddEnhancedCard : CardEffect
             }
 
         }
+    }
+
+    private int GetCardNumber()
+    {
+        if (faceCards)
+        {
+            return Random.Range(11, 14);
+        }
+        if (aces)
+        {
+            return 1;
+        }
+        if (numberedCards)
+        {
+            return Random.Range(2, 11);
+        }
+
+        return 0;
     }
 }
