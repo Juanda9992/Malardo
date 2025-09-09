@@ -12,6 +12,7 @@ public class SuitEffects : CardEffect
     public bool destroyCards;
     public bool sameSuit;
     public bool sameNumber;
+    public bool addRandomEdition;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
@@ -76,6 +77,12 @@ public class SuitEffects : CardEffect
             Debug.Log(orderedCards[1].linkedCard.transform.position.x + " " + orderedCards[1].cardName);
 
             orderedCards[0].linkedCard.visuals.CoptyCardCoroutineRequest(orderedCards[1]);
+        }
+
+        if (addRandomEdition)
+        {
+            HandManager.instance.handCards[0].cardEdition = CommonOperations.GetRandomCardEdition(false);
+            HandManager.instance.handCards[0].linkedCard.visuals.SetVisuals(HandManager.instance.handCards[0]);
         }
 
         if (sameSuit)

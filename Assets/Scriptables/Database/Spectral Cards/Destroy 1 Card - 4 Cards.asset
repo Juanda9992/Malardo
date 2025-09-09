@@ -17,3 +17,4 @@ MonoBehaviour:
   numberedCards: 1
   faceCards: 0
   aces: 0
+  earnMoney: 0

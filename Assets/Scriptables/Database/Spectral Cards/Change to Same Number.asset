@@ -17,6 +17,7 @@ MonoBehaviour:
   increaseRank: 0
   copyCard: 0
   destroyCards: 0
-  sameSuit: 1
+  sameSuit: 0
+  sameNumber: 1
   minCardsRequired: 0
   maxCardsRequired: 0

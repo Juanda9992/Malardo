@@ -335,7 +335,8 @@ public enum CardType
 public static class CommonOperations
 {
     private static Suit[] suits = new Suit[] { Suit.Clover, Suit.Diamond, Suit.Spades, Suit.Hearth };
-    private static Seal[] seals = new Seal[] { Seal.None,Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
+    private static Seal[] seals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
+    private static CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
     public static Suit GetRandomSuit()
     {
         return suits[Random.Range(0, suits.Length)];
@@ -350,6 +351,18 @@ public static class CommonOperations
         else
         {
             return seals[Random.Range(1, seals.Length)];
+        }
+    }
+    
+    public static CardEdition GetRandomCardEdition(bool noneIncluded)
+    {
+        if (noneIncluded)
+        {
+            return cardEditions[Random.Range(0, cardEditions.Length)];
+        }
+        else
+        {
+            return cardEditions[Random.Range(1, cardEditions.Length)];
         }
     }
 }
