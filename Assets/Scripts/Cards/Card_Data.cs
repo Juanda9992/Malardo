@@ -349,3 +349,12 @@ public enum CardType
     Bonus,
     Mult
 }
+
+public static class CommonOperations
+{
+    public static Suit[] suits = new Suit[] { Suit.Clover, Suit.Diamond, Suit.Spades, Suit.Hearth };
+    public static Suit GetRandomSuit()
+    {
+        return suits[Random.Range(0, suits.Length)];
+    }
+}
