@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e499384c402b2724d9671409fb8a4ab9, type: 3}
-  m_Name: Destroy 5 Cards - Add 20 money
+  m_Script: {fileID: 11500000, guid: 6a5f4812dfc41544d8106d6300236206, type: 3}
+  m_Name: Change to Same Suit
   m_EditorClassIdentifier: 
-  cardsToDestroy: 5
-  cardsToCreate: 0
-  numberedCards: 0
-  faceCards: 0
-  aces: 0
-  earnMoney: 1
+  desiredSuit: 4
+  cardType: 0
+  increaseRank: 0
+  copyCard: 0
+  destroyCards: 0
+  sameSuit: 1
+  minCardsRequired: 0
+  maxCardsRequired: 0

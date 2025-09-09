@@ -10,6 +10,7 @@ public class SuitEffects : CardEffect
     public bool increaseRank;
     public bool copyCard;
     public bool destroyCards;
+    public bool sameSuit;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
@@ -74,6 +75,18 @@ public class SuitEffects : CardEffect
             Debug.Log(orderedCards[1].linkedCard.transform.position.x + " " + orderedCards[1].cardName);
 
             orderedCards[0].linkedCard.visuals.CoptyCardCoroutineRequest(orderedCards[1]);
+        }
+
+        if (sameSuit)
+        {
+            Suit randomSuit = CommonOperations.GetRandomSuit();
+            for (int i = 0; i < CardManager.instance.cardsOnScreen.Count; i++)
+            {
+                CardManager.instance.cardsOnScreen[i].visuals.UpdateCardSuitCoroutineRequest(randomSuit);
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            yield break;
         }
 
         JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
