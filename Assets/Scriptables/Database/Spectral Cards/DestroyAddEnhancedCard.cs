@@ -9,6 +9,7 @@ public class DestroyAddEnhancedCard : CardEffect
     public bool numberedCards;
     public bool faceCards;
     public bool aces;
+    public bool earnMoney;
     public override void ApplyEffect()
     {
         DeckManager.instance.StartCoroutine(EffectSequence());
@@ -50,6 +51,11 @@ public class DestroyAddEnhancedCard : CardEffect
                 yield return new WaitForSeconds(0.15f);
             }
 
+        }
+
+        if (earnMoney)
+        {
+            CurrencyManager.instance.AddCurrency(20);
         }
     }
 
