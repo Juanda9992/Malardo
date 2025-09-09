@@ -143,9 +143,7 @@ public class JokerManager : MonoBehaviour
         }
         return ammount;
     }
-
-    [ContextMenu("Copy Joker")]
-    private void SetCopyRandomJokerCoroutine()
+    public void SetCopyRandomJokerCoroutine()
     {
         StartCoroutine("CopyRandomJoker");
     }
@@ -156,7 +154,7 @@ public class JokerManager : MonoBehaviour
 
         ClearAllJokers();
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
 
         AddJoker(copyJoker);
         AddJoker(copyJoker);

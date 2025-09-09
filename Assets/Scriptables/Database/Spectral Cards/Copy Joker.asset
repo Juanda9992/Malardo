@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63872e9c8e7dd0242ac7962e77e34b21, type: 3}
-  m_Name: Create Rare Joker - Money to 0
+  m_Script: {fileID: 11500000, guid: 4d1fd3191ead47f4d8e654f940dfde04, type: 3}
+  m_Name: Copy Joker
   m_EditorClassIdentifier: 
-  anyJoker: 0
-  desiredRarity: 2
-  blankCurrency: 1
+  copyJoker: 0
