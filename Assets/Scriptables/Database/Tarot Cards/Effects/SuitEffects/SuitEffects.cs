@@ -11,6 +11,7 @@ public class SuitEffects : CardEffect
     public bool copyCard;
     public bool destroyCards;
     public bool sameSuit;
+    public bool sameNumber;
     public int minCardsRequired, maxCardsRequired;
     public override void ApplyEffect()
     {
@@ -41,7 +42,7 @@ public class SuitEffects : CardEffect
         {
             for (int i = 0; i < HandManager.instance.handCards.Count; i++)
             {
-                HandManager.instance.handCards[i].linkedCard.visuals.IncreaseCardRankCoroutineRequest(cardType);
+                HandManager.instance.handCards[i].linkedCard.visuals.IncreaseCardRankCoroutineRequest();
                 yield return new WaitForSeconds(0.1f);
             }
         }
@@ -85,6 +86,19 @@ public class SuitEffects : CardEffect
                 CardManager.instance.cardsOnScreen[i].visuals.UpdateCardSuitCoroutineRequest(randomSuit);
                 yield return new WaitForSeconds(0.1f);
             }
+
+            yield break;
+        }
+        if (sameNumber)
+        {
+            int randomNumber = Random.Range(1, 14);
+            for (int i = 0; i < CardManager.instance.cardsOnScreen.Count; i++)
+            {
+                CardManager.instance.cardsOnScreen[i].visuals.UpdateNumberCoroutine(randomNumber);
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            DeckManager.instance.AddHandSize(-1);
 
             yield break;
         }

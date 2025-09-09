@@ -130,9 +130,14 @@ public class CardVisuals : MonoBehaviour
         StartCoroutine(FlipCard(() => CopyCard(card)));
     }
 
-    public void IncreaseCardRankCoroutineRequest(CardType cardType)
+    public void IncreaseCardRankCoroutineRequest()
     {
         StartCoroutine(FlipCard(() => IncreaseRank()));
+    }
+
+    public void UpdateNumberCoroutine(int number)
+    {
+        StartCoroutine(FlipCard(() => UpdateNumber(number)));
     }
 
     private void IncreaseRank()
@@ -146,6 +151,12 @@ public class CardVisuals : MonoBehaviour
     private void CopyCard(Card card)
     {
         _card.CopyCardData(card);
+        SetVisuals(_card);
+    }
+
+    private void UpdateNumber(int number)
+    {
+        _card.number = number;
         SetVisuals(_card);
     }
     
