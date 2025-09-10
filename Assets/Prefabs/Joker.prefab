@@ -757,8 +757,9 @@ GameObject:
   - component: {fileID: 7307092385432561963}
   - component: {fileID: 3875479698092377031}
   - component: {fileID: 3912447272564296643}
-  - component: {fileID: 6538719352392439572}
   - component: {fileID: 6854713872654097035}
+  - component: {fileID: -7795813167610306154}
+  - component: {fileID: 8643175884052700974}
   m_Layer: 5
   m_Name: Joker
   m_TagString: Untagged
@@ -848,42 +849,13 @@ MonoBehaviour:
     totalMult: 0
     totalMultiplier: 0
     dynamicVariable: 0
+    jokerEdition: 0
     jokerLogics: []
     destroyJoker: 0
     extraSellValue: 0
   isOnShop: 1
   jokerText: {fileID: 1592527842947618694}
   jokerBg: {fileID: 6199330102263620309}
---- !u!114 &6538719352392439572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353045118887296221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46436a59f3cdcc44f94c75355e9aac55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverScale: 1.1
-  descriptionXOffset: -200
-  jokerContainer: {fileID: 3912447272564296643}
-  OnClicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6854713872654097035}
-        m_TargetAssemblyTypeName: JokerButtonActions, Assembly-CSharp
-        m_MethodName: SwitchSelectedLogic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &6854713872654097035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,3 +873,91 @@ MonoBehaviour:
   sellButton: {fileID: 1134433109876422202}
   actionButtonText: {fileID: 5262130606827650617}
   sellButtonText: {fileID: 315076546395232126}
+--- !u!114 &-7795813167610306154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353045118887296221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d14564e0d660449b4eafe674b565bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleFactor: 1.1
+  OnHoverIn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3912447272564296643}
+        m_TargetAssemblyTypeName: JokerContainer, Assembly-CSharp
+        m_MethodName: ShowDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHoverOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8643175884052700974}
+        m_TargetAssemblyTypeName: DescriptionContainer, Assembly-CSharp
+        m_MethodName: HideDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6854713872654097035}
+        m_TargetAssemblyTypeName: JokerButtonActions, Assembly-CSharp
+        m_MethodName: SwitchSelectedLogic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUnselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4281466030270279121}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8643175884052700974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353045118887296221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c1294f5be869346b1de54ac75a1e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  contentName: 
+  descriptionOffset: {x: -250, y: 0}

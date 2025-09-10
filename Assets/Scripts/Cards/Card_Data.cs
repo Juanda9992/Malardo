@@ -353,7 +353,7 @@ public static class CommonOperations
             return seals[Random.Range(1, seals.Length)];
         }
     }
-    
+
     public static CardEdition GetRandomCardEdition(bool noneIncluded)
     {
         if (noneIncluded)
@@ -364,5 +364,26 @@ public static class CommonOperations
         {
             return cardEditions[Random.Range(1, cardEditions.Length)];
         }
+    }
+
+    public static DescriptionType GetJokerDescription(JokerData jokerData)
+    {
+        if (jokerData.jokerRarity == JokerRarity.Common)
+        {
+            return DescriptionType.Common;
+        }
+        else if (jokerData.jokerRarity == JokerRarity.Uncommon)
+        {
+            return DescriptionType.Uncommon;
+        }
+        else if (jokerData.jokerRarity == JokerRarity.Rare)
+        {
+            return DescriptionType.Rare;
+        }
+        else if (jokerData.jokerRarity == JokerRarity.Legendary)
+        {
+            return DescriptionType.Legendary;
+        }
+        return DescriptionType.None;
     }
 }
