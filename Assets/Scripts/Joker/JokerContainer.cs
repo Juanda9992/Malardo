@@ -35,6 +35,12 @@ public class JokerContainer : MonoBehaviour
         ScoreSign.instance.SetMessage(Color.green, _jokerInstance.triggerMessage, transform.position);
     }
 
+    public void TriggerMessage(string content)
+    {
+        triggered = true;
+        ScoreSign.instance.SetMessage(Color.green, content, transform.position);
+    }
+
     public void TriggerActions(JokerLogic logics)
     {
         JokerExecuteAction(logics);

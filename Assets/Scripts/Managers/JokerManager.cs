@@ -59,6 +59,38 @@ public class JokerManager : MonoBehaviour
                 RemoveJoker(joker.container);
             }
         }
+
+        if (eventJokertrigger == TriggerEvent.OnHandEnd)
+        { 
+            for (int i = 0; i < currentJokers.Count; i++)
+            {
+                if (currentJokers[i]._jokerInstance.jokerEdition != CardEdition.Base)
+                {
+                    yield return PlayJokerEdition(currentJokers[i]._jokerInstance);
+                }
+            }
+        }
+        
+    }
+
+    private IEnumerator PlayJokerEdition(JokerInstance jokerInstance)
+    {
+        if (jokerInstance.jokerEdition == CardEdition.Foil)
+        {
+            ScoreManager.instance.AddChips(50);
+            jokerInstance.jokerContainer.TriggerMessage("+50");
+        }
+        else if (jokerInstance.jokerEdition == CardEdition.Holographic)
+        {
+            ScoreManager.instance.AddMult(10);
+            jokerInstance.jokerContainer.TriggerMessage("+10");
+        }
+        else if (jokerInstance.jokerEdition == CardEdition.Polychrome)
+        {
+            ScoreManager.instance.MultiplyMulti(1.5f);
+            jokerInstance.jokerContainer.TriggerMessage("x1.5");
+        }
+        yield return new WaitForSeconds(0.2f);
     }
     public void AddJoker(JokerData jokerData)
     {

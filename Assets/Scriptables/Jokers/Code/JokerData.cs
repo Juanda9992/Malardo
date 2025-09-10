@@ -27,6 +27,7 @@ public class JokerInstance
     public float totalMult;
     public float totalMultiplier;
     public int dynamicVariable;
+    public CardEdition jokerEdition;
     public JokerInstance(JokerData jokerData)
     {
         data = jokerData;
@@ -41,6 +42,7 @@ public class JokerInstance
         totalMult = jokerInstance.totalMult;
         totalMultiplier = jokerInstance.totalMultiplier;
         dynamicVariable = jokerInstance.dynamicVariable;
+        jokerEdition = jokerInstance.jokerEdition; 
     }
 
     public void SetJokerContainer(JokerContainer container)
