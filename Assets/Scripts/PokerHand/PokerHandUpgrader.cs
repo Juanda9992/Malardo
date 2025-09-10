@@ -23,6 +23,11 @@ public class PokerHandUpgrader : MonoBehaviour
         StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
     }
 
+    public void RequestUpgradeAllHands()
+    {
+        StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(HandType.High_Card), true, true));
+    }
+
     public void RequestDecreasePokerHand(HandType handType)
     {
         PokerHandLevelData pokerHand = PokerHandLevelStorage.instance.GetHandData(handType);
@@ -33,41 +38,64 @@ public class PokerHandUpgrader : MonoBehaviour
         }
     }
 
-    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData,bool upgrade = true)
+    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData, bool upgrade = true, bool allHands = false)
     {
         isUpgrading = true;
 
-        string pokerOperator = upgrade ? "+" : "-"; 
+        string pokerOperator = upgrade ? "+" : "-";
+        string pokerHandName = allHands ? "All Poker Hands" : pokerHandLevelData.pokerHand.name;
+        string pokerHandLevel = allHands ? "+1" : pokerHandLevelData.handLevel.ToString();
+        string chipsUpgrade = allHands ? "+" : pokerHandLevelData.pokerHand.chipsUpgrade.ToString();
+        string multiUPgrade = allHands ? "+" : pokerHandLevelData.pokerHand.multUpgrade.ToString();
 
-        handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
+        handNameText.text = pokerHandName + " <color=blue> lvl." + pokerHandLevel + "</color>";
 
-        chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
-        multUpgrade.upgradeText.text = pokerHandLevelData.GetTotalMult().ToString();
+        if (!allHands)
+        {
+            chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
+            multUpgrade.upgradeText.text = pokerHandLevelData.GetTotalMult().ToString();
+        }
+        else
+        {
+            chipUpgrade.upgradeText.text = "+";
+            multUpgrade.upgradeText.text = "+";
+        }
 
         yield return new WaitForSeconds(0.5f);
         chipUpgrade.animationContainer.SetActive(true);
-        chipUpgrade.upgradeText.text = pokerOperator + pokerHandLevelData.pokerHand.chipsUpgrade;
+        chipUpgrade.upgradeText.text = pokerOperator + chipsUpgrade;
 
         yield return new WaitForSeconds(0.4f);
         multUpgrade.animationContainer.SetActive(true);
-        multUpgrade.upgradeText.text = pokerOperator + pokerHandLevelData.pokerHand.multUpgrade;
+        multUpgrade.upgradeText.text = pokerOperator + multiUPgrade;
 
         if (upgrade)
         {
-            pokerHandLevelData.UpgradeHand();
+
+            if (!allHands)
+            {
+                pokerHandLevelData.UpgradeHand();
+            }
+            else
+            {
+                foreach (var hand in PokerHandLevelStorage.instance.GetPokerHands())
+                {
+                    hand.UpgradeHand();
+                }
+            }
         }
         else
         {
             pokerHandLevelData.DecreaseHand();
         }
 
-        handNameText.text = pokerHandLevelData.pokerHand.name + " <color=blue> lvl." + pokerHandLevelData.handLevel + "</color>";
+        handNameText.text = pokerHandName + " <color=blue> lvl." + pokerHandLevel + "</color>";
         yield return new WaitForSeconds(0.6f);
 
         chipUpgrade.animationContainer.SetActive(false);
         multUpgrade.animationContainer.SetActive(false);
-        chipUpgrade.upgradeText.text = pokerHandLevelData.GetTotalChips().ToString();
-        multUpgrade.upgradeText.text = pokerHandLevelData.GetTotalMult().ToString();
+        chipUpgrade.upgradeText.text = allHands ? "+" : pokerHandLevelData.GetTotalChips().ToString();
+        multUpgrade.upgradeText.text = allHands ? "+" : pokerHandLevelData.GetTotalMult().ToString();
 
         yield return new WaitForSeconds(0.3f);
         chipUpgrade.upgradeText.text = "0";
