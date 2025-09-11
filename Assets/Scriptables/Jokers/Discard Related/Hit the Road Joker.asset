@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Hit the Road Joker
+  m_EditorClassIdentifier: 
+  jokerName: Hit the Road
+  description: 'This Joker gains <style=Mult>X0.5 Mult </style>for every <style=Info>Jack</style>
+    discarded this round
+
+    (Currently <style=Mult>X_R_ Mult</style>)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 8
+  jokerRarity: 2
+  jokerLogics:
+  - triggerEvent: 13
+    jokerTrigger:
+    - {fileID: 11400000, guid: 30b9d90e25dd80e4eaa8e350ed1f3a61, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: e9ff22b274d6ccc4abb5479c38a5cf7e, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 10487a040eba02e408f609fd29297012, type: 2}
+  - triggerEvent: 5
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: c9d6425c27b596b458f450f7d59d902d, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
