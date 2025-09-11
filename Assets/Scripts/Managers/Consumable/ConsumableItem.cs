@@ -142,6 +142,7 @@ public class ConsumableItem : MonoBehaviour
         {
             ConsumableManager.instance.DecreaseConsumable();
             CurrencyManager.instance.AddCurrency(sellValue);
+            JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardSold));
             Destroy(gameObject);
         }
         else
