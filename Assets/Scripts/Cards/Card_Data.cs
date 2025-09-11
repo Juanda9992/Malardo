@@ -314,10 +314,10 @@ public enum Seal
 
 public enum CardEdition
 {
-    Base,
-    Foil,
-    Holographic,
-    Polychrome
+    Base = -1,
+    Foil = 0,
+    Holographic = 1,
+    Polychrome = 2
 }
 
 public enum CardType

@@ -12,6 +12,7 @@ public class JokerContainer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jokerText;
 
     [SerializeField] private Image jokerBg;
+    [SerializeField] private GameObject[] editionsContainer;
     private bool triggered;
     public void SetUpJoker(JokerInstance jokerData)
     {
@@ -27,11 +28,43 @@ public class JokerContainer : MonoBehaviour
                 effect.UpdateDescription(_jokerInstance);
             }
         }
+
+        TrySetEdition();
+    }
+
+    private void TrySetEdition()
+    {
+        int random = UnityEngine.Random.Range(0, 100);
+        Debug.Log(random);
+        if (random == 0)
+        {
+            _jokerInstance.jokerEdition = CardEdition.Polychrome;
+        }
+        else if (random < 2)
+        {
+            _jokerInstance.jokerEdition = CardEdition.Holographic;
+        }
+        else if (random < 5)
+        {
+            _jokerInstance.jokerEdition = CardEdition.Foil;
+        }
+
+        SetJokerEdition(_jokerInstance.jokerEdition);
+    }
+
+    public void SetJokerEdition(CardEdition cardEdition)
+    {
+        _jokerInstance.jokerEdition = cardEdition;
+
+        if ((int)cardEdition >= 0)
+        {
+            editionsContainer[(int)cardEdition].SetActive(true);
+        }
     }
 
     public void ShowDescription()
     {
-        GetComponent<DescriptionContainer>().SetNameAndDescription(_jokerInstance.data.jokerName, _jokerInstance.jokerDescription, CommonOperations.GetJokerDescription(_jokerInstance.data),_jokerInstance.jokerEdition);
+        GetComponent<DescriptionContainer>().SetNameAndDescription(_jokerInstance.data.jokerName, _jokerInstance.jokerDescription, CommonOperations.GetJokerDescription(_jokerInstance.data), _jokerInstance.jokerEdition);
         GetComponent<DescriptionContainer>().ShowDescription();
     }
 

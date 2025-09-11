@@ -25,6 +25,15 @@ public class CardGenerationPresset : ScriptableObject
             }
         }
     }
+    [ContextMenu("Reset variables")]
+    private void SetCardEditionBase()
+    {
+        foreach (var card in allCards)
+        {
+            card.cardEdition = CardEdition.Base;
+        }
+
+    }
 
     [System.Serializable]
     public struct Cards
