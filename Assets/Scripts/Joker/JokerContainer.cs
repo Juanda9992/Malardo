@@ -35,7 +35,6 @@ public class JokerContainer : MonoBehaviour
     private void TrySetEdition()
     {
         int random = UnityEngine.Random.Range(0, 100);
-        Debug.Log(random);
         if (random == 0)
         {
             _jokerInstance.jokerEdition = CardEdition.Polychrome;

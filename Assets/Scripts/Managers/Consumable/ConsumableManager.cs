@@ -14,6 +14,8 @@ public class ConsumableManager : MonoBehaviour
     [SerializeField] private PlanetCardData generatePlanetCard;
     [SerializeField] private TarotCardData generateTarot;
 
+    [SerializeField] private GameObject failTextObj;
+
     public static ConsumableManager instance;
 
     public bool CanAddConsumable { get { return consumableAmmount < maxConsumables; } }
@@ -115,6 +117,13 @@ public class ConsumableManager : MonoBehaviour
     {
         consumableAmmount--;
         UpdateConsumableText();
+    }
+    public IEnumerator TriggerFailMessage()
+    {
+        failTextObj.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        failTextObj.SetActive(false);
+
     }
 
 }
