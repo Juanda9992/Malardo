@@ -4,7 +4,7 @@ using UnityEngine;
 public class PackData : ScriptableObject
 {
     public string packName;
-    public string packDescription;
+    [TextArea]public string packDescription;
     public int packCost;
     public PackType packType;
     public int numberOfCards;
