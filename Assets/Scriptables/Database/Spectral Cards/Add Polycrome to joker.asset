@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d28ff16f0902a04bae5f688e945b639, type: 3}
   m_Name: Add Polycrome to joker
   m_EditorClassIdentifier: 
-  desiredEffect: -1
+  desiredEffect: 2

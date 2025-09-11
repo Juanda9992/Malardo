@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e499384c402b2724d9671409fb8a4ab9, type: 3}
-  m_Name: Destroy 1 Card - 3 face Cards
+  m_Name: Copy 2 Cards
   m_EditorClassIdentifier: 
-  cardsToDestroy: 1
-  cardsToCreate: 3
+  cardsToDestroy: 0
+  cardsToCreate: 2
   numberedCards: 0
-  faceCards: 1
+  faceCards: 0
   aces: 0
   earnMoney: 0
-  copy: 0
-  minCards: 0
-  maxCards: 0
+  copy: 1
+  minCards: 1
+  maxCards: 1

@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsToDestroy: 1
   cardsToCreate: 2
+  numberedCards: 0
   faceCards: 0
   aces: 1
+  earnMoney: 0
+  copy: 0
+  minCards: 0
+  maxCards: 0

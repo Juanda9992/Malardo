@@ -10,6 +10,9 @@ public class DestroyAddEnhancedCard : CardEffect
     public bool faceCards;
     public bool aces;
     public bool earnMoney;
+    public bool copy;
+
+    public int minCards, maxCards;
     public override void ApplyEffect()
     {
         DeckManager.instance.StartCoroutine(EffectSequence());
@@ -37,6 +40,11 @@ public class DestroyAddEnhancedCard : CardEffect
                 card.cardSuit = CommonOperations.GetRandomSuit();
                 card.SetCardChipAmmount();
                 card.SetCardName();
+
+                if (copy)
+                {
+                    card = new Card(HandManager.instance.handCards[0]);
+                }
                 DeckManager.instance.AddCardOnFullDeck(card);
 
                 if (PackManager.instance.isOnPackMenu)
@@ -75,5 +83,9 @@ public class DestroyAddEnhancedCard : CardEffect
         }
 
         return 0;
+    }
+    public override bool CanBeUsed()
+    {
+        return HandManager.instance.handCards.Count >= minCards && HandManager.instance.handCards.Count <= maxCards;
     }
 }
