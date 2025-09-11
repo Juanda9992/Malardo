@@ -58,8 +58,8 @@ public class GameEventsManager : MonoBehaviour
     public void TriggerRoundBegins()
     {
         GameStatusManager.SetGameEvent(TriggerOptions.RoundBegin);
-        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.RoundBegin));
         OnRoundBegins?.Invoke();
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.RoundBegin));
     }
 
     public void TriggerRoundEnd()
