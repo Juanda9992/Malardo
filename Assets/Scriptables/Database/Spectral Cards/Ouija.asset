@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
+  m_Name: Ouija
+  m_EditorClassIdentifier: 
+  cardName: Ouija
+  cardDescription: Converts all cards in hand to a single random <style=Info>rank</style>,
+    but <style=Mult>-1</style> <style=Chip>Hand Size</style>.
+  cardEffect: {fileID: 11400000, guid: 9d24bc3fc64fe5c4793a9ed0706e7c15, type: 2}
+  saveCard: 0

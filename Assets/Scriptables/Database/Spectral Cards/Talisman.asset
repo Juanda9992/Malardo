@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
+  m_Name: Talisman
+  m_EditorClassIdentifier: 
+  cardName: Talisman
+  cardDescription: Add a <style=Info>Gold Seal</style> to <style=Info>1</style> selected
+    card.
+  cardEffect: {fileID: 11400000, guid: 49ae15e6692964a45bbb83b45d222a30, type: 2}
+  saveCard: 0
