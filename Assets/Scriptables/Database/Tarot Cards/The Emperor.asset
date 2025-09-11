@@ -18,4 +18,5 @@ MonoBehaviour:
 
     (Must have room)'
   cardEffect: {fileID: 11400000, guid: a132d33031da2a8498a9690f71e710db, type: 2}
+  isTarot: 1
   saveCard: 1

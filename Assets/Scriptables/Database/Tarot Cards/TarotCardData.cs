@@ -6,6 +6,7 @@ public class TarotCardData : ScriptableObject
     public string cardName;
     [TextArea] public string cardDescription;
     public CardEffect cardEffect;
+    public bool isTarot;
     public bool saveCard;
     public bool CanApplyEffect()
     {

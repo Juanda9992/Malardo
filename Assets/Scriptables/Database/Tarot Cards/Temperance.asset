@@ -20,4 +20,5 @@ MonoBehaviour:
 
     (Current:<style="Cash">$_R_</style>)'
   cardEffect: {fileID: 11400000, guid: 5920fe8773ac29b4a8ade9e0a031af9c, type: 2}
+  isTarot: 1
   saveCard: 1

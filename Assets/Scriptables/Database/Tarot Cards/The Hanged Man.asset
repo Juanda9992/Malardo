@@ -15,4 +15,5 @@ MonoBehaviour:
   cardName: The Hanged Man (XII)
   cardDescription: Destroys up to <style="Info">2</style> selected cards
   cardEffect: {fileID: 11400000, guid: 6c23139216f67e440af47b67d53651ab, type: 2}
+  isTarot: 1
   saveCard: 1

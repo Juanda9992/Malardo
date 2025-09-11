@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: Enhances <style="Info">2</style> selected cards to <style="Info">Lucky
     Cards</style>
   cardEffect: {fileID: 11400000, guid: 128bb0c73b358e44996a9bb09e80aefd, type: 2}
+  isTarot: 1
   saveCard: 1

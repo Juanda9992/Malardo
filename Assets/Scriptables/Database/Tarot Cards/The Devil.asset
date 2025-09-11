@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Gold
     Card</style>
   cardEffect: {fileID: 11400000, guid: 907125defac1e324e9203959114c6b28, type: 2}
+  isTarot: 1
   saveCard: 1

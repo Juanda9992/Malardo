@@ -15,4 +15,5 @@ MonoBehaviour:
   cardName: The World (XXI)
   cardDescription: Converts up to <style="Info">3</style> selected cards to <style="Spade">Spades</style>
   cardEffect: {fileID: 11400000, guid: 3250353276a71f44e80ef119a0616d21, type: 2}
+  isTarot: 1
   saveCard: 1

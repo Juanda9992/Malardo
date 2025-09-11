@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Steel
     Card</style>
   cardEffect: {fileID: 11400000, guid: 9dfeea71123eb3449827c1d67f4a5fcc, type: 2}
+  isTarot: 1
   saveCard: 1

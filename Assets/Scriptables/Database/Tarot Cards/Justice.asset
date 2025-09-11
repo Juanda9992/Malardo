@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: Enhances <style="Info">1</style> selected card into a <style="Info">Glass
     Card</style>
   cardEffect: {fileID: 11400000, guid: 9be9f211cd755f24caed9c601d17be3a, type: 2}
+  isTarot: 1
   saveCard: 1

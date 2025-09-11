@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: 1 in 4 chance to add <style=Info>Foil, Holographic, or Polychrome</style>
     edition to a random <style=Info>Joker</style>.
   cardEffect: {fileID: 11400000, guid: 56ea4e3efaf26064d82e864a451ea53c, type: 2}
+  isTarot: 1
   saveCard: 1

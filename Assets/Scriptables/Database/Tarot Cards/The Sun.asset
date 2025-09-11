@@ -15,4 +15,5 @@ MonoBehaviour:
   cardName: The Sun (XIX)
   cardDescription: Converts up to <style="Info">3</style> selected cards to <style="Hearth">Hearths</style>
   cardEffect: {fileID: 11400000, guid: 05884917090e5e845a42f0423f014418, type: 2}
+  isTarot: 1
   saveCard: 1

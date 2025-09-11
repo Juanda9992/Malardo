@@ -18,4 +18,5 @@ MonoBehaviour:
 
     (Drag to rearrange)'
   cardEffect: {fileID: 11400000, guid: f266ebed0ec50d34db2b5274ea346423, type: 2}
+  isTarot: 1
   saveCard: 1

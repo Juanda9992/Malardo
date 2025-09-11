@@ -20,4 +20,5 @@ MonoBehaviour:
 
     (Current: _R_)'
   cardEffect: {fileID: 11400000, guid: cfceff78e9d8f084f8512ab04ca2178b, type: 2}
+  isTarot: 1
   saveCard: 0

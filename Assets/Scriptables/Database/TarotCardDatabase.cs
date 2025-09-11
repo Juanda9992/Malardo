@@ -5,9 +5,14 @@ using UnityEngine;
 public class TarotCardDatabase : ScriptableObject
 {
     public List<TarotCardData> tarotCards;
-
+    public List<TarotCardData> spectralCards;
     public TarotCardData GetRandomTarotCard()
     {
         return tarotCards[Random.Range(0, tarotCards.Count)];
+    }
+
+    public TarotCardData GetRandomSpectralCard()
+    {
+        return spectralCards[Random.Range(0,spectralCards.Count)];
     }
 }

@@ -34,3 +34,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 711de39c43a1c4746bb659de9f15fb20, type: 2}
   - {fileID: 11400000, guid: 4aeaae5c42564d84cba9e57e65f0c45d, type: 2}
   - {fileID: 11400000, guid: eb78ce0397b4dd64880988dfdca7363b, type: 2}
+  spectralCards:
+  - {fileID: 11400000, guid: fd16780d93fb7ac468757806f2944e2a, type: 2}
+  - {fileID: 11400000, guid: 9f19bf8c4d9483340a1acb1ad7ba4a31, type: 2}
+  - {fileID: 11400000, guid: 7830c89a14e6a4942b7495cf5f008f80, type: 2}
+  - {fileID: 11400000, guid: be9414b51207ebf4b96f4c43afa97ea2, type: 2}
+  - {fileID: 11400000, guid: a56224b4bd8c68a4f97c2115ee0070c5, type: 2}
+  - {fileID: 11400000, guid: eaf61e3d3550ac148a005eec6a29aa08, type: 2}
+  - {fileID: 11400000, guid: d7d47ceb10e9cd34191e30885edcfc4f, type: 2}
+  - {fileID: 11400000, guid: 93acb994f36ece54cbac5e3054146916, type: 2}
+  - {fileID: 11400000, guid: b3694180e0a76444fb5472536c27e222, type: 2}
+  - {fileID: 11400000, guid: 4cb23fa7aae66f84c910ca6197fa94d3, type: 2}
+  - {fileID: 11400000, guid: 8f264d468ac48df43b9f358b466e24d1, type: 2}
+  - {fileID: 11400000, guid: af67f7508a7cb4642a2c56fac47c9b0c, type: 2}
+  - {fileID: 11400000, guid: 801109b00c9f44547bde8ae0a9e9d6ad, type: 2}
+  - {fileID: 11400000, guid: adec49bc493e68740a2894e3b53550d4, type: 2}
+  - {fileID: 11400000, guid: d48337bda0ece1844b00f5e5fe1d963c, type: 2}
+  - {fileID: 11400000, guid: 54dfa2061a92fa340b3f8e7606b08db8, type: 2}
+  - {fileID: 11400000, guid: f9a413a4bd18ad748954171331630cb5, type: 2}
