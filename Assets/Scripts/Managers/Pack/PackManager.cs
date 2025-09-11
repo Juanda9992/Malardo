@@ -12,7 +12,7 @@ public class PackManager : MonoBehaviour
     [SerializeField] private JokerListContainer jokerListContainer;
     [SerializeField] private GameObject PackInteractablePrefab;
     [SerializeField] private GameObject cardPackInteractablePrefab;
-    [SerializeField] private CardManipulationManager cardManipulationManager;
+    public CardManipulationManager cardManipulationManager;
     [SerializeField] private Transform itemsDisplay;
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI packNameLabel;
@@ -31,10 +31,10 @@ public class PackManager : MonoBehaviour
         maxSelections = packDesired.selectCards;
 
         SetAllUIStatus(false);
-        if (packDesired.packType == PackType.Tarot)
+        if (packDesired.packType == PackType.Tarot || packDesired.packType == PackType.Spectral)
         {
             cardManipulationContainer.SetActive(true);
-            cardManipulationManager.SetCardLogic(packDesired.numberOfCards);
+            cardManipulationManager.SetCardLogic(packDesired.numberOfCards,packDesired.packType);
         }
         else
         {
@@ -94,7 +94,7 @@ public class PackManager : MonoBehaviour
         maxSelections--;
         selectAmmountLabel.text = "Choose " + maxSelections;
         JokerDescription.instance.SetDescriptionOff();
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.5f);
         if (maxSelections == 0)
         {
             CardManager.DestroyChildsInParent(cardManipulationManager.cardEffectParent);

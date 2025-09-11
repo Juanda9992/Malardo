@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Grim
   cardDescription: Destroy <style=Info>1</style> random card in your hand, but add
-    <style=Info>2</style> random <style=Info>Enhanced Aces</style>instead.
+    <style=Info>2</style> random <style=Info>Enhanced Aces </style>instead.
   cardEffect: {fileID: 11400000, guid: 3f8a5a2f84376f44789ddc7dd71c0ee6, type: 2}
+  isTarot: 0
   saveCard: 0

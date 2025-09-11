@@ -16,4 +16,5 @@ MonoBehaviour:
   cardDescription: Destroy <style=Info>1</style> random card in your hand, but add
     <style=Info>3</style> random <style=Info>Enhanced face cards </style>instead.
   cardEffect: {fileID: 11400000, guid: 56a051621be2e674982bbe8ea49147ab, type: 2}
+  isTarot: 0
   saveCard: 0

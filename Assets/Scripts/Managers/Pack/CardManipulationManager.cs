@@ -9,12 +9,19 @@ public class CardManipulationManager : MonoBehaviour
     [SerializeField] private Transform handContainer;
     public HorizontalLayoutGroup layoutGroup;
     [SerializeField] private GameObject packinteractable;
-    public void SetCardLogic(int cards)
+    public void SetCardLogic(int cards,PackType packType)
     {
         for (int i = 0; i < cards; i++)
         {
             GameObject pack = Instantiate(packinteractable, cardEffectParent);
-            pack.GetComponent<PackInteractable>().SetTarotData(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
+            if (packType == PackType.Tarot)
+            {
+                pack.GetComponent<PackInteractable>().SetTarotData(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
+            }
+            else
+            {
+                pack.GetComponent<PackInteractable>().SetTarotData(DatabaseManager.instance.tarotCardDatabase.GetRandomSpectralCard());
+            }
         }
 
         DeckManager.instance.RegenerateRoundDeck();

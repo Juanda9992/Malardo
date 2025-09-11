@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Ouija
   cardDescription: Converts all cards in hand to a single random <style=Info>rank</style>,
-    but <style=Mult>-1</style> <style=Chip>Hand Size</style>.
+    but <style=Mult>-1</style> <style=Chips>Hand Size</style>.
   cardEffect: {fileID: 11400000, guid: 9d24bc3fc64fe5c4793a9ed0706e7c15, type: 2}
+  isTarot: 0
   saveCard: 0

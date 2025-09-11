@@ -15,5 +15,6 @@ MonoBehaviour:
   cardName: Hex
   cardDescription: Adds <style=Spectral>Polychrome</style> to a random <style=Info>Joker</style>,
     and destroys the rest.
-  cardEffect: {fileID: 11400000, guid: 17aa45e795ae9424f9590d664961d9aa, type: 2}
+  cardEffect: {fileID: 11400000, guid: bd416a8239545504db9d07339639deec, type: 2}
+  isTarot: 0
   saveCard: 0

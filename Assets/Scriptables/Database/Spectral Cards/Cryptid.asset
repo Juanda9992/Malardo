@@ -15,5 +15,6 @@ MonoBehaviour:
   cardName: Cryptid
   cardDescription: Creates 2 exact copies (including <style=Info>Enhancements, Editions
     and Seals</style>) of a selected card in your hand.
-  cardEffect: {fileID: 11400000, guid: f266ebed0ec50d34db2b5274ea346423, type: 2}
+  cardEffect: {fileID: 11400000, guid: 8583a052e3268ff45bb7d7188ca0fc72, type: 2}
+  isTarot: 0
   saveCard: 0

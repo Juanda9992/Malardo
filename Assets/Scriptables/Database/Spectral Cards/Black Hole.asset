@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Black Hole
   cardDescription: Upgrades every <style=Tarot>poker hand</style>.
-  cardEffect: {fileID: 11400000, guid: cc8694acee37b7945a786f5c71d9f0ea, type: 2}
+  cardEffect: {fileID: 11400000, guid: 00114d42046719c42bc1c227cefad3d3, type: 2}
+  isTarot: 0
   saveCard: 0

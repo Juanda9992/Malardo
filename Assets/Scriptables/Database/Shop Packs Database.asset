@@ -28,3 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90f7b69ff3192e5498899e8a2604f241, type: 2}
   - {fileID: 11400000, guid: 3371d8f31e8df1d459a98777bad6a08c, type: 2}
   - {fileID: 11400000, guid: 82fffe76b8d8b804b9f49bd5a43186e8, type: 2}
+  spectralPacks:
+  - {fileID: 11400000, guid: 33a0d3574fdd9b543851532884a98f76, type: 2}
+  - {fileID: 11400000, guid: fc0f4400012048b4e829119bf68579c2, type: 2}
+  - {fileID: 11400000, guid: 59a65f0aadac5954d886fb23bac52f71, type: 2}

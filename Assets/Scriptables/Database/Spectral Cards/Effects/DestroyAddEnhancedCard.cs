@@ -27,7 +27,7 @@ public class DestroyAddEnhancedCard : CardEffect
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.15f);
 
         if (cardsToCreate > 0)
         {
@@ -49,14 +49,14 @@ public class DestroyAddEnhancedCard : CardEffect
 
                 if (PackManager.instance.isOnPackMenu)
                 {
-
+                    CardManager.instance.GenerateCardOnHand(card, PackManager.instance.cardManipulationManager.layoutGroup.transform,PackManager.instance.cardManipulationManager.layoutGroup);
                 }
                 else
                 {
                     CardManager.instance.GenerateCardOnHand(card);
                 }
 
-                yield return new WaitForSeconds(0.15f);
+                yield return new WaitForSeconds(0.1f);
             }
 
         }

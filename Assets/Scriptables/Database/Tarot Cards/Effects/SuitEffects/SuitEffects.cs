@@ -91,7 +91,7 @@ public class SuitEffects : CardEffect
             for (int i = 0; i < CardManager.instance.cardsOnScreen.Count; i++)
             {
                 CardManager.instance.cardsOnScreen[i].visuals.UpdateCardSuitCoroutineRequest(randomSuit);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
 
             yield break;
@@ -102,7 +102,7 @@ public class SuitEffects : CardEffect
             for (int i = 0; i < CardManager.instance.cardsOnScreen.Count; i++)
             {
                 CardManager.instance.cardsOnScreen[i].visuals.UpdateNumberCoroutine(randomNumber);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
 
             DeckManager.instance.AddHandSize(-1);
