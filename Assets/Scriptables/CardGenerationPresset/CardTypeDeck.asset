@@ -20,7 +20,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -28,7 +31,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -36,7 +42,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -44,7 +53,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -52,7 +64,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -60,7 +75,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -68,7 +86,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -76,7 +97,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -84,7 +108,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -92,7 +119,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -100,7 +130,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -108,7 +141,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -116,7 +152,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -124,7 +163,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -132,7 +174,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -140,7 +185,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -148,7 +196,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -156,7 +207,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -164,7 +218,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -172,7 +229,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -180,7 +240,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -188,7 +251,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -196,7 +262,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -204,7 +273,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 6
@@ -212,7 +284,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 1
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -220,7 +295,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -228,7 +306,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -236,7 +317,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -244,7 +328,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -252,7 +339,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -260,7 +350,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -268,7 +361,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -276,7 +372,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -284,7 +383,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -292,7 +394,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -300,7 +405,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -308,7 +416,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -316,7 +427,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -324,7 +438,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -332,7 +449,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -340,7 +460,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -348,7 +471,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -356,7 +482,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -364,7 +493,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -372,7 +504,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -380,7 +515,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -388,7 +526,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -396,7 +537,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -404,7 +548,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 9
@@ -412,7 +559,10 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 2
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -420,7 +570,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -428,7 +581,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -436,7 +592,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -444,7 +603,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -452,7 +614,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -460,7 +625,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -468,7 +636,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -476,7 +647,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -484,7 +658,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -492,7 +669,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -500,7 +680,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -508,7 +691,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -516,7 +702,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -524,7 +713,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -532,7 +724,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -540,7 +735,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -548,7 +746,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -556,7 +757,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -564,7 +768,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -572,7 +779,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -580,7 +790,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -588,7 +801,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -596,7 +812,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -604,7 +823,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 11
@@ -612,7 +834,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 3
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -620,7 +845,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -628,7 +856,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -636,7 +867,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -644,7 +878,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -652,7 +889,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -660,7 +900,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -668,7 +911,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -676,7 +922,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -684,7 +933,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -692,7 +944,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -700,7 +955,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -708,7 +966,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -716,7 +977,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -724,7 +988,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -732,7 +999,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -740,7 +1010,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -748,7 +1021,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -756,7 +1032,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -764,7 +1043,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -772,7 +1054,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -780,7 +1065,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -788,7 +1076,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -796,7 +1087,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -804,7 +1098,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 4
@@ -812,7 +1109,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 4
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -820,7 +1120,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -828,7 +1131,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -836,7 +1142,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -844,7 +1153,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -852,7 +1164,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -860,7 +1175,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -868,7 +1186,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -876,7 +1197,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -884,7 +1208,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -892,7 +1219,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -900,7 +1230,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -908,7 +1241,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -916,7 +1252,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -924,7 +1263,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -932,7 +1274,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -940,7 +1285,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -948,7 +1296,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -956,7 +1307,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -964,7 +1318,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -972,7 +1329,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -980,7 +1340,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -988,7 +1351,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -996,7 +1362,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -1004,7 +1373,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 13
@@ -1012,7 +1384,10 @@ MonoBehaviour:
     cardSuit: 1
     cardType: 5
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1020,7 +1395,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1028,7 +1406,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1036,7 +1417,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1044,7 +1428,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1052,7 +1439,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1060,7 +1450,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1068,7 +1461,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1076,7 +1472,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1084,7 +1483,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1092,7 +1494,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1100,7 +1505,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1108,7 +1516,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1116,7 +1527,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1124,7 +1538,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1132,7 +1549,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1140,7 +1560,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1148,7 +1571,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1156,7 +1582,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1164,7 +1593,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1172,7 +1604,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1180,7 +1615,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1188,7 +1626,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1196,7 +1637,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1204,7 +1648,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 10
@@ -1212,7 +1659,10 @@ MonoBehaviour:
     cardSuit: 0
     cardType: 6
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1220,7 +1670,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1228,7 +1681,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1236,7 +1692,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1244,7 +1703,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1252,7 +1714,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1260,7 +1725,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1268,7 +1736,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1276,7 +1747,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1284,7 +1758,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1292,7 +1769,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1300,7 +1780,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1308,7 +1791,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1316,7 +1802,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1324,7 +1813,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1332,7 +1824,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1340,7 +1835,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1348,7 +1846,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1356,7 +1857,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1364,7 +1868,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1372,7 +1879,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1380,7 +1890,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1388,7 +1901,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1396,7 +1912,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1404,7 +1923,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   - cardName: 
     linkedCard: {fileID: 0}
     number: 1
@@ -1412,7 +1934,10 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 7
     cardSeal: 0
-    cardEdition: 0
+    cardEdition: -1
+    canPlay: 0
+    activations: 0
+    identifier: 0
   startingMoney: 100
   presetCard:
     cardName: 
@@ -1423,4 +1948,7 @@ MonoBehaviour:
     cardType: 7
     cardSeal: 0
     cardEdition: 0
+    canPlay: 0
+    activations: 0
+    identifier: 0
   timesToGenerate: 25
