@@ -10,7 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d325684e082d83f48b6a072e9413141c, type: 3}
-  m_Name: Create Tarot Card
+  m_Name: Create Spectral Card
   m_EditorClassIdentifier: 
   ammount: 0
-  isTarot: 1
