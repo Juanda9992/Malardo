@@ -109,7 +109,7 @@ public class JokerDescription : MonoBehaviour
         SetSealDescription(card_Data.currentCard.cardSeal);
     }
 
-    public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType)
+    public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType, CardEdition cardEdition = CardEdition.Base)
     {
         nameText.text = itemName;
         descriptionText.text = itemDescription;
@@ -117,8 +117,8 @@ public class JokerDescription : MonoBehaviour
         transform.localScale = Vector2.one;
 
         SetDescriptionRarity(extraTags[0], descriptionType);
-
-        StartCoroutine("ForceRebuildDesc");
+        SetEditionDescription(cardEdition);
+        
     }
     private IEnumerator ForceRebuildDesc()
     {

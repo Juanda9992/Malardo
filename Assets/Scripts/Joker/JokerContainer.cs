@@ -27,11 +27,11 @@ public class JokerContainer : MonoBehaviour
                 effect.UpdateDescription(_jokerInstance);
             }
         }
-        GetComponent<DescriptionContainer>().SetNameAndDescription(_jokerInstance.data.jokerName, _jokerInstance.jokerDescription, CommonOperations.GetJokerDescription(_jokerInstance.data));
     }
 
     public void ShowDescription()
     {
+        GetComponent<DescriptionContainer>().SetNameAndDescription(_jokerInstance.data.jokerName, _jokerInstance.jokerDescription, CommonOperations.GetJokerDescription(_jokerInstance.data),_jokerInstance.jokerEdition);
         GetComponent<DescriptionContainer>().ShowDescription();
     }
 
