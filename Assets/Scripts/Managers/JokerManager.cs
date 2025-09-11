@@ -191,6 +191,28 @@ public class JokerManager : MonoBehaviour
         AddJoker(copyJoker);
         AddJoker(copyJoker);
     }
+    public IEnumerator AddEditionToRandomJoker(CardEdition jokerEdition,bool destroyOthers)
+    {
+
+        List<JokerContainer> deleteJoker = new List<JokerContainer>();
+        JokerContainer copyJoker = currentJokers[Random.Range(0, currentJokers.Count)];
+
+        for (int i = 0; i < currentJokers.Count; i++)
+        {
+            if (!GameObject.ReferenceEquals(copyJoker.gameObject, currentJokers[i].gameObject))
+            {
+                deleteJoker.Add(currentJokers[i]);
+            }
+        }
+
+        foreach (var joker in deleteJoker)
+        {
+            RemoveJoker(joker);
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        copyJoker.SetJokerEdition(jokerEdition);
+    }
 
     private void ClearAllJokers()
     {
