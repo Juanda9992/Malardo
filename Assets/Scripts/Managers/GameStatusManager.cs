@@ -93,6 +93,7 @@ public class GameStatus
     [Header("Hands")]
     public int handSize;
     public int handsRemaining;
+    public bool firstHand = true;
     public HandPlayedData handPlayedData = new HandPlayedData();
 
     [System.Serializable]

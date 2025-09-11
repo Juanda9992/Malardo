@@ -173,6 +173,7 @@ public class HandManager : MonoBehaviour
         hands = defaultHands;
         discards = defaultDiscards;
         GameStatusManager._Status.discardData.discardsOnMatch = 0;
+        GameStatusManager._Status.firstHand = true;
 
         UpdateDiscardText();
         UpdateHandText();

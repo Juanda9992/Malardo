@@ -91,6 +91,7 @@ public class CardPlayer : MonoBehaviour
         yield return HandManager.instance.ClearHandPlayed();
         HandDetector.instance.RemoveHandFromMult();
         ScoreManager.instance.ResetChipsAndMult();
+        GameStatusManager._Status.firstHand = false;
         isPlayingCards = false;
         GameStatusManager.SetGameEvent(TriggerOptions.None);
     }
