@@ -112,10 +112,15 @@ public class JokerSpawner : MonoBehaviour
                     shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomArcanaPack(packSize));
                 }
             }
-            else
+            else if (randomPack < 90)
             {
                 //Buffon
                 shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomBuffonPack(packSize));
+            }
+            else
+            {
+                shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomSpectralPack(packSize));
+                
             }
         }
     }
