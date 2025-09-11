@@ -100,6 +100,7 @@ public class GameStatus
     public class DiscardData
     {
         public int discardsOnMatch;
+        public Card lastDiscard;
         public int discardSize;
         public int discardCount;
         public List<Card> discardCards;
