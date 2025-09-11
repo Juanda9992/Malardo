@@ -1336,7 +1336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &67323341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19619,6 +19619,7 @@ MonoBehaviour:
   consumableSlotText: {fileID: 1993433815}
   generatePlanetCard: {fileID: 0}
   generateTarot: {fileID: 0}
+  failTextObj: {fileID: 67323340}
   tarotCardsUsed: 0
 --- !u!1 &1315391528
 GameObject:

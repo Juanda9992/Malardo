@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ca6bf6894fcb47afa516edd13683a, type: 3}
+  m_Name: The Wheel of Fortune
+  m_EditorClassIdentifier: 
+  cardName: The Wheel of Fortune (X)
+  cardDescription: 1 in 4 chance to add <style=Info>Foil, Holographic, or Polychrome</style>
+    edition to a random <style=Info>Joker</style>.
+  cardEffect: {fileID: 11400000, guid: 56ea4e3efaf26064d82e864a451ea53c, type: 2}
+  saveCard: 1
