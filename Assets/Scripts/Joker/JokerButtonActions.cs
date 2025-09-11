@@ -56,6 +56,7 @@ public class JokerButtonActions : MonoBehaviour
 
     public void SellJoker()
     {
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardSold));
         CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);
         JokerDescription.instance.SetDescriptionOff();
