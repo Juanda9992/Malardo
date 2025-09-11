@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Seance Joker
+  m_EditorClassIdentifier: 
+  jokerName: Seance
+  description: 'If poker hand is a <style=info>Straight Flush</style>, create a random
+    <style=Spectral>Spectral card</style>
+
+    (Must have room)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 1
+  jokerLogics:
+  - triggerEvent: 7
+    jokerTrigger:
+    - {fileID: 11400000, guid: 3853dc09b9d4214409bfb1c5a636729c, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: c1a6bbc79b930804bad2aa732200a730, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
