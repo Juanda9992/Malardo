@@ -79,6 +79,10 @@ public class CardVisuals : MonoBehaviour
 
     private void SetCardTypeVisuals()
     {
+        cardImage.color = Color.white;
+        bonusCardVisuals.SetActive(false);
+        multCardVisuals.SetActive(false);
+        
         if (_card.cardType == CardType.Gold)
         {
             cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
