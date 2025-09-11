@@ -11166,6 +11166,18 @@ MonoBehaviour:
     handPlayedData:
       playedHandsInRun: 
       playedHandsInRound: 
+    destroyedCard:
+      cardName: 
+      linkedCard: {fileID: 0}
+      number: 0
+      chipAmmount: 0
+      cardSuit: 0
+      cardType: 0
+      cardSeal: 0
+      cardEdition: 0
+      canPlay: 0
+      activations: 0
+      identifier: 0
 --- !u!114 &621395132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11182,7 +11194,7 @@ MonoBehaviour:
   testingJokers:
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 0632ca8e4a42579439839fedde84ce09, type: 2}
+  - {fileID: 11400000, guid: 4b3ea946c5b544a4b88a36d108406188, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}

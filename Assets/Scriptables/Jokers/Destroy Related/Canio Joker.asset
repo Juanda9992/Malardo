@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Canio Joker
+  m_EditorClassIdentifier: 
+  jokerName: Canio
+  description: 'This Joker gains <style=Mult>X1 Mult</style> when a <style=Info>face
+    </style>card is destroyed
+
+    (Currently <style=Mult>X_R_ Mult</style>)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 10
+  jokerRarity: 3
+  jokerLogics:
+  - triggerEvent: 17
+    jokerTrigger:
+    - {fileID: 11400000, guid: cb97622076ae33944aa1d536856486dd, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 7dd003d1d8df47f4a86b80eca0da3822, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 10487a040eba02e408f609fd29297012, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
