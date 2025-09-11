@@ -147,6 +147,8 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void DestroyCard()
     {
+        GameStatusManager._Status.destroyedCard = this.card_Data.currentCard;
+        JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDestroyed));
         DeckManager.instance.DestroyCardFromFullDeck(card_Data.currentCard);
         CardManager.instance.cardsOnScreen.Remove(card_Data);
         transform.DOScale(0, 0.2f).OnComplete(() => Destroy(gameObject));

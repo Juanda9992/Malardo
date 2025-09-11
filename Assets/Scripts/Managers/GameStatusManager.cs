@@ -95,6 +95,7 @@ public class GameStatus
     public int handsRemaining;
     public bool firstHand = true;
     public HandPlayedData handPlayedData = new HandPlayedData();
+    public Card destroyedCard;
 
     [System.Serializable]
     public class DiscardData
