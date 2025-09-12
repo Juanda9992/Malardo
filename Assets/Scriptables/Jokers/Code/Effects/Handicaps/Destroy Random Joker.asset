@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ffb868313be3249ab90ebe4f5992bc, type: 3}
-  m_Name: Destroy Joker
+  m_Name: Destroy Random Joker
   m_EditorClassIdentifier: 
   ammount: 0
   right: 0
+  random: 1
