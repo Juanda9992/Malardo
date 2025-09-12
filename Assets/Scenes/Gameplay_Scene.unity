@@ -11195,6 +11195,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   - {fileID: 11400000, guid: 7a91dd51068d9bc48aaea1e01de7d60a, type: 2}
+  - {fileID: 11400000, guid: e7945a6a97f1ecb4e9ecb17db15b2379, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
