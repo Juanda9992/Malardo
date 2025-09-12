@@ -61,7 +61,7 @@ public class JokerManager : MonoBehaviour
         }
 
         if (eventJokertrigger == TriggerEvent.OnHandEnd)
-        { 
+        {
             for (int i = 0; i < currentJokers.Count; i++)
             {
                 if (currentJokers[i]._jokerInstance.jokerEdition != CardEdition.Base)
@@ -70,7 +70,7 @@ public class JokerManager : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
     private IEnumerator PlayJokerEdition(JokerInstance jokerInstance)
@@ -191,7 +191,7 @@ public class JokerManager : MonoBehaviour
         AddJoker(copyJoker);
         AddJoker(copyJoker);
     }
-    public IEnumerator AddEditionToRandomJoker(CardEdition jokerEdition,bool destroyOthers)
+    public IEnumerator AddEditionToRandomJoker(CardEdition jokerEdition, bool destroyOthers)
     {
 
         List<JokerContainer> deleteJoker = new List<JokerContainer>();
@@ -212,6 +212,18 @@ public class JokerManager : MonoBehaviour
         }
 
         copyJoker.SetJokerEdition(jokerEdition);
+    }
+
+    public void ReorderJokers()
+    {
+        currentJokers = currentJokers.OrderBy(x => x.transform.position.x).ToList();
+
+        for (int i = 0; i < currentJokers.Count; i++)
+        {
+            currentJokers[i].transform.SetSiblingIndex(i);
+        }
+        jokerParent.gameObject.SetActive(false);
+        jokerParent.gameObject.SetActive(true);
     }
 
     private void ClearAllJokers()

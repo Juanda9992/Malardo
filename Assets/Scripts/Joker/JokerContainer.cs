@@ -51,6 +51,11 @@ public class JokerContainer : MonoBehaviour
         SetJokerEdition(_jokerInstance.jokerEdition);
     }
 
+    public void DropJoker()
+    {
+        JokerManager.instance.ReorderJokers();
+    }
+
     public void SetJokerEdition(CardEdition cardEdition)
     {
         _jokerInstance.jokerEdition = cardEdition;

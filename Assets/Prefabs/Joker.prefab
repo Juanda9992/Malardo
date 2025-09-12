@@ -910,6 +910,7 @@ GameObject:
   - component: {fileID: 6854713872654097035}
   - component: {fileID: -7795813167610306154}
   - component: {fileID: 8643175884052700974}
+  - component: {fileID: -2307571153340970546}
   m_Layer: 5
   m_Name: Joker
   m_TagString: Untagged
@@ -1118,6 +1119,34 @@ MonoBehaviour:
   description: 
   contentName: 
   descriptionOffset: {x: -250, y: 0}
+--- !u!114 &-2307571153340970546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353045118887296221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd59254c0878ac4ebf56c2a314d03d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDropEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3912447272564296643}
+        m_TargetAssemblyTypeName: JokerContainer, Assembly-CSharp
+        m_MethodName: DropJoker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inputAction: {fileID: 3273841000410172905, guid: 1df31f9e4cda4744d802410899345c51, type: 3}
 --- !u!1 &8575227017438092939
 GameObject:
   m_ObjectHideFlags: 0
