@@ -12,12 +12,10 @@ public class InteractableDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         transform.position = inputAction.action.ReadValue<Vector2>();
         JokerDescription.instance.SetDescriptionOff();
-        Debug.Log("Drag");
     }
 
     public void OnEndDrag(PointerEventData data)
     {
         OnDropEvent?.Invoke();
-        Debug.Log("Drop");
     }
 }

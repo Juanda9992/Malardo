@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Ceremonial Dagger Joker
+  m_EditorClassIdentifier: 
+  jokerName: Ceremonial Dagger
+  description: When <style=Info>Blind</style> is selected, destroy <style=Info>Joker</style>
+    to the right and permanently add <style=Info>double</style> its sell value to
+    this <style=Mult>Mult</style> (Currently <style=Mult>+_R_ Mult</style>)
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 6
+  jokerRarity: 1
+  jokerLogics:
+  - triggerEvent: 1
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: c35ff5eeea6df374a8a7c92d7df77462, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 9c1fbd7c534e2824fbd7d82f3cfc8659, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
