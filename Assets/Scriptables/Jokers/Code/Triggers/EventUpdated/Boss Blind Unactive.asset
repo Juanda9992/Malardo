@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c0afd81eeb38c849880c4564465b404, type: 3}
-  m_Name: Boss Blind Active
+  m_Name: Boss Blind Unactive
   m_EditorClassIdentifier: 
   active: 1
