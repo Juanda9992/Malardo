@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Halucination Joker
   m_EditorClassIdentifier: 
   jokerName: Hallucination
-  description: '1 in 2 chance to create a Tarot card when any Booster Pack is opened
+  description: '1 in 2 chance to create a <style=Tarot>Tarot card</style> when any
+    <style=Info>Booster Pack </style>is opened
 
-    (Must
-    have room)'
+    (Must have room)'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 4
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 16
