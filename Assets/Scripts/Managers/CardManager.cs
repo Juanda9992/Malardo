@@ -31,16 +31,16 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        UpdateCardSpacing(handParent,cardsLayout);
+        UpdateCardSpacing(handParent, cardsLayout);
     }
 
-    public void GenerateCardOnHand(Card card,Transform parent,HorizontalLayoutGroup horizontalLayoutGroup)
+    public void GenerateCardOnHand(Card card, Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)
     {
         GameObject currentCard = Instantiate(cardprefab, parent.transform);
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        UpdateCardSpacing(parent,horizontalLayoutGroup);
+        UpdateCardSpacing(parent, horizontalLayoutGroup);
     }
 
     public void SetHandSpacing()
@@ -119,11 +119,17 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < cardsOnScreen.Count; i++)
         {
-            if (cardsOnScreen[i].currentCard.cardType == CardType.Silver)
+            int reactivations = cardsOnScreen[i].currentCard.cardSeal == Seal.Red ? 2 : 1;
+
+            for (int r = 0; r < reactivations; r++)
             {
-                ScoreManager.instance.MultiplyMulti(1.5f);
-                ScoreSign.instance.SetMessage(Color.red, "X1.5", cardsOnScreen[i].transform.position);
-                yield return new WaitForSeconds(0.3f);
+                if (cardsOnScreen[i].currentCard.cardType == CardType.Silver)
+                {
+                    cardsOnScreen[i].pointerInteraction.ShakeCard();
+                    ScoreManager.instance.MultiplyMulti(1.5f);
+                    ScoreSign.instance.SetMessage(Color.red, "X1.5", cardsOnScreen[i].transform.position);
+                    yield return new WaitForSeconds(0.3f);
+                }
             }
         }
     }
