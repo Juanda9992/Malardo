@@ -49,8 +49,10 @@ public class ConsumableItem : MonoBehaviour
     {
         tarotCardData = _tarotCardData;
 
+        DescriptionType cardDesc = _tarotCardData.isTarot ? DescriptionType.Tarot : DescriptionType.Spectral;
+
         textDescription.text = tarotCardData.cardName;
-        descriptionContainer.SetNameAndDescription(tarotCardData.cardName, _tarotCardData.cardDescription, DescriptionType.Tarot);
+        descriptionContainer.SetNameAndDescription(tarotCardData.cardName, _tarotCardData.cardDescription, cardDesc);
 
         SetPrice();
         SetUpButtons();
