@@ -58,6 +58,8 @@ public class PackInteractable : MonoBehaviour
 
         GetComponent<CardVisuals>().SetVisuals(createdCard);
         description.SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips", DescriptionType.None);
+        StartCoroutine("ListenForAvaliability");
+
     }
 
     public void SetPlanetCard(PlanetCardData planetCardData)
@@ -69,6 +71,8 @@ public class PackInteractable : MonoBehaviour
         string fullDesc = pokerHand.pokerHand.name + "\n" + "lvl " + pokerHand.handLevel + "\n" + planetCardData.cardDescription;
         cardName.text = planetCardData.cardName;
         GetComponent<DescriptionContainer>().SetNameAndDescription(planetCardData.cardName, fullDesc, DescriptionType.Planet);
+        StartCoroutine("ListenForAvaliability");
+
     }
 
     public void SetTarotData(TarotCardData tarotCardData)
@@ -94,7 +98,8 @@ public class PackInteractable : MonoBehaviour
                 actionButton.interactable = tarotCard.CanApplyEffect();
                 description.SetNameAndDescription(tarotCard.cardName,tarotCard.GetDescription(), DescriptionType.Tarot);
             }
-            yield return new WaitForSeconds(0.2f);
+            actionButton.interactable = PackManager.instance.maxSelections > 0;
+            yield return new WaitForSeconds(0.1f);
         }
     }
     public void SelectItem()

@@ -19,7 +19,7 @@ public class PackManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI selectAmmountLabel;
     [SerializeField] private GameObject cardManipulationContainer;
     [SerializeField] private GameObject defaultContainer;
-    private int maxSelections = 1;
+    public int maxSelections = 1;
     [SerializeField] private PackData testPack;
     void Awake()
     {
