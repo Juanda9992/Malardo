@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Log Story
   m_EditorClassIdentifier: 
   logStory:
+  - {fileID: 11400000, guid: d571cfe036822a243b3e7a430cac0ccf, type: 2}
+  - {fileID: 11400000, guid: 58fa97f13ce556a49ba0dcf6fabfadd1, type: 2}
   - {fileID: 11400000, guid: d0b0df523736ad34cab5bf5f5dccdb1f, type: 2}
   - {fileID: 11400000, guid: 598f16bd6d76b534f87c801363bfeac6, type: 2}
   - {fileID: 11400000, guid: 7dba8e1e1e385a04eaaa1739f0f325ad, type: 2}
