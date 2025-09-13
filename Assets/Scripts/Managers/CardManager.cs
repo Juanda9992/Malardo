@@ -140,6 +140,7 @@ public class CardManager : MonoBehaviour
             if (cardsOnScreen[i].currentCard.cardType == CardType.Gold)
             {
                 CurrencyManager.instance.AddCurrency(4);
+                cardsOnScreen[i].pointerInteraction.ShakeCard();
                 ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
                 yield return new WaitForSeconds(0.3f);
             }
@@ -147,6 +148,8 @@ public class CardManager : MonoBehaviour
             {
                 if (ConsumableManager.instance.CanAddConsumable)
                 {
+                    ScoreSign.instance.SetMessage(Color.blue, "Created!", cardsOnScreen[i].transform.position);
+                    cardsOnScreen[i].pointerInteraction.ShakeCard();
                     ConsumableManager.instance.GeneratePlanetCard(GameStatusManager._Status.playedHand);
                     yield return new WaitForSeconds(0.3f);
                 }
