@@ -18,6 +18,12 @@ public class JokerContainer : MonoBehaviour
     {
         _jokerInstance = jokerData;
         jokerText.text = _jokerInstance.data.jokerName;
+
+        if (jokerData.data.JokerImage != null)
+        {
+            jokerText.gameObject.SetActive(false);
+            jokerBg.sprite = jokerData.data.JokerImage;
+        }
         _jokerInstance.SetJokerContainer(this);
 
         foreach (var logic in _jokerInstance.jokerLogics)

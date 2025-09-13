@@ -8,6 +8,7 @@ public class JokerData : ScriptableObject
     public string triggerMessage;
     public float overrideEffect = 0;
     public int shopValue;
+    public Sprite JokerImage;
     public JokerRarity jokerRarity;
     public JokerLogic[] jokerLogics;
     public List<JokerEffect> OnSetUpJoker;
