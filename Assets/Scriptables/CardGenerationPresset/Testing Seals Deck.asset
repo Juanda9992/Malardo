@@ -20,7 +20,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 2
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 1
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -504,7 +504,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
     cardSuit: 3
     cardType: 0
     cardSeal: 3
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 0
     identifier: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -724,7 +724,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -823,7 +823,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -845,7 +845,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -856,7 +856,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
     cardSuit: 2
     cardType: 0
     cardSeal: 4
-    cardEdition: 0
+    cardEdition: -1
     canPlay: 1
     activations: 1
     identifier: 0
