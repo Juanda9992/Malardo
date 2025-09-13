@@ -807,8 +807,12 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1661518624442408678, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
+      propertyPath: descriptionOffset.x
+      value: -250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661518624442408678, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
       propertyPath: descriptionOffset.y
-      value: -200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1676616933059983947, guid: fbec59430acc54d4bb6767c055c56fc5, type: 3}
       propertyPath: m_SizeDelta.x

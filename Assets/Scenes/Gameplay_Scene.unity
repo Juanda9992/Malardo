@@ -4902,6 +4902,7 @@ MonoBehaviour:
   selectAmmountLabel: {fileID: 579035401}
   cardManipulationContainer: {fileID: 2050312179}
   defaultContainer: {fileID: 1586341712}
+  maxSelections: 1
   testPack: {fileID: 11400000, guid: 3371d8f31e8df1d459a98777bad6a08c, type: 2}
 --- !u!114 &239341330
 MonoBehaviour:
@@ -11192,7 +11193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
+  - {fileID: 11400000, guid: 20efb4f113c7fa84daf7bcf481c0078d, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850263}
@@ -23086,6 +23087,7 @@ MonoBehaviour:
   sealTitle: {fileID: 275952312}
   sealDescription: {fileID: 1161960490}
   sealContainer: {fileID: 1204187666}
+  contentParent: {fileID: 1418350799}
 --- !u!1 &1593183898
 GameObject:
   m_ObjectHideFlags: 0

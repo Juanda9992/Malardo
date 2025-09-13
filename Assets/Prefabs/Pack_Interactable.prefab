@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882706149831403124, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
+      propertyPath: descriptionOffset.x
+      value: -250
+      objectReference: {fileID: 0}
+    - target: {fileID: 882706149831403124, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
+      propertyPath: descriptionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 966688041894615298, guid: 281b140cfc50ae64abde66314fdccaee, type: 3}
       propertyPath: m_Name
       value: Pack_Interactable
