@@ -112,7 +112,10 @@ public class HandManager : MonoBehaviour
                     {
                         if (ConsumableManager.instance.CanAddConsumable)
                         {
+                            handCards[i].linkedCard.pointerInteraction.ShakeCard();
+                            ScoreSign.instance.SetMessage(Color.magenta,"Create!",handCards[i].linkedCard.transform.position);
                             ConsumableManager.instance.GenerateTarotCard(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
+                            yield return new WaitForSeconds(0.2f);
                         }
                     }
                     yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
