@@ -4,15 +4,12 @@ using UnityEngine;
 public class GiveRandomMult : JokerEffect
 {
     public int minRange, maxRange;
-    private int multGiven;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        ScoreManager.instance.AddMult(multGiven);
+        int mult = Random.Range(minRange, maxRange);
+        ScoreManager.instance.AddMult(mult);
+        jokerInstance.triggerMessage = "+" + mult.ToString();
+        jokerInstance.jokerContainer.TriggerMessage();
     }
 
-    public override string GetCustomMessage()
-    {
-        multGiven = Random.Range(minRange, maxRange);
-        return "+" +multGiven.ToString();
-    }
 }
