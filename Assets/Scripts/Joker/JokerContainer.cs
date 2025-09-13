@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -36,6 +37,7 @@ public class JokerContainer : MonoBehaviour
         }
 
         TrySetEdition();
+        StartCoroutine("UpdateJokerDesc");
     }
 
     private void TrySetEdition()
@@ -107,6 +109,21 @@ public class JokerContainer : MonoBehaviour
         if (_jokerInstance.triggerMessage != String.Empty && !triggered)
         {
             ScoreSign.instance.SetJokerSign(_jokerInstance.triggerMessage, transform.position);
+        }
+    }
+
+    private IEnumerator UpdateJokerDesc()
+    {
+        while (true)
+        {
+            foreach (var logic in _jokerInstance.jokerLogics)
+            {
+                foreach (var effect in logic.jokerEffect)
+                {
+                    effect.UpdateDescription(_jokerInstance);
+                }
+            }
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }
