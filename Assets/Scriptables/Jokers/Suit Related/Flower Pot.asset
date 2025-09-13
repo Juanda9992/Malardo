@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokerName: Flower Pot
   description: <style="Mult">X3 mult</style> if poker hand contains a  <style="Diamond">Diamond
-    </style>card, <style="Club"> Club <style>card,  <style="Hearth">Heart </style>card,
+    </style>card, <style="Club"> Club </style>card,  <style="Hearth">Heart </style>card,
     and  <style="Spade">Spade </style>card.
   triggerMessage: x3
   overrideEffect: 3
