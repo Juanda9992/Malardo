@@ -16,10 +16,13 @@ public class JokerDescription : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI sealTitle, sealDescription;
     [SerializeField] private GameObject sealContainer;
+    private RectTransform contentText;
+    [SerializeField] private RectTransform contentParent;
     void Awake()
     {
         instance = this;
         SetDescriptionOff();
+        contentText = descriptionText.GetComponent<RectTransform>();
     }
     public void SetDescriptionOff()
     {
@@ -118,14 +121,17 @@ public class JokerDescription : MonoBehaviour
 
         SetDescriptionRarity(extraTags[0], descriptionType);
         SetEditionDescription(cardEdition);
-        
+        StartCoroutine("ForceRebuildDesc");
+
+
     }
     private IEnumerator ForceRebuildDesc()
     {
-        descriptionText.gameObject.SetActive(false);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentText);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentParent);
         yield return new WaitForEndOfFrame();
-        descriptionText.gameObject.SetActive(true);
-
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentParent);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentText);
     }
 
     private void SetDescriptionRarity(ExtraTagContainer extraTagContainer, DescriptionType descriptionType, string auxText = "")
