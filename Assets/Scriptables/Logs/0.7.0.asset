@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.7.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.7.0
+  logcontent: "<b>Added</b>\n\n- Jokers no can have editions (Foil,Holo, Polychrome)\n\n-
+    Now you can reorder jokers by drag and drop on them (Sorry for implementing this
+    too late).\n\n- Spectral Cards: These are consumables that will give you many
+    effects to boost your strategy. By the moment there are 17 cards:\n\t- Ankh.\r\n\t-
+    Aura.\r\n\t- Black Hole.\r\n\t- Cryptid.\r\n\t- Deja Vu.\r\r\n\t- Familiar.\r\r\n\t-
+    Grim.\r\n\t- Hex.\r\n\t- Incantation.\r\r\n\t- Inmolate.\r\n\t- Medium.\r\n\t-
+    Ouija.\r\r\n\t- Sigil.\r\n\t- Taisman.\r\n\t- The Soul.\r\n\t- Trance.\r\n\t-
+    Wraith.\r\n\n- Spectral Packs: These packs contain spectral cards ready to use.\n\n-
+    1 new Tarot Card: Wheel of Fortune\n\n- Added 10 Jokers:\n\t- Seance.\n\t- Sixth
+    Sense.\n\t- Hit the Road.\n\t- Campfire.\n\t- Canio.\n\t- Certificate.\n\t- Midas
+    Mask.\n\t- Vampire.\n\t- Ceremonial Dagger\n\t- Madness."
