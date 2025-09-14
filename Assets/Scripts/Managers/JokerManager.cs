@@ -102,9 +102,7 @@ public class JokerManager : MonoBehaviour
         {
             maximumJokers++;
         }
-
-
-        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
+        UpdateJokerCounterText();
     }
 
     public void AddJoker(JokerInstance jokerInstance)
@@ -126,7 +124,7 @@ public class JokerManager : MonoBehaviour
         currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
         createdJoker.GetComponent<JokerContainer>().SetJokerEdition(jokerInstance.jokerEdition);
 
-        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
+        UpdateJokerCounterText();
     }
 
     private JokerContainer CreateJoker(JokerData jokerData)
@@ -157,7 +155,7 @@ public class JokerManager : MonoBehaviour
         {
             currentJokers.Add(CreateJoker(testingJokers[i]));
         }
-        jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
+        UpdateJokerCounterText();
     }
     public void RemoveJoker(JokerContainer jokerContainer)
     {
@@ -168,6 +166,11 @@ public class JokerManager : MonoBehaviour
         currentJokers.Remove(jokerContainer);
         Destroy(jokerContainer.gameObject);
 
+        UpdateJokerCounterText();
+    }
+
+    public void UpdateJokerCounterText()
+    {
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
 
@@ -209,21 +212,24 @@ public class JokerManager : MonoBehaviour
     public IEnumerator AddEditionToRandomJoker(CardEdition jokerEdition, bool destroyOthers)
     {
 
-        List<JokerContainer> deleteJoker = new List<JokerContainer>();
         JokerContainer copyJoker = currentJokers[Random.Range(0, currentJokers.Count)];
 
-        for (int i = 0; i < currentJokers.Count; i++)
+        if (destroyOthers)
         {
-            if (!GameObject.ReferenceEquals(copyJoker.gameObject, currentJokers[i].gameObject))
+            List<JokerContainer> deleteJoker = new List<JokerContainer>();
+            for (int i = 0; i < currentJokers.Count; i++)
             {
-                deleteJoker.Add(currentJokers[i]);
+                if (!GameObject.ReferenceEquals(copyJoker.gameObject, currentJokers[i].gameObject))
+                {
+                    deleteJoker.Add(currentJokers[i]);
+                }
             }
-        }
 
-        foreach (var joker in deleteJoker)
-        {
-            RemoveJoker(joker);
-            yield return new WaitForSeconds(0.2f);
+            foreach (var joker in deleteJoker)
+            {
+                RemoveJoker(joker);
+                yield return new WaitForSeconds(0.2f);
+            }
         }
 
         copyJoker.SetJokerEdition(jokerEdition);

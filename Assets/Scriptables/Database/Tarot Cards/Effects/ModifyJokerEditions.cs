@@ -41,9 +41,14 @@ public class ModifyJokerEditions : CardEffect
 
         }
 
-        else
+        else if (desiredEffect == CardEdition.Polychrome)
         {
             JokerManager.instance.StartCoroutine(JokerManager.instance.AddEditionToRandomJoker(desiredEffect, true));
+        }
+        else if (desiredEffect == CardEdition.Negative)
+        {
+            JokerManager.instance.StartCoroutine(JokerManager.instance.AddEditionToRandomJoker(desiredEffect, false));
+            DeckManager.instance.AddHandSize(-1);
         }
     }
 

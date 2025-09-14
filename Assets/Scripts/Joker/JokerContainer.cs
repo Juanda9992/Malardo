@@ -61,7 +61,8 @@ public class JokerContainer : MonoBehaviour
 
         if (_jokerInstance.jokerEdition == CardEdition.Negative)
         {
-            Debug.LogError("Stop Here");
+            JokerManager.instance.maximumJokers++;
+            JokerManager.instance.UpdateJokerCounterText();
         }
     }
 
