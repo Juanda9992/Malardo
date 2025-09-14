@@ -317,7 +317,8 @@ public enum CardEdition
     Base = -1,
     Foil = 0,
     Holographic = 1,
-    Polychrome = 2
+    Polychrome = 2,
+    Negative = 3
 }
 
 public enum CardType

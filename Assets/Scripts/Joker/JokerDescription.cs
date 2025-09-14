@@ -185,6 +185,11 @@ public class JokerDescription : MonoBehaviour
             editionDescription.text = "<style=Mult>X1.5</style> Mult when scored";
         }
 
+        if (cardEdition == CardEdition.Negative)
+        {
+            editionDescription.text = "<style=Info>+1</style> Joker Slot";
+        }
+
         editionTitle.text = cardEdition.ToString();
 
         editionContainer.SetActive(true);

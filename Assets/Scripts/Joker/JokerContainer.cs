@@ -55,6 +55,11 @@ public class JokerContainer : MonoBehaviour
         {
             _jokerInstance.jokerEdition = CardEdition.Foil;
         }
+        else if (random < 6)
+        {
+            _jokerInstance.jokerEdition = CardEdition.Negative;
+            Debug.LogError("Negative");
+        }
 
         SetJokerEdition(_jokerInstance.jokerEdition);
     }
