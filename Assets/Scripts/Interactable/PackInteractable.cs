@@ -12,6 +12,7 @@ public class PackInteractable : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI cardName;
     [SerializeField] private Button actionButton;
+    [SerializeField] private GameObject[] jokerVisuals;
     private Card createdCard;
     private PlanetCardData _planetCardData;
     private DescriptionContainer description;
@@ -23,7 +24,13 @@ public class PackInteractable : MonoBehaviour
     {
         jokerData = createdJoker.data;
         itemType = PackType.Buffon;
-        description.SetNameAndDescription(jokerData.jokerName, jokerData.description, GetTypeByjokerRarity(createdJoker));
+
+        if (createdJoker.jokerEdition != CardEdition.Base)
+        {
+            Debug.Log(createdJoker.jokerEdition);
+            jokerVisuals[(int)createdJoker.jokerEdition].SetActive(true);
+        }
+        description.SetNameAndDescription(jokerData.jokerName, createdJoker.jokerDescription, GetTypeByjokerRarity(createdJoker),createdJoker.jokerEdition);
         cardName.text = createdJoker.data.jokerName;
         StartCoroutine("ListenForAvaliability");
     }
@@ -107,7 +114,7 @@ public class PackInteractable : MonoBehaviour
         switch (itemType)
         {
             case PackType.Buffon:
-                JokerManager.instance.AddJoker(jokerData);
+                JokerManager.instance.AddJoker(jokerData,false);
                 break;
             case PackType.Card:
                 DeckManager.instance.AddCardOnFullDeck(createdCard);

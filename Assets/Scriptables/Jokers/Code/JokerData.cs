@@ -36,6 +36,7 @@ public class JokerInstance
         triggerMessage = data.triggerMessage;
         jokerLogics = jokerData.jokerLogics;
         SetEdition();
+        GetUpdatedDescription();
     }
 
     public void SetInstanceData(JokerInstance jokerInstance)
@@ -70,6 +71,17 @@ public class JokerInstance
         else if (random < 6)
         {
             this.jokerEdition = CardEdition.Negative;
+        }
+    }
+
+    public void GetUpdatedDescription()
+    {
+        foreach (var logic in data.jokerLogics)
+        {
+            foreach (var effect in logic.jokerEffect)
+            {
+                effect.UpdateDescription(this);
+            }
         }
     }
 
