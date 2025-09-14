@@ -4,7 +4,7 @@ using UnityEngine;
 public class JokerData : ScriptableObject
 {
     public string jokerName;
-    [TextArea]public string description;
+    [TextArea] public string description;
     public string triggerMessage;
     public float overrideEffect = 0;
     public int shopValue;
@@ -35,6 +35,7 @@ public class JokerInstance
         jokerDescription = data.description;
         triggerMessage = data.triggerMessage;
         jokerLogics = jokerData.jokerLogics;
+        SetEdition();
     }
 
     public void SetInstanceData(JokerInstance jokerInstance)
@@ -43,7 +44,7 @@ public class JokerInstance
         totalMult = jokerInstance.totalMult;
         totalMultiplier = jokerInstance.totalMultiplier;
         dynamicVariable = jokerInstance.dynamicVariable;
-        jokerEdition = jokerInstance.jokerEdition; 
+        jokerEdition = jokerInstance.jokerEdition;
     }
 
     public void SetJokerContainer(JokerContainer container)
@@ -51,10 +52,31 @@ public class JokerInstance
         jokerContainer = container;
     }
 
+    private void SetEdition()
+    {
+        int random = UnityEngine.Random.Range(0, 100);
+        if (random == 0)
+        {
+            this.jokerEdition = CardEdition.Polychrome;
+        }
+        else if (random < 2)
+        {
+            this.jokerEdition = CardEdition.Holographic;
+        }
+        else if (random < 5)
+        {
+            this.jokerEdition = CardEdition.Foil;
+        }
+        else if (random < 6)
+        {
+            this.jokerEdition = CardEdition.Negative;
+        }
+    }
+
     public JokerLogic[] jokerLogics;
     public bool destroyJoker;
     public int extraSellValue = 0;
-    public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2)+extraSellValue; } }
+    public int sellValue { get { return Mathf.FloorToInt((float)data.shopValue / 2) + extraSellValue; } }
 }
 
 [System.Serializable]

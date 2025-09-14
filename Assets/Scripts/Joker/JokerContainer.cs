@@ -42,25 +42,6 @@ public class JokerContainer : MonoBehaviour
 
     private void TrySetEdition()
     {
-        int random = UnityEngine.Random.Range(0, 100);
-        if (random == 0)
-        {
-            _jokerInstance.jokerEdition = CardEdition.Polychrome;
-        }
-        else if (random < 2)
-        {
-            _jokerInstance.jokerEdition = CardEdition.Holographic;
-        }
-        else if (random < 5)
-        {
-            _jokerInstance.jokerEdition = CardEdition.Foil;
-        }
-        else if (random < 6)
-        {
-            _jokerInstance.jokerEdition = CardEdition.Negative;
-            Debug.LogError("Negative");
-        }
-
         SetJokerEdition(_jokerInstance.jokerEdition);
     }
 
