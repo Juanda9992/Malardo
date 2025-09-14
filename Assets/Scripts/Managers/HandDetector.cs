@@ -203,7 +203,7 @@ public class HandDetector : MonoBehaviour
 
         for (int i = 0; i < handCards.Count; i++)
         {
-            if (handCards.FindAll(x => x.cardSuit == handCards[i].cardSuit).Count >= requiredAmmountForFlush)
+            if (handCards.FindAll(x => x.cardSuit == handCards[i].cardSuit || x.cardType == CardType.Wild).Count >= requiredAmmountForFlush)
             {
                 return true;
             }

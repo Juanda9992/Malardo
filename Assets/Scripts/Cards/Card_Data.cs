@@ -195,7 +195,7 @@ public class Card
     private CardType GetRandomCardType()
     {
         int generator = Random.Range(0, 100);
-        CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult };
+        CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult, CardType.Wild };
 
 
         if (generator < 30)
@@ -329,7 +329,8 @@ public enum CardType
     Lucky,
     Glass,
     Bonus,
-    Mult
+    Mult,
+    Wild
 }
 
 public static class CommonOperations

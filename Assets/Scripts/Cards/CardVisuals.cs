@@ -11,7 +11,7 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
-    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals, disabledCardVisuals;
+    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals,wildCardVisuals, disabledCardVisuals;
     [SerializeField] private Image seal;
     [SerializeField] private Suit testSuit;
     private Card _card;
@@ -82,7 +82,8 @@ public class CardVisuals : MonoBehaviour
         cardImage.color = Color.white;
         bonusCardVisuals.SetActive(false);
         multCardVisuals.SetActive(false);
-        
+        wildCardVisuals.SetActive(false);
+
         if (_card.cardType == CardType.Gold)
         {
             cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
@@ -111,6 +112,10 @@ public class CardVisuals : MonoBehaviour
         else if (_card.cardType == CardType.Mult)
         {
             multCardVisuals.SetActive(true);
+        }
+        else if (_card.cardType == CardType.Wild)
+        {
+            wildCardVisuals.SetActive(true);
         }
     }
     public void SetCardDisabled(bool disabled)
