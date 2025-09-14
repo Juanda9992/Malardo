@@ -255,7 +255,8 @@ public class JokerManager : MonoBehaviour
     [ContextMenu("Test Add joker")]
     private void TestJoker()
     {
-        AddJoker(testjoker,false);
+        JokerInstance jokerInstance = new JokerInstance(testjoker);
+        AddJoker(jokerInstance);
     }
 }
 
