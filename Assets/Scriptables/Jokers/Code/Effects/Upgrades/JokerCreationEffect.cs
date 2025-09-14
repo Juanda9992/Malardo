@@ -10,7 +10,9 @@ public class JokerCreationEffect : JokerEffect
         {
             if (JokerManager.instance.CanAddJoker())
             {
-                JokerManager.instance.AddJoker(DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(jokerRarity).data);
+                JokerData jokerData = DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(jokerRarity).data;
+                JokerInstance jokerInstance = new JokerInstance(jokerData);
+                JokerManager.instance.AddJoker(jokerInstance);
                 instance.triggerMessage = "Create!";
                 instance.jokerContainer.TriggerMessage();
             }

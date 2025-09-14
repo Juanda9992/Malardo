@@ -72,6 +72,11 @@ public class JokerInstance
         {
             this.jokerEdition = CardEdition.Negative;
         }
+
+        if (this.jokerEdition != CardEdition.Base)
+        {
+            Debug.Log(this.jokerEdition);
+        }
     }
 
     public void GetUpdatedDescription()

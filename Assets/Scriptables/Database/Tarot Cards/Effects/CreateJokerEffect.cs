@@ -28,7 +28,8 @@ public class CreateJokerEffect : CardEffect
         {
             CurrencyManager.instance.SetCurrency(0);
         }
-        JokerManager.instance.AddJoker(jokerData);
+            JokerInstance instance = new JokerInstance(jokerData);
+        JokerManager.instance.AddJoker(instance);
         JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnTarotCardUsed));
     }
 }
