@@ -92,11 +92,16 @@ public class JokerManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
     }
-    public void AddJoker(JokerData jokerData)
+    public void AddJoker(JokerData jokerData, bool isNegative)
     {
         JokerContainer createdJoker = CreateJoker(jokerData);
         GameStatusManager.SetJokersInMatch(currentJokers.Count);
         currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+
+        if (isNegative)
+        {
+            maximumJokers++;
+        }
 
 
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
@@ -113,8 +118,13 @@ public class JokerManager : MonoBehaviour
         {
             logic.jokerEffect[0].UpdateDescription(createdJoker._jokerInstance);
         }
-        currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
 
+        if (jokerInstance.jokerEdition == CardEdition.Negative)
+        {
+            maximumJokers++;
+        }
+        currentJokers.Add(createdJoker.GetComponent<JokerContainer>());
+        createdJoker.GetComponent<JokerContainer>().SetJokerEdition(jokerInstance.jokerEdition);
 
         jokerCounter.text = currentJokers.Count + "/" + maximumJokers;
     }
@@ -128,6 +138,11 @@ public class JokerManager : MonoBehaviour
         JokerInstance jokerInstance = new JokerInstance(jokerData);
         jokerContainer.SetUpJoker(jokerInstance);
         jokerContainer.isOnShop = false;
+
+        if (jokerInstance.jokerEdition == CardEdition.Negative)
+        {
+            maximumJokers++;
+        }
 
         for (int i = 0; i < jokerContainer._jokerInstance.data.OnSetUpJoker.Count; i++)
         {
@@ -240,7 +255,7 @@ public class JokerManager : MonoBehaviour
     [ContextMenu("Test Add joker")]
     private void TestJoker()
     {
-        AddJoker(testjoker);
+        AddJoker(testjoker,false);
     }
 }
 

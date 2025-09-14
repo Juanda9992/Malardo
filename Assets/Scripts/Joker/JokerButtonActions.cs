@@ -43,19 +43,24 @@ public class JokerButtonActions : MonoBehaviour
 
     public void BuyJoker()
     {
-        if (!JokerManager.instance.CanAddJoker())
+        if (!JokerManager.instance.CanAddJoker() && jokerContainer._jokerInstance.jokerEdition != CardEdition.Negative)
         {
             FullSlotAnimation.instance.ShowJokerAnimation();
             return;
         }
         JokerDescription.instance.SetDescriptionOff();
         CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.sellValue);
-        JokerManager.instance.AddJoker(jokerContainer._jokerInstance.data);
+        JokerManager.instance.AddJoker(jokerContainer._jokerInstance);
         Destroy(this.gameObject);
     }
 
     public void SellJoker()
     {
+
+        if (jokerContainer._jokerInstance.jokerEdition == CardEdition.Negative)
+        {
+            JokerManager.instance.maximumJokers--;
+        }
         JokerManager.instance.StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardSold));
         CurrencyManager.instance.AddCurrency(jokerContainer._jokerInstance.sellValue);
         JokerManager.instance.RemoveJoker(jokerContainer);

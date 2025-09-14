@@ -58,6 +58,11 @@ public class JokerContainer : MonoBehaviour
         {
             editionsContainer[(int)cardEdition].SetActive(true);
         }
+
+        if (_jokerInstance.jokerEdition == CardEdition.Negative)
+        {
+            Debug.LogError("Stop Here");
+        }
     }
 
     public void ShowDescription()
