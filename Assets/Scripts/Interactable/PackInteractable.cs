@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PackInteractable : MonoBehaviour
 {
     public PackType itemType;
-    public JokerData jokerData;
+    public JokerInstance jokerData;
     public PackData packData;
     public TarotCardData tarotCard;
 
@@ -22,7 +22,6 @@ public class PackInteractable : MonoBehaviour
     }
     public void SetJokerInfo(JokerInstance createdJoker)
     {
-        jokerData = createdJoker.data;
         itemType = PackType.Buffon;
 
         if (createdJoker.jokerEdition != CardEdition.Base)
@@ -30,8 +29,10 @@ public class PackInteractable : MonoBehaviour
             Debug.Log(createdJoker.jokerEdition);
             jokerVisuals[(int)createdJoker.jokerEdition].SetActive(true);
         }
-        description.SetNameAndDescription(jokerData.jokerName, createdJoker.jokerDescription, GetTypeByjokerRarity(createdJoker),createdJoker.jokerEdition);
+        description.SetNameAndDescription(createdJoker.data.jokerName, createdJoker.jokerDescription, GetTypeByjokerRarity(createdJoker),createdJoker.jokerEdition);
         cardName.text = createdJoker.data.jokerName;
+
+        jokerData = createdJoker;
         StartCoroutine("ListenForAvaliability");
     }
 
@@ -114,7 +115,7 @@ public class PackInteractable : MonoBehaviour
         switch (itemType)
         {
             case PackType.Buffon:
-                JokerManager.instance.AddJoker(jokerData,false);
+                JokerManager.instance.AddJoker(jokerData);
                 break;
             case PackType.Card:
                 DeckManager.instance.AddCardOnFullDeck(createdCard);
