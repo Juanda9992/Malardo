@@ -258,6 +258,12 @@ public class JokerManager : MonoBehaviour
         jokerCounter.text = "0/" + maximumJokers;
     }
 
+    public void IncreaseMaxJokers()
+    {
+        maximumJokers++;
+        UpdateJokerCounterText();
+    }
+
     [ContextMenu("Test Add joker")]
     private void TestJoker()
     {
