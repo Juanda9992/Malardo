@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5a80a9cd91738147ace9f227588892a, type: 3}
-  m_Name: Voucher Data
+  m_Name: Grabber Voucher
   m_EditorClassIdentifier: 
   voucherName: Grabber
   voucherDescription: Permanently gain <style=Chip>+1</style> hand per round.
   basePrice: 10
-  voucherEffect: {fileID: 0}
+  voucherEffect: {fileID: 11400000, guid: eaf12018d4c0cab4bbe4036d77a6528a, type: 2}
