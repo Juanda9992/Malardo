@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97c90ffa8ff8ad4e857c5b52d09bb2b, type: 3}
+  m_Name: Voucher Container Data
+  m_EditorClassIdentifier: 
+  voucherPairDatas:
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: 78cb1efe704bc324787a97c9c552de84, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 82d662edd6229e842a2650582e6d67b3, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: 82095b65052aba34a9ac699e8ca33eda, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: bb9dc05693460cc4c95e9eef0c68cabb, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: 8c1ef2fbfc3b33547b7db949fbc9e91a, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 5c31e227dd2f69d4a8673071003f691e, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: 52ebfb15c5298404881233c602ff7afe, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 8780db1fe40880f4abba25c773855b3c, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: 51ed7107bf930814c9e5a77d580ca5fe, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 51ed7107bf930814c9e5a77d580ca5fe, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: dc4f555403aa6bf439c3744117e3ffe1, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 99c282fe4a4f33148b48889c32fb540c, type: 2}
+      hasBought: 0
+  - isBought: 0
+    voucherBoughtData:
+    - voucher: {fileID: 11400000, guid: b7386bf2661a8d742972edc38d24cfe5, type: 2}
+      hasBought: 0
+    - voucher: {fileID: 11400000, guid: 1e0b8952671e74f42804a566a84e9166, type: 2}
+      hasBought: 0
