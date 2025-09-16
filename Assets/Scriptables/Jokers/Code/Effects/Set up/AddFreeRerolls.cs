@@ -5,6 +5,6 @@ public class AddFreeRerolls : JokerEffect
     public int rerollAmount;
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
-        RerollShop.freeRerollsValue += rerollAmount;
+        RerollShop.instance.AddFreeRerolls(rerollAmount);
     }
 }

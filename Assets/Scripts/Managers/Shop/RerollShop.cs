@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class RerollShop : MonoBehaviour
 {
+    public static RerollShop instance;
     public static int freeRerollsValue = 0;
     private int currentFreeRerolls;
     public int currentValue;
@@ -11,6 +12,10 @@ public class RerollShop : MonoBehaviour
     [SerializeField] private ShopManager shopManager;
     [SerializeField] private Button reRollButton;
 
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         currentFreeRerolls = freeRerollsValue;
@@ -54,5 +59,10 @@ public class RerollShop : MonoBehaviour
     public void AddFreeRerolls(int ammount)
     {
         freeRerollsValue += ammount;
+        if (freeRerollsValue < currentFreeRerolls)
+        {
+            currentFreeRerolls = freeRerollsValue;
+        }
+        SetRerollText();
     }
 }

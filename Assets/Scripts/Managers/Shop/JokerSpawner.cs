@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class JokerSpawner : MonoBehaviour
 {
-    [SerializeField] private int shopItemSlots = 2;
     [Header("Joker Spawning")]
     [SerializeField] private HorizontalLayoutGroup jokerTransform;
     [SerializeField] private GameObject jokerPrefab;
