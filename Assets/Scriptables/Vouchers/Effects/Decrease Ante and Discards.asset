@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8cf37c95ef9e54586b23bd8d6759e8, type: 3}
   m_Name: Decrease Ante and Discards
   m_EditorClassIdentifier: 
-  decreaseHand: 1
-  decreaseDiscard: 0
+  decreaseHand: 0
+  decreaseDiscard: 1
