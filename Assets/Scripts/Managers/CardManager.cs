@@ -39,12 +39,12 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        CommonOperations.UpdateCardSpacing(parent, horizontalLayoutGroup);
+        CommonOperations.UpdateCardSpacing(parent, horizontalLayoutGroup,8);
     }
 
     public void SetHandSpacing()
     {
-        CommonOperations.UpdateCardSpacing(handParent, cardsLayout);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout,8);
     }
 
 
@@ -149,7 +149,7 @@ public class CardManager : MonoBehaviour
     private IEnumerator SetCardSpacing()
     {
         yield return new WaitForEndOfFrame();
-        CommonOperations.UpdateCardSpacing(handParent, cardsLayout);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout,8);
 
     }
 

@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JokerSpawner : MonoBehaviour
 {
     [SerializeField] private int shopItemSlots = 2;
     [Header("Joker Spawning")]
-    [SerializeField] private Transform jokerTransform;
+    [SerializeField] private HorizontalLayoutGroup jokerTransform;
     [SerializeField] private GameObject jokerPrefab;
     [SerializeField] private GameObject consumableCardprefab;
 
@@ -24,30 +25,32 @@ public class JokerSpawner : MonoBehaviour
     }
     public void GenerateItems()
     {
-        CommonOperations.DestroyChildsInParent(jokerTransform);
+        CommonOperations.DestroyChildsInParent(jokerTransform.transform);
 
         for (int i = 0; i < ShopManager.instance.maxItemsOnShop; i++)
         {
             int randomChoice = Random.Range(0, 100);
             if (randomChoice < 71)
             {
-                GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform);
+                GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform.transform);
                 currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJoker());
             }
             else if (randomChoice < 85)
             {
-                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform);
+                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform.transform);
                 consumableCard.GetComponent<ConsumableItem>().isOnShop = true;
                 consumableCard.GetComponent<ConsumableItem>().SetPlanetData(DatabaseManager.instance.planetCardsDatabase.GetRandomPlanetCard());
             }
             else
             {
-                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform);
+                GameObject consumableCard = Instantiate(consumableCardprefab, jokerTransform.transform);
 
                 consumableCard.GetComponent<ConsumableItem>().isOnShop = true;
                 consumableCard.GetComponent<ConsumableItem>().SetTarotData(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
             }
         }
+
+        CommonOperations.UpdateCardSpacing(jokerTransform.transform, jokerTransform,2);
 
         gameObject.SetActive(false);
     }

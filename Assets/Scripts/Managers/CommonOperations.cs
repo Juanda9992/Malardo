@@ -68,7 +68,7 @@ public static class CommonOperations
         return DescriptionType.None;
     }
 
-    public static void UpdateCardSpacing(Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)
+    public static void UpdateCardSpacing(Transform parent, HorizontalLayoutGroup horizontalLayoutGroup, int minObjectsRequired)
     {
         float totalWidth = 0;
         float childCount = 0;
@@ -84,7 +84,7 @@ public static class CommonOperations
             }
         }
 
-        if (childCount > 1)
+        if (childCount > minObjectsRequired)
         {
             float availableWidth = rectTransform.rect.width
                                    - horizontalLayoutGroup.padding.left
