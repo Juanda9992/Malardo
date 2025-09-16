@@ -97,7 +97,7 @@ public class PackManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         if (maxSelections == 0)
         {
-            CardManager.DestroyChildsInParent(cardManipulationManager.cardEffectParent);
+            CommonOperations.DestroyChildsInParent(cardManipulationManager.cardEffectParent);
             SkipPackage(false);
             JokerDescription.instance.SetDescriptionOff();
         }
@@ -112,8 +112,8 @@ public class PackManager : MonoBehaviour
             StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPackSkipped));
         }
         SetAllUIStatus(true);
-        CardManager.DestroyChildsInParent(itemsDisplay);
-        CardManager.DestroyChildsInParent(cardManipulationManager.layoutGroup.transform);
+        CommonOperations.DestroyChildsInParent(itemsDisplay);
+        CommonOperations.DestroyChildsInParent(cardManipulationManager.layoutGroup.transform);
         CardManager.instance.cardsOnScreen.Clear();
         HandManager.instance.handCards.Clear();
         BackgroundManager.instance.SetBgColor(DatabaseManager.instance.cardColorDatabase.defaultBgColor);

@@ -24,7 +24,7 @@ public class JokerSpawner : MonoBehaviour
     }
     public void GenerateItems()
     {
-        ClearItemsInShop();
+        CommonOperations.DestroyChildsInParent(jokerTransform);
 
         for (int i = 0; i < ShopManager.instance.maxItemsOnShop; i++)
         {
@@ -51,29 +51,9 @@ public class JokerSpawner : MonoBehaviour
 
         gameObject.SetActive(false);
     }
-
-    private void ClearItemsInShop()
-    {
-        Transform[] existingItems = jokerTransform.GetComponentsInChildren<Transform>();
-        if (existingItems.Length > 1)
-        {
-            for (int i = 1; i < existingItems.Length; i++)
-            {
-                Destroy(existingItems[i].gameObject);
-            }
-        }
-    }
     public void GenerateShopPacks()
     {
-        Transform[] packs = packsTransform.GetComponentsInChildren<Transform>();
-        if (packs.Length > 1)
-        {
-            for (int i = 1; i < packs.Length; i++)
-            {
-                Destroy(packs[i].gameObject);
-            }
-        }
-
+        CommonOperations.DestroyChildsInParent(packsTransform);
         PackSize packSize;
         for (int i = 0; i < 2; i++)
         {

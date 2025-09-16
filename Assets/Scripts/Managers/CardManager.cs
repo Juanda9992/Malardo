@@ -31,7 +31,6 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        UpdateCardSpacing(handParent, cardsLayout);
     }
 
     public void GenerateCardOnHand(Card card, Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)
@@ -40,41 +39,19 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        UpdateCardSpacing(parent, horizontalLayoutGroup);
+        CommonOperations.UpdateCardSpacing(parent, horizontalLayoutGroup);
     }
 
     public void SetHandSpacing()
     {
-        UpdateCardSpacing(handParent, cardsLayout);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout);
     }
 
-    private void UpdateCardSpacing(Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)
-    {
-        if (parent.childCount > 8)
-        {
-            horizontalLayoutGroup.spacing = -parent.childCount * 5;
-        }
-        else
-        {
-            horizontalLayoutGroup.spacing = 0;
-        }
-    }
 
     public void DestroyCardsOnHand()
     {
         cardsOnScreen.Clear();
         DeleteChildsInParent(handParent);
-    }
-    public static void DestroyChildsInParent(Transform parent)
-    {
-        Transform[] existingUI = parent.GetComponentsInChildren<Transform>();
-        if (existingUI.Length > 1)
-        {
-            for (int i = 1; i < existingUI.Length; i++)
-            {
-                Destroy(existingUI[i].gameObject);
-            }
-        }
     }
 
     public void TrimDeck(int newCardValue)
@@ -142,12 +119,12 @@ public class CardManager : MonoBehaviour
             for (int r = 0; r < reactivations; r++)
             {
                 if (cardsOnScreen[i].currentCard.cardType == CardType.Gold)
-                    {
-                        CurrencyManager.instance.AddCurrency(4);
-                        cardsOnScreen[i].pointerInteraction.ShakeCard();
-                        ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
-                        yield return new WaitForSeconds(0.3f);
-                    }
+                {
+                    CurrencyManager.instance.AddCurrency(4);
+                    cardsOnScreen[i].pointerInteraction.ShakeCard();
+                    ScoreSign.instance.SetMessage(Color.yellow, "$4", cardsOnScreen[i].transform.position);
+                    yield return new WaitForSeconds(0.3f);
+                }
             }
             if (cardsOnScreen[i].currentCard.cardSeal == Seal.Blue)
             {
@@ -172,7 +149,7 @@ public class CardManager : MonoBehaviour
     private IEnumerator SetCardSpacing()
     {
         yield return new WaitForEndOfFrame();
-        UpdateCardSpacing(handParent, cardsLayout);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout);
 
     }
 
