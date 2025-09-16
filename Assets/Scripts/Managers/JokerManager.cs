@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JokerManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class JokerManager : MonoBehaviour
     [SerializeField] private List<JokerData> testingJokers;
     public int maximumJokers = 5;
     [SerializeField] private GameObject jokerCard;
-    [SerializeField] private Transform jokerParent;
+    [SerializeField] private HorizontalLayoutGroup jokerParent;
 
     [SerializeField] private JokerData testjoker;
     [SerializeField] private TextMeshProUGUI jokerCounter;
@@ -129,7 +130,7 @@ public class JokerManager : MonoBehaviour
 
     private JokerContainer CreateJoker(JokerData jokerData)
     {
-        GameObject newJoker = Instantiate(jokerCard, jokerParent);
+        GameObject newJoker = Instantiate(jokerCard, jokerParent.transform);
 
         JokerContainer jokerContainer = newJoker.GetComponent<JokerContainer>();
 
@@ -146,6 +147,7 @@ public class JokerManager : MonoBehaviour
         {
             jokerContainer._jokerInstance.data.OnSetUpJoker[i].ApplyEffect(jokerInstance);
         }
+        CommonOperations.UpdateCardSpacing(jokerParent.transform, jokerParent, 4);
         return jokerContainer;
     }
     public IEnumerator UpdateJokerList()
