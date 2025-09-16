@@ -9,7 +9,7 @@ namespace Effects
         public bool discards;
         public bool handSize;
         public bool jokerSlot;
-
+        public bool shopSpaces;
         public override void ApplyEffect()
         {
             if (hands)
@@ -30,6 +30,11 @@ namespace Effects
             if (jokerSlot)
             {
                 JokerManager.instance.IncreaseMaxJokers();
+            }
+
+            if (shopSpaces)
+            {
+                ShopManager.instance.IncreaseShopSlots();
             }
         }
     }

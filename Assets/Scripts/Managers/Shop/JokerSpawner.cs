@@ -26,7 +26,7 @@ public class JokerSpawner : MonoBehaviour
     {
         ClearItemsInShop();
 
-        for (int i = 0; i < shopItemSlots; i++)
+        for (int i = 0; i < ShopManager.instance.maxItemsOnShop; i++)
         {
             int randomChoice = Random.Range(0, 100);
             if (randomChoice < 71)

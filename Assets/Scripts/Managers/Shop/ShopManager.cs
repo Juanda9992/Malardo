@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class ShopManager : MonoBehaviour
 {
+    public int maxItemsOnShop = 2;
     public static ShopManager instance;
     [SerializeField] private GameObject jokerGenerator;
 
@@ -16,6 +17,12 @@ public class ShopManager : MonoBehaviour
     public void SetGenerateJokersAction()
     {
         jokerGenerator.SetActive(true);
+    }
+
+    public void IncreaseShopSlots()
+    {
+        maxItemsOnShop++;
+        SetGenerateJokersAction();
     }
 
     [ContextMenu("Show Shop")]
