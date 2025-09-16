@@ -8,6 +8,7 @@ public class RerollShop : MonoBehaviour
     public static int freeRerollsValue = 0;
     private int currentFreeRerolls;
     public int currentValue;
+    [SerializeField] private int defaultRerollPrice = 5;
     [SerializeField] private TextMeshProUGUI rerollButtonText;
     [SerializeField] private ShopManager shopManager;
     [SerializeField] private Button reRollButton;
@@ -51,7 +52,7 @@ public class RerollShop : MonoBehaviour
     }
     public void SetDefaultValues()
     {
-        currentValue = 5;
+        currentValue = defaultRerollPrice;
         currentFreeRerolls = freeRerollsValue;
         SetRerollText();
     }
@@ -63,6 +64,13 @@ public class RerollShop : MonoBehaviour
         {
             currentFreeRerolls = freeRerollsValue;
         }
+        SetRerollText();
+    }
+
+    public void SetRerollPrice(int newPrice)
+    {
+        defaultRerollPrice = newPrice;
+        currentValue = defaultRerollPrice;
         SetRerollText();
     }
 }
