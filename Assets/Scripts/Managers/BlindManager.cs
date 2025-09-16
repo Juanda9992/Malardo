@@ -121,6 +121,13 @@ public class BlindManager : MonoBehaviour
             GameObject.FindObjectOfType<BlindSelector>().GenerateRoundBlinds();
         }
     }
+    [ContextMenu("Reduce Ante Level")]
+    public void DecreaseAnteLevel()
+    {
+        anteLevel--;
+        GameObject.FindObjectOfType<BlindSelector>().SetUpScoresUI();
+        currentBetLevelText.text = anteLevel + 1 + " / " + "6";
+    }
 
     public void SetUpBossBlind(CurrentBlind currentBlind = null)
     {

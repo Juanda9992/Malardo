@@ -43,7 +43,7 @@ public class BlindSelector : MonoBehaviour
             bg.color = blindColor;
         }
     }
-    private void SetUpScoresUI()
+    public void SetUpScoresUI()
     {
         int ante = BlindManager.instance.anteLevel;
         for (int i = 0; i < scoresText.Length -1; i++)
