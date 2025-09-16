@@ -15,4 +15,5 @@ MonoBehaviour:
   hands: 0
   discards: 0
   handSize: 0
-  jokerSlot: 1
+  jokerSlot: 0
+  shopSpaces: 1
