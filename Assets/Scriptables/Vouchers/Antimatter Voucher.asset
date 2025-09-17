@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Antimatter Voucher
   m_EditorClassIdentifier: 
   voucherName: Antimatter
-  voucherDescription: <style=Chip>+1</style> Joker Slot
+  voucherDescription: <style=Chips>+1</style> Joker Slot
   basePrice: 10
   voucherEffect: {fileID: 11400000, guid: 68cd10dd3586e1441a251c093ae781da, type: 2}

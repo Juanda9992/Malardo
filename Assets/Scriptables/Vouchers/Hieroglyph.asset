@@ -15,7 +15,7 @@ MonoBehaviour:
   voucherName: Hieroglyph
   voucherDescription: '<style=Info>-1</style> Ante,
 
-    <style=Chip>-1</style>
+    <style=Chips>-1</style>
     hand each round'
   basePrice: 10
   voucherEffect: {fileID: 11400000, guid: 4498024f6c760644a91ed31c49716ea6, type: 2}
