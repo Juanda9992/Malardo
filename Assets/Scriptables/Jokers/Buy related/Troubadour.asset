@@ -15,10 +15,11 @@ MonoBehaviour:
   jokerName: Troubadour
   description: '+2 hand size
 
-    <style="Chips">-1 handmult</style> per round'
+    <style="Chips">-1 hand</style> per round'
   triggerMessage: +2 Hand Size - 1 Hand
   overrideEffect: 0
   shopValue: 6
+  JokerImage: {fileID: 0}
   jokerRarity: 1
   jokerLogics: []
   OnSetUpJoker:
