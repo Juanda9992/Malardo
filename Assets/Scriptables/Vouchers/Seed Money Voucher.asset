@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a80a9cd91738147ace9f227588892a, type: 3}
+  m_Name: Seed Money Voucher
+  m_EditorClassIdentifier: 
+  voucherName: Seed Money
+  voucherDescription: Raise the cap on interest earned in each round to <style=Cash>$10</style>
+  basePrice: 10
+  voucherEffect: {fileID: 11400000, guid: e55975a99ac119048bc8095c940e2fbc, type: 2}
