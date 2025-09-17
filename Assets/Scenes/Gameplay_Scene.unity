@@ -9118,6 +9118,9 @@ MonoBehaviour:
   tarotCardDatabase: {fileID: 11400000, guid: 8e32bcb3d5c361542b18bdb19635d934, type: 2}
   jokerContainer: {fileID: 11400000, guid: 6a98c152a574d684691a39b53f56d756, type: 2}
   pricesDatabase: {fileID: 430010868}
+  voucherDatabase: {fileID: 11400000, guid: c31c555966cfe6346bcff3f04217be74, type: 2}
+  matchVoucherDatabase:
+    voucherPairDatas: []
 --- !u!114 &430010868
 MonoBehaviour:
   m_ObjectHideFlags: 0
