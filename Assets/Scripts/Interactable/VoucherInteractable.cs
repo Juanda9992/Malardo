@@ -16,8 +16,12 @@ public class VoucherInteractable : MonoBehaviour
     }
     public void ConsumeItem()
     {
-        voucherData.voucherEffect.ApplyEffect();
+        if (voucherData.voucherEffect != null)
+        {
+            voucherData.voucherEffect.ApplyEffect();
+        }
         JokerDescription.instance.SetDescriptionOff();
+        DatabaseManager.instance.matchVoucherDatabase.SetVoucherBought(voucherData);
         Destroy(gameObject);
     }
     [ContextMenu("Set Custom Data")]

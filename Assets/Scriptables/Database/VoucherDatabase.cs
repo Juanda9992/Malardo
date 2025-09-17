@@ -18,6 +18,23 @@ public class VoucherShopContainer
         voucherPairDatas = new List<VoucherPairData>();
     }
 
+    public void SetVoucherBought(VoucherData data)
+    {
+        foreach (var pair in voucherPairDatas)
+        {
+            foreach (var voucher in pair.voucherBoughtData)
+            {
+                if (VoucherData.ReferenceEquals(voucher.voucher, data))
+                {
+                    Debug.Log(data.voucherName);
+                    Debug.Log(voucher.voucher.voucherName);
+                    voucher.hasBought = true;
+                    Debug.Log(voucher.hasBought);
+                }
+            }
+        }
+    }
+
     public VoucherData GetRandomVoucher()
     {
         List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false);
