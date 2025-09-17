@@ -37,9 +37,10 @@ public class VoucherShopContainer
 
     public VoucherData GetRandomVoucher()
     {
-        List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false);
+        List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false && x.appearAnte >= BlindManager.instance.anteLevel);
 
         VoucherPairData selectedVoucher = voucherPairData[Random.Range(0, voucherPairData.Count)];
+
 
         for (int i = 0; i < selectedVoucher.voucherBoughtData.Length; i++)
         {
@@ -57,11 +58,12 @@ public class VoucherPairData
 {
     public bool isComplete {get{ return VoucherSetBought(); }}
     public VoucherBoughtData[] voucherBoughtData;
+    public int appearAnte = 0;
 
     public VoucherPairData(VoucherPairData data)
     {
         voucherBoughtData = new VoucherBoughtData[data.voucherBoughtData.Length];
-
+        appearAnte = data.appearAnte;
         for (int i = 0; i < data.voucherBoughtData.Length; i++)
         {
             voucherBoughtData[i] = new VoucherBoughtData(data.voucherBoughtData[i].voucher);

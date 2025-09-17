@@ -122,7 +122,7 @@ public class JokerSpawner : MonoBehaviour
             GenerateVoucher();
         }
     }
-
+    [ContextMenu("Generate VOucher")]
     private void GenerateVoucher()
     {
         GameObject voucher = Instantiate(voucherPrefab, voucherContainer);
