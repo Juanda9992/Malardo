@@ -55,7 +55,7 @@ public class Card_Data : MonoBehaviour
         {
             BuffCard();
         }
-        if (currentCard.cardSuit == suit)
+        if (currentCard.cardSuit == suit || currentCard.cardType == CardType.Wild)
         {
             DebuffCard();
         }
