@@ -39,12 +39,12 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
-        CommonOperations.UpdateCardSpacing(parent, horizontalLayoutGroup,8);
+        CommonOperations.UpdateCardSpacing(parent, horizontalLayoutGroup, 8);
     }
 
     public void SetHandSpacing()
     {
-        CommonOperations.UpdateCardSpacing(handParent, cardsLayout,8);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout, 8);
     }
 
 
@@ -96,6 +96,10 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < cardsOnScreen.Count; i++)
         {
+            if (!cardsOnScreen[i].currentCard.canPlay)
+            {
+                continue;
+            }
             int reactivations = cardsOnScreen[i].currentCard.cardSeal == Seal.Red ? 2 : 1;
 
             for (int r = 0; r < reactivations; r++)
@@ -116,6 +120,10 @@ public class CardManager : MonoBehaviour
         {
             int reactivations = cardsOnScreen[i].currentCard.cardSeal == Seal.Red ? 2 : 1;
 
+            if (!cardsOnScreen[i].currentCard.canPlay)
+            {
+                continue;
+            }
             for (int r = 0; r < reactivations; r++)
             {
                 if (cardsOnScreen[i].currentCard.cardType == CardType.Gold)
@@ -149,7 +157,7 @@ public class CardManager : MonoBehaviour
     private IEnumerator SetCardSpacing()
     {
         yield return new WaitForEndOfFrame();
-        CommonOperations.UpdateCardSpacing(handParent, cardsLayout,8);
+        CommonOperations.UpdateCardSpacing(handParent, cardsLayout, 8);
 
     }
 

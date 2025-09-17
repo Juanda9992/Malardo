@@ -108,12 +108,12 @@ public class HandManager : MonoBehaviour
             {
                 if (triggerEvent)
                 {
-                    if (handCards[i].cardSeal == Seal.Purple)
+                    if (handCards[i].cardSeal == Seal.Purple && handCards[i].canPlay)
                     {
                         if (ConsumableManager.instance.CanAddConsumable)
                         {
                             handCards[i].linkedCard.pointerInteraction.ShakeCard();
-                            ScoreSign.instance.SetMessage(Color.magenta,"Create!",handCards[i].linkedCard.transform.position);
+                            ScoreSign.instance.SetMessage(Color.magenta, "Create!", handCards[i].linkedCard.transform.position);
                             ConsumableManager.instance.GenerateTarotCard(DatabaseManager.instance.tarotCardDatabase.GetRandomTarotCard());
                             yield return new WaitForSeconds(0.2f);
                         }
@@ -200,19 +200,19 @@ public class HandManager : MonoBehaviour
 
     public void IncreaseHands()
     {
-        SetDefaultHands(defaultHands+1, true);
+        SetDefaultHands(defaultHands + 1, true);
     }
     public void IncreaseDiscards()
     {
-        SetDefaultDiscards(defaultDiscards+1, true);
+        SetDefaultDiscards(defaultDiscards + 1, true);
     }
     public void DecreaseHands()
     {
-        SetDefaultHands(defaultHands-1, true);
+        SetDefaultHands(defaultHands - 1, true);
     }
     public void DecreaseDiscards()
     {
-        SetDefaultDiscards(defaultDiscards-1, true);
+        SetDefaultDiscards(defaultDiscards - 1, true);
     }
 
     public void SetDefaultDiscards(int ammount, bool matchDiscards = false)
