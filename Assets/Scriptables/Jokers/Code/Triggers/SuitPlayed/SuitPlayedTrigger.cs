@@ -11,7 +11,7 @@ public class SuitPlayedTrigger : JokerTrigger
             return false;
         }
 
-        return gameStatus.cardPlayed.cardSuit == requiredSuit;
+        return gameStatus.cardPlayed.cardSuit == requiredSuit || gameStatus.cardPlayed.cardType == CardType.Wild;
         
     }
 }
