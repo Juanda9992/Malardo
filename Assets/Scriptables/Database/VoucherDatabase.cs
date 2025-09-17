@@ -17,11 +17,28 @@ public class VoucherShopContainer
     {
         voucherPairDatas = new List<VoucherPairData>();
     }
+
+    public VoucherData GetRandomVoucher()
+    {
+        List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false);
+
+        VoucherPairData selectedVoucher = voucherPairData[Random.Range(0, voucherPairData.Count)];
+
+        for (int i = 0; i < selectedVoucher.voucherBoughtData.Length; i++)
+        {
+            if (!selectedVoucher.voucherBoughtData[i].hasBought)
+            {
+                return selectedVoucher.voucherBoughtData[i].voucher;
+            }
+        }
+
+        return null;
+    }
 }
 [System.Serializable]
 public class VoucherPairData
 {
-    public bool isBought;
+    public bool isComplete {get{ return VoucherSetBought(); }}
     public VoucherBoughtData[] voucherBoughtData;
 
     public VoucherPairData(VoucherPairData data)
@@ -32,6 +49,18 @@ public class VoucherPairData
         {
             voucherBoughtData[i] = new VoucherBoughtData(data.voucherBoughtData[i].voucher);
         }
+    }
+
+    public bool VoucherSetBought()
+    {
+        for (int i = 0; i < voucherBoughtData.Length; i++)
+        {
+            if (!voucherBoughtData[i].hasBought)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 [System.Serializable]

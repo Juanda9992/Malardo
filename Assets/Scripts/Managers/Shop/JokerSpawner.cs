@@ -1,4 +1,5 @@
 using System.Collections;
+using Shop.Voucher;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,10 @@ public class JokerSpawner : MonoBehaviour
     [Header("Packs Database")]
     [SerializeField] private Transform packsTransform;
     [SerializeField] private GameObject shopPackPrefab;
+    [Header("Voucher Section")]
+    [SerializeField] private Transform voucherContainer;
+    [SerializeField] private GameObject voucherPrefab;
+    private bool firstTime;
     void OnEnable()
     {
         StartCoroutine(GenerateStuff());
@@ -21,6 +26,12 @@ public class JokerSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         GenerateItems();
+
+        if (!firstTime)
+        {
+            firstTime = true;
+            GenerateVoucher();
+        }
     }
     public void GenerateItems()
     {
@@ -49,7 +60,7 @@ public class JokerSpawner : MonoBehaviour
             }
         }
 
-        CommonOperations.UpdateCardSpacing(jokerTransform.transform, jokerTransform,2);
+        CommonOperations.UpdateCardSpacing(jokerTransform.transform, jokerTransform, 2);
 
         gameObject.SetActive(false);
     }
@@ -102,9 +113,20 @@ public class JokerSpawner : MonoBehaviour
             else
             {
                 shopPack.GetComponent<ShopItem>().SetPackData(DatabaseManager.instance.shopPacksDatabase.GetRandomSpectralPack(packSize));
-                
+
             }
         }
+
+        if (BlindManager.instance.currentBlindProgress == 0)
+        {
+            GenerateVoucher();
+        }
+    }
+
+    private void GenerateVoucher()
+    {
+        GameObject voucher = Instantiate(voucherPrefab, voucherContainer);
+        voucher.GetComponent<VoucherInteractable>().SetVoucherData(DatabaseManager.instance.matchVoucherDatabase.GetRandomVoucher());
     }
 
     [ContextMenu("Generate All Shop")]
