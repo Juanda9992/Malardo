@@ -11197,12 +11197,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentJokers: []
   testingJokers:
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
-  - {fileID: 11400000, guid: 801a28b591aa01d4e9c4c45eed6bfa29, type: 2}
+  - {fileID: 11400000, guid: a52212e44603dbb4dbf4531d781e5354, type: 2}
+  - {fileID: 11400000, guid: 6e5f450ae7723f842b965c85aedb4e0f, type: 2}
+  - {fileID: 11400000, guid: 1897b359e0e0c064da67b8c0ae8cc13e, type: 2}
+  - {fileID: 11400000, guid: 23457408162bd2640bf2481bab153e93, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850266}
@@ -15020,6 +15018,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   investMultiplier: 1
+  investCap: 5
 --- !u!1 &989674094
 GameObject:
   m_ObjectHideFlags: 0
@@ -23929,7 +23928,7 @@ GameObject:
   - component: {fileID: 1650242791}
   - component: {fileID: 1650242790}
   m_Layer: 5
-  m_Name: End_Results
+  m_Name: Currency Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

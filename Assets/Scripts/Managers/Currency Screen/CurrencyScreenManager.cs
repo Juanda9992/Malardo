@@ -18,6 +18,8 @@ public class CurrencyScreenManager : MonoBehaviour
 
     public int investMultiplier = 1;
 
+    public int investCap = 5;
+
     public static CurrencyScreenManager instance;
 
     private int roundScore;
@@ -61,7 +63,8 @@ public class CurrencyScreenManager : MonoBehaviour
 
     private void CalculateInvest()
     {
-        int invest = Mathf.FloorToInt(CurrencyManager.instance.currentCurrency / 5) * investMultiplier;
+        int investCapped = Mathf.Clamp(Mathf.FloorToInt(CurrencyManager.instance.currentCurrency / 5), 0, investCap);
+        int invest =  investCapped * investMultiplier;
         roundScore += invest;
         if (invest > 0)
         {
