@@ -11,6 +11,8 @@ public class PokerHandUpgrader : MonoBehaviour
     public StatUpgrade multUpgrade;
     public StatUpgrade chipUpgrade;
 
+    public List<HandType> usedCards = new List<HandType>(); 
+
     [SerializeField] private HandType upgradeData;
 
     void Awake()
@@ -21,8 +23,16 @@ public class PokerHandUpgrader : MonoBehaviour
     public void RequestUpgradeHand(HandType handType)
     {
         StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
+
     }
 
+    public void AddCardUsedIntoDatabase(HandType handType)
+    {
+        if (!usedCards.Contains(handType))
+        {
+            usedCards.Add(handType);
+        }
+    }
     public void RequestUpgradeAllHands()
     {
         StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(HandType.High_Card), true, true));
