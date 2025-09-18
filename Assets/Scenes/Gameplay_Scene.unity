@@ -7399,6 +7399,7 @@ MonoBehaviour:
     playedInRound: 0
   requiredAmmountForFlush: 5
   gapForStraights: 1
+  allowAllCards: 0
 --- !u!114 &333037843
 MonoBehaviour:
   m_ObjectHideFlags: 0

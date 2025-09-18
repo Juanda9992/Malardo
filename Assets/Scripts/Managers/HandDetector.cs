@@ -15,6 +15,7 @@ public class HandDetector : MonoBehaviour
     public PokerHandLevelData currentHand;
     public int requiredAmmountForFlush = 5;
     public int gapForStraights = 1;
+    public bool allowAllCards = false;
     void Awake()
     {
         instance = this;
@@ -39,7 +40,7 @@ public class HandDetector : MonoBehaviour
         if(CheckIfColor() && CheckIfFiveOfAKind())
         {
                 Debug.Log("Flush Five");
-                CardPlayer.instance.ReceiveHandCards(handCards);
+                CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
                 currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush_Five);
                 AddHandToMult();
                 return;            
@@ -47,7 +48,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfColor() && CheckIfFullHouse())
             {
                 Debug.Log("Flush House");
-                CardPlayer.instance.ReceiveHandCards(handCards);
+                CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
                 currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush_House);
                 AddHandToMult();
                 return;
@@ -55,7 +56,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfFiveOfAKind())
         {
             Debug.Log("Five of a kind");
-            CardPlayer.instance.ReceiveHandCards(handCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Five_Of_A_Kind);
             AddHandToMult();
             return;
@@ -63,7 +64,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfColor() && CheckIfStraight())
         {
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Straight_Flush);
-            CardPlayer.instance.ReceiveHandCards(handCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             Debug.Log("Straight Flush");
             AddHandToMult();
             return;
@@ -71,7 +72,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfColor())
         {
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Flush);
-            CardPlayer.instance.ReceiveHandCards(handCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             Debug.Log("Suit");
             AddHandToMult();
             return;
@@ -81,7 +82,7 @@ public class HandDetector : MonoBehaviour
         {
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Straight);
             Debug.Log("Straight");
-            CardPlayer.instance.ReceiveHandCards(cardsSorted);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?cardsSorted:realCards);
             AddHandToMult();
             return;
         }
@@ -89,7 +90,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfFourOfAkind())
         {
             Debug.Log("Four of a Kind");
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Four_Of_A_Kind);
             AddHandToMult();
             return;
@@ -98,7 +99,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfFullHouse())
         {
             Debug.Log("Full House");
-            CardPlayer.instance.ReceiveHandCards(handCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Full_House);
             AddHandToMult();
             return;
@@ -107,7 +108,7 @@ public class HandDetector : MonoBehaviour
         if (CheckIfDoublePair())
         {
             Debug.Log("Double pair");
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Double_Pair);
             AddHandToMult();
             return;
@@ -115,7 +116,7 @@ public class HandDetector : MonoBehaviour
 
         if (CheckIfThreeOfAKind())
         {
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             Debug.Log("Three of a kind");
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Three_Of_A_Kind);
             AddHandToMult();
@@ -126,7 +127,7 @@ public class HandDetector : MonoBehaviour
         {
 
             Debug.Log("Pair");
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.Pair);
             AddHandToMult();
             return;
@@ -360,7 +361,7 @@ public class HandDetector : MonoBehaviour
 
             realCards.Add(highestCard);
             realCards.AddRange(handCards.FindAll(x => x.cardType == CardType.Stone));
-            CardPlayer.instance.ReceiveHandCards(realCards);
+            CardPlayer.instance.ReceiveHandCards(allowAllCards ?handCards:realCards);
             currentHand = PokerHandLevelStorage.instance.GetHandData(HandType.High_Card);
             AddHandToMult();
         }
