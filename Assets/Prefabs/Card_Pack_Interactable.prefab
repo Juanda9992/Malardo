@@ -920,6 +920,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245994885606603466, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
+      propertyPath: OnHoverIn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4916519999377278713}
+    - target: {fileID: 245994885606603466, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
+      propertyPath: OnHoverIn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCardData
+      objectReference: {fileID: 0}
+    - target: {fileID: 245994885606603466, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
+      propertyPath: OnHoverIn.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PackInteractable, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1785147410439429496, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1054,6 +1066,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4916519999377278713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7886833945148016626, guid: ee3b5f455e383c24c9167131808c37e4, type: 3}
+  m_PrefabInstance: {fileID: 2975002814481613067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688547606430180803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f142a1c723da04b942939b9c5c0aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &6394068275115612818 stripped

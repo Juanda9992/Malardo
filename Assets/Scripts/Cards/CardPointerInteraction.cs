@@ -27,7 +27,7 @@ public class CardPointerInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     public void OnPointerEnter(PointerEventData data)
     {
         transform.DOScale(hoverScale, animationTime);
-        JokerDescription.instance.SetCardDescription(card_Data);
+        JokerDescription.instance.SetCardDescription(card_Data.currentCard,transform);
     }
 
     public void OnPointerExit(PointerEventData data)

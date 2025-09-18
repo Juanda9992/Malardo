@@ -10,7 +10,7 @@ public class DescriptionContainer : MonoBehaviour
     private CardEdition cardEdition;
     public void ShowDescription()
     {
-        JokerDescription.instance.SetGenericDescription(contentName, description, (Vector2)transform.position + descriptionOffset, descriptionType,cardEdition);
+        JokerDescription.instance.SetGenericDescription(contentName, description, (Vector2)transform.position + descriptionOffset, descriptionType, cardEdition);
     }
 
     public void HideDescription()

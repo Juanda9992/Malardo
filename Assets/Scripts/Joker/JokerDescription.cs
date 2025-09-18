@@ -29,24 +29,24 @@ public class JokerDescription : MonoBehaviour
         transform.localScale = Vector2.zero;
     }
 
-    public void SetCardDescription(Card_Data card_Data)
+    public void SetCardDescription(Card card,Transform cardTransform)
     {
-        nameText.text = card_Data.currentCard.cardName;
+        nameText.text = card.cardName;
         transform.localScale = Vector2.one;
-        transform.position = (Vector2)card_Data.transform.position + new Vector2(0, cardDescriptionOffsetY);
-        descriptionText.text = $"<style=Chips>+{card_Data.currentCard.chipAmmount} </style>chips";
-        SetCardData(card_Data);
+        transform.position = (Vector2)cardTransform.transform.position + new Vector2(0, cardDescriptionOffsetY);
+        descriptionText.text = $"<style=Chips>+{card.chipAmmount} </style>chips";
+        SetCardData(card);
         StartCoroutine("ForceRebuildDesc");
     }
 
-    private void SetCardData(Card_Data card_Data)
+    private void SetCardData(Card card_Data)
     {
-        if (card_Data.currentCard.cardType == CardType.Default)
+        if (card_Data.cardType == CardType.Default)
         {
             SetDescriptionRarity(extraTags[0], DescriptionType.None);
         }
 
-        switch (card_Data.currentCard.cardType)
+        switch (card_Data.cardType)
         {
             case CardType.Glass:
                 descriptionText.text += '\n' + "<style=Mult>X2 Mult</style> \n 1 in 4 chance to destroy card";
@@ -79,7 +79,7 @@ public class JokerDescription : MonoBehaviour
                 break;
         }
 
-        switch (card_Data.currentCard.cardSeal)
+        switch (card_Data.cardSeal)
         {
             case Seal.None:
                 SetDescriptionRarity(extraTags[1], DescriptionType.None);
@@ -95,7 +95,7 @@ public class JokerDescription : MonoBehaviour
                 break;
         }
 
-        switch (card_Data.currentCard.cardEdition)
+        switch (card_Data.cardEdition)
         {
             case CardEdition.Foil:
                 SetDescriptionRarity(extraTags[2], DescriptionType.Special_Card, "Foil");
@@ -108,8 +108,8 @@ public class JokerDescription : MonoBehaviour
                 break;
         }
 
-        SetEditionDescription(card_Data.currentCard.cardEdition);
-        SetSealDescription(card_Data.currentCard.cardSeal);
+        SetEditionDescription(card_Data.cardEdition);
+        SetSealDescription(card_Data.cardSeal);
     }
 
     public void SetGenericDescription(string itemName, string itemDescription, Vector2 itemPosition, DescriptionType descriptionType, CardEdition cardEdition = CardEdition.Base)

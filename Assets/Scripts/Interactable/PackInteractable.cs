@@ -65,9 +65,12 @@ public class PackInteractable : MonoBehaviour
         createdCard = createdCard.GenerateRandomCard();
 
         GetComponent<CardVisuals>().SetVisuals(createdCard);
-        description.SetNameAndDescription(createdCard.cardName, "+" + createdCard.chipAmmount + " chips", DescriptionType.None);
         StartCoroutine("ListenForAvaliability");
 
+    }
+    public void ShowCardData()
+    {
+        JokerDescription.instance.SetCardDescription(createdCard,transform);
     }
 
     public void SetPlanetCard(PlanetCardData planetCardData)
