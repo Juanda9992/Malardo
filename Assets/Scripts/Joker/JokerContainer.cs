@@ -64,6 +64,7 @@ public class JokerContainer : MonoBehaviour
             JokerManager.instance.maximumJokers++;
             JokerManager.instance.UpdateJokerCounterText();
         }
+        transform.DOPunchScale(Vector3.one * 0.3f, 0.15f);
     }
 
     public void ShowDescription()
