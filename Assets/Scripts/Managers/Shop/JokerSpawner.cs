@@ -130,6 +130,12 @@ public class JokerSpawner : MonoBehaviour
         voucher.GetComponent<VoucherInteractable>().SetVoucherData(DatabaseManager.instance.matchVoucherDatabase.GetRandomVoucher());
     }
 
+    [ContextMenu("Get Random Voucher")]
+    private void DebugRandomVoucher()
+    {
+        Debug.Log(DatabaseManager.instance.matchVoucherDatabase.GetRandomVoucher().voucherName);
+    }
+
     [ContextMenu("Generate All Shop")]
     private void GenerateAllShop()
     {

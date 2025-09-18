@@ -120,7 +120,6 @@ public class CardVisuals : MonoBehaviour
     }
     public void SetCardDisabled(bool disabled)
     {
-        Debug.Log(disabled);
         disabledCardVisuals.SetActive(disabled);
     }
 

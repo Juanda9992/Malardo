@@ -19,6 +19,11 @@ public class BlindReroll : MonoBehaviour
         rerollButton.gameObject.SetActive(false);
     }
 
+    void Start()
+    {
+        BlindManager.instance.OnBlindDefeated += ListenForBlindDefeated;
+    }
+
     public void EnableBlindReroll()
     {
         canReroll = true;
@@ -50,9 +55,20 @@ public class BlindReroll : MonoBehaviour
         SetRerollButtonState();
     }
 
+    public void ListenForBlindDefeated()
+    {
+        if (canReroll)
+        {
+            if (BlindManager.instance.currentBlindProgress == 0)
+            {
+                rerollButton.gameObject.SetActive(true);
+            }
+        }
+    }
+
     void OnEnable()
     {
-        CurrencyManager.OnMoneyChanged += ListenForCurrencyChange; 
+        CurrencyManager.OnMoneyChanged += ListenForCurrencyChange;
     }
 
 }

@@ -37,7 +37,7 @@ public class VoucherShopContainer
 
     public VoucherData GetRandomVoucher()
     {
-        List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false && x.appearAnte >= BlindManager.instance.anteLevel);
+        List<VoucherPairData> voucherPairData = voucherPairDatas.FindAll(x => x.isComplete == false && x.appearAnte <= BlindManager.instance.anteLevel);
 
         VoucherPairData selectedVoucher = voucherPairData[Random.Range(0, voucherPairData.Count)];
 
