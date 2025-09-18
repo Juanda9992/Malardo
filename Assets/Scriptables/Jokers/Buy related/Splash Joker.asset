@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Splash Joker
+  m_EditorClassIdentifier: 
+  jokerName: Splash
+  description: Every <style=Info>played card </style>counts in scoring
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 3
+  JokerImage: {fileID: 0}
+  jokerRarity: 0
+  jokerLogics: []
+  OnSetUpJoker:
+  - {fileID: 11400000, guid: 5f393c76689ef904aa55836391d57543, type: 2}
+  OnSellEffect:
+  - {fileID: 11400000, guid: 90ad324187ee57c4db8b08356bafc5bd, type: 2}
+  reactivationJoker: {fileID: 0}
