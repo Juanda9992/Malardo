@@ -26,10 +26,7 @@ public class VoucherShopContainer
             {
                 if (VoucherData.ReferenceEquals(voucher.voucher, data))
                 {
-                    Debug.Log(data.voucherName);
-                    Debug.Log(voucher.voucher.voucherName);
                     voucher.hasBought = true;
-                    Debug.Log(voucher.hasBought);
                 }
             }
         }

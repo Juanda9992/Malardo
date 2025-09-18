@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private GameObject jokerGenerator;
 
     [SerializeField] private UnityEvent showShopEvent;
+    [SerializeField] private GameObject voucherLabel;
     void Awake()
     {
         instance = this;
@@ -30,5 +31,14 @@ public class ShopManager : MonoBehaviour
     {
         showShopEvent?.Invoke();
         jokerGenerator.SetActive(true);
+    }
+
+    public void ShowVoucherLabel()
+    {
+        voucherLabel.SetActive(true);
+    }
+    public void HideVoucherLabel()
+    {
+        voucherLabel.SetActive(false);
     }
 }

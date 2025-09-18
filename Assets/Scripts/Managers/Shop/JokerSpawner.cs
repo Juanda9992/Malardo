@@ -125,6 +125,7 @@ public class JokerSpawner : MonoBehaviour
     [ContextMenu("Generate VOucher")]
     private void GenerateVoucher()
     {
+        ShopManager.instance.HideVoucherLabel();
         CommonOperations.DestroyChildsInParent(voucherContainer);
         GameObject voucher = Instantiate(voucherPrefab, voucherContainer);
         voucher.GetComponent<VoucherInteractable>().SetVoucherData(DatabaseManager.instance.matchVoucherDatabase.GetRandomVoucher());

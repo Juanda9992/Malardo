@@ -22,6 +22,7 @@ public class VoucherInteractable : MonoBehaviour
         }
         JokerDescription.instance.SetDescriptionOff();
         DatabaseManager.instance.matchVoucherDatabase.SetVoucherBought(voucherData);
+        ShopManager.instance.ShowVoucherLabel();
         Destroy(gameObject);
     }
     [ContextMenu("Set Custom Data")]
