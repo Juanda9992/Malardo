@@ -23,9 +23,14 @@ public class BlindReroll : MonoBehaviour
     {
         canReroll = true;
         rerollButton.gameObject.SetActive(true);
+        rerollButton.onClick.AddListener(RerollBlind);
         SetRerollButtonState();
     }
 
+    public void EnableInfiniteReroll()
+    {
+        infiniteRerolls = true;
+    }
     public void RerollBlind()
     {
         CurrencyManager.instance.RemoveCurrency(blindRerollCost);
