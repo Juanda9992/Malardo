@@ -12,6 +12,7 @@ public class BlindReroll : MonoBehaviour
     [SerializeField] private Button rerollButton;
     public bool canReroll = false;
     public bool infiniteRerolls = false;
+    private bool firstTime = false;
 
     void Awake()
     {
@@ -27,7 +28,7 @@ public class BlindReroll : MonoBehaviour
     public void EnableBlindReroll()
     {
         canReroll = true;
-        rerollButton.gameObject.SetActive(true);
+        firstTime = true;
         rerollButton.onClick.AddListener(RerollBlind);
         SetRerollButtonState();
     }
@@ -59,8 +60,9 @@ public class BlindReroll : MonoBehaviour
     {
         if (canReroll)
         {
-            if (BlindManager.instance.currentBlindProgress == 0)
+            if (BlindManager.instance.currentBlindProgress == 0 || firstTime)
             {
+                firstTime = false;
                 rerollButton.gameObject.SetActive(true);
             }
         }
