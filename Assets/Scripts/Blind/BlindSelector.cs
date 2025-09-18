@@ -13,7 +13,7 @@ public class BlindSelector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] scoresText;
     [SerializeField] private GameObject[] blindBlockers;
     public CurrentBlind bossBlind;
-
+    private int lastBossSelected = -1;
     void Start()
     {
         GenerateRoundBlinds();
@@ -27,9 +27,17 @@ public class BlindSelector : MonoBehaviour
         UpdateBlockers();
     }
 
-    private void PickUpRandomBossBlind()
+    [ContextMenu("Regenerate Boss Blind")]
+    public void PickUpRandomBossBlind()
     {
-        bossBlind = blindScoreData.bossBlinds[Random.Range(0, blindScoreData.bossBlinds.Length)];
+        int randomChoice;
+        do
+        {
+            randomChoice = Random.Range(0, blindScoreData.bossBlinds.Length);
+        } while (randomChoice == lastBossSelected);
+
+        lastBossSelected = randomChoice;
+        bossBlind = blindScoreData.bossBlinds[lastBossSelected];
 
         bossBlindSprite.sprite = bossBlind.blindSprite;
         bossBlindName.text = bossBlind.blindName;
