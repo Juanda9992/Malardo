@@ -62,3 +62,9 @@ MonoBehaviour:
       - voucher: {fileID: 11400000, guid: 9f09787f276333a40b0a177268572617, type: 2}
         hasBought: 0
       appearAnte: 1
+    - voucherBoughtData:
+      - voucher: {fileID: 11400000, guid: a810422f172f9184e890c5da2f0bfa69, type: 2}
+        hasBought: 0
+      - voucher: {fileID: 11400000, guid: 4dbc8d039db622f44b32dc843740a5fd, type: 2}
+        hasBought: 0
+      appearAnte: 0
