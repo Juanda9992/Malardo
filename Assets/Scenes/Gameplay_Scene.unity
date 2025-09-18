@@ -7480,6 +7480,7 @@ MonoBehaviour:
   chipUpgrade:
     animationContainer: {fileID: 1094530142}
     upgradeText: {fileID: 1808016636}
+  usedCards: 
   upgradeData: 0
 --- !u!114 &333037845
 MonoBehaviour:
@@ -11202,6 +11203,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e5f450ae7723f842b965c85aedb4e0f, type: 2}
   - {fileID: 11400000, guid: 1897b359e0e0c064da67b8c0ae8cc13e, type: 2}
   - {fileID: 11400000, guid: 23457408162bd2640bf2481bab153e93, type: 2}
+  - {fileID: 11400000, guid: 1fdbc7bfe7fd6764a8ab25e13606abc5, type: 2}
   maximumJokers: 5
   jokerCard: {fileID: 8353045118887296221, guid: 5cf30c20e1b4c734e9fa189093fb1baf, type: 3}
   jokerParent: {fileID: 1737850266}
@@ -13681,7 +13683,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  voucherLabel: {fileID: 0}
+  voucherLabel: {fileID: 1247896510}
 --- !u!114 &887212918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16517,6 +16519,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1192478479}
+        m_TargetAssemblyTypeName: BlindReroll, Assembly-CSharp
+        m_MethodName: ListenForBlindDefeated
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24861,7 +24875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1683800527
 RectTransform:
   m_ObjectHideFlags: 0
