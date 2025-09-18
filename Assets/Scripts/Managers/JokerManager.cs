@@ -211,6 +211,14 @@ public class JokerManager : MonoBehaviour
         AddJoker(copyJoker);
         AddJoker(copyJoker);
     }
+
+    public IEnumerator DuplicateRandomJoker()
+    {
+        Debug.Log("Enter here");
+        yield return new WaitForSeconds(0.2f);
+        JokerInstance copyJoker = currentJokers[Random.Range(0, currentJokers.Count)]._jokerInstance;
+        AddJoker(copyJoker);
+    }
     public IEnumerator AddEditionToRandomJoker(CardEdition jokerEdition, bool destroyOthers)
     {
 
