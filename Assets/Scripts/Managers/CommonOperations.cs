@@ -6,9 +6,37 @@ public static class CommonOperations
     private static Suit[] suits = new Suit[] { Suit.Clover, Suit.Diamond, Suit.Spades, Suit.Hearth };
     private static Seal[] seals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
     private static CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
+    private static CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult, CardType.Wild };
+
     public static Suit GetRandomSuit()
     {
         return suits[Random.Range(0, suits.Length)];
+    }
+
+    public static CardType GetRandomCardType()
+    {
+        int generator = Random.Range(0, 100);
+
+        if (generator < 30)
+        {
+            return cardTypes[Random.Range(0, cardTypes.Length)];
+        }
+        else
+        {
+            return CardType.Default;
+        }
+    }
+
+    public static Seal CalculateRandomSeal()
+    {
+        if (Random.Range(0, 100) < 20)
+        {
+            return seals[Random.Range(1, seals.Length)];
+        }
+        else
+        {
+            return Seal.None;
+        }
     }
 
     public static Seal GetRandomSeal(bool noneIncluded)
@@ -23,6 +51,28 @@ public static class CommonOperations
         }
     }
 
+    public static CardEdition GenerateRandomCardEdition()
+    {
+        int chanceGenerator = Random.Range(0, 100);
+
+        if (chanceGenerator < 92)
+        {
+            return CardEdition.Base;
+        }
+        else if (chanceGenerator < 96)
+        {
+            return CardEdition.Foil;
+        }
+        else if (chanceGenerator < 98)
+        {
+            return CardEdition.Holographic;
+        }
+        else
+        {
+            return CardEdition.Polychrome;
+        }
+
+    }
     public static CardEdition GetRandomCardEdition(bool noneIncluded)
     {
         if (noneIncluded)

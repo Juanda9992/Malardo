@@ -139,9 +139,9 @@ public class Card
 
         this.number = Random.Range(1, 14);
         this.cardSuit = CommonOperations.GetRandomSuit();
-        this.cardType = GetRandomCardType();
-        this.cardSeal = CommonOperations.GetRandomSeal(true);
-        this.cardEdition = GenerateRandomEdition();
+        this.cardType = CommonOperations.GetRandomCardType();
+        this.cardSeal = CommonOperations.CalculateRandomSeal();
+        this.cardEdition = CommonOperations.GenerateRandomCardEdition();
 
         SetCardChipAmmount();
         SetCardName();
@@ -165,45 +165,6 @@ public class Card
 
             SetCardChipAmmount();
             SetCardName();
-        }
-    }
-
-    private CardEdition GenerateRandomEdition()
-    {
-        int chanceGenerator = Random.Range(0, 100);
-
-        if (chanceGenerator < 92)
-        {
-            return CardEdition.Base;
-        }
-        else if (chanceGenerator < 96)
-        {
-            return CardEdition.Foil;
-        }
-        else if (chanceGenerator < 98)
-        {
-            return CardEdition.Holographic;
-        }
-        else
-        {
-            return CardEdition.Polychrome;
-        }
-
-    }
-
-    private CardType GetRandomCardType()
-    {
-        int generator = Random.Range(0, 100);
-        CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult, CardType.Wild };
-
-
-        if (generator < 30)
-        {
-            return cardTypes[Random.Range(0, cardTypes.Length)];
-        }
-        else
-        {
-            return CardType.Default;
         }
     }
 
