@@ -15,7 +15,7 @@ MonoBehaviour:
   jokerName: Ice Cream
   description: '<style="Chips">+_R_ chips</style>
 
-    -<style=Chips>-5 chips</style>
+    <style=Chips>-5 chips</style>
     for every hand played.'
   triggerMessage: 
   overrideEffect: 0
