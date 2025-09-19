@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Rocket Joker
+  m_EditorClassIdentifier: 
+  jokerName: Rocket Joker
+  description: 'Earn <style=Cash>$1</style> at end of round. Payout increases by
+    <style=Cash>$2</style> when <style=Info>Boss Blind</style> is defeated
+
+    (Current:<style=Cash>$_R_</style>)'
+  triggerMessage: $0
+  overrideEffect: 2
+  shopValue: 6
+  JokerImage: {fileID: 0}
+  jokerRarity: 1
+  jokerLogics:
+  - triggerEvent: 5
+    jokerTrigger:
+    - {fileID: 11400000, guid: 05345cdff2e5afe4592897e29d621cbf, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: ecfa79ed93b133448927cb9c3ae401b4, type: 2}
+  - triggerEvent: 5
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: bf328be7c012c9540976c6c0a6f9c99a, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
