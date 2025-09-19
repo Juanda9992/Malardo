@@ -2,6 +2,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName =  "Add Dynamic Var",menuName = "Scriptables/Joker/Effect/Instance Effects/Increase Dynamic Var")]
 public class AcumulateDynamicVar : JokerEffect
 {
+    public int defaultVar;
     public int increaseAmmount;
     public override void ApplyEffect(JokerInstance instance)
     {
@@ -16,6 +17,7 @@ public class AcumulateDynamicVar : JokerEffect
     }
     public override void SetupEffect(JokerInstance jokerInstance)
     {
+        jokerInstance.dynamicVariable = defaultVar;
         UpdateDescription(jokerInstance);
     }
 }
