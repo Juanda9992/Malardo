@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.8.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.8.0
+  logcontent: "<b>Added</b>\n\n- Blue seals now will display a message when activated.\n-
+    Gold Cards will shake when triggered.\n- Purple Seals will trigger a message
+    when activated it\xB4s effect.\n- Required Suit jokers will no be triggered with
+    wild cards.\n- Debuff wild cards on suit boss blind.\n\n- Wild Cards: They can
+    be used on any suit.\n\n- Negative Edition for Jokers: They add1 to the maximum
+    joker limit.\n\n- Jokers on packs will have the acurrate description and now
+    they can appear with editions.\n\n- Riff Raff can create edition Jokers.\n\n-
+    1 New Spectral Card: Ectoplasm. \r\n\n- 1 new Tarot Card: The Lovers\n\n- Vouchers:
+    These are permanent upgrades (All the match) and can be aquired on the shop,
+    by the moment there are 18 vouchers:\n\n- Grabber / Nacho Tong.\n- Wasteful /
+    Recyclomancy.\n- Blank / Antimmater.\n- Hieroglyph / Petroglyph.\n- Ovesrtock
+    / Overstock Plus.\n- Reroll Surplus / Reroll Glut.\n- Seed Money / Money Tree.\n-
+    Director\xB4s Cut / Retcon.\n\n\n- Added 7 Jokers:\n\t- Satellite.\n\t- Invisible
+    Joker.\n\t- Blackboard.\n\t- Faceless Joker.\n\t- Splash.\n\t- DNA.\n\t- Rocket.\n\n<b>Updated</b>\n\n-
+    Game limit to round 24.\n- Disabled cards will no longer trigger habilities (Seals,
+    Silver card, etc).\n- Stone cards will no longer trigger suit required jokers.\n-
+    Silver Cards wih red seal will retrigger again.\n- Gold Cards will now trigger
+    again if they have red seal on it.\n- Styling of coloured texts: Now they are
+    a little big.\n- The description box will always be at the right of the object.\n-
+    The description of the jokers will be updating at short time intervals.\n- The
+    joker slot, hand slot and shop slot will now adapt it\xB4s spacing dynamically.\n-
+    Standard pack\xB4s cards were appearing always with a seal or special type, now
+    the cards will use the same appear rate.\n- When a joker sets it\xB4s edition
+    it will shake.\n- Color style on the description of Hallucination Joker.\n\n<b>Fixed</b>\n\n-
+    Standard pack\xB4s special cards were not setting it\xB4s description correctly.\n-
+    The player can grab more items than required from shop packs.\n- Misprint were
+    not giving mult.\n- The description box were not adjusting it\xB4s layout properly.\n-
+    Wrong description on bootstrap joker.\n- Chaos the clown were not working on
+    some situations.\n- Wrong description on troubadour.\n- Wrong description on
+    Ice Cream."
