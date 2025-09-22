@@ -31,6 +31,7 @@ public class CardManager : MonoBehaviour
 
         cardsOnScreen.Add(currentCard.GetComponent<Card_Data>());
         currentCard.GetComponent<Card_Data>().SetCardData(card);
+        CardsReorder.instance.AutoSort();
     }
 
     public void GenerateCardOnHand(Card card, Transform parent, HorizontalLayoutGroup horizontalLayoutGroup)

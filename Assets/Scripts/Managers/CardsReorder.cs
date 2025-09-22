@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CardsReorder : MonoBehaviour
 {
     public static CardsReorder instance;
+    private bool sortByRank = true;
     [SerializeField] private HorizontalLayoutGroup cardsParent;
     void Awake()
     {
@@ -40,6 +41,18 @@ public class CardsReorder : MonoBehaviour
 
     }
 
+    public void AutoSort()
+    {
+        if (sortByRank)
+        {
+            SortByNumber();
+        }
+        else
+        {
+            SortByColor();
+        }
+    }
+
     public void DisableLayout()
     {
         cardsParent.enabled = false;
@@ -47,6 +60,7 @@ public class CardsReorder : MonoBehaviour
 
     public void SortByColor()
     {
+        sortByRank = false;
         DisableLayout();
         List<Card_Data> cardsData = new List<Card_Data>(CardManager.instance.cardsOnScreen);
 
@@ -63,6 +77,7 @@ public class CardsReorder : MonoBehaviour
 
     public void SortByNumber()
     {
+        sortByRank = true;
         DisableLayout();
         List<Card_Data> cardsData = new List<Card_Data>(CardManager.instance.cardsOnScreen);
 
