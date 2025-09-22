@@ -98,7 +98,7 @@ public class Card_Data : MonoBehaviour
         visuals.SetCardDisabled(true);
         DisableCard();
     }
-    private void BuffCard()
+    public void BuffCard()
     {
         visuals.SetCardDisabled(false);
         EnableCard();

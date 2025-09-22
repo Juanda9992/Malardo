@@ -138,6 +138,18 @@ public class DeckManager : MonoBehaviour
         Debug.Log(fullMatchDeck.Find(x => x == oldCard));
         //fullMatchDeck[index] = newCard;
     }
+    [ContextMenu("Re Enable Cards")]
+    public void ReEnableCards()
+    {
+        foreach (var card in fullMatchDeck)
+        {
+            card.canPlay = true;
+        }
+        foreach (var card in roundDeck)
+        {
+            card.canPlay = true;
+        }
+    }
 
     #region GetValues
     public int GerRemainingCardOnDeck()

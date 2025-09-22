@@ -32,6 +32,7 @@ public class CardManipulationManager : MonoBehaviour
         {
             generatedCard = roundDeck[Random.Range(0, roundDeck.Count)];
             CardManager.instance.GenerateCardOnHand(generatedCard, handContainer,layoutGroup);
+            generatedCard.linkedCard.BuffCard();
         }
     }
 }
