@@ -73,6 +73,7 @@ public class CardPlayer : MonoBehaviour
         currentHand.Clear();
 
 
+        JokerDescription.instance.SetDescriptionOff();
         if (ScoreManager.instance.CheckBlindDefeated())
         {
             Debug.Log("Enter here");
