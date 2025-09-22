@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13b494e51d4d0742a8ac5c344ce97ea, type: 3}
   m_Name: Mega Spectral Pack
   m_EditorClassIdentifier: 
-  packName: Mega Tarot Pack
+  packName: Mega Spectral Pack
   packDescription: Choose <style=Info>2</style> of up to <style=Info>4</style> <style=Spectral>Spectral
     cards</style> to be used immediately
   packCost: 8
