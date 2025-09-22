@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c24a35635642c4c9243bf4d63a62f8, type: 3}
   m_Name: Require Ace in hand
   m_EditorClassIdentifier: 
-  cardNumber: 1
+  cardNumber: 14

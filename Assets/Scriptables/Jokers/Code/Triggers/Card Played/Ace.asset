@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b659621b3280b44b139f1ed01231aa, type: 3}
   m_Name: Ace
   m_EditorClassIdentifier: 
-  requiredCard: 01000000
+  requiredCard: 0e000000
+  requireFaceCard: 0

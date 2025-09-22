@@ -137,7 +137,7 @@ public class Card
     public Card GenerateRandomCard()
     {
 
-        this.number = Random.Range(1, 14);
+        this.number = Random.Range(2, 14);
         this.cardSuit = CommonOperations.GetRandomSuit();
         this.cardType = CommonOperations.GetRandomCardType();
         this.cardSeal = CommonOperations.CalculateRandomSeal();
@@ -176,7 +176,7 @@ public class Card
             chipAmmount = 10;
         }
 
-        if (number == 1)
+        if (number == 14)
         {
             chipAmmount = 11;
         }
@@ -207,7 +207,7 @@ public class Card
         {
             cardName = "King of " + GetFormatedCardSuit();
         }
-        else if (number == 1)
+        else if (number == 14)
         {
             cardName = "Ace of " + GetFormatedCardSuit();
         }

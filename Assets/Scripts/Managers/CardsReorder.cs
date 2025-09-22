@@ -83,6 +83,7 @@ public class CardsReorder : MonoBehaviour
 
 
         cardsData = cardsData.OrderBy(x => x.currentCard.number).ToList();
+        cardsData.Reverse();
 
         for (int i = 0; i < cardsData.Count; i++)
         {

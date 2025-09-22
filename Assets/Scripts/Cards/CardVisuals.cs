@@ -28,7 +28,7 @@ public class CardVisuals : MonoBehaviour
         _card = card;
         _card.SetCardName();
         _card.SetCardChipAmmount();
-        cardImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number);
+        cardImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1:_card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();

@@ -158,17 +158,19 @@ public class HandDetector : MonoBehaviour
             cardsSorted.Clear();
             return false;
         }
-        if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
-        cardsSorted = new List<Card>(handCards);
-        cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
         int coincidences = 0;
+        if (handCards.Find(x => x.cardType == CardType.Stone) != null) return false;
+
+        cardsSorted = new List<Card>(handCards);
+        if (cardsSorted.Any(x => x.number == 14))
+        {
+            cardsSorted.Add(new Card() { number = 1 });
+            coincidences++;
+        }
+        cardsSorted = cardsSorted.OrderBy(x => x.number).ToList();
         int diference;
         Card nextCard;
 
-        if (cardsSorted.Any(x => x.number == 1))
-        {
-            cardsSorted.Add(new Card() { number = 14 }); coincidences++;
-        }
         for (int i = 0; i < cardsSorted.Count; i++)
         {
             nextCard = i + 1 < cardsSorted.Count ? cardsSorted[i + 1] : null;
@@ -187,7 +189,7 @@ public class HandDetector : MonoBehaviour
             }
         }
 
-        if (coincidences >= requiredAmmountForFlush - 1 && cardsSorted.Any(x => x.number == 14))
+        if (coincidences >= requiredAmmountForFlush - 1 && cardsSorted.Any(x => x.number == 1))
         {
             cardsSorted.RemoveAt(cardsSorted.Count - 1);
         }

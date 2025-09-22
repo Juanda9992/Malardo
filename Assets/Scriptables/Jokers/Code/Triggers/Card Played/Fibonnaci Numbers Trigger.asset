@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b659621b3280b44b139f1ed01231aa, type: 3}
   m_Name: Fibonnaci Numbers Trigger
   m_EditorClassIdentifier: 
-  requiredCard: 0100000002000000030000000500000008000000
+  requiredCard: 020000000300000005000000080000000e000000
+  requireFaceCard: 0
