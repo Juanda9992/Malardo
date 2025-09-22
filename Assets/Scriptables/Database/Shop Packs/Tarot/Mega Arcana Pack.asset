@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mega Arcana Pack
   m_EditorClassIdentifier: 
   packName: Mega Tarot Pack
-  packDescription: Choose 2 of up to 5 Tarot cards to be used immediately
+  packDescription: Choose <style=Info>2</style> of up to <style=Info>5</style> <style=Tarot>Tarot
+    </style>cards to be used immediately
   packCost: 8
   packType: 2
   numberOfCards: 5

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Jumbo Celestial Pack
   m_EditorClassIdentifier: 
   packName: Jumbo Celestial Pack
-  packDescription: Choose 1 of up to 5 Planet cards to be used immediately
+  packDescription: Choose <style=Info>1</style> of up to <style=Info>5</style> <style=Planet>Planet
+    </style>cards to be used immediately
   packCost: 6
   packType: 3
   numberOfCards: 5

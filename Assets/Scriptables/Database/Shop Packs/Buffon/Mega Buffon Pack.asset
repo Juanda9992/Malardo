@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mega Buffon Pack
   m_EditorClassIdentifier: 
   packName: Mega Buffon Pack
-  packDescription: Choose 2 of up to 4 Joker cards
+  packDescription: Choose <style=Info>2</style> of up to <style=Info>4</style> Joker
+    cards
   packCost: 8
   packType: 1
   numberOfCards: 4

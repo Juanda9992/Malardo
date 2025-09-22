@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mega Standard Pack
   m_EditorClassIdentifier: 
   packName: Jumbo Standard Pack
-  packDescription: Choose 2 of up to 5 Playing cards to add to your deck.
+  packDescription: Choose <style=Info>2</style> of up to <style=Info>5</style> <style=Info>Playing</style>cards
+    to add to your deck.
   packCost: 8
   packType: 5
   numberOfCards: 5
