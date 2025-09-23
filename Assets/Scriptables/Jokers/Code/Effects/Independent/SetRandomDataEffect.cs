@@ -5,6 +5,7 @@ public class SetRandomDataEffect : JokerEffect
     public bool suit;
     public bool handType;
     public bool number;
+    public bool card;
     public override void ApplyEffect(JokerInstance instance)
     {
         Calculate(instance);
@@ -24,6 +25,13 @@ public class SetRandomDataEffect : JokerEffect
         if (number)
         {
             instance.dynamicVariable = Random.Range(2, 15);
+        }
+
+        if (card)
+        {
+            Card card = DeckManager.instance.fullMatchDeck[Random.Range(0, DeckManager.instance.fullMatchDeck.Count)];
+            instance.randomSuit = card.cardSuit;
+            instance.dynamicVariable = card.number;
         }
 
         instance.jokerContainer.TriggerMessage("Updated");
@@ -48,8 +56,11 @@ public class SetRandomDataEffect : JokerEffect
         }
         if (number)
         {
-
             instance.jokerDescription = instance.data.description.Replace("_S_", ParseCardName(instance.dynamicVariable));
+        }
+        if (card)
+        {
+            instance.jokerDescription = instance.data.description.Replace("_R_", ParseCardName(instance.dynamicVariable)).Replace("_S_",instance.randomSuit.ToString());
         }
     }
 
