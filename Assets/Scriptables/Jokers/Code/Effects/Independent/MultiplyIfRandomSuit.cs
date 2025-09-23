@@ -1,13 +1,14 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "Suit Operation Effect", menuName = "Scriptables/Joker/Effect/Independent/Suit Operation")]
-public class MultiplyÏfRandomSuit : JokerEffect
+public class MultiplyIfRandomSuit : JokerEffect
 {
     public float operationAmmount;
     public bool multiply;
+    public bool matchesCard;
     public bool acumulateChips;
     public override void ApplyEffect(JokerInstance instance)
     {
-        if (multiply)
+        if (multiply || matchesCard)
         {
             ScoreManager.instance.MultiplyMulti(operationAmmount);
             instance.triggerMessage = "X" + operationAmmount;
@@ -37,13 +38,18 @@ public class MultiplyÏfRandomSuit : JokerEffect
     public override bool Scores(JokerInstance instance)
     {
         Card card;
-        if (multiply)
+        if (multiply || matchesCard)
         {
             card = GameStatusManager._Status.cardPlayed;
         }
         else
         {
             card = GameStatusManager._Status.discardData.lastDiscard;
+        }
+        if (matchesCard)
+        {
+            Debug.Log("Enter here");
+            return (card.cardSuit == instance.randomSuit || card.cardType == CardType.Wild) && card.number == instance.dynamicVariable; 
         }
         return card.cardSuit == instance.randomSuit || card.cardType == CardType.Wild;
     }
