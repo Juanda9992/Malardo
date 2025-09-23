@@ -7,10 +7,48 @@ public static class CommonOperations
     private static Seal[] seals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
     private static CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
     private static CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult, CardType.Wild };
-
+    private static HandType[] handTypes = new HandType[] {HandType.High_Card, HandType.Pair, HandType.Double_Pair, HandType.Three_Of_A_Kind, HandType.Straight, HandType.Flush, HandType.Full_House, HandType.Four_Of_A_Kind, HandType.Five_Of_A_Kind, HandType.Straight_Flush, HandType.Flush_House, HandType.Flush_Five };
     public static Suit GetRandomSuit()
     {
         return suits[Random.Range(0, suits.Length)];
+    }
+
+    public static HandType GetRandomHandType()
+    {
+        return handTypes[Random.Range(0,handTypes.Length)];
+    }
+
+    public static string ParseHandType(HandType handType)
+    {
+        switch (handType)
+        {
+            case HandType.High_Card:
+                return "High Card";
+            case HandType.Pair:
+                return "Pair";
+            case HandType.Double_Pair:
+                return "Two Pair";
+            case HandType.Three_Of_A_Kind:
+                return "Three of a Kind";
+            case HandType.Straight:
+                return "Straight";
+            case HandType.Flush:
+                return "Flush";
+            case HandType.Full_House:
+                return "Full House";
+            case HandType.Four_Of_A_Kind:
+                return "Four of a Kind";
+            case HandType.Five_Of_A_Kind:
+                return "Five of a Kind";
+            case HandType.Straight_Flush:
+                return "Straight Flush";
+            case HandType.Flush_House:
+                return "Flush House";
+            case HandType.Flush_Five:
+                return "Five of a Kind";
+            default:
+                return "";
+        }
     }
 
     public static CardType GetRandomCardType()
