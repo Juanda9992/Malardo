@@ -16,7 +16,6 @@ public class GetCurrencyPerRandomHand : JokerEffect
 
     public override bool Scores(JokerInstance instance)
     {
-        Debug.Log(instance.randomHand + " " + GameStatusManager._Status.playedHand);
         return GameStatusManager._Status.playedHand == instance.randomHand;
     }
 }
