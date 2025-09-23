@@ -118,8 +118,8 @@ public class HandManager : MonoBehaviour
                             yield return new WaitForSeconds(0.2f);
                         }
                     }
-                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
                     GameStatusManager._Status.discardData.lastDiscard = handCards[i];
+                    yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnCardDiscard);
                 }
                 handCards[i].linkedCard.pointerInteraction.RemoveCard();
                 CardManager.instance.cardsOnScreen.Remove(handCards[i].linkedCard);
