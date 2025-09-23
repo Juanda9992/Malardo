@@ -28,6 +28,7 @@ public class JokerInstance
     public float totalMult;
     public float totalMultiplier;
     public int dynamicVariable;
+    public Suit randomSuit = Suit.None;
     public CardEdition jokerEdition = CardEdition.Base;
     public JokerInstance(JokerData jokerData)
     {
