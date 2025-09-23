@@ -15,6 +15,7 @@ MonoBehaviour:
   allJokersInGame:
   - {fileID: 11400000, guid: 9676b24c9d01a4447b2322bb8d6aa84c, type: 2}
   - {fileID: 11400000, guid: 3f540835bff307749ad9629e9391fce5, type: 2}
+  - {fileID: 11400000, guid: 24ee4f347af5aea4bbbc90bd23091d11, type: 2}
   - {fileID: 11400000, guid: 582b5bed171781440a2984bbdf74a2c3, type: 2}
   - {fileID: 11400000, guid: a077aad5bd4660844843fc25dd5d149b, type: 2}
   - {fileID: 11400000, guid: e4ff5232c985b124ba608d26a4ed5c89, type: 2}
