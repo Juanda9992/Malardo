@@ -23,7 +23,7 @@ public class SetRandomDataEffect : JokerEffect
 
         if (number)
         {
-            instance.dynamicVariable = Random.Range(2, 14);
+            instance.dynamicVariable = Random.Range(2, 15);
         }
 
         instance.jokerContainer.TriggerMessage("Updated");
@@ -44,11 +44,37 @@ public class SetRandomDataEffect : JokerEffect
         }
         if (handType)
         {
-            instance.jokerDescription = instance.data.description.Replace("_S_", CommonOperations.ParseHandType(instance.randomHand ));
+            instance.jokerDescription = instance.data.description.Replace("_S_", CommonOperations.ParseHandType(instance.randomHand));
         }
         if (number)
         {
-            instance.jokerDescription = instance.data.description.Replace("_S_", instance.dynamicVariable.ToString());
+
+            instance.jokerDescription = instance.data.description.Replace("_S_", ParseCardName(instance.dynamicVariable));
         }
+    }
+
+
+    private string ParseCardName(int number)
+    {
+        string value = number.ToString();
+
+        if (number == 11)
+        {
+            value = "J";
+        }
+        if (number== 12)
+        {
+            value = "Q";
+        }
+
+        if (number== 13)
+        {
+            value = "K";
+        }
+        if (number== 14)
+        {
+            value = "Ace";
+        }
+        return value;
     }
 }
