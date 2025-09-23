@@ -23,4 +23,9 @@ public abstract class JokerEffect : ScriptableObject
     {
 
     }
+
+    public virtual bool Scores(JokerInstance instance)
+    {
+        return true;
+    }
 }

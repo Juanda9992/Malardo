@@ -46,12 +46,20 @@ public class JokerManager : MonoBehaviour
         }
         foreach (var joker in jokers)
         {
-            if (joker.logic.CanBetriggered())
+            bool scores = true;
+            foreach (var effect in joker.logic.jokerEffect)
             {
-                joker.container.TriggerActions(joker.logic);
-                yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
-                yield return new WaitForSeconds(0.3f);
+                if (!effect.Scores(joker.container._jokerInstance))
+                {
+                    scores = false;
+                }
             }
+            if (joker.logic.CanBetriggered() && scores)
+                {
+                    joker.container.TriggerActions(joker.logic);
+                    yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
+                    yield return new WaitForSeconds(0.3f);
+                }
             if (joker.container._jokerInstance.destroyJoker)
             {
                 joker.container._jokerInstance.triggerMessage = "BYE!";

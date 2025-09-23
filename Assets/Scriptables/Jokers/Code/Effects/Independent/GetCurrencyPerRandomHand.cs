@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Add currency per played random hand",menuName = "Scriptables/Joker/Effect/Independent/Currency per Random Hand")]
+[CreateAssetMenu(fileName = "Add currency per played random hand", menuName = "Scriptables/Joker/Effect/Independent/Currency per Random Hand")]
 public class GetCurrencyPerRandomHand : JokerEffect
 {
     public int currency;
@@ -8,16 +8,15 @@ public class GetCurrencyPerRandomHand : JokerEffect
     {
         if (handPlayed)
         {
-            if (GameStatusManager._Status.playedHand == instance.randomHand)
-            {
-                CurrencyManager.instance.AddCurrency(currency);
-                instance.triggerMessage = "$" + currency;
-                instance.jokerContainer.TriggerMessage();
-            }
-            else
-            {
-                instance.jokerContainer.TriggerMessage("Nope");
-            }
+            CurrencyManager.instance.AddCurrency(currency);
+            instance.triggerMessage = "$" + currency;
+            instance.jokerContainer.TriggerMessage();
         }
+    }
+
+    public override bool Scores(JokerInstance instance)
+    {
+        Debug.Log(instance.randomHand + " " + GameStatusManager._Status.playedHand);
+        return GameStatusManager._Status.playedHand == instance.randomHand;
     }
 }
