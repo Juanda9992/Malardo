@@ -17,6 +17,7 @@ MonoBehaviour:
   triggerMessage: +8
   overrideEffect: 8
   shopValue: 3
+  JokerImage: {fileID: -603075386, guid: b946cb3b46144684a996ed7311863470, type: 3}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 3
