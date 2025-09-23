@@ -8,6 +8,8 @@ public class CardSpriteDatabase : ScriptableObject
     [SerializeField] private Sprite[] diamondSprites;
     [SerializeField] private Sprite[] spadeSprites;
 
+    public Sprite silverCard;
+
     public Sprite GetCardSprite(Suit suit, int number)
     {
 

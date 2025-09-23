@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class CardVisuals : MonoBehaviour
 {
-    [SerializeField] private Image cardImage;
+    [SerializeField] private Image bgImage,numbersImage;
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
@@ -28,7 +28,7 @@ public class CardVisuals : MonoBehaviour
         _card = card;
         _card.SetCardName();
         _card.SetCardChipAmmount();
-        cardImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1:_card.number);
+        numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1:_card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
@@ -79,31 +79,32 @@ public class CardVisuals : MonoBehaviour
 
     private void SetCardTypeVisuals()
     {
-        cardImage.color = Color.white;
+        numbersImage.color = Color.white;
         bonusCardVisuals.SetActive(false);
         multCardVisuals.SetActive(false);
         wildCardVisuals.SetActive(false);
 
         if (_card.cardType == CardType.Gold)
         {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
+            bgImage.color = DatabaseManager.instance.cardColorDatabase.goldCard;
         }
 
         else if (_card.cardType == CardType.Silver)
         {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.steelCard;
+            bgImage.sprite = DatabaseManager.instance.cardSpriteDatabase.silverCard;
         }
         else if (_card.cardType == CardType.Lucky)
         {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.luckyCard;
+            bgImage.color = DatabaseManager.instance.cardColorDatabase.luckyCard;
         }
         else if (_card.cardType == CardType.Stone)
         {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
+            numbersImage.gameObject.SetActive(false);
+            bgImage.color = DatabaseManager.instance.cardColorDatabase.stoneCard;
         }
         else if (_card.cardType == CardType.Glass)
         {
-            cardImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
+            bgImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
         }
         else if (_card.cardType == CardType.Bonus)
         {
