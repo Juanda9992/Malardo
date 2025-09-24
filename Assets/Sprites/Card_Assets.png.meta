@@ -206,6 +206,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Card_Assets_4
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0
+        width: 142
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cf64a389714054c814403b8d5cf8bf
+      internalID: 1953339064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,6 +242,7 @@ TextureImporter:
       Card_Assets_1: -1480992449
       Card_Assets_2: 2039681662
       Card_Assets_3: -1216408359
+      Card_Assets_4: 1953339064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

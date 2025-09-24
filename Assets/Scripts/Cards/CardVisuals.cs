@@ -104,7 +104,7 @@ public class CardVisuals : MonoBehaviour
         }
         else if (_card.cardType == CardType.Glass)
         {
-            bgImage.color = DatabaseManager.instance.cardColorDatabase.glassCard;
+            bgImage.sprite = DatabaseManager.instance.cardSpriteDatabase.glassCard;
         }
         else if (_card.cardType == CardType.Bonus)
         {

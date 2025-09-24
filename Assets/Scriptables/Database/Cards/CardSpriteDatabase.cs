@@ -9,6 +9,7 @@ public class CardSpriteDatabase : ScriptableObject
     [SerializeField] private Sprite[] spadeSprites;
 
     public Sprite silverCard;
+    public Sprite glassCard;
 
     public Sprite GetCardSprite(Suit suit, int number)
     {
