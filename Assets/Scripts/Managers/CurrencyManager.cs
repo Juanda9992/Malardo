@@ -25,7 +25,7 @@ public class CurrencyManager : MonoBehaviour
         UpdateCurrencyText();
         OnMoneyChanged?.Invoke(currentCurrency);
     }
-    
+
     public void AddCurrency(int ammount)
     {
         currentCurrency += ammount;
@@ -48,5 +48,10 @@ public class CurrencyManager : MonoBehaviour
     private void UpdateCurrencyText()
     {
         currencyText.text = "$" + currentCurrency.ToString();
-    }   
+    }
+
+    public void SetMaxDebt(int ammount)
+    {
+        maxDebt = ammount;
+    } 
 }
