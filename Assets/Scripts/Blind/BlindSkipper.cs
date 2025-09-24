@@ -26,6 +26,8 @@ public class BlindSkipper : MonoBehaviour
         BlindManager.instance.currentRound++;
         blindSelector.UpdateBlockers();
         BlindManager.instance.UpdateAnteLevelUI();
+
+        StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnBlindSkipped));
     }
 
     public void TurnOffSkipLabels()
