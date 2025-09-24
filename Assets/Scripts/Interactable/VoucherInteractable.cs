@@ -1,3 +1,4 @@
+using System.Collections;
 using Shop.Voucher;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class VoucherInteractable : MonoBehaviour
     [SerializeField] private VoucherData voucherData;
     [SerializeField] private DescriptionContainer descriptionContainer;
     [SerializeField] private Button buyButton;
+
+    void Start()
+    {
+        StartCoroutine(nameof(UpdateButtonStatus));
+    }
     public void SetVoucherData(VoucherData data)
     {
         voucherData = data;
@@ -33,5 +39,15 @@ public class VoucherInteractable : MonoBehaviour
     private void SetCustomData()
     {
         SetVoucherData(voucherData);
+    }
+
+    private IEnumerator UpdateButtonStatus()
+    {
+        while (true)
+        {
+            buyButton.interactable = CurrencyManager.instance.OverMinDebt(10);
+            buyButtonText.text = "Buy $" + 10;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

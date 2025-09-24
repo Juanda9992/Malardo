@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,13 +14,7 @@ public class ShopItem : MonoBehaviour
     private PackData _itemPack;
     void Start()
     {
-        UpdateBuyButtonStatus(CurrencyManager.instance.currentCurrency);
-    }
-
-    private void UpdateBuyButtonStatus(int ammount)
-    {
-        interactButton.interactable = CurrencyManager.instance.OverMinDebt(ammountRequired);
-        buyLabel.text = "Buy $" + ammountRequired;
+        StartCoroutine(nameof(UpdateButtonStatus));
     }
     public void BuyItem()
     {
@@ -45,13 +40,13 @@ public class ShopItem : MonoBehaviour
         _itemPack = data;
     }
 
-    void OnEnable()
+    private IEnumerator UpdateButtonStatus()
     {
-        CurrencyManager.OnMoneyChanged += UpdateBuyButtonStatus;
-    }
-
-    void OnDisable()
-    {
-        CurrencyManager.OnMoneyChanged -= UpdateBuyButtonStatus;
+        while (true)
+        {
+            interactButton.interactable = CurrencyManager.instance.OverMinDebt(ammountRequired);
+            buyLabel.text = "Buy $" + ammountRequired;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
