@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Credit Card Joker
+  m_EditorClassIdentifier: 
+  jokerName: Credit Card
+  description: Go up to <style=Mult>-$20</style> in debt
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 1
+  JokerImage: {fileID: 0}
+  jokerRarity: 0
+  jokerLogics: []
+  OnSetUpJoker:
+  - {fileID: 11400000, guid: 9e9c50dc74353a3499386ccf7b5e2000, type: 2}
+  OnSellEffect:
+  - {fileID: 11400000, guid: b9f83d4c6b32d9943842af809e182560, type: 2}
+  reactivationJoker: {fileID: 0}

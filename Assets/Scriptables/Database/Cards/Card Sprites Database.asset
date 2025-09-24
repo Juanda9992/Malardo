@@ -69,3 +69,4 @@ MonoBehaviour:
   - {fileID: 1562920757, guid: cf74827911bc1e44d9ec2e89fac338de, type: 3}
   - {fileID: 395350542, guid: cf74827911bc1e44d9ec2e89fac338de, type: 3}
   silverCard: {fileID: -1216408359, guid: f10df095070a8474fa7778e698b63352, type: 3}
+  glassCard: {fileID: 1953339064, guid: f10df095070a8474fa7778e698b63352, type: 3}
