@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Obelisk Joker
+  m_EditorClassIdentifier: 
+  jokerName: Obelisk
+  description: 'This Joker gains <style=Mult>X0.25 Mult</style> per <style=Info>consecutive</style>
+    hand played without playing your most played <style=Info>poker hand</style>
+
+    (Currently
+    <style=Mult>X_R_ Mult</style>)'
+  triggerMessage: 
+  overrideEffect: 0
+  shopValue: 8
+  JokerImage: {fileID: -1125756371, guid: b946cb3b46144684a996ed7311863470, type: 3}
+  jokerRarity: 2
+  jokerLogics:
+  - triggerEvent: 7
+    jokerTrigger:
+    - {fileID: 11400000, guid: 3a4909fdca09742478b7f8c030db2ecc, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: 479cabc7b35c09848b09430be8d65040, type: 2}
+  - triggerEvent: 7
+    jokerTrigger:
+    - {fileID: 11400000, guid: c8e4511a0e44cb7458587b21579cc397, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: c9d6425c27b596b458f450f7d59d902d, type: 2}
+  - triggerEvent: 3
+    jokerTrigger: []
+    jokerEffect:
+    - {fileID: 11400000, guid: 10487a040eba02e408f609fd29297012, type: 2}
+  OnSetUpJoker: []
+  OnSellEffect: []
+  reactivationJoker: {fileID: 0}
