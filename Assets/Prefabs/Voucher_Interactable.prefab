@@ -93,8 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voucherText: {fileID: 7693121798807472192}
+  buyButtonText: {fileID: 6850640334218495451}
   voucherData: {fileID: 0}
   descriptionContainer: {fileID: 6586434367777052884}
+  buyButton: {fileID: 3963708038454366716}
 --- !u!114 &6586434367777052884
 MonoBehaviour:
   m_ObjectHideFlags: 0
