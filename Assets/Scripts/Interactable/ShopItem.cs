@@ -18,7 +18,7 @@ public class ShopItem : MonoBehaviour
 
     private void UpdateBuyButtonStatus(int ammount)
     {
-        interactButton.interactable = ammount > ammountRequired;
+        interactButton.interactable = CurrencyManager.instance.OverMinDebt(ammountRequired);
         buyLabel.text = "Buy $" + ammountRequired;
     }
     public void BuyItem()

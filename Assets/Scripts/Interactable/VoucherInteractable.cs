@@ -1,17 +1,20 @@
 using Shop.Voucher;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VoucherInteractable : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI voucherText;
+    [SerializeField] private TextMeshProUGUI voucherText, buyButtonText;
     [SerializeField] private VoucherData voucherData;
     [SerializeField] private DescriptionContainer descriptionContainer;
+    [SerializeField] private Button buyButton;
     public void SetVoucherData(VoucherData data)
     {
         voucherData = data;
         voucherText.text = data.voucherName;
-
+        buyButtonText.text = "Buy $10";
+        buyButton.interactable = CurrencyManager.instance.OverMinDebt(10);
         descriptionContainer.SetNameAndDescription(data.voucherName, data.voucherDescription, DescriptionType.Voucher);
     }
     public void ConsumeItem()
@@ -21,6 +24,7 @@ public class VoucherInteractable : MonoBehaviour
             voucherData.voucherEffect.ApplyEffect();
         }
         JokerDescription.instance.SetDescriptionOff();
+        CurrencyManager.instance.RemoveCurrency(10);
         DatabaseManager.instance.matchVoucherDatabase.SetVoucherBought(voucherData);
         ShopManager.instance.ShowVoucherLabel();
         Destroy(gameObject);

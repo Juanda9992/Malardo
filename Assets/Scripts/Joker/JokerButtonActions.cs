@@ -29,7 +29,7 @@ public class JokerButtonActions : MonoBehaviour
         if (jokerContainer.isOnShop)
         {
             actionButtonText.text = "Buy" + " $" + jokerContainer._jokerInstance.data.shopValue;
-            actionButton.interactable = CheckIfEnoughCurrencyForBuy();
+            actionButton.interactable = CurrencyManager.instance.OverMinDebt(jokerContainer._jokerInstance.data.shopValue);
             actionButton.gameObject.SetActive(true);
             sellButton.gameObject.SetActive(false);
         }

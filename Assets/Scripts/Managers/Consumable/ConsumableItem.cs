@@ -163,7 +163,7 @@ public class ConsumableItem : MonoBehaviour
         {
             SetUpShopControls?.Invoke();
 
-            bottomButton.interactable = CurrencyManager.instance.currentCurrency >= buyValue;
+            bottomButton.interactable = CurrencyManager.instance.OverMinDebt(buyValue);
             if (tarotCardData != null)
             {
                 upperButton.interactable = tarotCardData.CanApplyEffect();
