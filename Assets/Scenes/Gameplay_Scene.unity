@@ -18919,6 +18919,7 @@ GameObject:
   - component: {fileID: 1192478477}
   - component: {fileID: 1192478478}
   - component: {fileID: 1192478479}
+  - component: {fileID: 1192478480}
   m_Layer: 0
   m_Name: Blind
   m_TagString: Untagged
@@ -19136,6 +19137,22 @@ MonoBehaviour:
   rerollButton: {fileID: 2043481930}
   canReroll: 0
   infiniteRerolls: 0
+--- !u!114 &1192478480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192478473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc36b7e7a15643418e48cde6fe0c042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blindSelector: {fileID: 1192478477}
+  skipLabels:
+  - {fileID: 1539430350}
+  - {fileID: 761985659}
 --- !u!1 &1195999453
 GameObject:
   m_ObjectHideFlags: 0
@@ -19448,7 +19465,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1206382879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1192478480}
+        m_TargetAssemblyTypeName: BlindSkipper, Assembly-CSharp
+        m_MethodName: SkipBlind
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1206382879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21258,7 +21287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1379313411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1192478480}
+        m_TargetAssemblyTypeName: BlindSkipper, Assembly-CSharp
+        m_MethodName: SkipBlind
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1379313411
 MonoBehaviour:
   m_ObjectHideFlags: 0
