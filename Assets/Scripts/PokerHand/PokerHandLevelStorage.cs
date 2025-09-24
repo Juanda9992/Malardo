@@ -1,4 +1,4 @@
-
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,9 +34,24 @@ public class PokerHandLevelStorage : MonoBehaviour
         return pokerHands.Find(x => x.pokerHand.handType == handType);
     }
 
+    public List<PokerHandLevelData> GetMostPlayedHands()
+    {
+        int maxPlayed = pokerHands.Max(x => x.handPlayedTime);
+
+        return pokerHands.FindAll(x => x.handPlayedTime == maxPlayed);
+    }
     public List<PokerHandLevelData> GetPokerHands()
     {
         return pokerHands;
+    }
+
+    [ContextMenu("Debug Most Played Hands")]
+    private void DebugMostPlayedHands()
+    {
+        foreach (var hand in GetMostPlayedHands())
+        {
+            Debug.Log(hand.pokerHand.handType);
+        }
     }
 }
 
