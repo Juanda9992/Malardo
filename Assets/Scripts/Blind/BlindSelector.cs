@@ -22,10 +22,11 @@ public class BlindSelector : MonoBehaviour
 
     [ContextMenu("Generate new blind")]
     public void GenerateRoundBlinds()
-    {        
+    {
         PickUpRandomBossBlind();
         SetUpScoresUI();
         UpdateBlockers();
+        BlindSkipper.instance.TurnOffSkipLabels();
     }
 
     [ContextMenu("Regenerate Boss Blind")]
@@ -55,7 +56,7 @@ public class BlindSelector : MonoBehaviour
     public void SetUpScoresUI()
     {
         int ante = BlindManager.instance.anteLevel;
-        for (int i = 0; i < scoresText.Length -1; i++)
+        for (int i = 0; i < scoresText.Length - 1; i++)
         {
             scoresText[i].text = (blindScoreData.baseScore[ante] * blindScoreData.allBlinds[i].scoreMultiplier).ToString();
         }

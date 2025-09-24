@@ -31,13 +31,16 @@ public class BlindManager : MonoBehaviour
     {
         instance = this;
     }
+    void Start()
+    {
+        UpdateAnteLevelUI();
+    }
 
     public void SetRequiredScore()
     {
         blindDescriptionText.text = string.Empty;
-        currentRoundText.text = currentRound.ToString();
-        currentBetLevelText.text = (anteLevel + 1) + " / 4";
 
+        UpdateAnteLevelUI();
         int newScore = Mathf.RoundToInt(blindScoreData.baseScore[anteLevel] * blindScoreData.allBlinds[currentBlindProgress].scoreMultiplier);
         requiredScore = newScore;
         blindMoney = blindScoreData.allBlinds[currentBlindProgress].blindMoney;
@@ -104,6 +107,12 @@ public class BlindManager : MonoBehaviour
         }
 
         OnBlindSelected?.Invoke();
+    }
+
+    public void UpdateAnteLevelUI()
+    {
+        currentRoundText.text = currentRound.ToString();
+        currentBetLevelText.text = (anteLevel + 1) + " / 4";
     }
 
     public void SetBlindDefeated()
