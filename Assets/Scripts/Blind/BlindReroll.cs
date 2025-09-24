@@ -48,7 +48,7 @@ public class BlindReroll : MonoBehaviour
 
     private void SetRerollButtonState()
     {
-        rerollButton.interactable = CurrencyManager.instance.currentCurrency >= blindRerollCost;
+        rerollButton.interactable = CurrencyManager.instance.OverMinDebt(blindRerollCost);
     }
 
     private void ListenForCurrencyChange(int newCurrency)

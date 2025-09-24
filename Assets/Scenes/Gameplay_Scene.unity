@@ -11220,6 +11220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCurrency: 0
+  maxDebt: -20
   currencyText: {fileID: 1458651287}
 --- !u!1 &624535221
 GameObject:

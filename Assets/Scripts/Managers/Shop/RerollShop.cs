@@ -27,12 +27,12 @@ public class RerollShop : MonoBehaviour
     {
         int value = currentFreeRerolls <= 0 ? currentValue : 0;
         rerollButtonText.text = "Reroll" + "\n" + "$" + value;
-        reRollButton.interactable = CheckIfEnoughCurrencyForReRoll();
+        reRollButton.interactable = CurrencyManager.instance.OverMinDebt(currentValue);
     }
 
     private void Reroll()
     {
-        if (CheckIfEnoughCurrencyForReRoll() || currentFreeRerolls > 0)
+        if (CurrencyManager.instance.OverMinDebt(currentValue) || currentFreeRerolls > 0)
         {
             if (currentFreeRerolls <= 0)
             {
@@ -46,10 +46,6 @@ public class RerollShop : MonoBehaviour
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnShopReroll));
     }
 
-    private bool CheckIfEnoughCurrencyForReRoll()
-    {
-        return CurrencyManager.instance.currentCurrency >= currentValue;
-    }
     public void SetDefaultValues()
     {
         currentValue = defaultRerollPrice;

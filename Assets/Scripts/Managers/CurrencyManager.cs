@@ -7,6 +7,7 @@ public class CurrencyManager : MonoBehaviour
     public static event Action<int> OnMoneyChanged;
     public static CurrencyManager instance;
     public int currentCurrency;
+    public int maxDebt = 0;
 
     [SerializeField] private TextMeshProUGUI currencyText;
 
@@ -37,6 +38,11 @@ public class CurrencyManager : MonoBehaviour
         currentCurrency -= ammount;
         UpdateCurrencyText();
         OnMoneyChanged?.Invoke(currentCurrency);
+    }
+
+    public bool OverMinDebt(int item)
+    {
+        return currentCurrency - item >= maxDebt;
     }
 
     private void UpdateCurrencyText()
