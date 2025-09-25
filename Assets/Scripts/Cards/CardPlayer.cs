@@ -8,6 +8,8 @@ public class CardPlayer : MonoBehaviour
     public static CardPlayer instance;
     public bool isPlayingCards = false;
     public List<Card> currentHand;
+
+    public int extraLives = 0;
     private HandType lastHandPlayed;
 
     [SerializeField] private List<JokerContainer> reactivationJokers;
@@ -80,13 +82,11 @@ public class CardPlayer : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             yield return CardManager.instance.TriggerEndRoundCardAbilities();
             yield return new WaitForSeconds(0.2f);
-            ScoreManager.instance.OnBlindDefeated();
-            CardManager.instance.DestroyCardsOnHand();
-            DeckManager.instance.ReEnableCards();
+            NextMatch();
         }
         else
         {
-            ScoreManager.instance.TryEndMatch();
+            yield return ScoreManager.instance.TryEndMatch();
         }
 
         yield return new WaitForSeconds(0.3f);
@@ -96,6 +96,13 @@ public class CardPlayer : MonoBehaviour
         GameStatusManager._Status.firstHand = false;
         isPlayingCards = false;
         GameStatusManager.SetGameEvent(TriggerOptions.None);
+    }
+
+    public void NextMatch()
+    {
+        ScoreManager.instance.OnBlindDefeated();
+        CardManager.instance.DestroyCardsOnHand();
+        DeckManager.instance.ReEnableCards();
     }
 
     private IEnumerator TriggerHandCards()

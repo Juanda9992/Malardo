@@ -1,9 +1,12 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
+
+    public bool saved = false;
 
     [SerializeField] private float chips = 0;
     [SerializeField] private float mult = 1;
@@ -83,10 +86,20 @@ public class ScoreManager : MonoBehaviour
         totalScoreText.text = "0";
     }
 
-    public void TryEndMatch()
+    public IEnumerator TryEndMatch()
     {
         if (HandManager.instance.GetHandsRemaining() == 0)
         {
+            float quarterScore = BlindManager.instance.requiredScore / 4;
+            if (roundScore >= quarterScore && CardPlayer.instance.extraLives > 0)
+            {
+                saved = true;
+                yield return JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnMatchLoss);
+                yield return new WaitForSeconds(0.5f);
+                CardPlayer.instance.NextMatch();
+                saved = false;
+                yield break;
+            }
             LoseManager.instance.SetLoseScreen();
         }
     }
