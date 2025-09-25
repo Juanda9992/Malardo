@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
+  m_Name: Mr. Bones Joker
+  m_EditorClassIdentifier: 
+  jokerName: Mr. Bones
+  description: 'Prevents Death if chips scored are at least <style=Info>25%</style>
+    of required chips
+
+    <style=Mult>self destructs</style>'
+  triggerMessage: 0
+  overrideEffect: 0
+  shopValue: 5
+  JokerImage: {fileID: 0}
+  jokerRarity: 1
+  jokerLogics:
+  - triggerEvent: 20
+    jokerTrigger:
+    - {fileID: 11400000, guid: 5e519f6db2731be46885af4a411ef2c8, type: 2}
+    jokerEffect:
+    - {fileID: 11400000, guid: f35fc59c3ef54914687d57105bd06f38, type: 2}
+  OnSetUpJoker:
+  - {fileID: 11400000, guid: 31e3c81ac5a8ebf409aad0fc2223fa73, type: 2}
+  OnSellEffect:
+  - {fileID: 11400000, guid: dec83ea7a3b745c4eb1c4f022ca39ec8, type: 2}
+  reactivationJoker: {fileID: 0}
