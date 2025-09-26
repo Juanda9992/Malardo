@@ -14,8 +14,10 @@ public class ModifyStatsBlind : CurrentBlind
     public bool divideChipsAndMult;
     public static bool decreasePokerLevel;
     public static int cardsToPlay = -1;
-    public static bool divideScore =false;
+    public static bool divideScore = false;
     public static bool loseMoneyPerCard;
+    public bool _banMostPlayedHand;
+    public static bool banMostPlayedHand;
 
     private int lastDiscards;
     private int lastHands;
@@ -56,6 +58,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             loseMoneyPerCard = true;
         }
+
+        if (_banMostPlayedHand)
+        {
+            banMostPlayedHand = true;
+        }
         BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
@@ -94,6 +101,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             loseMoneyPerCard = false;
         }
+
+        if (_banMostPlayedHand)
+        {
+            banMostPlayedHand = false;
+        }
         BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
 
@@ -103,8 +115,7 @@ public class ModifyStatsBlind : CurrentBlind
         {
             if (HandManager.instance.handCards.Count < cardsToPlay)
             {
-                BlindManager.instance.ShowInvalidateMessage();
-                CardPlayer.instance.StopPlayCoroutine();
+                InvalidateHand();
                 yield return new WaitForSeconds(2f);
 
             }
@@ -132,5 +143,19 @@ public class ModifyStatsBlind : CurrentBlind
                 yield return new WaitForSeconds(0.2f);
             }
         }
+        if (banMostPlayedHand)
+        {
+            if (CommonOperations.CheckIfMostPlayedHand())
+            {
+                CurrencyManager.instance.SetCurrency(0);
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+    }
+
+    private void InvalidateHand()
+    {
+        BlindManager.instance.ShowInvalidateMessage();
+        CardPlayer.instance.StopPlayCoroutine();
     }
 }
