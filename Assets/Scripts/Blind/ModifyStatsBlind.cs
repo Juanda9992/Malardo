@@ -20,6 +20,8 @@ public class ModifyStatsBlind : CurrentBlind
     public static bool banMostPlayedHand;
     public bool _discardCards;
     public static bool discardCards;
+    public bool _notRepeatHands;
+    public static bool notRepeatHands;
 
     private int lastDiscards;
     private int lastHands;
@@ -70,6 +72,10 @@ public class ModifyStatsBlind : CurrentBlind
         {
             discardCards = true;
         }
+        if (_notRepeatHands)
+        {
+            notRepeatHands = true;
+        }
         BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
@@ -117,6 +123,10 @@ public class ModifyStatsBlind : CurrentBlind
         if (_discardCards)
         {
             discardCards = false;
+        }
+        if (_notRepeatHands)
+        {
+            notRepeatHands = false;
         }
         BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
@@ -179,6 +189,15 @@ public class ModifyStatsBlind : CurrentBlind
             }
 
             yield return new WaitForSeconds(0.3f);
+        }
+
+        if (notRepeatHands)
+        {
+            if (CommonOperations.CheckIfHandAlreadyPlayedInHand())
+            {
+                InvalidateHand();
+                yield return new WaitForSeconds(0.5f);
+            }
         }
     }
 

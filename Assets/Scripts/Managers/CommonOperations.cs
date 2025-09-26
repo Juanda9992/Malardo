@@ -188,6 +188,7 @@ public static class CommonOperations
         }
     }
 
+    #region PokerHands
     public static bool CheckIfMostPlayedHand()
     {
         foreach (var hand in PokerHandLevelStorage.instance.GetMostPlayedHands())
@@ -200,4 +201,11 @@ public static class CommonOperations
 
         return false;
     }
+
+    public static bool CheckIfHandAlreadyPlayedInHand()
+    {
+        return PokerHandLevelStorage.instance.GetPokerHands().Find(x => x.pokerHand.handType == GameStatusManager._Status.playedHand).playedInRound;
+    }
+
+    #endregion
 }
