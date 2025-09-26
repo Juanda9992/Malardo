@@ -7,13 +7,14 @@ using Random = UnityEngine.Random;
 
 public class CardVisuals : MonoBehaviour
 {
-    [SerializeField] private Image bgImage,numbersImage;
+    [SerializeField] private Image bgImage, numbersImage;
     [SerializeField] private int rotationRange;
 
     [SerializeField] private GameObject[] editionsContainer;
-    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals,wildCardVisuals, disabledCardVisuals;
+    [SerializeField] private GameObject bonusCardVisuals, multCardVisuals, wildCardVisuals, disabledCardVisuals;
     [SerializeField] private Image seal;
     [SerializeField] private Suit testSuit;
+    [SerializeField] private GameObject flippedVisuals;
     private Card _card;
 
     void Awake()
@@ -28,7 +29,7 @@ public class CardVisuals : MonoBehaviour
         _card = card;
         _card.SetCardName();
         _card.SetCardChipAmmount();
-        numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1:_card.number);
+        numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1 : _card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
@@ -122,6 +123,10 @@ public class CardVisuals : MonoBehaviour
     public void SetCardDisabled(bool disabled)
     {
         disabledCardVisuals.SetActive(disabled);
+    }
+    public void SetCardFlippedStatus(bool status)
+    {
+        flippedVisuals.SetActive(status);
     }
 
     public void UpdateCardSuitCoroutineRequest(Suit suit)
