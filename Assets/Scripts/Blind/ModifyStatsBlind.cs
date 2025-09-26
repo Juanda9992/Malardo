@@ -18,6 +18,8 @@ public class ModifyStatsBlind : CurrentBlind
     public static bool loseMoneyPerCard;
     public bool _banMostPlayedHand;
     public static bool banMostPlayedHand;
+    public bool _discardCards;
+    public static bool discardCards;
 
     private int lastDiscards;
     private int lastHands;
@@ -63,6 +65,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             banMostPlayedHand = true;
         }
+
+        if (_discardCards)
+        {
+            discardCards = true;
+        }
         BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
@@ -105,6 +112,11 @@ public class ModifyStatsBlind : CurrentBlind
         if (_banMostPlayedHand)
         {
             banMostPlayedHand = false;
+        }
+
+        if (_discardCards)
+        {
+            discardCards = false;
         }
         BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
@@ -150,6 +162,23 @@ public class ModifyStatsBlind : CurrentBlind
                 CurrencyManager.instance.SetCurrency(0);
                 yield return new WaitForSeconds(0.3f);
             }
+        }
+
+        if (discardCards)
+        {
+            yield return new WaitForSeconds(0.1f);
+            for (int i = 0; i < 2; i++)
+            {
+                if (CardManager.instance.cardsOnScreen.Count > 0)
+                {
+                    Card_Data card_Data = CardManager.instance.cardsOnScreen[Random.Range(0, CardManager.instance.cardsOnScreen.Count)];
+
+                    CardManager.instance.cardsOnScreen.Remove(card_Data);
+                    card_Data.pointerInteraction.RemoveCard();
+                }
+            }
+
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
