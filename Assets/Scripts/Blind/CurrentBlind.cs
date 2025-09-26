@@ -3,7 +3,7 @@ using System.Collections;
 public abstract class CurrentBlind : ScriptableObject
 {
     public string blindName;
-    public string blindDescription;
+    [TextArea]public string blindDescription;
     public float blindMultiplier;
     public Sprite blindSprite;
     public Color blindColor;

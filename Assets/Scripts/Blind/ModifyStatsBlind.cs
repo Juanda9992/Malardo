@@ -9,8 +9,10 @@ public class ModifyStatsBlind : CurrentBlind
     public int handAmmount = -1;
     public int _cardsToPlay = -1;
     public bool _decreasePokerLevel;
+    public bool divideChipsAndMult;
     public static bool decreasePokerLevel;
     public static int cardsToPlay = -1;
+    public static bool divideScore =false;
 
     private int lastDiscards;
     private int lastHands;
@@ -41,6 +43,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             decreasePokerLevel = true;
         }
+
+        if (divideChipsAndMult)
+        {
+            divideScore = true;
+        }
         BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
@@ -69,6 +76,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             decreasePokerLevel = false;
         }
+
+        if (divideChipsAndMult)
+        {
+            divideScore = false;
+        }
         BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
 
@@ -87,6 +99,12 @@ public class ModifyStatsBlind : CurrentBlind
         if (decreasePokerLevel)
         {
             PokerHandUpgrader.instance.RequestDecreasePokerHand(HandDetector.instance.currentHand.pokerHand.handType);
+        }
+
+        if (divideScore)
+        {
+            ScoreManager.instance.DivideChipsAndMult();
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
