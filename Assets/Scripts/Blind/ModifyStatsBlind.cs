@@ -8,11 +8,14 @@ public class ModifyStatsBlind : CurrentBlind
     public bool noDiscards;
     public int handAmmount = -1;
     public int _cardsToPlay = -1;
+
+    public bool _loseMoneyPerCard;
     public bool _decreasePokerLevel;
     public bool divideChipsAndMult;
     public static bool decreasePokerLevel;
     public static int cardsToPlay = -1;
     public static bool divideScore =false;
+    public static bool loseMoneyPerCard;
 
     private int lastDiscards;
     private int lastHands;
@@ -48,6 +51,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             divideScore = true;
         }
+
+        if (_loseMoneyPerCard)
+        {
+            loseMoneyPerCard = true;
+        }
         BlindManager.instance.SetCustomRequiredScore((int)(BlindManager.instance.GetRoundBaseScore() * blindMultiplier));
 
     }
@@ -81,6 +89,11 @@ public class ModifyStatsBlind : CurrentBlind
         {
             divideScore = false;
         }
+
+        if (_loseMoneyPerCard)
+        {
+            loseMoneyPerCard = false;
+        }
         BlindManager.instance.SetCustomRequiredScore(BlindManager.instance.GetRoundBaseScore() * 2);
     }
 
@@ -105,6 +118,19 @@ public class ModifyStatsBlind : CurrentBlind
         {
             ScoreManager.instance.DivideChipsAndMult();
             yield return new WaitForSeconds(0.5f);
+        }
+        if (loseMoneyPerCard)
+        {
+            Card card_Data;
+            for (int i = 0; i < HandManager.instance.handCards.Count; i++)
+            {
+                card_Data = HandManager.instance.handCards[i];
+                ScoreSign.instance.SetMessage(Color.yellow, "-$1", card_Data.linkedCard.transform.position);
+                card_Data.linkedCard.pointerInteraction.ShakeCard();
+                CurrencyManager.instance.RemoveCurrency(1);
+
+                yield return new WaitForSeconds(0.2f);
+            }
         }
     }
 }
