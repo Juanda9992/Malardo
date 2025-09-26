@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class CardPlayer : MonoBehaviour
 {
@@ -50,13 +51,13 @@ public class CardPlayer : MonoBehaviour
     private IEnumerator PlayCards()
     {
         isPlayingCards = true;
+        RemovePlayedCardsFromList();
         if (BlindManager.instance.activeBossBlind != null)
         {
             yield return BlindManager.instance.activeBossBlind.CheckEffect();
         }
 
         yield return new WaitWhile(() => PokerHandUpgrader.instance.isUpgrading == true);
-        RemovePlayedCardsFromList();
 
         yield return TriggerHandCards();
         yield return new WaitForSeconds(0.1f);
@@ -270,11 +271,11 @@ public class CardPlayer : MonoBehaviour
 
     private void RemovePlayedCardsFromList()
     {
-        GameStatusManager.SetHandSize(currentHand.Count);
+        GameStatusManager.SetHandSize(HandManager.instance.handCards.Count);
 
-        for (int i = 0; i < currentHand.Count; i++)
+        for (int i = 0; i < HandManager.instance.handCards.Count; i++)
         {
-            CardManager.instance.cardsOnScreen.Remove(currentHand[i].linkedCard);
+            CardManager.instance.cardsOnScreen.Remove(HandManager.instance.handCards[i].linkedCard);
         }
     }
 }
