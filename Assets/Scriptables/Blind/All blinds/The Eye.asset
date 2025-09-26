@@ -15,8 +15,8 @@ MonoBehaviour:
   blindName: The Eye
   blindDescription: No repeat hand types this round
   blindMultiplier: 2
-  blindSprite: {fileID: -922088287, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
-  blindColor: {r: 0.7254902, g: 0.35686275, b: 0.03137255, a: 1}
+  blindSprite: {fileID: -1767815016, guid: 42a013c941b1a994d861390ca7cf08ca, type: 3}
+  blindColor: {r: 0.29411766, g: 0.44313726, b: 0.89411765, a: 1}
   oneHandSizeLess: 0
   noDiscards: 0
   handAmmount: -1
