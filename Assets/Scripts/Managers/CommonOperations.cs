@@ -7,7 +7,7 @@ public static class CommonOperations
     private static Seal[] seals = new Seal[] { Seal.None, Seal.Gold, Seal.Red, Seal.Blue, Seal.Purple };
     private static CardEdition[] cardEditions = new CardEdition[] { CardEdition.Base, CardEdition.Foil, CardEdition.Holographic, CardEdition.Polychrome };
     private static CardType[] cardTypes = new CardType[] { CardType.Gold, CardType.Stone, CardType.Silver, CardType.Lucky, CardType.Glass, CardType.Bonus, CardType.Mult, CardType.Wild };
-    private static HandType[] handTypes = new HandType[] {HandType.High_Card, HandType.Pair, HandType.Double_Pair, HandType.Three_Of_A_Kind, HandType.Straight, HandType.Flush, HandType.Full_House, HandType.Four_Of_A_Kind, HandType.Five_Of_A_Kind, HandType.Straight_Flush, HandType.Flush_House, HandType.Flush_Five };
+    private static HandType[] handTypes = new HandType[] { HandType.High_Card, HandType.Pair, HandType.Double_Pair, HandType.Three_Of_A_Kind, HandType.Straight, HandType.Flush, HandType.Full_House, HandType.Four_Of_A_Kind, HandType.Five_Of_A_Kind, HandType.Straight_Flush, HandType.Flush_House, HandType.Flush_Five };
     public static Suit GetRandomSuit()
     {
         return suits[Random.Range(0, suits.Length)];
@@ -15,7 +15,7 @@ public static class CommonOperations
 
     public static HandType GetRandomHandType()
     {
-        return handTypes[Random.Range(0,handTypes.Length)];
+        return handTypes[Random.Range(0, handTypes.Length)];
     }
 
     public static string ParseHandType(HandType handType)
@@ -186,5 +186,18 @@ public static class CommonOperations
         {
             horizontalLayoutGroup.spacing = 0f;
         }
+    }
+
+    public static bool CheckIfMostPlayedHand()
+    {
+        foreach (var hand in PokerHandLevelStorage.instance.GetMostPlayedHands())
+        {
+            if (GameStatusManager._Status.playedHand == hand.pokerHand.handType)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
