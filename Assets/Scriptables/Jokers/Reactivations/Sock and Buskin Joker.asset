@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Sock and Buskin Joker
   m_EditorClassIdentifier: 
   jokerName: Sock and Buskin
-  description: Retrigger all face cards
+  description: Retrigger all <style=info>face</style> cards
   triggerMessage: Again!
   overrideEffect: 0
   shopValue: 4
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics: []
   OnSetUpJoker: []
