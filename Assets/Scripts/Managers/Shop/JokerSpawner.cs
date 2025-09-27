@@ -42,8 +42,23 @@ public class JokerSpawner : MonoBehaviour
             int randomChoice = Random.Range(0, 100);
             if (randomChoice < 71)
             {
+
                 GameObject currentJoker = Instantiate(jokerPrefab, jokerTransform.transform);
-                currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJoker());
+                int rarity = Random.Range(0, 100);
+
+                if (rarity < 70)
+                {
+                    
+                    currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(JokerRarity.Common));
+                }
+                else if (rarity < 95)
+                {
+                    currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(JokerRarity.Uncommon));
+                }
+                else
+                {
+                    currentJoker.GetComponent<JokerContainer>().SetUpJoker(DatabaseManager.instance.jokerContainer.GetRandomJokerByRarity(JokerRarity.Rare));
+                }
             }
             else if (randomChoice < 85)
             {
