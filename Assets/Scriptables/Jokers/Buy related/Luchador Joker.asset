@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Luchador Joker
   m_EditorClassIdentifier: 
   jokerName: Luchador
-  description: Sell this card to disable the current Boss Blind
+  description: Sell this card to disable the current <style=Info>Boss Blind</style>
   triggerMessage: Disabled
   overrideEffect: 0
   shopValue: 5
