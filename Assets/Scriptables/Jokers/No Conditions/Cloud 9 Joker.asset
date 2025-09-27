@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Cloud 9 Joker
   m_EditorClassIdentifier: 
   jokerName: Cloud 9
-  description: 'Earn <style="Cash">$1</style> for each 9 in your full deck at end
-    of round (Current: <style="Cash">$_R_</style>)'
+  description: 'Earn <style="Cash">$1</style> for each <style=Info>9</style> in your
+    <style=Info>full deck</style> at end of round (Current: <style="Cash">$_R_</style>)'
   triggerMessage: $4
   overrideEffect: 0
   shopValue: 7
