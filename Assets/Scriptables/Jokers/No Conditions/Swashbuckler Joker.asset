@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Swashbuckler Joker
   m_EditorClassIdentifier: 
   jokerName: Swashbuckler
-  description: 'Adds the sell value of all other owned Jokers to <style="Mult"> mult</style>
-    (Current: <style="Mult">+_R_ mult</style>).'
+  description: 'Adds the sell value of all other owned <style=Info>Jokers</style>
+    to <style="Mult"> mult</style> (Current: <style="Mult">+_R_ mult</style>).'
   triggerMessage: 
   overrideEffect: 0
   shopValue: 4
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 3
