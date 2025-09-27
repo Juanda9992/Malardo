@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Juggler Joker
   m_EditorClassIdentifier: 
   jokerName: Juggler
-  description: +1 hand size
+  description: <style=Info>+1</style> hand size
   triggerMessage: +1 Hand Size
   overrideEffect: 0
   shopValue: 4
