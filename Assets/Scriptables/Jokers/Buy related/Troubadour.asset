@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Troubadour
   m_EditorClassIdentifier: 
   jokerName: Troubadour
-  description: '+2 hand size
+  description: '<style=Info>+2</style> hand size
 
-    <style="Chips">-1 hand</style> per round'
+    <style="Chips">-1 hand</style>
+    per round'
   triggerMessage: +2 Hand Size - 1 Hand
   overrideEffect: 0
   shopValue: 6

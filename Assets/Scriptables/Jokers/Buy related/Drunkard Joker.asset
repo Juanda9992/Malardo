@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Drunkard Joker
   m_EditorClassIdentifier: 
   jokerName: Drunkard joker
-  description: When Blind is selected, gain <style="Chips">+3 Hands</style>and lose
+  description: When Blind is selected, gain <style="Chips">+3 Hands</style> and lose
     all <style="Mult">discards</style>.
   triggerMessage: +1 Discard
   overrideEffect: 0
