@@ -12,6 +12,16 @@ public class GiveMultByLowerDeckNumber : JokerEffect
         jokerInstance.jokerContainer.TriggerMessage();
     }
 
+    public override void SetupEffect(JokerInstance jokerInstance)
+    {
+        UpdateDescription(jokerInstance);
+    }
+
+    public override void UpdateDescription(JokerInstance instance)
+    {
+        instance.jokerDescription = instance.data.description.Replace("_R_", GetCalculation().ToString());
+    }
+
 
     private int GetCalculation()
     {
