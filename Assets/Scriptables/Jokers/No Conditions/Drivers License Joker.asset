@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Drivers License Joker
   m_EditorClassIdentifier: 
   jokerName: "Driver\xB4s License"
-  description: <style="Mult">X3 mult</style> if you have at least 16 Enhanced cards
-    in your full deck.
+  description: <style="Mult">X3 mult</style> if you have at least <style=info>16</style>
+    Enhanced cards in your full deck.
   triggerMessage: X3
   overrideEffect: 3
   shopValue: 7
+  JokerImage: {fileID: 0}
   jokerRarity: 2
   jokerLogics:
   - triggerEvent: 3
