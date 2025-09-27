@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd1cf91981ae8448f6e5556e352917, type: 3}
+  m_Name: 0.9.0
+  m_EditorClassIdentifier: 
+  versionName: Alpha 0.9.0
+  logcontent: "<b>Added</b>\n\n- +70 jokers had visual sprite.\n- Glass card sprite.\n-
+    Steel Card sprite.\n\n- Now you can skip blinds, by the moment, there are not
+    tags, they are useful to scaling Throwback Joker.\n\n- Added 9 Jokers:\n\t- To
+    do List.\n\t- Ancient Joker.\n\t- The Idol.\n\t- Castle.\n\t- Mr Bones.\n\t-
+    Mail In Rebate.\n\t- Credit Card.\n\t- Obelisk.j\n\t- Throwback.\n\n- Added 4
+    Boss Blinds:\n\t- The 0x.\n\t- The Eye.\n\t- The Hook.\n\t- The Flint.\n\t- The
+    Tooth.\n\n\n<b>Updated</b>\n\n- Shop Probabilities, Common jokers will appear
+    the most, then Uncommon, then Rare.\n- Legendary cards can no longer appear on
+    the shop.\n- Stone cards now hide the numbers.\n- The hand is now auto sorted
+    after receiving new cards.\n- The Ace is now treated as a 14 instead of 1.\n-
+    The description box now will hide after every end of hand.\n- The description
+    styles now are a little bit smaller.\n- Shop packs now have stylyzed description.\n-
+    Rank order in hands now is inverse (Before: A,2,3,4,5; Now: A,K,Q,J).\n- Most
+    jokers\xB4s description have been improved by adding stylized descriptions.\n-
+    Most Jokers\xB4s rarities have been updated.\n\n<b>Fixed</b>\n\n- The cards sometimes
+    were not matching hand size when regenerating cards.\n- Shop items were not updating
+    it\xB4s button properly on currency changed.\n- Vouchers shop value were 0.\n-
+    Raised Fist not giving Mult.\n- Disabled cards were appearing on arcana / spectral
+    packs (After being debuffed for a boss).\n- Mega Spectral pack had Mega Arcana
+    pack name."
