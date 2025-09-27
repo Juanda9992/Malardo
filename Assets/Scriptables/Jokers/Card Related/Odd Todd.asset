@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Odd Todd
   m_EditorClassIdentifier: 
   jokerName: Odd Todd
-  description: Played cards with odd rank give <style="Chips">+31 chips</style> when
-    scored (A, 9, 7, 5, 3)
+  description: Played cards with <style=Info>odd</style> rank give <style="Chips">+31
+    chips</style> when scored (A, 9, 7, 5, 3)
   triggerMessage: +31
   overrideEffect: 31
   shopValue: 4
