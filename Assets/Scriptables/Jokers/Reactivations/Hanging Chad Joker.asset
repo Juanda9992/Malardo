@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Hanging Chad Joker
   m_EditorClassIdentifier: 
   jokerName: Hanging Chad
-  description: Retrigger first played card used in scoring 2 additional times
+  description: Retrigger <style=Info>first</style> played card used in scoring <style=Info>2</style>
+    additional times
   triggerMessage: Again!
   overrideEffect: 0
   shopValue: 6
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics: []
   OnSetUpJoker: []
