@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Even Steven
   m_EditorClassIdentifier: 
   jokerName: Even Steven
-  description: Played cards with even rank give <style="Mult">+4 mult</style> when
-    scored (10, 8, 6, 4, 2).
+  description: Played cards with <style=Info>even</style> rank give <style="Mult">+4
+    mult</style> when scored (10, 8, 6, 4, 2).
   triggerMessage: +4
   overrideEffect: 4
   shopValue: 4
