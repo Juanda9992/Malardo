@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokerName: Square Joker
   description: This Joker gains <style="Chips">+4 chips</style> if played hand has
-    exactly 4 cards (Currently <style="Chips">+_R_ chips</style>).
+    exactly <style=info>4</style> cards (Currently <style="Chips">+_R_ chips</style>).
   triggerMessage: +4 Chips
   overrideEffect: 0
   shopValue: 4
