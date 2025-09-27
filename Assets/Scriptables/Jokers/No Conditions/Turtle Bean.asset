@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Turtle Bean
   m_EditorClassIdentifier: 
   jokerName: Turtle Bean
-  description: +5 hand size, reduces by 1 each round
+  description: <style=Info>+5</style> hand size, reduces by <style=Mult>1</style>
+    each round
   triggerMessage: 
   overrideEffect: 0
   shopValue: 6
