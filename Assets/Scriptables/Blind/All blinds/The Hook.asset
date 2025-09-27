@@ -26,3 +26,4 @@ MonoBehaviour:
   divideChipsAndMult: 0
   _banMostPlayedHand: 0
   _discardCards: 1
+  _notRepeatHands: 0

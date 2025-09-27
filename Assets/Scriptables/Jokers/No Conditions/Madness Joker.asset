@@ -21,7 +21,8 @@ MonoBehaviour:
   triggerMessage: 0
   overrideEffect: 0
   shopValue: 4
-  jokerRarity: 0
+  JokerImage: {fileID: 0}
+  jokerRarity: 1
   jokerLogics:
   - triggerEvent: 0
     jokerTrigger:

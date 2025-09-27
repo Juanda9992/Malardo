@@ -15,6 +15,10 @@ MonoBehaviour:
   desiredSuit: 4
   cardType: 0
   increaseRank: 0
+  copyCard: 0
   destroyCards: 1
+  sameSuit: 0
+  sameNumber: 0
+  addRandomEdition: 0
   minCardsRequired: 1
   maxCardsRequired: 2
