@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Golden Ticket
   m_EditorClassIdentifier: 
   jokerName: Golden Ticket
-  description: Played Gold cards earn <style="Cash">$4</style>  when scored
+  description: Played <style=Info>Gold</style> cards earn <style="Cash">$4</style> 
+    when scored
   triggerMessage: $4
   overrideEffect: 4
   shopValue: 5
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 4
