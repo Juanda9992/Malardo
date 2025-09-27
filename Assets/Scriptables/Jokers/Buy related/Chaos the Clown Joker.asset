@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Chaos the Clown Joker
   m_EditorClassIdentifier: 
   jokerName: Chaos the Clown
-  description: 1 free Reroll per shop
+  description: <style=Info>1</style> free Reroll per shop
   triggerMessage: +1 Reroll
   overrideEffect: 0
   shopValue: 4
+  JokerImage: {fileID: 0}
   jokerRarity: 0
   jokerLogics: []
   OnSetUpJoker:
