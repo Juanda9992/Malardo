@@ -19459,6 +19459,7 @@ MonoBehaviour:
   - {fileID: 280529306}
   tagPrefab: {fileID: 5048494948753560417, guid: 18771bdf74000c448a4aefd20b774dae, type: 3}
   tagParent: {fileID: 1125226861}
+  currentTags: []
 --- !u!1 &1195999453
 GameObject:
   m_ObjectHideFlags: 0
