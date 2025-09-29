@@ -3,6 +3,7 @@ using UnityEngine;
 public class CurrencyEffects : CardEffect
 {
     public bool duplicateMoney;
+    public int moneyLimit;
     public bool sellValueToMoney;
     public override void ApplyEffect()
     {
@@ -24,12 +25,12 @@ public class CurrencyEffects : CardEffect
         if (duplicateMoney)
         {
             ammount = CurrencyManager.instance.currentCurrency;
-            ammount = Mathf.Clamp(ammount, 0, 20);
+            ammount = Mathf.Clamp(ammount, 0, moneyLimit);
         }
         else
         {
             ammount = JokerManager.instance.GetSellValueFromAllJokers();
-            ammount = Mathf.Clamp(ammount, 0, 50);
+            ammount = Mathf.Clamp(ammount, 0, moneyLimit);
 
         }
         return ammount;
