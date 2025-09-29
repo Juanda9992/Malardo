@@ -10,6 +10,7 @@ public class DatabaseManager : MonoBehaviour
     public TarotCardDatabase tarotCardDatabase;
     public JokerListContainer jokerContainer;
     public PricesDatabase pricesDatabase;
+    public TagDatabase tagDatabase;
     [SerializeField] private VoucherDatabase voucherDatabase;
 
     public VoucherShopContainer matchVoucherDatabase;
