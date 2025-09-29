@@ -7,4 +7,13 @@ public class TagData : ScriptableObject
     [TextArea] public string tagDescription;
     public Sprite tagSprite;
     public CardEffect tagEffect;
+    public TagExchangeMoment tagExchangeMoment;
+
+}
+
+public enum TagExchangeMoment
+{
+    Instant,
+    Shop,
+    Game
 }
