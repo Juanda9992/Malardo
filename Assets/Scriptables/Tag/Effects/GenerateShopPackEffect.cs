@@ -20,6 +20,9 @@ public class GenerateShopPackEffect : CardEffect
                 case PackType.Planet:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomPlanetPack(PackSize.Mega));
                 break;
+                case PackType.Buffon:
+                PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomBuffonPack(PackSize.Mega));
+                break;
         }
     }
 }
