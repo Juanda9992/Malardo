@@ -14,6 +14,9 @@ public class GenerateShopPackEffect : CardEffect
                 case PackType.Tarot:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomArcanaPack(PackSize.Mega));
                 break;
+                case PackType.Card:
+                PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomCardPack(PackSize.Mega));
+                break;
         }
     }
 }
