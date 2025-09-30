@@ -111,7 +111,8 @@ public class PackManager : MonoBehaviour
         {
             StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPackSkipped));
         }
-        SetAllUIStatus(true);
+        packSection.SetActive(false);
+        NavigationMenuManager.instance.OpenLastMenu();
         CommonOperations.DestroyChildsInParent(itemsDisplay);
         CommonOperations.DestroyChildsInParent(cardManipulationManager.layoutGroup.transform);
         CardManager.instance.cardsOnScreen.Clear();
