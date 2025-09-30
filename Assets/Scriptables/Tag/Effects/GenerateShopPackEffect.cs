@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Generate Mega Pack",menuName ="Scriptables/Tag/Effect/Generate Mega Pack")]
+[CreateAssetMenu(fileName = "Generate Mega Pack",menuName ="Scriptables/Tag/EffectGenerate Mega Pack")]
 public class GenerateShopPackEffect : CardEffect
 {
     [SerializeField] private PackType packToGenerate;
@@ -10,6 +10,9 @@ public class GenerateShopPackEffect : CardEffect
         {
             case PackType.Spectral:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomSpectralPack(PackSize.Mega));
+                break;
+                case PackType.Tarot:
+                PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomArcanaPack(PackSize.Mega));
                 break;
         }
     }
