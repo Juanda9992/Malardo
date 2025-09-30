@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cf00476f3a37d4e8625e7c38efc6c3, type: 3}
-  m_Name: Standard Tag
+  m_Name: Meteor Tag
   m_EditorClassIdentifier: 
-  tagName: Standard
-  tagDescription: Immediately open a free <style=Info>Mega Standard Pack.</style>
-  tagSprite: {fileID: -551173134, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: ac3a74c579caec24f87c0efe0959fffc, type: 2}
+  tagName: Meteor
+  tagDescription: Immediately open a free <style=Info>Mega Celestial Pack.</style>
+  tagSprite: {fileID: 1725809338, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 5db9180da12e17c43be5ab5c1353e472, type: 2}
   tagExchangeMoment: 0
