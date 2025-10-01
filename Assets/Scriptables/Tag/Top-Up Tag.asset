@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cf00476f3a37d4e8625e7c38efc6c3, type: 3}
-  m_Name: Buffon Tag
+  m_Name: Top-Up Tag
   m_EditorClassIdentifier: 
-  tagName: Buffon
-  tagDescription: Immediately open a free <style=Info>Mega Buffon Pack.</style>
-  tagSprite: {fileID: -1350095711, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: 2eb1f4252c31e3242bb75a0f1bc8ac55, type: 2}
+  tagName: Top-Up
+  tagDescription: Create up to <style=Infoi>2</style> Common <style=Info>Jokers </style>(if
+    you have space).
+  tagSprite: {fileID: 2143397330, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 1bdf4c72c9de27b4eac6aa686cef87a0, type: 2}
   tagExchangeMoment: 0
