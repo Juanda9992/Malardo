@@ -86,6 +86,7 @@ public class HandManager : MonoBehaviour
     {
         discards--;
         GameStatusManager.SetDiscardData(handCards);
+        GameStatusManager._Status.discardData.discardsUsed++;
         GameStatusManager.SetGameEvent(TriggerOptions.CardDiscard);
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnHandDiscard));
         if (handCards.Count > 0)
@@ -158,6 +159,7 @@ public class HandManager : MonoBehaviour
     {
         hands--;
         GameStatusManager.SetGameEvent(TriggerOptions.BeforeHandPlay);
+        GameStatusManager._Status.handsUsed++;
         GameStatusManager.SetHandsRemaining(hands);
         OnHandPlayed?.Invoke(handCards);
         GameEventsManager.instance.TriggerHandPlayed();

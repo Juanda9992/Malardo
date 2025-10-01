@@ -91,6 +91,7 @@ public class GameStatus
     [Header("Discards")]
     public DiscardData discardData = new DiscardData();
     [Header("Hands")]
+    public int handsUsed;
     public int handSize;
     public int handsRemaining;
     public bool firstHand = true;
@@ -104,6 +105,7 @@ public class GameStatus
         public Card lastDiscard;
         public int discardSize;
         public int discardCount;
+        public int discardsUsed;
         public List<Card> discardCards;
     }
 
