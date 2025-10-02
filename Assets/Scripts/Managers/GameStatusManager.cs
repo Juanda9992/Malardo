@@ -87,6 +87,7 @@ public class GameStatus
     public Card cardPlayed;
     public HandType playedHand;
     public TriggerOptions currentGameStatus = TriggerOptions.None;
+    public int blindsSkipped;
     public int jokersInMatch;
     [Header("Discards")]
     public DiscardData discardData = new DiscardData();

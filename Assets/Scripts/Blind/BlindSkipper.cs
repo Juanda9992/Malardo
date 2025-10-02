@@ -36,6 +36,8 @@ public class BlindSkipper : MonoBehaviour
         blindSelector.UpdateBlockers();
         BlindManager.instance.UpdateAnteLevelUI();
 
+        GameStatusManager._Status.blindsSkipped++;
+
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnBlindSkipped));
         StartCoroutine(ConsumeTags(TagExchangeMoment.Instant));
     }
