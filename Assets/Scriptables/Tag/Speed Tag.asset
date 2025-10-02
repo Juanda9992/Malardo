@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cf00476f3a37d4e8625e7c38efc6c3, type: 3}
-  m_Name: Handy Tag
+  m_Name: Speed Tag
   m_EditorClassIdentifier: 
-  tagName: Handy
-  tagDescription: 'Gain <style=Cash>$1</style> for each hand played this run.
+  tagName: Speed
+  tagDescription: 'Gives <style=Cash>$5</style> for each <style=Info>Blind</style>
+    you''ve skipped this run.
 
-    (Current:
-    <style=Cash>$_R_</style>)'
-  tagSprite: {fileID: 21762463, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: ef55b0914b9d1cc4a9228c15b2e31114, type: 2}
+    (Current:<style=Cash>$_R_</style>)'
+  tagSprite: {fileID: 475053026, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: af5fc2ebeb662d94aaae5df55a0e3516, type: 2}
   tagExchangeMoment: 0
