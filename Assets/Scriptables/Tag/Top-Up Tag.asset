@@ -15,6 +15,6 @@ MonoBehaviour:
   tagName: Top-Up
   tagDescription: Create up to <style=Infoi>2</style> Common <style=Info>Jokers </style>(if
     you have space).
-  tagSprite: {fileID: 2143397330, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: 1bdf4c72c9de27b4eac6aa686cef87a0, type: 2}
+  tagSprite: {fileID: 2046849989, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 419b66a04a98c6b4dadd4c4a2478f91e, type: 2}
   tagExchangeMoment: 0

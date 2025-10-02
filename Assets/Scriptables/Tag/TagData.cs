@@ -9,6 +9,11 @@ public class TagData : ScriptableObject
     public CardEffect tagEffect;
     public TagExchangeMoment tagExchangeMoment;
 
+    public string GetFormatedDescription()
+    {
+        return tagEffect.GetDescription(tagDescription);
+    }
+
 }
 
 public enum TagExchangeMoment
