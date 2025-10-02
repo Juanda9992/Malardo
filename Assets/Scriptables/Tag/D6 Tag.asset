@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf00476f3a37d4e8625e7c38efc6c3, type: 3}
+  m_Name: D6 Tag
+  m_EditorClassIdentifier: 
+  tagName: D6
+  tagDescription: In the next <style=Info>Shop</style>, Rerolls start at <style=Cash>$0</style>.
+  tagSprite: {fileID: -1350095711, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 2eb1f4252c31e3242bb75a0f1bc8ac55, type: 2}
+  tagExchangeMoment: 1
