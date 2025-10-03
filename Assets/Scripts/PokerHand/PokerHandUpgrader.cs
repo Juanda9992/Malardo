@@ -11,7 +11,7 @@ public class PokerHandUpgrader : MonoBehaviour
     public StatUpgrade multUpgrade;
     public StatUpgrade chipUpgrade;
 
-    public List<HandType> usedCards = new List<HandType>(); 
+    public List<HandType> usedCards = new List<HandType>();
 
     [SerializeField] private HandType upgradeData;
 
@@ -20,7 +20,7 @@ public class PokerHandUpgrader : MonoBehaviour
         instance = this;
     }
 
-    public void RequestUpgradeHand(HandType handType)
+    public void RequestUpgradeHand(HandType handType, int levels)
     {
         StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
 
@@ -48,7 +48,7 @@ public class PokerHandUpgrader : MonoBehaviour
         }
     }
 
-    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData, bool upgrade = true, bool allHands = false)
+    public IEnumerator UpgradeVisuals(PokerHandLevelData pokerHandLevelData, bool upgrade = true, bool allHands = false, int levels = 1)
     {
         isUpgrading = true;
 
@@ -81,16 +81,18 @@ public class PokerHandUpgrader : MonoBehaviour
 
         if (upgrade)
         {
-
-            if (!allHands)
+            for (int i = 0; i < levels; i++)
             {
-                pokerHandLevelData.UpgradeHand();
-            }
-            else
-            {
-                foreach (var hand in PokerHandLevelStorage.instance.GetPokerHands())
+                if (!allHands)
                 {
-                    hand.UpgradeHand();
+                    pokerHandLevelData.UpgradeHand();
+                }
+                else
+                {
+                    foreach (var hand in PokerHandLevelStorage.instance.GetPokerHands())
+                    {
+                        hand.UpgradeHand();
+                    }
                 }
             }
         }

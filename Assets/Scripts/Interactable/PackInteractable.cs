@@ -124,7 +124,7 @@ public class PackInteractable : MonoBehaviour
                 DeckManager.instance.AddCardOnFullDeck(createdCard);
                 break;
             case PackType.Planet:
-                PokerHandUpgrader.instance.RequestUpgradeHand(_planetCardData.handType);
+                PokerHandUpgrader.instance.RequestUpgradeHand(_planetCardData.handType,1);
                 PokerHandUpgrader.instance.AddCardUsedIntoDatabase(_planetCardData.handType);
                 StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
                 CardManager.instance.UpdateLastCard(_planetCardData);

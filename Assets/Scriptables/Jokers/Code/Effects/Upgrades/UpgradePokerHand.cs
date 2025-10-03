@@ -6,6 +6,6 @@ public class UpgradePokerHand : JokerEffect
     public override void ApplyEffect(JokerInstance jokerInstance)
     {
         jokerInstance.jokerContainer.TriggerMessage();
-        PokerHandUpgrader.instance.RequestUpgradeHand(HandDetector.instance.currentHand.pokerHand.handType);
+        PokerHandUpgrader.instance.RequestUpgradeHand(HandDetector.instance.currentHand.pokerHand.handType,1);
     }
 }

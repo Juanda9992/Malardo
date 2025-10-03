@@ -104,7 +104,7 @@ public class ConsumableItem : MonoBehaviour
     {
         if (planetCardData != null)
         {
-            PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType);
+            PokerHandUpgrader.instance.RequestUpgradeHand(planetCardData.handType,1);
             PokerHandUpgrader.instance.AddCardUsedIntoDatabase(planetCardData.handType);
             StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnPlanetCardUse));
             CardManager.instance.UpdateLastCard(planetCardData);
