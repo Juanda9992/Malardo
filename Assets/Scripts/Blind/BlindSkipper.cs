@@ -64,6 +64,7 @@ public class BlindSkipper : MonoBehaviour
         }
 
         currentTags.Add(go.GetComponent<TagBehaviour>());
+        go.transform.SetAsFirstSibling();
     }
     [ContextMenu("Generate Tags")]
     private void GenerateRoundTags()
