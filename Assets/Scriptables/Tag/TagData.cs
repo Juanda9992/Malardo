@@ -9,9 +9,15 @@ public class TagData : ScriptableObject
     public CardEffect tagEffect;
     public TagExchangeMoment tagExchangeMoment;
 
+    public bool useHandType;
+
     public string GetFormatedDescription()
     {
         return tagEffect.GetDescription(tagDescription);
+    }
+    public string GetFormatedDescription(HandType handType)
+    {
+        return tagEffect.GetDescription(tagDescription,handType);
     }
 
 }

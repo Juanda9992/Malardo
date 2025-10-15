@@ -22,7 +22,7 @@ public class PokerHandUpgrader : MonoBehaviour
 
     public void RequestUpgradeHand(HandType handType, int levels)
     {
-        StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType)));
+        StartCoroutine(UpgradeVisuals(PokerHandLevelStorage.instance.GetHandData(handType),true,false,levels));
 
     }
 

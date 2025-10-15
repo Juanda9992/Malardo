@@ -23,5 +23,6 @@ public enum HandType
     Five_Of_A_Kind = 8,
     Straight_Flush = 9,
     Flush_House = 10,
-    Flush_Five = 11
+    Flush_Five = 11,
+    None = 12
 }

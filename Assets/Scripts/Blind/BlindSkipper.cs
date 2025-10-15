@@ -54,11 +54,18 @@ public class BlindSkipper : MonoBehaviour
     {
         GameObject go = Instantiate(tagPrefab, tagParent);
 
-        go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag());
+        if (tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag().useHandType)
+        {
+            go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag(), tagBehaviour[BlindManager.instance.currentBlindProgress].handType);
+        }
+        else
+        {
+            go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag());
+        }
 
         currentTags.Add(go.GetComponent<TagBehaviour>());
     }
-
+    [ContextMenu("Generate Tags")]
     private void GenerateRoundTags()
     {
         for (int i = 0; i < tagBehaviour.Length; i++)
@@ -74,7 +81,7 @@ public class BlindSkipper : MonoBehaviour
             if (currentTags[i].GetCurrentTag().tagExchangeMoment == tagExchangeMoment)
             {
                 yield return new WaitForSeconds(0.5f);
-                currentTags[i].GetCurrentTag().tagEffect.ApplyEffect();
+                currentTags[i].ApplyEffect();
                 Destroy(currentTags[i].gameObject);
                 currentTags[i] = null;
             }

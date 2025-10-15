@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: D6
   tagDescription: In the next <style=Info>Shop</style>, Rerolls start at <style=Cash>$0</style>.
-  tagSprite: {fileID: -1350095711, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: 2eb1f4252c31e3242bb75a0f1bc8ac55, type: 2}
+  tagSprite: {fileID: 259489609, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 0a88bce08539e2e4cbadf567c89df9c4, type: 2}
   tagExchangeMoment: 1

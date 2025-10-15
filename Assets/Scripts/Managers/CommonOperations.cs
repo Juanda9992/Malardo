@@ -45,7 +45,7 @@ public static class CommonOperations
             case HandType.Flush_House:
                 return "Flush House";
             case HandType.Flush_Five:
-                return "Five of a Kind";
+                return "Flush Five";
             default:
                 return "";
         }

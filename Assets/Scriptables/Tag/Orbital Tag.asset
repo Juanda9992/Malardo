@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cf00476f3a37d4e8625e7c38efc6c3, type: 3}
-  m_Name: Meteor Tag
+  m_Name: Orbital Tag
   m_EditorClassIdentifier: 
-  tagName: Meteor
-  tagDescription: Immediately open a free <style=Info>Mega Celestial Pack.</style>
-  tagSprite: {fileID: 1725809338, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
-  tagEffect: {fileID: 11400000, guid: 5db9180da12e17c43be5ab5c1353e472, type: 2}
+  tagName: Orbital
+  tagDescription: Upgrades <style=Info>_R_</style> by three levels.
+  tagSprite: {fileID: 894246500, guid: 8ff0ff3db4964c64e8e778a2409e79ed, type: 3}
+  tagEffect: {fileID: 11400000, guid: 8d03c516fd49c23489e2f9eb353af646, type: 2}
   tagExchangeMoment: 0
-  useHandType: 0
+  useHandType: 1

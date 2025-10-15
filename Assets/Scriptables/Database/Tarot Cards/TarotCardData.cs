@@ -31,6 +31,10 @@ public class CardEffect : ScriptableObject
         Debug.Log("Applied");
     }
 
+    public virtual void ApplyEffect(HandType var)
+    {
+           
+    }
     [ContextMenu("Apply Effect")]
     protected void TestEffect()
     {
@@ -42,6 +46,10 @@ public class CardEffect : ScriptableObject
         return baseDescription;
     }
 
+    public virtual string GetDescription(string baseDescription,HandType handType)
+    {
+        return baseDescription.Replace("_R_",CommonOperations.ParseHandType(handType));
+    }
     public virtual bool CanBeUsed()
     {
         return true;
