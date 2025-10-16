@@ -41,6 +41,11 @@ public class CardEffect : ScriptableObject
         ApplyEffect();
     }
 
+    public virtual bool EffectReady()
+    {
+        return true;
+    }
+
     public virtual string GetDescription(string baseDescription)
     {
         return baseDescription;

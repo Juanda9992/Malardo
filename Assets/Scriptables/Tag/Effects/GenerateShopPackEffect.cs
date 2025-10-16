@@ -11,18 +11,23 @@ public class GenerateShopPackEffect : CardEffect
             case PackType.Spectral:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomSpectralPack(PackSize.Mega));
                 break;
-                case PackType.Tarot:
+            case PackType.Tarot:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomArcanaPack(PackSize.Mega));
                 break;
-                case PackType.Card:
+            case PackType.Card:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomCardPack(PackSize.Mega));
                 break;
-                case PackType.Planet:
+            case PackType.Planet:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomPlanetPack(PackSize.Mega));
                 break;
-                case PackType.Buffon:
+            case PackType.Buffon:
                 PackManager.instance.ReceiveCreatePackInstruction(DatabaseManager.instance.shopPacksDatabase.GetRandomBuffonPack(PackSize.Mega));
                 break;
         }
+    }
+
+    public override bool EffectReady()
+    {
+        return !PackManager.instance.isOnPackMenu;
     }
 }

@@ -108,8 +108,10 @@ public class BlindSkipper : MonoBehaviour
                 }
                 yield return new WaitForSeconds(0.5f);
                 currentTags[i].ApplyEffect();
+                yield return new WaitUntil(()=> currentTags[i].GetCurrentTag().tagEffect.EffectReady());
                 Destroy(currentTags[i].gameObject);
                 currentTags[i] = null;
+
             }
             else
             {
