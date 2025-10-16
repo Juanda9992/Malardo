@@ -10157,6 +10157,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526299835}
   m_CullTransparentMesh: 1
+--- !u!1 &533606663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533606664}
+  - component: {fileID: 533606665}
+  m_Layer: 0
+  m_Name: Tag_Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &533606664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533606663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621395120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533606665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533606663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329583772cf095340b3e0f1cf2391a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagBehaviour:
+  - {fileID: 804632592}
+  - {fileID: 280529306}
+  tagPrefab: {fileID: 5048494948753560417, guid: 18771bdf74000c448a4aefd20b774dae, type: 3}
+  tagParent: {fileID: 1125226861}
+  currentTags: []
+  doubleTag: {fileID: 11400000, guid: 4348e849ec3a12a42ad31a77f854e46f, type: 2}
+  testingTag: {fileID: 0}
+  lastTag: {fileID: 0}
 --- !u!1 &543198809
 GameObject:
   m_ObjectHideFlags: 0
@@ -11265,6 +11318,7 @@ Transform:
   - {fileID: 333037841}
   - {fileID: 1300308945}
   - {fileID: 832145982}
+  - {fileID: 533606664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621395121
@@ -19485,14 +19539,7 @@ MonoBehaviour:
   skipLabels:
   - {fileID: 1539430350}
   - {fileID: 761985659}
-  tagBehaviour:
-  - {fileID: 804632592}
-  - {fileID: 280529306}
-  tagPrefab: {fileID: 5048494948753560417, guid: 18771bdf74000c448a4aefd20b774dae, type: 3}
-  tagParent: {fileID: 1125226861}
-  currentTags: []
-  doubleTag: {fileID: 11400000, guid: 4348e849ec3a12a42ad31a77f854e46f, type: 2}
-  lastTag: {fileID: 0}
+  tagGenerator: {fileID: 533606665}
 --- !u!1 &1195999453
 GameObject:
   m_ObjectHideFlags: 0
