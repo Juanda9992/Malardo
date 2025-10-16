@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -9,29 +6,20 @@ public class BlindSkipper : MonoBehaviour
     public static BlindSkipper instance;
     [SerializeField] private BlindSelector blindSelector;
     [SerializeField] private TextMeshProUGUI[] skipLabels;
-    [SerializeField] private TagBehaviour[] tagBehaviour;
-    [SerializeField] private GameObject tagPrefab;
-    [SerializeField] private Transform tagParent;
-
-    [SerializeField] private List<TagBehaviour> currentTags = new List<TagBehaviour>();
-    [SerializeField] private TagData doubleTag;
-
-    public TagData lastTag;
-
+    [SerializeField] private TagGenerator tagGenerator;
     void Awake()
     {
         instance = this;
     }
     void Start()
     {
-        currentTags = new List<TagBehaviour>();
         TurnOffSkipLabels();
     }
 
     [ContextMenu("Skip Blind")]
     public void SkipBlind()
     {
-        CreateTag();
+        tagGenerator.CreateTag(tagGenerator.GetRoundTag(BlindManager.instance.currentBlindProgress));
 
         skipLabels[BlindManager.instance.currentBlindProgress].gameObject.SetActive(true);
         BlindManager.instance.currentBlindProgress++;
@@ -42,83 +30,16 @@ public class BlindSkipper : MonoBehaviour
         GameStatusManager._Status.blindsSkipped++;
 
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnBlindSkipped));
-        StartCoroutine(ConsumeTags(TagExchangeMoment.Instant));
+        StartCoroutine(tagGenerator.ConsumeTags(TagExchangeMoment.Instant));
     }
 
     public void TurnOffSkipLabels()
     {
-        GenerateRoundTags();
+        tagGenerator.GenerateRoundTags();
         foreach (var label in skipLabels)
         {
             label.gameObject.SetActive(false);
         }
     }
-    private void CreateTag()
-    {
-        GameObject go = Instantiate(tagPrefab, tagParent);
 
-        if (tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag().useHandType)
-        {
-            go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag(), tagBehaviour[BlindManager.instance.currentBlindProgress].handType);
-        }
-        else
-        {
-            go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag());
-        }
-
-        lastTag = tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag();
-
-        if (TagData.ReferenceEquals(lastTag,doubleTag))
-        {
-            lastTag = null;
-        }
-        currentTags.Add(go.GetComponent<TagBehaviour>());
-        go.transform.SetAsFirstSibling();
-    }
-    [ContextMenu("Generate Tags")]
-    private void GenerateRoundTags()
-    {
-        for (int i = 0; i < tagBehaviour.Length; i++)
-        {
-            tagBehaviour[i].SetTagData(DatabaseManager.instance.tagDatabase.GetRandomTag());
-        }
-    }
-
-    public void GenerateLastTag()
-    {
-        if (lastTag != null)
-        {
-            GameObject go = Instantiate(tagPrefab, tagParent);
-            go.GetComponent<TagBehaviour>().SetTagData(lastTag);
-
-            currentTags.Add(go.GetComponent<TagBehaviour>());
-            go.transform.SetAsFirstSibling();
-        }
-    }
-
-    public IEnumerator ConsumeTags(TagExchangeMoment tagExchangeMoment)
-    {
-        for (int i = 0; i < currentTags.Count; i++)
-        {
-            if (currentTags[i].GetCurrentTag().tagExchangeMoment == tagExchangeMoment)
-            {
-                if (TagData.ReferenceEquals(currentTags[i].GetCurrentTag(),doubleTag) && lastTag == null)
-                {
-                    break;
-                }
-                yield return new WaitForSeconds(0.5f);
-                currentTags[i].ApplyEffect();
-                yield return new WaitUntil(()=> currentTags[i].GetCurrentTag().tagEffect.EffectReady());
-                Destroy(currentTags[i].gameObject);
-                currentTags[i] = null;
-
-            }
-            else
-            {
-                break;
-            }
-        }
-
-        currentTags.RemoveAll(x => x == null);
-    }
 }

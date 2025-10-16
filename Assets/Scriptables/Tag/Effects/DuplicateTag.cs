@@ -4,6 +4,6 @@ public class DuplicateTag : CardEffect
 {
     public override void ApplyEffect()
     {
-        BlindSkipper.instance.GenerateLastTag();
+        TagGenerator.instance.GenerateLastTag();
     }
 }

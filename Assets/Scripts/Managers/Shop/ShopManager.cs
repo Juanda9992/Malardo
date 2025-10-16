@@ -33,7 +33,7 @@ public class ShopManager : MonoBehaviour
         jokerGenerator.SetActive(true);
         Debug.Log("Enter shop");
 
-        StartCoroutine(BlindSkipper.instance.ConsumeTags(TagExchangeMoment.Shop));
+        StartCoroutine(TagGenerator.instance.ConsumeTags(TagExchangeMoment.Shop));
     }
 
     public void ShowVoucherLabel()
