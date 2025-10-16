@@ -11,9 +11,13 @@ public class TagGenerator : MonoBehaviour
 
     [SerializeField] private List<TagBehaviour> currentTags = new List<TagBehaviour>();
     [SerializeField] private TagData doubleTag;
+    [SerializeField] private TagData testingTag;
     public TagData lastTag;
 
-
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         currentTags = new List<TagBehaviour>();
@@ -76,7 +80,7 @@ public class TagGenerator : MonoBehaviour
                 {
                     break;
                 }
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.3f);
                 currentTags[i].ApplyEffect();
                 yield return new WaitUntil(() => currentTags[i].GetCurrentTag().tagEffect.EffectReady());
                 Destroy(currentTags[i].gameObject);
@@ -90,5 +94,11 @@ public class TagGenerator : MonoBehaviour
         }
 
         currentTags.RemoveAll(x => x == null);
+    }
+
+    [ContextMenu("Create Testing Tag")]
+    private void CreateTestingTag()
+    {
+        CreateTag(testingTag);
     }
 }
