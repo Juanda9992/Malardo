@@ -26,5 +26,6 @@ public enum TagExchangeMoment
 {
     Instant,
     Shop,
-    Game
+    Game,
+    Duplicate
 }

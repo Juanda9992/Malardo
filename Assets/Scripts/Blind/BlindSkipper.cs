@@ -14,6 +14,9 @@ public class BlindSkipper : MonoBehaviour
     [SerializeField] private Transform tagParent;
 
     [SerializeField] private List<TagBehaviour> currentTags = new List<TagBehaviour>();
+    [SerializeField] private TagData doubleTag;
+
+    public TagData lastTag;
 
     void Awake()
     {
@@ -63,6 +66,12 @@ public class BlindSkipper : MonoBehaviour
             go.GetComponent<TagBehaviour>().SetTagData(tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag());
         }
 
+        lastTag = tagBehaviour[BlindManager.instance.currentBlindProgress].GetCurrentTag();
+
+        if (TagData.ReferenceEquals(lastTag,doubleTag))
+        {
+            lastTag = null;
+        }
         currentTags.Add(go.GetComponent<TagBehaviour>());
         go.transform.SetAsFirstSibling();
     }
@@ -75,12 +84,28 @@ public class BlindSkipper : MonoBehaviour
         }
     }
 
+    public void GenerateLastTag()
+    {
+        if (lastTag != null)
+        {
+            GameObject go = Instantiate(tagPrefab, tagParent);
+            go.GetComponent<TagBehaviour>().SetTagData(lastTag);
+
+            currentTags.Add(go.GetComponent<TagBehaviour>());
+            go.transform.SetAsFirstSibling();
+        }
+    }
+
     public IEnumerator ConsumeTags(TagExchangeMoment tagExchangeMoment)
     {
         for (int i = 0; i < currentTags.Count; i++)
         {
             if (currentTags[i].GetCurrentTag().tagExchangeMoment == tagExchangeMoment)
             {
+                if (TagData.ReferenceEquals(currentTags[i].GetCurrentTag(),doubleTag) && lastTag == null)
+                {
+                    break;
+                }
                 yield return new WaitForSeconds(0.5f);
                 currentTags[i].ApplyEffect();
                 Destroy(currentTags[i].gameObject);

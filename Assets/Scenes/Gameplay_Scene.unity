@@ -11410,6 +11410,7 @@ MonoBehaviour:
       identifier: 0
     playedHand: 0
     currentGameStatus: 0
+    blindsSkipped: 0
     jokersInMatch: 0
     discardData:
       discardsOnMatch: 0
@@ -11427,7 +11428,9 @@ MonoBehaviour:
         identifier: 0
       discardSize: 0
       discardCount: 0
+      discardsUsed: 0
       discardCards: []
+    handsUsed: 0
     handSize: 0
     handsRemaining: 0
     firstHand: 1
@@ -19488,6 +19491,8 @@ MonoBehaviour:
   tagPrefab: {fileID: 5048494948753560417, guid: 18771bdf74000c448a4aefd20b774dae, type: 3}
   tagParent: {fileID: 1125226861}
   currentTags: []
+  doubleTag: {fileID: 11400000, guid: 4348e849ec3a12a42ad31a77f854e46f, type: 2}
+  lastTag: {fileID: 0}
 --- !u!1 &1195999453
 GameObject:
   m_ObjectHideFlags: 0
