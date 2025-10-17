@@ -23,6 +23,8 @@ public class CardVisuals : MonoBehaviour
         transform.DOScale(1, 0.3f);
 
         transform.rotation = Quaternion.Euler(0, 0, Random.Range(-rotationRange, rotationRange));
+
+        transform.DOLocalRotate(new Vector3(0, 0, -transform.localRotation.z), 2f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
     }
     public void SetVisuals(Card card)
     {
@@ -173,7 +175,7 @@ public class CardVisuals : MonoBehaviour
         _card.number = number;
         SetVisuals(_card);
     }
-    
+
 
     private void UpdateCardType(CardType cardType)
     {
@@ -189,7 +191,7 @@ public class CardVisuals : MonoBehaviour
     [ContextMenu("Test Card FLip")]
     private void AnimateCard()
     {
-        StartCoroutine(FlipCard(()=>UpdateCardSuitCoroutineRequest(testSuit)));
+        StartCoroutine(FlipCard(() => UpdateCardSuitCoroutineRequest(testSuit)));
     }
 
     private IEnumerator FlipCard(Action action)

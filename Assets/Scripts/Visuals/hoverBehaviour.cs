@@ -11,6 +11,13 @@ public class hoverBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private UnityEvent OnHoverIn, OnHoverOut, OnClicked, OnUnselect;
 
     public static Action<GameObject> OnSelectObject;
+
+    void Awake()
+    {
+        transform.DOLocalRotate(new Vector3(0, 0, -1), 0f);
+        transform.DOLocalRotate(new Vector3(0, 0, 1), 3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.DOScale(hoverScaleFactor, 0.2f);
