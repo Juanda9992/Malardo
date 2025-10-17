@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516275547fa3df42928f6ecfbcd03f1, type: 3}
-  m_Name: Scholar
+  m_Name: Scholar Joker
   m_EditorClassIdentifier: 
   jokerName: Scholar
   description: Played Aces give <style="Chips">+20 chips</style> and <style="Mult">+4
@@ -18,7 +18,7 @@ MonoBehaviour:
   triggerMessage: +4
   overrideEffect: 4
   shopValue: 4
-  JokerImage: {fileID: -462896887, guid: b946cb3b46144684a996ed7311863470, type: 3}
+  JokerImage: {fileID: 729596890, guid: b946cb3b46144684a996ed7311863470, type: 3}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 4

@@ -18,7 +18,7 @@ MonoBehaviour:
   triggerMessage: +4 Chips
   overrideEffect: 0
   shopValue: 4
-  JokerImage: {fileID: 1014407894, guid: b946cb3b46144684a996ed7311863470, type: 3}
+  JokerImage: {fileID: -1724217980, guid: b946cb3b46144684a996ed7311863470, type: 3}
   jokerRarity: 0
   jokerLogics:
   - triggerEvent: 7

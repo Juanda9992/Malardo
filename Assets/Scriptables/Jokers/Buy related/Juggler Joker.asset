@@ -17,7 +17,7 @@ MonoBehaviour:
   triggerMessage: +1 Hand Size
   overrideEffect: 0
   shopValue: 4
-  JokerImage: {fileID: 1166168918, guid: b946cb3b46144684a996ed7311863470, type: 3}
+  JokerImage: {fileID: 168049431, guid: b946cb3b46144684a996ed7311863470, type: 3}
   jokerRarity: 0
   jokerLogics: []
   OnSetUpJoker:
