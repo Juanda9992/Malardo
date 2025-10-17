@@ -31,10 +31,25 @@ public class CardVisuals : MonoBehaviour
         _card = card;
         _card.SetCardName();
         _card.SetCardChipAmmount();
-        numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1 : _card.number);
         SetCardEdition();
         SetCardSeal();
         SetCardTypeVisuals();
+        SetNumberAndColors();
+    }
+    
+    private void SetNumberAndColors()
+    {
+        numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1 : _card.number);
+        
+        for(int i = 0; i< DatabaseManager.instance.cardColorDatabase.suitColors.Length;i++)
+        {
+            if (_card.cardSuit == DatabaseManager.instance.cardColorDatabase.suitColors[i].suitId)
+            {
+                Debug.Log(DatabaseManager.instance.cardColorDatabase.suitColors[i].normalColor);
+                numbersImage.color = DatabaseManager.instance.cardColorDatabase.suitColors[i].normalColor;
+            }
+        }
+        
     }
 
     private void SetCardEdition()

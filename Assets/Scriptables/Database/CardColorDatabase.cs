@@ -13,6 +13,8 @@ public class CardColorDatabase : ScriptableObject
 
     [Header("Description Colors")]
     public List<DescriptionColor> descriptionColors;
+    [Header("Suit Colors")]
+    public SuitColorData[] suitColors;
 
     [Header("Card Edition Colors")]
     public Color foilColor;
@@ -49,4 +51,11 @@ public class DescriptionColor
 
         return DescriptionType.None;
     }
+}
+[System.Serializable]
+public class SuitColorData
+{
+    public Suit suitId;
+    public Color normalColor;
+    public Color altColor;
 }
