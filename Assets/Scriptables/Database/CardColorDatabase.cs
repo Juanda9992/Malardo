@@ -24,6 +24,26 @@ public class CardColorDatabase : ScriptableObject
     public Color buffonPackBgColor;
     public Color cardPackBgColor;
     public Color planetPackBgColor;
+
+
+    public Color GetSuitColor(Suit suit)
+    {
+        for (int i = 0; i < suitColors.Length; i++)
+        {
+            if (suit == suitColors[i].suitId)
+            {
+                if (SettingsManager.instance.useAltColors)
+                {
+                    return suitColors[i].altColor;
+                }
+                else
+                {
+                    return suitColors[i].normalColor;
+                }
+            }
+        }
+        return Color.white;
+    }
 }
 [System.Serializable]
 public class DescriptionColor

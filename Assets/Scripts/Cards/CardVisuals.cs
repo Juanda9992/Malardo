@@ -40,16 +40,7 @@ public class CardVisuals : MonoBehaviour
     private void SetNumberAndColors()
     {
         numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1 : _card.number);
-        
-        for(int i = 0; i< DatabaseManager.instance.cardColorDatabase.suitColors.Length;i++)
-        {
-            if (_card.cardSuit == DatabaseManager.instance.cardColorDatabase.suitColors[i].suitId)
-            {
-                Debug.Log(DatabaseManager.instance.cardColorDatabase.suitColors[i].normalColor);
-                numbersImage.color = DatabaseManager.instance.cardColorDatabase.suitColors[i].normalColor;
-            }
-        }
-        
+        numbersImage.color = DatabaseManager.instance.cardColorDatabase.GetSuitColor(_card.cardSuit);
     }
 
     private void SetCardEdition()
