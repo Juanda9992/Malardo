@@ -181,8 +181,6 @@ public class CardVisuals : MonoBehaviour
         _card.number = number;
         SetVisuals(_card);
     }
-
-
     private void UpdateCardType(CardType cardType)
     {
         _card.cardType = cardType;
@@ -209,4 +207,14 @@ public class CardVisuals : MonoBehaviour
         yield return transform.DOLocalRotate(Vector3.up * 0, 0.2f);
     }
 
+
+    void OnEnable()
+    {
+        SettingsManager.OnHighContrastChanged += (x) => SetNumberAndColors();
+    }
+    
+    void OnDisable()
+    {
+        SettingsManager.OnHighContrastChanged -= (x)=>SetNumberAndColors();
+    }
 }
