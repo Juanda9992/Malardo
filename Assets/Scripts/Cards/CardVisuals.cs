@@ -36,7 +36,7 @@ public class CardVisuals : MonoBehaviour
         SetCardTypeVisuals();
         SetNumberAndColors();
     }
-    
+
     private void SetNumberAndColors()
     {
         numbersImage.sprite = DatabaseManager.instance.cardSpriteDatabase.GetCardSprite(_card.cardSuit, _card.number == 14 ? 1 : _card.number);
@@ -208,13 +208,17 @@ public class CardVisuals : MonoBehaviour
     }
 
 
+    private void OnHighContrastChanged(bool status)
+    {
+        SetNumberAndColors();
+    }
     void OnEnable()
     {
-        SettingsManager.OnHighContrastChanged += (x) => SetNumberAndColors();
+        SettingsManager.OnHighContrastChanged += OnHighContrastChanged;
     }
-    
+
     void OnDisable()
     {
-        SettingsManager.OnHighContrastChanged -= (x)=>SetNumberAndColors();
+        SettingsManager.OnHighContrastChanged -= OnHighContrastChanged;
     }
 }
