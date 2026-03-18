@@ -79,7 +79,6 @@ public class CardPlayer : MonoBehaviour
         JokerDescription.instance.SetDescriptionOff();
         if (ScoreManager.instance.CheckBlindDefeated())
         {
-            Debug.Log("Enter here");
             yield return new WaitForSeconds(0.2f);
             yield return CardManager.instance.TriggerEndRoundCardAbilities();
             yield return new WaitForSeconds(0.2f);
@@ -101,6 +100,7 @@ public class CardPlayer : MonoBehaviour
 
     public void NextMatch()
     {
+        GameSaveManager.instance.SaveGame();
         ScoreManager.instance.OnBlindDefeated();
         CardManager.instance.DestroyCardsOnHand();
         DeckManager.instance.ReEnableCards();

@@ -74,6 +74,11 @@ public class ScoreManager : MonoBehaviour
 
         totalScoreText.text = roundScore.ToString();
         scoreText.text = currentScore.ToString();
+
+        if(currentScore > GameSaveManager.instance.GetGameData().bestHand)
+        {
+            GameSaveManager.instance.GetGameData().bestHand = Mathf.RoundToInt(currentScore);
+        }
     }
 
     public bool CheckBlindDefeated()

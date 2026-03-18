@@ -10,6 +10,12 @@ public class GameSaveManager : MonoBehaviour, Isaveable
     {
         instance = this;
         gameSaveData = new GameSaveData();
+        SaveController.LoadGame();
+    }
+
+    public void SaveGame()
+    {
+        SaveController.SaveGame();  
     }
     public string GetModuleID()
     {
@@ -26,7 +32,10 @@ public class GameSaveManager : MonoBehaviour, Isaveable
         JsonUtility.FromJsonOverwrite(values,gameSaveData);   
     }
 
-    
+    public GameSaveData GetGameData()
+    {
+        return gameSaveData;
+    }
 }
 
 [System.Serializable]
