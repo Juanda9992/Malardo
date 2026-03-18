@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.juanda.coreutils": {
+      "version": "https://github.com/Juanda9992/SaveSystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "63bf483f15c624699d6067cd020f23a128e42f79"
+    },
     "com.unity.2d.animation": {
       "version": "9.2.0",
       "depth": 1,
