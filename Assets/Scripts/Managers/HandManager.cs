@@ -127,8 +127,15 @@ public class HandManager : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
         }
-        int difference = DeckManager.instance.currentHandSize -CardManager.instance.cardsOnScreen.Count;
-        DeckManager.instance.GenerateCardsOnDeck(difference);
+
+        yield return new WaitForSeconds(0.1f);
+        int difference = DeckManager.instance.currentHandSize - CardManager.instance.cardsOnScreen.Count;
+
+        for (int i = 0; i < difference; i++)
+        {
+            DeckManager.instance.GenerateCardsOnDeck(1);
+            yield return new WaitForSeconds(0.08f);
+        }
         handCards.Clear();
     }
 
