@@ -42,6 +42,8 @@ public class RerollShop : MonoBehaviour
             currentFreeRerolls--;
             shopManager.SetGenerateJokersAction();
             SetRerollText();
+
+            GameSaveManager.instance.GetGameData().timesRerolled++; //Track for end screen stats
         }
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnShopReroll));
     }
