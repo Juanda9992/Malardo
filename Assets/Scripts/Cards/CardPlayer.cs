@@ -133,6 +133,8 @@ public class CardPlayer : MonoBehaviour
                 }
                 yield return PlayCard(currentHand[i]);
 
+                GameSaveManager.instance.GetGameData().cardsPlayed++; //Track stats for end screen
+
                 plays++;
 
             }
