@@ -97,6 +97,8 @@ public class ConsumableItem : MonoBehaviour
             }
             CurrencyManager.instance.RemoveCurrency(buyValue);
             ConsumableManager.instance.AddFromShop(this);
+
+            GameSaveManager.instance.GetGameData().cardsPurchased++; //Track for end screen
         }
     }
 
@@ -153,6 +155,9 @@ public class ConsumableItem : MonoBehaviour
             isOnShop = false;
             directlyused = true;
             CurrencyManager.instance.RemoveCurrency(buyValue);
+
+            GameSaveManager.instance.GetGameData().cardsPurchased++; //Track for end screen
+
             UseItem();
         }
     }

@@ -31,6 +31,9 @@ public class VoucherInteractable : MonoBehaviour
         }
         JokerDescription.instance.SetDescriptionOff();
         CurrencyManager.instance.RemoveCurrency(10);
+
+        GameSaveManager.instance.GetGameData().cardsPurchased++; //Track for end screen
+
         DatabaseManager.instance.matchVoucherDatabase.SetVoucherBought(voucherData);
         ShopManager.instance.ShowVoucherLabel();
         Destroy(gameObject);

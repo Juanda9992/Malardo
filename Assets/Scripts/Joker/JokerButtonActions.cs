@@ -7,7 +7,7 @@ public class JokerButtonActions : MonoBehaviour
     [SerializeField] private JokerContainer jokerContainer;
     [SerializeField] private Button actionButton;
     [SerializeField] private Button sellButton;
-    [SerializeField] private TextMeshProUGUI actionButtonText,sellButtonText;
+    [SerializeField] private TextMeshProUGUI actionButtonText, sellButtonText;
     private bool selected = false;
 
     public void SwitchSelectedLogic()
@@ -50,6 +50,9 @@ public class JokerButtonActions : MonoBehaviour
         }
         JokerDescription.instance.SetDescriptionOff();
         CurrencyManager.instance.RemoveCurrency(jokerContainer._jokerInstance.sellValue);
+
+        GameSaveManager.instance.GetGameData().cardsPurchased++; //Track for end screen
+
         JokerManager.instance.AddJoker(jokerContainer._jokerInstance);
         Destroy(this.gameObject);
     }

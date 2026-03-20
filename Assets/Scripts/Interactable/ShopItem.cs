@@ -19,6 +19,9 @@ public class ShopItem : MonoBehaviour
     public void BuyItem()
     {
         CurrencyManager.instance.RemoveCurrency(ammountRequired);
+
+        GameSaveManager.instance.GetGameData().cardsPurchased++; //Track for end screen
+
         if (packType != PackType.None)
         {
             PackManager.instance.ReceiveCreatePackInstruction(_itemPack);
