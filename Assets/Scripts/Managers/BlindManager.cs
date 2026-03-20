@@ -45,6 +45,11 @@ public class BlindManager : MonoBehaviour
         requiredScore = newScore;
         blindMoney = blindScoreData.allBlinds[currentBlindProgress].blindMoney;
 
+
+        //Track for end screen 
+        GameSaveManager.instance.GetGameData().ante = anteLevel+1;
+        GameSaveManager.instance.GetGameData().round = currentBlindProgress+1;
+
         SetUpUI();
         SetUpBGColor(blindScoreData.allBlinds[currentBlindProgress].blindColor);
 
