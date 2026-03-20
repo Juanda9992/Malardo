@@ -128,6 +128,7 @@ public class BlindManager : MonoBehaviour
         currentBlindProgress++;
         currentRound++;
 
+        GameSaveManager.instance.SaveGame();
         if (currentBlindProgress > 2)
         {
             currentBlindProgress = 0;
