@@ -44,7 +44,7 @@ public class GameSaveData
     public int bestHand;
     public HandType mostPlayedHand;
     public int cardsPlayed;
-    public int cardsDisplayed;
+    public int cardsDiscarded;
     public int ante;
     public int round;
     public int cardsPurchased;
