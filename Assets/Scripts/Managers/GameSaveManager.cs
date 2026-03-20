@@ -29,7 +29,10 @@ public class GameSaveManager : MonoBehaviour, Isaveable
 
     public void SetModuleValues(string values)
     {
-        JsonUtility.FromJsonOverwrite(values,gameSaveData);   
+        GameSaveData saveData = new GameSaveData();
+        JsonUtility.FromJsonOverwrite(values,saveData);
+
+        gameSaveData.bestHand = saveData.bestHand;    
     }
 
     public GameSaveData GetGameData()
