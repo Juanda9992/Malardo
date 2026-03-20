@@ -89,6 +89,9 @@ public class HandManager : MonoBehaviour
         GameStatusManager._Status.discardData.discardsUsed++;
         GameStatusManager.SetGameEvent(TriggerOptions.CardDiscard);
         StartCoroutine(JokerManager.instance.PlayJokersAtTime(TriggerEvent.OnHandDiscard));
+
+        GameSaveManager.instance.GetGameData().cardsDiscarded+=handCards.Count; //Track for the stats
+ 
         if (handCards.Count > 0)
         {
             StartCoroutine(ClearHandPlayed(true));
